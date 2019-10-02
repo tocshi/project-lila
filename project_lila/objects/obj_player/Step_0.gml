@@ -1,5 +1,5 @@
 
-if(mouse_check_button_pressed(mb_right)){
+if(mouse_check_button_pressed(mb_right) && canMove){
 	
 	destX = mouse_x;
 	destY = mouse_y;
