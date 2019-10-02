@@ -2,8 +2,6 @@
 Repository for my top-down 16-bit Mana-style ARPG.
 
 **CURRENT TODO:**
-* implement canMove boolean
-* add player stats
 * Basic attacks
 * Implement Debug Class and fix class inheritance
   * Skill 1: Empowered Strike
