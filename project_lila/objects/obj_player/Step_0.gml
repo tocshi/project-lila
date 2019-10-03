@@ -16,3 +16,9 @@ if (point_distance(x, y, destX, destY) < movespeed){
 		speed = 0;
 		isMoving = false;
 }
+
+if(canMove && !isMoving){
+	highRegenThreshold++;
+} else {
+	highRegenThreshold = 0;
+}

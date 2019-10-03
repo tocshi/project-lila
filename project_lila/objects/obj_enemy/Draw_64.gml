@@ -1,0 +1,1 @@
+draw_healthbar(20, 60, 420, 80, (hp/maxhp)*100, c_black, c_red, c_red, 0, true, true);

@@ -1,6 +1,6 @@
 //Stats
 
-damage			= 0;
+atk				= 0;
 dmgmod			= 0;
 element			= "none";
 atkspeed		= 0;
@@ -11,8 +11,22 @@ earth_atk		= 0;
 wind_atk		= 0;
 light_atk		= 0;
 dark_atk		= 0;
+critrate		= 0;
+critdmg			= 0;
+elem_mod		= 0;
+finaldmg		= 0;
 
-isProjectile = false;
-isPiercing = false;
-isAoE = false;
-isBasicAttack = false;
+isProjectile	= false;
+isPiercing		= false;
+isSingleTarget	= false;
+isBasicAttack	= false;
+isSingleHit		= false;
+isCrit			= false;
+isOrangeCrit	= false;
+isRedCrit		= false;
+
+//List that stores enemies hit by this attack.
+hitList = ds_list_create();
+
+
+

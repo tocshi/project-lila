@@ -1,12 +1,12 @@
 // Stats
 level			= 0;
-maxhp			= 100 + level*10 + round(sqr(level)/10);
-hp				= 100 + level*10 + round(sqr(level)/10);
+maxhp			= 100;
+hp				= 100;
 hpshield		= 0;
-hpregen			= 0.02 + level*0.002;
+hpregen			= 0.02;
 maxmp			= 100;
 mp				= 100;
-mpregen			= 0.1666; //doubled if canMove && !isMoving
+mpregen			= 0.1666;
 atk				= 10;
 def				= 0;
 
@@ -32,16 +32,3 @@ critrate		= 0;
 critdmg			= 150;
 finaldmg		= 100;
 finalshld		= 0;
-
-
-// Initial Variables
-destX = 0;
-destY = 0;
-canMove = true;
-highRegenThreshold = 0;
-//canAttack = true;
-isMoving = false;
-
-cd = array_create(21,0);
-buff = array_create(32,0);
-
