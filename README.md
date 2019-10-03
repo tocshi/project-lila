@@ -14,5 +14,5 @@ Repository for my top-down 16-bit Mana-style ARPG.
   * Skill 8: Earthen Wall
   * Skill 9: Move Like Wind
   * Skill 10: Shield Charge
-* damage calculations
-* hp/mp/damage display
+* Equipment and Inventory
+* Fix basic attack to be based on weapon and not class
