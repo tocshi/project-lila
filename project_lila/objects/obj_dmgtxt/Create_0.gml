@@ -3,4 +3,7 @@ isCrit = false;
 isOrangeCrit = false;
 isRedCrit = false;
 dist = 60;
+hp = 0;
+maxhp = 0;
+target = 0;
 vspeed = -1;

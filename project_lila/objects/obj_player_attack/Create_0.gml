@@ -16,11 +16,17 @@ critdmg			= 0;
 elem_mod		= 0;
 finaldmg		= 0;
 
+sourceX			= 0;
+sourceY			= 0;
+flinch_amount	= 0;
+
 isProjectile	= false;
 isPiercing		= false;
 isSingleTarget	= false;
 isBasicAttack	= false;
 isSingleHit		= false;
+isBuff			= false;
+
 isCrit			= false;
 isOrangeCrit	= false;
 isRedCrit		= false;

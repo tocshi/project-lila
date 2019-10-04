@@ -1,7 +1,8 @@
 //CHECK DEATH
-if (hp == 0){
-	instance_destroy();
-	//this is where on death events happen
+if (hp <= 0){
+	isDead = true;
+	mask_index = spr_empty;
+	alarm[0] = 30;
 }
 
 //REGENERATION

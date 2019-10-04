@@ -127,6 +127,30 @@
             }
         },
         {
+            "Key": "2ec2bdf0-74d8-40f4-b222-d5a502d99f2d",
+            "Value": {
+                "id": "a918425c-ea4a-4564-b32c-7f85a81358dd",
+                "resourcePath": "scripts\\removeBuff\\removeBuff.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "36c513a5-d959-430a-a52b-c18569d49c0b",
+            "Value": {
+                "id": "d41efe1e-aa04-4f78-b1b7-a2feb45f2519",
+                "resourcePath": "scripts\\hit_flinch\\hit_flinch.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "3a63ea38-8103-469d-9c0c-593d7c43a19a",
+            "Value": {
+                "id": "83218a1a-8ee0-44ff-8842-e01537924195",
+                "resourcePath": "scripts\\buff_empowered\\buff_empowered.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "3ab9f91f-30e3-45e1-8ad1-660b78e2b46d",
             "Value": {
                 "id": "931aa816-2657-45d5-b099-a8c802d9b776",
@@ -140,6 +164,14 @@
                 "id": "bcca50cb-aaa7-4968-804a-0442658eaff3",
                 "resourcePath": "objects\\obj_player_attack\\obj_player_attack.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "44ffab31-a895-4b8c-9782-b1a17bff67ef",
+            "Value": {
+                "id": "4d857574-76c9-4f06-879d-f9e4fe95f221",
+                "resourcePath": "views\\44ffab31-a895-4b8c-9782-b1a17bff67ef.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -351,6 +383,14 @@
             }
         },
         {
+            "Key": "dffff69b-bf22-4c6e-8b75-48b08cd3afd5",
+            "Value": {
+                "id": "6d4b78e9-fc5e-4e21-b76f-9809385649b2",
+                "resourcePath": "objects\\obj_minihpbar\\obj_minihpbar.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "e5895b84-4c91-42b5-8753-5220650f7122",
             "Value": {
                 "id": "19131865-0342-49a2-b8a8-ad38c0d2d31f",
@@ -416,7 +456,10 @@
         }
     ],
     "script_order": [
-        "c6eddf3a-011d-4cde-95c8-3bf3dc25957f"
+        "c6eddf3a-011d-4cde-95c8-3bf3dc25957f",
+        "2ec2bdf0-74d8-40f4-b222-d5a502d99f2d",
+        "3a63ea38-8103-469d-9c0c-593d7c43a19a",
+        "36c513a5-d959-430a-a52b-c18569d49c0b"
     ],
     "tutorial": ""
 }

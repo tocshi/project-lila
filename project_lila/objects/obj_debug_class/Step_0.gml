@@ -1,8 +1,7 @@
 event_inherited();
 
-if(mouse_check_button_pressed(mb_left) && (cd[0] <= 0) && (mp >= 20)){
+if(mouse_check_button_pressed(mb_left) && (cd[0] <= 0)){
 	
-	mp -= 20;
 	speed = 0;
 	isMoving = false;
 	canMove = false;
@@ -17,6 +16,10 @@ if(mouse_check_button_pressed(mb_left) && (cd[0] <= 0) && (mp >= 20)){
 	//I am not doing this correctly
 	basic_attack.atk			= atk;
 	basic_attack.dmgmod			= 100;
+	if(empowered_buff){
+		basic_attack.dmgmod		= 250;
+		removeBuff("Empowered");
+	}
 	basic_attack.element		= "none";
 	basic_attack.atkspeed		= atkspeed;
 	basic_attack.fire_atk		= fire_atk;
@@ -30,7 +33,35 @@ if(mouse_check_button_pressed(mb_left) && (cd[0] <= 0) && (mp >= 20)){
 	basic_attack.critdmg		= critdmg;
 	basic_attack.finaldmg		= finaldmg;
 	
+	basic_attack.sourceX		= x;
+	basic_attack.sourceY		= y;
+	basic_attack.flinch_amount	= 4;
+	
 	basic_attack.isBasicAttack	= true;
 	basic_attack.isSingleHit	= true;
 
 }
+
+if(keyboard_check_pressed(skill_button[1]) && (cd[1] <= 0) && mp >= 30){
+	
+	mp -= 30;
+	var effect = instance_create_layer(x,y,"Instances",obj_debug_indicator);
+	effect.vspeed = -1;
+	cd[1] = room_speed*5;
+	
+	var skillobj = instance_create_layer(x,y-32,"Attacks",obj_debug_attacks);
+	skillobj.atkspeed = atkspeed;
+	skillobj.skill_index = 1;
+	skillobj.isBuff	= true;
+	
+	var buff_array = array_create(5,false);
+	buff_array[0] = 3*room_speed;
+	buff_array[1] = true;
+	buff_array[2] = "Empowered";
+	buff_array[3] = buff_empowered;
+	ds_list_add(buff,buff_array);
+	movespeed *=2;
+	empowered_buff = true;
+
+}
+

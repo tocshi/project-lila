@@ -68,10 +68,26 @@ if(ds_list_find_index(hitList,other.id) == -1){
 
 	other.hp -= gTotalDamage;
 
-	dmgTxt = instance_create_layer(other.x, other.y, "dmgTxt", obj_dmgtxt);
+	var dmgTxt = instance_create_layer(other.x, other.y-(other.sprite_height/2), "dmgTxt", obj_dmgtxt);
 	dmgTxt.damage = gTotalDamage;
 	dmgTxt.isCrit = isCrit;
 	dmgTxt.isOrangeCrit = isOrangeCrit;
 	dmgTxt.isRedCrit = isRedCrit;
+	
+	dmgTxt.hp		= other.hp;
+	dmgTxt.maxhp	= e_maxhp;
+	dmgTxt.target	= other;
+	
+	if(instance_exists(other)){
+	var minihp = instance_create_layer(other.x, other.y-(other.sprite_height/2), "dmgTxt", obj_minihpbar);
+	minihp.hp		= other.hp;
+	minihp.maxhp	= e_maxhp;
+	minihp.target	= other;
+	}
+	
+	/*
+	if (other.canKnockback){
+		hit_flinch(other, point_direction(sourceX,sourceY,other.x,other.y), flinch_amount);
+	}*/
 }
 

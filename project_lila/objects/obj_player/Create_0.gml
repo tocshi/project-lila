@@ -43,5 +43,29 @@ highRegenThreshold = 0;
 isMoving = false;
 
 cd = array_create(21,0);
-buff = array_create(32,0);
+
+// buff array properties:
+//	0	time
+//	1	visible (on buff bar)
+//	2	name
+//	3	countdownEvent
+//	4	unremovable
+buff = ds_list_create();
+// list of buffs to remove from timer ending (change to different ds later?)
+buffRemoved = false;
+
+skill_button = array_create(11,"");
+
+// Set default keybinds
+skill_button[0]		= vk_space;
+skill_button[1]		= ord("Q");
+skill_button[2]		= ord("W");
+skill_button[3]		= ord("E");
+skill_button[4]		= ord("R");
+skill_button[5]		= ord("T");
+skill_button[6]		= ord("A");
+skill_button[7]		= ord("S");
+skill_button[8]		= ord("D");
+skill_button[9]		= ord("F");
+skill_button[10]	= ord("G");
 

@@ -14,4 +14,3 @@ if(isCrit){
 draw_set_alpha(1);
 draw_set_font(fnt_hpmp);
 draw_text_transformed(x, y, string(damage),1.5,1.5,0);
-

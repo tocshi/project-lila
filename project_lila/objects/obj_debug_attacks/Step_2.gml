@@ -16,5 +16,7 @@ if (skill_index != -1){
 			}
 			skill[0] = room_speed/atkspeed;
 			break;
-	}
+		case 1:
+			break;
+	}		
 }

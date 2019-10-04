@@ -32,3 +32,6 @@ critrate		= 0;
 critdmg			= 150;
 finaldmg		= 100;
 finalshld		= 0;
+
+canKnockback	= false;
+isDead			= false;
