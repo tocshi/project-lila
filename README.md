@@ -2,8 +2,7 @@
 Repository for my top-down 16-bit Mana-style ARPG.
 
 **CURRENT TODO:**
-* Basic attacks
-* Implement Debug Class and fix class inheritance
+* Implement Debug Class and fix class inheritance(?)
   * ~~Skill 1: Empowered Strike~~
   * Skill 2: Fireball
   * Skill 3: Roundslash
@@ -14,5 +13,8 @@ Repository for my top-down 16-bit Mana-style ARPG.
   * Skill 8: Earthen Wall
   * Skill 9: Move Like Wind
   * Skill 10: Shield Charge
-* Equipment and Inventory
-* Fix basic attack to be based on weapon and not class
+* Equipment and Inventory 
+* Display Buff Bar
+* Skill GUI
+* Class Change Mechanic
+* Fix basic attack to be based on weapon and not class(low priority)
