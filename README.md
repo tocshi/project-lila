@@ -4,7 +4,7 @@ Repository for my top-down 16-bit Mana-style ARPG.
 **CURRENT TODO:**
 * Basic attacks
 * Implement Debug Class and fix class inheritance
-  * ~~Skill 1: Empowered Strike
+  * ~~Skill 1: Empowered Strike~~
   * Skill 2: Fireball
   * Skill 3: Roundslash
   * Skill 4: Triple Shot
