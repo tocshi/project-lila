@@ -14,7 +14,8 @@ Repository for my top-down 16-bit Mana-style ARPG.
   * Skill 9: Move Like Wind
   * Skill 10: Shield Charge
 * Equipment and Inventory 
-* Display Buff Bar
+* Display Buff Bar and Skill Cooldowns
 * Skill GUI
 * Class Change Mechanic
+* Auto-pathing for enemies and maybe player?
 * Fix basic attack to be based on weapon and not class(low priority)
