@@ -15,6 +15,8 @@ if(ds_list_find_index(hitList,other.id) == -1){
 	e_dark_def		= other.dark_def;
 
 	e_finalshld		= other.finalshld;
+	
+	isCrit			= false;
 
 	// (ATK * skill dmg modifier(s) - enemy DEF) * crit damage modifier 
 	// * elemental affinity multiplier * total damage multiplier * enemy damage mitigation
@@ -49,21 +51,23 @@ if(ds_list_find_index(hitList,other.id) == -1){
 	var intDmg = ((atk * (dmgmod/100)) - e_def);
 	if(intDmg < 0){intDmg = 0;}
 	
+	var fcritdmg = critdmg;
+	fcritdmg = 100;
 	if(random_range(0,100) < critrate){
-		if(random_range(0,100) < critrate-100){
-			critdmg *= 1.5;
-			isOrangeCrit = true;
-			if(random_range(0,100) < critrate-200){
-				critdmg *= 2;
-				isRedCrit = true;
-			}
-		}
 		isCrit = true;
-	} else {
-		critdmg = 100;
+		fcritdmg = critdmg;
+	}
+	if(random_range(0,100) < critrate-100){
+		fcritdmg *= 1.5;
+		isOrangeCrit = true;
+	}
+	if(random_range(0,100) < critrate-200){
+		fcritdmg *= 1.5;
+		isRedCrit = true;
 	}
 	
-	gTotalDamage = intDmg * (critdmg/100) * (elem_mod/100) * (finaldmg/100) * ((100-e_finalshld)/100);
+	
+	gTotalDamage = intDmg * (fcritdmg/100) * (elem_mod/100) * (finaldmg/100) * ((100-e_finalshld)/100);
 	gTotalDamage = round(gTotalDamage);
 
 	other.hp -= gTotalDamage;
@@ -84,6 +88,7 @@ if(ds_list_find_index(hitList,other.id) == -1){
 	minihp.maxhp	= e_maxhp;
 	minihp.target	= other;
 	}
+	isCrit			= false;
 	
 	/*
 	if (other.canKnockback){

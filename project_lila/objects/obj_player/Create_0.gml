@@ -28,7 +28,7 @@ dark_def		= 0;
 
 movespeed		= 3;
 atkspeed		= 2;
-critrate		= 0;
+critrate		= 50;
 critdmg			= 150;
 finaldmg		= 100;
 finalshld		= 0;
