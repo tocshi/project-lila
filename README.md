@@ -8,7 +8,7 @@ Repository for my top-down 16-bit Mana-style ARPG.
   * Skill 3: Roundslash
   * Skill 4: Triple Shot
   * Skill 5: Blizzard
-  * Skill 6: Quake
+  * ~~Skill 6: Arrow Rain~~
   * Skill 7: Gate of Wind
   * Skill 8: Earthen Wall
   * Skill 9: Move Like Wind
