@@ -42,9 +42,9 @@ if(mouse_check_button_pressed(mb_left) && (cd[0] <= 0)){
 
 }
 
-if(keyboard_check_pressed(skill_button[1]) && (cd[1] <= 0) && mp >= 30){
+if(keyboard_check_pressed(skill_button[1]) && (cd[1] <= 0) && mp >= 20){
 	
-	mp -= 30;
+	mp -= 20;
 	var effect = instance_create_layer(x,y,"Instances",obj_debug_indicator);
 	effect.vspeed = -1;
 	cd[1] = room_speed*5;
@@ -62,6 +62,39 @@ if(keyboard_check_pressed(skill_button[1]) && (cd[1] <= 0) && mp >= 30){
 	ds_list_add(buff,buff_array);
 	movespeed *=2;
 	empowered_buff = true;
+
+}
+
+if(keyboard_check_pressed(skill_button[6]) && (cd[6] <= 0) && mp >= 35){
+	
+	mp -= 35;
+	speed = 0;
+	isMoving = false;
+	cd[6] = room_speed*12;
+	
+	var skillobj = instance_create_layer(mouse_x,mouse_y,"Attacks",obj_debug_attacks);
+	skillobj.skill_index = 6;
+	
+	//I am not doing this correctly
+	skillobj.atk			= atk;
+	skillobj.dmgmod			= 60;
+
+	skillobj.element		= "none";
+	skillobj.atkspeed		= atkspeed;
+	skillobj.fire_atk		= fire_atk;
+	skillobj.ice_atk		= ice_atk;
+	skillobj.lightning_atk	= lightning_atk;
+	skillobj.earth_atk		= earth_atk;
+	skillobj.wind_atk		= wind_atk;
+	skillobj.light_atk		= light_atk;
+	skillobj.dark_atk		= dark_atk;
+	skillobj.critrate		= critrate;
+	skillobj.critdmg		= critdmg;
+	skillobj.finaldmg		= finaldmg;
+	
+	skillobj.sourceX		= mouse_x;
+	skillobj.sourceY		= mouse_y;
+	//skillobj.flinch_amount	= 4;
 
 }
 

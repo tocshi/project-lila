@@ -24,9 +24,7 @@ for (var i = 0; i < ds_list_size(buff); if(!buffRemoved){i++;}){
 		buff_array[0]--;
 		ds_list_replace(buff,i,buff_array);
 		//debug
-		var effect = instance_create_layer(x,y,"Instances",obj_debug_indicator);
-		effect.image_xscale = 0.5;
-		effect.image_yscale = 0.1;
+		var effect = instance_create_layer(x,y,"Instances",obj_debug_buff);
 		effect.vspeed = -1;
 	}
 	if(buff_array[0] <= 0){

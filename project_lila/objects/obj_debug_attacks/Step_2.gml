@@ -17,6 +17,12 @@ if (skill_index != -1){
 			skill[0] = room_speed/atkspeed;
 			break;
 		case 1:
+			instance_destroy();
+			break;
+		case 6:
+			skill_index = -1;
+			alarm[6] = room_speed;
+			skill[6] = room_speed*6;
 			break;
 	}		
 }
