@@ -7,12 +7,9 @@ if(mouse_check_button_pressed(mb_left) && (cd[0] <= 0)){
 	canMove = false;
 	cd[0] = room_speed/statmap[? "atkspeed"];
 	
-	var basic_attack = instance_create_layer(x,y-32,"Attacks",obj_debug_attacks);
-	basic_attack.skill_index = 0;
+	var basic_attack = instance_create_layer(x,y-32,"Attacks",obj_basicattack_longsword);
 	iter0++;
 	basic_attack.iter0 = self.iter0;
-	
-	//I am not doing this correctly
 	
 	ds_map_copy(basic_attack.atkmap,statmap);
 	basic_attack.atkmap[? "dmgmod"]			= 100;
@@ -38,8 +35,7 @@ if(keyboard_check_pressed(skill_button[1]) && (cd[1] <= 0) && statmap[? "mp"] >=
 	effect.vspeed = -1;
 	cd[1] = room_speed*5;
 	
-	var skillobj = instance_create_layer(x,y-32,"Attacks",obj_debug_attacks);
-	skillobj.skill_index = 1;
+	var skillobj = instance_create_layer(x,y-32,"Attacks",obj_skill_empowered_strike);
 	skillobj.atkmap[? "isBuff"] = true;
 	
 	var buff_array = array_create(5,false);
@@ -60,17 +56,14 @@ if(keyboard_check_pressed(skill_button[6]) && (cd[6] <= 0) && statmap[? "mp"] >=
 	isMoving = false;
 	cd[6] = room_speed*12;
 	
-	var skillobj = instance_create_layer(mouse_x,mouse_y,"Attacks",obj_debug_attacks);
+	var skillobj = instance_create_layer(mouse_x,mouse_y,"Attacks",obj_skill_arrow_rain);
 	skillobj.skill_index = 6;
 	
-	//I am not doing this correctly
 	ds_map_copy(skillobj.atkmap,statmap);
 	skillobj.atkmap[? "dmgmod"]			= 60;
 	skillobj.atkmap[? "element"]		= "none";
 	
 	skillobj.atkmap[? "sourceX"]		= mouse_x;
 	skillobj.atkmap[? "sourceY"]		= mouse_y;
-	
-
 }
 

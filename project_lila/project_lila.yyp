@@ -143,6 +143,14 @@
             }
         },
         {
+            "Key": "3440fbb8-1abd-46d9-816c-62f78c04e066",
+            "Value": {
+                "id": "269afd2b-575e-49d4-854a-3e2f0ee1b672",
+                "resourcePath": "views\\3440fbb8-1abd-46d9-816c-62f78c04e066.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "36c513a5-d959-430a-a52b-c18569d49c0b",
             "Value": {
                 "id": "d41efe1e-aa04-4f78-b1b7-a2feb45f2519",
@@ -207,6 +215,14 @@
             }
         },
         {
+            "Key": "55daa99a-d7d1-4c82-b196-5ac789b18888",
+            "Value": {
+                "id": "2372dc27-e0d0-49d1-b54e-003b051d6fb4",
+                "resourcePath": "objects\\obj_skill_empowered_strike\\obj_skill_empowered_strike.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "5d92f584-0c2e-4e05-bcc8-86c77c2df6f8",
             "Value": {
                 "id": "ba0856ff-53ce-4ffe-8cf7-fe4ecbde5adc",
@@ -258,7 +274,15 @@
             "Key": "78c62e52-6f6b-40b5-9493-519210555697",
             "Value": {
                 "id": "753b6eb0-952d-4ddb-91a3-3d3604f9d6d3",
-                "resourcePath": "objects\\obj_debug_attacks\\obj_debug_attacks.yy",
+                "resourcePath": "objects\\obj_basicattack_longsword\\obj_basicattack_longsword.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "7bae847e-f1af-49eb-a1cb-e054c5e70793",
+            "Value": {
+                "id": "a3db1cff-9cdf-4fd4-886c-23b2ba9ff492",
+                "resourcePath": "objects\\obj_skill_arrow_rain\\obj_skill_arrow_rain.yy",
                 "resourceType": "GMObject"
             }
         },

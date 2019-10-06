@@ -22,8 +22,6 @@ atkmap[? "isRedCrit"]		= false;
 //List that stores enemies hit by this attack.
 hitList = ds_list_create();
 
-//debug
-show_debug_message(string(ds_map_exists(atkmap, "dmgmod")));
 
 
 
