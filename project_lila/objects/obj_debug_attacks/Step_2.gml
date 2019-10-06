@@ -14,7 +14,7 @@ if (skill_index != -1){
 				image_angle = dir+(angle/2);
 				break;
 			}
-			skill[0] = room_speed/atkspeed;
+			skill[0] = room_speed/atkmap[? "atkspeed"];
 			break;
 		case 1:
 			instance_destroy();

@@ -10,10 +10,10 @@ if(mouse_check_button_pressed(mb_right) && canMove){
 }
 
 if(isMoving){
-	move(movespeed, point_direction(x,y,destX,destY));
+	move(statmap[? "movespeed"], point_direction(x,y,destX,destY));
 }
 
-if (point_distance(x, y, destX, destY) < movespeed){
+if (point_distance(x, y, destX, destY) < statmap[? "movespeed"]){
 		speed = 0;
 		isMoving = false;
 }

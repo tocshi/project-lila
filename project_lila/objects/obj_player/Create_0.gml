@@ -1,37 +1,39 @@
 // Stats
-level			= 0;
-maxhp			= 100 + level*10 + round(sqr(level)/10);
-hp				= 100 + level*10 + round(sqr(level)/10);
-hpshield		= 0;
-hpregen			= 0.02 + level*0.002;
-maxmp			= 100;
-mp				= 100;
-mpregen			= 0.1666; //doubled if canMove && !isMoving
-atk				= 10;
-def				= 0;
+statmap = ds_map_create();
 
-fire_atk		= 0;
-ice_atk			= 0;
-lightning_atk	= 0;
-earth_atk		= 0;
-wind_atk		= 0;
-light_atk		= 0;
-dark_atk		= 0;
+statmap[? "level"] 			= 0;
+statmap[? "maxhp"]			= 100 + statmap[? "level"]*10 + round(sqr(statmap[? "level"])/10);
+statmap[? "hp"]				= 100 + statmap[? "level"]*10 + round(sqr(statmap[? "level"])/10);
+statmap[? "hpshield"]		= 0;
+statmap[? "hpregen"]		= 0.02 + statmap[? "level"]*0.002;
+statmap[? "maxmp"]			= 100;
+statmap[? "mp"]				= 100;
+statmap[? "mpregen"]		= 0.1666; //doubled if canMove && !isMoving
+statmap[? "atk"]			= 10;
+statmap[? "def"]			= 0;
 
-fire_def		= 0;
-ice_def			= 0;
-lightning_def	= 0;
-earth_def		= 0;
-wind_def		= 0;
-light_def		= 0;
-dark_def		= 0;
+statmap[? "fire_atk"]		= 0;
+statmap[? "ice_atk"]		= 0;
+statmap[? "lightning_atk"]	= 0;
+statmap[? "earth_atk"]		= 0;
+statmap[? "wind_atk"]		= 0;
+statmap[? "light_atk"]		= 0;
+statmap[? "dark_atk"]		= 0;
 
-movespeed		= 3;
-atkspeed		= 2;
-critrate		= 50;
-critdmg			= 150;
-finaldmg		= 100;
-finalshld		= 0;
+statmap[? "fire_def"]		= 0;
+statmap[? "ice_def"]		= 0;
+statmap[? "lightning_def"]	= 0;
+statmap[? "earth_def"]		= 0;
+statmap[? "wind_def"]		= 0;
+statmap[? "light_def"]		= 0;
+statmap[? "dark_def"]		= 0;
+
+statmap[? "movespeed"]		= 3;
+statmap[? "atkspeed"]		= 2;
+statmap[? "critrate"]		= 50;
+statmap[? "critdmg"]		= 150;
+statmap[? "finaldmg"]		= 100;
+statmap[? "finalshld"]		= 0;
 
 
 // Initial Variables
