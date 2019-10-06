@@ -311,6 +311,14 @@
             }
         },
         {
+            "Key": "a4736812-0af2-454e-b514-b2a70495c0f4",
+            "Value": {
+                "id": "cfe56e28-bc6c-4489-ac49-2774b29ad45f",
+                "resourcePath": "scripts\\multMap\\multMap.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "a60d4194-54d7-4308-882b-bb3ac41c32f5",
             "Value": {
                 "id": "7773e930-1aa5-4f11-9427-1c7c499d0c85",
@@ -431,6 +439,14 @@
             }
         },
         {
+            "Key": "dc789532-e5d9-4952-bd1b-c850b7589847",
+            "Value": {
+                "id": "9aaf422e-c79f-443e-806b-aafc7630fe9e",
+                "resourcePath": "scripts\\sumMap\\sumMap.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "dffff69b-bf22-4c6e-8b75-48b08cd3afd5",
             "Value": {
                 "id": "6d4b78e9-fc5e-4e21-b76f-9809385649b2",
@@ -507,7 +523,9 @@
         "c6eddf3a-011d-4cde-95c8-3bf3dc25957f",
         "2ec2bdf0-74d8-40f4-b222-d5a502d99f2d",
         "3a63ea38-8103-469d-9c0c-593d7c43a19a",
-        "36c513a5-d959-430a-a52b-c18569d49c0b"
+        "36c513a5-d959-430a-a52b-c18569d49c0b",
+        "dc789532-e5d9-4952-bd1b-c850b7589847",
+        "a4736812-0af2-454e-b514-b2a70495c0f4"
     ],
     "tutorial": ""
 }

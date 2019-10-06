@@ -60,7 +60,7 @@ if(keyboard_check_pressed(skill_button[1]) && (cd[1] <= 0) && mp >= 20){
 	buff_array[2] = "Empowered";
 	buff_array[3] = buff_empowered;
 	ds_list_add(buff,buff_array);
-	movespeed *=2;
+	relative_speedups[? "Empowered"] = 2;
 	empowered_buff = true;
 
 }

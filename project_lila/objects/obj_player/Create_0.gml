@@ -27,6 +27,7 @@ light_def		= 0;
 dark_def		= 0;
 
 movespeed		= 3;
+base_movespeed  = 3;
 atkspeed		= 2;
 critrate		= 50;
 critdmg			= 150;
@@ -43,6 +44,21 @@ highRegenThreshold = 0;
 isMoving = false;
 
 cd = array_create(21,0);
+
+// Map of effects on the player (buffs/debuffs)
+effects = ds_map_create();
+
+// Map of individual buffs/debuffs
+speedups = ds_map_create();
+relative_speedups = ds_map_create();
+relative_slows = ds_map_create();
+slows = ds_map_create();
+
+// Add each buff/debuff map to the effects map
+ds_map_add_map(effects, "speedups", speedups);
+ds_map_add_map(effects, "relative_speedups", speedups);
+ds_map_add_map(effects, "slows", speedups);
+ds_map_add_map(effects, "relative_slows", speedups);
 
 // buff array properties:
 //	0	time
