@@ -25,3 +25,10 @@ if(canMove && !isMoving){
 } else {
 	highRegenThreshold = 0;
 }
+
+//DEBUG COOLDOWN RESET
+if(keyboard_check_pressed(vk_tab)){
+	for (var i = 0; i < array_length_1d(cd); i++){
+		if(cd[i] > 0){cd[i] = 1;}
+	}
+}

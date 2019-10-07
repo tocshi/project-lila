@@ -41,15 +41,16 @@ if(ds_list_find_index(hitList,other.id) == -1){
 	if(random_range(0,100) < atkmap[? "critrate"]){
 		atkmap[? "isCrit"] = true;
 		fcritdmg = atkmap[? "critdmg"];
+		if(random_range(0,100) < atkmap[? "critrate"]-100){
+			fcritdmg *= 1.5;
+			atkmap[? "isOrangeCrit"] = true;
+			if(random_range(0,100) < atkmap[? "critrate"]-200){
+				fcritdmg *= 1.5;
+				atkmap[? "isRed Crit"] = true;
+			}
+		}
 	}
-	if(random_range(0,100) < atkmap[? "critrate"]-100){
-		fcritdmg *= 1.5;
-		atkmap[? "isOrangeCrit"] = true;
-	}
-	if(random_range(0,100) < atkmap[? "critrate"]-200){
-		fcritdmg *= 1.5;
-		atkmap[? "isRed Crit"] = true;
-	}
+	
 	
 	
 	gTotalDamage = intDmg * (fcritdmg/100) * (atkmap[? "elem_mod"]/100) * (atkmap[? "finaldmg"]/100) * ((100-other.statmap[? "finalshld"])/100);
@@ -76,6 +77,13 @@ if(ds_list_find_index(hitList,other.id) == -1){
 	minihp.hpwidth	= other.sprite_width;
 	}
 	atkmap[? "isCrit"]			= false;
+	
+	if(ds_map_exists(atkmap,"isPiercing") && ds_map_exists(atkmap,"isProjectile")){
+		if(!atkmap[? "isPiercing"]){
+			ds_map_destroy(atkmap);
+			instance_destroy();
+		}
+	}
 	
 	/*
 	if (other.canKnockback){
