@@ -49,15 +49,22 @@ if(keyboard_check_pressed(skill_button[1]) && (cd[1] <= 0) && statmap[? "mp"] >=
 
 }
 
+if(keyboard_check_pressed(skill_button[2]) && (cd[2] <= 0) && statmap[? "mp"] >= 20){
+	
+	statmap[? "mp"] -= 20;
+	cd[2] = room_speed*1.5;
+	isMoving = false;
+	instance_create_layer(x,y-32,"Attacks",obj_skill_fireball);
+
+}
+
 if(keyboard_check_pressed(skill_button[6]) && (cd[6] <= 0) && statmap[? "mp"] >= 35){
 	
 	statmap[? "mp"] -= 35;
-	speed = 0;
 	isMoving = false;
 	cd[6] = room_speed*12;
 	
 	var skillobj = instance_create_layer(mouse_x,mouse_y,"Attacks",obj_skill_arrow_rain);
-	skillobj.skill_index = 6;
 	
 	ds_map_copy(skillobj.atkmap,statmap);
 	skillobj.atkmap[? "dmgmod"]			= 60;
@@ -67,3 +74,11 @@ if(keyboard_check_pressed(skill_button[6]) && (cd[6] <= 0) && statmap[? "mp"] >=
 	skillobj.atkmap[? "sourceY"]		= mouse_y;
 }
 
+if(keyboard_check_pressed(skill_button[7]) && (cd[7] <= 0) && statmap[? "mp"] >= 45){
+	
+	statmap[? "mp"] -= 45;
+	cd[7] = room_speed*48;
+	isMoving = false;
+	instance_create_layer(mouse_x,mouse_y,"Attacks",obj_skill_gate_of_wind);
+
+}
