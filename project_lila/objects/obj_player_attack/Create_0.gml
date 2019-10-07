@@ -6,6 +6,9 @@ atkmap[? "element"]			= "none";
 atkmap[? "sourceX"]			= 0;
 atkmap[? "sourceY"]			= 0;
 atkmap[? "flinch_amount"]	= 0;
+atkmap[? "range"]			= 0;
+atkmap[? "sourceY"]			= 0;
+atkmap[? "flinch_amount"]	= 0;
 
 atkmap[? "isProjectile"]	= false;
 atkmap[? "isPiercing"]		= false;
