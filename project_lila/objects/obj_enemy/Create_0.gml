@@ -1,37 +1,39 @@
 // Stats
-level			= 0;
-maxhp			= 100;
-hp				= 100;
-hpshield		= 0;
-hpregen			= 0.02;
-maxmp			= 100;
-mp				= 100;
-mpregen			= 0.1666;
-atk				= 10;
-def				= 0;
+statmap = ds_map_create();
 
-fire_atk		= 0;
-ice_atk			= 0;
-lightning_atk	= 0;
-earth_atk		= 0;
-wind_atk		= 0;
-light_atk		= 0;
-dark_atk		= 0;
+statmap[? "level"] 			= 0;
+statmap[? "maxhp"]			= 100;
+statmap[? "hp"]				= 100;
+statmap[? "hpshield"]		= 0;
+statmap[? "hpregen"]		= 0.02;
+statmap[? "maxmp"]			= 100;
+statmap[? "mp"]				= 100;
+statmap[? "mpregen"]		= 0.1666;
+statmap[? "atk"]			= 10;
+statmap[? "def"]			= 0;
 
-fire_def		= 0;
-ice_def			= 0;
-lightning_def	= 0;
-earth_def		= 0;
-wind_def		= 0;
-light_def		= 0;
-dark_def		= 0;
+statmap[? "fire_atk"]		= 0;
+statmap[? "ice_atk"]		= 0;
+statmap[? "lightning_atk"]	= 0;
+statmap[? "earth_atk"]		= 0;
+statmap[? "wind_atk"]		= 0;
+statmap[? "light_atk"]		= 0;
+statmap[? "dark_atk"]		= 0;
 
-movespeed		= 3;
-atkspeed		= 2;
-critrate		= 0;
-critdmg			= 150;
-finaldmg		= 100;
-finalshld		= 0;
+statmap[? "fire_def"]		= 0;
+statmap[? "ice_def"]		= 0;
+statmap[? "lightning_def"]	= 0;
+statmap[? "earth_def"]		= 0;
+statmap[? "wind_def"]		= 0;
+statmap[? "light_def"]		= 0;
+statmap[? "dark_def"]		= 0;
+
+statmap[? "movespeed"]		= 3;
+statmap[? "atkspeed"]		= 2;
+statmap[? "critrate"]		= 0;
+statmap[? "critdmg"]		= 150;
+statmap[? "finaldmg"]		= 100;
+statmap[? "finalshld"]		= 0;
 
 canKnockback	= false;
 isDead			= false;

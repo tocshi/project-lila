@@ -1,16 +1,16 @@
 //REGENERATION
-hp += hpregen;
+statmap[? "hp"] += statmap[? "hpregen"];
 if(highRegenThreshold >= 90){
-	mp += mpregen*2;
+	statmap[? "mp"] += statmap[? "mpregen"]*2;
 } else {
-	mp += mpregen;
+	statmap[? "mp"] += statmap[? "mpregen"];
 }
 
 //STAT CLAMPING
-atkspeed = clamp(atkspeed,0.01,10);
-movespeed = clamp(movespeed,0,30);
-hp = clamp(hp,0,maxhp);
-mp = clamp(mp,0,maxmp);
+statmap[? "atkspeed"] = clamp(statmap[? "atkspeed"],0.01,10);
+statmap[? "movespeed"] = clamp(statmap[? "movespeed"],0,30);
+statmap[? "hp"] = clamp(statmap[? "hp"],0,statmap[? "maxhp"]);
+statmap[? "mp"] = clamp(statmap[? "mp"],0,statmap[? "maxmp"]);
 
 //TIMERS
 for (var i = 0; i < array_length_1d(cd); i++){

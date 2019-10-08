@@ -18,10 +18,10 @@ if(mouse_check_button_pressed(mb_right) && canMove){
 }
 
 if(isMoving){
-	move(movespeed, point_direction(x,y,destX,destY));
+	move(statmap[? "movespeed"], point_direction(x,y,destX,destY));
 }
 
-if (point_distance(x, y, destX, destY) < movespeed){
+if (point_distance(x, y, destX, destY) < statmap[? "movespeed"]){
 		speed = 0;
 		isMoving = false;
 }
@@ -32,4 +32,11 @@ if(canMove && !isMoving){
 	highRegenThreshold++;
 } else {
 	highRegenThreshold = 0;
+}
+
+//DEBUG COOLDOWN RESET
+if(keyboard_check_pressed(vk_tab)){
+	for (var i = 0; i < array_length_1d(cd); i++){
+		if(cd[i] > 0){cd[i] = 1;}
+	}
 }

@@ -1,94 +1,89 @@
 if(ds_list_find_index(hitList,other.id) == -1){
 	ds_list_add(hitList,other.id);
 	
-	e_maxhp			= other.maxhp;
-	e_hp			= other.hp;
-	e_hpshield		= other.hpshield;
-	e_def			= other.def;
-
-	e_fire_def		= other.fire_def;
-	e_ice_def		= other.ice_def;
-	e_lightning_def	= other.lightning_def;
-	e_earth_def		= other.earth_def;
-	e_wind_def		= other.wind_def;
-	e_light_def		= other.light_def;
-	e_dark_def		= other.dark_def;
-
-	e_finalshld		= other.finalshld;
-	
-	isCrit			= false;
+	atkmap[? "isCrit"]			= false;
 
 	// (ATK * skill dmg modifier(s) - enemy DEF) * crit damage modifier 
 	// * elemental affinity multiplier * total damage multiplier * enemy damage mitigation
 
-	switch(element){
+	switch(atkmap[? "element"]){
 		case "none":
-		elem_mod = 100;
+		atkmap[? "elem_mod"] = 100;
 		break;
 		case "fire":
-		elem_mod = (fire_atk - e_fire_def) + 100;
+		atkmap[? "elem_mod"] = (atkmap[? "fire_atk"] - other.statmap[? "fire_def"]) + 100;
 		break;
 		case "ice":
-		elem_mod = (ice_atk - e_ice_def) + 100;
+		atkmap[? "elem_mod"] = (atkmap[? "ice_atk"] - other.statmap[? "ice_def"]) + 100;
 		break;
 		case "lightning":
-		elem_mod = (lightning_atk - e_lightning_def) + 100;
+		atkmap[? "elem_mod"] = (atkmap[? "lightning_atk"] - other.statmap[? "lightning_def"]) + 100;
 		break;
 		case "earth":
-		elem_mod = (earth_atk - e_earth_def) + 100;
+		atkmap[? "elem_mod"] = (atkmap[? "earth_atk"] - other.statmap[? "earth_def"]) + 100;
 		break;
 		case "wind":
-		elem_mod = (wind_atk - e_wind_def) + 100;
+		atkmap[? "elem_mod"] = (atkmap[? "wind_atk"] - other.statmap[? "wind_def"]) + 100;
 		break;
 		case "light":
-		elem_mod = (light_atk - e_light_def) + 100;
+		atkmap[? "elem_mod"] = (atkmap[? "light_atk"] - other.statmap[? "light_def"]) + 100;
 		break;
 		case "dark":
-		elem_mod = (dark_atk - e_dark_def) + 100;
+		atkmap[? "elem_mod"] = (atkmap[? "dark_atk"] - other.statmap[? "dark_def"]) + 100;
 		break;
 	}
 
-	var intDmg = ((atk * (dmgmod/100)) - e_def);
+	var intDmg = ((atkmap[? "atk"] * (atkmap[? "dmgmod"]/100)) - other.statmap[? "def"]);
 	if(intDmg < 0){intDmg = 0;}
 	
-	var fcritdmg = critdmg;
+	var fcritdmg = atkmap[? "critdmg"];
 	fcritdmg = 100;
-	if(random_range(0,100) < critrate){
-		isCrit = true;
-		fcritdmg = critdmg;
-	}
-	if(random_range(0,100) < critrate-100){
-		fcritdmg *= 1.5;
-		isOrangeCrit = true;
-	}
-	if(random_range(0,100) < critrate-200){
-		fcritdmg *= 1.5;
-		isRedCrit = true;
+	if(random_range(0,100) < atkmap[? "critrate"]){
+		atkmap[? "isCrit"] = true;
+		fcritdmg = atkmap[? "critdmg"];
+		if(random_range(0,100) < atkmap[? "critrate"]-100){
+			fcritdmg *= 1.5;
+			atkmap[? "isOrangeCrit"] = true;
+			if(random_range(0,100) < atkmap[? "critrate"]-200){
+				fcritdmg *= 1.5;
+				atkmap[? "isRed Crit"] = true;
+			}
+		}
 	}
 	
 	
-	gTotalDamage = intDmg * (fcritdmg/100) * (elem_mod/100) * (finaldmg/100) * ((100-e_finalshld)/100);
+	
+	gTotalDamage = intDmg * (fcritdmg/100) * (atkmap[? "elem_mod"]/100) * (atkmap[? "finaldmg"]/100) * ((100-other.statmap[? "finalshld"])/100);
 	gTotalDamage = round(gTotalDamage);
 
-	other.hp -= gTotalDamage;
+	other.statmap[? "hp"] -= gTotalDamage;
+	e_hp = other.statmap[? "hp"];
+	e_maxhp = other.statmap[? "maxhp"];
 
 	var dmgTxt = instance_create_layer(other.x, other.y-(other.sprite_height/2), "dmgTxt", obj_dmgtxt);
 	dmgTxt.damage = gTotalDamage;
-	dmgTxt.isCrit = isCrit;
-	dmgTxt.isOrangeCrit = isOrangeCrit;
-	dmgTxt.isRedCrit = isRedCrit;
+	dmgTxt.isCrit = atkmap[? "isCrit"];
+	dmgTxt.isOrangeCrit = atkmap[? "isOrangeCrit"];
+	dmgTxt.isRedCrit = atkmap[? "isRedCrit"];
 	
-	dmgTxt.hp		= other.hp;
+	dmgTxt.hp		= e_hp;
 	dmgTxt.maxhp	= e_maxhp;
 	dmgTxt.target	= other;
 	
-	if(instance_exists(other)){
+	if(instance_exists(other) && ds_exists(other.statmap,ds_type_map)){
 	var minihp = instance_create_layer(other.x, other.y-(other.sprite_height/2), "dmgTxt", obj_minihpbar);
-	minihp.hp		= other.hp;
+	minihp.hp		= e_hp;
 	minihp.maxhp	= e_maxhp;
-	minihp.target	= other;
+	minihp.hpwidth	= other.sprite_width;
 	}
-	isCrit			= false;
+	atkmap[? "isCrit"]			= false;
+	
+	if(ds_map_exists(atkmap,"isPiercing") && ds_map_exists(atkmap,"isProjectile")){
+		if(!atkmap[? "isPiercing"]){
+			ds_map_destroy(atkmap);
+			instance_destroy();
+		}
+	}
 	
 	/*
 	if (other.canKnockback){

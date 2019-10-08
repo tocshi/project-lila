@@ -5,54 +5,38 @@ if(mouse_check_button_pressed(mb_left) && (cd[0] <= 0)){
 	speed = 0;
 	isMoving = false;
 	canMove = false;
-	cd[0] = room_speed/atkspeed;
+	cd[0] = room_speed/statmap[? "atkspeed"];
 	
-	var basic_attack = instance_create_layer(x,y-32,"Attacks",obj_debug_attacks);
-	basic_attack.skill_index = 0;
-	basic_attack.atkspeed = self.atkspeed;
+	var basic_attack = instance_create_layer(x,y-32,"Attacks",obj_basicattack_longsword);
 	iter0++;
 	basic_attack.iter0 = self.iter0;
 	
-	//I am not doing this correctly
-	basic_attack.atk			= atk;
-	basic_attack.dmgmod			= 100;
+	ds_map_copy(basic_attack.atkmap,statmap);
+	basic_attack.atkmap[? "dmgmod"]			= 100;
 	if(empowered_buff){
-		basic_attack.dmgmod		= 250;
+		basic_attack.atkmap[? "dmgmod"]		= 250;
 		removeBuff("Empowered");
 	}
-	basic_attack.element		= "none";
-	basic_attack.atkspeed		= atkspeed;
-	basic_attack.fire_atk		= fire_atk;
-	basic_attack.ice_atk		= ice_atk;
-	basic_attack.lightning_atk	= lightning_atk;
-	basic_attack.earth_atk		= earth_atk;
-	basic_attack.wind_atk		= wind_atk;
-	basic_attack.light_atk		= light_atk;
-	basic_attack.dark_atk		= dark_atk;
-	basic_attack.critrate		= critrate;
-	basic_attack.critdmg		= critdmg;
-	basic_attack.finaldmg		= finaldmg;
+	basic_attack.atkmap[? "element"]		= "none";
 	
-	basic_attack.sourceX		= x;
-	basic_attack.sourceY		= y;
-	basic_attack.flinch_amount	= 4;
+	basic_attack.atkmap[? "sourceX"]		= x;
+	basic_attack.atkmap[? "sourceY"]		= y;
+	basic_attack.atkmap[? "flinch_amount"]	= 4;
 	
-	basic_attack.isBasicAttack	= true;
-	basic_attack.isSingleHit	= true;
+	basic_attack.atkmap[? "isBasicAttack"]	= true;
+	basic_attack.atkmap[? "isSingleHit"]	= true;
 
 }
 
-if(keyboard_check_pressed(skill_button[1]) && (cd[1] <= 0) && mp >= 20){
+if(keyboard_check_pressed(skill_button[1]) && (cd[1] <= 0) && statmap[? "mp"] >= 20){
 	
-	mp -= 20;
+	statmap[? "mp"] -= 20;
 	var effect = instance_create_layer(x,y,"Instances",obj_debug_indicator);
 	effect.vspeed = -1;
 	cd[1] = room_speed*5;
 	
-	var skillobj = instance_create_layer(x,y-32,"Attacks",obj_debug_attacks);
-	skillobj.atkspeed = atkspeed;
-	skillobj.skill_index = 1;
-	skillobj.isBuff	= true;
+	var skillobj = instance_create_layer(x,y-32,"Attacks",obj_skill_empowered_strike);
+	skillobj.atkmap[? "isBuff"] = true;
 	
 	var buff_array = array_create(5,false);
 	buff_array[0] = 3*room_speed;
@@ -61,40 +45,41 @@ if(keyboard_check_pressed(skill_button[1]) && (cd[1] <= 0) && mp >= 20){
 	buff_array[3] = buff_empowered;
 	ds_list_add(buff,buff_array);
 	relative_speedups[? "Empowered"] = 2;
+
 	empowered_buff = true;
 
 }
 
-if(keyboard_check_pressed(skill_button[6]) && (cd[6] <= 0) && mp >= 35){
+if(keyboard_check_pressed(skill_button[2]) && (cd[2] <= 0) && statmap[? "mp"] >= 20){
 	
-	mp -= 35;
-	speed = 0;
+	statmap[? "mp"] -= 20;
+	cd[2] = room_speed*1.5;
 	isMoving = false;
-	cd[6] = room_speed*12;
-	
-	var skillobj = instance_create_layer(mouse_x,mouse_y,"Attacks",obj_debug_attacks);
-	skillobj.skill_index = 6;
-	
-	//I am not doing this correctly
-	skillobj.atk			= atk;
-	skillobj.dmgmod			= 60;
-
-	skillobj.element		= "none";
-	skillobj.atkspeed		= atkspeed;
-	skillobj.fire_atk		= fire_atk;
-	skillobj.ice_atk		= ice_atk;
-	skillobj.lightning_atk	= lightning_atk;
-	skillobj.earth_atk		= earth_atk;
-	skillobj.wind_atk		= wind_atk;
-	skillobj.light_atk		= light_atk;
-	skillobj.dark_atk		= dark_atk;
-	skillobj.critrate		= critrate;
-	skillobj.critdmg		= critdmg;
-	skillobj.finaldmg		= finaldmg;
-	
-	skillobj.sourceX		= mouse_x;
-	skillobj.sourceY		= mouse_y;
-	//skillobj.flinch_amount	= 4;
+	instance_create_layer(x,y-32,"Attacks",obj_skill_fireball);
 
 }
 
+if(keyboard_check_pressed(skill_button[6]) && (cd[6] <= 0) && statmap[? "mp"] >= 35){
+	
+	statmap[? "mp"] -= 35;
+	isMoving = false;
+	cd[6] = room_speed*12;
+	
+	var skillobj = instance_create_layer(mouse_x,mouse_y,"Attacks",obj_skill_arrow_rain);
+	
+	ds_map_copy(skillobj.atkmap,statmap);
+	skillobj.atkmap[? "dmgmod"]			= 60;
+	skillobj.atkmap[? "element"]		= "none";
+	
+	skillobj.atkmap[? "sourceX"]		= mouse_x;
+	skillobj.atkmap[? "sourceY"]		= mouse_y;
+}
+
+if(keyboard_check_pressed(skill_button[7]) && (cd[7] <= 0) && statmap[? "mp"] >= 45){
+	
+	statmap[? "mp"] -= 45;
+	cd[7] = room_speed*48;
+	isMoving = false;
+	instance_create_layer(mouse_x,mouse_y,"Attacks",obj_skill_gate_of_wind);
+
+}
