@@ -71,10 +71,11 @@ if(ds_list_find_index(hitList,other.id) == -1){
 	dmgTxt.target	= other;
 	
 	if(instance_exists(other) && ds_exists(other.statmap,ds_type_map)){
-	var minihp = instance_create_layer(other.x, other.y-(other.sprite_height/2), "dmgTxt", obj_minihpbar);
+	var minihp = instance_create_layer(other.x, other.y, "dmgTxt", obj_minihpbar);
 	minihp.hp		= e_hp;
 	minihp.maxhp	= e_maxhp;
 	minihp.hpwidth	= other.sprite_width;
+	minihp.target	= other.id;
 	}
 	atkmap[? "isCrit"]			= false;
 	

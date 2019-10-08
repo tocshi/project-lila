@@ -1,5 +1,6 @@
 if(ds_map_exists(atkmap,"isPiercing") && ds_map_exists(atkmap,"isProjectile") && !gateOfWind){
-	skill = (atkmap[? "range"]/speed)/2;
+	
+	if(ds_map_exists(atkmap,"range")){skill = (atkmap[? "range"]/speed)/2;} 
 	speed *= 2;
 	atkmap[? "isPiercing"] = true;
 	atkmap[? "dmgmod"]		*= 1.1;

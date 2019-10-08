@@ -88,3 +88,6 @@ skill_button[8]		= ord("D");
 skill_button[9]		= ord("F");
 skill_button[10]	= ord("G");
 
+//debug
+infmp = false;
+

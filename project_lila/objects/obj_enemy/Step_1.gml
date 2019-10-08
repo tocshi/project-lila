@@ -1,5 +1,5 @@
 //CHECK DEATH
-if (statmap[? "hp"] <= 0){
+if (statmap[? "hp"] <= 0 && !isDead){
 	isDead = true;
 	mask_index = spr_empty;
 	alarm[0] = 30;
