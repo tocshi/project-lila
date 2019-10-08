@@ -7,7 +7,7 @@ if(mouse_check_button_pressed(mb_left) && (cd[0] <= 0)){
 	canMove = false;
 	cd[0] = room_speed/statmap[? "atkspeed"];
 	
-	var basic_attack = instance_create_layer(x,y-32,"Attacks",obj_basicattack_longsword);
+	var basic_attack = instance_create_layer(x,y,"Attacks",obj_basicattack_longsword);
 	iter0++;
 	basic_attack.iter0 = self.iter0;
 	
@@ -35,7 +35,7 @@ if(keyboard_check_pressed(skill_button[1]) && (cd[1] <= 0) && statmap[? "mp"] >=
 	effect.vspeed = -1;
 	cd[1] = room_speed*5;
 	
-	var skillobj = instance_create_layer(x,y-32,"Attacks",obj_skill_empowered_strike);
+	var skillobj = instance_create_layer(x,y,"Attacks",obj_skill_empowered_strike);
 	skillobj.atkmap[? "isBuff"] = true;
 	
 	var buff_array = array_create(5,false);
@@ -54,7 +54,7 @@ if(keyboard_check_pressed(skill_button[2]) && (cd[2] <= 0) && statmap[? "mp"] >=
 	statmap[? "mp"] -= 20;
 	cd[2] = room_speed*1.5;
 	isMoving = false;
-	instance_create_layer(x,y-32,"Attacks",obj_skill_fireball);
+	instance_create_layer(x,y,"Attacks",obj_skill_fireball);
 
 }
 

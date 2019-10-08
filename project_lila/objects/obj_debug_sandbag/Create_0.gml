@@ -1,0 +1,5 @@
+event_inherited();
+statmap[? "maxhp"] = 1000000;
+statmap[? "hp"] = 1000000;
+statmap[? "hpregen"] = 1000/60;
+statmap[? "mpregen"] = 0;

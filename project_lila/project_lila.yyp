@@ -135,6 +135,14 @@
             }
         },
         {
+            "Key": "28ae0171-263f-469b-a2f5-faa89770650b",
+            "Value": {
+                "id": "83745a2e-a461-4c24-84e7-556c7b30ce75",
+                "resourcePath": "sprites\\spr_debug_sandbag\\spr_debug_sandbag.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "2ec2bdf0-74d8-40f4-b222-d5a502d99f2d",
             "Value": {
                 "id": "a918425c-ea4a-4564-b32c-7f85a81358dd",
@@ -247,6 +255,14 @@
             }
         },
         {
+            "Key": "60360134-c51c-465f-9f00-2412a1122b9e",
+            "Value": {
+                "id": "34eb7d01-010d-453d-8a76-93a15b2475db",
+                "resourcePath": "objects\\obj_debug_sandbag\\obj_debug_sandbag.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "6212a1d3-226d-475f-b490-bdb6be3b0b40",
             "Value": {
                 "id": "431482ab-04d9-484b-b9e7-5e5482ca0376",
@@ -287,6 +303,14 @@
             }
         },
         {
+            "Key": "761c7af8-478e-4c73-ac49-2593643e8c69",
+            "Value": {
+                "id": "1bb66294-1416-494b-aeb3-9de5ec4121c2",
+                "resourcePath": "paths\\path_debug_runner0\\path_debug_runner0.yy",
+                "resourceType": "GMPath"
+            }
+        },
+        {
             "Key": "78c62e52-6f6b-40b5-9493-519210555697",
             "Value": {
                 "id": "753b6eb0-952d-4ddb-91a3-3d3604f9d6d3",
@@ -316,6 +340,14 @@
                 "id": "7b055019-c56e-4415-959c-c2929585210c",
                 "resourcePath": "sprites\\spr_fireball\\spr_fireball.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "8fd711c5-efb2-49c4-9389-8e4d8acc9bbe",
+            "Value": {
+                "id": "b84badac-6020-4275-9e7d-d51da5435341",
+                "resourcePath": "paths\\path_debug_runner1\\path_debug_runner1.yy",
+                "resourceType": "GMPath"
             }
         },
         {
@@ -556,6 +588,14 @@
                 "id": "a53bf0cb-3136-4792-8554-df83b33505c1",
                 "resourcePath": "options\\mac\\options_mac.yy",
                 "resourceType": "GMMacOptions"
+            }
+        },
+        {
+            "Key": "f6631e20-0164-46a0-99bb-be03da676efb",
+            "Value": {
+                "id": "8a6fb4ef-d65f-4ded-81a9-b12a5d350b6c",
+                "resourcePath": "objects\\obj_debug_runner\\obj_debug_runner.yy",
+                "resourceType": "GMObject"
             }
         },
         {
