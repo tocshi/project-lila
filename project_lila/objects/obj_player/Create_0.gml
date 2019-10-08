@@ -20,6 +20,7 @@ statmap[? "wind_atk"]		= 0;
 statmap[? "light_atk"]		= 0;
 statmap[? "dark_atk"]		= 0;
 
+
 statmap[? "fire_def"]		= 0;
 statmap[? "ice_def"]		= 0;
 statmap[? "lightning_def"]	= 0;
@@ -29,6 +30,7 @@ statmap[? "light_def"]		= 0;
 statmap[? "dark_def"]		= 0;
 
 statmap[? "movespeed"]		= 3;
+statmap[? "base_movespeed"] = 3;
 statmap[? "atkspeed"]		= 2;
 statmap[? "critrate"]		= 50;
 statmap[? "critdmg"]		= 150;
@@ -45,6 +47,21 @@ highRegenThreshold = 0;
 isMoving = false;
 
 cd = array_create(21,0);
+
+// Map of effects on the player (buffs/debuffs)
+effects = ds_map_create();
+
+// Map of individual buffs/debuffs
+speedups = ds_map_create();
+relative_speedups = ds_map_create();
+relative_slows = ds_map_create();
+slows = ds_map_create();
+
+// Add each buff/debuff map to the effects map
+ds_map_add_map(effects, "speedups", speedups);
+ds_map_add_map(effects, "relative_speedups", speedups);
+ds_map_add_map(effects, "slows", speedups);
+ds_map_add_map(effects, "relative_slows", speedups);
 
 // buff array properties:
 //	0	time
