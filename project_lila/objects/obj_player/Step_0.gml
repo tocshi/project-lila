@@ -5,7 +5,7 @@ slow = sumMap(slows, 0);
 relative_slow = multMap(relative_slows, 1);
 
 // Update movement speed from effects
-movespeed = (base_movespeed + speedup - slow) * relative_speedUp * relative_slow;
+statmap[? "movespeed"] = (statmap[? "base_movespeed"] + speedup - slow) * relative_speedUp * relative_slow;
 
 // Standard Movement
 if(mouse_check_button_pressed(mb_right) && canMove){
