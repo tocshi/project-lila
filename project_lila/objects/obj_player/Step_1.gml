@@ -34,7 +34,7 @@ for (var i = 0; i < ds_list_size(buff); if(!buffRemoved){i++;}){
 		buff_array[0]--;
 		ds_list_replace(buff,i,buff_array);
 		//debug
-		var effect = instance_create_layer(x,y,"Instances",obj_debug_buff);
+		var effect = instance_create_layer(x,y+32,"Instances",obj_debug_buff);
 		effect.vspeed = -1;
 	}
 	if(buff_array[0] <= 0){
