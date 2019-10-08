@@ -287,6 +287,14 @@
             }
         },
         {
+            "Key": "71c2e1dd-d403-42a7-b87a-61163eb4b99e",
+            "Value": {
+                "id": "9300e02e-03be-4e42-82d4-52d1d810ba52",
+                "resourcePath": "objects\\obj_skill_triple_shot\\obj_skill_triple_shot.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "749f5cfe-3352-445a-8741-623e601fa3e6",
             "Value": {
                 "id": "c76fa2fd-d0a0-45a3-a162-fadd16c6059b",
@@ -428,6 +436,14 @@
                 "id": "e5f6b185-d4ce-4428-906b-27b185ce499b",
                 "resourcePath": "objects\\obj_debug_indicator\\obj_debug_indicator.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "bd863b49-bfff-45ee-a4b7-8e529facd908",
+            "Value": {
+                "id": "b2318550-7e2c-41e9-b57f-1996f6e21392",
+                "resourcePath": "sprites\\spr_triple_shot\\spr_triple_shot.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

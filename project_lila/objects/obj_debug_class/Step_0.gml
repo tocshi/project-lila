@@ -58,6 +58,24 @@ if(keyboard_check_pressed(skill_button[2]) && (cd[2] <= 0) && statmap[? "mp"] >=
 
 }
 
+if(keyboard_check_pressed(skill_button[4]) && (cd[4] <= 0) && statmap[? "mp"] >= 30){
+	
+	if(!instance_exists(obj_enemy)){
+		exit;
+	}
+	target = instance_nearest(mouse_x,mouse_y,obj_enemy);
+	
+	if(point_distance(mouse_x,mouse_y,target.x,target.y) >= 64){
+		exit;
+	}
+	
+	statmap[? "mp"] -= 30;
+	cd[4] = room_speed*2;
+	isMoving = false;
+	t_shot_remaining = 2;
+	alarm[4] = 1;
+}
+
 if(keyboard_check_pressed(skill_button[6]) && (cd[6] <= 0) && statmap[? "mp"] >= 35){
 	
 	statmap[? "mp"] -= 35;
