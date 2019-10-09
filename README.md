@@ -7,12 +7,12 @@ Repository for my top-down 16-bit Mana-style ARPG.
   * ~~Skill 2: Fireball~~
   * Skill 3: Roundslash
   * Skill 4: Triple Shot
-  * Skill 5: Blizzard
+  * Skill 5: Protective Footwork
   * ~~Skill 6: Arrow Rain~~
   * ~~Skill 7: Gate of Wind~~
-  * Skill 8: Earthen Wall
-  * Skill 9: Move Like Wind
-  * Skill 10: Shield Charge
+  * Skill 8: Shield Charge
+  * Skill 9: Guardian
+  * Skill 10: Guarding Expertise/Aegis Aura
 * Equipment and Inventory 
 * Display Buff Bar and Skill Cooldowns
 * Skill GUI
