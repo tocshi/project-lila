@@ -1,3 +1,9 @@
+//CHECK DEATH
+if (statmap[? "hp"] <= 0 && !isDead){
+	isDead = true;
+	room_goto(rm_playerdeath);
+}
+
 // CALCULATE MOVESPEED
 // Sum up all slows/speedups
 speedup = sumMap(speedups, 0);
@@ -21,6 +27,13 @@ statmap[? "atkspeed"] = clamp(statmap[? "atkspeed"],0.01,10);
 statmap[? "movespeed"] = clamp(statmap[? "movespeed"],0,30);
 statmap[? "hp"] = clamp(statmap[? "hp"],0,statmap[? "maxhp"]);
 statmap[? "mp"] = clamp(statmap[? "mp"],0,statmap[? "maxmp"]);
+
+//FACING THE RIGHT WAY
+if(x <= destX){
+	image_xscale = 1;
+} else {
+	image_xscale = -1;
+}
 
 //TIMERS
 for (var i = 0; i < array_length_1d(cd); i++){

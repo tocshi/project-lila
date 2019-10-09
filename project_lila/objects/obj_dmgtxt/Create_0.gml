@@ -2,6 +2,7 @@ damage = 0;
 isCrit = false;
 isOrangeCrit = false;
 isRedCrit = false;
+playerDamaged = false;
 dist = 60;
 hp = 0;
 maxhp = 0;
