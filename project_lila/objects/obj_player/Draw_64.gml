@@ -6,5 +6,5 @@ draw_healthbar(20, 40, 420, 60, (statmap[? "mp"]/statmap[? "maxmp"])*100, c_blac
 
 draw_set_font(fnt_hpmp);
 draw_set_color(c_white);
-draw_text(220, 15, string(round(statmap[? "hp"])) + " / " + string(round(statmap[? "maxhp"])));
-draw_text(220, 37, string(round(statmap[? "mp"])) + " / " + string(round(statmap[? "maxmp"])));
+draw_text(220, 15, string(ceil(statmap[? "hp"])) + " / " + string(round(statmap[? "maxhp"])));
+draw_text(220, 37, string(ceil(statmap[? "mp"])) + " / " + string(round(statmap[? "maxmp"])));
