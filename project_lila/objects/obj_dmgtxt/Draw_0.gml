@@ -10,6 +10,9 @@ if(isOrangeCrit){
 if(isRedCrit){
 	draw_set_color(c_red);
 }
+if(playerDamaged){
+	draw_set_color(c_purple);
+}
 draw_set_alpha(1);
 draw_set_font(fnt_dmgtxt);
 //draw_text_transformed(x, y, string(damage),1.5,1.5,0);

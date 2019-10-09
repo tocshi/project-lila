@@ -143,6 +143,14 @@
             }
         },
         {
+            "Key": "2477853b-f617-4a7a-8d9c-f16549fff88f",
+            "Value": {
+                "id": "485af94d-1dd7-4b52-a8aa-f1c2599bfed4",
+                "resourcePath": "objects\\obj_enemy_attack_ball\\obj_enemy_attack_ball.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "28ae0171-263f-469b-a2f5-faa89770650b",
             "Value": {
                 "id": "83745a2e-a461-4c24-84e7-556c7b30ce75",
@@ -180,6 +188,14 @@
                 "id": "269afd2b-575e-49d4-854a-3e2f0ee1b672",
                 "resourcePath": "views\\3440fbb8-1abd-46d9-816c-62f78c04e066.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "34b9cd24-2efb-456a-a4fc-82860a8ad3f5",
+            "Value": {
+                "id": "c7597039-d59f-4932-975e-6048d5dfe676",
+                "resourcePath": "rooms\\rm_playerdeath\\rm_playerdeath.yy",
+                "resourceType": "GMRoom"
             }
         },
         {
@@ -519,6 +535,14 @@
             }
         },
         {
+            "Key": "b6fbfa1d-f024-47aa-b2b2-e7439408a21b",
+            "Value": {
+                "id": "8011e772-e7e7-457d-9720-e3f2c692b9ab",
+                "resourcePath": "objects\\obj_enemy_attack\\obj_enemy_attack.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "bb1d2800-6ca8-417e-af4a-df73bc2155ba",
             "Value": {
                 "id": "1be5f77f-16c0-4a6a-b0cc-2c50c9caa5c8",
@@ -567,6 +591,14 @@
             }
         },
         {
+            "Key": "c98f8c18-cbde-49c2-8951-cc4e50c07669",
+            "Value": {
+                "id": "689cd3bb-b271-4570-bd31-956445f9bfd9",
+                "resourcePath": "objects\\obj_debug_shooter\\obj_debug_shooter.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "cc98d028-7bdd-4680-85f3-c87a7baa481e",
             "Value": {
                 "id": "a7f75eaa-1599-425e-bc11-9b8683628158",
@@ -604,6 +636,14 @@
                 "id": "59355488-8412-4a09-b561-419a56173f1c",
                 "resourcePath": "sprites\\spr_skill_Q\\spr_skill_Q.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "d1a8fe3a-aefd-4381-9f21-e6b586d509a8",
+            "Value": {
+                "id": "555cb694-1bbf-426c-b7c3-28ec9fc5a708",
+                "resourcePath": "views\\d1a8fe3a-aefd-4381-9f21-e6b586d509a8.yy",
+                "resourceType": "GMFolder"
             }
         },
         {

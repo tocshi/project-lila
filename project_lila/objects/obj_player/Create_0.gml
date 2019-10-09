@@ -6,7 +6,7 @@ statmap[? "class"]			= "Debug";
 statmap[? "maxhp"]			= 100 + statmap[? "level"]*10 + round(sqr(statmap[? "level"])/10);
 statmap[? "hp"]				= 100 + statmap[? "level"]*10 + round(sqr(statmap[? "level"])/10);
 statmap[? "hpshield"]		= 0;
-statmap[? "hpregen"]		= 0.02 + statmap[? "level"]*0.002;
+statmap[? "hpregen"]		= statmap[? "maxhp"]/100/60;//0.02 + statmap[? "level"]*0.002;
 statmap[? "maxmp"]			= 100;
 statmap[? "mp"]				= 100;
 statmap[? "mpregen"]		= 0.1666; //doubled if canMove && !isMoving
@@ -40,11 +40,14 @@ statmap[? "finalshld"]		= 0;
 
 
 // Initial Variables
-destX = 0;
-destY = 0;
+destX = x;
+destY = y;
 canMove = true;
 highRegenThreshold = 0;
-//canAttack = true;
+canAttack = true;
+canUseSkill = true;
+isCCed = false;
+isDead = false;
 isMoving = false;
 
 cd = array_create(21,0);

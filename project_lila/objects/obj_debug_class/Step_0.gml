@@ -28,7 +28,7 @@ if(mouse_check_button_pressed(mb_left) && (cd[0] <= 0)){
 
 }
 
-if(keyboard_check_pressed(skill_button[1]) && (cd[1] <= 0) && statmap[? "mp"] >= 20){
+if(keyboard_check_pressed(skill_button[1]) && (cd[1] <= 0) && statmap[? "mp"] >= 20 && canUseSkill){
 	
 	statmap[? "mp"] -= 20;
 	var effect = instance_create_layer(x,y,"Instances",obj_debug_indicator);
@@ -52,7 +52,7 @@ if(keyboard_check_pressed(skill_button[1]) && (cd[1] <= 0) && statmap[? "mp"] >=
 
 }
 
-if(keyboard_check_pressed(skill_button[2]) && (cd[2] <= 0) && statmap[? "mp"] >= 20){
+if(keyboard_check_pressed(skill_button[2]) && (cd[2] <= 0) && statmap[? "mp"] >= 20 && canUseSkill){
 	
 	statmap[? "mp"] -= 20;
 	cd[2] = room_speed*1.5;
@@ -63,7 +63,7 @@ if(keyboard_check_pressed(skill_button[2]) && (cd[2] <= 0) && statmap[? "mp"] >=
 
 }
 
-if(keyboard_check_pressed(skill_button[4]) && (cd[4] <= 0) && statmap[? "mp"] >= 30){
+if(keyboard_check_pressed(skill_button[4]) && (cd[4] <= 0) && statmap[? "mp"] >= 30 && canUseSkill){
 	
 	if(!instance_exists(obj_enemy)){
 		exit;
@@ -83,7 +83,7 @@ if(keyboard_check_pressed(skill_button[4]) && (cd[4] <= 0) && statmap[? "mp"] >=
 	alarm[4] = 1;
 }
 
-if(keyboard_check_pressed(skill_button[6]) && (cd[6] <= 0) && statmap[? "mp"] >= 35){
+if(keyboard_check_pressed(skill_button[6]) && (cd[6] <= 0) && statmap[? "mp"] >= 35 && canUseSkill){
 	
 	statmap[? "mp"] -= 35;
 	cd[6] = room_speed*12;
@@ -102,7 +102,7 @@ if(keyboard_check_pressed(skill_button[6]) && (cd[6] <= 0) && statmap[? "mp"] >=
 	skillobj.atkmap[? "sourceY"]		= mouse_y;
 }
 
-if(keyboard_check_pressed(skill_button[7]) && (cd[7] <= 0) && statmap[? "mp"] >= 45){
+if(keyboard_check_pressed(skill_button[7]) && (cd[7] <= 0) && statmap[? "mp"] >= 45 && canUseSkill){
 	
 	statmap[? "mp"] -= 45;
 	cd[7] = room_speed*48;
