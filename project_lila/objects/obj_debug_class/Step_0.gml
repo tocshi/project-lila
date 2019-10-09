@@ -34,15 +34,17 @@ if(keyboard_check_pressed(skill_button[1]) && (cd[1] <= 0) && statmap[? "mp"] >=
 	var effect = instance_create_layer(x,y,"Instances",obj_debug_indicator);
 	effect.vspeed = -1;
 	cd[1] = room_speed*5;
+	maxcd[1] = cd[1];
 	
 	var skillobj = instance_create_layer(x,y,"Attacks",obj_skill_empowered_strike);
 	skillobj.atkmap[? "isBuff"] = true;
 	
-	var buff_array = array_create(5,false);
+	var buff_array = array_create(6,false);
 	buff_array[0] = 3*room_speed;
 	buff_array[1] = true;
 	buff_array[2] = "Empowered";
 	buff_array[3] = buff_empowered;
+	buff_array[5] = -1;
 	ds_list_add(buff,buff_array);
 	relative_speedups[? "Empowered"] = 2;
 
@@ -54,7 +56,9 @@ if(keyboard_check_pressed(skill_button[2]) && (cd[2] <= 0) && statmap[? "mp"] >=
 	
 	statmap[? "mp"] -= 20;
 	cd[2] = room_speed*1.5;
+	maxcd[2] = cd[2];
 	isMoving = false;
+	highRegenThreshold = 0;
 	instance_create_layer(x,y,"Attacks",obj_skill_fireball);
 
 }
@@ -72,7 +76,9 @@ if(keyboard_check_pressed(skill_button[4]) && (cd[4] <= 0) && statmap[? "mp"] >=
 	
 	statmap[? "mp"] -= 30;
 	cd[4] = room_speed*2;
+	maxcd[4] = cd[4];
 	isMoving = false;
+	highRegenThreshold = 0;
 	t_shot_remaining = 2;
 	alarm[4] = 1;
 }
@@ -80,8 +86,11 @@ if(keyboard_check_pressed(skill_button[4]) && (cd[4] <= 0) && statmap[? "mp"] >=
 if(keyboard_check_pressed(skill_button[6]) && (cd[6] <= 0) && statmap[? "mp"] >= 35){
 	
 	statmap[? "mp"] -= 35;
-	isMoving = false;
 	cd[6] = room_speed*12;
+	maxcd[6] = cd[6];
+	isMoving = false;
+	highRegenThreshold = 0;
+	
 	
 	var skillobj = instance_create_layer(mouse_x,mouse_y,"Attacks",obj_skill_arrow_rain);
 	
@@ -97,7 +106,9 @@ if(keyboard_check_pressed(skill_button[7]) && (cd[7] <= 0) && statmap[? "mp"] >=
 	
 	statmap[? "mp"] -= 45;
 	cd[7] = room_speed*48;
+	maxcd[7] = cd[7];
 	isMoving = false;
+	highRegenThreshold = 0;
 	instance_create_layer(mouse_x,mouse_y,"Attacks",obj_skill_gate_of_wind);
 
 }

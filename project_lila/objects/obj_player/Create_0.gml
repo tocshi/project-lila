@@ -2,6 +2,7 @@
 statmap = ds_map_create();
 
 statmap[? "level"] 			= 0;
+statmap[? "class"]			= "Debug";
 statmap[? "maxhp"]			= 100 + statmap[? "level"]*10 + round(sqr(statmap[? "level"])/10);
 statmap[? "hp"]				= 100 + statmap[? "level"]*10 + round(sqr(statmap[? "level"])/10);
 statmap[? "hpshield"]		= 0;
@@ -47,6 +48,7 @@ highRegenThreshold = 0;
 isMoving = false;
 
 cd = array_create(21,0);
+maxcd = array_create(21,0);
 
 // Map of effects on the player (buffs/debuffs)
 effects = ds_map_create();
@@ -69,6 +71,7 @@ ds_map_add_map(effects, "relative_slows", speedups);
 //	2	name
 //	3	countdownEvent
 //	4	unremovable
+//  5	# of stacks (-1 means it cannot stack)
 buff = ds_list_create();
 // list of buffs to remove from timer ending (change to different ds later?)
 buffRemoved = false;

@@ -11,5 +11,6 @@ if(isRedCrit){
 	draw_set_color(c_red);
 }
 draw_set_alpha(1);
-draw_set_font(fnt_hpmp);
-draw_text_transformed(x, y, string(damage),1.5,1.5,0);
+draw_set_font(fnt_dmgtxt);
+//draw_text_transformed(x, y, string(damage),1.5,1.5,0);
+draw_text_outlined(x, y, c_black, draw_get_color(), string(damage));
