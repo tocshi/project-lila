@@ -5,4 +5,6 @@ statmap[? "hp"] = 1000;
 statmap[? "hpregen"] = 1000;
 statmap[? "mpregen"] = 0;
 
+canKnockback = true;
+
 alarm[1] = room_speed*2;

@@ -37,3 +37,11 @@ statmap[? "finalshld"]		= 0;
 
 canKnockback	= false;
 isDead			= false;
+canAttack = true;
+canUseSkill = true;
+isCCed = false;
+isDead = false;
+isMoving = false;
+canMove = true;
+
+atkTimer = 0;
