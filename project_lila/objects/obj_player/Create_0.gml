@@ -52,6 +52,7 @@ isMoving = false;
 
 cd = array_create(21,0);
 maxcd = array_create(21,0);
+atkTimer = 0;
 
 // Map of effects on the player (buffs/debuffs)
 effects = ds_map_create();

@@ -21,3 +21,14 @@ if((direction >= 0 && direction <= 90) || (direction >= 270 && direction < 360))
 } else {
 	image_xscale = -1;
 }
+
+//ATK TIMER
+if (atkTimer > 0){
+	atkTimer--;
+	if(atkTimer <= 0){
+		canAttack = true;
+		canUseSkill = true;
+		canMove = true;
+		speed = 0;
+	}
+}

@@ -1,11 +1,14 @@
 event_inherited();
 
-if(mouse_check_button_pressed(mb_left) && (cd[0] <= 0)){
+if(mouse_check_button_pressed(mb_left) && (cd[0] <= 0) && canAttack){
 	
 	speed = 0;
 	isMoving = false;
 	canMove = false;
+	canAttack = false;
+	canUseSkill = false;
 	cd[0] = room_speed/statmap[? "atkspeed"];
+	atkTimer = cd[0];
 	
 	var basic_attack = instance_create_layer(x,y,"Attacks",obj_basicattack_longsword);
 	iter0++;
@@ -33,8 +36,7 @@ if(keyboard_check_pressed(skill_button[1]) && (cd[1] <= 0) && statmap[? "mp"] >=
 	statmap[? "mp"] -= 20;
 	var effect = instance_create_layer(x,y,"Instances",obj_debug_indicator);
 	effect.vspeed = -1;
-	cd[1] = room_speed*5;
-	maxcd[1] = cd[1];
+	cd[1] = maxcd[1];
 	
 	var skillobj = instance_create_layer(x,y,"Attacks",obj_skill_empowered_strike);
 	skillobj.atkmap[? "isBuff"] = true;
@@ -55,8 +57,11 @@ if(keyboard_check_pressed(skill_button[1]) && (cd[1] <= 0) && statmap[? "mp"] >=
 if(keyboard_check_pressed(skill_button[2]) && (cd[2] <= 0) && statmap[? "mp"] >= 20 && canUseSkill){
 	
 	statmap[? "mp"] -= 20;
-	cd[2] = room_speed*1.5;
-	maxcd[2] = cd[2];
+	cd[2] = maxcd[2];
+	atkTimer = 10;
+	canMove = false;
+	canAttack = false;
+	canUseSkill = false;
 	isMoving = false;
 	highRegenThreshold = 0;
 	instance_create_layer(x,y,"Attacks",obj_skill_fireball);
@@ -75,8 +80,12 @@ if(keyboard_check_pressed(skill_button[4]) && (cd[4] <= 0) && statmap[? "mp"] >=
 	}
 	
 	statmap[? "mp"] -= 30;
-	cd[4] = room_speed*2;
-	maxcd[4] = cd[4];
+	
+	cd[4] = maxcd[4];
+	atkTimer = 22;
+	canMove = false;
+	canAttack = false;
+	canUseSkill = false;
 	isMoving = false;
 	highRegenThreshold = 0;
 	t_shot_remaining = 2;
@@ -86,9 +95,13 @@ if(keyboard_check_pressed(skill_button[4]) && (cd[4] <= 0) && statmap[? "mp"] >=
 if(keyboard_check_pressed(skill_button[6]) && (cd[6] <= 0) && statmap[? "mp"] >= 35 && canUseSkill){
 	
 	statmap[? "mp"] -= 35;
-	cd[6] = room_speed*12;
-	maxcd[6] = cd[6];
+
+	cd[6] = maxcd[6];
 	isMoving = false;
+	canMove = false;
+	canAttack = false;
+	canUseSkill = false;
+	atkTimer = 30;
 	highRegenThreshold = 0;
 	
 	
@@ -105,10 +118,38 @@ if(keyboard_check_pressed(skill_button[6]) && (cd[6] <= 0) && statmap[? "mp"] >=
 if(keyboard_check_pressed(skill_button[7]) && (cd[7] <= 0) && statmap[? "mp"] >= 45 && canUseSkill){
 	
 	statmap[? "mp"] -= 45;
-	cd[7] = room_speed*48;
-	maxcd[7] = cd[7];
+
+	cd[7] = maxcd[7];
 	isMoving = false;
 	highRegenThreshold = 0;
 	instance_create_layer(mouse_x,mouse_y,"Attacks",obj_skill_gate_of_wind);
+
+}
+
+if(keyboard_check_pressed(skill_button[8]) && (cd[8] <= 0) && statmap[? "mp"] >= 15 && canUseSkill){
+	
+	ds_list_clear(scList);
+	statmap[? "mp"] -= 15;
+	
+	cd[8] = maxcd[8];
+	atkTimer = 30;
+	highRegenThreshold = 0;
+	canMove = false;
+	canAttack = false;
+	canUseSkill = false;
+	
+	direction = point_direction(x,y,mouse_x,mouse_y);
+	speed = 15;
+	
+	var buff_array = array_create(6,false);
+	buff_array[0] = 30;
+	buff_array[1] = true;
+	buff_array[2] = "Knight's Shield";
+	buff_array[3] = buff_knights_shield;
+	buff_array[5] = -1;
+	ds_list_add(buff,buff_array);
+	shield_charge = true;
+	isBlocking = true;
+	statmap[? "finalshld"] += 50;
 
 }

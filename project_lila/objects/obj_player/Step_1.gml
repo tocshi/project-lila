@@ -43,12 +43,10 @@ for (var i = 0; i < array_length_1d(cd); i++){
 for (var i = 0; i < ds_list_size(buff); if(!buffRemoved){i++;}){
 	buffRemoved = false;
 	var buff_array = ds_list_find_value(buff,i);
+	buff_visual_handler(buff_array[2]);
 	if(buff_array[0] > 0){
 		buff_array[0]--;
 		ds_list_replace(buff,i,buff_array);
-		//debug
-		var effect = instance_create_layer(x,y+32,"Instances",obj_debug_buff);
-		effect.vspeed = -1;
 	}
 	if(buff_array[0] <= 0){
 		script_execute(buff_array[3],self);
@@ -57,7 +55,12 @@ for (var i = 0; i < ds_list_size(buff); if(!buffRemoved){i++;}){
 	}
 }
 
-
-//COUNTDOWN EVENTS
-if (cd[0] == 1){canMove = true;}
+if (atkTimer > 0){
+	atkTimer--;
+	if(atkTimer <= 0){
+		canAttack = true;
+		canUseSkill = true;
+		canMove = true;
+	}
+}
 

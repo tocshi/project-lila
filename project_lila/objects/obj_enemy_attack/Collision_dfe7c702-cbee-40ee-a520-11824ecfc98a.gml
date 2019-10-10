@@ -51,8 +51,6 @@ if(ds_list_find_index(hitList,other.id) == -1){
 		}
 	}
 	
-	
-	
 	gTotalDamage = intDmg * (fcritdmg/100) * (atkmap[? "elem_mod"]/100) * (atkmap[? "finaldmg"]/100) * ((100-other.statmap[? "finalshld"])/100);
 	gTotalDamage = round(gTotalDamage);
 

@@ -5,6 +5,8 @@ statmap[? "hp"] = 500;
 statmap[? "hpregen"] = 1;
 statmap[? "mpregen"] = 0;
 
+canKnockback = true;
+
 alarm[1] = 1;
 
 second = false;
