@@ -14,7 +14,7 @@ if(isMoving){
 	move(statmap[? "movespeed"], point_direction(x,y,destX,destY));
 }
 
-if (point_distance(x, y, destX, destY) < statmap[? "movespeed"]){
+if (point_distance(x, y, destX, destY) < statmap[? "movespeed"] && canMove){
 		speed = 0;
 		isMoving = false;
 }

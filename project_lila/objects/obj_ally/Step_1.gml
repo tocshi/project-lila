@@ -1,7 +1,8 @@
 //CHECK DEATH
 if (statmap[? "hp"] <= 0 && !isDead){
 	isDead = true;
-	room_goto(rm_playerdeath);
+	mask_index = spr_empty;
+	alarm[0] = 30;
 }
 
 // CALCULATE MOVESPEED
@@ -49,7 +50,8 @@ for (var i = 0; i < ds_list_size(buff); if(!buffRemoved){i++;}){
 		ds_list_replace(buff,i,buff_array);
 	}
 	if(buff_array[0] <= 0){
-		removeBuff(self.id,buff_array[2])
+		script_execute(buff_array[3],self);
+		ds_list_delete(buff,i);
 		buffRemoved = true;
 	}
 }

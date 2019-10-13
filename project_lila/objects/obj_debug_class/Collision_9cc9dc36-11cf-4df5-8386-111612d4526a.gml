@@ -49,7 +49,9 @@ if(shield_charge){
 			minihp.hpwidth	= other.sprite_width;
 			minihp.target	= other.id;
 		}
-		statmap[? "isCrit"]			= false;
+		statmap[? "isCrit"]				= false;
+		statmap[? "isOrangeCrit"]		= false;
+		statmap[? "isRedCrit"]			= false;
 	}
 	if(other.canKnockback){
 		other.atkTimer = 5;

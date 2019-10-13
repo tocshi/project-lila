@@ -76,26 +76,12 @@ ds_map_add_map(effects, "relative_slows", speedups);
 //	3	countdownEvent
 //	4	unremovable
 //  5	# of stacks (-1 means it cannot stack)
-//	6	max # of stacks (set to 0 by default)
 buff = ds_list_create();
 // list of buffs to remove from timer ending (change to different ds later?)
 buffRemoved = false;
 
-skill_button = array_create(11,"");
-
-// Set default keybinds
-skill_button[0]		= vk_space;
-skill_button[1]		= ord("Q");
-skill_button[2]		= ord("W");
-skill_button[3]		= ord("E");
-skill_button[4]		= ord("R");
-skill_button[5]		= ord("T");
-skill_button[6]		= ord("A");
-skill_button[7]		= ord("S");
-skill_button[8]		= ord("D");
-skill_button[9]		= ord("F");
-skill_button[10]	= ord("G");
-
-//debug
-infmp = false;
+// Ally HP Bar
+var minihp = instance_create_layer(x, y, "dmgTxt", obj_allyhpbar);
+minihp.hpwidth	= sprite_width;
+minihp.target	= id;
 

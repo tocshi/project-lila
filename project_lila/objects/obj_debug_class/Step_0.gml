@@ -18,7 +18,7 @@ if(mouse_check_button_pressed(mb_left) && (cd[0] <= 0) && canAttack){
 	basic_attack.atkmap[? "dmgmod"]			= 100;
 	if(empowered_buff){
 		basic_attack.atkmap[? "dmgmod"]		= 250;
-		removeBuff("Empowered");
+		removeBuff(self.id,"Empowered");
 	}
 	basic_attack.atkmap[? "element"]		= "none";
 	
@@ -47,6 +47,7 @@ if(keyboard_check_pressed(skill_button[1]) && (cd[1] <= 0) && statmap[? "mp"] >=
 	buff_array[2] = "Empowered";
 	buff_array[3] = buff_empowered;
 	buff_array[5] = -1;
+	buff_array[6] = 0;
 	ds_list_add(buff,buff_array);
 	relative_speedups[? "Empowered"] = 2;
 
@@ -137,19 +138,52 @@ if(keyboard_check_pressed(skill_button[8]) && (cd[8] <= 0) && statmap[? "mp"] >=
 	canMove = false;
 	canAttack = false;
 	canUseSkill = false;
+	isMoving = false;
 	
 	direction = point_direction(x,y,mouse_x,mouse_y);
 	speed = 15;
 	
-	var buff_array = array_create(6,false);
-	buff_array[0] = 30;
-	buff_array[1] = true;
-	buff_array[2] = "Knight's Shield";
-	buff_array[3] = buff_knights_shield;
-	buff_array[5] = -1;
-	ds_list_add(buff,buff_array);
+	var appliedBuff = applyBuff(self.id,30,true,"Knight's Shield",buff_knights_shield,false,-1,0);
+	if(appliedBuff){
+		statmap[? "finalshld"] += 50;
+	}
 	shield_charge = true;
 	isBlocking = true;
-	statmap[? "finalshld"] += 50;
 
 }
+
+if(keyboard_check_pressed(skill_button[9]) && (cd[9] <= 0) && statmap[? "mp"] >= 15 && canUseSkill){
+	
+	if(instance_exists(obj_ally)){
+		target = instance_nearest(mouse_x,mouse_y,obj_ally);
+
+		if((point_distance(mouse_x,mouse_y,target.x,target.y) <= 64) && (point_distance(x,y,target.x,target.y) <= 448)){
+			speed = 15;
+			following_ally = true;
+			atkTimer = 10;
+			canMove = false;
+			canAttack = false;
+			canUseSkill = false;
+			isMoving = false;
+		}
+		else {
+			target = self.id;
+			var appliedBuff = applyBuff(target,180,true,"Knight's Shield",buff_knights_shield,false,-1,0);
+			if(appliedBuff){
+				statmap[? "finalshld"] += 50;
+			}
+			isBlocking = true;
+		}
+				
+	}
+	
+	statmap[? "mp"] -= 15;
+	
+	cd[9] = maxcd[9];
+	highRegenThreshold = 0;
+	
+	
+
+}
+
+
