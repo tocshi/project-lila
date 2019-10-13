@@ -19,3 +19,4 @@ shooter4.direction = 180;
 
 var shooter5 = instance_create_layer(2800,1000,"Instances",obj_debug_shooter);
 shooter5.direction = 180;
+var ally0 = instance_create_layer(2400,1000,"Instances",obj_debug_ally);

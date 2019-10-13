@@ -1,1 +1,1 @@
-
+global.meter = 32;
