@@ -51,7 +51,13 @@ if(ds_list_find_index(hitList,other.id) == -1){
 		}
 	}
 	
-	gTotalDamage = intDmg * (fcritdmg/100) * (atkmap[? "elem_mod"]/100) * (atkmap[? "finaldmg"]/100) * ((100-other.statmap[? "finalshld"])/100);
+	var fblk = 0;
+	if(other.isBlocking){
+		var fblk = other.statmap[? "blkmod"];
+	}
+	fblk = clamp(fblk,0,100);
+	
+	gTotalDamage = intDmg * (fcritdmg/100) * (atkmap[? "elem_mod"]/100) * (atkmap[? "finaldmg"]/100) * ((100-fblk)/100) * ((100-other.statmap[? "finalshld"])/100);
 	gTotalDamage = round(gTotalDamage);
 
 	other.statmap[? "hp"] -= gTotalDamage;

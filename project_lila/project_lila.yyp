@@ -170,7 +170,7 @@
             "Key": "25cc0bd0-b781-4d81-9623-254ee874acdd",
             "Value": {
                 "id": "db353746-46fe-45db-918e-55e74f9936f4",
-                "resourcePath": "scripts\\buff_visual_handler\\buff_visual_handler.yy",
+                "resourcePath": "scripts\\buff_effect_handler\\buff_effect_handler.yy",
                 "resourceType": "GMScript"
             }
         },

@@ -3,7 +3,7 @@ event_inherited();
 skill_sprite = array_create(10, spr_empty);
 iter0 = 0;
 empowered_buff = false;
-shield_charge = false;
+shield_charge = 0;
 scList = ds_list_create();
 t_shot_remaining = 0;
 target = noone;

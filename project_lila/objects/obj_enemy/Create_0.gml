@@ -34,11 +34,13 @@ statmap[? "critrate"]		= 0;
 statmap[? "critdmg"]		= 150;
 statmap[? "finaldmg"]		= 100;
 statmap[? "finalshld"]		= 0;
+statmap[? "blkmod"]			= 50;
 
 canKnockback	= false;
 isDead			= false;
 canAttack = true;
 canUseSkill = true;
+isBlocking = false;
 isCCed = false;
 isDead = false;
 isMoving = false;

@@ -49,9 +49,14 @@ if(collision_point(x, y, target, false, true)){
 		}
 	}
 	
+	var fblk = 0;
 	
+	if(target.isBlocking){
+		var fblk = target.statmap[? "blkmod"];
+	}
+	fblk = clamp(fblk,0,100);
 	
-	gTotalDamage = intDmg * (fcritdmg/100) * (atkmap[? "elem_mod"]/100) * (atkmap[? "finaldmg"]/100) * ((100-target.statmap[? "finalshld"])/100);
+	gTotalDamage = intDmg * (fcritdmg/100) * (atkmap[? "elem_mod"]/100) * (atkmap[? "finaldmg"]/100) * ((100-fblk)/100) * ((100-target.statmap[? "finalshld"])/100);
 	gTotalDamage = round(gTotalDamage);
 
 	target.statmap[? "hp"] -= gTotalDamage;

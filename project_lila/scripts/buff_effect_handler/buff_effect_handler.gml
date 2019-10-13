@@ -9,9 +9,11 @@ switch(buffName){
 
 	case "Knight's Shield":
 	var effect = instance_create_layer(x,y,"Assets_1",obj_skill_knight_shield);
-	effect.image_alpha = 0.6;
+	effect.image_alpha = 0.3;
 	effect.direction = irandom_range(0,359);
 	effect.speed = 1;
+	
+	isBlocking = true;
 	break;
 
 }

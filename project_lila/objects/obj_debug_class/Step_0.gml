@@ -143,12 +143,9 @@ if(keyboard_check_pressed(skill_button[8]) && (cd[8] <= 0) && statmap[? "mp"] >=
 	direction = point_direction(x,y,mouse_x,mouse_y);
 	speed = 15;
 	
-	var appliedBuff = applyBuff(self.id,30,true,"Knight's Shield",buff_knights_shield,false,-1,0);
-	if(appliedBuff){
-		statmap[? "finalshld"] += 50;
-	}
-	shield_charge = true;
-	isBlocking = true;
+	applyBuff(self.id,30,true,"Knight's Shield",buff_knights_shield,false,-1,0);
+
+	shield_charge = 29;
 
 }
 
@@ -157,10 +154,10 @@ if(keyboard_check_pressed(skill_button[9]) && (cd[9] <= 0) && statmap[? "mp"] >=
 	if(instance_exists(obj_ally)){
 		target = instance_nearest(mouse_x,mouse_y,obj_ally);
 
-		if((point_distance(mouse_x,mouse_y,target.x,target.y) <= 64) && (point_distance(x,y,target.x,target.y) <= 448)){
+		if((point_distance(mouse_x,mouse_y,target.x,target.y) <= 128) && (point_distance(x,y,target.x,target.y) <= 448)){
 			speed = 15;
 			following_ally = true;
-			atkTimer = 10;
+			atkTimer = clamp(round(point_distance(x,y,target.x,target.y)/15),1,30);
 			canMove = false;
 			canAttack = false;
 			canUseSkill = false;
@@ -168,11 +165,8 @@ if(keyboard_check_pressed(skill_button[9]) && (cd[9] <= 0) && statmap[? "mp"] >=
 		}
 		else {
 			target = self.id;
-			var appliedBuff = applyBuff(target,180,true,"Knight's Shield",buff_knights_shield,false,-1,0);
-			if(appliedBuff){
-				statmap[? "finalshld"] += 50;
-			}
-			isBlocking = true;
+			applyBuff(target,180,true,"Knight's Shield",buff_knights_shield,false,-1,0);
+
 		}
 				
 	}
@@ -181,8 +175,6 @@ if(keyboard_check_pressed(skill_button[9]) && (cd[9] <= 0) && statmap[? "mp"] >=
 	
 	cd[9] = maxcd[9];
 	highRegenThreshold = 0;
-	
-	
 
 }
 

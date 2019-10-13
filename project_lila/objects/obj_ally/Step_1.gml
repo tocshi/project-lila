@@ -44,7 +44,7 @@ for (var i = 0; i < array_length_1d(cd); i++){
 for (var i = 0; i < ds_list_size(buff); if(!buffRemoved){i++;}){
 	buffRemoved = false;
 	var buff_array = ds_list_find_value(buff,i);
-	buff_visual_handler(buff_array[2]);
+	buff_effect_handler(buff_array[2]);
 	if(buff_array[0] > 0){
 		buff_array[0]--;
 		ds_list_replace(buff,i,buff_array);

@@ -37,6 +37,7 @@ statmap[? "critrate"]		= 50;
 statmap[? "critdmg"]		= 150;
 statmap[? "finaldmg"]		= 100;
 statmap[? "finalshld"]		= 0;
+statmap[? "blkmod"]			= 50;
 
 
 // Initial Variables
@@ -49,6 +50,7 @@ canUseSkill = true;
 isCCed = false;
 isDead = false;
 isMoving = false;
+isBlocking = false;
 
 cd = array_create(21,0);
 maxcd = array_create(21,0);
