@@ -21,7 +21,6 @@ for(i = 0; i < array_length_1d(skill_sprite); i++){
 		var cdtime = string(round(cd[i+1]/60));
 	}
 	
-	
 	draw_set_font(fnt_dmgtxt);
 	draw_set_color(c_white);
 	draw_set_halign(fa_center);

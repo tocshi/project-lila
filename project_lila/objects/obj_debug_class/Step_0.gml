@@ -93,6 +93,41 @@ if(keyboard_check_pressed(skill_button[4]) && (cd[4] <= 0) && statmap[? "mp"] >=
 	alarm[4] = 1;
 }
 
+if(keyboard_check_pressed(skill_button[5]) && (cd[5] <= 0) && statmap[? "mp"] >= 20 && canUseSkill){
+	
+	
+	direction = point_direction(x,y,mouse_x,mouse_y)+180;
+	speed = 8;
+	
+	if(hasBuff(self.id,"Protective Footwork II")){
+		removeBuff(self.id,"Protective Footwork II");
+		cd[5] = maxcd[5];
+		protective_footwork_mod = 400;
+	}
+	else if(hasBuff(self.id,"Protective Footwork I")){
+		applyBuff(self.id,180,false,"Protective Footwork II",buff_protective_footwork,false,-1,0);
+		removeBuff(self.id,"Protective Footwork I");
+		cd[5] = 0.8*room_speed;
+		protective_footwork_mod = 240;
+	}
+	else{
+		cd[5] = 0.8*room_speed;
+		applyBuff(self.id,180,false,"Protective Footwork I",buff_protective_footwork,false,-1,0);
+		protective_footwork_mod = 160;
+	}
+		
+	statmap[? "mp"] -= 20;
+	atkTimer = 15;
+	highRegenThreshold = 0;
+	canMove = false;
+	canAttack = false;
+	canUseSkill = false;
+	isMoving = false;	
+	alarm[5] = 20;
+	applyBuff(self.id,20,true,"Knight's Shield",buff_knights_shield,false,-1,0);
+
+}
+
 if(keyboard_check_pressed(skill_button[6]) && (cd[6] <= 0) && statmap[? "mp"] >= 35 && canUseSkill){
 	
 	statmap[? "mp"] -= 35;

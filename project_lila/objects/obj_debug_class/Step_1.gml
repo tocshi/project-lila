@@ -5,7 +5,14 @@ if(shield_charge > 0){
 	if(shield_charge <= 0){
 		speed = 0; 
 		isMoving = false;
-		shield_charge = false;
+	}	
+}
+
+if(footwork_charge > 0){
+	footwork_charge--;
+	if(footwork_charge <= 0){
+		speed = 0; 
+		isMoving = false;
 	}	
 }
 

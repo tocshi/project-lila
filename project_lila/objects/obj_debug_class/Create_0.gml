@@ -8,6 +8,8 @@ scList = ds_list_create();
 t_shot_remaining = 0;
 target = noone;
 following_ally = false;
+protective_footwork_mod = 0;
+footwork_charge = 0;
 
 skill_sprite[0] = spr_skill_Q;
 skill_sprite[1] = spr_skill_W;
@@ -24,7 +26,7 @@ maxcd[1] = room_speed*5;
 maxcd[2] = room_speed*1.5;
 maxcd[3] = room_speed*6;
 maxcd[4] = room_speed*2;
-maxcd[5] = room_speed*6;
+maxcd[5] = room_speed*16;
 maxcd[6] = room_speed*12;
 maxcd[7] = room_speed*48;
 maxcd[8] = room_speed*6;

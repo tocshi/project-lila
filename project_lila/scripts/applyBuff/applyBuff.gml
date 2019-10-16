@@ -22,7 +22,7 @@ for (var i = 0; i < ds_list_size(buff); i++;){
 		// longer than the new buff, then return false and exit the script.
 		// Otherwise, increase the stacks of the buff (if below max)
 		if(e_buff_array[5] == -1){
-			if(e_buff_array[0] <= time){return false;}
+			if(e_buff_array[0] >= time){return false;}
 		} else {
 			if((e_buff_array[5] + stacks) <= e_buff_array[6]){
 			stacks += e_buff_array[5];	
