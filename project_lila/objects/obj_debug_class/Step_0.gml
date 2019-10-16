@@ -100,14 +100,14 @@ if(keyboard_check_pressed(skill_button[5]) && (cd[5] <= 0) && statmap[? "mp"] >=
 	speed = 8;
 	
 	if(hasBuff(self.id,"Protective Footwork II")){
-		cd[5] = maxcd[5];
 		removeBuff(self.id,"Protective Footwork II");
+		cd[5] = maxcd[5];
 		protective_footwork_mod = 400;
 	}
 	else if(hasBuff(self.id,"Protective Footwork I")){
-		cd[5] = 0.8*room_speed;
 		applyBuff(self.id,180,false,"Protective Footwork II",buff_protective_footwork,false,-1,0);
 		removeBuff(self.id,"Protective Footwork I");
+		cd[5] = 0.8*room_speed;
 		protective_footwork_mod = 240;
 	}
 	else{
