@@ -8,3 +8,12 @@ draw_set_font(fnt_hpmp);
 draw_set_color(c_white);
 draw_text(220, 15, string(ceil(statmap[? "hp"])) + " / " + string(round(statmap[? "maxhp"])));
 draw_text(220, 37, string(ceil(statmap[? "mp"])) + " / " + string(round(statmap[? "maxmp"])));
+
+/*
+//DEBUG
+draw_set_color(c_black);
+draw_set_font(fnt_menutitle);
+draw_text(40, 100, ds_list_size(buff));
+draw_set_font(fnt_hpmp);
+draw_set_color(c_white);
+*/
