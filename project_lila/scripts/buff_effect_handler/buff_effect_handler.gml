@@ -2,6 +2,13 @@ buffName = argument0;
 
 switch(buffName){
 	
+	case "Stunned":
+	canMove = false;
+	canAttack = false;
+	canUseSkill = false;
+	isCCed = true;
+	break;
+	
 	case "Empowered":
 	var effect = instance_create_layer(x,y+32,"Assets_1",obj_debug_buff);
 	effect.vspeed = -1;

@@ -69,6 +69,21 @@ if(keyboard_check_pressed(skill_button[2]) && (cd[2] <= 0) && statmap[? "mp"] >=
 
 }
 
+if(keyboard_check_pressed(skill_button[3]) && (cd[3] <= 0) && statmap[? "mp"] >= 20 && canUseSkill){
+	
+	statmap[? "mp"] -= 20;
+	cd[3] = maxcd[3];
+	atkTimer = 30;
+	canMove = false;
+	canAttack = false;
+	canUseSkill = false;
+	isMoving = false;
+	highRegenThreshold = 0;
+	var skillobj = instance_create_layer(x,y,"Attacks",obj_skill_roundslash);
+	skillobj.user  = self.id;
+
+}
+
 if(keyboard_check_pressed(skill_button[4]) && (cd[4] <= 0) && statmap[? "mp"] >= 30 && canUseSkill){
 	
 	if(!instance_exists(obj_enemy)){
@@ -122,9 +137,10 @@ if(keyboard_check_pressed(skill_button[5]) && (cd[5] <= 0) && statmap[? "mp"] >=
 	canMove = false;
 	canAttack = false;
 	canUseSkill = false;
-	isMoving = false;	
-	alarm[5] = 20;
+	isMoving = false;
 	applyBuff(self.id,20,true,"Knight's Shield",buff_knights_shield,false,-1,0);
+	alarm[5] = 20;
+	
 
 }
 
@@ -213,4 +229,29 @@ if(keyboard_check_pressed(skill_button[9]) && (cd[9] <= 0) && statmap[? "mp"] >=
 
 }
 
+if(keyboard_check_pressed(skill_button[10]) && (cd[10] <= 0) && statmap[? "mp"] >= 25 && canUseSkill){
+	
+	statmap[? "mp"] -= 25;
 
+	cd[10] = maxcd[10];
+	isMoving = false;
+	atkTimer = 20;
+	speed = 0;
+	highRegenThreshold = 0;
+	var skillobj = instance_create_layer(x,y,"Attacks",obj_skill_shield_bash);
+	skillobj.direction = point_direction(x,y,mouse_x,mouse_y);
+	skillobj.image_angle = point_direction(x,y,mouse_x,mouse_y);
+	skillobj.speed = 5;
+	
+	if(hasBuff(self.id,"Knight's Shield")){
+		skillobj.buffed = true;
+		skillobj.atkmap[? "dmgmod"] = 270;
+		skillobj.atkmap[? "element"] = "none";
+		skillobj.image_blend = c_yellow;
+	}
+	else{
+		skillobj.buffed = false;
+		skillobj.atkmap[? "dmgmod"] = 90;
+		skillobj.atkmap[? "element"] = "none";
+}
+}

@@ -24,11 +24,11 @@ skill_sprite[9] = spr_skill_G;
 
 maxcd[1] = room_speed*5;
 maxcd[2] = room_speed*1.5;
-maxcd[3] = room_speed*6;
+maxcd[3] = room_speed*3;
 maxcd[4] = room_speed*2;
 maxcd[5] = room_speed*16;
 maxcd[6] = room_speed*12;
 maxcd[7] = room_speed*48;
 maxcd[8] = room_speed*6;
 maxcd[9] = room_speed*6;
-maxcd[10] = room_speed*6;
+maxcd[10] = room_speed*9;
