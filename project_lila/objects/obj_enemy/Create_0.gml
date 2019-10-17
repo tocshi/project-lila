@@ -47,3 +47,14 @@ isMoving = false;
 canMove = true;
 
 atkTimer = 0;
+
+// buff array properties:
+//	0	time
+//	1	visible (on buff bar)
+//	2	name
+//	3	countdownEvent
+//	4	unremovable
+//  5	# of stacks (-1 means it cannot stack)
+//	6	max # of stacks (set to 0 by default)
+buff = ds_list_create();
+buffRemoved = false;

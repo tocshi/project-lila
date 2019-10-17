@@ -1,4 +1,4 @@
-if(!canUseSkill){
+if(atkTimer > 0){
 	speed = 0;
 	exit;
 }
