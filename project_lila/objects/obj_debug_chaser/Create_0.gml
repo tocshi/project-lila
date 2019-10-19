@@ -1,12 +1,12 @@
 event_inherited();
-image_blend = c_yellow;
+image_blend = c_olive;
 statmap[? "maxhp"] = 500;
 statmap[? "hp"] = 500;
 statmap[? "hpregen"] = 1;
 statmap[? "mpregen"] = 0;
 
-aggro_range = 360
-recalc_countdown = 60;
+aggro_range = 360;
+recalc_countdown = 0;
 ai_path = path_add();
 
 if (!variable_instance_exists(id, "ai_path")) {

@@ -3,10 +3,13 @@
 /// @param1 target object
 /// @param2 path to write to
 
-_sx = argument0.x;
-_sy = argument0.y;
-_fx = argument1.x;
-_fy = argument1.y;
+var s = argument0;
+var f = argument1;
+
+_sx = s.x;
+_sy = s.y;
+_fx = f.x;
+_fy = f.y;
 ai_path = argument2;
 
 if (!mp_grid_path(global.ai_grid, ai_path, _sx, _sy, _fx, _fy, true)) {
