@@ -919,6 +919,14 @@
             }
         },
         {
+            "Key": "f1fc620f-541b-4c43-83ff-33b23cd84437",
+            "Value": {
+                "id": "efc856d0-2953-4a22-b4bd-a9d8af7f2b20",
+                "resourcePath": "objects\\obj_class_knight\\obj_class_knight.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "f3578725-6ad3-4794-afd2-0dd05a06723f",
             "Value": {
                 "id": "0d35c29d-1fdb-46c2-bb28-70f19d89cde2",
