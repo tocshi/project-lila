@@ -2,7 +2,10 @@
 statmap = ds_map_create();
 
 statmap[? "level"] 			= 0;
+statmap[? "xp"] 			= 0;
 statmap[? "class"]			= "Debug";
+statmap[? "classlvl"]		= 10;
+statmap[? "classxp"] 		= 0;
 statmap[? "maxhp"]			= 100 + statmap[? "level"]*10 + round(sqr(statmap[? "level"])/10);
 statmap[? "hp"]				= 100 + statmap[? "level"]*10 + round(sqr(statmap[? "level"])/10);
 statmap[? "hpshield"]		= 0;
@@ -20,7 +23,6 @@ statmap[? "earth_atk"]		= 0;
 statmap[? "wind_atk"]		= 0;
 statmap[? "light_atk"]		= 0;
 statmap[? "dark_atk"]		= 0;
-
 
 statmap[? "fire_def"]		= 0;
 statmap[? "ice_def"]		= 0;
@@ -51,6 +53,7 @@ isCCed = false;
 isDead = false;
 isMoving = false;
 isBlocking = false;
+statChange = false;
 
 cd = array_create(21,0);
 maxcd = array_create(21,0);
