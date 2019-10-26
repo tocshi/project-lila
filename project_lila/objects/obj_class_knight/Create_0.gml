@@ -8,8 +8,11 @@ scList = ds_list_create();
 t_shot_remaining = 0;
 target = noone;
 following_ally = false;
+allRounderApplied = false;
 protective_footwork_mod = 0;
 footwork_charge = 0;
+origatk = statmap[? "atk"];
+origdef = statmap[? "def"];
 
 skill_sprite[0] = spr_skill_Q;
 skill_sprite[1] = spr_skill_W;

@@ -31,6 +31,7 @@ if(mouse_check_button_pressed(mb_left) && (cd[0] <= 0) && canAttack){
 
 }
 
+
 if(keyboard_check_pressed(skill_button[1]) && (cd[1] <= 0) && statmap[? "mp"] >= 20 && canUseSkill){
 	
 	statmap[? "mp"] -= 20;
@@ -52,12 +53,16 @@ if(keyboard_check_pressed(skill_button[1]) && (cd[1] <= 0) && statmap[? "mp"] >=
 	relative_speedups[? "Empowered"] = 2;
 
 	empowered_buff = true;
+	statChange = true;
 
 }
 
+if(statmap[? "classlvl"] < 2){exit;}
+
+
+
+if(statmap[? "classlvl"] < 3){exit;}
 if(keyboard_check_pressed(skill_button[3]) && (cd[3] <= 0) && statmap[? "mp"] >= 15 && canUseSkill){
-	
-	if(statmap[? "classlvl"] < 3){exit;}
 	
 	ds_list_clear(scList);
 	statmap[? "mp"] -= 15;
@@ -79,9 +84,9 @@ if(keyboard_check_pressed(skill_button[3]) && (cd[3] <= 0) && statmap[? "mp"] >=
 
 }
 
-if(keyboard_check_pressed(skill_button[4]) && (cd[4] <= 0) && statmap[? "mp"] >= 20 && statmap[? "classlvl"] >= 4 && canUseSkill){
+if(statmap[? "classlvl"] < 4){exit;}
+if(keyboard_check_pressed(skill_button[4]) && (cd[4] <= 0) && statmap[? "mp"] >= 20 && canUseSkill){
 	
-	if(statmap[? "classlvl"] < 4){exit;}
 	
 	statmap[? "mp"] -= 20;
 	cd[4] = maxcd[4];
@@ -96,9 +101,10 @@ if(keyboard_check_pressed(skill_button[4]) && (cd[4] <= 0) && statmap[? "mp"] >=
 
 }
 
-if(keyboard_check_pressed(skill_button[5]) && (cd[5] <= 0) && statmap[? "mp"] >= 15 && statmap[? "classlvl"] >= 5 && canUseSkill){
+if(statmap[? "classlvl"] < 5){exit;}
+if(keyboard_check_pressed(skill_button[5]) && (cd[5] <= 0) && statmap[? "mp"] >= 15 && canUseSkill){
 	
-	if(statmap[? "classlvl"] < 5){exit;}
+	
 	
 	if(instance_exists(obj_ally)){
 		target = instance_nearest(mouse_x,mouse_y,obj_ally);
@@ -128,11 +134,19 @@ if(keyboard_check_pressed(skill_button[5]) && (cd[5] <= 0) && statmap[? "mp"] >=
 }
 
 if(statmap[? "classlvl"] < 6){exit;}
-var origatk = statmap[? "atk"];
+if(!allRounderApplied){
+	origatk = statmap[? "atk"];
+	origdef = statmap[? "def"];
+	statmap[? "atk"] += origdef*0.3;
+	statmap[? "def"] += origatk*0.3;
+	allRounderApplied = true;
+}
 
-if(keyboard_check_pressed(skill_button[7]) && (cd[7] <= 0) && statmap[? "mp"] >= 20 && statmap[? "classlvl"] >= 7 && canUseSkill){
+
+if(statmap[? "classlvl"] < 7){exit;}
+if(keyboard_check_pressed(skill_button[7]) && (cd[7] <= 0) && statmap[? "mp"] >= 20 && canUseSkill){
 	
-	if(statmap[? "classlvl"] < 7){exit;}
+	
 	
 	direction = point_direction(x,y,mouse_x,mouse_y)+180;
 	speed = 8;
@@ -167,10 +181,8 @@ if(keyboard_check_pressed(skill_button[7]) && (cd[7] <= 0) && statmap[? "mp"] >=
 
 }
 
-
-if(keyboard_check_pressed(skill_button[8]) && (cd[8] <= 0) && statmap[? "mp"] >= 25 && statmap[? "classlvl"] >= 8 && canUseSkill){
-	
-	if(statmap[? "classlvl"] < 8){exit;}
+if(statmap[? "classlvl"] < 8){exit;}
+if(keyboard_check_pressed(skill_button[8]) && (cd[8] <= 0) && statmap[? "mp"] >= 25 && canUseSkill){
 	
 	statmap[? "mp"] -= 25;
 
@@ -194,5 +206,11 @@ if(keyboard_check_pressed(skill_button[8]) && (cd[8] <= 0) && statmap[? "mp"] >=
 		skillobj.buffed = false;
 		skillobj.atkmap[? "dmgmod"] = 90;
 		skillobj.atkmap[? "element"] = "none";
+	}
 }
-}
+
+if(statmap[? "classlvl"] < 9){exit;}
+
+
+if(statmap[? "classlvl"] < 10){exit;}
+

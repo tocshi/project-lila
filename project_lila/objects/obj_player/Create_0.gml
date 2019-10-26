@@ -53,6 +53,7 @@ isCCed = false;
 isDead = false;
 isMoving = false;
 isBlocking = false;
+statChange = false;
 
 cd = array_create(21,0);
 maxcd = array_create(21,0);

@@ -8,6 +8,22 @@ if(shield_charge > 0){
 	}	
 }
 
+if(statmap[? "classlvl"] >= 6){
+	if(allRounderApplied && statChange){
+		statmap[? "atk"] -= origdef*0.3;
+		statmap[? "def"] -= origatk*0.3;
+		allRounderApplied = false;
+	}
+	/*
+	else{
+		origatk = statmap[? "atk"];
+		origdef = statmap[? "def"];
+		statmap[? "atk"] += origdef*0.3;
+		statmap[? "def"] += origatk*0.3;
+		allRounderApplied = true;
+	}*/
+}
+
 if(footwork_charge > 0){
 	footwork_charge--;
 	if(footwork_charge <= 0){

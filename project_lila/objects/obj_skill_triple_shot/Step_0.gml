@@ -31,7 +31,7 @@ if(collision_point(x, y, target, false, true)){
 		break;
 	}
 
-	var intDmg = ((atkmap[? "atk"] * (atkmap[? "dmgmod"]/100)) - target.statmap[? "def"]);
+	var intDmg = ((atkmap[? "atk"] * (atkmap[? "dmgmod"]/100)) - target.statmap[? "def"] * (other.statmap[? "level"]/20));
 	if(intDmg < 0){intDmg = 0;}
 	
 	var fcritdmg = atkmap[? "critdmg"];

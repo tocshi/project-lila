@@ -33,7 +33,7 @@ if(ds_list_find_index(hitList,other.id) == -1){
 		break;
 	}
 
-	var intDmg = ((atkmap[? "atk"] * (atkmap[? "dmgmod"]/100)) - other.statmap[? "def"]);
+	var intDmg = ((atkmap[? "atk"] * (atkmap[? "dmgmod"]/100)) - other.statmap[? "def"] * (other.statmap[? "level"]/20));
 	if(intDmg < 0){intDmg = 0;}
 	
 	var fcritdmg = atkmap[? "critdmg"];
