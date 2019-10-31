@@ -27,7 +27,7 @@ if(canMove && !isMoving){
 	highRegenThreshold = 0;
 }
 
-//DEBUG COOLDOWN RESET AND INFINITE MP
+//DEBUG COOLDOWN RESET AND INFINITE MP AND EQUIP
 if(keyboard_check_pressed(vk_tab)){
 	for (var i = 0; i < array_length_1d(cd); i++){
 		if(cd[i] > 0){cd[i] = 1;}
@@ -43,4 +43,8 @@ if(keyboard_check_pressed(vk_shift)){
 		infmp = true;
 		statmap[? "mpregen"] += 100;
 	}	
+}
+
+if(keyboard_check_pressed(ord("1"))){
+		
 }

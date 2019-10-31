@@ -86,6 +86,8 @@ buff = ds_list_create();
 // list of buffs to remove from timer ending (change to different ds later?)
 buffRemoved = false;
 
+equips = array_create(12, 0);
+
 skill_button = array_create(11,"");
 
 // Set default keybinds
