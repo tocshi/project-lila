@@ -1,3 +1,11 @@
+if(statmap[? "classlvl"] >= 6 && statChange){
+	origatk = statmap[? "atk"];
+	origdef = statmap[? "def"];
+	statmap[? "atk"] += origdef*0.3;
+	statmap[? "def"] += origatk*0.3;
+	allRounderApplied = true;
+}
+
 event_inherited();
 
 if(shield_charge > 0){
@@ -6,22 +14,6 @@ if(shield_charge > 0){
 		speed = 0; 
 		isMoving = false;
 	}	
-}
-
-if(statmap[? "classlvl"] >= 6){
-	if(allRounderApplied && statChange){
-		statmap[? "atk"] -= origdef*0.3;
-		statmap[? "def"] -= origatk*0.3;
-		allRounderApplied = false;
-	}
-	/*
-	else{
-		origatk = statmap[? "atk"];
-		origdef = statmap[? "def"];
-		statmap[? "atk"] += origdef*0.3;
-		statmap[? "def"] += origatk*0.3;
-		allRounderApplied = true;
-	}*/
 }
 
 if(footwork_charge > 0){
@@ -45,3 +37,4 @@ if(following_ally && instance_exists(target)){
 	}
 }
 
+statChange = false;

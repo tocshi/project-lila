@@ -6,32 +6,6 @@ var relative_speedUp = multMap(relative_speedups, 1);
 var slow = sumMap(slows, 0);
 var relative_slow = multMap(relative_slows, 1);
 
-
-// Update movement speed from effects
-statmap[? "movespeed"] = (statmap[? "base_movespeed"] + speedup - slow) * relative_speedUp * relative_slow;
-
-//REGENERATION
-statmap[? "hp"] += statmap[? "hpregen"];
-if(highRegenThreshold >= 90){
-	statmap[? "mp"] += statmap[? "mpregen"]*2;
-} else {
-	statmap[? "mp"] += statmap[? "mpregen"];
-}
-
-//STAT CLAMPING
-statmap[? "atkspeed"] = clamp(statmap[? "atkspeed"],0.01,10);
-statmap[? "movespeed"] = clamp(statmap[? "movespeed"],0,30);
-statmap[? "hp"] = clamp(statmap[? "hp"],0,statmap[? "maxhp"]);
-statmap[? "mp"] = clamp(statmap[? "mp"],0,statmap[? "maxmp"]);
-statmap[? "finalshld"] = clamp(statmap[? "finalshld"],-100,100);
-
-//FACING THE RIGHT WAY
-if(x <= destX){
-	image_xscale = 1;
-} else {
-	image_xscale = -1;
-}
-
 //TIMERS
 for (var i = 0; i < array_length_1d(cd); i++){
 	if(cd[i] > 0){cd[i]--;}
@@ -59,4 +33,31 @@ if (atkTimer > 0){
 		canMove = true;
 	}
 }
+
+// Update movement speed from effects
+statmap[? "movespeed"] = (statmap[? "base_movespeed"] + speedup - slow) * relative_speedUp * relative_slow;
+
+//REGENERATION
+statmap[? "hp"] += statmap[? "hpregen"];
+if(highRegenThreshold >= 90){
+	statmap[? "mp"] += statmap[? "mpregen"]*2;
+} else {
+	statmap[? "mp"] += statmap[? "mpregen"];
+}
+
+//STAT CLAMPING
+statmap[? "atkspeed"] = clamp(statmap[? "atkspeed"],0.01,10);
+statmap[? "movespeed"] = clamp(statmap[? "movespeed"],0,30);
+statmap[? "hp"] = clamp(statmap[? "hp"],0,statmap[? "maxhp"]);
+statmap[? "mp"] = clamp(statmap[? "mp"],0,statmap[? "maxmp"]);
+statmap[? "finalshld"] = clamp(statmap[? "finalshld"],-100,100);
+
+//FACING THE RIGHT WAY
+if(x <= destX){
+	image_xscale = 1;
+} else {
+	image_xscale = -1;
+}
+
+
 

@@ -32,7 +32,7 @@ switch(atkmap[? "element"]){
 	break;
 }
 
-var intDmg = ((atkmap[? "atk"] * (atkmap[? "dmgmod"]/100)) - (target.statmap[? "def"] * (target.statmap[? "level"]/20)));
+var intDmg = ((atkmap[? "atk"] * (atkmap[? "dmgmod"]/100)));
 if(intDmg < 0){intDmg = 0;}
 	
 var fcritdmg = atkmap[? "critdmg"];
@@ -57,7 +57,7 @@ if(target.isBlocking){
 fblk = clamp(fblk,0,100);
 	
 gTotalDamage = intDmg * (fcritdmg/100) * (atkmap[? "elem_mod"]/100) * (atkmap[? "finaldmg"]/100) * ((100-fblk)/100) * ((100-target.statmap[? "finalshld"])/100);
-gTotalDamage = round(gTotalDamage);
+gTotalDamage = round(gTotalDamage*(100/(100+target.statmap[? "def"])));
 
 target.statmap[? "hp"] -= gTotalDamage;
 e_hp = target.statmap[? "hp"];

@@ -7,12 +7,12 @@ statmap[? "class"]			= "Debug";
 statmap[? "classlvl"]		= 10;
 statmap[? "classxp"] 		= 0;
 statmap[? "maxhp"]			= 100 + statmap[? "level"]*10 + round(sqr(statmap[? "level"])/10);
-statmap[? "hp"]				= 100 + statmap[? "level"]*10 + round(sqr(statmap[? "level"])/10);
-statmap[? "hpshield"]		= 0;
+statmap[? "hp"]				= statmap[? "maxhp"];
+statmap[? "hpshield"]		= 100;
 statmap[? "hpregen"]		= statmap[? "maxhp"]/100/60;//0.02 + statmap[? "level"]*0.002;
 statmap[? "maxmp"]			= 100;
 statmap[? "mp"]				= 100;
-statmap[? "mpregen"]		= 0.1666; //doubled if canMove && !isMoving
+statmap[? "mpregen"]		= 0.01666*10; //doubled if canMove && !isMoving
 statmap[? "atk"]			= 10;
 statmap[? "def"]			= 0;
 
@@ -53,7 +53,7 @@ isCCed = false;
 isDead = false;
 isMoving = false;
 isBlocking = false;
-statChange = false;
+statChange = true;
 
 cd = array_create(21,0);
 maxcd = array_create(21,0);
