@@ -1,19 +1,3 @@
-// Calculate stat changes from equipped items...move this to a script later you bimbo 
-if(statChange){
-	if(!equipApplied){
-		for(var i = 0; i < array_length_1d(equips); i++){
-			for(var j = 0; j < ds_list_size(global.equipStats)){
-				if(!is_undefined(ds_map_find_value(global.itemData[i], global.equipStats[j]))){
-					ds_map_set(basestatmap, global.equipStats[j], 
-						ds_map_find_value(basestatmap, global.equipStats[j])
-						+ ds_map_find_value(global.itemData[i], global.equipStats[j])))
-				}
-			}
-		}
-	}
-	//copy relevant values from basestatmap to statmap
-}
-
 // Standard Movement
 if(mouse_check_button_pressed(mb_right) && canMove){
 	

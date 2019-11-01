@@ -1,3 +1,10 @@
+// Calculate stat changes from equipped items...move this to a script later you bimbo 
+if(statChange){
+	applyEquips(self.id);
+	for(var i = 0; i < ds_list_size(global.equipStats); i++){
+		ds_map_replace(statmap,global.equipStats[| i],ds_map_find_value(basestatmap,global.equipStats[| i]));
+	}
+}
 
 // CALCULATE STATS
 // Sum up all stat buffs/debuffs
@@ -51,13 +58,5 @@ statmap[? "movespeed"] = clamp(statmap[? "movespeed"],0,30);
 statmap[? "hp"] = clamp(statmap[? "hp"],0,statmap[? "maxhp"]);
 statmap[? "mp"] = clamp(statmap[? "mp"],0,statmap[? "maxmp"]);
 statmap[? "finalshld"] = clamp(statmap[? "finalshld"],-100,100);
-
-//FACING THE RIGHT WAY
-if(x <= destX){
-	image_xscale = 1;
-} else {
-	image_xscale = -1;
-}
-
 
 

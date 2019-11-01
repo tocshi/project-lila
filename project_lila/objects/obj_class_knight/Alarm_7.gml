@@ -16,7 +16,7 @@ else{
 	footwork_charge = 10;
 }
 
-var skillobj = instance_create_layer(x,y,"Instances",obj_skill_protective_footwork);
+var skillobj = instance_create_layer(x,y,"Attacks",obj_skill_protective_footwork);
 skillobj.image_angle = direction;
 skillobj.atkmap[? "dmgmod"] = protective_footwork_mod;
 skillobj.atkmap[? "element"] = "none";

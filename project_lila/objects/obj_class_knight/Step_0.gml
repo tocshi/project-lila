@@ -175,7 +175,7 @@ if(keyboard_check_pressed(skill_button[7]) && (cd[7] <= 0) && statmap[? "mp"] >=
 	canAttack = false;
 	canUseSkill = false;
 	isMoving = false;
-	applyBuff(self.id,20,true,"Knight's Shield",buff_knights_shield,false,-1,0);
+	applyBuff(self.id,22,true,"Knight's Shield",buff_knights_shield,false,-1,0);
 	alarm[7] = 20;
 	
 

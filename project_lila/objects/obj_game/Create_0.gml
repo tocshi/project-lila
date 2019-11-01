@@ -2,11 +2,16 @@ global.meter = 32;
 global.pause = 0;
 gui_state = 0;
 
-global.itemData = array_create(2048, ds_map_create());
+global.itemData = array_create(100000, ds_map_create());
+itemDataFile = file_text_open_read("/datafiles/item_data.txt");
+while(!file_text_eof(itemDataFile)){
+	parseItemData(itemDataFile);
+}
+file_text_close(itemDataFile);
 
 // Stats that equipped items are allowed to change
 global.equipStats = ds_list_create();
-ds_list_add(equipStats,
+ds_list_add(global.equipStats,
 	"atk",
 	"def",
 	"maxhp",
