@@ -2,12 +2,18 @@ global.meter = 32;
 global.pause = 0;
 gui_state = 0;
 
-global.itemData = array_create(100000, ds_map_create());
-itemDataFile = file_text_open_read("/datafiles/item_data.txt");
+//global.itemData = array_create(32000, ds_map_create());
+itemDataFile = file_text_open_read("/datafiles/item_data.json");
+var itemDataStr = "";
 while(!file_text_eof(itemDataFile)){
-	parseItemData(itemDataFile);
+	itemDataStr += file_text_read_string(itemDataFile);
+	file_text_readln(itemDataFile);
 }
 file_text_close(itemDataFile);
+
+var itemDataJson = json_decode(itemDataStr);
+global.itemData = ds_map_find_value(itemDataJson, "default");
+
 
 // Stats that equipped items are allowed to change
 global.equipStats = ds_list_create();
