@@ -1,8 +1,11 @@
+// universal unit for 1 "meter" of distance
 global.meter = 32;
+// Is the game paused?
 global.pause = 0;
+// Which menu to access when paused.
 gui_state = 0;
 
-//global.itemData = array_create(32000, ds_map_create());
+// Item data parsing function
 itemDataFile = file_text_open_read("/datafiles/item_data.json");
 var itemDataStr = "";
 while(!file_text_eof(itemDataFile)){
@@ -14,6 +17,8 @@ file_text_close(itemDataFile);
 var itemDataJson = json_decode(itemDataStr);
 global.itemData = ds_map_find_value(itemDataJson, "default");
 
+// Player inventory quantity array
+global.playerInv = array_create(100,0);
 
 // Stats that equipped items are allowed to change
 global.equipStats = ds_list_create();
