@@ -41,7 +41,7 @@
 	"finaldmg" 		: 0,
 	"finalshld" 	: 0,
 	"blkmod" 		: 0
-  }{
+  },{
   	"id"			: 1,
   	"name" 			: "Small Health Potion",
     "sprite" 		: "spr_health_potion_s",
@@ -49,9 +49,9 @@
     "lvl" 			: 1,
     "desc" 			: "Your basic run-of-the-mill health restoration mixture. Heals 25% of your max HP. Subsequent uses in a short time will significantly reduce effectiveness.",
     "value" 		: 50,
-    "activeSkill" 	: "item_health_potion",
-    "activeCD" 		: 0.5,
-  }{
+    "activeSkill" 	: "item_potion",
+    "activeCD" 		: 0.5
+  },{
   	"id"			: 2,
   	"name" 			: "Health Potion",
     "sprite" 		: "spr_health_potion_m",
@@ -59,9 +59,9 @@
     "lvl" 			: 5,
     "desc" 			: "Your basic run-of-the-mill health restoration mixture. Heals 50% of your max HP. Subsequent uses in a short time will significantly reduce effectiveness.",
     "value" 		: 150,
-    "activeSkill" 	: "item_health_potion",
-    "activeCD" 		: 0.5,
-  }{
+    "activeSkill" 	: "item_potion",
+    "activeCD" 		: 0.5
+  },{
   	"id"			: 3,
   	"name" 			: "Large Health Potion",
     "sprite" 		: "spr_health_potion_l",
@@ -69,7 +69,7 @@
     "lvl" 			: 10,
     "desc" 			: "Your basic run-of-the-mill health restoration mixture. Heals 75% of your max HP. Subsequent uses in a short time will significantly reduce effectiveness.",
     "value" 		: 500,
-    "activeSkill" 	: "item_health_potion",
-    "activeCD" 		: 0.5,
+    "activeSkill" 	: "item_potion",
+    "activeCD" 		: 0.5
   }
 ]
