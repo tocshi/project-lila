@@ -4,6 +4,7 @@
     "name" 			: "Nothing",
     "sprite" 		: "spr_empty",
     "type" 			: "key",
+    "category"  : "Nothing",
     "lvl" 			: 0,
     "desc" 			: "Literally nothing. You should not be able to see this text in the final game.",
     "value" 		: 0,
@@ -46,6 +47,7 @@
   	"name" 			: "Small Health Potion",
     "sprite" 		: "spr_health_potion_s",
     "type" 			: "consumable",
+    "category"  : "Potion",
     "lvl" 			: 1,
     "desc" 			: "Your basic run-of-the-mill health restoration mixture. Heals 25% of your max HP. Subsequent uses in a short time will significantly reduce effectiveness.",
     "value" 		: 50,
@@ -56,6 +58,7 @@
   	"name" 			: "Health Potion",
     "sprite" 		: "spr_health_potion_m",
     "type" 			: "consumable",
+    "category"  : "Potion",
     "lvl" 			: 5,
     "desc" 			: "Your basic run-of-the-mill health restoration mixture. Heals 50% of your max HP. Subsequent uses in a short time will significantly reduce effectiveness.",
     "value" 		: 150,
@@ -66,10 +69,171 @@
   	"name" 			: "Large Health Potion",
     "sprite" 		: "spr_health_potion_l",
     "type" 			: "consumable",
+    "category"  : "Potion",
     "lvl" 			: 10,
     "desc" 			: "Your basic run-of-the-mill health restoration mixture. Heals 75% of your max HP. Subsequent uses in a short time will significantly reduce effectiveness.",
     "value" 		: 500,
     "activeSkill" 	: "item_potion",
     "activeCD" 		: 0.5
+  },{
+  	"id"			: 4,
+  	"name" 			: "Adventurer's Shirt",
+    "sprite" 		: "spr_shirt",
+    "type" 			: "equippable",
+    "category"  : "Top",
+    "lvl" 			: 0,
+    "desc" 			: "A comfy shirt you've prepared for your Adventurer Training.",
+    "value" 		: 20,
+    "def"       : 1
+  },{
+  	"id"			: 5,
+  	"name" 			: "Adventurer's Pants",
+    "sprite" 		: "spr_pants",
+    "type" 			: "equippable",
+    "category"  : "Legwear",
+    "lvl" 			: 0,
+    "desc" 			: "A comfy pair of pants you've prepared for your Adventurer Training.",
+    "value" 		: 20,
+    "def"       : 1
+  },{
+  	"id"			: 6,
+  	"name" 			: "Leather Cap",
+    "sprite" 		: "spr_cap_leather",
+    "type" 			: "equippable",
+    "category"  : "Headgear",
+    "lvl" 			: 3,
+    "desc" 			: "A sturdy cap made of hide.",
+    "value" 		: 50,
+    "def"       : 2
+  },{
+  	"id"			: 7,
+  	"name" 			: "Leather Vest",
+    "sprite" 		: "spr_vest_leather",
+    "type" 			: "equippable",
+    "category"  : "Top",
+    "lvl" 			: 3,
+    "desc" 			: "A sturdy vest made of hide.",
+    "value" 		: 50,
+    "def"       : 2
+  },{
+  	"id"			: 8,
+  	"name" 			: "Leather Pants",
+    "sprite" 		: "spr_pants_leather",
+    "type" 			: "equippable",
+    "category"  : "Legwear",
+    "lvl" 			: 3,
+    "desc" 			: "A pair of sturdy pants made of hide.",
+    "value" 		: 50,
+    "def"       : 2
+  },{
+  	"id"			: 9,
+  	"name" 			: "Leather Boots",
+    "sprite" 		: "spr_boots_leather",
+    "type" 			: "equippable",
+    "category"  : "Shoes",
+    "lvl" 			: 3,
+    "desc" 			: "A pair of sturdy boots made of hide.",
+    "value" 		: 50,
+    "def"       : 2
+  },{
+  	"id"			: 10,
+  	"name" 			: "Training Longsword",
+    "sprite" 		: "spr_lsw0",
+    "type" 			: "equippable",
+    "category"  : "Longsword",
+    "lvl" 			: 1,
+    "desc" 			: "A longsword given to you to help you start your adventure.",
+    "value" 		: 40,
+    "atk"       : 5
+  },{
+  	"id"			: 11,
+  	"name" 			: "Training Bow",
+    "sprite" 		: "spr_bow0",
+    "type" 			: "equippable",
+    "category"  : "Bow",
+    "lvl" 			: 1,
+    "desc" 			: "A bow given to you to help you start your adventure.",
+    "value" 		: 40,
+    "atk"       : 5
+  },{
+  	"id"			: 12,
+  	"name" 			: "Training Shortsword",
+    "sprite" 		: "spr_ssw0",
+    "type" 			: "equippable",
+    "category"  : "Shortsword",
+    "lvl" 			: 1,
+    "desc" 			: "A shortsword given to you to help you start your adventure.",
+    "value" 		: 40,
+    "atk"       : 5
+  },{
+  	"id"			: 13,
+  	"name" 			: "Training Spear",
+    "sprite" 		: "spr_spe0",
+    "type" 			: "equippable",
+    "category"  : "Spear",
+    "lvl" 			: 1,
+    "desc" 			: "A spear given to you to help you start your adventure.",
+    "value" 		: 40,
+    "atk"       : 5
+  },{
+  	"id"			: 14,
+  	"name" 			: "Training Axe",
+    "sprite" 		: "spr_axe0",
+    "type" 			: "equippable",
+    "category"  : "Axe",
+    "lvl" 			: 1,
+    "desc" 			: "An axe given to you to help you start your adventure.",
+    "value" 		: 40,
+    "atk"       : 5
+  },{
+  	"id"			: 15,
+  	"name" 			: "Training Rifle",
+    "sprite" 		: "spr_gun0",
+    "type" 			: "equippable",
+    "category"  : "Gun",
+    "lvl" 			: 1,
+    "desc" 			: "A rifle given to you to help you start your adventure.",
+    "value" 		: 40,
+    "atk"       : 5
+  },{
+  	"id"			: 16,
+  	"name" 			: "Training Dagger",
+    "sprite" 		: "spr_knf0",
+    "type" 			: "equippable",
+    "category"  : "Knife",
+    "lvl" 			: 1,
+    "desc" 			: "A dagger given to you to help you start your adventure.",
+    "value" 		: 40,
+    "atk"       : 5
+  },{
+  	"id"			: 17,
+  	"name" 			: "Training Knuckles",
+    "sprite" 		: "spr_fst0",
+    "type" 			: "equippable",
+    "category"  : "Fist",
+    "lvl" 			: 1,
+    "desc" 			: "A pair of knuckles given to you to help you start your adventure.",
+    "value" 		: 40,
+    "atk"       : 5
+  },{
+  	"id"			: 18,
+  	"name" 			: "Training Spellbook",
+    "sprite" 		: "spr_spb0",
+    "type" 			: "equippable",
+    "category"  : "Spellbook",
+    "lvl" 			: 1,
+    "desc" 			: "A spellbook given to you to help you start your adventure.",
+    "value" 		: 40,
+    "atk"       : 5
+  },{
+  	"id"			: 19,
+  	"name" 			: "Training Staff",
+    "sprite" 		: "spr_stf0",
+    "type" 			: "equippable",
+    "category"  : "Staff",
+    "lvl" 			: 1,
+    "desc" 			: "A staff given to you to help you start your adventure.",
+    "value" 		: 40,
+    "atk"       : 5
   }
 ]
