@@ -1,3 +1,5 @@
+if(global.player == 0){exit;}
+
 if(global.pause == false){
 	cursor_sprite = -1;
 	alarm[0] = 1;

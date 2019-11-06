@@ -10,7 +10,7 @@
     "option_windows_copyright_info": "(c) 2019 Placeholder Company Name",
     "option_windows_description_info": "Project Lila",
     "option_windows_disable_sandbox": false,
-    "option_windows_display_cursor": true,
+    "option_windows_display_cursor": false,
     "option_windows_display_name": "Project Lila",
     "option_windows_enable_steam": false,
     "option_windows_executable_name": "${project_lila}",

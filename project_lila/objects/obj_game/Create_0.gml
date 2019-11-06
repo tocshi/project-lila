@@ -3,10 +3,12 @@ global.meter = 32;
 // Is the game paused?
 global.pause = 0;
 // Which menu to access when paused.
-gui_state = 0;
+global.gui_state = 0;
+// Player id
+global.player = 0;
 
 // Item data parsing function
-itemDataFile = file_text_open_read("/datafiles/item_data.json");
+itemDataFile = file_text_open_read(working_directory + "/datafiles/item_data.json");
 var itemDataStr = "";
 while(!file_text_eof(itemDataFile)){
 	itemDataStr += file_text_read_string(itemDataFile);
@@ -17,8 +19,19 @@ file_text_close(itemDataFile);
 var itemDataJson = json_decode(itemDataStr);
 global.itemData = ds_map_find_value(itemDataJson, "default");
 
-// Player inventory quantity array
+// Player inventory array and item quantity array
 global.playerInv = array_create(100,0);
+global.playerItems = array_create(ds_list_size(global.itemData),0);
+
+// Equipment pixel positions
+global.equipItemBox = array_create(12,[0,0]);
+for(var i = 0; i < 4; i++){
+	for(var j = 0; j < 3; j++){
+		//absolute x and y positions
+		global.equipItemBox[(i * 3) + j,0] = 198 + j*86;
+		global.equipItemBox[(i * 3) + j,1] = 119 + i*86;
+	}
+}
 
 // Stats that equipped items are allowed to change
 global.equipStats = ds_list_create();
