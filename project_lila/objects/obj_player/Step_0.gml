@@ -37,10 +37,10 @@ if(keyboard_check_pressed(vk_tab)){
 if(keyboard_check_pressed(vk_shift)){
 	if(infmp){
 		infmp = false;
-		statmap[? "mpregen"] -= 100;
+		basestatmap[? "mpregen"] -= 100;
 	}
 	else{
 		infmp = true;
-		statmap[? "mpregen"] += 100;
+		basestatmap[? "mpregen"] += 100;
 	}	
 }
