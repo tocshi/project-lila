@@ -47,6 +47,7 @@ isMoving = false;
 canMove = true;
 
 atkTimer = 0;
+statChange = true;
 
 // buff array properties:
 //	0	time

@@ -33,7 +33,7 @@ if(ds_list_find_index(hitList,other.id) == -1){
 		break;
 	}
 
-	var intDmg = ((atkmap[? "atk"] * (atkmap[? "dmgmod"]/100)) - other.statmap[? "def"] * (other.statmap[? "level"]/20));
+	var intDmg = ((atkmap[? "atk"] * (atkmap[? "dmgmod"]/100)));
 	if(intDmg < 0){intDmg = 0;}
 	
 	var fcritdmg = atkmap[? "critdmg"];
@@ -58,7 +58,7 @@ if(ds_list_find_index(hitList,other.id) == -1){
 	fblk = clamp(fblk,0,100);
 	
 	gTotalDamage = intDmg * (fcritdmg/100) * (atkmap[? "elem_mod"]/100) * (atkmap[? "finaldmg"]/100) * ((100-fblk)/100) * ((100-other.statmap[? "finalshld"])/100);
-	gTotalDamage = round(gTotalDamage);
+	gTotalDamage = round(gTotalDamage*(100/(100+other.statmap[? "def"])));
 
 	other.statmap[? "hp"] -= gTotalDamage;
 	e_hp = other.statmap[? "hp"];
