@@ -134,14 +134,6 @@ if(keyboard_check_pressed(skill_button[5]) && (cd[5] <= 0) && statmap[? "mp"] >=
 }
 
 if(statmap[? "classlvl"] < 6){exit;}
-if(!allRounderApplied){
-	origatk = statmap[? "atk"];
-	origdef = statmap[? "def"];
-	statmap[? "atk"] += origdef*0.3;
-	statmap[? "def"] += origatk*0.3;
-	allRounderApplied = true;
-}
-
 
 if(statmap[? "classlvl"] < 7){exit;}
 if(keyboard_check_pressed(skill_button[7]) && (cd[7] <= 0) && statmap[? "mp"] >= 20 && canUseSkill){

@@ -32,6 +32,15 @@ for(var i = 0; i < 4; i++){
 		global.equipItemBox[(i * 3) + j,1] = 119 + i*86;
 	}
 }
+// Inventory pixel positions
+global.invItemBox = array_create(100,[0,0]);
+for(var i = 0; i < 10; i++){
+	for(var j = 0; j < 10; j++){
+		//absolute x and y positions
+		global.invItemBox[(i * 10) + j,0] = 490 + j*66;
+		global.invItemBox[(i * 10) + j,1] = 121 + i*66;
+	}
+}
 
 // Stats that equipped items are allowed to change
 global.equipStats = ds_list_create();

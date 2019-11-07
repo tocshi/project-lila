@@ -1,12 +1,13 @@
+event_inherited();
+/*
 if(statmap[? "classlvl"] >= 6 && statChange){
-	origatk = statmap[? "atk"];
-	origdef = statmap[? "def"];
+	origatk = basestatmap[? "atk"];
+	origdef = basestatmap[? "def"];
 	statmap[? "atk"] += origdef*0.3;
 	statmap[? "def"] += origatk*0.3;
-	allRounderApplied = true;
-}
-
-event_inherited();
+	show_debug_message(statmap[? "atk"]);
+	show_debug_message(statmap[? "def"]);
+}*/
 
 if(shield_charge > 0){
 	shield_charge--;
@@ -36,5 +37,3 @@ if(following_ally && instance_exists(target)){
 		
 	}
 }
-
-statChange = false;

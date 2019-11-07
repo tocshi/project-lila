@@ -1,3 +1,5 @@
+statChange = false;
+
 // Standard Movement
 if(mouse_check_button_pressed(mb_right) && canMove){
 	
@@ -43,6 +45,22 @@ if(keyboard_check_pressed(vk_shift)){
 	}	
 }
 
+//DEBUG EQUIP/UNEQUIP
 if(keyboard_check_pressed(ord("1"))){
-	exit;
+	if(debugequip = 1){
+		unequipItem(self.id,10);
+		unequipItem(self.id,6);
+		unequipItem(self.id,7);
+		unequipItem(self.id,8);
+		unequipItem(self.id,9);
+		debugequip = 0;
+	}
+	else{
+		equipItem(self.id,10);
+		equipItem(self.id,6);
+		equipItem(self.id,7);
+		equipItem(self.id,8);
+		equipItem(self.id,9);
+		debugequip = 1;
+	}
 }

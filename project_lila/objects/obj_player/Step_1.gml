@@ -1,10 +1,10 @@
 // Calculate stat changes from equipped items...move this to a script later you bimbo 
+if(!equipApplied){applyEquips(self.id);}
+
 if(statChange){
-	applyEquips(self.id);
-	for(var i = 0; i < ds_list_size(global.equipStats); i++){
-		ds_map_replace(statmap,global.equipStats[| i],ds_map_find_value(basestatmap,global.equipStats[| i]));
-	}
+	recalcStats(self.id);
 }
+
 
 // CALCULATE STATS
 // Sum up all stat buffs/debuffs
@@ -29,6 +29,7 @@ for (var i = 0; i < ds_list_size(buff); if(!buffRemoved){i++;}){
 	if(buff_array[0] <= 0){
 		removeBuff(self.id,buff_array[2])
 		buffRemoved = true;
+		recalcStats(self.id);
 	}
 }
 

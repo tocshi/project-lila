@@ -11,3 +11,4 @@ if(!target.equipApplied){
 		}
 	}
 }
+target.equipApplied = true;
