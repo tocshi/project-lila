@@ -62,10 +62,10 @@ if(statmap[? "classlvl"] < 2){exit;}
 
 
 if(statmap[? "classlvl"] < 3){exit;}
-if(keyboard_check_pressed(skill_button[3]) && (cd[3] <= 0) && statmap[? "mp"] >= 15 && canUseSkill){
+if(keyboard_check_pressed(skill_button[3]) && (cd[3] <= 0) && statmap[? "mp"] >= 30 && canUseSkill){
 	
 	ds_list_clear(scList);
-	statmap[? "mp"] -= 15;
+	statmap[? "mp"] -= 30;
 	
 	cd[3] = maxcd[3];
 	atkTimer = 30;
@@ -102,7 +102,7 @@ if(keyboard_check_pressed(skill_button[4]) && (cd[4] <= 0) && statmap[? "mp"] >=
 }
 
 if(statmap[? "classlvl"] < 5){exit;}
-if(keyboard_check_pressed(skill_button[5]) && (cd[5] <= 0) && statmap[? "mp"] >= 15 && canUseSkill){
+if(keyboard_check_pressed(skill_button[5]) && (cd[5] <= 0) && statmap[? "mp"] >= 25 && canUseSkill){
 	
 	
 	
@@ -126,7 +126,7 @@ if(keyboard_check_pressed(skill_button[5]) && (cd[5] <= 0) && statmap[? "mp"] >=
 				
 	}
 	
-	statmap[? "mp"] -= 15;
+	statmap[? "mp"] -= 25;
 	
 	cd[5] = maxcd[5];
 	highRegenThreshold = 0;
@@ -134,14 +134,6 @@ if(keyboard_check_pressed(skill_button[5]) && (cd[5] <= 0) && statmap[? "mp"] >=
 }
 
 if(statmap[? "classlvl"] < 6){exit;}
-if(!allRounderApplied){
-	origatk = statmap[? "atk"];
-	origdef = statmap[? "def"];
-	statmap[? "atk"] += origdef*0.3;
-	statmap[? "def"] += origatk*0.3;
-	allRounderApplied = true;
-}
-
 
 if(statmap[? "classlvl"] < 7){exit;}
 if(keyboard_check_pressed(skill_button[7]) && (cd[7] <= 0) && statmap[? "mp"] >= 20 && canUseSkill){
@@ -175,7 +167,7 @@ if(keyboard_check_pressed(skill_button[7]) && (cd[7] <= 0) && statmap[? "mp"] >=
 	canAttack = false;
 	canUseSkill = false;
 	isMoving = false;
-	applyBuff(self.id,20,true,"Knight's Shield",buff_knights_shield,false,-1,0);
+	applyBuff(self.id,22,true,"Knight's Shield",buff_knights_shield,false,-1,0);
 	alarm[7] = 20;
 	
 

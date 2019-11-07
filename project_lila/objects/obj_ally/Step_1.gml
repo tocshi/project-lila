@@ -5,6 +5,35 @@ if (statmap[? "hp"] <= 0 && !isDead){
 	alarm[0] = 30;
 }
 
+//TIMERS
+for (var i = 0; i < array_length_1d(cd); i++){
+	if(cd[i] > 0){cd[i]--;}
+}
+
+for (var i = 0; i < ds_list_size(buff); if(!buffRemoved){i++;}){
+	buffRemoved = false;
+	var buff_array = ds_list_find_value(buff,i);
+	buff_effect_handler(buff_array[2]);
+	if(buff_array[0] > 0){
+		buff_array[0]--;
+		ds_list_replace(buff,i,buff_array);
+	}
+	if(buff_array[0] <= 0){
+		script_execute(buff_array[3],self);
+		ds_list_delete(buff,i);
+		buffRemoved = true;
+	}
+}
+
+if (atkTimer > 0){
+	atkTimer--;
+	if(atkTimer <= 0){
+		canAttack = true;
+		canUseSkill = true;
+		canMove = true;
+	}
+}
+
 // CALCULATE MOVESPEED
 // Sum up all slows/speedups
 speedup = sumMap(speedups, 0);
@@ -37,32 +66,5 @@ if(x <= destX){
 	image_xscale = -1;
 }
 
-//TIMERS
-for (var i = 0; i < array_length_1d(cd); i++){
-	if(cd[i] > 0){cd[i]--;}
-}
 
-for (var i = 0; i < ds_list_size(buff); if(!buffRemoved){i++;}){
-	buffRemoved = false;
-	var buff_array = ds_list_find_value(buff,i);
-	buff_effect_handler(buff_array[2]);
-	if(buff_array[0] > 0){
-		buff_array[0]--;
-		ds_list_replace(buff,i,buff_array);
-	}
-	if(buff_array[0] <= 0){
-		script_execute(buff_array[3],self);
-		ds_list_delete(buff,i);
-		buffRemoved = true;
-	}
-}
-
-if (atkTimer > 0){
-	atkTimer--;
-	if(atkTimer <= 0){
-		canAttack = true;
-		canUseSkill = true;
-		canMove = true;
-	}
-}
 

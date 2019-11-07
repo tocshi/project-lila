@@ -50,4 +50,6 @@ buff_array[5] = stacks;
 buff_array[6] = maxStacks;
 ds_list_add(target.buff,buff_array);
 
+target.statChange = true;
+
 return true;
