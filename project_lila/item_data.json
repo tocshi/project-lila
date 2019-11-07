@@ -14,7 +14,7 @@
     "activeCD"      : 0,
     "basicAttack"   : "",
     "unleashSkill"  : "",
-    "unleashCD"     : 0,
+    "unleashGauge"  : 0,
     "atk"           : 0,
     "def"           : 0,
     "maxhp"         : 0,
@@ -235,5 +235,159 @@
     "desc"      : "A staff given to you to help you start your adventure.",
     "value"     : 40,
     "atk"       : 5
+  },{
+    "id"        : 20,
+    "name"      : "Throwing Dart",
+    "sprite"    : "spr_knf0",
+    "type"      : "consumable",
+    "category"  : "Throwable",
+    "lvl"       : 1,
+    "desc"      : "A throwing dart that looks like it belongs in a pub. Why are you using this as a weapon again?",
+    "value"     : 25,
+    "activeSkill"   : "item_attack_throwingdart",
+    "activeCD"      : 1
+  },{
+    "id"        : 21,
+    "name"      : "Adventurer's Badge",
+    "sprite"    : "spr_badge",
+    "type"      : "Key",
+    "lvl"       : 0,
+    "desc"      : "A badge that officially proves that you are a certified Adventurer!"
+  },{
+    "id"        : 22,
+    "name"      : "Ordinary Sword",
+    "sprite"    : "spr_lsw0",
+    "type"      : "equippable",
+    "category"  : "Longsword",
+    "lvl"       : 22,
+    "desc"      : "An ordinary longsword. Nothing special to it. Nuh uh. Nope.",
+    "value"     : 99999,
+    "atk"       : 1000,
+    "passiveSkill"  : "item_passive_ordinary",
+    "activeSkill"   : "item_attack_flashcut",
+    "activeCD"      : 5,
+    "basicAttack"   : "basicattack_longsword",
+    "unleashSkill"  : "unleash_flashdance",
+    "unleashGauge"  : 22
+  },{
+    "id"        : 23,
+    "name"      : "Copper Longsword",
+    "sprite"    : "spr_lsw1",
+    "type"      : "equippable",
+    "category"  : "Longsword",
+    "lvl"       : 3,
+    "desc"      : "A longsword made of a common metal. Shoddy, but cheap.",
+    "value"     : 100,
+    "atk"       : 10
+  },{
+    "id"        : 24,
+    "name"      : "Wooden Bow",
+    "sprite"    : "spr_bow1",
+    "type"      : "equippable",
+    "category"  : "Bow",
+    "lvl"       : 3,
+    "desc"      : "A bow made from the wood of a common tree. Shoddy, but cheap.",
+    "value"     : 100,
+    "atk"       : 10
+  },{
+    "id"        : 25,
+    "name"      : "Copper Shortsword",
+    "sprite"    : "spr_ssw1",
+    "type"      : "equippable",
+    "category"  : "Shortsword",
+    "lvl"       : 3,
+    "desc"      : "A shortsword made of a common metal. Shoddy, but cheap.",
+    "value"     : 100,
+    "atk"       : 10
+  },{
+    "id"        : 26,
+    "name"      : "Copper Spear",
+    "sprite"    : "spr_spe1",
+    "type"      : "equippable",
+    "category"  : "Spear",
+    "lvl"       : 3,
+    "desc"      : "A spear made of a common metal. Shoddy, but cheap.",
+    "value"     : 100,
+    "atk"       : 10
+  },{
+    "id"        : 27,
+    "name"      : "Copper Axe",
+    "sprite"    : "spr_axe1",
+    "type"      : "equippable",
+    "category"  : "Axe",
+    "lvl"       : 3,
+    "desc"      : "An axe made of a common metal. Shoddy, but cheap.",
+    "value"     : 100,
+    "atk"       : 10
+  },{
+    "id"        : 28,
+    "name"      : "Copper Rifle",
+    "sprite"    : "spr_gun1",
+    "type"      : "equippable",
+    "category"  : "Gun",
+    "lvl"       : 3,
+    "desc"      : "A rifle decorated with a common metal. Shoddy, but cheap.",
+    "value"     : 100,
+    "atk"       : 10
+  },{
+    "id"        : 29,
+    "name"      : "Copper Dagger",
+    "sprite"    : "spr_knf1",
+    "type"      : "equippable",
+    "category"  : "Knife",
+    "lvl"       : 3,
+    "desc"      : "A dagger made of a common metal. Shoddy, but cheap.",
+    "value"     : 100,
+    "atk"       : 10
+  },{
+    "id"        : 30,
+    "name"      : "Copper Knuckles",
+    "sprite"    : "spr_fst1",
+    "type"      : "equippable",
+    "category"  : "Fist",
+    "lvl"       : 3,
+    "desc"      : "A pair of knuckles made of a common metal. Shoddy, but cheap.",
+    "value"     : 100,
+    "atk"       : 10
+  },{
+    "id"        : 31,
+    "name"      : "Dusty Spellbook",
+    "sprite"    : "spr_spb1",
+    "type"      : "equippable",
+    "category"  : "Spellbook",
+    "lvl"       : 3,
+    "desc"      : "A rugged, but useable spellbook. Shoddy, but cheap.",
+    "value"     : 100,
+    "atk"       : 10
+  },{
+    "id"        : 32,
+    "name"      : "Wooden Staff",
+    "sprite"    : "spr_stf1",
+    "type"      : "equippable",
+    "category"  : "Staff",
+    "lvl"       : 3,
+    "desc"      : "A staff made from the wood of a common tree. Shoddy, but cheap.",
+    "value"     : 100,
+    "atk"       : 10
+  },{
+    "id"        : 33,
+    "name"      : "Copper Crossbow",
+    "sprite"    : "spr_spb1",
+    "type"      : "equippable",
+    "category"  : "Spellbook",
+    "lvl"       : 3,
+    "desc"      : "A crossbow made of a common metal. Shoddy, but cheap.",
+    "value"     : 100,
+    "atk"       : 10
+  },{
+    "id"        : 34,
+    "name"      : "Copper Chain Knife",
+    "sprite"    : "spr_ckn1",
+    "type"      : "equippable",
+    "category"  : "Chain Knife",
+    "lvl"       : 3,
+    "desc"      : "A chain knife made of a common metal. Shoddy, but cheap.",
+    "value"     : 100,
+    "atk"       : 10
   }
 ]
