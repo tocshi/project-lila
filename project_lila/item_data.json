@@ -266,7 +266,7 @@
     "passiveSkill"  : "item_passive_ordinary",
     "activeSkill"   : "item_attack_flashcut",
     "activeCD"      : 5,
-    "basicAttack"   : "basicattack_longsword",
+    "basicAttack"   : "basicatk_longsword",
     "unleashSkill"  : "unleash_flashdance",
     "unleashGauge"  : 22
   },{
