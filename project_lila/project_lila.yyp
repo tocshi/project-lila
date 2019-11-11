@@ -127,6 +127,14 @@
             }
         },
         {
+            "Key": "0da51ec1-c6da-4fad-9641-7053f86e4486",
+            "Value": {
+                "id": "6f3e47b1-64e2-4d71-8e5c-0679cf605d68",
+                "resourcePath": "objects\\obj_text_inv\\obj_text_inv.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "0e22571b-b58c-4334-a6bd-9a49a4087428",
             "Value": {
                 "id": "4b4267c2-b559-4443-acaa-eec8cf039a0f",
