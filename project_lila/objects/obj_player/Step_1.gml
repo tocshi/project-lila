@@ -61,3 +61,4 @@ statmap[? "mp"] = clamp(statmap[? "mp"],0,statmap[? "maxmp"]);
 statmap[? "finalshld"] = clamp(statmap[? "finalshld"],-100,100);
 
 
+

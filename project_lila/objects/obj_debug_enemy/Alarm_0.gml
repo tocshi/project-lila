@@ -1,0 +1,9 @@
+event_inherited();
+dropItemAtRate(x,y,1,50);
+dropItemAtRate(x,y,2,25);
+dropItemAtRate(x,y,3,5);
+dropItemAtRate(x,y,6,10);
+dropItemAtRate(x,y,7,10);
+dropItemAtRate(x,y,8,10);
+dropItemAtRate(x,y,9,10);
+dropItemAtRate(x,y,10,10);

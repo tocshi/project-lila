@@ -13,7 +13,7 @@ switch(room){
 		draw_text(room_width/2, room_height/3, "YOU DIED\n\nThis isn't Dark Souls though,\n press Enter to go back.");
 		break;
 }
-
+//move this to a separate object layered on top of items
 if(global.pause){
 	draw_set_alpha(0.5);
 	draw_sprite(paused_state,-1,camera_get_view_x(global.currentCamera),camera_get_view_y(global.currentCamera));

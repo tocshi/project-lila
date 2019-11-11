@@ -1,4 +1,7 @@
-if(global.player == 0){exit;}
+if(global.player == 0
+	|| room == rm_playerdeath
+	|| room == rm_title
+){exit;}
 
 if(global.pause == false){
 	cursor_sprite = -1;

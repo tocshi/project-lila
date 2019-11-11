@@ -45,7 +45,7 @@
   },{
     "id"            : 1,
     "name"          : "Small Health Potion",
-    "sprite"        : "spr_health_potion_s",
+    "sprite"        : "spr_potion_hp_s",
     "type"          : "consumable",
     "category"      : "Potion",
     "lvl"           : 1,
@@ -56,7 +56,7 @@
   },{
     "id"            : 2,
     "name"          : "Health Potion",
-    "sprite"        : "spr_health_potion_m",
+    "sprite"        : "spr_potion_hp_m",
     "type"          : "consumable",
     "category"      : "Potion",
     "lvl"           : 5,
@@ -67,7 +67,7 @@
   },{
     "id"            : 3,
     "name"          : "Large Health Potion",
-    "sprite"        : "spr_health_potion_l",
+    "sprite"        : "spr_potion_hp_l",
     "type"          : "consumable",
     "category"      : "Potion",
     "lvl"           : 10,

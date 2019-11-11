@@ -43,6 +43,7 @@ if(keyboard_check_pressed(vk_shift)){
 		infmp = true;
 		statmap[? "mpregen"] += 100;
 	}	
+	recalcStats(self.id);
 }
 
 //DEBUG EQUIP/UNEQUIP
