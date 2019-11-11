@@ -19,26 +19,6 @@ if(global.pause){
 	draw_sprite(paused_state,-1,camera_get_view_x(global.currentCamera),camera_get_view_y(global.currentCamera));
 	draw_set_alpha(1);
 	draw_sprite(gui_inv,-1,camera_get_view_x(global.currentCamera),camera_get_view_y(global.currentCamera));
-	
-	var invSpace = 0;
-	for(var i = 0; i < ds_list_size(global.itemData) && invSpace < 100; i++){
-		if(global.playerItems[i] > 0){
-		
-			draw_set_halign(fa_right);
-			draw_set_valign(fa_bottom);
-			draw_set_color(c_black);
-			draw_set_alpha(1);
-			draw_set_font(fnt_gui_small);
-			draw_text_outlined(camera_get_view_x(global.currentCamera)+global.invItemBox[invSpace,0]+64,
-					camera_get_view_y(global.currentCamera)+global.invItemBox[invSpace,1]+69,
-					c_black,c_white,
-					string(global.playerItems[i]));
-					
-			draw_set_halign(fa_left);
-			draw_set_valign(fa_top);
-			invSpace++;
-		}
-	}
 }
 
 draw_set_color(c_white);

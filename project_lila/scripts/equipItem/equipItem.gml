@@ -2,6 +2,8 @@ var target = argument0;
 var item = argument1;
 
 if(getEquipSlot(item) == -1 || global.playerItems[item] <= 0){exit;}
+// TODO!! Write a check that exits if you try to equip the a weapon to a class that can't use it
+
 if(target.equips[getEquipSlot(item)] > 0){
 	unequipItem(target,item);
 }
