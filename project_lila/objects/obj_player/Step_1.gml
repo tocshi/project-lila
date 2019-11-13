@@ -5,14 +5,6 @@ if(statChange){
 	recalcStats(self.id);
 }
 
-
-// CALCULATE STATS
-// Sum up all stat buffs/debuffs
-var speedup = sumMap(speedups, 0);
-var relative_speedUp = multMap(relative_speedups, 1);
-var slow = sumMap(slows, 0);
-var relative_slow = multMap(relative_slows, 1);
-
 //TIMERS
 for (var i = 0; i < array_length_1d(cd); i++){
 	if(cd[i] > 0){cd[i]--;}
@@ -41,9 +33,6 @@ if (atkTimer > 0){
 		canMove = true;
 	}
 }
-
-// Update movement speed from effects
-statmap[? "movespeed"] = (statmap[? "base_movespeed"] + speedup - slow) * relative_speedUp * relative_slow;
 
 //REGENERATION
 statmap[? "hp"] += statmap[? "hpregen"];

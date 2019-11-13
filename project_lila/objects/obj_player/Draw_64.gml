@@ -1,4 +1,4 @@
-// Draw HP and MP bars
+// Draw HP and MP bars and itembar
 draw_set_halign(fa_middle);
 draw_set_valign(fa_top);
 draw_healthbar(20, 20, 420, 40, (statmap[? "hp"]/statmap[? "maxhp"])*100, c_black, c_red, c_red, 0, true, true);
@@ -9,11 +9,5 @@ draw_set_color(c_white);
 draw_text(220, 15, string(ceil(statmap[? "hp"])) + " / " + string(round(statmap[? "maxhp"])));
 draw_text(220, 37, string(ceil(statmap[? "mp"])) + " / " + string(round(statmap[? "maxmp"])));
 
-/*
-//DEBUG
-draw_set_color(c_black);
-draw_set_font(fnt_menutitle);
-draw_text(40, 100, ds_list_size(buff));
-draw_set_font(fnt_hpmp);
-draw_set_color(c_white);
-*/
+draw_sprite(gui_itembar,-1,0,0);
+

@@ -41,6 +41,19 @@ for(var i = 0; i < 10; i++){
 		global.invItemBox[(i * 10) + j,1] = 121 + i*66;
 	}
 }
+// Item Hotbar pixel positions
+global.itemBarBox = array_create(10,[0,0]);
+for(var i = 0; i < 10; i++){
+	global.itemBarBox[i] = [2,121 + i*66];
+}
+// Buffbar pixel positions
+global.buffBarBox = array_create(20,[0,0]);
+for(var i = 0; i < 10; i++){
+	global.buffBarBox[i] = [74,121 + i*33];
+}
+
+// for skills and buff bar
+global.hpmpend = 440;
 
 // Stats that equipped items are allowed to change
 global.equipStats = ds_list_create();
