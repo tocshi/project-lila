@@ -10,6 +10,7 @@ for(var i = 0; i < 12; i++){
 										camera_get_view_y(global.currentCamera)+global.equipItemBox[i,1],
 										"GUI",obj_item_inv);
 		item.type = item.EQUIP;
+		item.itemid = global.player.equips[i];
 		item.sprite_index = asset_get_index(ds_map_find_value(global.itemData[| global.player.equips[i]],"sprite"));
 		//show_debug_message(string(camera_get_view_x(global.currentCamera)+global.equipItemBox[i,0]) + "," + string(camera_get_view_y(global.currentCamera)+global.equipItemBox[i,1]));
 	}
