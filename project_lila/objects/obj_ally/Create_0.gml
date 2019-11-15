@@ -40,6 +40,7 @@ statmap[? "finaldmg"]		= 100;
 statmap[? "finalshld"]		= 0;
 statmap[? "blkmod"]			= 50;
 
+ds_map_copy(basestatmap, statmap);
 
 // Initial Variables
 destX = x;
