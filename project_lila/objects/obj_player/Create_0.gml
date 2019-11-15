@@ -69,32 +69,9 @@ cd = array_create(21,0);
 maxcd = array_create(21,0);
 atkTimer = 0;
 
-// Map of effects on the player (buffs/debuffs)
-effects = ds_map_create();
-
-// Map of individual buffs/debuffs
-speedups = ds_map_create();
-relative_speedups = ds_map_create();
-relative_slows = ds_map_create();
-slows = ds_map_create();
-
-// Add each buff/debuff map to the effects map
-ds_map_add_map(effects, "speedups", speedups);
-ds_map_add_map(effects, "relative_speedups", speedups);
-ds_map_add_map(effects, "slows", speedups);
-ds_map_add_map(effects, "relative_slows", speedups);
-
-// buff array properties:
-//	0	time
-//	1	visible (on buff bar)
-//	2	name
-//	3	countdownEvent
-//	4	unremovable
-//  5	# of stacks (-1 means it cannot stack)
-//	6	max # of stacks (set to 0 by default)
+// buff list and visible buff list creation 
 buff = ds_list_create();
-// list of buffs to remove from timer ending (change to different ds later?)
-buffRemoved = false;
+visBuff = ds_list_create();
 
 equips = array_create(12, 0);
 

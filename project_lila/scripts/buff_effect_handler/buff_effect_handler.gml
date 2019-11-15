@@ -10,8 +10,10 @@ switch(buffName){
 	break;
 	
 	case "Empowered":
-	var effect = instance_create_layer(x,y+32,"Assets_1",obj_debug_buff);
+	var effect = instance_create_layer(x,y+32,"Assets_1",obj_skill_empowered);
 	effect.vspeed = -1;
+	
+	if(statChange){statmap[? "movespeed"]+=5;}
 	break;
 
 	case "Knight's Shield":
@@ -21,6 +23,8 @@ switch(buffName){
 	effect.speed = 1;
 	
 	isBlocking = true;
+	
+	
 	break;
 
 }

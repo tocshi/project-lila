@@ -24,7 +24,7 @@ if(following_ally && instance_exists(target)){
 		isMoving = false;
 		following_ally = false;
 		
-		applyBuff(target,180,true,"Knight's Shield",buff_knights_shield,false,-1,0);
+		applyBuff(target,180,true,"Knight's Shield",buff_knights_shield,false,-1,0,spr_debug_wall,"Lorem Ipsum");
 		
 	}
 }

@@ -5,22 +5,18 @@ if(statChange){
 	recalcStats(self.id);
 }
 
-
-// CALCULATE STATS
-// Sum up all stat buffs/debuffs
-var speedup = sumMap(speedups, 0);
-var relative_speedUp = multMap(relative_speedups, 1);
-var slow = sumMap(slows, 0);
-var relative_slow = multMap(relative_slows, 1);
-
 //TIMERS
 for (var i = 0; i < array_length_1d(cd); i++){
 	if(cd[i] > 0){cd[i]--;}
 }
 
-for (var i = 0; i < ds_list_size(buff); if(!buffRemoved){i++;}){
-	buffRemoved = false;
+for (var i = ds_list_size(buff)-1; i >= 0; i--){
 	var buff_array = ds_list_find_value(buff,i);
+
+	if(buff_array[1] == false){
+		ds_list_delete(visBuff, i);
+	}
+
 	buff_effect_handler(buff_array[2]);
 	if(buff_array[0] > 0){
 		buff_array[0]--;
@@ -28,10 +24,12 @@ for (var i = 0; i < ds_list_size(buff); if(!buffRemoved){i++;}){
 	}
 	if(buff_array[0] <= 0){
 		removeBuff(self.id,buff_array[2])
-		buffRemoved = true;
 		recalcStats(self.id);
 	}
 }
+
+// Update visible buff list for use in buff bar 
+ds_list_copy(visBuff, buff);
 
 if (atkTimer > 0){
 	atkTimer--;
@@ -41,9 +39,6 @@ if (atkTimer > 0){
 		canMove = true;
 	}
 }
-
-// Update movement speed from effects
-statmap[? "movespeed"] = (statmap[? "base_movespeed"] + speedup - slow) * relative_speedUp * relative_slow;
 
 //REGENERATION
 statmap[? "hp"] += statmap[? "hpregen"];
