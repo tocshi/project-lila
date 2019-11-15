@@ -1,4 +1,4 @@
-show_debug_message("Item Id at button: " + string(itemid))
+/// @description Do button action
 switch (type) {
 	case EQUIP:
 		equipItem(global.player, itemid); break;
@@ -7,6 +7,5 @@ switch (type) {
 	case USE:
 		// TODO: Implement item usage
 	case DROP:
-		// TODO: Implement item dropping
-
+		dropItem(global.player.x, global.player.y, itemid, isEquipped, global.player); break;
 }
