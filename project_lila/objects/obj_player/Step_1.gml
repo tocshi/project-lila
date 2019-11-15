@@ -10,9 +10,6 @@ for (var i = 0; i < array_length_1d(cd); i++){
 	if(cd[i] > 0){cd[i]--;}
 }
 
-// Update visible buff list for use in buff bar 
-ds_list_copy(visBuff, buff);
-
 for (var i = ds_list_size(buff)-1; i >= 0; i--){
 	var buff_array = ds_list_find_value(buff,i);
 
@@ -30,6 +27,9 @@ for (var i = ds_list_size(buff)-1; i >= 0; i--){
 		recalcStats(self.id);
 	}
 }
+
+// Update visible buff list for use in buff bar 
+ds_list_copy(visBuff, buff);
 
 if (atkTimer > 0){
 	atkTimer--;

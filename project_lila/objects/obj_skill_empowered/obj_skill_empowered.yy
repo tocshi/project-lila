@@ -2,7 +2,7 @@
     "id": "51876e9b-9339-4a10-be8a-0b0e9003a293",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "obj_debug_buff",
+    "name": "obj_skill_empowered",
     "eventList": [
         {
             "id": "257d4b2d-5736-4cf4-b435-26b1e32674d8",

@@ -49,7 +49,8 @@ for(var i = 0; i < 10; i++){
 // Buffbar pixel positions
 global.buffBarBox = array_create(20,[0,0]);
 for(var i = 0; i < 20; i++){
-	global.buffBarBox[i] = [74,121 + i*33];
+	global.buffBarBox[i,0] = 74;
+	global.buffBarBox[i,1] = 121 + i*33;
 }
 
 // for skills and buff bar

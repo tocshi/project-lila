@@ -42,7 +42,7 @@ if(keyboard_check_pressed(skill_button[1]) && (cd[1] <= 0) && statmap[? "mp"] >=
 	var skillobj = instance_create_layer(x,y,"Attacks",obj_skill_empowered_strike);
 	skillobj.atkmap[? "isBuff"] = true;
 	
-	applyBuff(self.id,3*room_speed,true,"Empowered",buff_empowered,false,-1,0,spr_debug_wall,"Lorem Ipsum");
+	applyBuff(self.id,5*room_speed,true,"Empowered",buff_empowered,false,-1,1,spr_buff_empowered,"Lorem Ipsum");
 
 	empowered_buff = true;
 	statChange = true;
@@ -69,7 +69,7 @@ if(keyboard_check_pressed(skill_button[3]) && (cd[3] <= 0) && statmap[? "mp"] >=
 	direction = point_direction(x,y,mouse_x,mouse_y);
 	speed = 15;
 	
-	applyBuff(self.id,30,true,"Knight's Shield",buff_knights_shield,false,-1,0,spr_debug_wall,"Lorem Ipsum");
+	applyBuff(self.id,30,true,"Knight's Shield",buff_knights_shield,false,-1,0,spr_buff_knights_shield,"Lorem Ipsum");
 
 	shield_charge = 29;
 
@@ -111,7 +111,7 @@ if(keyboard_check_pressed(skill_button[5]) && (cd[5] <= 0) && statmap[? "mp"] >=
 		}
 		else {
 			target = self.id;
-			applyBuff(target,180,true,"Knight's Shield",buff_knights_shield,false,-1,0,spr_debug_wall,"Lorem Ipsum");
+			applyBuff(target,180,true,"Knight's Shield",buff_knights_shield,false,-1,0,spr_buff_knights_shield,"Lorem Ipsum");
 
 		}
 				
@@ -140,14 +140,14 @@ if(keyboard_check_pressed(skill_button[7]) && (cd[7] <= 0) && statmap[? "mp"] >=
 		protective_footwork_mod = 400;
 	}
 	else if(hasBuff(self.id,"Protective Footwork I")){
-		applyBuff(self.id,180,false,"Protective Footwork II",buff_protective_footwork,false,-1,0,spr_debug_wall,"Lorem Ipsum");
+		applyBuff(self.id,180,false,"Protective Footwork II",buff_protective_footwork,false,-1,0,spr_buff_protective_footwork2,"Lorem Ipsum");
 		removeBuff(self.id,"Protective Footwork I");
 		cd[7] = 0.8*room_speed;
 		protective_footwork_mod = 240;
 	}
 	else{
 		cd[7] = 0.8*room_speed;
-		applyBuff(self.id,180,false,"Protective Footwork I",buff_protective_footwork,false,-1,0,spr_debug_wall,"Lorem Ipsum");
+		applyBuff(self.id,180,false,"Protective Footwork I",buff_protective_footwork,false,-1,0,spr_buff_protective_footwork1,"Lorem Ipsum");
 		protective_footwork_mod = 160;
 	}
 		
@@ -158,7 +158,7 @@ if(keyboard_check_pressed(skill_button[7]) && (cd[7] <= 0) && statmap[? "mp"] >=
 	canAttack = false;
 	canUseSkill = false;
 	isMoving = false;
-	applyBuff(self.id,22,true,"Knight's Shield",buff_knights_shield,false,-1,0,spr_debug_wall,"Lorem Ipsum");
+	applyBuff(self.id,22,true,"Knight's Shield",buff_knights_shield,false,-1,0,spr_buff_knights_shield,"Lorem Ipsum");
 	alarm[7] = 20;
 	
 

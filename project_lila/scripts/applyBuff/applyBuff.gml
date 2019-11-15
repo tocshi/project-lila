@@ -11,7 +11,7 @@ var sprite			= argument8;
 var desc			= argument9;
 
 // Creates the buff array to add
-var buff_array = array_create(7,false);
+var buff_array = array_create(9,false);
 
 // Checks if an existing buff of the same name exists, and if it does
 // it will do the following actions:

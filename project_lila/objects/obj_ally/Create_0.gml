@@ -1,5 +1,6 @@
 // Stats
 statmap = ds_map_create();
+basestatmap = ds_map_create();
 
 statmap[? "level"] 			= 0;
 statmap[? "class"]			= "Debug";
@@ -57,14 +58,6 @@ maxcd = array_create(21,0);
 atkTimer = 0;
 statChange = true;
 
-// Map of effects on the player (buffs/debuffs)
-effects = ds_map_create();
-
-// Map of individual buffs/debuffs
-speedups = ds_map_create();
-relative_speedups = ds_map_create();
-relative_slows = ds_map_create();
-slows = ds_map_create();
 
 buff = ds_list_create();
 
