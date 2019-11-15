@@ -69,10 +69,9 @@ cd = array_create(21,0);
 maxcd = array_create(21,0);
 atkTimer = 0;
 
-// buff array
+// buff list and visible buff list creation 
 buff = ds_list_create();
-// list of buffs to remove from timer ending (change to different ds later?)
-buffRemoved = false;
+visBuff = ds_list_create();
 
 equips = array_create(12, 0);
 

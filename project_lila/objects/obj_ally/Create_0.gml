@@ -66,22 +66,7 @@ relative_speedups = ds_map_create();
 relative_slows = ds_map_create();
 slows = ds_map_create();
 
-// Add each buff/debuff map to the effects map
-ds_map_add_map(effects, "speedups", speedups);
-ds_map_add_map(effects, "relative_speedups", speedups);
-ds_map_add_map(effects, "slows", speedups);
-ds_map_add_map(effects, "relative_slows", speedups);
-
-// buff array properties:
-//	0	time
-//	1	visible (on buff bar)
-//	2	name
-//	3	countdownEvent
-//	4	unremovable
-//  5	# of stacks (-1 means it cannot stack)
 buff = ds_list_create();
-// list of buffs to remove from timer ending (change to different ds later?)
-buffRemoved = false;
 
 // Ally HP Bar
 var minihp = instance_create_layer(x, y, "dmgTxt", obj_allyhpbar);

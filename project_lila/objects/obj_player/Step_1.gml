@@ -10,9 +10,16 @@ for (var i = 0; i < array_length_1d(cd); i++){
 	if(cd[i] > 0){cd[i]--;}
 }
 
-for (var i = 0; i < ds_list_size(buff); if(!buffRemoved){i++;}){
-	buffRemoved = false;
+// Update visible buff list for use in buff bar 
+ds_list_copy(visBuff, buff);
+
+for (var i = ds_list_size(buff)-1; i >= 0; i--){
 	var buff_array = ds_list_find_value(buff,i);
+
+	if(buff_array[1] == false){
+		ds_list_delete(visBuff, i);
+	}
+
 	buff_effect_handler(buff_array[2]);
 	if(buff_array[0] > 0){
 		buff_array[0]--;
@@ -20,7 +27,6 @@ for (var i = 0; i < ds_list_size(buff); if(!buffRemoved){i++;}){
 	}
 	if(buff_array[0] <= 0){
 		removeBuff(self.id,buff_array[2])
-		buffRemoved = true;
 		recalcStats(self.id);
 	}
 }

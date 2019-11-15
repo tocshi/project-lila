@@ -18,9 +18,9 @@ if (atkTimer > 0){
 
 // BUFF TIMER
 
-for (var i = 0; i < ds_list_size(buff); if(!buffRemoved){i++;}){
-	buffRemoved = false;
+for (var i = ds_list_size(buff)-1; i >= 0; i--){
 	var buff_array = ds_list_find_value(buff,i);
+
 	buff_effect_handler(buff_array[2]);
 	if(buff_array[0] > 0){
 		buff_array[0]--;
@@ -28,7 +28,7 @@ for (var i = 0; i < ds_list_size(buff); if(!buffRemoved){i++;}){
 	}
 	if(buff_array[0] <= 0){
 		removeBuff(self.id,buff_array[2])
-		buffRemoved = true;
+		recalcStats(self.id);
 	}
 }
 
