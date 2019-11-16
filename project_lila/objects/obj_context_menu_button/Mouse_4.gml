@@ -10,3 +10,4 @@ switch (type) {
 		dropItem(global.player.x, global.player.y, itemid, isEquipped, global.player); break;
 }
 updateGUI();
+//test
