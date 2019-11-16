@@ -1,1 +1,1 @@
-execute_function_pointer(function);
+execute_function_pointer_list(function);

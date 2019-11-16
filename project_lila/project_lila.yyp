@@ -87,6 +87,14 @@
             }
         },
         {
+            "Key": "05275d8e-4c72-4298-a6ed-4722d0c596d8",
+            "Value": {
+                "id": "d791e2ed-352b-4f59-8c86-3ca9005a6e39",
+                "resourcePath": "scripts\\destroy_instances_by_type\\destroy_instances_by_type.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "081b99d7-7579-4722-8e6b-df67bac99685",
             "Value": {
                 "id": "256d4adf-f64b-45d7-88da-0c21e144be6d",
@@ -215,6 +223,14 @@
             }
         },
         {
+            "Key": "1647db39-0b8d-4dba-9542-5b53b885ece9",
+            "Value": {
+                "id": "a2151468-9013-4bb1-8a64-e9479c4c9a5a",
+                "resourcePath": "scripts\\create_function_pointer_list\\create_function_pointer_list.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "169f55a4-3e9c-40b9-ad6c-1dc8d2b8ee8c",
             "Value": {
                 "id": "d77ca122-6721-4c32-83cf-9155bc809cb3",
@@ -308,6 +324,14 @@
                 "id": "db353746-46fe-45db-918e-55e74f9936f4",
                 "resourcePath": "scripts\\buff_effect_handler\\buff_effect_handler.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "27f55a91-28a5-44cf-898e-3012a9b77063",
+            "Value": {
+                "id": "76086353-ae96-40b1-8c26-a4803603708f",
+                "resourcePath": "sprites\\spr_confirmation_button\\spr_confirmation_button.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -804,6 +828,14 @@
                 "id": "af349209-68ea-4743-93dd-98f5cf63fb89",
                 "resourcePath": "views\\83753ece-907d-469d-b710-25c4d89fa984.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "87296a4a-cc16-4143-b59b-643a5bcca0b1",
+            "Value": {
+                "id": "62c97aaf-ba40-4ef7-adc5-64bcf9011e49",
+                "resourcePath": "scripts\\execute_function_pointer_list\\execute_function_pointer_list.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -1540,6 +1572,9 @@
         "7b88dd8a-74e9-43b3-afdc-57e5442897d3",
         "1b916b93-1a3c-4d90-a14d-febd145a0f1a",
         "b6826643-d9df-4536-940d-50232e900656",
+        "05275d8e-4c72-4298-a6ed-4722d0c596d8",
+        "1647db39-0b8d-4dba-9542-5b53b885ece9",
+        "87296a4a-cc16-4143-b59b-643a5bcca0b1",
         "454cdb76-1bb0-49cd-ac5f-cdc5c38c5413"
     ],
     "tutorial": ""

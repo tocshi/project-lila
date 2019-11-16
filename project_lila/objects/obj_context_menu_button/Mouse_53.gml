@@ -1,4 +1,3 @@
 /// @description Delete all popup buttons
 
-with (obj_context_menu) {instance_destroy();}
-with (obj_context_menu_button) {instance_destroy();}
+destroy_instances_by_type(obj_context_menu, obj_context_menu_button);
