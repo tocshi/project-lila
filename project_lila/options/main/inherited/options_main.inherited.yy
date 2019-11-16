@@ -4,8 +4,8 @@
     },
     "option_gameguid": "348e9af8-a581-4fd5-9580-18d3ba04fcde",
     "option_game_speed": 60,
-    "option_lastchanged": "15 November 2019 11:18:15",
-    "option_sci_usesci": true,
+    "option_lastchanged": "15 November 2019 20:15:12",
+    "option_sci_usesci": false,
     "option_author": "Michael Xian"
 }←1225f6b0-ac20-43bd-a82e-be73fa0b6f4f|{
     "targets": 461609314234257646
