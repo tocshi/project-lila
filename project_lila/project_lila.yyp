@@ -111,6 +111,14 @@
             }
         },
         {
+            "Key": "09bca0d8-83f2-4674-a6b5-c639947140a7",
+            "Value": {
+                "id": "41f1d884-134d-476f-8f6c-807bdcb94ab6",
+                "resourcePath": "objects\\obj_confirmation_menu\\obj_confirmation_menu.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "0a15104d-ce72-40c4-9fad-7ad6593db78e",
             "Value": {
                 "id": "33c36f54-fb3c-4c9c-a746-45024aca2a9b",
@@ -1055,6 +1063,14 @@
             }
         },
         {
+            "Key": "c96d1538-acc3-4af2-92f9-ad3324ba2f15",
+            "Value": {
+                "id": "9f1677c5-f122-412d-9d22-248daa62d99e",
+                "resourcePath": "sprites\\confirmation_menu\\confirmation_menu.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "c98f8c18-cbde-49c2-8951-cc4e50c07669",
             "Value": {
                 "id": "689cd3bb-b271-4570-bd31-956445f9bfd9",
@@ -1140,6 +1156,14 @@
                 "id": "d02c585a-0378-46b9-bfcb-a224d28f993f",
                 "resourcePath": "objects\\obj_skill_fireball\\obj_skill_fireball.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "d784e273-cb94-4612-9126-e9d532adb3af",
+            "Value": {
+                "id": "292ad5b1-f709-40f4-8439-41dcd5a0e863",
+                "resourcePath": "scripts\\draw_text_outlined_extra\\draw_text_outlined_extra.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -1446,7 +1470,8 @@
         "1bf30ca5-21e4-4410-af99-1dc0f463ede0",
         "a12a94f2-c26c-4db8-b17d-09cbde9417e1",
         "6ec179ff-0e59-4cbe-86df-12ca48b78b35",
-        "6ab9cddf-6b58-4e0a-9808-2f6b45ad430c"
+        "6ab9cddf-6b58-4e0a-9808-2f6b45ad430c",
+        "d784e273-cb94-4612-9126-e9d532adb3af"
     ],
     "tutorial": ""
 }
