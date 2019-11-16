@@ -51,7 +51,7 @@
     "lvl"           : 1,
     "desc"          : "Your basic run-of-the-mill health restoration mixture. Heals 25% of your max HP. Subsequent uses in a short time will significantly reduce effectiveness.",
     "value"         : 50,
-    "activeSkill"   : "item_potion",
+    "activeSkill"   : "use_potion",
     "activeCD"      : 0.5
   },{
     "id"            : 2,
@@ -62,7 +62,7 @@
     "lvl"           : 5,
     "desc"          : "Your basic run-of-the-mill health restoration mixture. Heals 50% of your max HP. Subsequent uses in a short time will significantly reduce effectiveness.",
     "value"         : 150,
-    "activeSkill"   : "item_potion",
+    "activeSkill"   : "use_potion",
     "activeCD"      : 0.5
   },{
     "id"            : 3,
@@ -73,7 +73,7 @@
     "lvl"           : 10,
     "desc"          : "Your basic run-of-the-mill health restoration mixture. Heals 75% of your max HP. Subsequent uses in a short time will significantly reduce effectiveness.",
     "value"         : 500,
-    "activeSkill"   : "item_potion",
+    "activeSkill"   : "use_potion",
     "activeCD"      : 0.5
   },{
     "id"        : 4,

@@ -15,5 +15,3 @@ if(target == global.player){
 	}
 	target.statChange = true;
 }
-
-recalcStats(target);

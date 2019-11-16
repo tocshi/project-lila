@@ -5,6 +5,8 @@ statmap[? "hp"] = 500;
 statmap[? "hpregen"] = 1;
 statmap[? "mpregen"] = 0;
 
+ds_map_copy(basestatmap, statmap);
+
 canKnockback = true;
 
 alarm[1] = 1;

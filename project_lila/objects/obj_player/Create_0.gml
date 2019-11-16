@@ -67,6 +67,7 @@ equipApplied = false;
 
 cd = array_create(21,0);
 maxcd = array_create(21,0);
+itemcd = array_create(ds_list_size(global.itemData),0);
 atkTimer = 0;
 
 // buff list and visible buff list creation 

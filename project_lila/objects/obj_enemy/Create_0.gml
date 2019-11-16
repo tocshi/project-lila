@@ -1,5 +1,6 @@
 // Stats
 statmap = ds_map_create();
+basestatmap = ds_map_create();
 
 statmap[? "level"] 			= 0;
 statmap[? "maxhp"]			= 100;
@@ -35,6 +36,8 @@ statmap[? "critdmg"]		= 150;
 statmap[? "finaldmg"]		= 100;
 statmap[? "finalshld"]		= 0;
 statmap[? "blkmod"]			= 50;
+
+ds_map_copy(basestatmap, statmap);
 
 canKnockback	= false;
 isDead			= false;
