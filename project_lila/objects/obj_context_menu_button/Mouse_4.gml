@@ -7,7 +7,7 @@ switch (type) {
 	case USE:
 		// TODO: Implement item usage
 	case DROP:
-		dropItem(global.player.x, global.player.y, itemid, isEquipped, global.player); break;
+		confirmation_menu(create_function_pointer(dropItem, global.player.x, global.player.y, itemid, isEquipped, global.player));
 }
 updateGUI();
 //test

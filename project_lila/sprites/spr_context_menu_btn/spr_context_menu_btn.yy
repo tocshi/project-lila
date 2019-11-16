@@ -2,7 +2,7 @@
     "id": "e84b8b55-30e0-4b44-825e-f73216b16e06",
     "modelName": "GMSprite",
     "mvc": "1.12",
-    "name": "context_menu_btn",
+    "name": "spr_context_menu_btn",
     "For3D": false,
     "HTile": false,
     "VTile": false,
