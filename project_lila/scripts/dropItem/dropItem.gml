@@ -23,5 +23,4 @@ if (isEquipped) {
 
 global.playerItems[itemid]--;
 
-item = dropItemAtRate(xx, yy, itemid, 1000)
-instance_deactivate_object(item);
+dropItemAtRate(xx, yy, itemid, 1000);

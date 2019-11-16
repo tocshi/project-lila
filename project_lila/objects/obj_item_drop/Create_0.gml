@@ -10,3 +10,7 @@ y0 = y;
 fading = false;
 flying = true;
 collision = false;
+
+if(global.pause){
+	instance_deactivate_object(self.id);
+}
