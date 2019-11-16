@@ -8,9 +8,7 @@ context_menu.isEquipped	= type == EQUIP;
 
 button = instance_create_layer(x, y, "GUIPopUp", obj_context_menu_button);
 instance_deactivate_object(button);
-if (ds_map_find_value(global.itemData[| itemid], "value") >= 0) {
-	ds_list_add(context_menu.buttons, button.DROP);
-}
+
 if (type == EQUIP) {
 	ds_list_add(context_menu.buttons, button.UNEQUIP);
 } else {
@@ -20,6 +18,9 @@ if (type == EQUIP) {
 	if (ds_map_find_value(global.itemData[| itemid], "type") == "consumable") {
 		ds_list_add(context_menu.buttons, button.USE);
 	}
+}
+if (ds_map_find_value(global.itemData[| itemid], "value") >= 0) {
+	ds_list_add(context_menu.buttons, button.DROP);
 }
 instance_destroy(button);
 
