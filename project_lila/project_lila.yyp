@@ -311,6 +311,14 @@
             }
         },
         {
+            "Key": "241bc211-f307-47bf-8d8b-f7cfe8089b1c",
+            "Value": {
+                "id": "4602d3b9-9dc6-4194-a347-84be996856f2",
+                "resourcePath": "scripts\\useItem\\useItem.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "2477853b-f617-4a7a-8d9c-f16549fff88f",
             "Value": {
                 "id": "485af94d-1dd7-4b52-a8aa-f1c2599bfed4",
@@ -332,6 +340,14 @@
                 "id": "76086353-ae96-40b1-8c26-a4803603708f",
                 "resourcePath": "sprites\\spr_confirmation_button\\spr_confirmation_button.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "27fc2b65-f8f2-487b-9e5c-ebaaa9a1fc5f",
+            "Value": {
+                "id": "070bcb05-d028-4058-97b6-7223b4b8a0a1",
+                "resourcePath": "objects\\obj_buff_potion_indicator\\obj_buff_potion_indicator.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -919,6 +935,22 @@
             }
         },
         {
+            "Key": "9398317d-9a19-4b3a-9d4c-672a547515c4",
+            "Value": {
+                "id": "3fb74ec4-6159-46ef-b0f1-6688dee2969c",
+                "resourcePath": "sprites\\spr_buff_saturated\\spr_buff_saturated.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "9a3d4dd9-5876-4704-ac0d-af377edbd83f",
+            "Value": {
+                "id": "2d6b594b-3bbd-4fd5-b8cd-0e9dca7c117e",
+                "resourcePath": "sprites\\spr_buff_potion_sickness\\spr_buff_potion_sickness.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "9b866b4b-7724-4b85-a64c-ee3582fd55f8",
             "Value": {
                 "id": "0c7db2b2-10ad-4d8c-90c2-3860b954eade",
@@ -1071,6 +1103,14 @@
             }
         },
         {
+            "Key": "b544edff-d55b-4ad1-aba5-3f8973c76f45",
+            "Value": {
+                "id": "69e7587d-1b83-4f61-9d5e-f9943b292ab7",
+                "resourcePath": "sprites\\spr_buff_potion_indicator\\spr_buff_potion_indicator.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "b6826643-d9df-4536-940d-50232e900656",
             "Value": {
                 "id": "394f4649-1ad1-4bf8-9b99-f679c2b6dc8e",
@@ -1183,19 +1223,19 @@
             }
         },
         {
+            "Key": "cbce6a94-46e6-417d-9215-1f2a971d5bb6",
+            "Value": {
+                "id": "f243ddfa-e3e0-4803-8dd2-bb6044c64825",
+                "resourcePath": "views\\cbce6a94-46e6-417d-9215-1f2a971d5bb6.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "cc98d028-7bdd-4680-85f3-c87a7baa481e",
             "Value": {
                 "id": "a7f75eaa-1599-425e-bc11-9b8683628158",
                 "resourcePath": "options\\windows\\options_windows.yy",
                 "resourceType": "GMWindowsOptions"
-            }
-        },
-        {
-            "Key": "ccb7549e-6ef4-491c-acc6-cbae986c0987",
-            "Value": {
-                "id": "0c214c99-6317-4db2-9763-a8fab6d51fd0",
-                "resourcePath": "scripts\\stopKnockback\\stopKnockback.yy",
-                "resourceType": "GMScript"
             }
         },
         {
@@ -1399,6 +1439,14 @@
             }
         },
         {
+            "Key": "efef40b5-b3dd-4fd8-858d-53cd81554d87",
+            "Value": {
+                "id": "883c3587-6560-4d74-a6a2-33a17573610a",
+                "resourcePath": "scripts\\use_potion\\use_potion.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "f03d9acc-c2ae-4812-b14a-4d3b962a868a",
             "Value": {
                 "id": "4a1887aa-6eb7-44d1-90ac-a1067394c71b",
@@ -1503,6 +1551,14 @@
             }
         },
         {
+            "Key": "fd6b1776-4f10-456f-aa1b-eea273e03b74",
+            "Value": {
+                "id": "e33f4543-fbd5-4b0e-84c6-51e1b31c11f3",
+                "resourcePath": "scripts\\buff_saturated\\buff_saturated.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "fe7885b5-d6ab-4087-b0f2-92b9fd2bce6c",
             "Value": {
                 "id": "28a91068-c124-4dc8-b2f9-c9f438d44392",
@@ -1545,21 +1601,24 @@
         "4160ac60-2dc6-4341-badb-0e6001f5796f",
         "c1f6a15f-4197-4c91-93b5-c0d5f2138201",
         "f6280391-517c-4874-bda0-f728d9216e7e",
+        "fd6b1776-4f10-456f-aa1b-eea273e03b74",
         "a2b5f266-031d-44f2-b634-d9e0fd90376a",
         "0e22571b-b58c-4334-a6bd-9a49a4087428",
         "b06652dd-1c2f-40e5-b638-8a09dd85c4f5",
         "b000834d-694e-4b7f-9cfd-6136d647349c",
         "54e90f6e-9e5c-4684-b3cf-7c7593a4b1ce",
+        "241bc211-f307-47bf-8d8b-f7cfe8089b1c",
+        "efef40b5-b3dd-4fd8-858d-53cd81554d87",
         "36c513a5-d959-430a-a52b-c18569d49c0b",
         "dc789532-e5d9-4952-bd1b-c850b7589847",
         "a4736812-0af2-454e-b514-b2a70495c0f4",
         "1e334b20-b2fe-4992-a3c8-9616aa15dee6",
-        "497183b5-b142-4cca-9f84-f05c99ec756d",
-        "ccb7549e-6ef4-491c-acc6-cbae986c0987",
         "bd19d0d2-92fb-4ad9-908b-3f2f51956b86",
         "792dfe82-3653-4cb6-96b8-db2a2e95aa86",
-        "0921d80d-330d-437f-86f9-a8da727c6a49",
         "395e8df5-83cc-49f1-a7cd-909842e7d84f",
+        "0921d80d-330d-437f-86f9-a8da727c6a49",
+        "497183b5-b142-4cca-9f84-f05c99ec756d",
+        "d784e273-cb94-4612-9126-e9d532adb3af",
         "81181f12-58c8-4c2f-83c6-2cf2c12a60f5",
         "40acc53d-293d-43b8-b999-b999a8a8ee4c",
         "0a39caf6-0f2c-41b0-90fb-2b14aa17f36c",
@@ -1567,14 +1626,13 @@
         "a12a94f2-c26c-4db8-b17d-09cbde9417e1",
         "6ec179ff-0e59-4cbe-86df-12ca48b78b35",
         "6ab9cddf-6b58-4e0a-9808-2f6b45ad430c",
-        "d784e273-cb94-4612-9126-e9d532adb3af",
-        "01c10616-7d68-4ae1-b808-eba59538b196",
         "7b88dd8a-74e9-43b3-afdc-57e5442897d3",
         "1b916b93-1a3c-4d90-a14d-febd145a0f1a",
         "b6826643-d9df-4536-940d-50232e900656",
         "05275d8e-4c72-4298-a6ed-4722d0c596d8",
         "1647db39-0b8d-4dba-9542-5b53b885ece9",
         "87296a4a-cc16-4143-b59b-643a5bcca0b1",
+        "01c10616-7d68-4ae1-b808-eba59538b196",
         "454cdb76-1bb0-49cd-ac5f-cdc5c38c5413"
     ],
     "tutorial": ""

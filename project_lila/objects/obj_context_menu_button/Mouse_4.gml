@@ -5,7 +5,7 @@ switch (type) {
 	case UNEQUIP:
 		unequipItem(global.player, itemid); break;
 	case USE:
-		// TODO: Implement item usage
+		useItem(global.player,itemid); break;
 	case DROP:
 		confirmation_menu(
 			create_function_pointer_list(

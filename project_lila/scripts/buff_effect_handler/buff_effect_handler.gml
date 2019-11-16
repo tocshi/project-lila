@@ -24,7 +24,6 @@ switch(buffName){
 	
 	isBlocking = true;
 	
-	
 	break;
-
+	default:
 }

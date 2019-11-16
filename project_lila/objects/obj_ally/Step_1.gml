@@ -19,7 +19,7 @@ for (var i = ds_list_size(buff)-1; i >= 0; i--){
 		ds_list_replace(buff,i,buff_array);
 	}
 	if(buff_array[0] <= 0){
-		removeBuff(self.id,buff_array[2])
+		removeBuff(self.id,buff_array[2],false);
 		recalcStats(self.id);
 	}
 }
