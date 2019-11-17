@@ -1,5 +1,3 @@
-statChange = false;
-
 // Double Mana Regen when not doing anything for 90 frames
 if(canMove && !isMoving){
 	highRegenThreshold++;
@@ -67,3 +65,4 @@ if(keyboard_check_pressed(ord("1"))){
 	}
 }
 */
+statChange = false;
