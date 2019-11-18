@@ -38,7 +38,7 @@ for (var i = 0; i < ds_list_size(target.buff); i++;){
 		if(e_buff_array[0] > time){
 			time = e_buff_array[0];
 		}
-		removeBuff(target,name);
+		removeBuff(target,name,true);
 	}
 }
 

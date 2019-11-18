@@ -1,4 +1,5 @@
 event_inherited();
+if(global.pause){exit;}
 
 if(mouse_check_button_pressed(mb_left) && (cd[0] <= 0) && canAttack){
 	
@@ -18,7 +19,7 @@ if(mouse_check_button_pressed(mb_left) && (cd[0] <= 0) && canAttack){
 	basic_attack.atkmap[? "dmgmod"]			= 100;
 	if(empowered_buff){
 		basic_attack.atkmap[? "dmgmod"]		= 250;
-		removeBuff(self.id,"Empowered");
+		removeBuff(self.id,"Empowered",false);
 	}
 	basic_attack.atkmap[? "element"]		= "none";
 	
@@ -135,13 +136,13 @@ if(keyboard_check_pressed(skill_button[7]) && (cd[7] <= 0) && statmap[? "mp"] >=
 	speed = 8;
 	
 	if(hasBuff(self.id,"Protective Footwork II")){
-		removeBuff(self.id,"Protective Footwork II");
+		removeBuff(self.id,"Protective Footwork II",false);
 		cd[7] = maxcd[7];
 		protective_footwork_mod = 400;
 	}
 	else if(hasBuff(self.id,"Protective Footwork I")){
 		applyBuff(self.id,180,false,"Protective Footwork II",buff_protective_footwork,false,-1,0,spr_buff_protective_footwork2,"Lorem Ipsum");
-		removeBuff(self.id,"Protective Footwork I");
+		removeBuff(self.id,"Protective Footwork I",false);
 		cd[7] = 0.8*room_speed;
 		protective_footwork_mod = 240;
 	}

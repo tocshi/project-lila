@@ -1,0 +1,1 @@
+destroy_instances_by_type(obj_confirmation_menu, obj_generic_btn);

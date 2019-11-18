@@ -6,10 +6,15 @@ if(statChange){
 }
 
 //TIMERS
+// Skill Cooldowns
 for (var i = 0; i < array_length_1d(cd); i++){
 	if(cd[i] > 0){cd[i]--;}
 }
-
+// Item Cooldowns
+for (var i = 0; i < array_length_1d(itemcd); i++){
+	if(itemcd[i] > 0){itemcd[i]--;}
+}
+// Buffs
 for (var i = ds_list_size(buff)-1; i >= 0; i--){
 	var buff_array = ds_list_find_value(buff,i);
 
@@ -23,7 +28,7 @@ for (var i = ds_list_size(buff)-1; i >= 0; i--){
 		ds_list_replace(buff,i,buff_array);
 	}
 	if(buff_array[0] <= 0){
-		removeBuff(self.id,buff_array[2])
+		removeBuff(self.id,buff_array[2],false)
 		recalcStats(self.id);
 	}
 }

@@ -5,4 +5,6 @@ statmap[? "fire_def"] = 0;
 statmap[? "hpregen"] = 0;
 statmap[? "mpregen"] = 0;
 
+ds_map_copy(basestatmap, statmap);
+
 canKnockback	= true;

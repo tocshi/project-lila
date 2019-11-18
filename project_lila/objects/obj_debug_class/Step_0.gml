@@ -18,7 +18,7 @@ if(mouse_check_button_pressed(mb_left) && (cd[0] <= 0) && canAttack){
 	basic_attack.atkmap[? "dmgmod"]			= 100;
 	if(empowered_buff){
 		basic_attack.atkmap[? "dmgmod"]		= 250;
-		removeBuff(self.id,"Empowered");
+		removeBuff(self.id,"Empowered",false);
 	}
 	basic_attack.atkmap[? "element"]		= "none";
 	

@@ -5,6 +5,8 @@ statmap[? "hp"] = 500;
 statmap[? "hpregen"] = 1;
 statmap[? "mpregen"] = 0;
 
+ds_map_copy(basestatmap, statmap);
+
 aggro_range = 360;
 recalc_countdown = 0;
 ai_path = path_add();
