@@ -106,7 +106,7 @@
             "Key": "0921d80d-330d-437f-86f9-a8da727c6a49",
             "Value": {
                 "id": "354d3388-97a0-416f-8858-ac96ffb39ba6",
-                "resourcePath": "scripts\\renderSkills\\renderSkills.yy",
+                "resourcePath": "scripts\\render_cooldown\\render_cooldown.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -311,6 +311,14 @@
             }
         },
         {
+            "Key": "224dd8d2-4c44-4f7c-8ec3-a749fa51ad22",
+            "Value": {
+                "id": "f3598b92-f28e-436f-8d1d-c9b0ee5c3cbe",
+                "resourcePath": "sprites\\spr_unleash_gauge\\spr_unleash_gauge.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "241bc211-f307-47bf-8d8b-f7cfe8089b1c",
             "Value": {
                 "id": "4602d3b9-9dc6-4194-a347-84be996856f2",
@@ -332,6 +340,14 @@
                 "id": "db353746-46fe-45db-918e-55e74f9936f4",
                 "resourcePath": "scripts\\buff_effect_handler\\buff_effect_handler.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "261f20c6-b033-467e-82ba-66b097670105",
+            "Value": {
+                "id": "140a321c-36ff-4a38-8476-3a85bd5d3bbe",
+                "resourcePath": "views\\261f20c6-b033-467e-82ba-66b097670105.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -759,6 +775,14 @@
             }
         },
         {
+            "Key": "76e3cd26-f1fa-4eee-b845-61b778a96f4b",
+            "Value": {
+                "id": "bd1d5869-c667-4ddc-a11c-27fabbd16f42",
+                "resourcePath": "sprites\\spr_ordinary_sword\\spr_ordinary_sword.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "78c62e52-6f6b-40b5-9493-519210555697",
             "Value": {
                 "id": "753b6eb0-952d-4ddb-91a3-3d3604f9d6d3",
@@ -820,6 +844,14 @@
                 "id": "5253d73a-82af-451e-9608-67eaaa34e242",
                 "resourcePath": "scripts\\foreach_definition\\foreach_definition.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "8141abd7-5815-41df-be0a-f0e7a859d11f",
+            "Value": {
+                "id": "27e5f516-e752-4271-b656-b4383d411d95",
+                "resourcePath": "sprites\\spr_essence\\spr_essence.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -1436,6 +1468,14 @@
                 "id": "15107ba1-9725-4f54-b708-7f5645904cfc",
                 "resourcePath": "views\\eada94d8-17c4-47dc-a308-6854ed50798e.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "ecf01256-0836-488f-8050-41050f78b2bf",
+            "Value": {
+                "id": "e1169dc8-5165-4bc7-ba83-b3b90ce8352c",
+                "resourcePath": "objects\\obj_essence\\obj_essence.yy",
+                "resourceType": "GMObject"
             }
         },
         {

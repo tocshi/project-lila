@@ -21,7 +21,7 @@ statmap[? "hpregen"]		= statmap[? "maxhp"]/100/60;//0.02 + statmap[? "level"]*0.
 statmap[? "maxmp"]			= 100;
 statmap[? "mp"]				= 100;
 statmap[? "mpregen"]		= 0.01666*10; //doubled if canMove && !isMoving
-statmap[? "atk"]			= 50;
+statmap[? "atk"]			= 100;
 statmap[? "def"]			= 0;
 
 statmap[? "fire_atk"]		= 0;
@@ -48,6 +48,9 @@ statmap[? "critdmg"]		= 150;
 statmap[? "finaldmg"]		= 100;
 statmap[? "finalshld"]		= 0;
 statmap[? "blkmod"]			= 50;
+
+essence						= 0;
+unleashGauge				= 0;
 
 ds_map_copy(basestatmap, statmap);
 
@@ -80,6 +83,7 @@ skill_button = array_create(11,"");
 
 // Set default keybinds
 skill_button[0]		= vk_space;
+// class skills
 skill_button[1]		= ord("Q");
 skill_button[2]		= ord("W");
 skill_button[3]		= ord("E");
@@ -90,6 +94,17 @@ skill_button[7]		= ord("S");
 skill_button[8]		= ord("D");
 skill_button[9]		= ord("F");
 skill_button[10]	= ord("G");
+// item actives
+skill_button[11]	= ord("1");
+skill_button[12]	= ord("2");
+skill_button[13]	= ord("3");
+skill_button[14]	= ord("4");
+skill_button[15]	= ord("5");
+skill_button[16]	= ord("6");
+skill_button[17]	= ord("7");
+skill_button[18]	= ord("8");
+skill_button[19]	= ord("9");
+skill_button[20]	= ord("0");
 
 //debug
 infmp = false;
@@ -98,5 +113,5 @@ equips[1] = 6;
 equips[4] = 7;
 equips[7] = 8;
 equips[10] = 9;
-debugequip = 1;
+global.playerItems[22]++;
 

@@ -15,3 +15,4 @@ if(target == global.player){
 	}
 	target.statChange = true;
 }
+updateGUI();

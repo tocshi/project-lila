@@ -13,5 +13,5 @@ if(itemData[? "type"] == "consumable"){
 }
 
 if(user == global.player){
-	user.itemcd[itemid] = itemData[? "activeCD"];
+	user.itemcd[itemid] = itemData[? "activeCD"]*room_speed;
 }
