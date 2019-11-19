@@ -78,8 +78,9 @@ buff = ds_list_create();
 visBuff = ds_list_create();
 
 equips = array_create(12, 0);
+itemBar = array_create(10, 0);
 
-skill_button = array_create(11,"");
+skill_button = array_create(21,"");
 
 // Set default keybinds
 skill_button[0]		= vk_space;

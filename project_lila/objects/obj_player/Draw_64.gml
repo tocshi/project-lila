@@ -22,6 +22,10 @@ if(unleashGauge > 0){
 	}
 	draw_sprite(spr_unleash_gauge,-1,100,100);
 }
+// Draw unleash cooldown
+if(cd[0] > 0){
+	draw_healthbar(100, 100, 379, 113, cd[0]/unleashGauge*100, c_gray, c_white, c_white, 0, true, false);
+}
 
 // Draw itembar
 draw_sprite(gui_itembar,-1,0,0);
