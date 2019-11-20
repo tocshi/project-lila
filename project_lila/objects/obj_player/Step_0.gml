@@ -18,7 +18,7 @@ if(keyboard_check(skill_button[0]) && unleashGauge > 0 && essence >= unleashGaug
 	atkTimer++;
 	if(mouse_check_button_pressed(mb_left)){
 		var modifier = essence/unleashGauge;
-		//useUnleashSkill(modifier);
+		use_unleash_skill(modifier);
 		essence = -1;
 		cd[0] = unleashGauge*room_speed;
 	}
