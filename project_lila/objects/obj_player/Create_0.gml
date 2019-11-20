@@ -114,5 +114,8 @@ equips[1] = 6;
 equips[4] = 7;
 equips[7] = 8;
 equips[10] = 9;
+itemBar[0] = 22;
+itemBar[1] = 1;
+global.playerItems[1]+=20;
 global.playerItems[22]++;
 

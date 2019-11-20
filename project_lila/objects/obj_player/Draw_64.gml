@@ -9,6 +9,7 @@ draw_set_color(c_white);
 draw_text(220, 15, string(ceil(statmap[? "hp"])) + " / " + string(round(statmap[? "maxhp"])));
 draw_text(220, 37, string(ceil(statmap[? "mp"])) + " / " + string(round(statmap[? "maxmp"])));
 
+
 // Draw unleash gauge if unleashGauge > 0
 if(unleashGauge > 0){
 	if(essence > 2*unleashGauge){
@@ -20,15 +21,37 @@ if(unleashGauge > 0){
 	else{
 	draw_healthbar(100, 100, 379, 113, essence/unleashGauge*100, c_gray, c_lime, c_lime, 0, true, false);
 	}
+	// Draw unleash cooldown
+	if(cd[0] > 0){
+		draw_healthbar(100, 100, 379, 113, (cd[0]/(unleashGauge*room_speed))*100, c_gray, c_white, c_white, 0, true, false);
+	}
 	draw_sprite(spr_unleash_gauge,-1,100,100);
-}
-// Draw unleash cooldown
-if(cd[0] > 0){
-	draw_healthbar(100, 100, 379, 113, cd[0]/unleashGauge*100, c_gray, c_white, c_white, 0, true, false);
 }
 
 // Draw itembar
 draw_sprite(gui_itembar,-1,0,0);
+for(var i = 0; i < array_length_1d(itemBar); i++){
+	var xx = global.itemBarBox[i,0];
+	var yy = global.itemBarBox[i,1];
+	var itemid = itemBar[i];
+	draw_sprite(asset_get_index(ds_map_find_value(global.itemData[| itemid],"sprite")),-1,xx,yy);
+	
+	
+	if((ds_map_find_value(global.itemData[| itemid],"type") == "consumable"
+	|| ds_map_find_value(global.itemData[| itemid],"type") == "key")
+	&& (global.playerItems[itemid] > 1)){
+		draw_set_halign(fa_right);
+		draw_set_valign(fa_bottom);
+		draw_set_color(c_black);
+		draw_set_alpha(1);
+		draw_set_font(fnt_gui_small);
+		draw_text_outlined(xx+63,yy+69,c_black,c_white,string(global.playerItems[itemid]));
+					
+		draw_set_halign(fa_left);
+		draw_set_valign(fa_top);
+	}
+	render_cooldown(xx,yy,itemcd[itemid],ds_map_find_value(global.itemData[| itemid],"activeCD") * room_speed);
+}
 
 // Draw skill and item cooldowns
 for(i = 0; i < array_length_1d(skill_sprite); i++){

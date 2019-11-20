@@ -1,15 +1,14 @@
 event_inherited();
 if(global.pause){exit;}
 
-if(mouse_check_button_pressed(mb_left) && (cd[0] <= 0) && canAttack){
+if(mouse_check_button_pressed(mb_left) && (atkTimer <= 0) && canAttack){
 	
 	speed = 0;
 	isMoving = false;
 	canMove = false;
 	canAttack = false;
 	canUseSkill = false;
-	cd[0] = room_speed/statmap[? "atkspeed"];
-	atkTimer = cd[0];
+	atkTimer = room_speed/statmap[? "atkspeed"];
 	
 	var basic_attack = instance_create_layer(x,y,"Attacks",obj_basicattack_longsword);
 	iter0++;

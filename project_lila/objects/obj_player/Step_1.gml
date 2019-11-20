@@ -61,7 +61,7 @@ statmap[? "movespeed"] = clamp(statmap[? "movespeed"],0,30);
 statmap[? "hp"] = clamp(statmap[? "hp"],0,statmap[? "maxhp"]);
 statmap[? "mp"] = clamp(statmap[? "mp"],0,statmap[? "maxmp"]);
 statmap[? "finalshld"] = clamp(statmap[? "finalshld"],-100,100);
-essence = clamp(essence,0,unleashGauge*3);
+essence = clamp(essence,-1,unleashGauge*3);
 
 
 

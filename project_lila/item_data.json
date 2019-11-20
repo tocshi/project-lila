@@ -250,7 +250,7 @@
     "id"        : 21,
     "name"      : "Adventurer's Badge",
     "sprite"    : "spr_badge",
-    "type"      : "Key",
+    "type"      : "key",
     "lvl"       : 0,
     "desc"      : "A badge that officially proves that you are a certified Adventurer!"
   },{
