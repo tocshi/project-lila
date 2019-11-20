@@ -9,4 +9,5 @@ alarm[0] = 1;
 holding = false;
 drag_threshold = 10;
 dragging = false;
-drag_sprite_drawn = false;
+
+drag_sprite_set = false;
