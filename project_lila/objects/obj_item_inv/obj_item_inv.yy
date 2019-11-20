@@ -35,22 +35,13 @@
             "m_owner": "62f3d473-a49e-4125-b14a-56978fde4656"
         },
         {
-<<<<<<< Updated upstream
             "id": "47d046e5-c766-4d62-8959-8daa20edef7e",
-=======
-            "id": "f5777338-7eff-4958-a86a-827c7da10649",
->>>>>>> Stashed changes
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-<<<<<<< Updated upstream
             "enumb": 0,
             "eventtype": 2,
-=======
-            "enumb": 7,
-            "eventtype": 6,
->>>>>>> Stashed changes
             "m_owner": "62f3d473-a49e-4125-b14a-56978fde4656"
         }
     ],
