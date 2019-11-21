@@ -1,0 +1,1 @@
+var target = argument0;

@@ -9,7 +9,6 @@ draw_set_color(c_white);
 draw_text(220, 15, string(ceil(statmap[? "hp"])) + " / " + string(round(statmap[? "maxhp"])));
 draw_text(220, 37, string(ceil(statmap[? "mp"])) + " / " + string(round(statmap[? "maxmp"])));
 
-
 // Draw unleash gauge if unleashGauge > 0
 if(unleashGauge > 0){
 	if(essence > 2*unleashGauge){
@@ -83,7 +82,5 @@ for(var i = 0; i < min(ds_list_size(visBuff),20); i++){
 		draw_set_halign(fa_left);
 		draw_set_font(fnt_hpmp);
 		draw_text_outlined(xx+34,yy,c_black,c_white,buff_array[5]);
-	}
-	
+	}	
 }
-

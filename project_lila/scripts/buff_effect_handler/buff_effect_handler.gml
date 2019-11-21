@@ -23,7 +23,11 @@ switch(buffName){
 	effect.speed = 1;
 	
 	isBlocking = true;
+	break;
 	
+	case "Unleash":
+	if(statChange){statmap[? "finalshld"]+=100;
+		show_debug_message("invincible!");}
 	break;
 	default:
 }

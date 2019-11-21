@@ -21,7 +21,7 @@ statmap[? "hpregen"]		= statmap[? "maxhp"]/100/60;//0.02 + statmap[? "level"]*0.
 statmap[? "maxmp"]			= 100;
 statmap[? "mp"]				= 100;
 statmap[? "mpregen"]		= 0.01666*10; //doubled if canMove && !isMoving
-statmap[? "atk"]			= 100;
+statmap[? "atk"]			= 0;
 statmap[? "def"]			= 0;
 
 statmap[? "fire_atk"]		= 0;

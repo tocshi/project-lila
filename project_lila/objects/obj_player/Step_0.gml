@@ -7,28 +7,6 @@ if(canMove && !isMoving){
 
 if(global.pause){exit;}
 
-// Unleash Mode
-if(keyboard_check(skill_button[0]) && unleashGauge > 0 && essence >= unleashGauge && atkTimer <= 0){
-	
-	var effect = instance_create_layer(x,y,"Assets_1",obj_debug_indicator);
-	effect.image_alpha = 0.3;
-	effect.direction = irandom_range(0,359);
-	effect.speed = 1;
-	
-	atkTimer++;
-	if(mouse_check_button_pressed(mb_left)){
-		var modifier = essence/unleashGauge;
-		use_unleash_skill(modifier);
-		essence = -1;
-		cd[0] = unleashGauge*room_speed;
-	}
-	if(mouse_check_button_pressed(mb_right)){
-		statmap[? "hp"] += (statmap[? "maxhp"]/100)*essence;
-		essence = 0;
-		canMove = false;
-	}
-}
-
 // Standard Movement
 if(mouse_check_button_pressed(mb_right) && canMove){
 	
@@ -71,6 +49,9 @@ if(keyboard_check_pressed(vk_tab)){
 	for (var i = 0; i < array_length_1d(cd); i++){
 		if(cd[i] > 0){cd[i] = 1;}
 	}
+	for (var i = 0; i < array_length_1d(itemcd); i++){
+		if(itemcd[i] > 0){itemcd[i] = 1;}
+	}
 }
 
 if(keyboard_check_pressed(vk_shift)){
@@ -86,3 +67,25 @@ if(keyboard_check_pressed(vk_shift)){
 }
 
 statChange = false;
+
+// Unleash Mode
+if(keyboard_check(skill_button[0]) && unleashGauge > 0 && essence >= unleashGauge && atkTimer <= 0){
+	
+	var effect = instance_create_layer(x,y,"Assets_1",obj_debug_indicator);
+	effect.image_alpha = 0.3;
+	effect.direction = irandom_range(0,359);
+	effect.speed = 1;
+	
+	atkTimer++;
+	if(mouse_check_button_pressed(mb_left)){
+		var modifier = essence/unleashGauge;
+		use_unleash_skill(modifier);
+		essence = -1;
+		cd[0] = unleashGauge*room_speed;
+	}
+	if(mouse_check_button_pressed(mb_right)){
+		statmap[? "hp"] += (statmap[? "maxhp"]/100)*essence;
+		essence = 0;
+		canMove = false;
+	}
+}
