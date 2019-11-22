@@ -383,6 +383,14 @@
             }
         },
         {
+            "Key": "315034f8-6171-4ae0-a099-cf57ccb222eb",
+            "Value": {
+                "id": "744c42e2-74e0-4d96-9cb8-7c1f7a764d15",
+                "resourcePath": "sprites\\spr_roundslash\\spr_roundslash.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "327c5b6b-290a-447f-8ea7-f008934e6500",
             "Value": {
                 "id": "5989c6ec-1e1b-49f1-9922-339fc564eed3",
