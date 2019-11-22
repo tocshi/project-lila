@@ -144,7 +144,8 @@
     "lvl"       : 1,
     "desc"      : "A longsword given to you to help you start your adventure.",
     "value"     : 40,
-    "atk"       : 5
+    "atk"       : 5,
+    "unleashGauge"  : 0
   },{
     "id"        : 11,
     "name"      : "Training Bow",
@@ -154,7 +155,8 @@
     "lvl"       : 1,
     "desc"      : "A bow given to you to help you start your adventure.",
     "value"     : 40,
-    "atk"       : 5
+    "atk"       : 5,
+    "unleashGauge"  : 0
   },{
     "id"        : 12,
     "name"      : "Training Shortsword",
@@ -164,7 +166,8 @@
     "lvl"       : 1,
     "desc"      : "A shortsword given to you to help you start your adventure.",
     "value"     : 40,
-    "atk"       : 5
+    "atk"       : 5,
+    "unleashGauge"  : 0
   },{
     "id"        : 13,
     "name"      : "Training Spear",
@@ -174,7 +177,8 @@
     "lvl"       : 1,
     "desc"      : "A spear given to you to help you start your adventure.",
     "value"     : 40,
-    "atk"       : 5
+    "atk"       : 5,
+    "unleashGauge"  : 0
   },{
     "id"        : 14,
     "name"      : "Training Axe",
@@ -184,7 +188,8 @@
     "lvl"       : 1,
     "desc"      : "An axe given to you to help you start your adventure.",
     "value"     : 40,
-    "atk"       : 5
+    "atk"       : 5,
+    "unleashGauge"  : 0
   },{
     "id"        : 15,
     "name"      : "Training Rifle",
@@ -194,7 +199,8 @@
     "lvl"       : 1,
     "desc"      : "A rifle given to you to help you start your adventure.",
     "value"     : 40,
-    "atk"       : 5
+    "atk"       : 5,
+    "unleashGauge"  : 0
   },{
     "id"        : 16,
     "name"      : "Training Dagger",
@@ -204,7 +210,8 @@
     "lvl"       : 1,
     "desc"      : "A dagger given to you to help you start your adventure.",
     "value"     : 40,
-    "atk"       : 5
+    "atk"       : 5,
+    "unleashGauge"  : 0
   },{
     "id"        : 17,
     "name"      : "Training Knuckles",
@@ -214,7 +221,8 @@
     "lvl"       : 1,
     "desc"      : "A pair of knuckles given to you to help you start your adventure.",
     "value"     : 40,
-    "atk"       : 5
+    "atk"       : 5,
+    "unleashGauge"  : 0
   },{
     "id"        : 18,
     "name"      : "Training Spellbook",
@@ -224,7 +232,8 @@
     "lvl"       : 1,
     "desc"      : "A spellbook given to you to help you start your adventure.",
     "value"     : 40,
-    "atk"       : 5
+    "atk"       : 5,
+    "unleashGauge"  : 0
   },{
     "id"        : 19,
     "name"      : "Training Staff",
@@ -234,7 +243,8 @@
     "lvl"       : 1,
     "desc"      : "A staff given to you to help you start your adventure.",
     "value"     : 40,
-    "atk"       : 5
+    "atk"       : 5,
+    "unleashGauge"  : 0
   },{
     "id"        : 20,
     "name"      : "Throwing Dart",
@@ -278,7 +288,8 @@
     "lvl"       : 3,
     "desc"      : "A longsword made of a common metal. Shoddy, but cheap.",
     "value"     : 100,
-    "atk"       : 10
+    "atk"       : 10,
+    "unleashGauge"  : 0
   },{
     "id"        : 24,
     "name"      : "Wooden Bow",
@@ -288,7 +299,8 @@
     "lvl"       : 3,
     "desc"      : "A bow made from the wood of a common tree. Shoddy, but cheap.",
     "value"     : 100,
-    "atk"       : 10
+    "atk"       : 10,
+    "unleashGauge"  : 0
   },{
     "id"        : 25,
     "name"      : "Copper Shortsword",
@@ -298,7 +310,8 @@
     "lvl"       : 3,
     "desc"      : "A shortsword made of a common metal. Shoddy, but cheap.",
     "value"     : 100,
-    "atk"       : 10
+    "atk"       : 10,
+    "unleashGauge"  : 0
   },{
     "id"        : 26,
     "name"      : "Copper Spear",
@@ -308,7 +321,8 @@
     "lvl"       : 3,
     "desc"      : "A spear made of a common metal. Shoddy, but cheap.",
     "value"     : 100,
-    "atk"       : 10
+    "atk"       : 10,
+    "unleashGauge"  : 0
   },{
     "id"        : 27,
     "name"      : "Copper Axe",
@@ -318,7 +332,8 @@
     "lvl"       : 3,
     "desc"      : "An axe made of a common metal. Shoddy, but cheap.",
     "value"     : 100,
-    "atk"       : 10
+    "atk"       : 10,
+    "unleashGauge"  : 0
   },{
     "id"        : 28,
     "name"      : "Copper Rifle",
@@ -328,7 +343,8 @@
     "lvl"       : 3,
     "desc"      : "A rifle decorated with a common metal. Shoddy, but cheap.",
     "value"     : 100,
-    "atk"       : 10
+    "atk"       : 10,
+    "unleashGauge"  : 0
   },{
     "id"        : 29,
     "name"      : "Copper Dagger",
@@ -338,7 +354,8 @@
     "lvl"       : 3,
     "desc"      : "A dagger made of a common metal. Shoddy, but cheap.",
     "value"     : 100,
-    "atk"       : 10
+    "atk"       : 10,
+    "unleashGauge"  : 0
   },{
     "id"        : 30,
     "name"      : "Copper Knuckles",
@@ -348,7 +365,8 @@
     "lvl"       : 3,
     "desc"      : "A pair of knuckles made of a common metal. Shoddy, but cheap.",
     "value"     : 100,
-    "atk"       : 10
+    "atk"       : 10,
+    "unleashGauge"  : 0
   },{
     "id"        : 31,
     "name"      : "Dusty Spellbook",
@@ -358,7 +376,8 @@
     "lvl"       : 3,
     "desc"      : "A rugged, but useable spellbook. Shoddy, but cheap.",
     "value"     : 100,
-    "atk"       : 10
+    "atk"       : 10,
+    "unleashGauge"  : 0
   },{
     "id"        : 32,
     "name"      : "Wooden Staff",
@@ -368,7 +387,8 @@
     "lvl"       : 3,
     "desc"      : "A staff made from the wood of a common tree. Shoddy, but cheap.",
     "value"     : 100,
-    "atk"       : 10
+    "atk"       : 10,
+    "unleashGauge"  : 0
   },{
     "id"        : 33,
     "name"      : "Copper Crossbow",
@@ -378,7 +398,8 @@
     "lvl"       : 3,
     "desc"      : "A crossbow made of a common metal. Shoddy, but cheap.",
     "value"     : 100,
-    "atk"       : 10
+    "atk"       : 10,
+    "unleashGauge"  : 0
   },{
     "id"        : 34,
     "name"      : "Copper Chain Knife",
@@ -388,6 +409,7 @@
     "lvl"       : 3,
     "desc"      : "A chain knife made of a common metal. Shoddy, but cheap.",
     "value"     : 100,
-    "atk"       : 10
+    "atk"       : 10,
+    "unleashGauge"  : 0
   }
 ]
