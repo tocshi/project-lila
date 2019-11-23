@@ -95,6 +95,14 @@
             }
         },
         {
+            "Key": "03e2b415-14f0-4d85-88ae-8b28179b0fa9",
+            "Value": {
+                "id": "2e4aece4-c84f-4566-9026-232a2f56225c",
+                "resourcePath": "datafiles_yy\\item_data.json.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "05275d8e-4c72-4298-a6ed-4722d0c596d8",
             "Value": {
                 "id": "d791e2ed-352b-4f59-8c86-3ca9005a6e39",

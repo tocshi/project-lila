@@ -8,7 +8,7 @@ global.gui_state = 0;
 global.player = 0;
 
 // Item data parsing function
-itemDataFile = file_text_open_read(working_directory + "/datafiles/item_data.json");
+itemDataFile = file_text_open_read("item_data.json");
 var itemDataStr = "";
 while(!file_text_eof(itemDataFile)){
 	itemDataStr += file_text_read_string(itemDataFile);

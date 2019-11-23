@@ -1,5 +1,5 @@
 event_inherited();
-/*
+
 if(statmap[? "classlvl"] >= 6 && statChange){
 	origatk = basestatmap[? "atk"];
 	origdef = basestatmap[? "def"];
@@ -7,7 +7,7 @@ if(statmap[? "classlvl"] >= 6 && statChange){
 	statmap[? "def"] += origatk*0.3;
 	show_debug_message(statmap[? "atk"]);
 	show_debug_message(statmap[? "def"]);
-}*/
+}
 
 if(shield_charge > 0){
 	shield_charge--;

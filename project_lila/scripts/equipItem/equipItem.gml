@@ -20,6 +20,7 @@ if(target == global.player){
 	
 	if(ds_map_exists(global.itemData[| itemid],"unleashGauge")){
 		target.unleashGauge = ds_map_find_value(global.itemData[| itemid],"unleashGauge");
+		target.essence = 0;
 	}
 	target.statChange = true;
 }
