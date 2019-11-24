@@ -1,5 +1,15 @@
 event_inherited();
 
+if(statmap[? "classlvl"] >= 2 && statChange){
+	statmap[? "fire_def"] += 5;
+	statmap[? "ice_def"] += 5;
+	statmap[? "lightning_def"] += 5;
+	statmap[? "earth_def"] += 5;
+	statmap[? "wind_def"] += 5;
+	statmap[? "light_def"] += 5;
+	statmap[? "dark_def"] += 5;
+}
+
 if(statmap[? "classlvl"] >= 6 && statChange){
 	origatk = basestatmap[? "atk"];
 	origdef = basestatmap[? "def"];

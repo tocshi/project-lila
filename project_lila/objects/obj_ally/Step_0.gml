@@ -14,3 +14,5 @@ if(canMove && !isMoving){
 } else {
 	highRegenThreshold = 0;
 }
+
+statChange = false;

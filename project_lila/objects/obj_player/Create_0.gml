@@ -41,7 +41,6 @@ statmap[? "light_def"]		= 0;
 statmap[? "dark_def"]		= 0;
 
 statmap[? "movespeed"]		= 3;
-statmap[? "base_movespeed"] = 3;
 statmap[? "atkspeed"]		= 2;
 statmap[? "critrate"]		= 0;
 statmap[? "critdmg"]		= 150;

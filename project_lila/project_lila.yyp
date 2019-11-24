@@ -535,6 +535,14 @@
             }
         },
         {
+            "Key": "3f2bf9fb-4c09-481a-8e96-b0e49dae544d",
+            "Value": {
+                "id": "29a2fde9-ccd9-4139-8484-942fa9f5ce57",
+                "resourcePath": "sprites\\spr_buff_knights_shield_plus\\spr_buff_knights_shield_plus.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "40acc53d-293d-43b8-b999-b999a8a8ee4c",
             "Value": {
                 "id": "937a088a-8633-4937-b093-63b2460d1fac",
@@ -611,6 +619,14 @@
             "Value": {
                 "id": "5e5b80da-094c-4654-a01b-50059fb8b4af",
                 "resourcePath": "sprites\\spr_potion_hp_s\\spr_potion_hp_s.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "4ecfa4f5-0453-4f9a-8bf3-7efecfb00ceb",
+            "Value": {
+                "id": "45020c63-a1bd-4ada-beb8-8fb339900195",
+                "resourcePath": "sprites\\spr_buff_aegis_aura\\spr_buff_aegis_aura.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -740,6 +756,14 @@
                 "id": "30ec5fbb-305b-4cd7-bee4-b5bc4b84f0e3",
                 "resourcePath": "objects\\obj_item_inv\\obj_item_inv.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "67935736-51aa-4e53-aa9b-128d3a44f3af",
+            "Value": {
+                "id": "05e41e8f-585e-4051-a950-0439448fd996",
+                "resourcePath": "sprites\\spr_aegis_aura\\spr_aegis_aura.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -975,6 +999,14 @@
             }
         },
         {
+            "Key": "8af799e6-361c-4f2c-b199-0a40753e43f8",
+            "Value": {
+                "id": "f1038881-af73-4060-81d4-b834dee76af6",
+                "resourcePath": "sprites\\spr_aegis_aura_effect\\spr_aegis_aura_effect.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "8c3fe88a-6c84-4595-b02d-b308a4028df3",
             "Value": {
                 "id": "580c2fe2-1c1e-4f2b-b842-8cc916da8446",
@@ -1204,6 +1236,14 @@
                 "id": "8e4270e0-d84a-4681-b056-fb70039008d5",
                 "resourcePath": "views\\ad16bacb-cfd0-430b-a4fb-239b1686ac0e.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "af9cedb7-2c4e-4d24-8073-6dc2726cf4f5",
+            "Value": {
+                "id": "06433add-355c-4a96-b723-38b3d485e1cc",
+                "resourcePath": "objects\\obj_skill_aegis_aura\\obj_skill_aegis_aura.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -1556,6 +1596,14 @@
                 "id": "95b33e42-90fe-4b19-8f64-d1e177f70dfd",
                 "resourcePath": "views\\e32fbad9-4d6b-4b96-8384-ce9e3504d501.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "e3692b42-c63c-46eb-9a0d-346890fe9f32",
+            "Value": {
+                "id": "f6c8b314-8844-4367-a4cf-9ed9783b4500",
+                "resourcePath": "objects\\obj_skill_aegis_aura_effect\\obj_skill_aegis_aura_effect.yy",
+                "resourceType": "GMObject"
             }
         },
         {
