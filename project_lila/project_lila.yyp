@@ -199,6 +199,14 @@
             }
         },
         {
+            "Key": "0e325887-0133-46fc-82d2-17cb4ceb88b9",
+            "Value": {
+                "id": "e31a4137-4914-4d09-b84f-e0305f9dc7c1",
+                "resourcePath": "objects\\obj_item_dragging\\obj_item_dragging.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "0fe0d308-5f76-45af-9824-93a49af3b2fe",
             "Value": {
                 "id": "34156e5d-73f1-4fde-82b6-efd775b50da3",
