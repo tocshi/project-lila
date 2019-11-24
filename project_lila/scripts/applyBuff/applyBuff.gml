@@ -42,7 +42,6 @@ for (var i = 0; i < ds_list_size(target.buff); i++;){
 	}
 }
 
-
 buff_array[0] = time;
 buff_array[1] = isVisible;
 buff_array[2] = name;
@@ -55,5 +54,4 @@ buff_array[8] = desc;
 ds_list_add(target.buff,buff_array);
 
 target.statChange = true;
-
 return true;

@@ -8,7 +8,7 @@ global.gui_state = 0;
 global.player = 0;
 
 // Item data parsing function
-itemDataFile = file_text_open_read(working_directory + "/datafiles/item_data.json");
+itemDataFile = file_text_open_read("item_data.json");
 var itemDataStr = "";
 while(!file_text_eof(itemDataFile)){
 	itemDataStr += file_text_read_string(itemDataFile);
@@ -44,7 +44,8 @@ for(var i = 0; i < 10; i++){
 // Item Hotbar pixel positions
 global.itemBarBox = array_create(10,[0,0]);
 for(var i = 0; i < 10; i++){
-	global.itemBarBox[i] = [2,121 + i*66];
+	global.itemBarBox[i,0] = 2;
+	global.itemBarBox[i,1] = 121 + i*66;
 }
 // Buffbar pixel positions
 global.buffBarBox = array_create(20,[0,0]);

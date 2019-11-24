@@ -1,6 +1,6 @@
 event_inherited();
 
-renderSkills();
+
 
 
 

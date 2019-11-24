@@ -32,5 +32,5 @@ maxcd[5] = room_speed*6;
 maxcd[6] = room_speed*12;
 maxcd[7] = room_speed*16;
 maxcd[8] = room_speed*9;
-maxcd[9] = room_speed*6;
-maxcd[10] = room_speed*9;
+maxcd[9] = room_speed*1;
+maxcd[10] = room_speed*5;

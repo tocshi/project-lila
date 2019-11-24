@@ -3,6 +3,7 @@ atkmap = ds_map_create();
 ds_map_copy(atkmap,obj_player.statmap);
 /*
 atkmap[? "element"]			= "none";
+atkmap[? "dmgmod"]			= 0;
 
 atkmap[? "sourceX"]			= 0;
 atkmap[? "sourceY"]			= 0;
