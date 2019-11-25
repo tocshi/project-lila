@@ -117,4 +117,6 @@ itemBar[0] = 22;
 itemBar[1] = 1;
 global.playerItems[1]+=20;
 global.playerItems[22]++;
+global.playerItems[11]++;
+
 

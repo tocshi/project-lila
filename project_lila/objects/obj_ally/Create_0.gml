@@ -22,7 +22,6 @@ statmap[? "wind_atk"]		= 0;
 statmap[? "light_atk"]		= 0;
 statmap[? "dark_atk"]		= 0;
 
-
 statmap[? "fire_def"]		= 0;
 statmap[? "ice_def"]		= 0;
 statmap[? "lightning_def"]	= 0;
@@ -58,7 +57,6 @@ cd = array_create(21,0);
 maxcd = array_create(21,0);
 atkTimer = 0;
 statChange = true;
-
 
 buff = ds_list_create();
 
