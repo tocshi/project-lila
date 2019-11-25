@@ -831,6 +831,14 @@
             }
         },
         {
+            "Key": "8143fbd4-9efb-42f4-a823-ce56602026f5",
+            "Value": {
+                "id": "ad08c831-7ad3-4f26-8b61-2a26c0d9c031",
+                "resourcePath": "scripts\\findArrayIndex\\findArrayIndex.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "81c3eb72-9665-4239-9eab-6eb83e670945",
             "Value": {
                 "id": "e2f2770f-effc-4513-b67a-40b89490541c",
@@ -1640,8 +1648,9 @@
         "05275d8e-4c72-4298-a6ed-4722d0c596d8",
         "1647db39-0b8d-4dba-9542-5b53b885ece9",
         "87296a4a-cc16-4143-b59b-643a5bcca0b1",
-        "01c10616-7d68-4ae1-b808-eba59538b196",
-        "454cdb76-1bb0-49cd-ac5f-cdc5c38c5413"
+        "8143fbd4-9efb-42f4-a823-ce56602026f5",
+        "454cdb76-1bb0-49cd-ac5f-cdc5c38c5413",
+        "01c10616-7d68-4ae1-b808-eba59538b196"
     ],
     "tutorial": ""
 }

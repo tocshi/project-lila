@@ -6,6 +6,14 @@ if(target.equips[getEquipSlot(item)] == 0){exit;}
 
 if(target == global.player){
 	global.playerItems[item]++;
+	if (global.playerItems[item] <= 1) {
+		for (var i=0; i < array_length_1d(global.playerInv); i++) {
+			if (global.playerInv[i] == 0) {
+				global.playerInv[i] = item;
+				break;
+			}
+		}
+	}
 	global.player.equips[getEquipSlot(item)] = 0;
 
 	for(var i = 0; i < ds_list_size(global.equipStats); i++){
