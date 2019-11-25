@@ -10,6 +10,9 @@ if(target.equips[getEquipSlot(itemid)] > 0){
 
 if(target == global.player){
 	global.playerItems[itemid]--;
+	if (global.playerItems[itemid] <= 0) {
+		global.playerInv[findArrayIndex(global.playerInv, itemid)] = 0;
+	}
 	global.player.equips[getEquipSlot(itemid)] = itemid;
 	
 	for(var i = 0; i < ds_list_size(global.equipStats); i++){

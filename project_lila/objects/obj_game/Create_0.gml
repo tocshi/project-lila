@@ -20,7 +20,7 @@ var itemDataJson = json_decode(itemDataStr);
 global.itemData = ds_map_find_value(itemDataJson, "default");
 
 // Player inventory array and item quantity array
-global.playerInv = array_create(100,0);
+global.playerInv = array_create(100, 0);
 global.playerItems = array_create(ds_list_size(global.itemData),0);
 
 // Equipment pixel positions
