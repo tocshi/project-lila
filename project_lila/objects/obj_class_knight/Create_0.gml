@@ -3,8 +3,6 @@ event_inherited();
 statmap[? "class"] = "Knight";
 
 skill_sprite = array_create(10, spr_empty);
-iter0 = 0;
-empowered_buff = false;
 shield_charge = 0;
 scList = ds_list_create();
 target = noone;

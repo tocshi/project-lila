@@ -1,18 +1,28 @@
 {
-    "id": "55daa99a-d7d1-4c82-b196-5ac789b18888",
+    "id": "e8e8ecda-792e-422d-8580-f1fc22c1b7b6",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "obj_skill_empowered_strike",
+    "name": "obj_basicattack_bow",
     "eventList": [
         {
-            "id": "924efcd6-2701-414a-ab78-d1bc368f2d88",
+            "id": "bbd43b2d-83dd-4f61-8281-4d87195fa5c6",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 0,
-            "m_owner": "55daa99a-d7d1-4c82-b196-5ac789b18888"
+            "m_owner": "e8e8ecda-792e-422d-8580-f1fc22c1b7b6"
+        },
+        {
+            "id": "5e2ef2c8-e482-41ee-b96e-f33e74c88044",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 3,
+            "m_owner": "e8e8ecda-792e-422d-8580-f1fc22c1b7b6"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",

@@ -8,7 +8,7 @@ atkmap[? "isProjectile"]	= true;
 atkmap[? "isPiercing"]		= false;
 atkmap[? "isSingleTarget"]	= true;
 
-speed = 10;
+speed = 15;
 image_alpha = 0;
 
 target = noone;
