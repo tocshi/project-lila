@@ -5,7 +5,9 @@ if(canMove && !isMoving){
 	highRegenThreshold = 0;
 }
 
-if(global.pause){exit;}
+if(global.pause){
+	isMoving = false;
+	exit;}
 
 // Standard Movement
 if(mouse_check_button_pressed(mb_right) && canMove){
@@ -88,4 +90,17 @@ if(keyboard_check(skill_button[0]) && unleashGauge > 0 && essence >= unleashGaug
 		essence = 0;
 		canMove = false;
 	}
+}
+
+// Basic Attack
+if(mouse_check_button_pressed(mb_left) && (atkTimer <= 0) && canAttack){
+	
+	speed = 0;
+	isMoving = false;
+	//canMove = false;
+	canAttack = false;
+	canUseSkill = false;
+	atkTimer = room_speed/statmap[? "atkspeed"];
+	use_basic_attack(self,equips[0],100);
+
 }

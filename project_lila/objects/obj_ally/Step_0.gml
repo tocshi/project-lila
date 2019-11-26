@@ -15,4 +15,3 @@ if(canMove && !isMoving){
 	highRegenThreshold = 0;
 }
 
-statChange = false;

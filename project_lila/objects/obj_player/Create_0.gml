@@ -42,7 +42,7 @@ statmap[? "dark_def"]		= 0;
 
 statmap[? "movespeed"]		= 3;
 statmap[? "atkspeed"]		= 2;
-statmap[? "critrate"]		= 0;
+statmap[? "critrate"]		= 25;
 statmap[? "critdmg"]		= 150;
 statmap[? "finaldmg"]		= 100;
 statmap[? "finalshld"]		= 0;
@@ -117,4 +117,6 @@ itemBar[0] = 22;
 itemBar[1] = 1;
 global.playerItems[1]+=20;
 global.playerItems[22]++;
+global.playerItems[11]++;
+
 

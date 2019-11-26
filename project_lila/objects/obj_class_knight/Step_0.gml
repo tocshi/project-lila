@@ -1,37 +1,6 @@
 event_inherited();
 if(global.pause){exit;}
 
-if(mouse_check_button_pressed(mb_left) && (atkTimer <= 0) && canAttack){
-	
-	speed = 0;
-	isMoving = false;
-	canMove = false;
-	canAttack = false;
-	canUseSkill = false;
-	atkTimer = room_speed/statmap[? "atkspeed"];
-	
-	var basic_attack = instance_create_layer(x,y,"Attacks",obj_basicattack_longsword);
-	iter0++;
-	basic_attack.iter0 = self.iter0;
-	
-	ds_map_copy(basic_attack.atkmap,statmap);
-	basic_attack.atkmap[? "dmgmod"]			= 100;
-	if(empowered_buff){
-		basic_attack.atkmap[? "dmgmod"]		= 250;
-		removeBuff(self.id,"Empowered",false);
-	}
-	basic_attack.atkmap[? "element"]		= "none";
-	
-	basic_attack.atkmap[? "sourceX"]		= x;
-	basic_attack.atkmap[? "sourceY"]		= y;
-	basic_attack.atkmap[? "flinch_amount"]	= 4;
-	
-	basic_attack.atkmap[? "isBasicAttack"]	= true;
-	basic_attack.atkmap[? "isSingleHit"]	= true;
-
-}
-
-
 if(keyboard_check_pressed(skill_button[1]) && (cd[1] <= 0) && statmap[? "mp"] >= 20){
 	
 	statmap[? "mp"] -= 20;
@@ -39,12 +8,8 @@ if(keyboard_check_pressed(skill_button[1]) && (cd[1] <= 0) && statmap[? "mp"] >=
 	effect.vspeed = -1;
 	cd[1] = maxcd[1];
 	
-	var skillobj = instance_create_layer(x,y,"Attacks",obj_skill_empowered_strike);
-	skillobj.atkmap[? "isBuff"] = true;
-	
 	applyBuff(self.id,5*room_speed,true,"Empowered",buff_empowered,false,-1,1,spr_buff_empowered,"Lorem Ipsum");
 
-	empowered_buff = true;
 	statChange = true;
 }
 
