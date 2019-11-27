@@ -399,6 +399,22 @@
             }
         },
         {
+            "Key": "26cf280e-dc56-400e-88de-47b834fe7617",
+            "Value": {
+                "id": "24cea6e1-962f-43f0-a5ca-f4acef4001c6",
+                "resourcePath": "sprites\\spr_buff_move_like_wind\\spr_buff_move_like_wind.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "27f16c15-a9e7-4b49-b0f0-9b9165473f67",
+            "Value": {
+                "id": "9ea5ab82-7b5c-47c0-ade1-d7060bdfad1c",
+                "resourcePath": "objects\\obj_skill_move_like_wind\\obj_skill_move_like_wind.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "27f55a91-28a5-44cf-898e-3012a9b77063",
             "Value": {
                 "id": "76086353-ae96-40b1-8c26-a4803603708f",
@@ -468,6 +484,14 @@
                 "id": "5989c6ec-1e1b-49f1-9922-339fc564eed3",
                 "resourcePath": "sprites\\spr_skill_E\\spr_skill_E.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "3284ab06-060f-472b-b0f6-b989b249cb8e",
+            "Value": {
+                "id": "9e052b4a-a7c6-4b43-a393-445da54b441b",
+                "resourcePath": "objects\\obj_skill_spread_shot\\obj_skill_spread_shot.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -1335,6 +1359,14 @@
             }
         },
         {
+            "Key": "b7e6da6a-b126-4384-be58-8f227f01184e",
+            "Value": {
+                "id": "8faee552-5876-4673-b0d8-8753c4703293",
+                "resourcePath": "objects\\obj_class_archer\\obj_class_archer.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "b89501e1-b341-4987-a991-0b23309509d3",
             "Value": {
                 "id": "adfc591a-9879-447c-89ba-c5d157b28f24",
@@ -1748,6 +1780,14 @@
                 "id": "efc856d0-2953-4a22-b4bd-a9d8af7f2b20",
                 "resourcePath": "objects\\obj_class_knight\\obj_class_knight.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "f22f6232-4b53-4a0a-b143-8d74c5672b1c",
+            "Value": {
+                "id": "696d2494-cde8-4360-8ded-9b7285c6380f",
+                "resourcePath": "sprites\\spr_part_move_like_wind\\spr_part_move_like_wind.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

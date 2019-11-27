@@ -108,7 +108,7 @@ skill_button[20]	= ord("0");
 
 //debug
 infmp = false;
-equips[0] = 10;
+equips[0] = 11;
 equips[1] = 6;
 equips[4] = 7;
 equips[7] = 8;
@@ -117,6 +117,6 @@ itemBar[0] = 22;
 itemBar[1] = 1;
 global.playerItems[1]+=20;
 global.playerItems[22]++;
-global.playerItems[11]++;
+global.playerItems[10]++;
 
 

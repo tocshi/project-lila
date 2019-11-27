@@ -43,6 +43,17 @@ switch(buffName){
 	}
 	break;
 	
+	case "Move Like Wind":
+	if(current_time%14 = 0){
+		instance_create_layer(x,y+32,"Assets_1",obj_skill_move_like_wind);
+	}
+	if(statChange){
+		statmap[? "movespeed"]+=4;
+		statmap[? "movespeed"]+=basestatmap[? "atkspeed"];
+		statmap[? "atkspeed"]+=0.25*basestatmap[? "movespeed"];
+	}
+	break;
+	
 	case "Unleash":
 	if(statChange){statmap[? "finalshld"]+=100;}
 	break;

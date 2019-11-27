@@ -1,5 +1,5 @@
 // Double Mana Regen when not doing anything for 90 frames
-if(canMove && !isMoving){
+if(canMove && !isMoving && !atkTimer){
 	highRegenThreshold++;
 } else {
 	highRegenThreshold = 0;
@@ -29,7 +29,7 @@ if(point_distance(x, y, destX, destY) < statmap[? "movespeed"] && canMove){
 }
 
 // Use Items On Hotbar
-for(var i = 0; i < 10; i++){
+for(var i = 0; i < 10; ++i){
 	if(keyboard_check_pressed(skill_button[i+11])){
 		if(itemBar[i] > 0){
 			if(ds_map_find_value(global.itemData[| itemBar[i]], "type") == "equippable"){
@@ -48,10 +48,10 @@ for(var i = 0; i < 10; i++){
 
 //DEBUG COOLDOWN RESET AND INFINITE MP AND EQUIP
 if(keyboard_check_pressed(vk_tab)){
-	for (var i = 0; i < array_length_1d(cd); i++){
+	for (var i = 0; i < array_length_1d(cd); ++i){
 		if(cd[i] > 0){cd[i] = 1;}
 	}
-	for (var i = 0; i < array_length_1d(itemcd); i++){
+	for (var i = 0; i < array_length_1d(itemcd); ++i){
 		if(itemcd[i] > 0){itemcd[i] = 1;}
 	}
 }

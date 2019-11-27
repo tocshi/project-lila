@@ -50,8 +50,15 @@ if(keyboard_check_pressed(skill_button[4]) && (cd[4] <= 0) && statmap[? "mp"] >=
 	canUseSkill = false;
 	isMoving = false;
 	highRegenThreshold = 0;
-	var skillobj = instance_create_layer(x,y,"Attacks",obj_skill_roundslash);
-	skillobj.user  = self.id;
+	with(instance_create_layer(x,y,"Attacks",obj_skill_roundslash)){
+		user = other.id;
+		atkmap[? "element"] = other.atkelement;
+		sprite = make_sprite_from_item(user.equips[0]);
+		sprite_index = sprite;
+		enemies = collision_circle_list(x, y, sprite_width, obj_enemy, false, true, enemylist, false);
+		atkmap[? "dmgmod"] = 130 + 10*enemies;
+	}
+	
 
 }
 

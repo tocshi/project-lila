@@ -8,12 +8,7 @@ if(itemid <= 0){exit;}
 if(!variable_instance_exists(user, "iter")){iter = 0;}
 
 // resolve player weapon element
-if(ds_map_exists(global.itemData[| itemid],"element")){
-	var element = ds_map_find_value(global.itemData[| itemid],"element");
-}
-else {
-	var element = "none";
-}
+var element = user.atkelement;
 
 // resolve player buffs
 if(hasBuff(user,"Empowered")){
@@ -61,7 +56,7 @@ switch(itemid){
 		
 		anchor = argument0;
 		image_angle = point_direction(x,y,mouse_x,mouse_y);
-		skill = room_speed/atkmap[? "atkspeed"];
+		skill = round(room_speed/user.statmap[? "atkspeed"]);
 		image_angle-=45;
 	}
 	with(instance_create_layer(x,y,"Attacks",obj_basicattack_arrow)){
@@ -75,6 +70,8 @@ switch(itemid){
 		atkmap[? "isPiercing"] = false;
 		
 		skill = atkmap[? "range"]/speed;
+		direction = point_direction(x,y,mouse_x,mouse_y) + random_range(-2,2);
+		image_angle = direction;
 	}
 	break;
 	

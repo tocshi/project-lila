@@ -4,7 +4,7 @@ var itemid = argument1;
 if(hasBuff(user,"Potion Sickness")){return false;}
 
 var stacks = 0;
-for (var i = 0; i < ds_list_size(user.buff); i++;){
+for (var i = 0; i < ds_list_size(user.buff); ++i;){
 	var buff_array = ds_list_find_value(user.buff,i);
 	if(buff_array[2] == "Saturated"){
 		stacks = buff_array[5];

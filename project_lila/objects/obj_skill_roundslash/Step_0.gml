@@ -7,6 +7,7 @@ if(skill >= 0){
 	if(skill == 0){
 		ds_map_destroy(atkmap);
 		instance_destroy();
+		sprite_delete(sprite);
 		exit;
 		}
 	image_angle -= 24;

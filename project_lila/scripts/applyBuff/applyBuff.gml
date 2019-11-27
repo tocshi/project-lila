@@ -15,7 +15,7 @@ var buff_array = array_create(9,false);
 
 // Checks if an existing buff of the same name exists, and if it does
 // it will do the following actions:
-for (var i = 0; i < ds_list_size(target.buff); i++;){
+for (var i = 0; i < ds_list_size(target.buff); ++i;){
 
 	var e_buff_array = ds_list_find_value(target.buff,i);
 	if((e_buff_array[2] == name)){

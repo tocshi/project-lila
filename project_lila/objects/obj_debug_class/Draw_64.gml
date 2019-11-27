@@ -2,7 +2,7 @@ event_inherited();
 
 hpmpend = 440;
 
-for(i = 0; i < array_length_1d(skill_sprite); i++){
+for(i = 0; i < array_length_1d(skill_sprite); ++i){
 	var width = sprite_get_width(skill_sprite[i]);
 	var height = sprite_get_height(skill_sprite[i]);
 	draw_sprite(skill_sprite[i],0,hpmpend+(i*80),20);

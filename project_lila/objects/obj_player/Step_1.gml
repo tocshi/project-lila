@@ -3,17 +3,24 @@ if(!equipApplied){applyEquips(self.id);}
 
 if(statChange){
 	recalcStats(self.id);
+	// Determine current atk element
+	if(ds_map_exists(global.itemData[| equips[0]],"element")){
+		atkelement = ds_map_find_value(global.itemData[| equips[0]],"element");
+	}
+	else {
+		atkelement = "none";
+	}
 }
 
 //TIMERS
 // Skill Cooldowns
-for (var i = 0; i < array_length_1d(cd); i++){
+for (var i = 0; i < array_length_1d(cd); ++i){
 	if(cd[i] > 0){
 		cd[i]--;}
 }
 if(cd[0] <= 0 && essence < 0){essence = 0;}
 // Item Cooldowns
-for (var i = 0; i < array_length_1d(itemcd); i++){
+for (var i = 0; i < array_length_1d(itemcd); ++i){
 	if(itemcd[i] > 0){itemcd[i]--;}
 }
 // Buffs
