@@ -37,6 +37,8 @@ statmap[? "finaldmg"]		= 100;
 statmap[? "finalshld"]		= 0;
 statmap[? "blkmod"]			= 50;
 
+statmap[? "essence_rate"]	= 30;
+
 ds_map_copy(basestatmap, statmap);
 
 canKnockback	= false;

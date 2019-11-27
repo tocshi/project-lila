@@ -1,15 +1,14 @@
 event_inherited();
 if(global.pause){exit;}
 
-if(mouse_check_button_pressed(mb_left) && (cd[0] <= 0) && canAttack){
+if(mouse_check_button_pressed(mb_left) && (atkTimer <= 0) && canAttack){
 	
 	speed = 0;
 	isMoving = false;
 	canMove = false;
 	canAttack = false;
 	canUseSkill = false;
-	cd[0] = room_speed/statmap[? "atkspeed"];
-	atkTimer = cd[0];
+	atkTimer = room_speed/statmap[? "atkspeed"];
 	
 	var basic_attack = instance_create_layer(x,y,"Attacks",obj_basicattack_longsword);
 	iter0++;
@@ -50,8 +49,6 @@ if(keyboard_check_pressed(skill_button[1]) && (cd[1] <= 0) && statmap[? "mp"] >=
 }
 
 if(statmap[? "classlvl"] < 2){exit;}
-
-
 
 if(statmap[? "classlvl"] < 3){exit;}
 if(keyboard_check_pressed(skill_button[3]) && (cd[3] <= 0) && statmap[? "mp"] >= 30 && canUseSkill){
@@ -194,7 +191,21 @@ if(keyboard_check_pressed(skill_button[8]) && (cd[8] <= 0) && statmap[? "mp"] >=
 }
 
 if(statmap[? "classlvl"] < 9){exit;}
-
+if(keyboard_check_pressed(skill_button[9]) && (cd[9] <= 0) && canUseSkill){
+	
+	with(obj_skill_aegis_aura){
+		if(user == other.id){
+		instance_destroy();
+		exit;
+		}
+	}
+	with(instance_create_layer(x,y,"Ground",obj_skill_aegis_aura)){
+		user = other.id;
+	}
+	cd[9] = maxcd[9];
+}
 
 if(statmap[? "classlvl"] < 10){exit;}
-
+if(isBlocking && cd[10] <= 0){
+	applyBuff(self.id,99*room_speed,true,"Knight's Shield: Enhanced",buff_generic,false,-1,0,spr_buff_knights_shield_plus,"Lorem Ipsum");
+}

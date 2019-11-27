@@ -26,10 +26,31 @@ if(point_distance(x, y, destX, destY) < statmap[? "movespeed"] && canMove){
 		isMoving = false;
 }
 
+// Use Items On Hotbar
+for(var i = 0; i < 10; i++){
+	if(keyboard_check_pressed(skill_button[i+11])){
+		if(itemBar[i] > 0){
+			if(ds_map_find_value(global.itemData[| itemBar[i]], "type") == "equippable"){
+				if(isInArray(equips,itemBar[i])){
+					useItem(self.id,itemBar[i]);
+				}
+				else{
+					// For future sounds
+					continue;
+				}
+			}
+			else{useItem(self.id,itemBar[i]);}
+		}
+	}
+}
+
 //DEBUG COOLDOWN RESET AND INFINITE MP AND EQUIP
 if(keyboard_check_pressed(vk_tab)){
 	for (var i = 0; i < array_length_1d(cd); i++){
 		if(cd[i] > 0){cd[i] = 1;}
+	}
+	for (var i = 0; i < array_length_1d(itemcd); i++){
+		if(itemcd[i] > 0){itemcd[i] = 1;}
 	}
 }
 
@@ -44,25 +65,27 @@ if(keyboard_check_pressed(vk_shift)){
 	}	
 	recalcStats(self.id);
 }
-/*
-//DEBUG EQUIP/UNEQUIP
-if(keyboard_check_pressed(ord("1"))){
-	if(debugequip = 1){
-		unequipItem(self.id,10);
-		unequipItem(self.id,6);
-		unequipItem(self.id,7);
-		unequipItem(self.id,8);
-		unequipItem(self.id,9);
-		debugequip = 0;
+
+statChange = false;
+
+// Unleash Mode
+if(keyboard_check(skill_button[0]) && unleashGauge > 0 && essence >= unleashGauge && atkTimer <= 0){
+	
+	var effect = instance_create_layer(x,y,"Assets_1",obj_debug_indicator);
+	effect.image_alpha = 0.3;
+	effect.direction = irandom_range(0,359);
+	effect.speed = 1;
+	
+	atkTimer++;
+	if(mouse_check_button_pressed(mb_left)){
+		var modifier = essence/unleashGauge;
+		use_unleash_skill(modifier);
+		essence = -1;
+		cd[0] = unleashGauge*room_speed;
 	}
-	else{
-		equipItem(self.id,10);
-		equipItem(self.id,6);
-		equipItem(self.id,7);
-		equipItem(self.id,8);
-		equipItem(self.id,9);
-		debugequip = 1;
+	if(mouse_check_button_pressed(mb_right)){
+		statmap[? "hp"] += (statmap[? "maxhp"]/100)*essence;
+		essence = 0;
+		canMove = false;
 	}
 }
-*/
-statChange = false;

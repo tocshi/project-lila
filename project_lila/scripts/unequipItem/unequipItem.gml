@@ -1,25 +1,33 @@
 var target = argument0;
-var item = argument1;
-show_debug_message("Slot: " + string(getEquipSlot(item)));
-if(getEquipSlot(item) == -1){exit;}
-if(target.equips[getEquipSlot(item)] == 0){exit;}
+var itemid = argument1;
+show_debug_message("Slot: " + string(getEquipSlot(itemid)));
+if(getEquipSlot(itemid) == -1){exit;}
+if(target.equips[getEquipSlot(itemid)] == 0){exit;}
 
 if(target == global.player){
-	global.playerItems[item]++;
-	if (global.playerItems[item] <= 1) {
+
+	global.playerItems[itemid]++;
+	if (global.playerItems[itemid] <= 1) {
 		for (var i=0; i < array_length_1d(global.playerInv); i++) {
 			if (global.playerInv[i] == 0) {
-				global.playerInv[i] = item;
+				global.playerInv[i] = itemid;
 				break;
 			}
 		}
 	}
-	global.player.equips[getEquipSlot(item)] = 0;
+	global.player.equips[getEquipSlot(itemid)] = 0;
+
 
 	for(var i = 0; i < ds_list_size(global.equipStats); i++){
-		if(!is_undefined(ds_map_find_value(global.itemData[| item], global.equipStats[| i]))){
-			target.basestatmap[? global.equipStats[| i]] -= ds_map_find_value(global.itemData[| item], global.equipStats[| i]);
+		if(!is_undefined(ds_map_find_value(global.itemData[| itemid], global.equipStats[| i]))){
+			target.basestatmap[? global.equipStats[| i]] -= ds_map_find_value(global.itemData[| itemid], global.equipStats[| i]);
 		}
 	}
+	
+	if(ds_map_exists(global.itemData[| itemid],"unleashGauge")){
+		target.unleashGauge = 0;
+	}
+	
 	target.statChange = true;
 }
+updateGUI();

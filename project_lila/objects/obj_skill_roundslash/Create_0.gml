@@ -1,6 +1,7 @@
 event_inherited();
 
-skill = 30;
+image_angle = point_direction(x,y,mouse_x,mouse_y)+90;
+skill = 25;
 user = 0;
 enemylist = ds_list_create();
 enemies = 0;

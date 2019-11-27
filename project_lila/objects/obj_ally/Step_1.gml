@@ -5,6 +5,10 @@ if (statmap[? "hp"] <= 0 && !isDead){
 	alarm[0] = 30;
 }
 
+if(statChange){
+	recalcStats(self.id);
+}
+
 //TIMERS
 for (var i = 0; i < array_length_1d(cd); i++){
 	if(cd[i] > 0){cd[i]--;}

@@ -8,8 +8,10 @@ if(statChange){
 //TIMERS
 // Skill Cooldowns
 for (var i = 0; i < array_length_1d(cd); i++){
-	if(cd[i] > 0){cd[i]--;}
+	if(cd[i] > 0){
+		cd[i]--;}
 }
+if(cd[0] <= 0 && essence < 0){essence = 0;}
 // Item Cooldowns
 for (var i = 0; i < array_length_1d(itemcd); i++){
 	if(itemcd[i] > 0){itemcd[i]--;}
@@ -59,6 +61,7 @@ statmap[? "movespeed"] = clamp(statmap[? "movespeed"],0,30);
 statmap[? "hp"] = clamp(statmap[? "hp"],0,statmap[? "maxhp"]);
 statmap[? "mp"] = clamp(statmap[? "mp"],0,statmap[? "maxmp"]);
 statmap[? "finalshld"] = clamp(statmap[? "finalshld"],-100,100);
+essence = clamp(essence,-1,unleashGauge*3);
 
 
 
