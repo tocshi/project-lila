@@ -1,6 +1,6 @@
 //Stats
 atkmap = ds_map_create();
-ds_map_copy(atkmap,obj_player.statmap);
+ds_map_copy(atkmap,global.player.statmap);
 /*
 atkmap[? "element"]			= "none";
 atkmap[? "dmgmod"]			= 0;

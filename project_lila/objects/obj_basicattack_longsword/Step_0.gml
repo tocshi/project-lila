@@ -4,6 +4,7 @@ if((skill >= 0) && (iter % 2 == 0)){
 	skill--;
 	if(skill == 0){
 		ds_map_destroy(atkmap);
+		atkmap = -1;
 		instance_destroy();
 		sprite_delete(sprite_index);
 		exit;
@@ -15,6 +16,7 @@ if((skill >= 0) && (iter % 2 == 1)){
 	skill--;
 	if(skill == 0){
 		ds_map_destroy(atkmap);
+		atkmap = -1;
 		instance_destroy();
 		sprite_delete(sprite_index);
 		exit;

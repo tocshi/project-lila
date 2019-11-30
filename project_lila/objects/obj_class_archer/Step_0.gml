@@ -101,6 +101,7 @@ if(keyboard_check_pressed(skill_button[6]) && (cd[6] <= 0) && statmap[? "mp"] >=
 	
 	
 	with(instance_create_layer(mouse_x,mouse_y,"Attacks",obj_skill_arrow_rain)){
+		user = other.id;
 		ds_map_copy(atkmap,other.statmap);
 		atkmap[? "dmgmod"]		= 60;
 		atkmap[? "element"]		= other.atkelement;

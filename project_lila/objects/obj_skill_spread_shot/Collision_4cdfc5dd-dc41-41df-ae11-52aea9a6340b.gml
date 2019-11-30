@@ -2,6 +2,7 @@ if(ds_list_find_index(user.s_shot_hitList,other.id) == -1){
 	ds_list_add(user.s_shot_hitList,other.id);
 	
 	dmgCalc(other.id);
+	summon_stormpiercer_at_rate(user,other.id,20);
 	
 	if(ds_map_find_value(global.itemData[| global.player.equips[0]],"unleashGauge") > 0 && global.player.essence >= 0){
 		if(random_range(0,100) < other.statmap[? "essence_rate"]){

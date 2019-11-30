@@ -1,5 +1,5 @@
 event_inherited();
-user = 0;
+user = noone;
 
 direction = point_direction(x,y,mouse_x,mouse_y);
 image_angle = direction;

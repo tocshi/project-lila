@@ -263,6 +263,14 @@
             }
         },
         {
+            "Key": "165c26a6-91f4-43c8-8f35-b965acd4479c",
+            "Value": {
+                "id": "4a6e4809-815f-4136-a7dc-b5ffed7053f5",
+                "resourcePath": "views\\165c26a6-91f4-43c8-8f35-b965acd4479c.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "169f55a4-3e9c-40b9-ad6c-1dc8d2b8ee8c",
             "Value": {
                 "id": "d77ca122-6721-4c32-83cf-9155bc809cb3",
@@ -615,6 +623,14 @@
             }
         },
         {
+            "Key": "41da96ef-1d80-4db2-b5d3-5d0753fd0858",
+            "Value": {
+                "id": "ce5c4fb9-0f7b-4e21-9c3a-4da60563d4fe",
+                "resourcePath": "scripts\\summon_stormpiercer_at_rate\\summon_stormpiercer_at_rate.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "428c407f-5b79-473e-a3ee-864bab79103d",
             "Value": {
                 "id": "fa6aa6e6-2dc6-45c1-a35a-8a5f885627e5",
@@ -667,6 +683,14 @@
             "Value": {
                 "id": "5e5b80da-094c-4654-a01b-50059fb8b4af",
                 "resourcePath": "sprites\\spr_potion_hp_s\\spr_potion_hp_s.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "4d45e634-90c6-4384-8016-134ed904aceb",
+            "Value": {
+                "id": "b8e67790-c2cf-458d-8efc-a5669631d65d",
+                "resourcePath": "sprites\\spr_stormpiercer\\spr_stormpiercer.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1567,6 +1591,14 @@
             }
         },
         {
+            "Key": "d6ee5dc4-bc50-4c59-9c90-17288b06fdd7",
+            "Value": {
+                "id": "036353b9-07ec-45df-a616-6f49a1ba48c0",
+                "resourcePath": "objects\\obj_skill_stormpiercer\\obj_skill_stormpiercer.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "d784e273-cb94-4612-9126-e9d532adb3af",
             "Value": {
                 "id": "292ad5b1-f709-40f4-8439-41dcd5a0e863",
@@ -1951,6 +1983,7 @@
         "8e92b01e-ad1a-4504-81ce-0de0f821b9a9",
         "a375b2dd-67ef-48c2-b77d-3d9890977de0",
         "1b4515af-9d2e-4ee8-a6e4-7dc754d06afd",
+        "41da96ef-1d80-4db2-b5d3-5d0753fd0858",
         "36c513a5-d959-430a-a52b-c18569d49c0b",
         "dc789532-e5d9-4952-bd1b-c850b7589847",
         "a4736812-0af2-454e-b514-b2a70495c0f4",
