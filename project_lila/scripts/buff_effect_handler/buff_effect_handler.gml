@@ -54,6 +54,12 @@ switch(buffName){
 	}
 	break;
 	
+	case "Unyielding":
+	if(statChange){
+		statmap[? "critrate"]+=2*get_buff_stacks(self,"Unyielding Barrage");
+	}
+	break;
+	
 	case "Unleash":
 	if(statChange){statmap[? "finalshld"]+=100;}
 	break;

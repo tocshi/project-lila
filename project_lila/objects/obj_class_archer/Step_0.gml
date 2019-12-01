@@ -31,6 +31,7 @@ if(keyboard_check_pressed(skill_button[1]) && (cd[1] <= 0) && statmap[? "mp"] >=
 	canUseSkill = false;
 	isMoving = false;
 	alarm[1] = 10;
+	proc_unyielding_buff();
 }
 
 if(statmap[? "classlvl"] < 2){exit;}
@@ -45,6 +46,7 @@ if(keyboard_check_pressed(skill_button[2]) && (cd[2] <= 0) && statmap[? "mp"] >=
 	applyBuff(self.id,3*room_speed,true,"Move Like Wind",buff_generic,false,-1,0,spr_buff_move_like_wind,"Lorem Ipsum");
 
 	statChange = true;
+	proc_unyielding_buff();
 }
 
 
@@ -68,11 +70,24 @@ if(keyboard_check_pressed(skill_button[3]) && (cd[3] <= 0) && statmap[? "mp"] >=
 	isMoving = false;
 	t_shot_remaining = 2;
 	alarm[3] = 1;
+	proc_unyielding_buff();
 }
 
 if(statmap[? "classlvl"] < 4){exit;}
+if(keyboard_check_pressed(skill_button[4]) && (cd[4] <= 0) && canUseSkill){
 
-
+	cd[4] = maxcd[4];
+	atkTimer = 48;
+	canAttack = false;
+	canUseSkill = false;
+	with(instance_create_layer(x,y,"Attacks",obj_skill_mantle_of_titania)){
+		user = other.id;
+		ds_map_copy(atkmap,other.statmap);
+		atkmap[? "dmgmod"]		= 15;
+		atkmap[? "element"]		= "wind";
+	}	
+	proc_unyielding_buff();
+}
 
 if(statmap[? "classlvl"] < 5){exit;}
 if(keyboard_check_pressed(skill_button[5]) && (cd[5] <= 0) && statmap[? "mp"] >= 45 && canUseSkill){
@@ -83,6 +98,7 @@ if(keyboard_check_pressed(skill_button[5]) && (cd[5] <= 0) && statmap[? "mp"] >=
 	isMoving = false;
 	highRegenThreshold = 0;
 	instance_create_layer(mouse_x,mouse_y,"Attacks",obj_skill_gate_of_wind);
+	proc_unyielding_buff();
 }
 
 
@@ -106,6 +122,7 @@ if(keyboard_check_pressed(skill_button[6]) && (cd[6] <= 0) && statmap[? "mp"] >=
 		atkmap[? "dmgmod"]		= 60;
 		atkmap[? "element"]		= other.atkelement;
 	}	
+	proc_unyielding_buff();
 }
 
 
