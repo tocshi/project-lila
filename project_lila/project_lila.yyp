@@ -935,6 +935,14 @@
             }
         },
         {
+            "Key": "74afe2f9-57ae-4bd7-a2e6-834718b9218c",
+            "Value": {
+                "id": "8a949cf3-6e4b-4926-8ec5-535dfb034521",
+                "resourcePath": "objects\\obj_skill_tornado_shot\\obj_skill_tornado_shot.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "74bf0d9b-cc3b-44bb-9a9a-4e42b55ce99a",
             "Value": {
                 "id": "783b8fc3-6c5d-495c-922b-5c81da17a691",
@@ -1436,6 +1444,14 @@
                 "id": "67cd7dca-a233-4000-b0a1-76ee4060391b",
                 "resourcePath": "objects\\obj_debug_chaser\\obj_debug_chaser.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "bb742c81-8968-4f8e-b129-459f5802e411",
+            "Value": {
+                "id": "9d2aefb6-f2a8-4cad-881a-85c04a014c42",
+                "resourcePath": "sprites\\spr_tornado_shot\\spr_tornado_shot.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

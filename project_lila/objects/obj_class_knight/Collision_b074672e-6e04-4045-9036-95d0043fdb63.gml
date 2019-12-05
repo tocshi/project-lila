@@ -1,5 +1,5 @@
 if(shield_charge){
-	//orig_dir = other.direction;
+	//turn into a shield attack obj
 	
 	if(ds_list_find_index(scList,other.id) == -1){
 		ds_list_add(scList,other.id);

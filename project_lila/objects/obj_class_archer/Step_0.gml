@@ -135,7 +135,24 @@ if(statmap[? "classlvl"] < 8){exit;}
 
 
 if(statmap[? "classlvl"] < 9){exit;}
+if(keyboard_check_pressed(skill_button[9]) && (cd[9] <= 0) && statmap[? "mp"] >= 40 && canUseSkill){
 
+	cd[9] = maxcd[9];
+	atkTimer = 30;
+	canAttack = false;
+	canMove = false;
+	isMoving = false;
+	canUseSkill = false;
+	with(instance_create_layer(x,y,"Attacks",obj_skill_tornado_shot)){
+		user = other.id;
+		ds_map_copy(atkmap,other.statmap);
+		atkmap[? "dmgmod"]		= 40;
+		atkmap[? "element"]		= "wind";
+		atkmap[? "isProjectile"] = true;
+		atkmap[? "isPiercing"] = true;
+	}	
+	proc_unyielding_buff();
+}
 
 
 if(statmap[? "classlvl"] < 10){exit;}
