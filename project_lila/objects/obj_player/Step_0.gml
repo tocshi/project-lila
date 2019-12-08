@@ -99,7 +99,7 @@ if(mouse_check_button_pressed(mb_left) && (atkTimer <= 0) && canAttack){
 	isMoving = false;
 	//canMove = false;
 	canAttack = false;
-	canUseSkill = false;
+	//canUseSkill = false;
 	atkTimer = room_speed/statmap[? "atkspeed"];
 	use_basic_attack(self,equips[0],100);
 

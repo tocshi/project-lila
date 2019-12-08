@@ -2,6 +2,8 @@ event_inherited();
 if(global.pause){exit;}
 
 if(keyboard_check_pressed(skill_button[1]) && (cd[1] <= 0) && statmap[? "mp"] >= 30 && canUseSkill){
+	cancel_basic_attack();
+	
 	direction = point_direction(x,y,mouse_x,mouse_y)+180;
 	speed = 12;
 	
@@ -61,10 +63,11 @@ if(keyboard_check_pressed(skill_button[3]) && (cd[3] <= 0) && statmap[? "mp"] >=
 		exit;
 	}
 	
+	cancel_basic_attack();
 	statmap[? "mp"] -= 30;
 	
 	cd[3] = maxcd[3];
-	atkTimer = 22;
+	atkTimer = 21;
 	canAttack = false;
 	canUseSkill = false;
 	isMoving = false;
@@ -75,6 +78,7 @@ if(keyboard_check_pressed(skill_button[3]) && (cd[3] <= 0) && statmap[? "mp"] >=
 
 if(statmap[? "classlvl"] < 4){exit;}
 if(keyboard_check_pressed(skill_button[4]) && (cd[4] <= 0) && canUseSkill){
+	cancel_basic_attack();
 
 	cd[4] = maxcd[4];
 	atkTimer = 48;
@@ -104,7 +108,7 @@ if(keyboard_check_pressed(skill_button[5]) && (cd[5] <= 0) && statmap[? "mp"] >=
 
 if(statmap[? "classlvl"] < 6){exit;}
 if(keyboard_check_pressed(skill_button[6]) && (cd[6] <= 0) && statmap[? "mp"] >= 35 && canUseSkill){
-	
+	cancel_basic_attack();
 	statmap[? "mp"] -= 35;
 
 	cd[6] = maxcd[6];
@@ -136,7 +140,8 @@ if(statmap[? "classlvl"] < 8){exit;}
 
 if(statmap[? "classlvl"] < 9){exit;}
 if(keyboard_check_pressed(skill_button[9]) && (cd[9] <= 0) && statmap[? "mp"] >= 40 && canUseSkill){
-
+	cancel_basic_attack();
+	
 	cd[9] = maxcd[9];
 	atkTimer = 30;
 	canAttack = false;

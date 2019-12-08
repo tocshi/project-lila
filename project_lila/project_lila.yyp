@@ -1079,6 +1079,14 @@
             }
         },
         {
+            "Key": "8398f1ec-0e0a-421d-91ed-bf47cdbe342d",
+            "Value": {
+                "id": "2817c015-3c14-4c75-958d-5f6e500188b8",
+                "resourcePath": "objects\\obj_basicattack_parent\\obj_basicattack_parent.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "87296a4a-cc16-4143-b59b-643a5bcca0b1",
             "Value": {
                 "id": "62c97aaf-ba40-4ef7-adc5-64bcf9011e49",
@@ -1524,6 +1532,14 @@
                 "id": "350dfd9a-cef4-456a-ad2b-5836335247d8",
                 "resourcePath": "views\\c2451314-b891-4469-916d-9d771a6558cb.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "c2531b86-ddb8-4e53-832a-f99f657868f2",
+            "Value": {
+                "id": "58c5c06b-aa0f-43aa-8c46-dcd9b8380181",
+                "resourcePath": "scripts\\cancel_basic_attack\\cancel_basic_attack.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -2045,6 +2061,7 @@
         "efef40b5-b3dd-4fd8-858d-53cd81554d87",
         "a5731a4d-12dc-4cc9-8904-48e6dfc0b51a",
         "97935ced-0e61-49c0-baec-f6bfa8c9e3ac",
+        "c2531b86-ddb8-4e53-832a-f99f657868f2",
         "8e92b01e-ad1a-4504-81ce-0de0f821b9a9",
         "a375b2dd-67ef-48c2-b77d-3d9890977de0",
         "1b4515af-9d2e-4ee8-a6e4-7dc754d06afd",

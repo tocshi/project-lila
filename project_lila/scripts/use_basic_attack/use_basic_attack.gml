@@ -56,7 +56,7 @@ switch(itemid){
 		
 		anchor = argument0;
 		image_angle = point_direction(x,y,mouse_x,mouse_y);
-		skill = round(room_speed/user.statmap[? "atkspeed"]);
+		skill = round((room_speed/user.statmap[? "atkspeed"])/2);
 		image_angle-=45;
 	}
 	with(instance_create_layer(x,y,"Attacks",obj_basicattack_arrow)){
