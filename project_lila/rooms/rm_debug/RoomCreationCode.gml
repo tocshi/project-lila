@@ -1,4 +1,4 @@
-instance_create_layer(1216,896,"Instances",obj_class_knight);
+instance_create_layer(1216,896,"Instances",obj_class_archer);
 
 var runner0 = instance_create_layer(0,0,"Instances",obj_debug_runner);
 

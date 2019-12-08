@@ -10,16 +10,17 @@ if(global.pause){
 	exit;}
 
 // Standard Movement
-if(mouse_check_button_pressed(mb_right) && canMove){
+if(mouse_check_button(mb_right) && canMove){
 	
 	destX = mouse_x;
 	destY = mouse_y;
-	instance_create_layer(destX,destY,"Assets_1",obj_player_move_indicator);
+	instance_destroy(obj_player_move_indicator);
+	with(instance_create_layer(destX,destY,"Assets_1",obj_player_move_indicator)){player = other;}
 	isMoving = true;
 	
 }
 
-if(isMoving){
+if(isMoving && canMove){
 	move(statmap[? "movespeed"], point_direction(x,y,destX,destY));
 }
 
@@ -96,7 +97,7 @@ if(keyboard_check(skill_button[0]) && unleashGauge > 0 && essence >= unleashGaug
 if(mouse_check_button_pressed(mb_left) && (atkTimer <= 0) && canAttack){
 	
 	speed = 0;
-	isMoving = false;
+	//isMoving = false;
 	//canMove = false;
 	canAttack = false;
 	//canUseSkill = false;
