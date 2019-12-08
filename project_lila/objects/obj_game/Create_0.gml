@@ -25,7 +25,7 @@ global.playerItems = array_create(ds_list_size(global.itemData),0);
 
 // Equipment pixel positions
 global.equipItemBox = array_create(12,[0,0]);
-for(var i = 0; i < 4; i++){
+for(var i = 0; i < 4; ++i){
 	for(var j = 0; j < 3; j++){
 		//absolute x and y positions
 		global.equipItemBox[(i * 3) + j,0] = 198 + j*86;
@@ -34,7 +34,7 @@ for(var i = 0; i < 4; i++){
 }
 // Inventory pixel positions
 global.invItemBox = array_create(100,[0,0]);
-for(var i = 0; i < 10; i++){
+for(var i = 0; i < 10; ++i){
 	for(var j = 0; j < 10; j++){
 		//absolute x and y positions
 		global.invItemBox[(i * 10) + j,0] = 490 + j*66;
@@ -43,13 +43,13 @@ for(var i = 0; i < 10; i++){
 }
 // Item Hotbar pixel positions
 global.itemBarBox = array_create(10,[0,0]);
-for(var i = 0; i < 10; i++){
+for(var i = 0; i < 10; ++i){
 	global.itemBarBox[i,0] = 2;
 	global.itemBarBox[i,1] = 121 + i*66;
 }
 // Buffbar pixel positions
 global.buffBarBox = array_create(20,[0,0]);
-for(var i = 0; i < 20; i++){
+for(var i = 0; i < 20; ++i){
 	global.buffBarBox[i,0] = 74;
 	global.buffBarBox[i,1] = 121 + i*33;
 }

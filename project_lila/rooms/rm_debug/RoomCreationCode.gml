@@ -1,3 +1,5 @@
+instance_create_layer(1216,896,"Instances",obj_class_knight);
+
 var runner0 = instance_create_layer(0,0,"Instances",obj_debug_runner);
 
 var runner1 = instance_create_layer(0,0,"Instances",obj_debug_runner);
@@ -20,3 +22,5 @@ shooter4.direction = 180;
 var shooter5 = instance_create_layer(2800,1000,"Instances",obj_debug_shooter);
 shooter5.direction = 180;
 var ally0 = instance_create_layer(2400,1000,"Instances",obj_debug_ally);
+
+instance_create_layer(160,1632,"Instances",obj_debug_chaser);

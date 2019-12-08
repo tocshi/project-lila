@@ -11,7 +11,7 @@ switch(global.gui_state){
 		instance_destroy(obj_context_menu_button);
 		
 		// Make gui elements
-		for(var i = 0; i < 12; i++){
+		for(var i = 0; i < 12; ++i){
 			if(global.player.equips[i] > 0){
 				var item = instance_create_layer(camera_get_view_x(global.currentCamera)+global.equipItemBox[i,0],
 												camera_get_view_y(global.currentCamera)+global.equipItemBox[i,1],
@@ -23,7 +23,7 @@ switch(global.gui_state){
 		}
 
 		var invSpace = 0;
-		for(var i = 0; i < ds_list_size(global.itemData); i++){
+		for(var i = 0; i < ds_list_size(global.itemData); ++i){
 			if(invSpace > 99){exit;}
 			if(global.playerItems[i] > 0){
 				var item = instance_create_layer(camera_get_view_x(global.currentCamera)+global.invItemBox[invSpace,0],

@@ -17,7 +17,6 @@ else{
 }
 
 var skillobj = instance_create_layer(x,y,"Attacks",obj_skill_protective_footwork);
-skillobj.image_angle = direction;
 skillobj.atkmap[? "dmgmod"] = protective_footwork_mod;
-skillobj.atkmap[? "element"] = "none";
+skillobj.atkmap[? "element"] = atkelement;
 skillobj.user = self.id;

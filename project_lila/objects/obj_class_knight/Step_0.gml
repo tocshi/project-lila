@@ -17,6 +17,7 @@ if(statmap[? "classlvl"] < 2){exit;}
 
 if(statmap[? "classlvl"] < 3){exit;}
 if(keyboard_check_pressed(skill_button[3]) && (cd[3] <= 0) && statmap[? "mp"] >= 30 && canUseSkill){
+	cancel_basic_attack();
 	
 	ds_list_clear(scList);
 	statmap[? "mp"] -= 30;
@@ -40,7 +41,7 @@ if(keyboard_check_pressed(skill_button[3]) && (cd[3] <= 0) && statmap[? "mp"] >=
 
 if(statmap[? "classlvl"] < 4){exit;}
 if(keyboard_check_pressed(skill_button[4]) && (cd[4] <= 0) && statmap[? "mp"] >= 20 && canUseSkill){
-	
+	cancel_basic_attack();
 	
 	statmap[? "mp"] -= 20;
 	cd[4] = maxcd[4];
@@ -50,15 +51,21 @@ if(keyboard_check_pressed(skill_button[4]) && (cd[4] <= 0) && statmap[? "mp"] >=
 	canUseSkill = false;
 	isMoving = false;
 	highRegenThreshold = 0;
-	var skillobj = instance_create_layer(x,y,"Attacks",obj_skill_roundslash);
-	skillobj.user  = self.id;
+	with(instance_create_layer(x,y,"Attacks",obj_skill_roundslash)){
+		user = other.id;
+		atkmap[? "element"] = other.atkelement;
+		sprite = make_sprite_from_item(user.equips[0]);
+		sprite_index = sprite;
+		enemies = collision_circle_list(x, y, sprite_width, obj_enemy, false, true, enemylist, false);
+		atkmap[? "dmgmod"] = 130 + 10*enemies;
+	}
+	
 
 }
 
 if(statmap[? "classlvl"] < 5){exit;}
 if(keyboard_check_pressed(skill_button[5]) && (cd[5] <= 0) && statmap[? "mp"] >= 25 && canUseSkill){
-	
-	
+	cancel_basic_attack();
 	
 	if(instance_exists(obj_ally)){
 		target = instance_nearest(mouse_x,mouse_y,obj_ally);
@@ -91,8 +98,7 @@ if(statmap[? "classlvl"] < 6){exit;}
 
 if(statmap[? "classlvl"] < 7){exit;}
 if(keyboard_check_pressed(skill_button[7]) && (cd[7] <= 0) && statmap[? "mp"] >= 20 && canUseSkill){
-	
-	
+	cancel_basic_attack();
 	
 	direction = point_direction(x,y,mouse_x,mouse_y)+180;
 	speed = 8;
@@ -129,6 +135,7 @@ if(keyboard_check_pressed(skill_button[7]) && (cd[7] <= 0) && statmap[? "mp"] >=
 
 if(statmap[? "classlvl"] < 8){exit;}
 if(keyboard_check_pressed(skill_button[8]) && (cd[8] <= 0) && statmap[? "mp"] >= 25 && canUseSkill){
+	cancel_basic_attack();
 	
 	statmap[? "mp"] -= 25;
 

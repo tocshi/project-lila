@@ -63,7 +63,13 @@ target.statmap[? "hp"] -= gTotalDamage;
 e_hp = target.statmap[? "hp"];
 e_maxhp = target.statmap[? "maxhp"];
 
-var dmgTxt = instance_create_layer(target.x, target.y-(target.sprite_height/2), "dmgTxt", obj_dmgtxt);
+if(variable_instance_exists(self.id,"user")){
+	onhit_effect_handler(user,target);
+}
+
+var dmgTxt = instance_create_layer(irandom_range(target.x-10,target.x+10), 
+									irandom_range(target.y-(target.sprite_height/2)-5,target.y-(target.sprite_height/2)+5), 
+									"dmgTxt", obj_dmgtxt);
 dmgTxt.damage = gTotalDamage;
 dmgTxt.isCrit = atkmap[? "isCrit"];
 dmgTxt.isOrangeCrit = atkmap[? "isOrangeCrit"];
@@ -85,6 +91,7 @@ atkmap[? "isCrit"]			= false;
 if(ds_map_exists(atkmap,"isPiercing") && ds_map_exists(atkmap,"isProjectile")){
 	if(!atkmap[? "isPiercing"]){
 		ds_map_destroy(atkmap);
+		atkmap = -1;
 		instance_destroy();
 	}
 }
