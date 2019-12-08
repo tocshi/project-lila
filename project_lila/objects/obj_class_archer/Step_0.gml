@@ -70,7 +70,6 @@ if(keyboard_check_pressed(skill_button[3]) && (cd[3] <= 0) && statmap[? "mp"] >=
 	atkTimer = 21;
 	canAttack = false;
 	canUseSkill = false;
-	isMoving = false;
 	t_shot_remaining = 2;
 	alarm[3] = 1;
 	proc_unyielding_buff();

@@ -479,18 +479,18 @@
             }
         },
         {
+            "Key": "2f752995-9277-47f9-b12f-eb0197f828de",
+            "Value": {
+                "id": "520d72b8-13b1-4ca3-b395-db2feea1d4a4",
+                "resourcePath": "views\\2f752995-9277-47f9-b12f-eb0197f828de.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "30857233-7599-4efe-b2cb-9e0485867bce",
             "Value": {
                 "id": "9556de82-e620-48d3-8c28-6649efd5dab5",
                 "resourcePath": "sprites\\spr_pants_leather\\spr_pants_leather.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
-            "Key": "315034f8-6171-4ae0-a099-cf57ccb222eb",
-            "Value": {
-                "id": "744c42e2-74e0-4d96-9cb8-7c1f7a764d15",
-                "resourcePath": "sprites\\spr_roundslash\\spr_roundslash.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -919,6 +919,14 @@
             }
         },
         {
+            "Key": "73768cbf-071b-4fa5-80d3-817117c2ed97",
+            "Value": {
+                "id": "9828bbed-ef8d-4480-996f-1ea80b884df2",
+                "resourcePath": "sprites\\spr_spb0\\spr_spb0.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "73e2e018-89b7-4b0f-9726-53f571d6913a",
             "Value": {
                 "id": "701dd0ae-d26c-41e7-9172-5d3f4c8ed100",
@@ -1068,6 +1076,14 @@
                 "id": "5987ac1e-906e-4a56-98b6-6300c6987cf1",
                 "resourcePath": "sprites\\spr_lsw0\\spr_lsw0.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "8264fb0a-da04-47ca-bb0a-b4c6df653b7b",
+            "Value": {
+                "id": "a6d25848-ba7f-4ab6-9db6-5fb2f3aeceff",
+                "resourcePath": "objects\\obj_basicattack_spellbook\\obj_basicattack_spellbook.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -1327,14 +1343,6 @@
             }
         },
         {
-            "Key": "a7b15e84-fbc3-4a66-a5ff-e4a84736bfeb",
-            "Value": {
-                "id": "d6b9b5d0-3096-484b-a030-2ecc60deac6c",
-                "resourcePath": "objects\\obj_debug_class\\obj_debug_class.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "a9188620-a624-4a5a-83ae-a1b53faf038b",
             "Value": {
                 "id": "dea1a955-e841-49d4-933e-ac253c07553b",
@@ -1388,6 +1396,14 @@
                 "id": "4a9eaf74-7592-48dc-bb80-f3ff39430868",
                 "resourcePath": "sprites\\spr_skill_A\\spr_skill_A.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "b53ce473-fa22-423c-8c6c-d3c0f51a838d",
+            "Value": {
+                "id": "32dea65e-6b03-49c7-b60d-ee9211ac8179",
+                "resourcePath": "objects\\obj_class_mage\\obj_class_mage.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -1611,6 +1627,14 @@
             "Value": {
                 "id": "734a949a-854a-401f-9459-0d1b909d76f5",
                 "resourcePath": "sprites\\spr_skill_G\\spr_skill_G.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "d112bbd2-481d-4951-bc95-71d4c6063215",
+            "Value": {
+                "id": "8df1a065-d612-4935-9d33-a54f8ee6902d",
+                "resourcePath": "sprites\\spr_basic_magic\\spr_basic_magic.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1847,10 +1871,26 @@
             }
         },
         {
+            "Key": "ecd2188e-8552-465e-a598-f552786e02fe",
+            "Value": {
+                "id": "be7a7480-068d-40ac-93ff-fd0eff44d123",
+                "resourcePath": "objects\\obj_basicattack_magic\\obj_basicattack_magic.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "ecf01256-0836-488f-8050-41050f78b2bf",
             "Value": {
                 "id": "e1169dc8-5165-4bc7-ba83-b3b90ce8352c",
                 "resourcePath": "objects\\obj_essence\\obj_essence.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "ef31b0f6-7c8e-44b9-baf3-fa57cc7f8f74",
+            "Value": {
+                "id": "df753513-875c-4624-86b6-d209eeb9e9a1",
+                "resourcePath": "objects\\obj_class_debug\\obj_class_debug.yy",
                 "resourceType": "GMObject"
             }
         },

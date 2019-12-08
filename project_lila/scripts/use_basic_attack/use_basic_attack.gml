@@ -27,6 +27,7 @@ switch(itemid){
 		sprite_index = make_sprite_from_item(itemid);
 		iter = other.iter;
 		anchor = argument0;
+		self.user = user;
 		ds_map_copy(atkmap,user.statmap);
 		atkmap[? "dmgmod"] = dmgmod;
 		atkmap[? "element"] = element;
@@ -50,16 +51,18 @@ switch(itemid){
 	
 	// Bow Default Basic Attack
 	case 11:
+	case 24:
 	with(instance_create_layer(x,y,"Attacks",obj_basicattack_bow)){
 		sprite_index = make_sprite_from_item(itemid);
 		sprite_collision_mask(sprite_index,false,2,0,0,0,0,bboxkind_rectangular,0);
 		
 		anchor = argument0;
 		image_angle = point_direction(x,y,mouse_x,mouse_y);
-		skill = round((room_speed/user.statmap[? "atkspeed"])/2);
+		skill = round(room_speed/user.statmap[? "atkspeed"]);
 		image_angle-=45;
 	}
 	with(instance_create_layer(x,y,"Attacks",obj_basicattack_arrow)){
+		self.user = user;
 		ds_map_copy(atkmap,user.statmap);
 		atkmap[? "dmgmod"] = dmgmod;
 		atkmap[? "element"] = element;
@@ -75,8 +78,37 @@ switch(itemid){
 	}
 	break;
 	
+	// Spellbook Default Basic Attack
+	case 18:
+	case 31:
+	var magic_target = instance_nearest(mouse_x,mouse_y,obj_enemy);
+	if(point_distance(x,y,magic_target.x,magic_target.y) > 420){exit;}
+	with(instance_create_layer(x,y,"Attacks",obj_basicattack_spellbook)){
+		sprite_index = make_sprite_from_item(itemid);
+		
+		anchor = argument0;
+		image_angle = point_direction(x,y,mouse_x,mouse_y);
+		skill = round(room_speed/user.statmap[? "atkspeed"]);
+		image_angle-=45;
+	}
+	with(instance_create_layer(x,y,"Attacks",obj_basicattack_magic)){
+		self.user = user;
+		ds_map_copy(atkmap,user.statmap);
+		target = magic_target;
+		atkmap[? "dmgmod"] = dmgmod;
+		atkmap[? "element"] = element;
+		atkmap[? "isBasicAttack"] = true;
+		atkmap[? "isSingleHit"]	= true;
+		atkmap[? "isProjectile"] = true;
+		atkmap[? "isPiercing"] = false;
+		
+		direction = point_direction(x,y,magic_target.x,magic_target.y);
+		image_angle = direction;
+	}
+	break;
+	
 	default:
-		show_debug_message("ERROR: NO BASIC ATTACK FOUND!");
-		break;
+	show_debug_message("ERROR: NO BASIC ATTACK FOUND!");
+	break;
 }
 iter++;
