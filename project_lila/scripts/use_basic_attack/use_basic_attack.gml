@@ -34,7 +34,7 @@ switch(itemid){
 		atkmap[? "isSingleHit"]	= true;
 		
 		dir = point_direction(x,y,mouse_x,mouse_y);
-		skill = room_speed/atkmap[? "atkspeed"];
+		skill = round(room_speed/user.statmap[? "atkspeed"]);
 		switch(iter % 2){
 			case 0:
 			image_angle = dir-(angle/2);
