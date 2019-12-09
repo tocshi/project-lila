@@ -116,5 +116,21 @@ equips[10] = 9;
 itemBar[0] = 22;
 itemBar[1] = 1;
 global.playerItems[1]+=20;
+if (findArrayIndex(global.playerInv, 1) == -1) {
+	for (var i=0; i < array_length_1d(global.playerInv); i++) {
+		if (global.playerInv[i] == 0) {
+			global.playerInv[i] = 1;
+			break;
+		}
+	}
+}
 global.playerItems[22]++;
+if (findArrayIndex(global.playerInv, 22) == -1) {
+	for (var i=0; i < array_length_1d(global.playerInv); i++) {
+		if (global.playerInv[i] == 0) {
+			global.playerInv[i] = 22;
+			break;
+		}
+	}
+}
 

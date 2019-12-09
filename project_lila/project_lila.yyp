@@ -951,6 +951,14 @@
             }
         },
         {
+            "Key": "7e1af0bc-9baf-439e-b962-76634753da50",
+            "Value": {
+                "id": "370a5038-c3d3-4f38-8680-7d86f45c8386",
+                "resourcePath": "scripts\\getSlotAtCoords\\getSlotAtCoords.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "81181f12-58c8-4c2f-83c6-2cf2c12a60f5",
             "Value": {
                 "id": "5253d73a-82af-451e-9608-67eaaa34e242",
@@ -1865,6 +1873,7 @@
         "b000834d-694e-4b7f-9cfd-6136d647349c",
         "54e90f6e-9e5c-4684-b3cf-7c7593a4b1ce",
         "241bc211-f307-47bf-8d8b-f7cfe8089b1c",
+        "7e1af0bc-9baf-439e-b962-76634753da50",
         "efef40b5-b3dd-4fd8-858d-53cd81554d87",
         "a5731a4d-12dc-4cc9-8904-48e6dfc0b51a",
         "8e92b01e-ad1a-4504-81ce-0de0f821b9a9",
