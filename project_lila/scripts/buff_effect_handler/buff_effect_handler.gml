@@ -54,9 +54,37 @@ switch(buffName){
 	}
 	break;
 	
-	case "Unyielding":
+	case "Unyielding Barrage":
 	if(statChange){
-		statmap[? "critrate"]+=2*get_buff_stacks(self,"Unyielding Barrage");
+		statmap[? "critrate"]+=2*get_buff_data(self,"Unyielding Barrage","stacks");
+	}
+	break;
+	
+	case "Burn":
+	instance_create_layer(irandom_range(x-sprite_width/2,x+sprite_width/2),irandom_range(y-sprite_height/2,y+sprite_height/2),"Assets_1",obj_burn_effect);
+	if(get_buff_data(self,"Burn","time") % 60 = 30){
+		var burndmg = get_buff_data(self,"Burn","data")*get_buff_data(self,"Burn","stacks");
+		statmap[? "hp"]-=burndmg;
+		
+		with(instance_create_layer(irandom_range(x-10,x+10), 
+									irandom_range(y-(sprite_height/2)-5,y-(sprite_height/2)+5), 
+									"dmgTxt", obj_dmgtxt)){
+			damage = burndmg;
+	
+			hp		= other.statmap[? "hp"];
+			maxhp	= other.statmap[? "maxhp"];
+			self.target	= other;							
+		}
+
+	
+		if(instance_exists(self) && ds_exists(statmap,ds_type_map)){
+			with(instance_create_layer(x, y, "dmgTxt", obj_minihpbar)){
+				hp		= other.statmap[? "hp"];
+				maxhp	= other.statmap[? "maxhp"];
+				hpwidth	= other.sprite_width;
+				self.target	= other.id;
+			}
+		}
 	}
 	break;
 	

@@ -67,24 +67,27 @@ if(variable_instance_exists(self.id,"user")){
 	onhit_effect_handler(user,target);
 }
 
-var dmgTxt = instance_create_layer(irandom_range(target.x-10,target.x+10), 
+with(instance_create_layer(irandom_range(target.x-10,target.x+10), 
 									irandom_range(target.y-(target.sprite_height/2)-5,target.y-(target.sprite_height/2)+5), 
-									"dmgTxt", obj_dmgtxt);
-dmgTxt.damage = gTotalDamage;
-dmgTxt.isCrit = atkmap[? "isCrit"];
-dmgTxt.isOrangeCrit = atkmap[? "isOrangeCrit"];
-dmgTxt.isRedCrit = atkmap[? "isRedCrit"];
+									"dmgTxt", obj_dmgtxt)){
+	damage = other.gTotalDamage;
+	isCrit = other.atkmap[? "isCrit"];
+	isOrangeCrit = other.atkmap[? "isOrangeCrit"];
+	isRedCrit = other.atkmap[? "isRedCrit"];
 	
-dmgTxt.hp		= e_hp;
-dmgTxt.maxhp	= e_maxhp;
-dmgTxt.target	= target;
+	hp		= other.e_hp;
+	maxhp	= other.e_maxhp;
+	self.target	= target;							
+}
+
 	
 if(instance_exists(target) && ds_exists(target.statmap,ds_type_map)){
-var minihp = instance_create_layer(target.x, target.y, "dmgTxt", obj_minihpbar);
-minihp.hp		= e_hp;
-minihp.maxhp	= e_maxhp;
-minihp.hpwidth	= target.sprite_width;
-minihp.target	= target.id;
+	with(instance_create_layer(target.x, target.y, "dmgTxt", obj_minihpbar)){
+		hp		= other.e_hp;
+		maxhp	= other.e_maxhp;
+		hpwidth	= target.sprite_width;
+		self.target	= target.id;
+	}
 }
 atkmap[? "isCrit"]			= false;
 	

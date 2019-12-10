@@ -45,7 +45,7 @@ if(keyboard_check_pressed(skill_button[2]) && (cd[2] <= 0) && statmap[? "mp"] >=
 	cd[2] = maxcd[2];
 	
 	//clear_debuffs(self.id,"slow");
-	applyBuff(self.id,3*room_speed,true,"Move Like Wind",buff_generic,false,-1,0,spr_buff_move_like_wind,"Lorem Ipsum");
+	applyBuff(self.id,3*room_speed,true,"Move Like Wind",buff_generic,false,-1,0,spr_buff_move_like_wind,"Lorem Ipsum",0);
 
 	statChange = true;
 	proc_unyielding_buff();

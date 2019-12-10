@@ -3,15 +3,40 @@ if(global.pause){exit;}
 
 if(keyboard_check_pressed(skill_button[1]) && (cd[1] <= 0) && statmap[? "mp"] >= 20 && canUseSkill){
 	statmap[? "mp"] -= 20;
-	cd[2] = maxcd[2];
+	cd[1] = maxcd[1];
 	atkTimer = 10;
 	canAttack = false;
 	canUseSkill = false;
-	instance_create_layer(x,y,"Attacks",obj_skill_fireball);
+	with(instance_create_layer(x,y,"Attacks",obj_skill_fireball)){
+		user = other.id;
+		ds_map_copy(atkmap,other.statmap);
+		atkmap[? "dmgmod"]			= 120;
+
+		atkmap[? "element"]			= "fire";
+		atkmap[? "range"]			= 512;
+
+		atkmap[? "isProjectile"]	= true;
+		atkmap[? "isPiercing"]		= false;
+		atkmap[? "isSingleTarget"]	= true;
+		atkmap[? "isSingleHit"]		= true;
+		skill = atkmap[? "range"]/speed;
+	}
 }
 
 if(statmap[? "classlvl"] < 2){exit;}
-if(keyboard_check_pressed(skill_button[2]) && (cd[2] <= 0) && statmap[? "mp"] >= 0 && canUseSkill){
+if(keyboard_check_pressed(skill_button[2]) && (cd[2] <= 0) && statmap[? "mp"] >= 20 && canUseSkill){
+	cancel_basic_attack();
+	statmap[? "mp"] -= 20;
+
+	cd[2] = maxcd[2];
+	highRegenThreshold = 0;
+	
+	with(instance_create_layer(x,y,"Attacks",obj_skill_blizzard)){
+		user = other.id;
+		ds_map_copy(atkmap,other.statmap);
+		atkmap[? "dmgmod"]		= 25;
+		atkmap[? "element"]		= "ice";
+	}	
 }
 
 if(statmap[? "classlvl"] < 3){exit;}

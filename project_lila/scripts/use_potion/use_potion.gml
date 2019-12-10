@@ -35,11 +35,11 @@ switch(itemid){
 if(stacks >= 4){
 	removeBuff(user,"Saturated",true);
 	applyBuff(user,60*room_speed,true,"Potion Sickness",buff_saturated,true,1,1,spr_buff_potion_sickness,
-		"Your chugged too many potions too quickly! You are now unable to drink potions for a while.");
+		"Your chugged too many potions too quickly! You are now unable to drink potions for a while.",0);
 }
 else{
 	applyBuff(user,15*room_speed,true,"Saturated",buff_saturated,true,1,4,spr_buff_saturated,
-		"Drinking that potion didn't feel very good. Significantly reduces the effectiveness of subsequent potions for a short time.");
+		"Drinking that potion didn't feel very good. Significantly reduces the effectiveness of subsequent potions for a short time.",0);
 }
 
 return true;

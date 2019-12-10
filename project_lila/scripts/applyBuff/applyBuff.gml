@@ -9,6 +9,7 @@ var stacks			= argument6;
 var maxStacks		= argument7;
 var sprite			= argument8;
 var desc			= argument9;
+var extra			= argument10;
 
 // Creates the buff array to add
 var buff_array = array_create(9,false);
@@ -51,6 +52,7 @@ buff_array[5] = stacks;
 buff_array[6] = maxStacks;
 buff_array[7] = sprite;
 buff_array[8] = desc;
+buff_array[9] = extra;
 ds_list_add(target.buff,buff_array);
 
 target.statChange = true;

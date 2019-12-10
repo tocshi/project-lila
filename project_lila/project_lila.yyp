@@ -991,6 +991,14 @@
             }
         },
         {
+            "Key": "779d12f1-7049-4cf8-b77a-d3682ed7c314",
+            "Value": {
+                "id": "6131b739-f31f-48a4-966f-653f0e670562",
+                "resourcePath": "objects\\obj_burn_effect\\obj_burn_effect.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "78c62e52-6f6b-40b5-9493-519210555697",
             "Value": {
                 "id": "753b6eb0-952d-4ddb-91a3-3d3604f9d6d3",
@@ -1244,6 +1252,14 @@
                 "id": "bef974fb-9882-4948-9df5-6bd41fbad0eb",
                 "resourcePath": "views\\9cbd82d9-6790-4230-905e-a34a035664b2.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "9d820524-01a6-48ae-b4ec-ac294b06692b",
+            "Value": {
+                "id": "4e9f64c2-92ac-4acd-a70a-0cfc564f9a3b",
+                "resourcePath": "sprites\\spr_burn_effect\\spr_burn_effect.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -1914,7 +1930,7 @@
             "Key": "f0bb7809-f8cf-470e-bc05-8cbab77fe645",
             "Value": {
                 "id": "2d56e993-a04e-4225-9bce-00e1899b4510",
-                "resourcePath": "scripts\\get_buff_stacks\\get_buff_stacks.yy",
+                "resourcePath": "scripts\\get_buff_data\\get_buff_data.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -2052,6 +2068,14 @@
                 "id": "28a91068-c124-4dc8-b2f9-c9f438d44392",
                 "resourcePath": "views\\fe7885b5-d6ab-4087-b0f2-92b9fd2bce6c.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "fe87bd4e-732d-4a16-abbb-828d16b340b6",
+            "Value": {
+                "id": "0138051c-1b46-4b06-bd13-55e0f85e369e",
+                "resourcePath": "objects\\obj_skill_blizzard\\obj_skill_blizzard.yy",
+                "resourceType": "GMObject"
             }
         },
         {
