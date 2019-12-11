@@ -10,25 +10,25 @@ switch(atkmap[? "element"]){
 	atkmap[? "elem_mod"] = 100;
 	break;
 	case "fire":
-	atkmap[? "elem_mod"] = (atkmap[? "fire_atk"] - target.statmap[? "fire_def"]) + 100;
+	atkmap[? "elem_mod"] = (atkmap[? "fire_atk"] - target.statmap[? "fire_def"])*5 + 100;
 	break;
 	case "ice":
-	atkmap[? "elem_mod"] = (atkmap[? "ice_atk"] - target.statmap[? "ice_def"]) + 100;
+	atkmap[? "elem_mod"] = (atkmap[? "ice_atk"] - target.statmap[? "ice_def"])*5 + 100;
 	break;
 	case "lightning":
-	atkmap[? "elem_mod"] = (atkmap[? "lightning_atk"] - target.statmap[? "lightning_def"]) + 100;
+	atkmap[? "elem_mod"] = (atkmap[? "lightning_atk"] - target.statmap[? "lightning_def"])*5 + 100;
 	break;
 	case "earth":
-	atkmap[? "elem_mod"] = (atkmap[? "earth_atk"] - target.statmap[? "earth_def"]) + 100;
+	atkmap[? "elem_mod"] = (atkmap[? "earth_atk"] - target.statmap[? "earth_def"])*5 + 100;
 	break;
 	case "wind":
-	atkmap[? "elem_mod"] = (atkmap[? "wind_atk"] - target.statmap[? "wind_def"]) + 100;
+	atkmap[? "elem_mod"] = (atkmap[? "wind_atk"] - target.statmap[? "wind_def"])*5 + 100;
 	break;
 	case "light":
-	atkmap[? "elem_mod"] = (atkmap[? "light_atk"] - target.statmap[? "light_def"]) + 100;
+	atkmap[? "elem_mod"] = (atkmap[? "light_atk"] - target.statmap[? "light_def"])*5 + 100;
 	break;
 	case "dark":
-	atkmap[? "elem_mod"] = (atkmap[? "dark_atk"] - target.statmap[? "dark_def"]) + 100;
+	atkmap[? "elem_mod"] = (atkmap[? "dark_atk"] - target.statmap[? "dark_def"])*5 + 100;
 	break;
 }
 

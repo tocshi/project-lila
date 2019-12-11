@@ -319,6 +319,14 @@
             }
         },
         {
+            "Key": "1c060d42-f551-4d4b-a6f0-11807f0adc2a",
+            "Value": {
+                "id": "a5ba78eb-93b5-46b3-a412-e5f52cf3d0d3",
+                "resourcePath": "sprites\\spr_chain_lightning\\spr_chain_lightning.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "1da5bc84-004e-485f-9fbb-4cf8ea338234",
             "Value": {
                 "id": "043eacec-df7d-4ef7-8e3c-ae1b9bc03467",
@@ -1527,6 +1535,14 @@
             }
         },
         {
+            "Key": "bdc68a9b-2c3c-4c1e-b962-6ae16b93b2aa",
+            "Value": {
+                "id": "316e904b-c708-4b87-885f-9d2632323426",
+                "resourcePath": "objects\\obj_skill_chain_lightning\\obj_skill_chain_lightning.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "be0ba224-53d3-4ac9-8bae-1fd82802d88a",
             "Value": {
                 "id": "4d5dc014-a968-4f9e-95ab-3f76119e0500",
@@ -1548,6 +1564,14 @@
                 "id": "65357a62-1017-4a86-853a-fb05a1c981e8",
                 "resourcePath": "objects\\obj_player_cutin\\obj_player_cutin.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "bfb5c20c-e571-4f07-953a-8992fd59bd77",
+            "Value": {
+                "id": "79c176a6-4e1c-40a8-a018-6affa7f6c6cc",
+                "resourcePath": "scripts\\instance_nth_nearest\\instance_nth_nearest.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -2104,7 +2128,6 @@
         }
     ],
     "script_order": [
-        "c6eddf3a-011d-4cde-95c8-3bf3dc25957f",
         "25cc0bd0-b781-4d81-9623-254ee874acdd",
         "d48c806d-2c0a-4579-9afa-bb92bfa98670",
         "f0bb7809-f8cf-470e-bc05-8cbab77fe645",
@@ -2132,6 +2155,7 @@
         "41da96ef-1d80-4db2-b5d3-5d0753fd0858",
         "1bb58460-a0f2-4852-bbc5-146c2d53a6ae",
         "be0ba224-53d3-4ac9-8bae-1fd82802d88a",
+        "c6eddf3a-011d-4cde-95c8-3bf3dc25957f",
         "36c513a5-d959-430a-a52b-c18569d49c0b",
         "dc789532-e5d9-4952-bd1b-c850b7589847",
         "a4736812-0af2-454e-b514-b2a70495c0f4",
@@ -2158,6 +2182,7 @@
         "497183b5-b142-4cca-9f84-f05c99ec756d",
         "d784e273-cb94-4612-9126-e9d532adb3af",
         "e67821dd-d229-4427-9b17-965a5a7c4fa1",
+        "bfb5c20c-e571-4f07-953a-8992fd59bd77",
         "454cdb76-1bb0-49cd-ac5f-cdc5c38c5413"
     ],
     "tutorial": ""

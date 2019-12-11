@@ -1,6 +1,7 @@
 event_inherited();
 
 statmap[? "class"] = "Mage";
+c_lightning_hitList = ds_list_create();
 
 skill_sprite = array_create(10, spr_empty);
 
@@ -17,7 +18,7 @@ skill_sprite[9] = spr_skill_G;
 
 maxcd[1] = room_speed*2;
 maxcd[2] = room_speed*2;
-maxcd[3] = room_speed*0;
+maxcd[3] = room_speed*2;
 maxcd[4] = room_speed*0;
 maxcd[5] = room_speed*0;
 maxcd[6] = room_speed*0;

@@ -40,7 +40,33 @@ if(keyboard_check_pressed(skill_button[2]) && (cd[2] <= 0) && statmap[? "mp"] >=
 }
 
 if(statmap[? "classlvl"] < 3){exit;}
-if(keyboard_check_pressed(skill_button[3]) && (cd[3] <= 0) && statmap[? "mp"] >= 0 && canUseSkill){
+if(keyboard_check_pressed(skill_button[3]) && (cd[3] <= 0) && statmap[? "mp"] >= 20 && canUseSkill){
+	var next_target = instance_nearest(mouse_x,mouse_y,obj_enemy);
+	if(next_target == noone || point_distance(x,y,next_target.x,next_target.y) > 320){exit;}
+	cancel_basic_attack();
+	ds_list_clear(c_lightning_hitList);
+	statmap[? "mp"] -= 20;
+
+	cd[3] = maxcd[3];
+	atkTimer = 30;
+	canAttack = false;
+	canUseSkill = false;
+	
+	with(instance_create_layer(x,y,"Attacks",obj_skill_chain_lightning)){
+		user = other.id;
+		anchor = user;
+		target = next_target;
+		ds_map_copy(atkmap,user.statmap);
+		atkmap[? "dmgmod"]			= 90;
+		atkmap[? "element"]			= "lightning";
+			
+		atkmap[? "isSingleTarget"]	= true;
+		atkmap[? "isSingleHit"]		= true;
+		remaining = 3;	
+		
+		image_angle = point_direction(x,y,target.x,target.y);
+		image_xscale = point_distance(x,y,target.x,target.y)/sprite_get_width(spr_chain_lightning);
+	}
 }
 
 if(statmap[? "classlvl"] < 4){exit;}
