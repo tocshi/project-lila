@@ -16,9 +16,9 @@ skill_sprite[7] = spr_skill_D;
 skill_sprite[8] = spr_skill_F;
 skill_sprite[9] = spr_skill_G;
 
-maxcd[1] = room_speed*2;
-maxcd[2] = room_speed*2;
-maxcd[3] = room_speed*2;
+maxcd[1] = room_speed*3;
+maxcd[2] = room_speed*3;
+maxcd[3] = room_speed*3;
 maxcd[4] = room_speed*0;
 maxcd[5] = room_speed*0;
 maxcd[6] = room_speed*0;

@@ -1,7 +1,7 @@
 event_inherited();
 if(global.pause){exit;}
 
-if(keyboard_check_pressed(skill_button[1]) && (cd[1] <= 0) && statmap[? "mp"] >= 20 && canUseSkill){
+if(keyboard_check_pressed(skill_button[1]) && (cd[1] <= 0) && statmap[? "mp"] >= 25 && canUseSkill){
 	statmap[? "mp"] -= 20;
 	cd[1] = maxcd[1];
 	atkTimer = 10;
@@ -10,7 +10,7 @@ if(keyboard_check_pressed(skill_button[1]) && (cd[1] <= 0) && statmap[? "mp"] >=
 	with(instance_create_layer(x,y,"Attacks",obj_skill_fireball)){
 		user = other.id;
 		ds_map_copy(atkmap,other.statmap);
-		atkmap[? "dmgmod"]			= 120;
+		atkmap[? "dmgmod"]			= 180;
 
 		atkmap[? "element"]			= "fire";
 		atkmap[? "range"]			= 512;
@@ -24,7 +24,7 @@ if(keyboard_check_pressed(skill_button[1]) && (cd[1] <= 0) && statmap[? "mp"] >=
 }
 
 if(statmap[? "classlvl"] < 2){exit;}
-if(keyboard_check_pressed(skill_button[2]) && (cd[2] <= 0) && statmap[? "mp"] >= 20 && canUseSkill){
+if(keyboard_check_pressed(skill_button[2]) && (cd[2] <= 0) && statmap[? "mp"] >= 25 && canUseSkill){
 	cancel_basic_attack();
 	statmap[? "mp"] -= 20;
 
@@ -34,13 +34,13 @@ if(keyboard_check_pressed(skill_button[2]) && (cd[2] <= 0) && statmap[? "mp"] >=
 	with(instance_create_layer(x,y,"Attacks",obj_skill_blizzard)){
 		user = other.id;
 		ds_map_copy(atkmap,other.statmap);
-		atkmap[? "dmgmod"]		= 25;
+		atkmap[? "dmgmod"]		= 35;
 		atkmap[? "element"]		= "ice";
 	}	
 }
 
 if(statmap[? "classlvl"] < 3){exit;}
-if(keyboard_check_pressed(skill_button[3]) && (cd[3] <= 0) && statmap[? "mp"] >= 20 && canUseSkill){
+if(keyboard_check_pressed(skill_button[3]) && (cd[3] <= 0) && statmap[? "mp"] >= 25 && canUseSkill){
 	var next_target = instance_nearest(mouse_x,mouse_y,obj_enemy);
 	if(next_target == noone || point_distance(x,y,next_target.x,next_target.y) > 320){exit;}
 	cancel_basic_attack();
@@ -57,7 +57,7 @@ if(keyboard_check_pressed(skill_button[3]) && (cd[3] <= 0) && statmap[? "mp"] >=
 		anchor = user;
 		target = next_target;
 		ds_map_copy(atkmap,user.statmap);
-		atkmap[? "dmgmod"]			= 90;
+		atkmap[? "dmgmod"]			= 170;
 		atkmap[? "element"]			= "lightning";
 			
 		atkmap[? "isSingleTarget"]	= true;

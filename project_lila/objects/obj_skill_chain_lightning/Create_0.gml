@@ -6,4 +6,4 @@ anchor = noone;
 target = noone;
 remaining = 0;
 skill = 60;
-alarm[0] = 5;
+alarm[0] = 1;

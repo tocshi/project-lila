@@ -30,7 +30,7 @@ if(remaining > 0){
 			anchor = other.target;
 			target = other.next_target;
 			ds_map_copy(atkmap,user.statmap);
-			atkmap[? "dmgmod"]			= 90;
+			atkmap[? "dmgmod"]			= other.atkmap[? "dmgmod"]-20;
 			atkmap[? "element"]			= "lightning";
 			
 			atkmap[? "isSingleTarget"]	= true;

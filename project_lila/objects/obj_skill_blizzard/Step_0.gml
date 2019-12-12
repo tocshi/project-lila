@@ -2,7 +2,7 @@ x = user.x;
 y = user.y;
 
 if(skill >= 0){
-	if((skill % 30) == 1){
+	if((skill % 20) == 1){
 	ds_list_clear(hitList);
 	image_alpha = 0.4;
 	}
