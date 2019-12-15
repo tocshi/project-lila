@@ -1,6 +1,12 @@
 // Calculate stat changes from equipped items...move this to a script later you bimbo 
 if(!equipApplied){applyEquips(self.id);}
 
+// Become unstuck from a wall
+if(!place_free(x,y)){
+	var wall = instance_place(x,y,obj_wall_parent);
+	move_outside_solid(point_direction(wall.x,wall.y,x,y),10);
+}
+
 if(statChange){
 	recalcStats(self.id);
 	// Determine current atk element

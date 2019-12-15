@@ -2,7 +2,7 @@ if(ds_list_find_index(hitList,other.id) == -1){
 	ds_list_add(hitList,other.id);
 	
 	dmgCalc(other.id);
-	summon_stormpiercer_at_rate(user,other,20);
+	applyBuff(other,30,true,"Chilled",buff_generic,false,1,1,spr_buff_chilled,"The cold slows you down!",0);
 	
 	if(ds_map_find_value(global.itemData[| global.player.equips[0]],"unleashGauge") > 0 && global.player.essence >= 0){
 		if(random_range(0,100) < other.statmap[? "essence_rate"]){

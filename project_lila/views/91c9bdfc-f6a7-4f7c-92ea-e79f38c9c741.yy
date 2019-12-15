@@ -6,7 +6,10 @@
     "children": [
         "8c83dfc9-f351-44fc-ad7b-cb899f97ddf0",
         "1c060d42-f551-4d4b-a6f0-11807f0adc2a",
-        "900f3633-fc32-42a1-8cc9-363908b1fca8"
+        "900f3633-fc32-42a1-8cc9-363908b1fca8",
+        "fe20026a-32a2-4cdb-8956-3a59f7ac9954",
+        "438f225f-2517-4fc6-a4db-88f6bc043d77",
+        "d86ef875-354d-4aaa-a5a7-5eaa296d3ca0"
     ],
     "filterType": "GMSprite",
     "folderName": "Mage",

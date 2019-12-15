@@ -110,7 +110,26 @@ if(keyboard_check_pressed(skill_button[4]) && (cd[4] <= 0) && statmap[? "mp"] >=
 }
 
 if(statmap[? "classlvl"] < 6){exit;}
-if(keyboard_check_pressed(skill_button[6]) && (cd[6] <= 0) && statmap[? "mp"] >= 0 && canUseSkill){
+if(keyboard_check_pressed(skill_button[6]) && (cd[6] <= 0) && statmap[? "mp"] >= 45 && canUseSkill){
+	cancel_basic_attack();
+	statmap[? "mp"] -= 45;
+
+	cd[6] = maxcd[6];
+	isMoving = false;
+	canMove = false;
+	canAttack = false;
+	canUseSkill = false;
+	atkTimer = 10;
+	highRegenThreshold = 0;
+	
+	var dist = min(point_distance(x,y,mouse_x,mouse_y),480);
+	var dir = point_direction(x,y,mouse_x,mouse_y);
+	var xx = x + dcos(dir)*dist;
+	var yy = y - dsin(dir)*dist;
+	
+	with(instance_create_layer(xx,yy,"Terrain",obj_skill_volcano)){
+		user = other.id;
+	}
 }
 
 if(statmap[? "classlvl"] < 7){exit;}
@@ -118,7 +137,29 @@ if(keyboard_check_pressed(skill_button[7]) && (cd[7] <= 0) && statmap[? "mp"] >=
 }
 
 if(statmap[? "classlvl"] < 8){exit;}
-if(keyboard_check_pressed(skill_button[8]) && (cd[8] <= 0) && statmap[? "mp"] >= 0 && canUseSkill){
+if(keyboard_check_pressed(skill_button[8]) && (cd[8] <= 0) && statmap[? "mp"] >= 45 && canUseSkill){
+	cancel_basic_attack();
+	statmap[? "mp"] -= 45;
+
+	cd[8] = maxcd[8];
+	isMoving = false;
+	canMove = false;
+	canAttack = false;
+	canUseSkill = false;
+	atkTimer = 10;
+	highRegenThreshold = 0;
+	
+	var dist = min(point_distance(x,y,mouse_x,mouse_y),480);
+	var dir = point_direction(x,y,mouse_x,mouse_y);
+	var xx = x + dcos(dir)*dist;
+	var yy = y - dsin(dir)*dist;
+	
+	with(instance_create_layer(xx,yy-600,"Attacks",obj_skill_lightning_rod)){
+		user = other.id;
+		ds_map_copy(atkmap,other.statmap);
+		atkmap[? "dmgmod"]		= 150;
+		atkmap[? "element"]		= "lightning";
+	}
 }
 
 if(statmap[? "classlvl"] < 9){exit;}

@@ -25,14 +25,13 @@ camera_set_view_speed(global.currentCamera,cam_speed,cam_speed);
 // Standard Movement
 if(mouse_check_button(mb_right) && canMove){
 	
-	if(point_distance(x,y,mouse_x,mouse_y) > statmap[? "movespeed"]){
+	if(point_distance(x,y,mouse_x,mouse_y) > 48){
 		destX = mouse_x;
 		destY = mouse_y;
 		isMoving = true;
+		instance_destroy(obj_player_move_indicator);
+		with(instance_create_layer(destX,destY,"Assets_1",obj_player_move_indicator)){player = other;}
 	}
-	instance_destroy(obj_player_move_indicator);
-	with(instance_create_layer(destX,destY,"Assets_1",obj_player_move_indicator)){player = other;}
-	
 }
 
 if(isMoving && canMove){

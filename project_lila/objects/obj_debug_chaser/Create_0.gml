@@ -4,6 +4,7 @@ statmap[? "maxhp"] = 500;
 statmap[? "hp"] = 500;
 statmap[? "hpregen"] = 1;
 statmap[? "mpregen"] = 0;
+statmap[? "movespeed"] = 3;
 
 ds_map_copy(basestatmap, statmap);
 

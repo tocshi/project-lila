@@ -279,6 +279,14 @@
             }
         },
         {
+            "Key": "1873f0df-cc63-4db4-9f90-708e6d2aabd8",
+            "Value": {
+                "id": "8c0e29fd-3c77-4605-9911-bf0f05f7d0b8",
+                "resourcePath": "objects\\obj_chill_effect\\obj_chill_effect.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "1a865427-c9be-490e-9d24-a2ebfb6a66d4",
             "Value": {
                 "id": "a565963a-a049-42ea-9296-dbaa7df3032f",
@@ -647,6 +655,14 @@
             }
         },
         {
+            "Key": "438f225f-2517-4fc6-a4db-88f6bc043d77",
+            "Value": {
+                "id": "58916cb5-d7d7-4f7c-a51f-5e086bd21cbb",
+                "resourcePath": "sprites\\spr_icicle_salvo\\spr_icicle_salvo.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "44ffab31-a895-4b8c-9782-b1a17bff67ef",
             "Value": {
                 "id": "4d857574-76c9-4f06-879d-f9e4fe95f221",
@@ -775,6 +791,14 @@
             }
         },
         {
+            "Key": "595c22dc-2769-49fd-8fdd-a7bb84c2bae5",
+            "Value": {
+                "id": "7a444125-6e31-4441-8939-5dd544963c70",
+                "resourcePath": "sprites\\spr_buff_burning\\spr_buff_burning.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "59a1a4fe-9a4e-480f-8e96-03a7b36d280f",
             "Value": {
                 "id": "0107878b-7842-41f9-aad3-f3b586250887",
@@ -819,6 +843,14 @@
             "Value": {
                 "id": "34eb7d01-010d-453d-8a76-93a15b2475db",
                 "resourcePath": "objects\\obj_debug_sandbag\\obj_debug_sandbag.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "606b9b84-163b-4019-ac0f-4d71a0c15808",
+            "Value": {
+                "id": "5d588fe9-bf00-4741-93b1-5e3be09458ab",
+                "resourcePath": "objects\\obj_skill_volcano_shot\\obj_skill_volcano_shot.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1239,6 +1271,14 @@
             }
         },
         {
+            "Key": "93387c61-9559-4ab9-861b-131a16391286",
+            "Value": {
+                "id": "950e98ca-16bd-4a87-a2d2-27c88ed79d53",
+                "resourcePath": "objects\\obj_skill_volcano\\obj_skill_volcano.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "938dcb2c-1eaa-48c7-81fc-1de10b189909",
             "Value": {
                 "id": "3af4250d-1e80-42b8-bb7f-d93f7a2f19e4",
@@ -1535,6 +1575,14 @@
             }
         },
         {
+            "Key": "bd1bf55d-c2e1-40c8-865e-87d150ef7cfd",
+            "Value": {
+                "id": "50736a7e-e53b-482e-8ee0-1278b62e5d3b",
+                "resourcePath": "sprites\\spr_buff_electrified\\spr_buff_electrified.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "bd3a5b51-f368-4692-a41e-38ab49a32dd9",
             "Value": {
                 "id": "a3fd999c-0707-4b04-ac68-c29e31a741a2",
@@ -1687,6 +1735,14 @@
             }
         },
         {
+            "Key": "cfe9a7e9-b7cb-4785-af27-690ff1efb877",
+            "Value": {
+                "id": "b17099d4-1abb-45db-a2eb-dcbe72e56cd4",
+                "resourcePath": "sprites\\spr_chill_effect\\spr_chill_effect.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "d0317987-6417-4571-8711-3f84fb013e4d",
             "Value": {
                 "id": "734a949a-854a-401f-9459-0d1b909d76f5",
@@ -1764,6 +1820,14 @@
                 "id": "292ad5b1-f709-40f4-8439-41dcd5a0e863",
                 "resourcePath": "scripts\\draw_text_outlined_extra\\draw_text_outlined_extra.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "d86ef875-354d-4aaa-a5a7-5eaa296d3ca0",
+            "Value": {
+                "id": "0752d74e-c7e6-4326-8c0e-0e474e2473f1",
+                "resourcePath": "sprites\\spr_lightning_rod\\spr_lightning_rod.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -1860,6 +1924,22 @@
                 "id": "f6c8b314-8844-4367-a4cf-9ed9783b4500",
                 "resourcePath": "objects\\obj_skill_aegis_aura_effect\\obj_skill_aegis_aura_effect.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "e372db23-08e7-46e4-a511-57a409d3cf43",
+            "Value": {
+                "id": "d540b745-1538-4e99-a9d0-08899f2d4e72",
+                "resourcePath": "objects\\obj_skill_lightning_rod\\obj_skill_lightning_rod.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "e3fb38bd-8e9e-4288-8857-de8e05fbe8d0",
+            "Value": {
+                "id": "86e70c03-c5aa-4837-85ba-301c092813f1",
+                "resourcePath": "sprites\\spr_buff_chilled\\spr_buff_chilled.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -2108,6 +2188,14 @@
                 "id": "7928c0fb-59d9-4ee8-bf63-d3f4e5d57f48",
                 "resourcePath": "objects\\obj_basicattack_arrow\\obj_basicattack_arrow.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "fe20026a-32a2-4cdb-8956-3a59f7ac9954",
+            "Value": {
+                "id": "57e71ca6-ebff-4aa0-93da-d890e48b1bfe",
+                "resourcePath": "sprites\\spr_volcano\\spr_volcano.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

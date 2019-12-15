@@ -90,7 +90,7 @@ if(instance_exists(target) && ds_exists(target.statmap,ds_type_map)){
 	}
 }
 atkmap[? "isCrit"]			= false;
-	
+
 if(ds_map_exists(atkmap,"isPiercing") && ds_map_exists(atkmap,"isProjectile")){
 	if(!atkmap[? "isPiercing"]){
 		ds_map_destroy(atkmap);
@@ -98,3 +98,4 @@ if(ds_map_exists(atkmap,"isPiercing") && ds_map_exists(atkmap,"isProjectile")){
 		instance_destroy();
 	}
 }
+
