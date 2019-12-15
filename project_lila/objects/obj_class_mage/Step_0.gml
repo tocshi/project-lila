@@ -133,7 +133,44 @@ if(keyboard_check_pressed(skill_button[6]) && (cd[6] <= 0) && statmap[? "mp"] >=
 }
 
 if(statmap[? "classlvl"] < 7){exit;}
-if(keyboard_check_pressed(skill_button[7]) && (cd[7] <= 0) && statmap[? "mp"] >= 0 && canUseSkill){
+if(keyboard_check_pressed(skill_button[7]) && (cd[7] <= 0) && statmap[? "mp"] >= 45 && canUseSkill){
+	ds_list_clear(i_salvo_targets);
+	var targets = collision_circle_list(x,y,480,obj_enemy,true,true,i_salvo_targets,false);
+	if(targets <= 0){exit;}
+	
+	cancel_basic_attack();
+	statmap[? "mp"] -= 45;
+	
+	var remaining = 6;
+	ds_list_clear(i_salvo_hitList);
+	
+	
+	cd[7] = maxcd[7];
+	isMoving = false;
+	canMove = false;
+	canAttack = false;
+	canUseSkill = false;
+	atkTimer = 30;
+	highRegenThreshold = 0;
+	
+	while(remaining > 0){
+		for(var i = 0; i < ds_list_size(i_salvo_targets); ++i){
+			with(instance_create_layer(x+i_salvo_coords[i,0],y+i_salvo_coords[i,1],"Attacks",obj_skill_icicle_salvo)){
+				user = other.id;
+				ds_map_copy(atkmap,other.statmap);
+				atkmap[? "dmgmod"]			= 220;
+				atkmap[? "element"]			= "ice";
+				atkmap[? "isProjectile"]	= true;
+				atkmap[? "isPiercing"]		= false;
+				
+				target = other.i_salvo_targets[| i];
+				direction = point_direction(other.x,other.y,x,y);
+				image_angle = direction;
+			}
+			remaining--;
+			if(remaining <= 0){break;}
+		}
+	}	
 }
 
 if(statmap[? "classlvl"] < 8){exit;}

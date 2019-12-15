@@ -1847,6 +1847,14 @@
             }
         },
         {
+            "Key": "db8e773a-8c48-4c79-9b2d-fab9b9236171",
+            "Value": {
+                "id": "da647269-a40f-48c1-b53e-d2c89a357884",
+                "resourcePath": "objects\\obj_skill_icicle_salvo\\obj_skill_icicle_salvo.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "dbaa681c-3c24-4d78-9276-65b3b5d581bf",
             "Value": {
                 "id": "42f77ae4-06a3-4580-b150-4db2c52966d4",
