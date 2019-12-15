@@ -1751,6 +1751,14 @@
             }
         },
         {
+            "Key": "95fc46a0-298d-4733-8195-bbdc3d18bba1",
+            "Value": {
+                "id": "326e4f16-ad46-4e96-a684-c2998b360921",
+                "resourcePath": "objects\\obj_console\\obj_console.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "97935ced-0e61-49c0-baec-f6bfa8c9e3ac",
             "Value": {
                 "id": "bbd7d8ed-87d2-490a-919b-498f42a3f771",
