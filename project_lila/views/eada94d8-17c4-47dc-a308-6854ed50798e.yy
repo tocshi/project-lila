@@ -6,7 +6,9 @@
     "children": [
         "d60fa33f-c924-4e6a-b789-09db05159c1b",
         "fe87bd4e-732d-4a16-abbb-828d16b340b6",
-        "bdc68a9b-2c3c-4c1e-b962-6ae16b93b2aa"
+        "bdc68a9b-2c3c-4c1e-b962-6ae16b93b2aa",
+        "5f8a3f3f-64e2-4b7b-b545-a86e827284e8",
+        "4b557849-049b-412d-972b-23dfcfe740b7"
     ],
     "filterType": "GMObject",
     "folderName": "Mage",

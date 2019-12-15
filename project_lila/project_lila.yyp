@@ -551,14 +551,6 @@
             }
         },
         {
-            "Key": "36c513a5-d959-430a-a52b-c18569d49c0b",
-            "Value": {
-                "id": "d41efe1e-aa04-4f78-b1b7-a2feb45f2519",
-                "resourcePath": "scripts\\hit_flinch\\hit_flinch.yy",
-                "resourceType": "GMScript"
-            }
-        },
-        {
             "Key": "395579f5-3ff3-4d2c-8032-f3a028cb7581",
             "Value": {
                 "id": "49a93f4a-ddc6-45fb-b02c-684cec31b93a",
@@ -695,6 +687,14 @@
             }
         },
         {
+            "Key": "4b557849-049b-412d-972b-23dfcfe740b7",
+            "Value": {
+                "id": "d5f17241-c19c-497c-89e6-2ca013aebc8d",
+                "resourcePath": "objects\\obj_skill_blink_end\\obj_skill_blink_end.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "4b80aa97-fc6e-4cc3-ab7e-9963874e2f8b",
             "Value": {
                 "id": "5e5b80da-094c-4654-a01b-50059fb8b4af",
@@ -803,6 +803,14 @@
             "Value": {
                 "id": "fcdd3468-79d9-47a2-a2a2-7dc666983701",
                 "resourcePath": "objects\\obj_debug_enemy\\obj_debug_enemy.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "5f8a3f3f-64e2-4b7b-b545-a86e827284e8",
+            "Value": {
+                "id": "ec2eed96-50cc-4133-ae8e-3b82da26ecb2",
+                "resourcePath": "objects\\obj_skill_blink_start\\obj_skill_blink_start.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1151,6 +1159,14 @@
             }
         },
         {
+            "Key": "8b4b77c8-f3a4-4a86-b94f-e0d44e68c744",
+            "Value": {
+                "id": "af1d8e25-a2d0-4552-8066-f1a38cd5cc39",
+                "resourcePath": "objects\\obj_meditation\\obj_meditation.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "8c3fe88a-6c84-4595-b02d-b308a4028df3",
             "Value": {
                 "id": "580c2fe2-1c1e-4f2b-b842-8cc916da8446",
@@ -1180,6 +1196,14 @@
                 "id": "b84badac-6020-4275-9e7d-d51da5435341",
                 "resourcePath": "paths\\path_debug_runner1\\path_debug_runner1.yy",
                 "resourceType": "GMPath"
+            }
+        },
+        {
+            "Key": "900f3633-fc32-42a1-8cc9-363908b1fca8",
+            "Value": {
+                "id": "0eab4baa-86f0-4b01-901e-48cac1bcf162",
+                "resourcePath": "sprites\\spr_blink_end\\spr_blink_end.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -2156,11 +2180,7 @@
         "1bb58460-a0f2-4852-bbc5-146c2d53a6ae",
         "be0ba224-53d3-4ac9-8bae-1fd82802d88a",
         "c6eddf3a-011d-4cde-95c8-3bf3dc25957f",
-        "36c513a5-d959-430a-a52b-c18569d49c0b",
-        "dc789532-e5d9-4952-bd1b-c850b7589847",
-        "a4736812-0af2-454e-b514-b2a70495c0f4",
         "1e334b20-b2fe-4992-a3c8-9616aa15dee6",
-        "bd19d0d2-92fb-4ad9-908b-3f2f51956b86",
         "792dfe82-3653-4cb6-96b8-db2a2e95aa86",
         "395e8df5-83cc-49f1-a7cd-909842e7d84f",
         "0921d80d-330d-437f-86f9-a8da727c6a49",
@@ -2183,6 +2203,9 @@
         "d784e273-cb94-4612-9126-e9d532adb3af",
         "e67821dd-d229-4427-9b17-965a5a7c4fa1",
         "bfb5c20c-e571-4f07-953a-8992fd59bd77",
+        "dc789532-e5d9-4952-bd1b-c850b7589847",
+        "a4736812-0af2-454e-b514-b2a70495c0f4",
+        "bd19d0d2-92fb-4ad9-908b-3f2f51956b86",
         "454cdb76-1bb0-49cd-ac5f-cdc5c38c5413"
     ],
     "tutorial": ""

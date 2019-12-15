@@ -1,5 +1,5 @@
 global.player = self.id;
-global.currentCamera = camera_create_view(800,450,1600,900,0,self.id,100,100,640,360);
+global.currentCamera = camera_create_view(800,450,1600,900,0,self.id,100,100,800,450);
 view_set_camera(view_current,global.currentCamera);
 view_set_wport(view_current,1600);
 view_set_hport(view_current,900);
@@ -19,7 +19,7 @@ statmap[? "hp"]				= statmap[? "maxhp"];
 statmap[? "hpshield"]		= 0;
 statmap[? "hpregen"]		= statmap[? "maxhp"]/100/60;//0.02 + statmap[? "level"]*0.002;
 statmap[? "maxmp"]			= 100;
-statmap[? "mp"]				= 100;
+statmap[? "mp"]				= statmap[? "maxmp"];
 statmap[? "mpregen"]		= 0.01666*10; //doubled if canMove && !isMoving
 statmap[? "atk"]			= 0;
 statmap[? "def"]			= 0;

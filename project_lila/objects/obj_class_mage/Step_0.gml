@@ -70,11 +70,43 @@ if(keyboard_check_pressed(skill_button[3]) && (cd[3] <= 0) && statmap[? "mp"] >=
 }
 
 if(statmap[? "classlvl"] < 4){exit;}
-if(keyboard_check_pressed(skill_button[4]) && (cd[4] <= 0) && statmap[? "mp"] >= 0 && canUseSkill){
-}
+if(keyboard_check_pressed(skill_button[4]) && (cd[4] <= 0) && statmap[? "mp"] >= 15 && canUseSkill){
+	cancel_basic_attack();
+	statmap[? "mp"] -= 15;
 
-if(statmap[? "classlvl"] < 5){exit;}
-if(keyboard_check_pressed(skill_button[5]) && (cd[5] <= 0) && statmap[? "mp"] >= 0 && canUseSkill){
+	highRegenThreshold = 0;
+	isMoving = false;
+	
+	for(var i = 0; i < instance_number(obj_skill_blink_start); ++i){
+		var blink = instance_find(obj_skill_blink_start,i);
+		if(blink.user == self){
+			instance_create_layer(blink.x,blink.y,"Attacks",obj_skill_blink_end);
+			x = blink.x;
+			y = blink.y;
+			blink.skill = 0;
+			exit;
+		}
+	}
+	
+	with(instance_create_layer(x,y,"Ground",obj_skill_blink_start)){
+		user = other.id;
+	}
+	var dist = min(point_distance(x,y,mouse_x,mouse_y),420);
+	var dir = point_direction(x,y,mouse_x,mouse_y);
+	
+	var xx = x + dcos(dir)*dist;
+	var yy = y - dsin(dir)*dist;
+	var attempt = 0;
+	while(collision_circle(xx,yy,33,obj_wall_parent,false,true)){
+		xx = lerp(xx,x,0.01);
+		yy = lerp(yy,y,0.01);
+		attempt++;
+		if(attempt >= 300){break;}
+	}
+	var blink = instance_create_layer(xx,yy,"Attacks",obj_skill_blink_end);
+	x = xx;
+	y = yy;
+	cd[4] = 30;
 }
 
 if(statmap[? "classlvl"] < 6){exit;}
