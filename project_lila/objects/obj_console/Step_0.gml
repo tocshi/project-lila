@@ -5,21 +5,21 @@ if (keyboard_check_pressed(vk_escape)) {
 }
 if (!active) exit;
 if (keyboard_check_pressed(vk_enter)) {
-	switch (keyboard_key) {
+	switch (keyboard_string) {
 		default: list_add(lines, text + " is not a valid command");	
 	}
 	if (ds_list_size(lines) > 20) {
 		ds_list_delete(lines, 0);
 	}
-	keyboard_key = "";
+	keyboard_string = "";
 	caret = 0;
 	exit;
 }
 
 if (keyboard_check_pressed(vk_left)) {
 	 caret++;
-	 if (caret > string_length(keyboard_key) ){
-		 caret = string_length(keyboard_key);
+	 if (caret > string_length(keyboard_string) ){
+		 caret = string_length(keyboard_string);
 	 }
 }
 
