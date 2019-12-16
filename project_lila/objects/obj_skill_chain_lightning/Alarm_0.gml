@@ -3,6 +3,14 @@ if(!instance_exists(target) || !instance_exists(anchor)){
 	instance_destroy();
 	exit;
 }
+if(primordial){
+	with(instance_create_layer(target.x,target.y,"Attacks",obj_skill_supercell_lightning)){
+		user = other.user;
+		ds_map_copy(atkmap,user.statmap);
+		atkmap[? "dmgmod"]			= 200;
+		atkmap[? "element"]			= "lightning";
+	}
+}
 
 dmgCalc(target.id);
 if(ds_map_find_value(global.itemData[| global.player.equips[0]],"unleashGauge") > 0 && global.player.essence >= 0){
@@ -36,6 +44,7 @@ if(remaining > 0){
 			atkmap[? "isSingleTarget"]	= true;
 			atkmap[? "isSingleHit"]		= true;
 			remaining = other.remaining-1;
+			primordial = other.primordial;
 		}
 	}
 }

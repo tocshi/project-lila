@@ -4,6 +4,7 @@ mask_index = spr_empty;
 user = noone;
 anchor = noone;
 target = noone;
+primordial = false;
 remaining = 0;
 skill = 60;
 alarm[0] = 1;

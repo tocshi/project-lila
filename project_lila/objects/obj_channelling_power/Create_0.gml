@@ -1,0 +1,8 @@
+target = 0;
+fading = false;
+alpha_multiplier = 1;
+scale_multiplier = 1;
+mask_index = spr_essence;
+speed = 0;
+image_alpha = 0.25;
+image_angle = random_range(0,359);

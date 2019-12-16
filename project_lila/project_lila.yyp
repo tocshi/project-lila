@@ -311,6 +311,14 @@
             }
         },
         {
+            "Key": "1bb459f3-514a-423d-b0a3-fc1fccd64151",
+            "Value": {
+                "id": "513d9220-1303-48e8-b95d-26d8eacb0023",
+                "resourcePath": "sprites\\spr_primordial_mana\\spr_primordial_mana.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "1bb58460-a0f2-4852-bbc5-146c2d53a6ae",
             "Value": {
                 "id": "41a6e962-bd2a-473b-b4a3-5b402191dee4",
@@ -487,11 +495,27 @@
             }
         },
         {
+            "Key": "2df51ad4-9555-4a64-b13e-7e4988daa0f7",
+            "Value": {
+                "id": "aa05e6fa-bb2b-481c-8716-dcb55c9ef11e",
+                "resourcePath": "objects\\obj_skill_mana_detonation\\obj_skill_mana_detonation.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "2ec2bdf0-74d8-40f4-b222-d5a502d99f2d",
             "Value": {
                 "id": "a918425c-ea4a-4564-b32c-7f85a81358dd",
                 "resourcePath": "scripts\\removeBuff\\removeBuff.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "2f35cf99-a250-4c02-9a70-c7edbc1961d8",
+            "Value": {
+                "id": "09b465af-0739-4318-9f0a-0c323138df1d",
+                "resourcePath": "objects\\obj_skill_primordial_mana\\obj_skill_primordial_mana.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -607,6 +631,14 @@
             }
         },
         {
+            "Key": "3eaebf27-240c-48fe-8f74-8b687cc03977",
+            "Value": {
+                "id": "848d4f34-e70a-4444-9b64-357bcd207564",
+                "resourcePath": "sprites\\spr_mana_detonation\\spr_mana_detonation.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "3f2bf9fb-4c09-481a-8e96-b0e49dae544d",
             "Value": {
                 "id": "29a2fde9-ccd9-4139-8484-942fa9f5ce57",
@@ -644,6 +676,14 @@
                 "id": "ce5c4fb9-0f7b-4e21-9c3a-4da60563d4fe",
                 "resourcePath": "scripts\\summon_stormpiercer_at_rate\\summon_stormpiercer_at_rate.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "4271deed-c2ce-46ab-a82f-de1a4a3b4dfe",
+            "Value": {
+                "id": "99440522-7363-4ef4-aa0d-1cf22a0677ee",
+                "resourcePath": "objects\\obj_skill_absolute_zero\\obj_skill_absolute_zero.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -739,6 +779,14 @@
             "Value": {
                 "id": "63e30e78-5581-44b9-8400-8dba001ca403",
                 "resourcePath": "objects\\obj_allyhpbar\\obj_allyhpbar.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "5155a64d-b355-4dc0-9a9e-e3509f3f548d",
+            "Value": {
+                "id": "045ddbb1-0573-4e8d-8dea-cd8cd9e9687a",
+                "resourcePath": "objects\\obj_channelling_power\\obj_channelling_power.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1167,6 +1215,14 @@
             }
         },
         {
+            "Key": "885263ec-e95d-47e0-8424-0d168d2ed1ca",
+            "Value": {
+                "id": "b9c86495-381a-43da-8285-b5597cff673d",
+                "resourcePath": "objects\\obj_skill_supercell_lightning\\obj_skill_supercell_lightning.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "886ff4d8-77ba-4481-87ac-792b0eb6dd54",
             "Value": {
                 "id": "53469ead-84ea-4a0f-989b-cb33b1354209",
@@ -1194,7 +1250,7 @@
             "Key": "8b4b77c8-f3a4-4a86-b94f-e0d44e68c744",
             "Value": {
                 "id": "af1d8e25-a2d0-4552-8066-f1a38cd5cc39",
-                "resourcePath": "objects\\obj_meditation\\obj_meditation.yy",
+                "resourcePath": "objects\\obj_skill_meditation\\obj_skill_meditation.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1211,6 +1267,14 @@
             "Value": {
                 "id": "7b055019-c56e-4415-959c-c2929585210c",
                 "resourcePath": "sprites\\spr_fireball\\spr_fireball.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "8e661d89-19d4-4b58-9963-09b45232b527",
+            "Value": {
+                "id": "fa235031-73aa-4793-b565-4d689d41d218",
+                "resourcePath": "sprites\\spr_buff_primordial_mana\\spr_buff_primordial_mana.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1724,6 +1788,14 @@
                 "id": "a7f75eaa-1599-425e-bc11-9b8683628158",
                 "resourcePath": "options\\windows\\options_windows.yy",
                 "resourceType": "GMWindowsOptions"
+            }
+        },
+        {
+            "Key": "cd96c53a-99d6-404d-8fe7-aebd18add87f",
+            "Value": {
+                "id": "50a5e4c1-220f-407e-bb4c-46efdef78db6",
+                "resourcePath": "objects\\obj_skill_meteor_drive\\obj_skill_meteor_drive.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -2253,12 +2325,12 @@
         "f0bb7809-f8cf-470e-bc05-8cbab77fe645",
         "f61ce2ab-e321-476e-b7b8-74428952e51c",
         "2ec2bdf0-74d8-40f4-b222-d5a502d99f2d",
+        "26c78fed-782c-40cc-8047-175eefc128a7",
         "3a63ea38-8103-469d-9c0c-593d7c43a19a",
         "4160ac60-2dc6-4341-badb-0e6001f5796f",
         "c1f6a15f-4197-4c91-93b5-c0d5f2138201",
         "f6280391-517c-4874-bda0-f728d9216e7e",
         "fd6b1776-4f10-456f-aa1b-eea273e03b74",
-        "26c78fed-782c-40cc-8047-175eefc128a7",
         "a2b5f266-031d-44f2-b634-d9e0fd90376a",
         "0e22571b-b58c-4334-a6bd-9a49a4087428",
         "b06652dd-1c2f-40e5-b638-8a09dd85c4f5",

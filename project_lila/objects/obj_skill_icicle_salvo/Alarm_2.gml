@@ -1,0 +1,12 @@
+atkmap[? "isProjectile"]	= false;
+atkmap[? "isPiercing"]	= true;
+flying = false;
+speed = 0;
+sprite_index = spr_debug_indicator;
+image_xscale = 2;
+image_angle = 90;
+image_blend = c_aqua;
+image_yscale = image_xscale;
+mask_index = sprite_index;
+fading = true;
+alarm[1] = 1;

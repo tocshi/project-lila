@@ -2,40 +2,66 @@ event_inherited();
 if(global.pause){exit;}
 
 if(keyboard_check_pressed(skill_button[1]) && (cd[1] <= 0) && statmap[? "mp"] >= 25 && canUseSkill){
-	statmap[? "mp"] -= 20;
 	cd[1] = maxcd[1];
+	statmap[? "mp"] -= 25;
 	atkTimer = 10;
 	canAttack = false;
 	canUseSkill = false;
-	with(instance_create_layer(x,y,"Attacks",obj_skill_fireball)){
-		user = other.id;
-		ds_map_copy(atkmap,other.statmap);
-		atkmap[? "dmgmod"]			= 180;
+	if(hasBuff(self,"Primordial Mana")){
+		removeBuff(self,"Primordial Mana",false);
+		with(instance_create_layer(x,y,"Attacks",obj_skill_meteor_drive)){
+			user = other.id;
+			ds_map_copy(atkmap,other.statmap);
+			atkmap[? "dmgmod"]			= 260;
+			atkmap[? "element"]			= "fire";
+			atkmap[? "range"]			= 512;
 
-		atkmap[? "element"]			= "fire";
-		atkmap[? "range"]			= 512;
+			atkmap[? "isProjectile"]	= true;
+			atkmap[? "isPiercing"]		= true;
+			
+		}
+	}
+	else{
+		with(instance_create_layer(x,y,"Attacks",obj_skill_fireball)){
+			user = other.id;
+			ds_map_copy(atkmap,other.statmap);
+			atkmap[? "dmgmod"]			= 180;
 
-		atkmap[? "isProjectile"]	= true;
-		atkmap[? "isPiercing"]		= false;
-		atkmap[? "isSingleTarget"]	= true;
-		atkmap[? "isSingleHit"]		= true;
-		skill = atkmap[? "range"]/speed;
+			atkmap[? "element"]			= "fire";
+			atkmap[? "range"]			= 512;
+
+			atkmap[? "isProjectile"]	= true;
+			atkmap[? "isPiercing"]		= false;
+			atkmap[? "isSingleTarget"]	= true;
+			atkmap[? "isSingleHit"]		= true;
+			skill = atkmap[? "range"]/speed;
+		}
 	}
 }
 
 if(statmap[? "classlvl"] < 2){exit;}
 if(keyboard_check_pressed(skill_button[2]) && (cd[2] <= 0) && statmap[? "mp"] >= 25 && canUseSkill){
 	cancel_basic_attack();
-	statmap[? "mp"] -= 20;
+	statmap[? "mp"] -= 25;
 
 	cd[2] = maxcd[2];
 	highRegenThreshold = 0;
-	
-	with(instance_create_layer(x,y,"Attacks",obj_skill_blizzard)){
-		user = other.id;
-		ds_map_copy(atkmap,other.statmap);
-		atkmap[? "dmgmod"]		= 35;
-		atkmap[? "element"]		= "ice";
+	if(hasBuff(self,"Primordial Mana")){
+		removeBuff(self,"Primordial Mana",false);
+		with(instance_create_layer(x,y,"Attacks",obj_skill_absolute_zero)){
+			user = other.id;
+			ds_map_copy(atkmap,other.statmap);
+			atkmap[? "dmgmod"]		= 640;
+			atkmap[? "element"]		= "ice";
+		}
+	}
+	else{
+		with(instance_create_layer(x,y,"Attacks",obj_skill_blizzard)){
+			user = other.id;
+			ds_map_copy(atkmap,other.statmap);
+			atkmap[? "dmgmod"]		= 35;
+			atkmap[? "element"]		= "ice";
+		}
 	}	
 }
 
@@ -45,7 +71,7 @@ if(keyboard_check_pressed(skill_button[3]) && (cd[3] <= 0) && statmap[? "mp"] >=
 	if(next_target == noone || point_distance(x,y,next_target.x,next_target.y) > 320){exit;}
 	cancel_basic_attack();
 	ds_list_clear(c_lightning_hitList);
-	statmap[? "mp"] -= 20;
+	statmap[? "mp"] -= 25;
 
 	cd[3] = maxcd[3];
 	atkTimer = 30;
@@ -62,8 +88,15 @@ if(keyboard_check_pressed(skill_button[3]) && (cd[3] <= 0) && statmap[? "mp"] >=
 			
 		atkmap[? "isSingleTarget"]	= true;
 		atkmap[? "isSingleHit"]		= true;
-		remaining = 3;	
-		
+		if(hasBuff(user,"Primordial Mana")){
+			removeBuff(user,"Primordial Mana",false);
+			self.remaining = 8;	
+			primordial = true;
+		}
+		else{
+			self.remaining = 3;
+		}
+			
 		image_angle = point_direction(x,y,target.x,target.y);
 		image_xscale = point_distance(x,y,target.x,target.y)/sprite_get_width(spr_chain_lightning);
 	}
@@ -143,7 +176,7 @@ if(keyboard_check_pressed(skill_button[7]) && (cd[7] <= 0) && statmap[? "mp"] >=
 	
 	var remaining = 6;
 	ds_list_clear(i_salvo_hitList);
-	
+	ds_list_shuffle(i_salvo_targets);
 	
 	cd[7] = maxcd[7];
 	isMoving = false;
@@ -155,7 +188,7 @@ if(keyboard_check_pressed(skill_button[7]) && (cd[7] <= 0) && statmap[? "mp"] >=
 	
 	while(remaining > 0){
 		for(var i = 0; i < ds_list_size(i_salvo_targets); ++i){
-			with(instance_create_layer(x+i_salvo_coords[i,0],y+i_salvo_coords[i,1],"Attacks",obj_skill_icicle_salvo)){
+			with(instance_create_layer(x+i_salvo_coords[remaining-1,0],y+i_salvo_coords[remaining-1,1],"Attacks",obj_skill_icicle_salvo)){
 				user = other.id;
 				ds_map_copy(atkmap,other.statmap);
 				atkmap[? "dmgmod"]			= 220;
@@ -184,7 +217,6 @@ if(keyboard_check_pressed(skill_button[8]) && (cd[8] <= 0) && statmap[? "mp"] >=
 	canAttack = false;
 	canUseSkill = false;
 	atkTimer = 10;
-	highRegenThreshold = 0;
 	
 	var dist = min(point_distance(x,y,mouse_x,mouse_y),480);
 	var dir = point_direction(x,y,mouse_x,mouse_y);
@@ -201,8 +233,31 @@ if(keyboard_check_pressed(skill_button[8]) && (cd[8] <= 0) && statmap[? "mp"] >=
 
 if(statmap[? "classlvl"] < 9){exit;}
 if(keyboard_check_pressed(skill_button[9]) && (cd[9] <= 0) && statmap[? "mp"] >= 40 && canUseSkill){
+	var next_target = instance_nearest(mouse_x,mouse_y,obj_enemy);
+	if(next_target == noone || point_distance(x,y,next_target.x,next_target.y) > 320){exit;}
+	cancel_basic_attack();
+	cd[9] = maxcd[9];
+	statmap[? "mp"] -= 40;
+	isMoving = false;
+	canMove = false;
+	canAttack = false;
+	canUseSkill = false;
+	atkTimer = 30;
+	with(instance_create_layer(next_target.x,next_target.y,"Attacks",obj_skill_mana_detonation)){
+		user = other;
+		target = next_target;
+		atkmap[? "dmgmod"]		= 280;
+		atkmap[? "element"]		= "none";
+	}
 }
 
 if(statmap[? "classlvl"] < 10){exit;}
-if(keyboard_check_pressed(skill_button[10]) && (cd[10] <= 0) && statmap[? "mp"] >= 0 && canUseSkill){
+if(keyboard_check_pressed(skill_button[10]) && (cd[10] <= 0) && statmap[? "mp"] >= 25 && canUseSkill){
+	cd[10] = maxcd[10];
+	statmap[? "mp"] -= 25;
+	highRegenThreshold = 0;
+	applyBuff(self,maxcd[10],true,"Primordial Mana",buff_generic,true,1,1,spr_buff_primordial_mana,"Enhances your next basic elemental spell with Primordial Mana.",0);
+	with(instance_create_layer(x,y+sprite_height/2,"Attacks",obj_skill_primordial_mana)){
+		user = other;
+	}
 }

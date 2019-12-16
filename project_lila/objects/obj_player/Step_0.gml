@@ -25,7 +25,7 @@ camera_set_view_speed(global.currentCamera,cam_speed,cam_speed);
 // Standard Movement
 if(mouse_check_button(mb_right) && canMove){
 	
-	if(point_distance(x,y,mouse_x,mouse_y) > 48){
+	if(point_distance(x,y,mouse_x,mouse_y) > 8){
 		destX = mouse_x;
 		destY = mouse_y;
 		isMoving = true;
