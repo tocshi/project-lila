@@ -5,19 +5,33 @@ if(canMove && !isMoving && !atkTimer){
 	highRegenThreshold = 0;
 }
 
+//STAT CLAMPING
+statmap[? "atkspeed"] = clamp(statmap[? "atkspeed"],0.01,10);
+statmap[? "movespeed"] = clamp(statmap[? "movespeed"],0,30);
+statmap[? "hp"] = clamp(statmap[? "hp"],0,statmap[? "maxhp"]);
+statmap[? "mp"] = clamp(statmap[? "mp"],0,statmap[? "maxmp"]);
+statmap[? "finalshld"] = clamp(statmap[? "finalshld"],-100,100);
+essence = clamp(essence,-1,unleashGauge*3);
+
 if(global.pause){
 	isMoving = false;
 	exit;}
 
+//SET CAMERA SPEED
+var cam_speed = point_distance(x,y,camera_get_view_x(global.currentCamera)+camera_get_view_width(global.currentCamera)/2,
+								camera_get_view_y(global.currentCamera)+camera_get_view_height(global.currentCamera)/2)/32;
+camera_set_view_speed(global.currentCamera,cam_speed,cam_speed);
+
 // Standard Movement
 if(mouse_check_button(mb_right) && canMove){
 	
-	destX = mouse_x;
-	destY = mouse_y;
-	instance_destroy(obj_player_move_indicator);
-	with(instance_create_layer(destX,destY,"Assets_1",obj_player_move_indicator)){player = other;}
-	isMoving = true;
-	
+	if(point_distance(x,y,mouse_x,mouse_y) > 8){
+		destX = mouse_x;
+		destY = mouse_y;
+		isMoving = true;
+		instance_destroy(obj_player_move_indicator);
+		with(instance_create_layer(destX,destY,"Assets_1",obj_player_move_indicator)){player = other;}
+	}
 }
 
 if(isMoving && canMove){
@@ -25,7 +39,6 @@ if(isMoving && canMove){
 }
 
 if(point_distance(x, y, destX, destY) < statmap[? "movespeed"] && canMove){
-		speed = 0;
 		isMoving = false;
 }
 

@@ -11,5 +11,5 @@ if(user.statmap[? "mp"] < 10){
 
 user.statmap[? "mp"] -= 10;
 
-applyBuff(user,600,true,"Aegis Aura",buff_generic,false,-1,0,spr_buff_aegis_aura,"Lorem Ipsum");
+applyBuff(user,600,true,"Aegis Aura",buff_generic,false,-1,0,spr_buff_aegis_aura,"Lorem Ipsum",0);
 with(instance_create_layer(x,y,"Attacks",obj_skill_aegis_aura_effect)){user = other.user;}

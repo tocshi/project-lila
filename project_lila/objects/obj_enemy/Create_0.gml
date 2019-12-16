@@ -10,7 +10,7 @@ statmap[? "hpregen"]		= 0.02;
 statmap[? "maxmp"]			= 100;
 statmap[? "mp"]				= 100;
 statmap[? "mpregen"]		= 0.1666;
-statmap[? "atk"]			= 10;
+statmap[? "atk"]			= 0;
 statmap[? "def"]			= 0;
 
 statmap[? "fire_atk"]		= 0;

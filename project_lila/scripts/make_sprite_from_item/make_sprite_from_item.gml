@@ -10,6 +10,9 @@ switch(ds_map_find_value(global.itemData[| itemid],"category")){
 	case "Bow":
 		sprite_set_offset(sprite,15,48);
 		break;
+	case "Spellbook":
+		sprite_set_offset(sprite,7,56);
+		break;
 	default:
 	return false;
 }
