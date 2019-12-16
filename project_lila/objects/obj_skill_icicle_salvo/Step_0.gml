@@ -1,3 +1,8 @@
+if(fading){
+	image_alpha-=0.02;
+	if(image_alpha <= 0){instance_destroy();}
+}
+if(!instance_exists(target)){exit;}
 if(flying){
 	speed+=0.1;
 	if(abs(direction-point_direction(x,y,target.x,target.y)) > 10){
@@ -17,7 +22,4 @@ if(time%15 == 0){
 	}
 }
 time++;
-if(fading){
-	image_alpha-=0.02;
-	if(image_alpha <= 0){instance_destroy();}
-}
+
