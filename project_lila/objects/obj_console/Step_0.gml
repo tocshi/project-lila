@@ -1,12 +1,7 @@
 /// @Description input text/execute line
-if (keyboard_check_pressed(vk_escape)) {
-		active = !active;
-		caret = 0;
-}
-if (!active) exit;
 if (keyboard_check_pressed(vk_enter)) {
 	switch (keyboard_string) {
-		default: list_add(lines, text + " is not a valid command");	
+		default: ds_list_add(lines, text + " is not a valid command");	
 	}
 	if (ds_list_size(lines) > 20) {
 		ds_list_delete(lines, 0);

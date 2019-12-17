@@ -114,3 +114,5 @@ ds_list_add(global.equipStats,
 	"blkmod");
 
 cursor_sprite = spr_cursor;
+console = instance_create_layer(0, 0, "GUIPopUp" , obj_console);
+instance_deactivate_object(console);
