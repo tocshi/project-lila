@@ -1,6 +1,10 @@
 /// @Description input text/execute line
 if (keyboard_check_pressed(vk_enter)) {
 	switch (keyboard_string) {
+		case "/die":
+			global.player.statmap[? "hp"] = 0;
+			ds_list_add(lines, text + ": Player killed");
+			break;
 		default: ds_list_add(lines, text + " is not a valid command");	
 	}
 	if (ds_list_size(lines) > 20) {
