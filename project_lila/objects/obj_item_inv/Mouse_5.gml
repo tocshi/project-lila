@@ -1,7 +1,7 @@
 /// @description Clear previous context menu and create a new one
 with (obj_context_menu) {instance_destroy();}
 with (obj_context_menu_button) {instance_destroy();}
-show_debug_message("Item Id at item slot: " + string(itemid));
+//show_debug_message("Item Id at item slot: " + string(itemid));
 var context_menu = instance_create_layer(mouse_x, mouse_y, "GUIPopUp", obj_context_menu);
 context_menu.itemid = itemid;
 context_menu.isEquipped	= type == EQUIP;

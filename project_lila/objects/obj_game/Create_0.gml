@@ -3,9 +3,9 @@ global.meter = 32;
 // Is the game paused?
 global.pause = 0;
 // Which menu to access when paused.
-global.gui_state = 0;
+global.gui_state = -1;
 // Player id
-global.player = 0;
+global.player = noone;
 
 // Item data parsing function
 itemDataFile = file_text_open_read("item_data.json");
@@ -22,6 +22,10 @@ global.itemData = ds_map_find_value(itemDataJson, "default");
 // Player inventory array and item quantity array
 global.playerInv = array_create(100,0);
 global.playerItems = array_create(ds_list_size(global.itemData),0);
+
+// Player class level & equip loadouts
+global.playerEquipLoadouts = ds_map_create();
+global.playerClassExp = ds_map_create();
 
 // Equipment pixel positions
 global.equipItemBox = array_create(12,[0,0]);

@@ -246,7 +246,7 @@ if(keyboard_check_pressed(skill_button[9]) && (cd[9] <= 0) && statmap[? "mp"] >=
 	with(instance_create_layer(next_target.x,next_target.y,"Attacks",obj_skill_mana_detonation)){
 		user = other;
 		target = next_target;
-		atkmap[? "dmgmod"]		= 280;
+		atkmap[? "dmgmod"]		= 340;
 		atkmap[? "element"]		= "none";
 	}
 }

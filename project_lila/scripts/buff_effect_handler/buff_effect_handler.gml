@@ -7,6 +7,7 @@ switch(buffName){
 	canAttack = false;
 	canUseSkill = false;
 	isCCed = true;
+	statmap[? "movespeed"]-=9999;
 	break;
 	
 	case "Empowered":

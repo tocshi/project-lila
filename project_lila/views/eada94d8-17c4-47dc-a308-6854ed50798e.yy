@@ -17,8 +17,8 @@
         "606b9b84-163b-4019-ac0f-4d71a0c15808",
         "db8e773a-8c48-4c79-9b2d-fab9b9236171",
         "e372db23-08e7-46e4-a511-57a409d3cf43",
-        "2f35cf99-a250-4c02-9a70-c7edbc1961d8",
-        "2df51ad4-9555-4a64-b13e-7e4988daa0f7"
+        "2df51ad4-9555-4a64-b13e-7e4988daa0f7",
+        "2f35cf99-a250-4c02-9a70-c7edbc1961d8"
     ],
     "filterType": "GMObject",
     "folderName": "Mage",

@@ -38,7 +38,8 @@ for(var i = 0; i < array_length_1d(itemBar); ++i){
 	
 	if((ds_map_find_value(global.itemData[| itemid],"type") == "consumable"
 	|| ds_map_find_value(global.itemData[| itemid],"type") == "key")
-	&& (global.playerItems[itemid] > 1)){
+	//&& (global.playerItems[itemid] > 1 || global.playerItems[itemid] == 0)
+	&& itemid > 0){
 		draw_set_halign(fa_right);
 		draw_set_valign(fa_bottom);
 		draw_set_color(c_black);
