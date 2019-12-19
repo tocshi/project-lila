@@ -40,8 +40,6 @@ switch(buffName){
 		statmap[? "def"]+=basestatmap[? "def"]*0.1;
 		statmap[? "def"]+=20;
 		statmap[? "hpregen"]+=2/room_speed;
-		show_debug_message(string(statmap[? "atk"]));
-		show_debug_message(string(statmap[? "def"]));
 	}
 	break;
 	

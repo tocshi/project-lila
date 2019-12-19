@@ -15,8 +15,6 @@ if(statmap[? "classlvl"] >= 6 && statChange){
 	origdef = basestatmap[? "def"];
 	statmap[? "atk"] += origdef*0.3;
 	statmap[? "def"] += origatk*0.3;
-	show_debug_message(statmap[? "atk"]);
-	show_debug_message(statmap[? "def"]);
 }
 
 if(shield_charge > 0){

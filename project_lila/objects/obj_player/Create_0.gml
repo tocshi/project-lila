@@ -108,6 +108,7 @@ skill_button[20]	= ord("0");
 
 //debug
 infmp = false;
+
 equips[0] = 10;
 equips[1] = 6;
 equips[4] = 7;
@@ -115,6 +116,7 @@ equips[7] = 8;
 equips[10] = 9;
 itemBar[0] = 22;
 itemBar[1] = 1;
+
 global.playerItems[1]+=20;
 if (findArrayIndex(global.playerInv, 1) == -1) {
 	for (var i=0; i < array_length_1d(global.playerInv); i++) {
