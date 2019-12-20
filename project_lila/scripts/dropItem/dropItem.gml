@@ -22,5 +22,8 @@ if (isEquipped) {
 }
 
 global.playerItems[itemid]--;
+if (global.playerItems[itemid] <= 0) {
+	global.playerInv[findArrayIndex(global.playerInv, itemid)] = 0;
+}
 
 dropItemAtRate(xx, yy, itemid, 1000);

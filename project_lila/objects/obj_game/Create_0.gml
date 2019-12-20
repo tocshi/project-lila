@@ -2,10 +2,17 @@
 global.meter = 32;
 // Is the game paused?
 global.pause = 0;
-// Which menu to access when paused.
-global.gui_state = -1;
 // Player id
 global.player = noone;
+
+// Which menu to access when paused.
+global.gui_state = 0;
+// Whether the cursor is holding over an item in inventory
+global.holding = false;
+// Whether an item is currently being dragged
+global.dragging = false;
+
+
 
 // Item data parsing function
 itemDataFile = file_text_open_read("item_data.json");
@@ -20,7 +27,7 @@ var itemDataJson = json_decode(itemDataStr);
 global.itemData = ds_map_find_value(itemDataJson, "default");
 
 // Player inventory array and item quantity array
-global.playerInv = array_create(100,0);
+global.playerInv = array_create(100, 0);
 global.playerItems = array_create(ds_list_size(global.itemData),0);
 
 // Player class level & equip loadouts

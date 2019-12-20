@@ -108,6 +108,7 @@ skill_button[20]	= ord("0");
 
 //debug
 infmp = false;
+
 itemBar[0] = 22;
 itemBar[1] = 1;
 itemBar[2] = 2;
@@ -127,5 +128,70 @@ global.playerItems[7]++;
 global.playerItems[8]++;
 global.playerItems[9]++;
 global.playerItems[18]++;
+if (findArrayIndex(global.playerInv, 1) == -1) {
+	for (var i=0; i < array_length_1d(global.playerInv); i++) {
+		if (global.playerInv[i] == 0) {
+			global.playerInv[i] = 1;
+			break;
+		}
+	}
+}
+if (findArrayIndex(global.playerInv, 6) == -1) {
+	for (var i=0; i < array_length_1d(global.playerInv); i++) {
+		if (global.playerInv[i] == 0) {
+			global.playerInv[i] = 1;
+			break;
+		}
+	}
+}
+if (findArrayIndex(global.playerInv, 7) == -1) {
+	for (var i=0; i < array_length_1d(global.playerInv); i++) {
+		if (global.playerInv[i] == 0) {
+			global.playerInv[i] = 1;
+			break;
+		}
+	}
+}
+if (findArrayIndex(global.playerInv, 8) == -1) {
+	for (var i=0; i < array_length_1d(global.playerInv); i++) {
+		if (global.playerInv[i] == 0) {
+			global.playerInv[i] = 1;
+			break;
+		}
+	}
+}
+if (findArrayIndex(global.playerInv, 9) == -1) {
+	for (var i=0; i < array_length_1d(global.playerInv); i++) {
+		if (global.playerInv[i] == 0) {
+			global.playerInv[i] = 1;
+			break;
+		}
+	}
+}
+if (findArrayIndex(global.playerInv, 10) == -1) {
+	for (var i=0; i < array_length_1d(global.playerInv); i++) {
+		if (global.playerInv[i] == 0) {
+			global.playerInv[i] = 1;
+			break;
+		}
+	}
+}
+if (findArrayIndex(global.playerInv, 11) == -1) {
+	for (var i=0; i < array_length_1d(global.playerInv); i++) {
+		if (global.playerInv[i] == 0) {
+			global.playerInv[i] = 1;
+			break;
+		}
+	}
+}
+if (findArrayIndex(global.playerInv, 18) == -1) {
+	for (var i=0; i < array_length_1d(global.playerInv); i++) {
+		if (global.playerInv[i] == 0) {
+			global.playerInv[i] = 1;
+			break;
+		}
+	}
+}
+
 
 

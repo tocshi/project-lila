@@ -26,8 +26,8 @@ switch(global.gui_state){
 		for(var i = 0; i < ds_list_size(global.itemData); ++i){
 			if(invSpace > 99){exit;}
 			if(global.playerItems[i] > 0){
-				var item = instance_create_layer(camera_get_view_x(global.currentCamera)+global.invItemBox[invSpace,0],
-												camera_get_view_y(global.currentCamera)+global.invItemBox[invSpace,1],
+				var item = instance_create_layer(camera_get_view_x(global.currentCamera)+global.invItemBox[findArrayIndex(global.playerInv, i),0],
+												camera_get_view_y(global.currentCamera)+global.invItemBox[findArrayIndex(global.playerInv, i),1],
 												"GUI",obj_item_inv);
 				item.type = item.INVEN;
 				item.sprite_index = asset_get_index(ds_map_find_value(global.itemData[| i],"sprite"));
@@ -39,6 +39,7 @@ switch(global.gui_state){
 				invSpace++;
 			}
 		}
+		
 		break;
 }
 
