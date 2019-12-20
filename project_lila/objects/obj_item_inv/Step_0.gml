@@ -32,6 +32,7 @@ if(global.gui_state == 0 && global.pause == 1){
 				with (instance_create_layer(x, y, "GUIPopup", obj_item_dragging)) {
 					sprite_index = other.sprite_index;
 					itemid = other.itemid;
+					origin_type = other.type;
 					origin_instance = other;
 					origin_slot = findArrayIndex(global.playerInv, itemid);
 				}
