@@ -1,8 +1,5 @@
 event_inherited();
 
+anchor = global.player;
 skill = 0;
-iter0 = 0;
-angle = 0;
-
 angle = 160;
-alarm[0] = 1;

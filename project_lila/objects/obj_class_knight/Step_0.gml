@@ -1,57 +1,23 @@
 event_inherited();
 if(global.pause){exit;}
 
-if(mouse_check_button_pressed(mb_left) && (atkTimer <= 0) && canAttack){
-	
-	speed = 0;
-	isMoving = false;
-	canMove = false;
-	canAttack = false;
-	canUseSkill = false;
-	atkTimer = room_speed/statmap[? "atkspeed"];
-	
-	var basic_attack = instance_create_layer(x,y,"Attacks",obj_basicattack_longsword);
-	iter0++;
-	basic_attack.iter0 = self.iter0;
-	
-	ds_map_copy(basic_attack.atkmap,statmap);
-	basic_attack.atkmap[? "dmgmod"]			= 100;
-	if(empowered_buff){
-		basic_attack.atkmap[? "dmgmod"]		= 250;
-		removeBuff(self.id,"Empowered",false);
-	}
-	basic_attack.atkmap[? "element"]		= "none";
-	
-	basic_attack.atkmap[? "sourceX"]		= x;
-	basic_attack.atkmap[? "sourceY"]		= y;
-	basic_attack.atkmap[? "flinch_amount"]	= 4;
-	
-	basic_attack.atkmap[? "isBasicAttack"]	= true;
-	basic_attack.atkmap[? "isSingleHit"]	= true;
-
-}
-
-
-if(keyboard_check_pressed(skill_button[1]) && (cd[1] <= 0) && statmap[? "mp"] >= 20){
+if(keyboard_check_pressed(skill_button[1]) && (cd[1] <= 0) && statmap[? "mp"] >= 20 && equips[0] > 0){
 	
 	statmap[? "mp"] -= 20;
 	var effect = instance_create_layer(x,y,"Instances",obj_debug_indicator);
 	effect.vspeed = -1;
 	cd[1] = maxcd[1];
 	
-	var skillobj = instance_create_layer(x,y,"Attacks",obj_skill_empowered_strike);
-	skillobj.atkmap[? "isBuff"] = true;
-	
-	applyBuff(self.id,5*room_speed,true,"Empowered",buff_empowered,false,-1,1,spr_buff_empowered,"Lorem Ipsum");
+	applyBuff(self.id,5*room_speed,true,"Empowered",buff_empowered,false,-1,1,spr_buff_empowered,"Lorem Ipsum",0);
 
-	empowered_buff = true;
 	statChange = true;
 }
 
 if(statmap[? "classlvl"] < 2){exit;}
 
 if(statmap[? "classlvl"] < 3){exit;}
-if(keyboard_check_pressed(skill_button[3]) && (cd[3] <= 0) && statmap[? "mp"] >= 30 && canUseSkill){
+if(keyboard_check_pressed(skill_button[3]) && (cd[3] <= 0) && statmap[? "mp"] >= 30 && canUseSkill && equips[0] > 0){
+	cancel_basic_attack();
 	
 	ds_list_clear(scList);
 	statmap[? "mp"] -= 30;
@@ -67,15 +33,15 @@ if(keyboard_check_pressed(skill_button[3]) && (cd[3] <= 0) && statmap[? "mp"] >=
 	direction = point_direction(x,y,mouse_x,mouse_y);
 	speed = 15;
 	
-	applyBuff(self.id,30,true,"Knight's Shield",buff_knights_shield,false,-1,0,spr_buff_knights_shield,"Lorem Ipsum");
+	applyBuff(self.id,30,true,"Knight's Shield",buff_knights_shield,false,-1,0,spr_buff_knights_shield,"Lorem Ipsum",0);
 
 	shield_charge = 29;
 
 }
 
 if(statmap[? "classlvl"] < 4){exit;}
-if(keyboard_check_pressed(skill_button[4]) && (cd[4] <= 0) && statmap[? "mp"] >= 20 && canUseSkill){
-	
+if(keyboard_check_pressed(skill_button[4]) && (cd[4] <= 0) && statmap[? "mp"] >= 20 && canUseSkill && equips[0] > 0){
+	cancel_basic_attack();
 	
 	statmap[? "mp"] -= 20;
 	cd[4] = maxcd[4];
@@ -85,15 +51,22 @@ if(keyboard_check_pressed(skill_button[4]) && (cd[4] <= 0) && statmap[? "mp"] >=
 	canUseSkill = false;
 	isMoving = false;
 	highRegenThreshold = 0;
-	var skillobj = instance_create_layer(x,y,"Attacks",obj_skill_roundslash);
-	skillobj.user  = self.id;
+	with(instance_create_layer(x,y,"Attacks",obj_skill_roundslash)){
+		user = other.id;
+		ds_map_copy(atkmap,user.statmap);
+		atkmap[? "element"] = other.atkelement;
+		sprite = make_sprite_from_item(user.equips[0]);
+		sprite_index = sprite;
+		enemies = collision_circle_list(x, y, sprite_width, obj_enemy, false, true, enemylist, false);
+		atkmap[? "dmgmod"] = 130 + 10*enemies;
+	}
+	
 
 }
 
 if(statmap[? "classlvl"] < 5){exit;}
-if(keyboard_check_pressed(skill_button[5]) && (cd[5] <= 0) && statmap[? "mp"] >= 25 && canUseSkill){
-	
-	
+if(keyboard_check_pressed(skill_button[5]) && (cd[5] <= 0) && statmap[? "mp"] >= 25 && canUseSkill && equips[0] > 0){
+	cancel_basic_attack();
 	
 	if(instance_exists(obj_ally)){
 		target = instance_nearest(mouse_x,mouse_y,obj_ally);
@@ -109,10 +82,14 @@ if(keyboard_check_pressed(skill_button[5]) && (cd[5] <= 0) && statmap[? "mp"] >=
 		}
 		else {
 			target = self.id;
-			applyBuff(target,180,true,"Knight's Shield",buff_knights_shield,false,-1,0,spr_buff_knights_shield,"Lorem Ipsum");
+			applyBuff(target,180,true,"Knight's Shield",buff_knights_shield,false,-1,0,spr_buff_knights_shield,"Lorem Ipsum",0);
 
 		}
 				
+	}
+	else {
+		target = self.id;
+		applyBuff(target,180,true,"Knight's Shield",buff_knights_shield,false,-1,0,spr_buff_knights_shield,"Lorem Ipsum",0);
 	}
 	
 	statmap[? "mp"] -= 25;
@@ -125,9 +102,8 @@ if(keyboard_check_pressed(skill_button[5]) && (cd[5] <= 0) && statmap[? "mp"] >=
 if(statmap[? "classlvl"] < 6){exit;}
 
 if(statmap[? "classlvl"] < 7){exit;}
-if(keyboard_check_pressed(skill_button[7]) && (cd[7] <= 0) && statmap[? "mp"] >= 20 && canUseSkill){
-	
-	
+if(keyboard_check_pressed(skill_button[7]) && (cd[7] <= 0) && statmap[? "mp"] >= 20 && canUseSkill && equips[0] > 0){
+	cancel_basic_attack();
 	
 	direction = point_direction(x,y,mouse_x,mouse_y)+180;
 	speed = 8;
@@ -138,14 +114,14 @@ if(keyboard_check_pressed(skill_button[7]) && (cd[7] <= 0) && statmap[? "mp"] >=
 		protective_footwork_mod = 400;
 	}
 	else if(hasBuff(self.id,"Protective Footwork I")){
-		applyBuff(self.id,180,false,"Protective Footwork II",buff_protective_footwork,false,-1,0,spr_buff_protective_footwork2,"Lorem Ipsum");
+		applyBuff(self.id,180,false,"Protective Footwork II",buff_protective_footwork,false,-1,0,spr_buff_protective_footwork2,"Lorem Ipsum",0);
 		removeBuff(self.id,"Protective Footwork I",false);
 		cd[7] = 0.8*room_speed;
 		protective_footwork_mod = 240;
 	}
 	else{
 		cd[7] = 0.8*room_speed;
-		applyBuff(self.id,180,false,"Protective Footwork I",buff_protective_footwork,false,-1,0,spr_buff_protective_footwork1,"Lorem Ipsum");
+		applyBuff(self.id,180,false,"Protective Footwork I",buff_protective_footwork,false,-1,0,spr_buff_protective_footwork1,"Lorem Ipsum",0);
 		protective_footwork_mod = 160;
 	}
 		
@@ -156,19 +132,22 @@ if(keyboard_check_pressed(skill_button[7]) && (cd[7] <= 0) && statmap[? "mp"] >=
 	canAttack = false;
 	canUseSkill = false;
 	isMoving = false;
-	applyBuff(self.id,22,true,"Knight's Shield",buff_knights_shield,false,-1,0,spr_buff_knights_shield,"Lorem Ipsum");
+	applyBuff(self.id,22,true,"Knight's Shield",buff_knights_shield,false,-1,0,spr_buff_knights_shield,"Lorem Ipsum",0);
 	alarm[7] = 20;
 	
 
 }
 
 if(statmap[? "classlvl"] < 8){exit;}
-if(keyboard_check_pressed(skill_button[8]) && (cd[8] <= 0) && statmap[? "mp"] >= 25 && canUseSkill){
+if(keyboard_check_pressed(skill_button[8]) && (cd[8] <= 0) && statmap[? "mp"] >= 25 && canUseSkill && equips[0] > 0){
+	cancel_basic_attack();
 	
 	statmap[? "mp"] -= 25;
 
 	cd[8] = maxcd[8];
 	isMoving = false;
+	canMove = false;
+	canUseSkill = false;
 	atkTimer = 20;
 	speed = 0;
 	highRegenThreshold = 0;
@@ -191,7 +170,7 @@ if(keyboard_check_pressed(skill_button[8]) && (cd[8] <= 0) && statmap[? "mp"] >=
 }
 
 if(statmap[? "classlvl"] < 9){exit;}
-if(keyboard_check_pressed(skill_button[9]) && (cd[9] <= 0) && canUseSkill){
+if(keyboard_check_pressed(skill_button[9]) && (cd[9] <= 0) && canUseSkill && equips[0] > 0){
 	
 	with(obj_skill_aegis_aura){
 		if(user == other.id){
@@ -207,5 +186,5 @@ if(keyboard_check_pressed(skill_button[9]) && (cd[9] <= 0) && canUseSkill){
 
 if(statmap[? "classlvl"] < 10){exit;}
 if(isBlocking && cd[10] <= 0){
-	applyBuff(self.id,99*room_speed,true,"Knight's Shield: Enhanced",buff_generic,false,-1,0,spr_buff_knights_shield_plus,"Lorem Ipsum");
+	applyBuff(self.id,99*room_speed,true,"Knight's Shield: Enhanced",buff_generic,false,-1,0,spr_buff_knights_shield_plus,"Lorem Ipsum",0);
 }

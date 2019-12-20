@@ -3,7 +3,7 @@ event_inherited();
 atkmap[? "element"]			= "none";
 atkmap[? "dmgmod"]			= 50;
 
-radius = 800;
+radius = 600;
 
 user = global.player;
 x0 = 0;

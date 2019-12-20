@@ -9,7 +9,6 @@ if((skill > 0) && active){
 	skill--;
 	if(skill <= 0){
 		instance_destroy();
-		ds_map_destroy(atkmap);
 		exit;
 	}
 }

@@ -5,15 +5,18 @@ if (statmap[? "hp"] <= 0 && !isDead){
 	alarm[0] = 30;
 }
 
+// Become unstuck from a wall
+if(!place_free(x,y) && canKnockback){
+	var wall = instance_place(x,y,obj_wall_parent);
+	move_outside_solid(point_direction(wall.x,wall.y,x,y),10);
+}
+
 if(statChange){
 	recalcStats(self.id);
 }
 
 //TIMERS
-for (var i = 0; i < array_length_1d(cd); i++){
-	if(cd[i] > 0){cd[i]--;}
-}
-
+// Buffs
 for (var i = ds_list_size(buff)-1; i >= 0; i--){
 	var buff_array = ds_list_find_value(buff,i);
 
@@ -25,15 +28,6 @@ for (var i = ds_list_size(buff)-1; i >= 0; i--){
 	if(buff_array[0] <= 0){
 		removeBuff(self.id,buff_array[2],false);
 		recalcStats(self.id);
-	}
-}
-
-if (atkTimer > 0){
-	atkTimer--;
-	if(atkTimer <= 0){
-		canAttack = true;
-		canUseSkill = true;
-		canMove = true;
 	}
 }
 
@@ -59,5 +53,5 @@ if(x <= destX){
 	image_xscale = -1;
 }
 
-
+statChange = false;
 

@@ -6,6 +6,7 @@ y = user.y;
 if(time > 30){image_alpha-= 1/60;}
 else{image_alpha+= 1/60;}
 if(time <= 0){
-	instance_destroy();
 	removeBuff(user,"Aegis Aura",true);
+	//show_debug_message(string(user) + " " + string(ds_list_size(user.buff)));
+	instance_destroy();
 }

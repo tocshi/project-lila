@@ -1,5 +1,5 @@
 global.player = self.id;
-global.currentCamera = camera_create_view(800,450,1600,900,0,self.id,100,100,640,360);
+global.currentCamera = camera_create_view(x-800,y-450,1600,900,0,self.id,100,100,800,450);
 view_set_camera(view_current,global.currentCamera);
 view_set_wport(view_current,1600);
 view_set_hport(view_current,900);
@@ -19,9 +19,9 @@ statmap[? "hp"]				= statmap[? "maxhp"];
 statmap[? "hpshield"]		= 0;
 statmap[? "hpregen"]		= statmap[? "maxhp"]/100/60;//0.02 + statmap[? "level"]*0.002;
 statmap[? "maxmp"]			= 100;
-statmap[? "mp"]				= 100;
+statmap[? "mp"]				= statmap[? "maxmp"];
 statmap[? "mpregen"]		= 0.01666*10; //doubled if canMove && !isMoving
-statmap[? "atk"]			= 0;
+statmap[? "atk"]			= 50;
 statmap[? "def"]			= 0;
 
 statmap[? "fire_atk"]		= 0;
@@ -41,8 +41,8 @@ statmap[? "light_def"]		= 0;
 statmap[? "dark_def"]		= 0;
 
 statmap[? "movespeed"]		= 3;
-statmap[? "atkspeed"]		= 2;
-statmap[? "critrate"]		= 0;
+statmap[? "atkspeed"]		= 1.2;
+statmap[? "critrate"]		= 25;
 statmap[? "critdmg"]		= 150;
 statmap[? "finaldmg"]		= 100;
 statmap[? "finalshld"]		= 0;
@@ -109,15 +109,25 @@ skill_button[20]	= ord("0");
 //debug
 infmp = false;
 
-equips[0] = 10;
+itemBar[0] = 22;
+itemBar[1] = 1;
+itemBar[2] = 2;
+itemBar[3] = 3;
+if(global.playerItems[1] > 0){exit;}
+/*equips[0] = 18;
 equips[1] = 6;
 equips[4] = 7;
 equips[7] = 8;
-equips[10] = 9;
-itemBar[0] = 22;
-itemBar[1] = 1;
-
+equips[10] = 9;*/
 global.playerItems[1]+=20;
+//global.playerItems[22]++;
+global.playerItems[10]++;
+global.playerItems[11]++;
+global.playerItems[6]++;
+global.playerItems[7]++;
+global.playerItems[8]++;
+global.playerItems[9]++;
+global.playerItems[18]++;
 if (findArrayIndex(global.playerInv, 1) == -1) {
 	for (var i=0; i < array_length_1d(global.playerInv); i++) {
 		if (global.playerInv[i] == 0) {
@@ -126,13 +136,62 @@ if (findArrayIndex(global.playerInv, 1) == -1) {
 		}
 	}
 }
-global.playerItems[22]++;
-if (findArrayIndex(global.playerInv, 22) == -1) {
+if (findArrayIndex(global.playerInv, 6) == -1) {
 	for (var i=0; i < array_length_1d(global.playerInv); i++) {
 		if (global.playerInv[i] == 0) {
-			global.playerInv[i] = 22;
+			global.playerInv[i] = 1;
 			break;
 		}
 	}
 }
+if (findArrayIndex(global.playerInv, 7) == -1) {
+	for (var i=0; i < array_length_1d(global.playerInv); i++) {
+		if (global.playerInv[i] == 0) {
+			global.playerInv[i] = 1;
+			break;
+		}
+	}
+}
+if (findArrayIndex(global.playerInv, 8) == -1) {
+	for (var i=0; i < array_length_1d(global.playerInv); i++) {
+		if (global.playerInv[i] == 0) {
+			global.playerInv[i] = 1;
+			break;
+		}
+	}
+}
+if (findArrayIndex(global.playerInv, 9) == -1) {
+	for (var i=0; i < array_length_1d(global.playerInv); i++) {
+		if (global.playerInv[i] == 0) {
+			global.playerInv[i] = 1;
+			break;
+		}
+	}
+}
+if (findArrayIndex(global.playerInv, 10) == -1) {
+	for (var i=0; i < array_length_1d(global.playerInv); i++) {
+		if (global.playerInv[i] == 0) {
+			global.playerInv[i] = 1;
+			break;
+		}
+	}
+}
+if (findArrayIndex(global.playerInv, 11) == -1) {
+	for (var i=0; i < array_length_1d(global.playerInv); i++) {
+		if (global.playerInv[i] == 0) {
+			global.playerInv[i] = 1;
+			break;
+		}
+	}
+}
+if (findArrayIndex(global.playerInv, 18) == -1) {
+	for (var i=0; i < array_length_1d(global.playerInv); i++) {
+		if (global.playerInv[i] == 0) {
+			global.playerInv[i] = 1;
+			break;
+		}
+	}
+}
+
+
 

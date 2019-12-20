@@ -1,19 +1,32 @@
 // Calculate stat changes from equipped items...move this to a script later you bimbo 
 if(!equipApplied){applyEquips(self.id);}
 
+// Become unstuck from a wall
+if(!place_free(x,y)){
+	var wall = instance_place(x,y,obj_wall_parent);
+	move_outside_solid(point_direction(wall.x,wall.y,x,y),10);
+}
+
 if(statChange){
 	recalcStats(self.id);
+	// Determine current atk element
+	if(ds_map_exists(global.itemData[| equips[0]],"element")){
+		atkelement = ds_map_find_value(global.itemData[| equips[0]],"element");
+	}
+	else {
+		atkelement = "none";
+	}
 }
 
 //TIMERS
 // Skill Cooldowns
-for (var i = 0; i < array_length_1d(cd); i++){
+for (var i = 0; i < array_length_1d(cd); ++i){
 	if(cd[i] > 0){
 		cd[i]--;}
 }
 if(cd[0] <= 0 && essence < 0){essence = 0;}
 // Item Cooldowns
-for (var i = 0; i < array_length_1d(itemcd); i++){
+for (var i = 0; i < array_length_1d(itemcd); ++i){
 	if(itemcd[i] > 0){itemcd[i]--;}
 }
 // Buffs
@@ -30,7 +43,7 @@ for (var i = ds_list_size(buff)-1; i >= 0; i--){
 		ds_list_replace(buff,i,buff_array);
 	}
 	if(buff_array[0] <= 0){
-		removeBuff(self.id,buff_array[2],false)
+		removeBuff(self.id,buff_array[2],false);
 		recalcStats(self.id);
 	}
 }
@@ -54,14 +67,5 @@ if(highRegenThreshold >= 90){
 } else {
 	statmap[? "mp"] += statmap[? "mpregen"];
 }
-
-//STAT CLAMPING
-statmap[? "atkspeed"] = clamp(statmap[? "atkspeed"],0.01,10);
-statmap[? "movespeed"] = clamp(statmap[? "movespeed"],0,30);
-statmap[? "hp"] = clamp(statmap[? "hp"],0,statmap[? "maxhp"]);
-statmap[? "mp"] = clamp(statmap[? "mp"],0,statmap[? "maxmp"]);
-statmap[? "finalshld"] = clamp(statmap[? "finalshld"],-100,100);
-essence = clamp(essence,-1,unleashGauge*3);
-
 
 

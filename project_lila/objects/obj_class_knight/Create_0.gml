@@ -1,17 +1,16 @@
 event_inherited();
 
+statmap[? "class"] = "Knight";
+
 skill_sprite = array_create(10, spr_empty);
-iter0 = 0;
-empowered_buff = false;
 shield_charge = 0;
 scList = ds_list_create();
-t_shot_remaining = 0;
 target = noone;
 following_ally = false;
 protective_footwork_mod = 0;
 footwork_charge = 0;
-origatk = statmap[? "atk"];
-origdef = statmap[? "def"];
+origatk = basestatmap[? "atk"];
+origdef = basestatmap[? "def"];
 
 skill_sprite[0] = spr_skill_Q;
 skill_sprite[1] = spr_skill_W;

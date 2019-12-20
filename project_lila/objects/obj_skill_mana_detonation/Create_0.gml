@@ -1,0 +1,12 @@
+event_inherited();
+alarm[0] = 60;
+target = noone;
+user = noone;
+image_alpha = 0;
+image_angle = irandom_range(0,359);
+image_xscale = 0;
+image_yscale = 0;
+mask_index = spr_empty;
+started = false;
+fading = false;
+time = -1;

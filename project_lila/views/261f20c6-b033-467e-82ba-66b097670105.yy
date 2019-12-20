@@ -5,7 +5,9 @@
     "name": "261f20c6-b033-467e-82ba-66b097670105",
     "children": [
         "ffa75a27-958a-4042-a4a1-602f112a1eba",
-        "8141abd7-5815-41df-be0a-f0e7a859d11f"
+        "8141abd7-5815-41df-be0a-f0e7a859d11f",
+        "9d820524-01a6-48ae-b4ec-ac294b06692b",
+        "cfe9a7e9-b7cb-4785-af27-690ff1efb877"
     ],
     "filterType": "GMSprite",
     "folderName": "common_spr",

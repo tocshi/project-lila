@@ -2,14 +2,17 @@
 global.meter = 32;
 // Is the game paused?
 global.pause = 0;
+// Player id
+global.player = noone;
+
 // Which menu to access when paused.
 global.gui_state = 0;
 // Whether the cursor is holding over an item in inventory
 global.holding = false;
 // Whether an item is currently being dragged
 global.dragging = false;
-// Player id
-global.player = 0;
+
+
 
 // Item data parsing function
 itemDataFile = file_text_open_read("item_data.json");
@@ -27,9 +30,13 @@ global.itemData = ds_map_find_value(itemDataJson, "default");
 global.playerInv = array_create(100, 0);
 global.playerItems = array_create(ds_list_size(global.itemData),0);
 
+// Player class level & equip loadouts
+global.playerEquipLoadouts = ds_map_create();
+global.playerClassExp = ds_map_create();
+
 // Equipment pixel positions
 global.equipItemBox = array_create(12,[0,0]);
-for(var i = 0; i < 4; i++){
+for(var i = 0; i < 4; ++i){
 	for(var j = 0; j < 3; j++){
 		//absolute x and y positions
 		global.equipItemBox[(i * 3) + j,0] = 198 + j*86;
@@ -38,7 +45,7 @@ for(var i = 0; i < 4; i++){
 }
 // Inventory pixel positions
 global.invItemBox = array_create(100,[0,0]);
-for(var i = 0; i < 10; i++){
+for(var i = 0; i < 10; ++i){
 	for(var j = 0; j < 10; j++){
 		//absolute x and y positions
 		global.invItemBox[(i * 10) + j,0] = 490 + j*66;
@@ -47,13 +54,13 @@ for(var i = 0; i < 10; i++){
 }
 // Item Hotbar pixel positions
 global.itemBarBox = array_create(10,[0,0]);
-for(var i = 0; i < 10; i++){
+for(var i = 0; i < 10; ++i){
 	global.itemBarBox[i,0] = 2;
 	global.itemBarBox[i,1] = 121 + i*66;
 }
 // Buffbar pixel positions
 global.buffBarBox = array_create(20,[0,0]);
-for(var i = 0; i < 20; i++){
+for(var i = 0; i < 20; ++i){
 	global.buffBarBox[i,0] = 74;
 	global.buffBarBox[i,1] = 121 + i*33;
 }

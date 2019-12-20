@@ -14,7 +14,7 @@ if(target == global.player){
 	}
 	global.player.equips[getEquipSlot(itemid)] = itemid;
 	
-	for(var i = 0; i < ds_list_size(global.equipStats); i++){
+	for(var i = 0; i < ds_list_size(global.equipStats); ++i){
 		if(!is_undefined(ds_map_find_value(global.itemData[| itemid], global.equipStats[| i]))){
 			target.basestatmap[? global.equipStats[| i]] += ds_map_find_value(global.itemData[| itemid], global.equipStats[| i]);
 		}

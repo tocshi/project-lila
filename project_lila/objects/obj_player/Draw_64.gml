@@ -29,7 +29,7 @@ if(unleashGauge > 0){
 
 // Draw itembar
 draw_sprite(gui_itembar,-1,0,0);
-for(var i = 0; i < array_length_1d(itemBar); i++){
+for(var i = 0; i < array_length_1d(itemBar); ++i){
 	var xx = global.itemBarBox[i,0];
 	var yy = global.itemBarBox[i,1];
 	var itemid = itemBar[i];
@@ -38,7 +38,8 @@ for(var i = 0; i < array_length_1d(itemBar); i++){
 	
 	if((ds_map_find_value(global.itemData[| itemid],"type") == "consumable"
 	|| ds_map_find_value(global.itemData[| itemid],"type") == "key")
-	&& (global.playerItems[itemid] > 1)){
+	//&& (global.playerItems[itemid] > 1 || global.playerItems[itemid] == 0)
+	&& itemid > 0){
 		draw_set_halign(fa_right);
 		draw_set_valign(fa_bottom);
 		draw_set_color(c_black);
@@ -53,7 +54,7 @@ for(var i = 0; i < array_length_1d(itemBar); i++){
 }
 
 // Draw skill and item cooldowns
-for(i = 0; i < array_length_1d(skill_sprite); i++){
+for(i = 0; i < array_length_1d(skill_sprite); ++i){
 
 	draw_sprite(skill_sprite[i],0,global.hpmpend+(i*80),20);
 	
@@ -61,7 +62,7 @@ for(i = 0; i < array_length_1d(skill_sprite); i++){
 }
 
 // Renders buff icons based on their time remaining
-for(var i = 0; i < min(ds_list_size(visBuff),20); i++){
+for(var i = 0; i < min(ds_list_size(visBuff),20); ++i){
 	var buff_array = ds_list_find_value(buff,i);
 	if(is_undefined(buff_array)){break;}
 	var time = buff_array[0];

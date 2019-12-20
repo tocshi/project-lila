@@ -9,7 +9,9 @@
         "f0e5ce88-225a-4244-a48c-723322009096",
         "4851d3be-1bf9-45d9-a7fc-4c01d301bca5",
         "790ba83d-5060-4e23-b38a-9c41c5f876eb",
-        "1da5bc84-004e-485f-9fbb-4cf8ea338234"
+        "1da5bc84-004e-485f-9fbb-4cf8ea338234",
+        "5e125fdd-f042-4fa7-abc5-d7f128d32c07",
+        "2f752995-9277-47f9-b12f-eb0197f828de"
     ],
     "filterType": "GMSprite",
     "folderName": "Item Icons",

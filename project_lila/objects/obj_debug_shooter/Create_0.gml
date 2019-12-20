@@ -4,6 +4,7 @@ statmap[? "maxhp"] = 1000;
 statmap[? "hp"] = 1000;
 statmap[? "hpregen"] = 1000;
 statmap[? "mpregen"] = 0;
+statmap[? "atk"] = 10;
 
 ds_map_copy(basestatmap, statmap);
 

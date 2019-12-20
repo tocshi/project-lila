@@ -1,0 +1,9 @@
+flying = false;
+sprite_index = spr_debug_indicator;
+image_xscale = 2;
+image_angle = 90;
+image_yscale = image_xscale;
+mask_index = sprite_index;
+y0 = y;
+fading = true;
+alarm[0] = 1;
