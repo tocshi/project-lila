@@ -37,9 +37,9 @@ switch(buffName){
 	case "Aegis Aura":
 	if(statChange){
 		statmap[? "atk"]+=basestatmap[? "atk"]*0.1;
-		statmap[? "atk"]+=20;
+		statmap[? "atk"]+=10;
 		statmap[? "def"]+=basestatmap[? "def"]*0.1;
-		statmap[? "def"]+=20;
+		statmap[? "def"]+=10;
 		statmap[? "hpregen"]+=2/room_speed;
 	}
 	break;

@@ -1,0 +1,1 @@
+instance_create_layer(1216,896,"Instances",obj_class_knight);

@@ -67,6 +67,8 @@ if(variable_instance_exists(self.id,"user")){
 	onhit_effect_handler(user,target);
 }
 
+var playerDamaged = false;
+if(target == global.player || target == obj_ally){playerDamaged = true;}
 with(instance_create_layer(irandom_range(target.x-10,target.x+10), 
 									irandom_range(target.y-(target.sprite_height/2)-5,target.y-(target.sprite_height/2)+5), 
 									"dmgTxt", obj_dmgtxt)){
@@ -74,6 +76,7 @@ with(instance_create_layer(irandom_range(target.x-10,target.x+10),
 	isCrit = other.atkmap[? "isCrit"];
 	isOrangeCrit = other.atkmap[? "isOrangeCrit"];
 	isRedCrit = other.atkmap[? "isRedCrit"];
+	self.playerDamaged = playerDamaged;
 	
 	hp		= other.e_hp;
 	maxhp	= other.e_maxhp;
@@ -81,7 +84,7 @@ with(instance_create_layer(irandom_range(target.x-10,target.x+10),
 }
 
 	
-if(instance_exists(target) && ds_exists(target.statmap,ds_type_map)){
+if(instance_exists(target) && ds_exists(target.statmap,ds_type_map) && target != global.player){
 	with(instance_create_layer(target.x, target.y, "dmgTxt", obj_minihpbar)){
 		hp		= other.e_hp;
 		maxhp	= other.e_maxhp;

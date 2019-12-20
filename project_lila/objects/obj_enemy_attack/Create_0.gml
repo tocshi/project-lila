@@ -1,10 +1,10 @@
 // Attacker
-attacker = 0;
+user = 0;
 
 // Stats
 atkmap = ds_map_create();
-if(attacker != 0){
-	ds_map_copy(atkmap,attacker.statmap);
+if(user != 0){
+	ds_map_copy(atkmap,user.statmap);
 }
 /*
 atkmap[? "element"]			= "none";

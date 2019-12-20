@@ -21,7 +21,7 @@ statmap[? "hpregen"]		= statmap[? "maxhp"]/100/60;//0.02 + statmap[? "level"]*0.
 statmap[? "maxmp"]			= 100;
 statmap[? "mp"]				= statmap[? "maxmp"];
 statmap[? "mpregen"]		= 0.01666*10; //doubled if canMove && !isMoving
-statmap[? "atk"]			= 0;
+statmap[? "atk"]			= 50;
 statmap[? "def"]			= 0;
 
 statmap[? "fire_atk"]		= 0;
@@ -119,7 +119,7 @@ equips[4] = 7;
 equips[7] = 8;
 equips[10] = 9;*/
 global.playerItems[1]+=20;
-global.playerItems[22]++;
+//global.playerItems[22]++;
 global.playerItems[10]++;
 global.playerItems[11]++;
 global.playerItems[6]++;

@@ -47,6 +47,14 @@
             }
         },
         {
+            "Key": "01895a55-7930-4e83-be66-17818a773ab4",
+            "Value": {
+                "id": "d303db51-3f13-458b-9645-5cb8c50bb4de",
+                "resourcePath": "objects\\obj_enemy_attack_bash\\obj_enemy_attack_bash.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "01c10616-7d68-4ae1-b808-eba59538b196",
             "Value": {
                 "id": "a2198665-722a-43b1-bf7a-412045f12192",
@@ -116,6 +124,14 @@
                 "id": "256d4adf-f64b-45d7-88da-0c21e144be6d",
                 "resourcePath": "objects\\obj_skill_shield_bash\\obj_skill_shield_bash.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "08e9caa4-b2cb-4c34-9e4f-bf17da9bb475",
+            "Value": {
+                "id": "f1fbfe53-b11b-4c7d-a3cf-46c67d2add9f",
+                "resourcePath": "rooms\\rm_demo\\rm_demo.yy",
+                "resourceType": "GMRoom"
             }
         },
         {
@@ -827,6 +843,14 @@
             "Value": {
                 "id": "990b03a7-e433-40de-962e-8db74b5b0000",
                 "resourcePath": "objects\\obj_skill_mantle_of_titania\\obj_skill_mantle_of_titania.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "540780e4-3aaf-4fb0-9b92-91230cf5ada8",
+            "Value": {
+                "id": "5acafaa5-5875-4a95-a185-78bfa760232a",
+                "resourcePath": "objects\\obj_debug_demo_shooter\\obj_debug_demo_shooter.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1727,6 +1751,14 @@
             }
         },
         {
+            "Key": "c2253383-13c0-445e-81f0-154510753bdf",
+            "Value": {
+                "id": "c3d1503f-1a10-477d-89a1-f72ab87ef4ea",
+                "resourcePath": "objects\\obj_debug_demo_chaser\\obj_debug_demo_chaser.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "c2451314-b891-4469-916d-9d771a6558cb",
             "Value": {
                 "id": "350dfd9a-cef4-456a-ad2b-5836335247d8",
@@ -1796,6 +1828,14 @@
                 "id": "a7f75eaa-1599-425e-bc11-9b8683628158",
                 "resourcePath": "options\\windows\\options_windows.yy",
                 "resourceType": "GMWindowsOptions"
+            }
+        },
+        {
+            "Key": "cd17adfc-fdc5-4455-962b-7e4f5a4bb016",
+            "Value": {
+                "id": "83c12b9b-e5e9-4044-92f2-fa1701b0ba40",
+                "resourcePath": "objects\\obj_spawner\\obj_spawner.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -2252,6 +2292,14 @@
                 "id": "987e0d28-ec1b-4b63-a03d-dcd8a3a6167c",
                 "resourcePath": "fonts\\fnt_hpmp\\fnt_hpmp.yy",
                 "resourceType": "GMFont"
+            }
+        },
+        {
+            "Key": "f8d3825d-2ab2-441e-a693-8096be276d2d",
+            "Value": {
+                "id": "ddf6f72b-39b8-4af2-bd43-ee273a305f32",
+                "resourcePath": "rooms\\rm_generic\\rm_generic.yy",
+                "resourceType": "GMRoom"
             }
         },
         {
