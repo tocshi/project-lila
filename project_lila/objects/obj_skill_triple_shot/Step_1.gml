@@ -2,8 +2,6 @@ event_inherited();
 
 if(!instance_exists(target)){	
 	instance_destroy();
-	ds_map_destroy(atkmap);
-	atkmap = -1;
 	exit;
 } else {
 	direction = point_direction(x,y,target.x,target.y);

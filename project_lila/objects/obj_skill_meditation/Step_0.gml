@@ -1,4 +1,8 @@
 if(target == 0){exit;}
+else if(!instance_exists(target)){
+	instance_destroy();
+	exit;
+}
 if(target.highRegenThreshold < 90){instance_destroy();}
 
 direction = point_direction(x,y,target.x,target.y);

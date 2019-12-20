@@ -1,7 +1,7 @@
 event_inherited();
 if(global.pause){exit;}
 
-if(keyboard_check_pressed(skill_button[1]) && (cd[1] <= 0) && statmap[? "mp"] >= 20){
+if(keyboard_check_pressed(skill_button[1]) && (cd[1] <= 0) && statmap[? "mp"] >= 20 && equips[0] > 0){
 	
 	statmap[? "mp"] -= 20;
 	var effect = instance_create_layer(x,y,"Instances",obj_debug_indicator);
@@ -16,7 +16,7 @@ if(keyboard_check_pressed(skill_button[1]) && (cd[1] <= 0) && statmap[? "mp"] >=
 if(statmap[? "classlvl"] < 2){exit;}
 
 if(statmap[? "classlvl"] < 3){exit;}
-if(keyboard_check_pressed(skill_button[3]) && (cd[3] <= 0) && statmap[? "mp"] >= 30 && canUseSkill){
+if(keyboard_check_pressed(skill_button[3]) && (cd[3] <= 0) && statmap[? "mp"] >= 30 && canUseSkill && equips[0] > 0){
 	cancel_basic_attack();
 	
 	ds_list_clear(scList);
@@ -40,7 +40,7 @@ if(keyboard_check_pressed(skill_button[3]) && (cd[3] <= 0) && statmap[? "mp"] >=
 }
 
 if(statmap[? "classlvl"] < 4){exit;}
-if(keyboard_check_pressed(skill_button[4]) && (cd[4] <= 0) && statmap[? "mp"] >= 20 && canUseSkill){
+if(keyboard_check_pressed(skill_button[4]) && (cd[4] <= 0) && statmap[? "mp"] >= 20 && canUseSkill && equips[0] > 0){
 	cancel_basic_attack();
 	
 	statmap[? "mp"] -= 20;
@@ -53,6 +53,7 @@ if(keyboard_check_pressed(skill_button[4]) && (cd[4] <= 0) && statmap[? "mp"] >=
 	highRegenThreshold = 0;
 	with(instance_create_layer(x,y,"Attacks",obj_skill_roundslash)){
 		user = other.id;
+		ds_map_copy(atkmap,user.statmap);
 		atkmap[? "element"] = other.atkelement;
 		sprite = make_sprite_from_item(user.equips[0]);
 		sprite_index = sprite;
@@ -64,7 +65,7 @@ if(keyboard_check_pressed(skill_button[4]) && (cd[4] <= 0) && statmap[? "mp"] >=
 }
 
 if(statmap[? "classlvl"] < 5){exit;}
-if(keyboard_check_pressed(skill_button[5]) && (cd[5] <= 0) && statmap[? "mp"] >= 25 && canUseSkill){
+if(keyboard_check_pressed(skill_button[5]) && (cd[5] <= 0) && statmap[? "mp"] >= 25 && canUseSkill && equips[0] > 0){
 	cancel_basic_attack();
 	
 	if(instance_exists(obj_ally)){
@@ -86,6 +87,10 @@ if(keyboard_check_pressed(skill_button[5]) && (cd[5] <= 0) && statmap[? "mp"] >=
 		}
 				
 	}
+	else {
+		target = self.id;
+		applyBuff(target,180,true,"Knight's Shield",buff_knights_shield,false,-1,0,spr_buff_knights_shield,"Lorem Ipsum",0);
+	}
 	
 	statmap[? "mp"] -= 25;
 	
@@ -97,7 +102,7 @@ if(keyboard_check_pressed(skill_button[5]) && (cd[5] <= 0) && statmap[? "mp"] >=
 if(statmap[? "classlvl"] < 6){exit;}
 
 if(statmap[? "classlvl"] < 7){exit;}
-if(keyboard_check_pressed(skill_button[7]) && (cd[7] <= 0) && statmap[? "mp"] >= 20 && canUseSkill){
+if(keyboard_check_pressed(skill_button[7]) && (cd[7] <= 0) && statmap[? "mp"] >= 20 && canUseSkill && equips[0] > 0){
 	cancel_basic_attack();
 	
 	direction = point_direction(x,y,mouse_x,mouse_y)+180;
@@ -134,13 +139,15 @@ if(keyboard_check_pressed(skill_button[7]) && (cd[7] <= 0) && statmap[? "mp"] >=
 }
 
 if(statmap[? "classlvl"] < 8){exit;}
-if(keyboard_check_pressed(skill_button[8]) && (cd[8] <= 0) && statmap[? "mp"] >= 25 && canUseSkill){
+if(keyboard_check_pressed(skill_button[8]) && (cd[8] <= 0) && statmap[? "mp"] >= 25 && canUseSkill && equips[0] > 0){
 	cancel_basic_attack();
 	
 	statmap[? "mp"] -= 25;
 
 	cd[8] = maxcd[8];
 	isMoving = false;
+	canMove = false;
+	canUseSkill = false;
 	atkTimer = 20;
 	speed = 0;
 	highRegenThreshold = 0;
@@ -163,7 +170,7 @@ if(keyboard_check_pressed(skill_button[8]) && (cd[8] <= 0) && statmap[? "mp"] >=
 }
 
 if(statmap[? "classlvl"] < 9){exit;}
-if(keyboard_check_pressed(skill_button[9]) && (cd[9] <= 0) && canUseSkill){
+if(keyboard_check_pressed(skill_button[9]) && (cd[9] <= 0) && canUseSkill && equips[0] > 0){
 	
 	with(obj_skill_aegis_aura){
 		if(user == other.id){

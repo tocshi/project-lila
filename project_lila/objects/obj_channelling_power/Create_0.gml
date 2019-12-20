@@ -2,6 +2,7 @@ target = 0;
 fading = false;
 alpha_multiplier = 1;
 scale_multiplier = 1;
+alarm[0] = 60;
 mask_index = spr_essence;
 speed = 0;
 image_alpha = 0.25;

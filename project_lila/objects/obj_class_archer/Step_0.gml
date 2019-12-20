@@ -1,7 +1,7 @@
 event_inherited();
 if(global.pause){exit;}
 
-if(keyboard_check_pressed(skill_button[1]) && (cd[1] <= 0) && statmap[? "mp"] >= 30 && canUseSkill){
+if(keyboard_check_pressed(skill_button[1]) && (cd[1] <= 0) && statmap[? "mp"] >= 30 && canUseSkill && equips[0] > 0){
 	cancel_basic_attack();
 	
 	direction = point_direction(x,y,mouse_x,mouse_y)+180;
@@ -37,7 +37,7 @@ if(keyboard_check_pressed(skill_button[1]) && (cd[1] <= 0) && statmap[? "mp"] >=
 }
 
 if(statmap[? "classlvl"] < 2){exit;}
-if(keyboard_check_pressed(skill_button[2]) && (cd[2] <= 0) && statmap[? "mp"] >= 10){
+if(keyboard_check_pressed(skill_button[2]) && (cd[2] <= 0) && statmap[? "mp"] >= 10 && equips[0] > 0){
 	
 	statmap[? "mp"] -= 10;
 	var effect = instance_create_layer(x,y,"Instances",obj_debug_indicator);
@@ -53,7 +53,7 @@ if(keyboard_check_pressed(skill_button[2]) && (cd[2] <= 0) && statmap[? "mp"] >=
 
 
 if(statmap[? "classlvl"] < 3){exit;}
-if(keyboard_check_pressed(skill_button[3]) && (cd[3] <= 0) && statmap[? "mp"] >= 30 && canUseSkill){
+if(keyboard_check_pressed(skill_button[3]) && (cd[3] <= 0) && statmap[? "mp"] >= 30 && canUseSkill && equips[0] > 0){
 	if(!instance_exists(obj_enemy)){
 		exit;
 	}
@@ -76,7 +76,7 @@ if(keyboard_check_pressed(skill_button[3]) && (cd[3] <= 0) && statmap[? "mp"] >=
 }
 
 if(statmap[? "classlvl"] < 4){exit;}
-if(keyboard_check_pressed(skill_button[4]) && (cd[4] <= 0) && canUseSkill){
+if(keyboard_check_pressed(skill_button[4]) && (cd[4] <= 0) && canUseSkill && equips[0] > 0){
 	cancel_basic_attack();
 
 	cd[4] = maxcd[4];
@@ -93,7 +93,7 @@ if(keyboard_check_pressed(skill_button[4]) && (cd[4] <= 0) && canUseSkill){
 }
 
 if(statmap[? "classlvl"] < 5){exit;}
-if(keyboard_check_pressed(skill_button[5]) && (cd[5] <= 0) && statmap[? "mp"] >= 45 && canUseSkill){
+if(keyboard_check_pressed(skill_button[5]) && (cd[5] <= 0) && statmap[? "mp"] >= 45 && canUseSkill && equips[0] > 0){
 	
 	statmap[? "mp"] -= 45;
 
@@ -106,7 +106,7 @@ if(keyboard_check_pressed(skill_button[5]) && (cd[5] <= 0) && statmap[? "mp"] >=
 
 
 if(statmap[? "classlvl"] < 6){exit;}
-if(keyboard_check_pressed(skill_button[6]) && (cd[6] <= 0) && statmap[? "mp"] >= 35 && canUseSkill){
+if(keyboard_check_pressed(skill_button[6]) && (cd[6] <= 0) && statmap[? "mp"] >= 35 && canUseSkill && equips[0] > 0){
 	cancel_basic_attack();
 	statmap[? "mp"] -= 35;
 
@@ -138,7 +138,7 @@ if(statmap[? "classlvl"] < 8){exit;}
 
 
 if(statmap[? "classlvl"] < 9){exit;}
-if(keyboard_check_pressed(skill_button[9]) && (cd[9] <= 0) && statmap[? "mp"] >= 40 && canUseSkill){
+if(keyboard_check_pressed(skill_button[9]) && (cd[9] <= 0) && statmap[? "mp"] >= 40 && canUseSkill && equips[0] > 0){
 	cancel_basic_attack();
 	
 	cd[9] = maxcd[9];

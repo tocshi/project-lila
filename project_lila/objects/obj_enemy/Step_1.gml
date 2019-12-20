@@ -11,6 +11,12 @@ if(!place_free(x,y) && canKnockback){
 	move_outside_solid(point_direction(wall.x,wall.y,x,y),10);
 }
 
+// separate from other enemies
+/*
+if(instance_place(x,y,obj_enemy) && canKnockback){
+	move_outside_all(irandom_range(0,359),3);
+}*/
+
 if(statChange){
 	recalcStats(self.id);
 }

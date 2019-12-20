@@ -1,7 +1,7 @@
 event_inherited();
 if(global.pause){exit;}
 
-if(keyboard_check_pressed(skill_button[1]) && (cd[1] <= 0) && statmap[? "mp"] >= 25 && canUseSkill){
+if(keyboard_check_pressed(skill_button[1]) && (cd[1] <= 0) && statmap[? "mp"] >= 25 && canUseSkill && equips[0] > 0){
 	cd[1] = maxcd[1];
 	statmap[? "mp"] -= 25;
 	atkTimer = 10;
@@ -40,7 +40,7 @@ if(keyboard_check_pressed(skill_button[1]) && (cd[1] <= 0) && statmap[? "mp"] >=
 }
 
 if(statmap[? "classlvl"] < 2){exit;}
-if(keyboard_check_pressed(skill_button[2]) && (cd[2] <= 0) && statmap[? "mp"] >= 25 && canUseSkill){
+if(keyboard_check_pressed(skill_button[2]) && (cd[2] <= 0) && statmap[? "mp"] >= 25 && canUseSkill && equips[0] > 0){
 	cancel_basic_attack();
 	statmap[? "mp"] -= 25;
 
@@ -66,7 +66,7 @@ if(keyboard_check_pressed(skill_button[2]) && (cd[2] <= 0) && statmap[? "mp"] >=
 }
 
 if(statmap[? "classlvl"] < 3){exit;}
-if(keyboard_check_pressed(skill_button[3]) && (cd[3] <= 0) && statmap[? "mp"] >= 25 && canUseSkill){
+if(keyboard_check_pressed(skill_button[3]) && (cd[3] <= 0) && statmap[? "mp"] >= 25 && canUseSkill && equips[0] > 0){
 	var next_target = instance_nearest(mouse_x,mouse_y,obj_enemy);
 	if(next_target == noone || point_distance(x,y,next_target.x,next_target.y) > 320){exit;}
 	cancel_basic_attack();
@@ -103,7 +103,7 @@ if(keyboard_check_pressed(skill_button[3]) && (cd[3] <= 0) && statmap[? "mp"] >=
 }
 
 if(statmap[? "classlvl"] < 4){exit;}
-if(keyboard_check_pressed(skill_button[4]) && (cd[4] <= 0) && statmap[? "mp"] >= 15 && canUseSkill){
+if(keyboard_check_pressed(skill_button[4]) && (cd[4] <= 0) && statmap[? "mp"] >= 15 && canUseSkill && equips[0] > 0){
 	cancel_basic_attack();
 	statmap[? "mp"] -= 15;
 
@@ -143,7 +143,7 @@ if(keyboard_check_pressed(skill_button[4]) && (cd[4] <= 0) && statmap[? "mp"] >=
 }
 
 if(statmap[? "classlvl"] < 6){exit;}
-if(keyboard_check_pressed(skill_button[6]) && (cd[6] <= 0) && statmap[? "mp"] >= 45 && canUseSkill){
+if(keyboard_check_pressed(skill_button[6]) && (cd[6] <= 0) && statmap[? "mp"] >= 45 && canUseSkill && equips[0] > 0){
 	cancel_basic_attack();
 	statmap[? "mp"] -= 45;
 
@@ -166,7 +166,7 @@ if(keyboard_check_pressed(skill_button[6]) && (cd[6] <= 0) && statmap[? "mp"] >=
 }
 
 if(statmap[? "classlvl"] < 7){exit;}
-if(keyboard_check_pressed(skill_button[7]) && (cd[7] <= 0) && statmap[? "mp"] >= 45 && canUseSkill){
+if(keyboard_check_pressed(skill_button[7]) && (cd[7] <= 0) && statmap[? "mp"] >= 45 && canUseSkill && equips[0] > 0){
 	ds_list_clear(i_salvo_targets);
 	var targets = collision_circle_list(x,y,480,obj_enemy,true,true,i_salvo_targets,false);
 	if(targets <= 0){exit;}
@@ -207,7 +207,7 @@ if(keyboard_check_pressed(skill_button[7]) && (cd[7] <= 0) && statmap[? "mp"] >=
 }
 
 if(statmap[? "classlvl"] < 8){exit;}
-if(keyboard_check_pressed(skill_button[8]) && (cd[8] <= 0) && statmap[? "mp"] >= 45 && canUseSkill){
+if(keyboard_check_pressed(skill_button[8]) && (cd[8] <= 0) && statmap[? "mp"] >= 45 && canUseSkill && equips[0] > 0){
 	cancel_basic_attack();
 	statmap[? "mp"] -= 45;
 
@@ -232,7 +232,7 @@ if(keyboard_check_pressed(skill_button[8]) && (cd[8] <= 0) && statmap[? "mp"] >=
 }
 
 if(statmap[? "classlvl"] < 9){exit;}
-if(keyboard_check_pressed(skill_button[9]) && (cd[9] <= 0) && statmap[? "mp"] >= 40 && canUseSkill){
+if(keyboard_check_pressed(skill_button[9]) && (cd[9] <= 0) && statmap[? "mp"] >= 40 && canUseSkill && equips[0] > 0){
 	var next_target = instance_nearest(mouse_x,mouse_y,obj_enemy);
 	if(next_target == noone || point_distance(x,y,next_target.x,next_target.y) > 320){exit;}
 	cancel_basic_attack();
@@ -246,13 +246,13 @@ if(keyboard_check_pressed(skill_button[9]) && (cd[9] <= 0) && statmap[? "mp"] >=
 	with(instance_create_layer(next_target.x,next_target.y,"Attacks",obj_skill_mana_detonation)){
 		user = other;
 		target = next_target;
-		atkmap[? "dmgmod"]		= 280;
+		atkmap[? "dmgmod"]		= 340;
 		atkmap[? "element"]		= "none";
 	}
 }
 
 if(statmap[? "classlvl"] < 10){exit;}
-if(keyboard_check_pressed(skill_button[10]) && (cd[10] <= 0) && statmap[? "mp"] >= 25 && canUseSkill){
+if(keyboard_check_pressed(skill_button[10]) && (cd[10] <= 0) && statmap[? "mp"] >= 25 && canUseSkill && equips[0] > 0){
 	cd[10] = maxcd[10];
 	statmap[? "mp"] -= 25;
 	highRegenThreshold = 0;

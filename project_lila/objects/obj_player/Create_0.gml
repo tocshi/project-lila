@@ -1,5 +1,5 @@
 global.player = self.id;
-global.currentCamera = camera_create_view(800,450,1600,900,0,self.id,100,100,800,450);
+global.currentCamera = camera_create_view(x-800,y-450,1600,900,0,self.id,100,100,800,450);
 view_set_camera(view_current,global.currentCamera);
 view_set_wport(view_current,1600);
 view_set_hport(view_current,900);
@@ -21,7 +21,7 @@ statmap[? "hpregen"]		= statmap[? "maxhp"]/100/60;//0.02 + statmap[? "level"]*0.
 statmap[? "maxmp"]			= 100;
 statmap[? "mp"]				= statmap[? "maxmp"];
 statmap[? "mpregen"]		= 0.01666*10; //doubled if canMove && !isMoving
-statmap[? "atk"]			= 0;
+statmap[? "atk"]			= 50;
 statmap[? "def"]			= 0;
 
 statmap[? "fire_atk"]		= 0;
@@ -108,16 +108,24 @@ skill_button[20]	= ord("0");
 
 //debug
 infmp = false;
-equips[0] = 18;
+itemBar[0] = 22;
+itemBar[1] = 1;
+itemBar[2] = 2;
+itemBar[3] = 3;
+if(global.playerItems[1] > 0){exit;}
+/*equips[0] = 18;
 equips[1] = 6;
 equips[4] = 7;
 equips[7] = 8;
-equips[10] = 9;
-itemBar[0] = 22;
-itemBar[1] = 1;
+equips[10] = 9;*/
 global.playerItems[1]+=20;
-global.playerItems[22]++;
+//global.playerItems[22]++;
 global.playerItems[10]++;
 global.playerItems[11]++;
+global.playerItems[6]++;
+global.playerItems[7]++;
+global.playerItems[8]++;
+global.playerItems[9]++;
+global.playerItems[18]++;
 
 

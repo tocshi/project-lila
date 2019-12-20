@@ -47,6 +47,14 @@
             }
         },
         {
+            "Key": "01895a55-7930-4e83-be66-17818a773ab4",
+            "Value": {
+                "id": "d303db51-3f13-458b-9645-5cb8c50bb4de",
+                "resourcePath": "objects\\obj_enemy_attack_bash\\obj_enemy_attack_bash.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "01c10616-7d68-4ae1-b808-eba59538b196",
             "Value": {
                 "id": "a2198665-722a-43b1-bf7a-412045f12192",
@@ -116,6 +124,14 @@
                 "id": "256d4adf-f64b-45d7-88da-0c21e144be6d",
                 "resourcePath": "objects\\obj_skill_shield_bash\\obj_skill_shield_bash.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "08e9caa4-b2cb-4c34-9e4f-bf17da9bb475",
+            "Value": {
+                "id": "f1fbfe53-b11b-4c7d-a3cf-46c67d2add9f",
+                "resourcePath": "rooms\\rm_demo\\rm_demo.yy",
+                "resourceType": "GMRoom"
             }
         },
         {
@@ -479,6 +495,14 @@
             }
         },
         {
+            "Key": "295e9a20-320b-4a84-9ce6-9d3145d4d236",
+            "Value": {
+                "id": "b4c5d388-2df3-41b5-a18e-027d260a282c",
+                "resourcePath": "scripts\\change_class\\change_class.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "2a0e13ab-e9d2-470e-8851-9426ec3d7f42",
             "Value": {
                 "id": "9b450f1d-b104-4646-bf37-46661181c45f",
@@ -819,6 +843,14 @@
             "Value": {
                 "id": "990b03a7-e433-40de-962e-8db74b5b0000",
                 "resourcePath": "objects\\obj_skill_mantle_of_titania\\obj_skill_mantle_of_titania.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "540780e4-3aaf-4fb0-9b92-91230cf5ada8",
+            "Value": {
+                "id": "5acafaa5-5875-4a95-a185-78bfa760232a",
+                "resourcePath": "objects\\obj_debug_demo_shooter\\obj_debug_demo_shooter.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1719,6 +1751,14 @@
             }
         },
         {
+            "Key": "c2253383-13c0-445e-81f0-154510753bdf",
+            "Value": {
+                "id": "c3d1503f-1a10-477d-89a1-f72ab87ef4ea",
+                "resourcePath": "objects\\obj_debug_demo_chaser\\obj_debug_demo_chaser.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "c2451314-b891-4469-916d-9d771a6558cb",
             "Value": {
                 "id": "350dfd9a-cef4-456a-ad2b-5836335247d8",
@@ -1788,6 +1828,14 @@
                 "id": "a7f75eaa-1599-425e-bc11-9b8683628158",
                 "resourcePath": "options\\windows\\options_windows.yy",
                 "resourceType": "GMWindowsOptions"
+            }
+        },
+        {
+            "Key": "cd17adfc-fdc5-4455-962b-7e4f5a4bb016",
+            "Value": {
+                "id": "83c12b9b-e5e9-4044-92f2-fa1701b0ba40",
+                "resourcePath": "objects\\obj_spawner\\obj_spawner.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -2247,6 +2295,14 @@
             }
         },
         {
+            "Key": "f8d3825d-2ab2-441e-a693-8096be276d2d",
+            "Value": {
+                "id": "ddf6f72b-39b8-4af2-bd43-ee273a305f32",
+                "resourcePath": "rooms\\rm_generic\\rm_generic.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "f94e9c11-5f16-433c-b380-0455f13117b4",
             "Value": {
                 "id": "42f4a1a1-f573-41a6-a257-16851b741d41",
@@ -2348,6 +2404,7 @@
         "1bb58460-a0f2-4852-bbc5-146c2d53a6ae",
         "be0ba224-53d3-4ac9-8bae-1fd82802d88a",
         "c6eddf3a-011d-4cde-95c8-3bf3dc25957f",
+        "295e9a20-320b-4a84-9ce6-9d3145d4d236",
         "1e334b20-b2fe-4992-a3c8-9616aa15dee6",
         "792dfe82-3653-4cb6-96b8-db2a2e95aa86",
         "395e8df5-83cc-49f1-a7cd-909842e7d84f",

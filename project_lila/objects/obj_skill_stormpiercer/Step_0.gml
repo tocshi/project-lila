@@ -15,12 +15,10 @@ if(!lockon){
 	}
 } 
 else {
-	if(image_alpha <= 0){
-		instance_destroy();
-		ds_map_destroy(atkmap);
-		atkmap = -1;
-		exit;
-	}
 	if(image_index == 9){mask_index = spr_stormpiercer;}
 	else{mask_index = spr_empty;}
+	if(image_alpha <= 0){
+		instance_destroy();
+		exit;
+	}
 }
