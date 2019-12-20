@@ -139,7 +139,7 @@ if (findArrayIndex(global.playerInv, 1) == -1) {
 if (findArrayIndex(global.playerInv, 6) == -1) {
 	for (var i=0; i < array_length_1d(global.playerInv); i++) {
 		if (global.playerInv[i] == 0) {
-			global.playerInv[i] = 1;
+			global.playerInv[i] = 6;
 			break;
 		}
 	}
@@ -147,7 +147,7 @@ if (findArrayIndex(global.playerInv, 6) == -1) {
 if (findArrayIndex(global.playerInv, 7) == -1) {
 	for (var i=0; i < array_length_1d(global.playerInv); i++) {
 		if (global.playerInv[i] == 0) {
-			global.playerInv[i] = 1;
+			global.playerInv[i] = 7;
 			break;
 		}
 	}
@@ -155,7 +155,7 @@ if (findArrayIndex(global.playerInv, 7) == -1) {
 if (findArrayIndex(global.playerInv, 8) == -1) {
 	for (var i=0; i < array_length_1d(global.playerInv); i++) {
 		if (global.playerInv[i] == 0) {
-			global.playerInv[i] = 1;
+			global.playerInv[i] = 8;
 			break;
 		}
 	}
@@ -163,7 +163,7 @@ if (findArrayIndex(global.playerInv, 8) == -1) {
 if (findArrayIndex(global.playerInv, 9) == -1) {
 	for (var i=0; i < array_length_1d(global.playerInv); i++) {
 		if (global.playerInv[i] == 0) {
-			global.playerInv[i] = 1;
+			global.playerInv[i] = 9;
 			break;
 		}
 	}
@@ -171,7 +171,7 @@ if (findArrayIndex(global.playerInv, 9) == -1) {
 if (findArrayIndex(global.playerInv, 10) == -1) {
 	for (var i=0; i < array_length_1d(global.playerInv); i++) {
 		if (global.playerInv[i] == 0) {
-			global.playerInv[i] = 1;
+			global.playerInv[i] = 10;
 			break;
 		}
 	}
@@ -179,7 +179,7 @@ if (findArrayIndex(global.playerInv, 10) == -1) {
 if (findArrayIndex(global.playerInv, 11) == -1) {
 	for (var i=0; i < array_length_1d(global.playerInv); i++) {
 		if (global.playerInv[i] == 0) {
-			global.playerInv[i] = 1;
+			global.playerInv[i] = 11;
 			break;
 		}
 	}
@@ -187,7 +187,7 @@ if (findArrayIndex(global.playerInv, 11) == -1) {
 if (findArrayIndex(global.playerInv, 18) == -1) {
 	for (var i=0; i < array_length_1d(global.playerInv); i++) {
 		if (global.playerInv[i] == 0) {
-			global.playerInv[i] = 1;
+			global.playerInv[i] = 18;
 			break;
 		}
 	}

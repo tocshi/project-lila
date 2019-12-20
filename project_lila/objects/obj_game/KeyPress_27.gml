@@ -10,7 +10,6 @@ if(global.pause == false){
 	global.holding = false;
 	global.dragging = false;
 	camera_set_view_target(global.currentCamera,noone);
-	updateGUI();
 }
 else {
 	global.gui_state = -1;
