@@ -1,3 +1,4 @@
+show_debug_message(statmap[? "atk"]);
 // Double Mana Regen when not doing anything for 90 frames
 if(canMove && !isMoving && !atkTimer){
 	highRegenThreshold++;
@@ -71,14 +72,24 @@ if(keyboard_check_pressed(vk_tab)){
 }
 
 if(keyboard_check_pressed(vk_shift)){
-	if(infmp){
-		infmp = false;
-		basestatmap[? "mpregen"] -= 100;
-	}
-	else{
-		infmp = true;
+	switch(inftoggle){
+		case 0:
+		case 2:
 		basestatmap[? "mpregen"] += 100;
-	}	
+		break;
+		
+		case 1:
+		basestatmap[? "hpregen"] += 100;
+		basestatmap[? "mpregen"] -= 100;
+		break;
+		
+		case 3:
+		inftoggle = -1
+		basestatmap[? "hpregen"] -= 100;
+		basestatmap[? "mpregen"] -= 100;
+		break;
+	}
+	inftoggle++;	
 	recalcStats(self.id);
 }
 

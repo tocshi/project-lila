@@ -145,6 +145,7 @@
     "desc"      : "A longsword given to you to help you start your adventure.",
     "value"     : 40,
     "atk"       : 5,
+    "atkrange"  : 80,
     "unleashGauge"  : 0
   },{
     "id"        : 11,
@@ -156,6 +157,7 @@
     "desc"      : "A bow given to you to help you start your adventure.",
     "value"     : 40,
     "atk"       : 5,
+    "atkrange"  : 480,
     "unleashGauge"  : 0
   },{
     "id"        : 12,
@@ -233,6 +235,7 @@
     "desc"      : "A spellbook given to you to help you start your adventure.",
     "value"     : 40,
     "atk"       : 5,
+    "atkrange"  : 420,
     "unleashGauge"  : 0
   },{
     "id"        : 19,
@@ -276,7 +279,6 @@
     "passiveSkill"  : "item_passive_ordinary",
     "activeSkill"   : "item_attack_flashcut",
     "activeCD"      : 5,
-    "basicAttack"   : "basicatk_longsword",
     "unleashSkill"  : "unleash_flashdance",
     "unleashGauge"  : 22
   },{

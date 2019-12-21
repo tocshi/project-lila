@@ -4,6 +4,8 @@ global.meter = 32;
 global.pause = 0;
 // Player id
 global.player = noone;
+// Player Last Used Class
+global.lastClass = obj_class_knight;
 
 // Which menu to access when paused.
 global.gui_state = 0;
@@ -11,8 +13,6 @@ global.gui_state = 0;
 global.holding = false;
 // Whether an item is currently being dragged
 global.dragging = false;
-
-
 
 // Item data parsing function
 itemDataFile = file_text_open_read("item_data.json");
