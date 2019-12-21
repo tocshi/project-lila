@@ -1,10 +1,6 @@
 //CHECK DEATH
 if (statmap[? "hp"] <= 0 && !isDead){
 	isDead = true;
-	for(var i = 0; i < array_length_1d(equips); ++i){
-		if(equips[i] > 0){
-			unequipItem(self,equips[i]);
-		}
-	}
+	store_player_data_trans();
 	room_goto(rm_playerdeath);
 }

@@ -13,8 +13,9 @@ if(canAttack){
 		atkmap[? "isSingleHit"]		= true;
 	
 		speed = 5;
-		direction = point_direction(x,y,global.player.x,global.player.y);
+		direction = user.direction;
 		image_angle = direction;
+		image_blend = c_purple;
 		skill = atkmap[? "range"]/speed;
 	}
 }

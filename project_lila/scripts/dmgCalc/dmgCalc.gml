@@ -68,7 +68,7 @@ if(variable_instance_exists(self.id,"user")){
 }
 
 var playerDamaged = false;
-if(target == global.player || target == obj_ally){playerDamaged = true;}
+if(target == global.player || object_is_ancestor(target.object_index,obj_ally)){playerDamaged = true;}
 with(instance_create_layer(irandom_range(target.x-10,target.x+10), 
 									irandom_range(target.y-(target.sprite_height/2)-5,target.y-(target.sprite_height/2)+5), 
 									"dmgTxt", obj_dmgtxt)){

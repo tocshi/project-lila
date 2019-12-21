@@ -7,7 +7,7 @@ statmap[? "mp"] = 30;
 statmap[? "hpregen"] = 0;
 statmap[? "mpregen"] = 0.25;
 statmap[? "atk"] = 15;
-statmap[? "movespeed"] = 2.7;
+statmap[? "movespeed"] = 2.2;
 
 ds_map_copy(basestatmap, statmap);
 

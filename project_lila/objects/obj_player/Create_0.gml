@@ -9,7 +9,7 @@ view_set_visible(view_current,true);
 statmap = ds_map_create();
 basestatmap = ds_map_create();
 
-statmap[? "level"] 			= 0;
+statmap[? "level"] 			= 10;
 statmap[? "xp"] 			= 0;
 statmap[? "class"]			= "Debug";
 statmap[? "classlvl"]		= 10;
@@ -65,7 +65,6 @@ isDead = false;
 isMoving = false;
 isBlocking = false;
 statChange = true;
-equipApplied = false;
 
 cd = array_create(21,0);
 maxcd = array_create(21,0);
@@ -107,18 +106,13 @@ skill_button[19]	= ord("9");
 skill_button[20]	= ord("0");
 
 //debug
-infmp = false;
+inftoggle = 0;
 
 itemBar[0] = 22;
 itemBar[1] = 1;
 itemBar[2] = 2;
 itemBar[3] = 3;
 if(global.playerItems[1] > 0){exit;}
-/*equips[0] = 18;
-equips[1] = 6;
-equips[4] = 7;
-equips[7] = 8;
-equips[10] = 9;*/
 global.playerItems[1]+=20;
 //global.playerItems[22]++;
 global.playerItems[10]++;

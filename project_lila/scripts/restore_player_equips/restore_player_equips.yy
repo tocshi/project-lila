@@ -1,8 +1,8 @@
 {
-    "id": "a2b5f266-031d-44f2-b634-d9e0fd90376a",
+    "id": "d5453502-d6b7-44b3-9911-2705a9004b0c",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "applyEquips",
+    "name": "restore_player_equips",
     "IsCompatibility": false,
     "IsDnD": false
 }

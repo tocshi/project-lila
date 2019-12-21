@@ -81,6 +81,7 @@ switch(itemid){
 	// Spellbook Default Basic Attack
 	case 18:
 	case 31:
+	if(!instance_exists(obj_enemy)){exit;}
 	var magic_target = instance_nearest(mouse_x,mouse_y,obj_enemy);
 	if(point_distance(x,y,magic_target.x,magic_target.y) > 420){exit;}
 	with(instance_create_layer(x,y,"Attacks",obj_basicattack_spellbook)){
