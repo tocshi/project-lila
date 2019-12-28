@@ -5,11 +5,7 @@ if (statmap[? "hp"] <= 0 && !isDead){
 	alarm[0] = 30;
 }
 
-// Become unstuck from a wall
-if(!place_free(x,y) && canKnockback){
-	var wall = instance_place(x,y,obj_wall_parent);
-	move_outside_solid(point_direction(wall.x,wall.y,x,y),10);
-}
+move_out_of_wall();
 
 if(statChange){
 	recalcStats(self.id);

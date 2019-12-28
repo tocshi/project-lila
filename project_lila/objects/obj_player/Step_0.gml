@@ -1,4 +1,3 @@
-show_debug_message(statmap[? "atk"]);
 // Double Mana Regen when not doing anything for 90 frames
 if(canMove && !isMoving && !atkTimer){
 	highRegenThreshold++;

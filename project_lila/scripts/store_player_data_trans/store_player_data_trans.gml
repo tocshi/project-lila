@@ -9,3 +9,4 @@ for(var i = 0; i < array_length_1d(equips); ++i){
 		unequipItem(self,equips[i]);
 	}
 }
+//TODO! Check for isDead and save hp and mp if not

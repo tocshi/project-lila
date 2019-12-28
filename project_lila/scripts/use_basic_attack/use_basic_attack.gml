@@ -109,7 +109,7 @@ switch(itemid){
 	break;
 	
 	default:
-	show_debug_message("ERROR: NO BASIC ATTACK FOUND!");
+	show_error("ERROR: NO BASIC ATTACK FOUND!",true);
 	break;
 }
 iter++;

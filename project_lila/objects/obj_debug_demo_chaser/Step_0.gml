@@ -1,6 +1,6 @@
 event_inherited();
 
-if(path_get_length(ai_path) < aggro_range && point_distance(x,y,obj_player.x,obj_player.y) >= 64 && canMove) {
+if(path_get_length(ai_path) < aggro_range && point_distance(x,y,obj_player.x,obj_player.y) >= 64 && canMove || collision_line(x,y,global.player.x,global.player.y,obj_wall_parent,true,true)) {
 	// show_debug_message("Player within range");
 	mp_potential_step(obj_player.x, obj_player.y, statmap[? "movespeed"], false);
 }

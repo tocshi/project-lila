@@ -52,6 +52,20 @@ for(var i = 0; i < 10; ++i){
 		global.invItemBox[(i * 10) + j,1] = 121 + i*66;
 	}
 }
+// Stat Display pixel positions
+invStatLocation = array_create(24,[0,0]);
+for(var i = 0; i < 12; ++i){
+	for(var j = 0; j < 2; j++){
+		//absolute x and y positions
+		/*
+		var x0 = 196;
+		var y0 = 466;
+		var x_inc = 120;
+		var y_inc = 24;*/
+		invStatLocation[(i * 2) + j,0] = 206 + j*120;
+		invStatLocation[(i * 2) + j,1] = 476 + i*25;
+	}
+}
 // Item Hotbar pixel positions
 global.itemBarBox = array_create(10,[0,0]);
 for(var i = 0; i < 10; ++i){
@@ -73,30 +87,30 @@ global.equipStats = ds_list_create();
 ds_list_add(global.equipStats,
 	"atk",
 	"def",
-	"maxhp",
 	"hpregen",
-	"maxmp",
 	"mpregen",
-	"fire_atk",
-	"ice_atk",
-	"lightning_atk",
-	"earth_atk",
-	"wind_atk",
-	"light_atk",
-	"dark_atk",
-	"fire_def",
-	"ice_def",
-	"lightning_def",
-	"earth_def",
-	"wind_def",
-	"light_def",
-	"dark_def",
-	"movespeed",
 	"atkspeed",
+	"movespeed",
 	"critrate",
 	"critdmg",
+	"fire_atk",
+	"fire_def",
+	"ice_atk",
+	"ice_def",
+	"lightning_atk",
+	"lightning_def",
+	"earth_atk",
+	"earth_def",
+	"wind_atk",
+	"wind_def",
+	"light_atk",
+	"light_def",
+	"dark_atk",
+	"dark_def",
 	"finaldmg",
 	"finalshld",
+	"maxhp",
+	"maxmp",
 	"blkmod");
 
 cursor_sprite = spr_cursor;
