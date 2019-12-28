@@ -68,7 +68,8 @@ switch(itemid){
 		atkmap[? "element"] = element;
 		atkmap[? "isBasicAttack"] = true;
 		atkmap[? "isSingleHit"]	= true;
-		atkmap[? "range"] = 480;
+		// for some reason this has to be 20 LESS than the intended range for it to work
+		atkmap[? "range"] = 400;
 		atkmap[? "isProjectile"] = true;
 		atkmap[? "isPiercing"] = false;
 		
@@ -78,12 +79,32 @@ switch(itemid){
 	}
 	break;
 	
+	// Knife Default Basic Attack
+	case 16:
+	case 29:
+	with(instance_create_layer(x,y,"Attacks",obj_basicattack_knife)){
+		sprite_index = make_sprite_from_item(itemid);
+		self.user = user;
+		ds_map_copy(atkmap,user.statmap);
+		atkmap[? "dmgmod"] = dmgmod/2;
+		atkmap[? "element"] = element;
+		atkmap[? "isBasicAttack"] = true;
+		atkmap[? "isSingleHit"]	= true;
+		
+		dir = point_direction(x,y,mouse_x,mouse_y);
+		skill = round((room_speed/user.statmap[? "atkspeed"])/8);
+		alarm[0] = skill*4;
+		direction = dir;
+		image_angle = dir-45;
+	}
+	break;
+	
 	// Spellbook Default Basic Attack
 	case 18:
 	case 31:
 	if(!instance_exists(obj_enemy)){exit;}
 	var magic_target = instance_nearest(mouse_x,mouse_y,obj_enemy);
-	if(point_distance(x,y,magic_target.x,magic_target.y) > 420){exit;}
+	if(point_distance(x,y,magic_target.x,magic_target.y) > 400){exit;}
 	with(instance_create_layer(x,y,"Attacks",obj_basicattack_spellbook)){
 		sprite_index = make_sprite_from_item(itemid);
 		
