@@ -108,6 +108,33 @@ switch(buffName){
 	}
 	break;
 	
+	case "Poisoned":
+	instance_create_layer(irandom_range(x-sprite_width/2,x+sprite_width/2),irandom_range(y-sprite_height/2,y+sprite_height/2),"Assets_1",obj_poison_effect);
+	if(get_buff_data(self,"Poisoned","time") % 60 = 30){
+		var poisondmg = get_buff_data(self,"Poisoned","data")*get_buff_data(self,"Poisoned","stacks");
+		statmap[? "hp"]-=poisondmg;
+		
+		with(instance_create_layer(irandom_range(x-10,x+10), 
+									irandom_range(y-(sprite_height/2)-5,y-(sprite_height/2)+5), 
+									"dmgTxt", obj_dmgtxt)){
+			damage = poisondmg;
+	
+			hp		= other.statmap[? "hp"];
+			maxhp	= other.statmap[? "maxhp"];
+			self.target	= other;							
+		}
+
+		if(instance_exists(self) && ds_exists(statmap,ds_type_map)){
+			with(instance_create_layer(x, y, "dmgTxt", obj_minihpbar)){
+				hp		= other.statmap[? "hp"];
+				maxhp	= other.statmap[? "maxhp"];
+				hpwidth	= other.sprite_width;
+				self.target	= other.id;
+			}
+		}
+	}
+	break;
+	
 	case "Unleash":
 	if(statChange){statmap[? "finalshld"]+=100;}
 	break;

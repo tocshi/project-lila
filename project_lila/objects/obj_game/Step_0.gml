@@ -20,4 +20,7 @@ if(!global.pause){
 	if(keyboard_check_pressed(vk_f3)){
 		change_class(global.player,"Mage");
 	}
+	if(keyboard_check_pressed(vk_f4)){
+		change_class(global.player,"Rogue");
+	}
 }

@@ -25,6 +25,10 @@ switch(class){
 		var classobj = obj_class_mage;
 		break;
 	
+	case "Rogue":
+		var classobj = obj_class_rogue;
+		break;
+	
 	default:
 	show_error("Switching to an unlisted class!",true);
 }

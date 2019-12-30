@@ -42,6 +42,15 @@ statmap[? "hp"] = clamp(statmap[? "hp"],0,statmap[? "maxhp"]);
 statmap[? "mp"] = clamp(statmap[? "mp"],0,statmap[? "maxmp"]);
 statmap[? "finalshld"] = clamp(statmap[? "finalshld"],-100,100);
 
+if (atkTimer > 0){
+	atkTimer--;
+	if(atkTimer <= 0){
+		canAttack = true;
+		canUseSkill = true;
+		canMove = true;
+	}
+}
+
 //FACING THE RIGHT WAY
 if(x <= destX){
 	image_xscale = 1;

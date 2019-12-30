@@ -65,6 +65,7 @@ isDead = false;
 isMoving = false;
 isBlocking = false;
 statChange = true;
+alpha = 1;
 
 cd = array_create(21,0);
 maxcd = array_create(21,0);

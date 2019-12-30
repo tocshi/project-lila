@@ -1,3 +1,7 @@
+if(!instance_exists(user)){
+	instance_destroy();
+	exit;
+}
 with(instance_create_layer(user.x,user.y,"Attacks",obj_basicattack_knife)){
 		self.user = other.user;
 		sprite_index = make_sprite_from_item(user.equips[0]);

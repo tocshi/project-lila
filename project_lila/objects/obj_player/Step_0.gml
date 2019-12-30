@@ -6,7 +6,7 @@ if(canMove && !isMoving && !atkTimer){
 }
 
 //STAT CLAMPING
-statmap[? "atkspeed"] = clamp(statmap[? "atkspeed"],0.01,10);
+statmap[? "atkspeed"] = clamp(statmap[? "atkspeed"],0.01,5);
 statmap[? "movespeed"] = clamp(statmap[? "movespeed"],0,30);
 statmap[? "hp"] = clamp(statmap[? "hp"],0,statmap[? "maxhp"]);
 statmap[? "mp"] = clamp(statmap[? "mp"],0,statmap[? "maxmp"]);

@@ -28,5 +28,7 @@ hitList = ds_list_create();
 // Has this projectile been affected by Gate of Wind?
 gateOfWind = false;
 
+user = noone;
+
 
 
