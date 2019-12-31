@@ -16,5 +16,7 @@ if(skill < room_speed*8){
 }
 if(skill <= 0){
 	instance_destroy();
+	ds_list_destroy(debuff_hitList);
+	debuff_hitList = -1;
 }
 

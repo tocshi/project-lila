@@ -23,3 +23,4 @@ getPath(id, obj_player, ai_path);
 
 canKnockback	= true;
 standing_still = 0;
+target = noone;

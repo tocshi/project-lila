@@ -19,5 +19,5 @@ switch(user.statmap[? "class"]){
 
 // Handle individual buffs
 if(hasBuff(user,"Vicious Venom") && atkmap[? "isBasicAttack"]){
-	applyBuff(target,6*room_speed,true,"Poisoned",buff_generic,false,1,10,spr_buff_burning,"You're poisoned!",floor(atkmap[? "atk"]*0.05));
+	applyBuff(target,6*room_speed,true,"Poisoned",buff_generic,false,1,10,spr_buff_burning,"You're poisoned!",floor(user.basestatmap[? "atk"]*0.05));
 }

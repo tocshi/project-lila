@@ -1,0 +1,9 @@
+image_xscale = 0;
+image_yscale = 0;
+image_alpha = 0;
+mask_index = spr_empty;
+alarm[0] = 60;
+skill = room_speed*31;
+user = noone;
+triggered = false;
+poison_targets = ds_list_create();

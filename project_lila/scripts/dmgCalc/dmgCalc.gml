@@ -83,8 +83,7 @@ with(instance_create_layer(irandom_range(target.x-10,target.x+10),
 	self.target	= target;							
 }
 
-	
-if(instance_exists(target) && ds_exists(target.statmap,ds_type_map) && target != global.player){
+if(instance_exists(target) && ds_exists(target.statmap,ds_type_map) && object_is_ancestor(target.object_index,obj_enemy)){
 	with(instance_create_layer(target.x, target.y, "dmgTxt", obj_minihpbar)){
 		hp		= other.e_hp;
 		maxhp	= other.e_maxhp;

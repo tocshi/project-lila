@@ -135,7 +135,12 @@ switch(buffName){
 	}
 	break;
 	
-	case "Unleash":
+	case "Invisible":
+	alpha = 0.2;
+	if(statChange){statmap[? "movespeed"]+=3;}
+	break;
+	
+	case "Invulnerable":
 	if(statChange){statmap[? "finalshld"]+=100;}
 	break;
 	default:
