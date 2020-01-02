@@ -59,7 +59,7 @@ if(keyboard_check_pressed(skill_button[2]) && (cd[2] <= 0) && statmap[? "mp"] >=
 		with(instance_create_layer(x,y,"Attacks",obj_skill_blizzard)){
 			user = other.id;
 			ds_map_copy(atkmap,other.statmap);
-			atkmap[? "dmgmod"]		= 35;
+			atkmap[? "dmgmod"]		= 30;
 			atkmap[? "element"]		= "ice";
 		}
 	}	

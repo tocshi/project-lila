@@ -1,3 +1,3 @@
-dist--;
+dist++;
 
-if(dist <= 0){instance_destroy();}
+if(dist >= 60){instance_destroy();}

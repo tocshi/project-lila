@@ -103,12 +103,26 @@ if(keyboard_check_pressed(skill_button[4]) && (cd[4] <= 0) && statmap[? "mp"] >=
 
 if(statmap[? "classlvl"] < 5){exit;}
 if(keyboard_check_pressed(skill_button[5]) && (cd[5] <= 0) && statmap[? "mp"] >= 30 && canUseSkill && equips[0] > 0){
+	with(obj_ally_shadow_clone){
+		if(user == other.id){
+			cancel_basic_attack();
+			t_fang = 0;
+			direction = point_direction(x,y,mouse_x,mouse_y);
+			atkTimer = 30;
+			canMove = false;
+			canAttack = false;
+			canUseSkill = false;
+			isMoving = false;
+			alarm[5] = 8;
+		}
+	}
+	
 	cancel_basic_attack();
 	statmap[? "mp"] -= 25;
 	cd[5] = maxcd[5];
 	t_fang = 0;
 	direction = point_direction(x,y,mouse_x,mouse_y);
-	atkTimer = 24;
+	atkTimer = 30;
 	canMove = false;
 	canAttack = false;
 	canUseSkill = false;
@@ -145,7 +159,7 @@ if(keyboard_check_pressed(skill_button[7]) && (cd[7] <= 0) && statmap[? "mp"] >=
 			atkmap[? "element"]		= "none";
 			sprite_index = spr_swift_slicer;
 			image_xscale = min(point_distance(user.x,user.y,target.x,target.y)/64,2);
-
+			clamp(image_xscale,0.8,2);
 			image_angle = dir;
 		}
 		x = s_slicer_target.x + 64 * dcos(dir);
@@ -183,13 +197,13 @@ if(keyboard_check_pressed(skill_button[9]) && (cd[9] <= 0) && statmap[? "mp"] >=
 if(statmap[? "classlvl"] < 10){exit;}
 if(keyboard_check_pressed(skill_button[10]) && (cd[10] <= 0) && statmap[? "mp"] >= 40 && canUseSkill && equips[0] > 0){
 	if(instance_exists(obj_ally)){
-		var target = instance_nearest(mouse_x,mouse_y,obj_ally);
-		if((point_distance(mouse_x,mouse_y,target.x,target.y) <= 128) && (point_distance(x,y,target.x,target.y) <= 360)){
-			applyBuff(target,180,true,"Invisible",buff_invisible,false,-1,0,spr_buff_move_like_wind,"Can't see this, can't touch this!",0);
-			with(instance_create_layer(target.x,target.y,"Instances",obj_ally_shadow_dummy)){
-				sprite_index = target.sprite_index;
+		var ally = instance_nearest(mouse_x,mouse_y,obj_ally);
+		if((point_distance(mouse_x,mouse_y,ally.x,ally.y) <= 32) && (point_distance(x,y,ally.x,ally.y) <= 360)){
+			applyBuff(ally,180,true,"Invisible",buff_invisible,false,-1,0,spr_buff_move_like_wind,"Can't see this, can't touch this!",0);
+			with(instance_create_layer(ally.x,ally.y,"Instances",obj_ally_shadow_dummy)){
+				sprite_index = ally.sprite_index;
 				image_blend = c_ltgray;
-				user = target;
+				user = ally;
 				basestatmap[? "finalshld"] = 9999;
 				canKnockback	= true;
 				change_all_enemy_target(self);

@@ -1,5 +1,5 @@
 var adddmg = 0;
-
+if(!instance_exists(user)){instance_destroy();}
 with(other){
 	var distmod = 1/max(distance_to_point(other.user.x,other.user.y),20);
 	clamp(distmod,1/50,1/20);
