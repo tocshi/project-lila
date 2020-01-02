@@ -50,6 +50,8 @@ isCCed = false;
 isDead = false;
 isMoving = false;
 canMove = true;
+alpha = 1;
+target = noone;
 
 atkTimer = 0;
 statChange = true;

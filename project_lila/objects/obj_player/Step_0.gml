@@ -1,4 +1,3 @@
-show_debug_message(statmap[? "atk"]);
 // Double Mana Regen when not doing anything for 90 frames
 if(canMove && !isMoving && !atkTimer){
 	highRegenThreshold++;
@@ -7,7 +6,7 @@ if(canMove && !isMoving && !atkTimer){
 }
 
 //STAT CLAMPING
-statmap[? "atkspeed"] = clamp(statmap[? "atkspeed"],0.01,10);
+statmap[? "atkspeed"] = clamp(statmap[? "atkspeed"],0.01,5);
 statmap[? "movespeed"] = clamp(statmap[? "movespeed"],0,30);
 statmap[? "hp"] = clamp(statmap[? "hp"],0,statmap[? "maxhp"]);
 statmap[? "mp"] = clamp(statmap[? "mp"],0,statmap[? "maxmp"]);

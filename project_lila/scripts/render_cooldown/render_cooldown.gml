@@ -23,5 +23,10 @@ draw_healthbar(xx, yy, xx+width, yy+height, (cd/maxcd)*100, c_dkgray, c_black, c
 draw_set_alpha(0.9);
 draw_set_valign(fa_top);
 draw_text_outlined(xx+(width/2),yy+(height/4), c_black, c_white, cdtime); 
+
+//TODO: graphical indicator
+if(cd == 1){}
+
+//reset draw settings
 draw_set_alpha(1);
 draw_set_halign(fa_left);

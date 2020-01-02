@@ -52,6 +52,7 @@ isCCed = false;
 isDead = false;
 isMoving = false;
 isBlocking = false;
+alpha = 1;
 
 cd = array_create(21,0);
 maxcd = array_create(21,0);
@@ -59,9 +60,3 @@ atkTimer = 0;
 statChange = true;
 
 buff = ds_list_create();
-
-// Ally HP Bar
-var minihp = instance_create_layer(x, y, "dmgTxt", obj_allyhpbar);
-minihp.hpwidth	= sprite_width;
-minihp.target	= id;
-

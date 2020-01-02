@@ -1,7 +1,7 @@
 if(x <= destX){
-	draw_sprite_ext(spr_debug_player,-1,x,y,1,1,0,-1,1);
+	draw_sprite_ext(spr_debug_player,-1,x,y,1,1,0,-1,alpha);
 } else {
-	draw_sprite_ext(spr_debug_player,-1,x,y,-1,1,0,-1,1);
+	draw_sprite_ext(spr_debug_player,-1,x,y,-1,1,0,-1,alpha);
 }
 
 draw_set_font(fnt_gui_small);

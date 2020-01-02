@@ -1,0 +1,6 @@
+if(!instance_exists(target)){
+	instance_destroy();
+	exit;
+}
+
+dmgCalc(target);

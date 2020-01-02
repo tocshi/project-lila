@@ -5,11 +5,7 @@ if (statmap[? "hp"] <= 0 && !isDead){
 	alarm[0] = 30;
 }
 
-// Become unstuck from a wall
-if(!place_free(x,y) && canKnockback){
-	var wall = instance_place(x,y,obj_wall_parent);
-	move_outside_solid(point_direction(wall.x,wall.y,x,y),10);
-}
+move_out_of_wall();
 
 if(statChange){
 	recalcStats(self.id);
@@ -45,6 +41,15 @@ statmap[? "movespeed"] = clamp(statmap[? "movespeed"],0,30);
 statmap[? "hp"] = clamp(statmap[? "hp"],0,statmap[? "maxhp"]);
 statmap[? "mp"] = clamp(statmap[? "mp"],0,statmap[? "maxmp"]);
 statmap[? "finalshld"] = clamp(statmap[? "finalshld"],-100,100);
+
+if (atkTimer > 0){
+	atkTimer--;
+	if(atkTimer <= 0){
+		canAttack = true;
+		canUseSkill = true;
+		canMove = true;
+	}
+}
 
 //FACING THE RIGHT WAY
 if(x <= destX){

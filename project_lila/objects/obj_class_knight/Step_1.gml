@@ -14,7 +14,7 @@ if(statmap[? "classlvl"] >= 6 && statChange){
 	origatk = basestatmap[? "atk"];
 	origdef = basestatmap[? "def"];
 	statmap[? "atk"] += origdef*0.3;
-	statmap[? "def"] += origatk*0.3;
+	statmap[? "def"] += origatk*0.6;
 }
 
 if(shield_charge > 0){

@@ -1,6 +1,5 @@
 var target = argument0;
 var itemid = argument1;
-//show_debug_message("Slot: " + string(getEquipSlot(itemid)));
 if(getEquipSlot(itemid) == -1){exit;}
 if(target.equips[getEquipSlot(itemid)] == 0){exit;}
 

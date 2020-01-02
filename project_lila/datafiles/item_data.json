@@ -157,7 +157,7 @@
     "desc"      : "A bow given to you to help you start your adventure.",
     "value"     : 40,
     "atk"       : 5,
-    "atkrange"  : 480,
+    "atkrange"  : 420,
     "unleashGauge"  : 0
   },{
     "id"        : 12,
@@ -213,6 +213,7 @@
     "desc"      : "A dagger given to you to help you start your adventure.",
     "value"     : 40,
     "atk"       : 5,
+    "atkrange"  : 60,
     "unleashGauge"  : 0
   },{
     "id"        : 17,
@@ -235,7 +236,7 @@
     "desc"      : "A spellbook given to you to help you start your adventure.",
     "value"     : 40,
     "atk"       : 5,
-    "atkrange"  : 420,
+    "atkrange"  : 400,
     "unleashGauge"  : 0
   },{
     "id"        : 19,

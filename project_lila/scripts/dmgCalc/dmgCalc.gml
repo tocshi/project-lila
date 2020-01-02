@@ -69,9 +69,18 @@ if(variable_instance_exists(self.id,"user")){
 
 var playerDamaged = false;
 if(target == global.player || object_is_ancestor(target.object_index,obj_ally)){playerDamaged = true;}
+var yy = target.y-(target.sprite_height/2);
+var valid = false;
+while(collision_point(target.x,yy,obj_dmgtxt,false,true)){
+	with(instance_nearest(target.x,yy,obj_dmgtxt)){
+		if(dist > 20){valid = true;}
+	}
+	if(valid){break;}
+	yy-=32;
+}
 with(instance_create_layer(irandom_range(target.x-10,target.x+10), 
-									irandom_range(target.y-(target.sprite_height/2)-5,target.y-(target.sprite_height/2)+5), 
-									"dmgTxt", obj_dmgtxt)){
+							yy, 
+							"dmgTxt", obj_dmgtxt)){
 	damage = other.gTotalDamage;
 	isCrit = other.atkmap[? "isCrit"];
 	isOrangeCrit = other.atkmap[? "isOrangeCrit"];
@@ -83,8 +92,7 @@ with(instance_create_layer(irandom_range(target.x-10,target.x+10),
 	self.target	= target;							
 }
 
-	
-if(instance_exists(target) && ds_exists(target.statmap,ds_type_map) && target != global.player){
+if(instance_exists(target) && ds_exists(target.statmap,ds_type_map) && object_is_ancestor(target.object_index,obj_enemy)){
 	with(instance_create_layer(target.x, target.y, "dmgTxt", obj_minihpbar)){
 		hp		= other.e_hp;
 		maxhp	= other.e_maxhp;

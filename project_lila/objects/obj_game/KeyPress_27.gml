@@ -18,5 +18,4 @@ else {
 	global.dragging = false;
 	instance_activate_all();
 	camera_set_view_target(global.currentCamera,global.player);
-	sprite_delete(paused_state);
 }

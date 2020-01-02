@@ -65,6 +65,7 @@ isDead = false;
 isMoving = false;
 isBlocking = false;
 statChange = true;
+alpha = 1;
 
 cd = array_create(21,0);
 maxcd = array_create(21,0);
@@ -121,6 +122,7 @@ global.playerItems[6]++;
 global.playerItems[7]++;
 global.playerItems[8]++;
 global.playerItems[9]++;
+global.playerItems[16]++;
 global.playerItems[18]++;
 if (findArrayIndex(global.playerInv, 1) == -1) {
 	for (var i=0; i < array_length_1d(global.playerInv); i++) {
@@ -174,6 +176,13 @@ if (findArrayIndex(global.playerInv, 11) == -1) {
 	for (var i=0; i < array_length_1d(global.playerInv); i++) {
 		if (global.playerInv[i] == 0) {
 			global.playerInv[i] = 11;
+			break;
+		}
+	}
+}if (findArrayIndex(global.playerInv, 16) == -1) {
+	for (var i=0; i < array_length_1d(global.playerInv); i++) {
+		if (global.playerInv[i] == 0) {
+			global.playerInv[i] = 16;
 			break;
 		}
 	}
