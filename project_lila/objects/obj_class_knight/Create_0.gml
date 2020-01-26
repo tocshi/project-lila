@@ -3,6 +3,7 @@ event_inherited();
 statmap[? "class"] = "Knight";
 
 skill_sprite = array_create(10, spr_empty);
+f_challenge_list = ds_list_create();
 shield_charge = 0;
 scList = ds_list_create();
 target = noone;
@@ -24,7 +25,7 @@ skill_sprite[8] = spr_skill_F;
 skill_sprite[9] = spr_skill_G;
 
 maxcd[1] = room_speed*5;
-maxcd[2] = room_speed*1.5;
+maxcd[2] = room_speed*14;
 maxcd[3] = room_speed*6;
 maxcd[4] = room_speed*2;
 maxcd[5] = room_speed*6;

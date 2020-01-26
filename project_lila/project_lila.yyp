@@ -39,6 +39,14 @@
             }
         },
         {
+            "Key": "016702cb-c3b5-4071-95ca-99453ff470da",
+            "Value": {
+                "id": "749f7fdd-bed1-43fa-9655-245ae4d6abca",
+                "resourcePath": "objects\\obj_taunt_effect\\obj_taunt_effect.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "0169ea25-1330-47b1-8dd1-c6dc150a6447",
             "Value": {
                 "id": "4d7fe429-520e-454e-b35f-e746c89001dc",
@@ -468,6 +476,14 @@
                 "id": "b21e1a2e-946d-4ef3-a338-232151861679",
                 "resourcePath": "views\\1f787031-fabf-4dab-93a4-2fe1e4b8d272.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "1fb385d3-93e7-42ee-a034-102159d746a4",
+            "Value": {
+                "id": "25c85bac-b2fe-49be-83e2-ce4b3497d213",
+                "resourcePath": "scripts\\buff_taunt\\buff_taunt.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -1012,6 +1028,14 @@
                 "id": "8ed08f55-69d0-4f4b-b6ac-49b4eb593f57",
                 "resourcePath": "views\\5263f9bd-59ca-4dd9-9154-cf53d186776d.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "532c1d0f-a95d-43ff-a3ed-32aa66e6e903",
+            "Value": {
+                "id": "2b61ae53-659a-4151-b30b-e0372aa1cc76",
+                "resourcePath": "sprites\\spr_buff_TODO\\spr_buff_TODO.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -2023,6 +2047,14 @@
             }
         },
         {
+            "Key": "baab49ba-7b0c-4cb8-aae1-3edc6b2e7c7a",
+            "Value": {
+                "id": "d3cc8e14-f339-461c-a720-0a0221a8de32",
+                "resourcePath": "sprites\\spr_taunt_effect\\spr_taunt_effect.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "bb742c81-8968-4f8e-b129-459f5802e411",
             "Value": {
                 "id": "9d2aefb6-f2a8-4cad-881a-85c04a014c42",
@@ -2935,6 +2967,7 @@
         "2ec2bdf0-74d8-40f4-b222-d5a502d99f2d",
         "26c78fed-782c-40cc-8047-175eefc128a7",
         "3a63ea38-8103-469d-9c0c-593d7c43a19a",
+        "1fb385d3-93e7-42ee-a034-102159d746a4",
         "4160ac60-2dc6-4341-badb-0e6001f5796f",
         "c1f6a15f-4197-4c91-93b5-c0d5f2138201",
         "61a8ba44-924c-4e9f-991d-ce3b295e2e7c",

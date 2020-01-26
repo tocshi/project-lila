@@ -10,9 +10,18 @@ switch(buffName){
 	statmap[? "movespeed"]-=9999;
 	break;
 	
+	case "Taunt":
+	if(target != get_buff_data(self,"Taunt","data")){target = get_buff_data(self,"Taunt","data");}
+	if(statChange){statmap[? "finaldmg"]-=20;}
+	break;
+	
 	case "Empowered":
 	var effect = instance_create_layer(x,y+32,"Assets_1",obj_skill_empowered);
 	effect.vspeed = -1;
+	break;
+	
+	case "Fearless Challenge":
+	if(statChange){statmap[? "finalshld"]+=3*get_buff_data(self,"Fearless Challenge","stacks");}
 	break;
 
 	case "Knight's Shield":
@@ -86,6 +95,20 @@ switch(buffName){
 				self.target	= other.id;
 			}
 		}
+	}
+	break;
+	
+	case "Fae Blessing":
+	if(get_buff_data(self,"Fae Blessing","time")%15 == 0){
+		with(instance_create_layer(irandom_range(x-64,x+64),irandom_range(y-64,y+64),"Assets_1",obj_channelling_power)){
+			target = other;
+			sprite_index = spr_poison_effect;
+			image_blend = c_aqua;
+		}
+	}
+	if(statChange){
+		statmap[? "hpregen"]+=(statmap[? "maxhp"]/50)/room_speed;
+		statmap[? "mpregen"]+=(statmap[? "maxmp"]/50)/room_speed;
 	}
 	break;
 	
