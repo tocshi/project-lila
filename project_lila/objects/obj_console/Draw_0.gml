@@ -7,8 +7,10 @@ draw_self();
 
 text = keyboard_string;
 if (is_caret) {
-	string_insert("|", text, string_length(keyboard_string) - caret);
+	text += "|";
 }
+text += after_caret;
+
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);
 draw_set_font(fnt_gui_small);
