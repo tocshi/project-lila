@@ -95,12 +95,5 @@ if (keyboard_check_pressed(vk_down)) {
 	keyboard_string = history[| history_cursor];
 }
 
-if (keyboard_check_pressed(vk_control) && keyboard_check_pressed(ord("c"))) {
-	caret = 0;
-	history_cursor = ds_list_size(history);
-	keyboard_string = "";
-}
-
-
 //x = camera_get_view_x(global.currentCamera);
 //y = camera_get_view_y(global.currentCamera) + camera_get_view_height(global.currentCamera)/2 - HEIGHT/2;
