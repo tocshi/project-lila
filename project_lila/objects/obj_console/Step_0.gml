@@ -1,5 +1,7 @@
 /// @Description input text/execute line
 if (keyboard_check_pressed(vk_enter)) {
+	ds_list_add(history, keyboard_string + after_caret);
+	history_cursor = ds_list_size(history);
 	arg_list = split(keyboard_string + after_caret, " ");
 	command = arg_list[| 0];
 	arg1 = arg_list[| 1];
@@ -72,6 +74,33 @@ if (keyboard_check_pressed(vk_right)) {
 		after_caret = string_delete(after_caret, 1, 1);
 	 }
 }
+
+if (keyboard_check_pressed(vk_up)) {
+	history_cursor--;
+	if (history_cursor < 0) {
+		history_cursor = 0;
+	}
+	caret = 0;
+	keyboard_string = history[| history_cursor];
+}
+
+if (keyboard_check_pressed(vk_down)) {
+	history_cursor++;
+	if (history_cursor > ds_list_size(history)) {
+		history_cursor = ds_list_size(history);
+		keyboard_string = "";
+		caret = 0;
+	}
+	caret = 0;
+	keyboard_string = history[| history_cursor];
+}
+
+if (keyboard_check_pressed(vk_control) && keyboard_check_pressed(ord("c"))) {
+	caret = 0;
+	history_cursor = ds_list_size(history);
+	keyboard_string = "";
+}
+
 
 //x = camera_get_view_x(global.currentCamera);
 //y = camera_get_view_y(global.currentCamera) + camera_get_view_height(global.currentCamera)/2 - HEIGHT/2;
