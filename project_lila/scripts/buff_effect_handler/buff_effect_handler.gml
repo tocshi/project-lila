@@ -132,7 +132,14 @@ switch(buffName){
 	break;
 	
 	case "Poisoned":
-	instance_create_layer(irandom_range(x-sprite_width/2,x+sprite_width/2),irandom_range(y-sprite_height/2,y+sprite_height/2),"Assets_1",obj_poison_effect);
+	with(instance_create_layer(irandom_range(x-sprite_width/2,x+sprite_width/2),irandom_range(y-sprite_height/2,y+sprite_height/2),"Assets_1",obj_poison_effect)){
+		if(get_buff_data(other,"Poisoned","stacks") >= 5){
+			sprite_index = spr_essence;
+			image_blend = c_lime;
+			image_xscale = 1;
+			image_yscale = 1;
+		}
+	}
 	if(get_buff_data(self,"Poisoned","time") % 60 = 30){
 		var poisondmg = get_buff_data(self,"Poisoned","data")*get_buff_data(self,"Poisoned","stacks");
 		statmap[? "hp"]-=poisondmg;
@@ -156,6 +163,10 @@ switch(buffName){
 			}
 		}
 	}
+	break;
+	
+	case "Punish the Strong":
+	if(statChange){statmap[? "finaldmg"]+=10;}
 	break;
 	
 	case "Invisible":
