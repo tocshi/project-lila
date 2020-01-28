@@ -26,6 +26,10 @@ while (ds_list_size(lines) > MAX_LINES) {
 
 text = keyboard_string;
 text += after_caret;
+
+// Trim input line
+text = string_copy(text, string_length(text) - caret - MAX_LINE_LENGTH + 2, MAX_LINE_LENGTH);
+
 caret_text = "";
 if (is_caret) {
 	for (var i = 0; i < string_length(text) - caret; i++) {
@@ -33,9 +37,10 @@ if (is_caret) {
 	}
 	caret_text += "|";
 }
-// Trim input line
 
-
+// If some text is trimmed, then caret will be at the wrong spot, since it's pos is calcluated from the 
+// end of the entire string, not just the end of the visible string. This fixes that through balck magic.
+caret_text = string_copy(caret_text, string_length(caret_text) - caret - MAX_LINE_LENGTH + 1, MAX_LINE_LENGTH);
 
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);
