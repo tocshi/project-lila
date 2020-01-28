@@ -15,6 +15,7 @@ lines = ds_list_create();
 caret = 0; // How far the caret is from the end
 is_caret = false;
 after_caret = "";
+caret_text = "";
 
 alarm[0] = CARET_DELAY;
 x = 0;

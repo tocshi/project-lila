@@ -25,11 +25,14 @@ while (ds_list_size(lines) > MAX_LINES) {
 }
 
 text = keyboard_string;
-if (is_caret) {
-	text += "|";
-}
 text += after_caret;
-
+caret_text = "";
+if (is_caret) {
+	for (var i = 0; i < string_length(text) - caret; i++) {
+		caret_text += " ";	
+	}
+	caret_text += "|";
+}
 // Trim input line
 
 
@@ -39,6 +42,7 @@ draw_set_valign(fa_top);
 draw_set_font(fnt_monospace);
 draw_set_color(c_green)
 draw_text(x + LEFT_TEXT_PADDING, y + text_pos, text);
+draw_text(x + LEFT_TEXT_PADDING / 2 + 1, y + text_pos, caret_text);
 for (var i = ds_list_size(lines) - 1; i >= 0; i--) {
 	text_pos -= TEXT_HEIGHT;
 	draw_text(x + LEFT_TEXT_PADDING, y + text_pos, lines[| i]);
