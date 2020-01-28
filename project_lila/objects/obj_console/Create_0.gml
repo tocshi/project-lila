@@ -5,6 +5,7 @@ INCORRECT_USAGE = "Incorrect usage of command \n";
 WIDTH = 1000;
 HEIGHT = 400;
 TEXT_HEIGHT = 20;
+MAX_INPUT_LENGTH = 10;
 
 text = "";
 active = false;
@@ -15,8 +16,8 @@ is_caret = false;
 after_caret = "";
 
 alarm[0] = CARET_DELAY;
-x = camera_get_view_x(global.currentCamera) + camera_get_view_width(global.currentCamera)/2;
-y = camera_get_view_y(global.currentCamera) + camera_get_view_height(global.currentCamera)/2;
+x = camera_get_view_x(global.currentCamera) + camera_get_view_width(global.currentCamera)/2 - WIDTH/2;
+y = camera_get_view_y(global.currentCamera) + camera_get_view_height(global.currentCamera)/2 - HEIGHT/2;
 
 help = ds_map_create();
 help[? ""] = "help: <String> command. Prints help for the given command.";

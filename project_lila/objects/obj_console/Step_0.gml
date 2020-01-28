@@ -1,7 +1,6 @@
 /// @Description input text/execute line
 if (keyboard_check_pressed(vk_enter)) {
 	arg_list = split(keyboard_string + after_caret, " ");
-	after_caret = "";
 	command = arg_list[| 0];
 	arg1 = arg_list[| 1];
 	arg2 = arg_list[| 2];
@@ -49,11 +48,13 @@ if (keyboard_check_pressed(vk_enter)) {
 		ds_list_delete(lines, 0);
 	}
 	keyboard_string = "";
+	after_caret = "";
 	caret = 0;
 	exit;
 }
 
 if (keyboard_check_pressed(vk_left)) {
+	// Caret is the distance from the end of the text input. This is done since typing updates keyboard_string internally and wont update caret
 	 caret++;
 	 if (caret > string_length(keyboard_string) + string_length(after_caret)){
 		 caret = string_length(keyboard_string) + string_length(after_caret);
@@ -74,3 +75,6 @@ if (keyboard_check_pressed(vk_right)) {
 		after_caret = string_delete(after_caret, 1, 1);
 	 }
 }
+
+x = camera_get_view_x(global.currentCamera) + camera_get_view_width(global.currentCamera)/2 - WIDTH/2;
+y = camera_get_view_y(global.currentCamera) + camera_get_view_height(global.currentCamera)/2 - HEIGHT/2;
