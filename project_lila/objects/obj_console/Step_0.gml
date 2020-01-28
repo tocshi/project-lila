@@ -44,9 +44,6 @@ if (keyboard_check_pressed(vk_enter)) {
 			break;
 		default: ds_list_add(lines, command + " is not a valid command. Use /commands to list commands");	
 	}
-	if (ds_list_size(lines) > 20) {
-		ds_list_delete(lines, 0);
-	}
 	keyboard_string = "";
 	after_caret = "";
 	caret = 0;
@@ -76,5 +73,5 @@ if (keyboard_check_pressed(vk_right)) {
 	 }
 }
 
-x = camera_get_view_x(global.currentCamera) + camera_get_view_width(global.currentCamera)/2 - WIDTH/2;
-y = camera_get_view_y(global.currentCamera) + camera_get_view_height(global.currentCamera)/2 - HEIGHT/2;
+//x = camera_get_view_x(global.currentCamera);
+//y = camera_get_view_y(global.currentCamera) + camera_get_view_height(global.currentCamera)/2 - HEIGHT/2;
