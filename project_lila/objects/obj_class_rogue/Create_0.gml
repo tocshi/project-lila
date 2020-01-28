@@ -1,10 +1,13 @@
 event_inherited();
 
 statmap[? "class"] = "Rogue";
+t_fang = 0;
 s_step_target = noone;
+v_thief_target = noone;
+v_thief_count = 0;
 s_slicer_target = noone;
 s_slicer_remaining = 0;
-t_fang = 0;
+
 
 skill_sprite = array_create(10, spr_empty);
 
@@ -24,7 +27,7 @@ maxcd[2] = room_speed*10;
 maxcd[3] = room_speed*16;
 maxcd[4] = room_speed*0;
 maxcd[5] = room_speed*1;
-maxcd[6] = room_speed*0;
+maxcd[6] = room_speed*1;
 maxcd[7] = room_speed*14;
 maxcd[8] = room_speed*0;
 maxcd[9] = room_speed*60;

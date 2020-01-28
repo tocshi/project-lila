@@ -134,7 +134,24 @@ if(statmap[? "classlvl"] < 7){exit;}
 
 
 if(statmap[? "classlvl"] < 8){exit;}
+if(keyboard_check_pressed(skill_button[8]) && (cd[8] <= 0) && statmap[? "mp"] >= 15 && equips[0] > 0){
+	
+	if(instance_exists(obj_ally)){
+		var target = instance_nearest(mouse_x,mouse_y,obj_ally);
 
+		if((point_distance(mouse_x,mouse_y,target.x,target.y) <= 128) && (point_distance(x,y,target.x,target.y) <= 450)){
+			statmap[? "mp"] -= 15;
+			cd[8] = 30*room_speed;
+			applyBuff(target,10*room_speed,true,"Fae Blessing",buff_generic,false,-1,0,spr_buff_TODO,"Lorem Ipsum",0);
+			proc_unyielding_buff();
+		}
+	}
+}
+if(cd[8] <= 0 && equips[0] > 0 && statmap[? "hp"] < statmap[? "maxhp"]*0.3){
+	cd[8] = maxcd[8];
+	
+	applyBuff(self,10*room_speed,true,"Fae Blessing",buff_generic,false,-1,0,spr_buff_TODO,"Lorem Ipsum",0);
+}
 
 
 if(statmap[? "classlvl"] < 9){exit;}

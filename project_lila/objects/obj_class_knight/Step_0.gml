@@ -14,6 +14,25 @@ if(keyboard_check_pressed(skill_button[1]) && (cd[1] <= 0) && statmap[? "mp"] >=
 }
 
 if(statmap[? "classlvl"] < 2){exit;}
+if(keyboard_check_pressed(skill_button[2]) && (cd[2] <= 0) && statmap[? "mp"] >= 30 && equips[0] > 0){
+	var range_check = instance_nearest(x,y,obj_enemy);
+	if(distance_to_object(range_check) > 300){exit;}
+	
+	statmap[? "mp"] -= 30;
+	var effect = instance_create_layer(x,y,"Instances",obj_debug_indicator);
+	effect.vspeed = -1;
+	cd[2] = maxcd[2];
+	
+	var hit = min(10,collision_circle_list(x,y,320,obj_enemy,true,true,f_challenge_list,false));
+	applyBuff(self,6*room_speed,true,"Fearless Challenge",buff_generic,false,hit,10,spr_buff_TODO,"Lorem Ipsum",0);
+	for(var i = 0; i < ds_list_size(f_challenge_list); ++i){
+		var target = f_challenge_list[| i];
+		applyBuff(target,6*room_speed,true,"Taunt",buff_generic,false,-1,1,spr_buff_TODO,"Lorem Ipsum",self);
+		var effect = instance_create_layer(target.x-(target.sprite_width/2),target.y-(target.sprite_height/2),"Assets_1",obj_taunt_effect);
+		effect.user = target;
+	}
+	ds_list_clear(f_challenge_list);
+}
 
 if(statmap[? "classlvl"] < 3){exit;}
 if(keyboard_check_pressed(skill_button[3]) && (cd[3] <= 0) && statmap[? "mp"] >= 30 && canUseSkill && equips[0] > 0){

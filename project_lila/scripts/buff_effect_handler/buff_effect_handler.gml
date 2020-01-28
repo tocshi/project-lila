@@ -10,9 +10,18 @@ switch(buffName){
 	statmap[? "movespeed"]-=9999;
 	break;
 	
+	case "Taunt":
+	if(target != get_buff_data(self,"Taunt","data")){target = get_buff_data(self,"Taunt","data");}
+	if(statChange){statmap[? "finaldmg"]-=20;}
+	break;
+	
 	case "Empowered":
 	var effect = instance_create_layer(x,y+32,"Assets_1",obj_skill_empowered);
 	effect.vspeed = -1;
+	break;
+	
+	case "Fearless Challenge":
+	if(statChange){statmap[? "finalshld"]+=3*get_buff_data(self,"Fearless Challenge","stacks");}
 	break;
 
 	case "Knight's Shield":
@@ -89,6 +98,20 @@ switch(buffName){
 	}
 	break;
 	
+	case "Fae Blessing":
+	if(get_buff_data(self,"Fae Blessing","time")%15 == 0){
+		with(instance_create_layer(irandom_range(x-64,x+64),irandom_range(y-64,y+64),"Assets_1",obj_channelling_power)){
+			target = other;
+			sprite_index = spr_poison_effect;
+			image_blend = c_aqua;
+		}
+	}
+	if(statChange){
+		statmap[? "hpregen"]+=(statmap[? "maxhp"]/50)/room_speed;
+		statmap[? "mpregen"]+=(statmap[? "maxmp"]/50)/room_speed;
+	}
+	break;
+	
 	case "Chilled":
 	if(get_buff_data(self,"Chilled","time")%15 == 0){
 		instance_create_layer(irandom_range(x-sprite_width/2,x+sprite_width/2),irandom_range(y-sprite_height/2,y+sprite_height/2),"Assets_1",obj_chill_effect);
@@ -109,7 +132,14 @@ switch(buffName){
 	break;
 	
 	case "Poisoned":
-	instance_create_layer(irandom_range(x-sprite_width/2,x+sprite_width/2),irandom_range(y-sprite_height/2,y+sprite_height/2),"Assets_1",obj_poison_effect);
+	with(instance_create_layer(irandom_range(x-sprite_width/2,x+sprite_width/2),irandom_range(y-sprite_height/2,y+sprite_height/2),"Assets_1",obj_poison_effect)){
+		if(get_buff_data(other,"Poisoned","stacks") >= 5){
+			sprite_index = spr_essence;
+			image_blend = c_lime;
+			image_xscale = 1;
+			image_yscale = 1;
+		}
+	}
 	if(get_buff_data(self,"Poisoned","time") % 60 = 30){
 		var poisondmg = get_buff_data(self,"Poisoned","data")*get_buff_data(self,"Poisoned","stacks");
 		statmap[? "hp"]-=poisondmg;
@@ -133,6 +163,10 @@ switch(buffName){
 			}
 		}
 	}
+	break;
+	
+	case "Punish the Strong":
+	if(statChange){statmap[? "finaldmg"]+=10;}
 	break;
 	
 	case "Invisible":

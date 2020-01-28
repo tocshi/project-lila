@@ -131,7 +131,13 @@ if(keyboard_check_pressed(skill_button[5]) && (cd[5] <= 0) && statmap[? "mp"] >=
 }
 
 if(statmap[? "classlvl"] < 6){exit;}
-if(keyboard_check_pressed(skill_button[6]) && (cd[6] <= 0) && statmap[? "mp"] >= 0 && canUseSkill && equips[0] > 0){
+if(cd[6] <= 0 && canUseSkill && equips[0] > 0 && statmap[? "hp"] < statmap[? "maxhp"]){
+	if(v_thief_count >= 5){
+		statmap[? "hp"] += 0.05*(statmap[? "maxhp"] - statmap[? "hp"]);
+		v_thief_target = noone;
+		v_thief_count = 0;
+		cd[6] = maxcd[6];
+	}
 }
 
 if(statmap[? "classlvl"] < 7){exit;}
