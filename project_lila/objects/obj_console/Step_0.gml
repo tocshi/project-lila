@@ -1,4 +1,6 @@
 /// @Description input text/execute line
+// TODO: add to lines normally, as wrapping will be done in draw anyway (can remove script after)
+
 if (keyboard_check_pressed(vk_enter)) {
 	ds_list_add(history, keyboard_string + after_caret);
 	history_cursor = ds_list_size(history);
