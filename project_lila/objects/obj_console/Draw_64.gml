@@ -7,10 +7,20 @@ draw_set_color(c_black);
 draw_rectangle(x, y, x + WIDTH, y + HEIGHT, false);
 draw_set_alpha(1);
 
-// TODO test trimming with \n characters (does it double newline?)
+// Turn newlines into new entries into lines array
+for (var i = 0; i < ds_list_size(lines); i++) {
+	var str = lines[| i];
+	var str_list = split(str, "\n");
+	ds_list_delete(lines, i)
+	for (var j = 0; j < ds_list_size(str_list); j++) {
+		ds_list_insert(lines, i, str_list[| j]);
+		i++;
+	}
+	i--;
+}
 
 // Trim characters past MAX_LINE_LENGTH chars
-for (i = 0; i < ds_list_size(lines); i++) {
+for (var i = 0; i < ds_list_size(lines); i++) {
 	var str = lines[| i];
 	if (string_length(str) > MAX_LINE_LENGTH) {
 		var left = string_copy(str, 1, MAX_LINE_LENGTH);

@@ -11,40 +11,45 @@ if (keyboard_check_pressed(vk_enter)) {
 	arg3 = arg_list[| 3];
 	switch (command) {
 		case "/commands":
-			append_lines(lines, "die give commands help");
+			if (!string_is_uint(arg1)) {
+				arg1 = 1;				
+			}
+			if (arg1 >= 2) {
+				ds_list_add(lines, command + ": pageNum too large. There is only 1 page.");	
+			}
+			ds_list_add(lines, commands[| arg1 - 1]);
 			break;
 		case "/die":
 			global.player.statmap[? "hp"] = 0;
-			append_lines(lines, command + ": Player killed");
+			ds_list_add(lines, command + ": Player killed");
 			break;
 		case "/give":
-			if (ds_list_size(arg_list) < 3) {
+			if (arg2 = undefined) {
 				arg2 = 1;
-				show_debug_message("Setting arg2");
 			}
 			if (!string_is_uint(arg1) || !string_is_uint(arg2)) {
-				append_lines(lines, INCORRECT_USAGE + help[? "give"]);
+				ds_list_add(lines, INCORRECT_USAGE + help[? "give"]);
 				break;
 			}
 			show_debug_message(ds_list_size(global.itemData));
 			if (ds_list_size(global.itemData) < (arg1 - 1) || !is_real(global.itemData[| arg1])) {
-				append_lines(lines, "Invalid item id: " + arg1);
+				ds_list_add(lines, "Invalid item id: " + arg1);
 				break;
 			}
 			global.playerItems[arg1] += arg2;
 			
-			append_lines(lines, string(command) +": " + string(arg2) + " of Item Id " + string(arg1) + " given");
+			ds_list_add(lines, string(command) +": " + string(arg2) + " of Item Id " + string(arg1) + " given");
 			break;
 		case "/help":
 			if (!is_string(arg1)) {
-				append_lines(lines, "help : " + help[? ""]);
+				ds_list_add(lines, "help : " + help[? ""]);
 				break;
 			}
 			if (!is_string(help[? arg1])) {
-				append_lines(lines, command + ": is not a valid command. Use /commands to list commands");
+				ds_list_add(lines, command + ": is not a valid command. Use /commands to list commands");
 				break;
 			}
-			append_lines(lines, command + ": " + help[? arg1]);
+			ds_list_add(lines, command + ": " + help[? arg1]);
 			break;
 		default: ds_list_add(lines, command + " is not a valid command. Use /commands to list commands");	
 	}
@@ -53,6 +58,8 @@ if (keyboard_check_pressed(vk_enter)) {
 	caret = 0;
 	exit;
 }
+
+// Caret movement logic
 
 if (keyboard_check_pressed(vk_left)) {
 	// Caret is the distance from the end of the text input. This is done since typing updates keyboard_string internally and wont update caret
@@ -77,6 +84,9 @@ if (keyboard_check_pressed(vk_right)) {
 	 }
 }
 
+
+// History logic
+
 if (keyboard_check_pressed(vk_up)) {
 	history_cursor--;
 	if (history_cursor < 0) {
@@ -96,6 +106,3 @@ if (keyboard_check_pressed(vk_down)) {
 	caret = 0;
 	keyboard_string = history[| history_cursor];
 }
-
-//x = camera_get_view_x(global.currentCamera);
-//y = camera_get_view_y(global.currentCamera) + camera_get_view_height(global.currentCamera)/2 - HEIGHT/2;
