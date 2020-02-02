@@ -129,6 +129,35 @@ switch(itemid){
 	}
 	break;
 	
+	// Chain Knife Default Basic Attack
+	case 34:
+	with(instance_create_layer(x,y,"Attacks",obj_basicattack_chainknife)){
+		sprite_index = make_sprite_from_item(itemid);
+		image_index = 1;
+		image_speed = 0;
+		iter = other.iter;
+		anchor = argument0;
+		self.user = user;
+		ds_map_copy(atkmap,user.statmap);
+		atkmap[? "dmgmod"] = dmgmod;
+		atkmap[? "element"] = element;
+		atkmap[? "isBasicAttack"] = true;
+		atkmap[? "isSingleHit"]	= true;
+		
+		dir = point_direction(x,y,mouse_x,mouse_y);
+		skill = round(room_speed/user.statmap[? "atkspeed"]);
+		switch(iter % 2){
+			case 0:
+			image_angle = dir-(angle/2);
+			break;
+	
+			case 1:
+			image_angle = dir+(angle/2);
+			break;
+		}
+	}
+	break;
+	
 	default:
 	show_error("ERROR: NO BASIC ATTACK FOUND!",true);
 	break;

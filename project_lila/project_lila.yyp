@@ -367,6 +367,14 @@
             }
         },
         {
+            "Key": "19da0070-baec-451f-82db-3cb59646f6e5",
+            "Value": {
+                "id": "0031eb3e-4525-465c-800d-9ab3fa31bb4b",
+                "resourcePath": "sprites\\spr_basic_chain\\spr_basic_chain.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "1a865427-c9be-490e-9d24-a2ebfb6a66d4",
             "Value": {
                 "id": "a565963a-a049-42ea-9296-dbaa7df3032f",
@@ -2196,6 +2204,14 @@
                 "id": "c42c0060-910d-42a9-9d10-caa0a5f2f527",
                 "resourcePath": "sprites\\spr_dmgtxt_hitbox\\spr_dmgtxt_hitbox.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "c3675c00-6b8d-481f-be7f-0c552d38ac9c",
+            "Value": {
+                "id": "a35bb16d-9b91-4530-9e2e-0c183c36114e",
+                "resourcePath": "objects\\obj_basicattack_chainknife\\obj_basicattack_chainknife.yy",
+                "resourceType": "GMObject"
             }
         },
         {

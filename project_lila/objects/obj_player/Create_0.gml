@@ -124,6 +124,7 @@ global.playerItems[8]++;
 global.playerItems[9]++;
 global.playerItems[16]++;
 global.playerItems[18]++;
+global.playerItems[34]++;
 if (findArrayIndex(global.playerInv, 1) == -1) {
 	for (var i=0; i < array_length_1d(global.playerInv); i++) {
 		if (global.playerInv[i] == 0) {
@@ -191,6 +192,14 @@ if (findArrayIndex(global.playerInv, 18) == -1) {
 	for (var i=0; i < array_length_1d(global.playerInv); i++) {
 		if (global.playerInv[i] == 0) {
 			global.playerInv[i] = 18;
+			break;
+		}
+	}
+}
+if (findArrayIndex(global.playerInv, 34) == -1) {
+	for (var i=0; i < array_length_1d(global.playerInv); i++) {
+		if (global.playerInv[i] == 0) {
+			global.playerInv[i] = 34;
 			break;
 		}
 	}
