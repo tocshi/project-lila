@@ -1,5 +1,8 @@
 event_inherited();
 
-anchor = global.player;
+user = noone;
+orig_sprite = spr_empty;
 skill = 0;
-angle = 160;
+duration = 0;
+// total angle
+angle = 320;

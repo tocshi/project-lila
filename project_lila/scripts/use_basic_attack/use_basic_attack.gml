@@ -133,10 +133,12 @@ switch(itemid){
 	case 34:
 	with(instance_create_layer(x,y,"Attacks",obj_basicattack_chainknife)){
 		sprite_index = make_sprite_from_item(itemid);
+		orig_sprite = sprite_index;
 		image_index = 1;
 		image_speed = 0;
 		iter = other.iter;
-		anchor = argument0;
+		dist = point_distance(user.x,user.y,mouse_x,mouse_y);
+		dist = clamp(dist,64,300)/300;
 		self.user = user;
 		ds_map_copy(atkmap,user.statmap);
 		atkmap[? "dmgmod"] = dmgmod;
@@ -146,15 +148,18 @@ switch(itemid){
 		
 		dir = point_direction(x,y,mouse_x,mouse_y);
 		skill = round(room_speed/user.statmap[? "atkspeed"]);
+		duration = skill;
 		switch(iter % 2){
 			case 0:
-			image_angle = dir-(angle/2);
+			direction = dir-(angle/4)-20;
 			break;
 	
 			case 1:
-			image_angle = dir+(angle/2);
+			direction = dir+(angle/4)+20;
 			break;
 		}
+		image_alpha = 0;
+		alarm[0] = 1;
 	}
 	break;
 	
