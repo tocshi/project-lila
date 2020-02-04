@@ -7,24 +7,25 @@ if (statmap[? "hp"] <= 0 && !isDead){
 
 move_out_of_wall();
 
-if(statChange){
-	recalcStats(self.id);
-}
-
 //TIMERS
 // Buffs
 for (var i = ds_list_size(buff)-1; i >= 0; i--){
 	var buff_array = ds_list_find_value(buff,i);
 
-	buff_effect_handler(buff_array[2]);
 	if(buff_array[0] > 0){
 		buff_array[0]--;
 		ds_list_replace(buff,i,buff_array);
 	}
 	if(buff_array[0] <= 0){
 		removeBuff(self.id,buff_array[2],false);
-		recalcStats(self.id);
 	}
+}
+if(statChange){
+	recalcStats(self.id);
+}
+for (var i = 0; i < ds_list_size(buff); ++i){
+	var buff_name = array_get(buff[| i],2);
+	buff_effect_handler(buff_name);
 }
 
 //REGENERATION

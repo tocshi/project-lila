@@ -1,4 +1,4 @@
-buffName = argument0;
+var buffName = argument0;
 
 switch(buffName){
 	

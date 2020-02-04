@@ -1,5 +1,6 @@
 itemid = 0;
 time = 0;
+image_speed = 0;
 alarm[0] = 1;
 alarm[1] = irandom_range(60,93);
 xspd = 0;

@@ -413,6 +413,7 @@
     "desc"      : "A chain knife made of a common metal. Shoddy, but cheap.",
     "value"     : 100,
     "atk"       : 10,
+    "atkrange"  : 300,
     "unleashGauge"  : 0
   }
 ]
