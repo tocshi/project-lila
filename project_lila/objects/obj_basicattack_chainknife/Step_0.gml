@@ -18,7 +18,7 @@ if(skill > duration*0.1){
 }
 else{
 	direction = point_direction(x,y,user.x,user.y)+(skill*damping);
-	speed = point_distance(x,y,user.y,user.y)/6;
+	speed = point_distance(x,y,user.x,user.y)/3;
 	if(point_distance(x,y,user.x,user.y) <= 128){skill = 0;}
 }
 image_angle = point_direction(user.x,user.y,x,y)-(speed*damping)/4;
