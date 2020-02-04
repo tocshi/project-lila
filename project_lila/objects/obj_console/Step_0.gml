@@ -38,10 +38,10 @@ if (keyboard_check_pressed(vk_enter)) {
 				break;
 			}
 			global.playerItems[arg1] += arg2;
-			if (findArrayIndex(global.playerInv, arg2) == -1) {
+			if (findArrayIndex(global.playerInv, arg1) == -1) {
 				for (var i=0; i < array_length_1d(global.playerInv); i++) {
 					if (global.playerInv[i] == 0) {
-						global.playerInv[i] = arg2;
+						global.playerInv[i] = arg1;
 						break;
 					}
 				}
