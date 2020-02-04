@@ -23,15 +23,15 @@ if(footwork_charge > 0){
 	}	
 }
 
-if(following_ally && instance_exists(target)){
-	direction = point_direction(x,y,target.x,target.y);
+if(following_ally && instance_exists(guardian_target)){
+	direction = point_direction(x,y,guardian_target.x,guardian_target.y);
 	
-	if (point_distance(x, y, target.x, target.y) < 15){
+	if (point_distance(x, y, guardian_target.x, guardian_target.y) < 15){
 		speed = 0;
 		isMoving = false;
 		following_ally = false;
 		
-		applyBuff(target,180,true,"Knight's Shield",buff_knights_shield,false,-1,0,spr_debug_wall,"Lorem Ipsum",0);
+		applyBuff(guardian_target,180,true,"Knight's Shield",buff_knights_shield,false,-1,0,spr_debug_wall,"Lorem Ipsum",0);
 		
 	}
 }

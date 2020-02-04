@@ -20,6 +20,7 @@ if (keyboard_check_pressed(vk_enter)) {
 			ds_list_add(lines, commands[| arg1 - 1]);
 			break;
 		case "/die":
+			global.pause = false;
 			global.player.statmap[? "hp"] = 0;
 			ds_list_add(lines, command + ": Player killed");
 			break;
@@ -37,6 +38,14 @@ if (keyboard_check_pressed(vk_enter)) {
 				break;
 			}
 			global.playerItems[arg1] += arg2;
+			if (findArrayIndex(global.playerInv, arg2) == -1) {
+				for (var i=0; i < array_length_1d(global.playerInv); i++) {
+					if (global.playerInv[i] == 0) {
+						global.playerInv[i] = arg2;
+						break;
+					}
+				}
+			}
 			
 			ds_list_add(lines, string(command) +": " + string(arg2) + " of Item Id " + string(arg1) + " given");
 			break;

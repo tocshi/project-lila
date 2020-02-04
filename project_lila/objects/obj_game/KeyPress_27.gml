@@ -22,7 +22,6 @@ else {
 	global.dragging = false;
 	instance_activate_all();
 	camera_set_view_target(global.currentCamera,global.player);
-	instance_deactivate_object(console);
 	if (console != "null") {
 		instance_deactivate_object(console);
 	}

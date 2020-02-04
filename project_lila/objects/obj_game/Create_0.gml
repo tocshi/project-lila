@@ -8,7 +8,7 @@ global.player = noone;
 global.lastClass = obj_class_knight;
 
 // Which menu to access when paused.
-global.gui_state = 0;
+global.gui_state = -1;
 // Whether the cursor is holding over an item in inventory
 global.holding = false;
 // Whether an item is currently being dragged

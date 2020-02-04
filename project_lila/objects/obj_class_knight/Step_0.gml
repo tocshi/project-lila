@@ -88,27 +88,27 @@ if(keyboard_check_pressed(skill_button[5]) && (cd[5] <= 0) && statmap[? "mp"] >=
 	cancel_basic_attack();
 	
 	if(instance_exists(obj_ally)){
-		target = instance_nearest(mouse_x,mouse_y,obj_ally);
+		guardian_target = instance_nearest(mouse_x,mouse_y,obj_ally);
 
-		if((point_distance(mouse_x,mouse_y,target.x,target.y) <= 128) && (point_distance(x,y,target.x,target.y) <= 448)){
+		if((point_distance(mouse_x,mouse_y,guardian_target.x,guardian_target.y) <= 128) && (point_distance(x,y,guardian_target.x,guardian_target.y) <= 448)){
 			speed = 15;
 			following_ally = true;
-			atkTimer = clamp(round(point_distance(x,y,target.x,target.y)/15),1,30);
+			atkTimer = clamp(round(point_distance(x,y,guardian_target.x,guardian_target.y)/15),1,30);
 			canMove = false;
 			canAttack = false;
 			canUseSkill = false;
 			isMoving = false;
 		}
 		else {
-			target = self.id;
-			applyBuff(target,180,true,"Knight's Shield",buff_knights_shield,false,-1,0,spr_buff_knights_shield,"Lorem Ipsum",0);
+			guardian_target = self.id;
+			applyBuff(guardian_target,180,true,"Knight's Shield",buff_knights_shield,false,-1,0,spr_buff_knights_shield,"Lorem Ipsum",0);
 
 		}
 				
 	}
 	else {
-		target = self.id;
-		applyBuff(target,180,true,"Knight's Shield",buff_knights_shield,false,-1,0,spr_buff_knights_shield,"Lorem Ipsum",0);
+		guardian_target = self.id;
+		applyBuff(guardian_target,180,true,"Knight's Shield",buff_knights_shield,false,-1,0,spr_buff_knights_shield,"Lorem Ipsum",0);
 	}
 	
 	statmap[? "mp"] -= 25;
