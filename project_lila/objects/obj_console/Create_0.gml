@@ -20,8 +20,6 @@ after_caret = "";
 caret_text = "";
 
 alarm[0] = CARET_DELAY;
-x = 0;
-y = camera_get_view_height(global.currentCamera)/2 - HEIGHT/2;
 
 commands = ds_list_create();
 commands[| 0] = "commands\ndie\ngive\nhelp\n                                           page 1 of 1"; 

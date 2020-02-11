@@ -114,4 +114,4 @@ ds_list_add(global.equipStats,
 	"blkmod");
 
 cursor_sprite = spr_cursor;
-console = "null";
+console = noone;

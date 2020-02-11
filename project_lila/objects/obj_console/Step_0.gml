@@ -115,3 +115,9 @@ if (keyboard_check_pressed(vk_down)) {
 	caret = 0;
 	keyboard_string = history[| history_cursor];
 }
+
+//Keep console in position
+if(instance_exists(global.player)){
+	x = 0;
+	y = camera_get_view_height(global.currentCamera)/2 - HEIGHT/2;
+}

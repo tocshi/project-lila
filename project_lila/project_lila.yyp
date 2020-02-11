@@ -879,14 +879,6 @@
             }
         },
         {
-            "Key": "42b50f77-e469-4e8a-ae1e-706babb78cfc",
-            "Value": {
-                "id": "a1eeeaba-0ba5-4f05-9a35-a32f060c13af",
-                "resourcePath": "scripts\\append_lines\\append_lines.yy",
-                "resourceType": "GMScript"
-            }
-        },
-        {
             "Key": "438f225f-2517-4fc6-a4db-88f6bc043d77",
             "Value": {
                 "id": "58916cb5-d7d7-4f7c-a51f-5e086bd21cbb",

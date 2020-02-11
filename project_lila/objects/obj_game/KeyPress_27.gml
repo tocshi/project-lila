@@ -3,7 +3,7 @@ if(global.player == noone
 	|| room == rm_title
 ){exit;}
 
-if (console != "null" && instance_exists(console)) {
+if (console != noone && instance_exists(console)) {
 	instance_deactivate_object(console);
 }
 
@@ -22,7 +22,7 @@ else {
 	global.dragging = false;
 	instance_activate_all();
 	camera_set_view_target(global.currentCamera,global.player);
-	if (console != "null") {
+	if (console != noone) {
 		instance_deactivate_object(console);
 	}
 }
