@@ -17,13 +17,6 @@ if (!isEquipped && global.playerItems[itemid] <= 0) {
 	exit;	
 }
 
-if (isEquipped) {
-	unequipItem(target, itemid);	
-}
-
-global.playerItems[itemid]--;
-if (global.playerItems[itemid] <= 0) {
-	global.playerInv[findArrayIndex(global.playerInv, itemid)] = 0;
-}
+removeItem(itemid, isEquipped, target);
 
 dropItemAtRate(xx, yy, itemid, 1000);
