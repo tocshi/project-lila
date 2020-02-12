@@ -9,8 +9,11 @@
         "b000834d-694e-4b7f-9cfd-6136d647349c",
         "04144ba4-26c2-4e22-aca4-2665d8afa67c",
         "54e90f6e-9e5c-4684-b3cf-7c7593a4b1ce",
+        "55b7cdb7-1f7c-4d09-84ce-989d48c1e3dd",
         "241bc211-f307-47bf-8d8b-f7cfe8089b1c",
-        "7e1af0bc-9baf-439e-b962-76634753da50"
+        "7e1af0bc-9baf-439e-b962-76634753da50",
+        "5916a9ec-3a17-4e18-a390-ed34e6f04ea4",
+        "15d6b6d4-6759-4219-af01-40a7410a0212"
     ],
     "filterType": "GMScript",
     "folderName": "inventory",

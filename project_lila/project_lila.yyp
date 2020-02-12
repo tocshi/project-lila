@@ -319,6 +319,14 @@
             }
         },
         {
+            "Key": "15d6b6d4-6759-4219-af01-40a7410a0212",
+            "Value": {
+                "id": "1fbb4bac-cd66-4e16-85ed-424919675922",
+                "resourcePath": "scripts\\addItem\\addItem.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "15f191fd-e101-4736-8083-bd6de668b8b6",
             "Value": {
                 "id": "f7830cbb-a32e-4c80-8a7a-f7742521115b",
@@ -1087,11 +1095,27 @@
             }
         },
         {
+            "Key": "55b7cdb7-1f7c-4d09-84ce-989d48c1e3dd",
+            "Value": {
+                "id": "7723a608-34bd-439a-9b78-696ccef6a1b8",
+                "resourcePath": "scripts\\removeItem\\removeItem.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "58a17360-cc17-4cd7-83cb-1ed4f2f1f13b",
             "Value": {
                 "id": "e892cdc9-4f49-46ed-949d-1b96243cebdb",
                 "resourcePath": "objects\\obj_unleash_flashdance\\obj_unleash_flashdance.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "5916a9ec-3a17-4e18-a390-ed34e6f04ea4",
+            "Value": {
+                "id": "7bde4e76-39fa-49d8-8cd9-4cba21788282",
+                "resourcePath": "scripts\\addToEquipSlot\\addToEquipSlot.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -3067,8 +3091,11 @@
         "b000834d-694e-4b7f-9cfd-6136d647349c",
         "04144ba4-26c2-4e22-aca4-2665d8afa67c",
         "54e90f6e-9e5c-4684-b3cf-7c7593a4b1ce",
+        "55b7cdb7-1f7c-4d09-84ce-989d48c1e3dd",
         "241bc211-f307-47bf-8d8b-f7cfe8089b1c",
         "7e1af0bc-9baf-439e-b962-76634753da50",
+        "5916a9ec-3a17-4e18-a390-ed34e6f04ea4",
+        "15d6b6d4-6759-4219-af01-40a7410a0212",
         "efef40b5-b3dd-4fd8-858d-53cd81554d87",
         "a5731a4d-12dc-4cc9-8904-48e6dfc0b51a",
         "97935ced-0e61-49c0-baec-f6bfa8c9e3ac",
