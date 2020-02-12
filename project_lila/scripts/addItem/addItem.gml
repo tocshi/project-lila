@@ -11,7 +11,6 @@ if(argument_count > 1) { // target slot is specified
 		if (global.playerInv[target_slot] == 0 || global.playerInv == itemid) { // if target slot is available
 			// make target slot display item
 			global.playerInv[target_slot] = itemid;
-			break;
 		} else { // use first unoccupied slot if target slot is unavailable
 			for (var i=0; i < array_length_1d(global.playerInv); i++) { // search for first available slot 
 				if (global.playerInv[i] == 0) {
