@@ -21,3 +21,11 @@ switch(room){
 }
 
 draw_set_color(c_white);
+if(debug_mode){
+	draw_set_halign(fa_left);
+	draw_set_valign(fa_top);
+	draw_set_color(c_black);
+	draw_set_font(fnt_gui_medium);
+	draw_text(1550,10,round(fps));
+}
+

@@ -639,6 +639,14 @@
             }
         },
         {
+            "Key": "2d1f137f-9103-4164-85d3-c00673cbc194",
+            "Value": {
+                "id": "7913174f-2409-4fed-a4f1-e258fcbbbc3b",
+                "resourcePath": "fonts\\fnt_gui_medium\\fnt_gui_medium.yy",
+                "resourceType": "GMFont"
+            }
+        },
+        {
             "Key": "2d8928d5-fa27-46d1-ad3c-b858a3e3cc71",
             "Value": {
                 "id": "4582e028-5ed9-4904-932e-f086e8e5b885",
@@ -2482,7 +2490,7 @@
             "Key": "d784e273-cb94-4612-9126-e9d532adb3af",
             "Value": {
                 "id": "292ad5b1-f709-40f4-8439-41dcd5a0e863",
-                "resourcePath": "scripts\\draw_text_outlined_extra\\draw_text_outlined_extra.yy",
+                "resourcePath": "scripts\\draw_text_outlined_transformed\\draw_text_outlined_transformed.yy",
                 "resourceType": "GMScript"
             }
         },

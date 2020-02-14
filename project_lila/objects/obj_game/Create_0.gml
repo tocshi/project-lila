@@ -13,6 +13,8 @@ global.gui_state = -1;
 global.holding = false;
 // Whether an item is currently being dragged
 global.dragging = false;
+// Whether an item is currently being hovered over. -1 for no item.
+global.inv_item_hover = -1;
 
 // Item data parsing function
 itemDataFile = file_text_open_read("item_data.json");

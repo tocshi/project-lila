@@ -20,6 +20,7 @@ else {
 	global.pause = false;
 	global.holding = false;
 	global.dragging = false;
+	global.inv_item_hover = -1;
 	instance_activate_all();
 	camera_set_view_target(global.currentCamera,global.player);
 	if (console != noone) {
