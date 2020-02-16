@@ -49,7 +49,7 @@
     "type"          : "consumable",
     "category"      : "Potion",
     "lvl"           : 1,
-    "desc"          : "Your basic run-of-the-mill health restoration mixture. Heals 25% of your max HP. Subsequent uses in a short time will significantly reduce effectiveness.",
+    "desc"          : "Your basic run-of-the-mill health restoration mixture. Heals 25% of your max HP. Gives 3 stacks of \"Saturated\". 10 stacks of \"Saturated\" becomes \"Potion Sickness\", which stops you from using potions for a while.",
     "value"         : 50,
     "activeSkill"   : "use_potion",
     "activeCD"      : 0.5
@@ -60,7 +60,7 @@
     "type"          : "consumable",
     "category"      : "Potion",
     "lvl"           : 5,
-    "desc"          : "Your basic run-of-the-mill health restoration mixture. Heals 50% of your max HP. Subsequent uses in a short time will significantly reduce effectiveness.",
+    "desc"          : "Your basic run-of-the-mill health restoration mixture. Heals 50% of your max HP. Gives 5 stacks of \"Saturated\". 10 stacks of \"Saturated\" becomes \"Potion Sickness\", which stops you from using potions for a while.",
     "value"         : 150,
     "activeSkill"   : "use_potion",
     "activeCD"      : 0.5
@@ -71,7 +71,7 @@
     "type"          : "consumable",
     "category"      : "Potion",
     "lvl"           : 10,
-    "desc"          : "Your basic run-of-the-mill health restoration mixture. Heals 75% of your max HP. Subsequent uses in a short time will significantly reduce effectiveness.",
+    "desc"          : "Your basic run-of-the-mill health restoration mixture. Heals 75% of your max HP. Gives 7 stacks of \"Saturated\". 10 stacks of \"Saturated\" becomes \"Potion Sickness\", which stops you from using potions for a while.",
     "value"         : 500,
     "activeSkill"   : "use_potion",
     "activeCD"      : 0.5

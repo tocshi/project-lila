@@ -117,3 +117,7 @@ ds_list_add(global.equipStats,
 
 cursor_sprite = spr_cursor;
 console = noone;
+
+// gui variables
+item_desc_line_length = 28;
+item_desc_lines = ds_list_create();
