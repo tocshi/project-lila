@@ -15,6 +15,7 @@ global.holding = false;
 global.dragging = false;
 // Whether an item is currently being hovered over. -1 for no item.
 global.inv_item_hover = -1;
+global.inv_item_preview_lock = -1;
 
 // Item data parsing function
 itemDataFile = file_text_open_read("item_data.json");

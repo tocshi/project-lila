@@ -1,12 +1,2 @@
-/// @description Drop to slot if currently dragging item
-// You can write your code in this editor
-
-if (dragging) {
-	// kill sprite of dragged item
-	// check slot of current coordinate
-	// if slot is empty 
-		// put item there
-	// else
-		// switch items
-	// dragging = false
-}
+// if click then set item preview lock
+if(click_x == mouse_x && click_y == mouse_y){global.inv_item_preview_lock = itemid;}
