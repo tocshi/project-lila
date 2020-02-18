@@ -60,6 +60,18 @@ if (keyboard_check_pressed(vk_enter)) {
 			}
 			ds_list_add(lines, command + ": " + help[? arg1]);
 			break;
+		case "/changeclass":
+			if (!is_string(arg1)) {
+				ds_list_add(lines, INCORRECT_USAGE + help[? "changeclass"]);
+				break;
+			}
+			if(!change_class(global.player,arg1)){
+				ds_list_add(lines, arg1 + " is not a valid class!");
+			}
+			else{
+				ds_list_add(lines, "Player class changed to " + arg1);
+			}
+			break;
 		default: ds_list_add(lines, command + " is not a valid command. Use /commands to list commands");	
 	}
 	keyboard_string = "";
