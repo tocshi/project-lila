@@ -5,10 +5,10 @@ if (keyboard_check_pressed(vk_enter)) {
 	ds_list_add(history, keyboard_string + after_caret);
 	history_cursor = ds_list_size(history);
 	arg_list = split(keyboard_string + after_caret, " ");
-	command = arg_list[| 0];
-	arg1 = arg_list[| 1];
-	arg2 = arg_list[| 2];
-	arg3 = arg_list[| 3];
+	command = get_or_default(arg_list[| 0], "");
+	arg1 = get_or_default(arg_list[| 1], "");
+	arg2 = get_or_default(arg_list[| 2], "");
+	arg3 = get_or_default(arg_list[| 3], "");
 	switch (command) {
 		case "/commands":
 			if (!string_is_uint(arg1)) {
@@ -25,7 +25,7 @@ if (keyboard_check_pressed(vk_enter)) {
 			ds_list_add(lines, command + ": Player killed");
 			break;
 		case "/give":
-			if (arg2 = undefined) {
+			if (arg2 = "") {
 				arg2 = 1;
 			}
 			if (!string_is_uint(arg1) || !string_is_uint(arg2)) {
