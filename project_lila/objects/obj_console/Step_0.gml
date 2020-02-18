@@ -2,6 +2,11 @@
 // TODO: add to lines normally, as wrapping will be done in draw anyway (can remove script after)
 
 if (keyboard_check_pressed(vk_enter)) {
+	// TEMPORARY WORKAROUND FOR BACKSLASH BUG!
+	if(string_char_at(keyboard_string,string_length(keyboard_string)) == "\\"){
+		keyboard_string = "";
+	}
+	
 	ds_list_add(history, keyboard_string + after_caret);
 	history_cursor = ds_list_size(history);
 	arg_list = split(keyboard_string + after_caret, " ");
