@@ -122,3 +122,4 @@ console = noone;
 // gui variables
 item_desc_line_length = 28;
 item_desc_lines = ds_list_create();
+display_set_gui_size(1600,900);

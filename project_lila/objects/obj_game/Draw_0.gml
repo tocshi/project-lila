@@ -22,8 +22,7 @@ if(global.pause){
 			var stat_number = global.player.statmap[? global.equipStats[| i]];
 			var xx = x0 + invStatLocation[i,0];
 			var yy = y0 + invStatLocation[i,1];
-			var spr_stat = spr_stat_atk + i;
-			draw_sprite(spr_stat,-1,xx,yy);
+			draw_sprite(spr_stat,i,xx,yy);
 			draw_set_halign(fa_left);
 			draw_set_valign(fa_top);
 			draw_set_color(c_black);
