@@ -20,8 +20,6 @@ after_caret = "";
 caret_text = "";
 
 alarm[0] = CARET_DELAY;
-x = 0;
-y = camera_get_view_height(global.currentCamera)/2 - HEIGHT/2;
 
 commands = ds_list_create();
 commands[| 0] = "commands\ndie\ngive\nhelp\n                                           page 1 of 1"; 
@@ -32,3 +30,4 @@ help[? "help"] = "help: <String> command. Prints help for the given command.\nHo
 
 help[? "give"] = "give: <Integer> itemId, <Integer> num.\nGives <num> of item <itemId>.\nIf <num> is not specified, default to 1";
 help[? "commands"] = "commands: <Integer> pageNum.\nLists the available commands on page pageNum of 1.\nIf <pageNum> is not specified or is not an integer, default to 1.";
+help[? "changeclass"] = "changeclass: <String> className.\nChanges the player's class to the specified class name.";

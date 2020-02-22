@@ -1,0 +1,1 @@
+skill = duration*0.1;

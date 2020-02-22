@@ -23,7 +23,7 @@ else{
 }
 image_angle = point_direction(user.x,user.y,x,y)-(speed*damping)/4;
 
-if(skill < duration*0.52 && skill > duration*0.46){mask_index = orig_sprite;}
+if(skill < duration*0.8 && skill > duration*0.2){mask_index = orig_sprite;}
 else{mask_index = spr_empty;}
 
 if(instance_position(x,y,obj_wall_parent)){skill = duration*0.1;}

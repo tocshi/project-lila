@@ -2,6 +2,11 @@
 // TODO: add to lines normally, as wrapping will be done in draw anyway (can remove script after)
 
 if (keyboard_check_pressed(vk_enter)) {
+	// TEMPORARY WORKAROUND FOR BACKSLASH BUG!
+	if(string_char_at(keyboard_string,string_length(keyboard_string)) == "\\"){
+		keyboard_string = "";
+	}
+	
 	ds_list_add(history, keyboard_string + after_caret);
 	history_cursor = ds_list_size(history);
 	arg_list = split(keyboard_string + after_caret, " ");
@@ -60,6 +65,18 @@ if (keyboard_check_pressed(vk_enter)) {
 			}
 			ds_list_add(lines, command + ": " + help[? arg1]);
 			break;
+		case "/changeclass":
+			if (!is_string(arg1)) {
+				ds_list_add(lines, INCORRECT_USAGE + help[? "changeclass"]);
+				break;
+			}
+			if(!change_class(global.player,arg1)){
+				ds_list_add(lines, arg1 + " is not a valid class!");
+			}
+			else{
+				ds_list_add(lines, "Player class changed to " + arg1);
+			}
+			break;
 		default: ds_list_add(lines, command + " is not a valid command. Use /commands to list commands");	
 	}
 	keyboard_string = "";
@@ -114,4 +131,10 @@ if (keyboard_check_pressed(vk_down)) {
 	}
 	caret = 0;
 	keyboard_string = history[| history_cursor];
+}
+
+//Keep console in position
+if(instance_exists(global.player)){
+	x = 0;
+	y = camera_get_view_height(global.currentCamera)/2 - HEIGHT/2;
 }

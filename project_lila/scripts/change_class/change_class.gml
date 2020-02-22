@@ -30,7 +30,7 @@ switch(class){
 		break;
 	
 	default:
-	show_error("Switching to an unlisted class!",true);
+	return false;
 }
 
 // unequips all items if it's the player
@@ -66,3 +66,4 @@ with(instance_create_layer(xx,yy,"Instances",classobj)){
 	statmap[? "hp"] = hp;
 	statmap[? "mp"] = mp;
 }
+return true;

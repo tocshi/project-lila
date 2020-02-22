@@ -13,6 +13,9 @@ global.gui_state = -1;
 global.holding = false;
 // Whether an item is currently being dragged
 global.dragging = false;
+// Whether an item is currently being hovered over. -1 for no item.
+global.inv_item_hover = -1;
+global.inv_item_preview_lock = -1;
 
 // Item data parsing function
 itemDataFile = file_text_open_read("item_data.json");
@@ -114,4 +117,9 @@ ds_list_add(global.equipStats,
 	"blkmod");
 
 cursor_sprite = spr_cursor;
-console = "null";
+console = noone;
+
+// gui variables
+item_desc_line_length = 28;
+item_desc_lines = ds_list_create();
+display_set_gui_size(1600,900);
