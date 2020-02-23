@@ -26,9 +26,10 @@ if (!mouse_check_button(mb_left)) {
 			}
 		}
 		// Dropped on equip slot
-		if (area == "Equip" && slot != -1 && slot != origin_slot) {
+		if (area == "Equip" && slot != -1) {
 			// dropped to empty slot
 			if (slot == getEquipSlot(itemid) && global.player.equips[slot] == 0) {
+				show_debug_message("Dropped on empty slot");
 				equipItem(global.player, itemid);
 				updateGUI();
 			} 
@@ -49,7 +50,7 @@ if (!mouse_check_button(mb_left)) {
 	}
 	else if(origin_type == "Equip") {
 		// Dropped on inventory slot
-		if (area == "Inventory" && slot != -1 && slot != origin_slot) {
+		if (area == "Inventory" && slot != -1) {
 			// dropped to empty slot
 			if (global.playerInv[slot] == 0) {
 				unequipItemToSlot(global.player, itemid, slot);
