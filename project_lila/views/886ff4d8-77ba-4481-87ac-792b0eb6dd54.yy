@@ -8,7 +8,9 @@
         "e2bc4f9b-19b7-4590-9fee-289049b7261c",
         "e84b8b55-30e0-4b44-825e-f73216b16e06",
         "27f55a91-28a5-44cf-898e-3012a9b77063",
-        "c96d1538-acc3-4af2-92f9-ad3324ba2f15"
+        "c96d1538-acc3-4af2-92f9-ad3324ba2f15",
+        "fbbb2d9a-60de-4ea8-a2af-44c96ef6c4f3",
+        "ecd2f4b4-60a8-4670-8672-b5d84da342d8"
     ],
     "filterType": "GMSprite",
     "folderName": "gui",

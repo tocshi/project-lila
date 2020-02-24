@@ -1,5 +1,7 @@
-// universal unit for 1 "meter" of distance
+// universal unit for 1 "meter" of distance and game size
 global.meter = 32;
+global.game_width = 1600;
+global.game_height = 900;
 // Is the game paused?
 global.pause = 0;
 // Player id
