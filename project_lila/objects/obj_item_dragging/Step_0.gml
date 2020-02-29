@@ -1,7 +1,7 @@
 /// @description Check that mouse is still held
 // You can write your code in this editor
 
-if (!mouse_check_button(mb_left)) {
+if (!mouse_check_button(mb_left) && isDrag || mouse_check_button(mb_left) && !isDrag) {
 	origin_instance.drag_activated = false;
 	origin_instance.hold_activated = false;
 	var slotinfo = getSlotAtCoords(mouse_x, mouse_y);

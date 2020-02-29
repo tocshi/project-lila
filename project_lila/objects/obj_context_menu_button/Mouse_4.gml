@@ -20,6 +20,14 @@ switch (type) {
 			"Are you sure you want to drop this item?"
 		); break;
 	case MOVE:
+	with (instance_create_layer(x, y, "GUIPopup", obj_item_dragging)) {
+		sprite_index = other.sprite_index;
+		itemid = other.itemid;
+		origin_type = other.item_type;
+		origin_instance = other.item;
+		origin_slot = findArrayIndex(global.playerInv, itemid);
+		isDrag = false;
+	}
 	break;
 }
 updateGUI();

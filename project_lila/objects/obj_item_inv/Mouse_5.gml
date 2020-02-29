@@ -3,12 +3,17 @@ with (obj_context_menu) {instance_destroy();}
 with (obj_context_menu_button) {instance_destroy();}
 //show_debug_message("Item Id at item slot: " + string(itemid));
 var context_menu = instance_create_layer(mouse_x, mouse_y, "GUIPopUp", obj_context_menu);
+
 context_menu.itemid = itemid;
 context_menu.isEquipped	= type == EQUIP;
+context_menu.item = self;
+context_menu.item_sprite_index = sprite_index;
+context_menu.item_type = type;
 
 button = instance_create_layer(x, y, "GUIPopUp", obj_context_menu_button);
 instance_deactivate_object(button);
 
+ds_list_add(context_menu.buttons, button.MOVE);
 if (type == EQUIP) {
 	ds_list_add(context_menu.buttons, button.UNEQUIP);
 } else {
