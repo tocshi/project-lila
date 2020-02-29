@@ -6,4 +6,5 @@ origin_type = "";
 origin_slot = 0;
 itemid = 0;
 origin_instance = obj_item_inv;
+dragging = true;
 show_debug_message("Drag created!");

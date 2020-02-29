@@ -19,6 +19,8 @@ switch (type) {
 			),
 			"Are you sure you want to drop this item?"
 		); break;
+	case MOVE:
+	break;
 }
 updateGUI();
 //test

@@ -1,8 +1,9 @@
 DROP = "Drop"
 EQUIP = "Equip"
 UNEQUIP = "Unequip"
-isEquipped = false;
+MOVE = "Move"
 USE = "Use"
+isEquipped = false;
 type = ""
 height = 25;
 width = 100;
