@@ -1511,6 +1511,14 @@
             }
         },
         {
+            "Key": "82ee4016-8ee1-4b41-9942-53cf860abda8",
+            "Value": {
+                "id": "bdbdedc8-57f0-47d7-ab20-d8876364237e",
+                "resourcePath": "fonts\\fnt_dialogue_text\\fnt_dialogue_text.yy",
+                "resourceType": "GMFont"
+            }
+        },
+        {
             "Key": "83753ece-907d-469d-b710-25c4d89fa984",
             "Value": {
                 "id": "af349209-68ea-4743-93dd-98f5cf63fb89",
@@ -2780,6 +2788,14 @@
                 "id": "ddf6f72b-39b8-4af2-bd43-ee273a305f32",
                 "resourcePath": "rooms\\rm_generic\\rm_generic.yy",
                 "resourceType": "GMRoom"
+            }
+        },
+        {
+            "Key": "f906776b-d62a-4200-a7d6-72f7566d4014",
+            "Value": {
+                "id": "1e948c7c-e5cb-43fc-ada4-0ac5dd17b9c8",
+                "resourcePath": "fonts\\fnt_dialogue_name\\fnt_dialogue_name.yy",
+                "resourceType": "GMFont"
             }
         },
         {
