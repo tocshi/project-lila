@@ -5,6 +5,11 @@ view_set_wport(view_current,1600);
 view_set_hport(view_current,900);
 view_set_visible(view_current,true);
 
+// Name and Dialogue
+name = "Player Name"
+portrait_sprite = spr_empty;
+voice_sound = 0;
+
 // Stats
 statmap = ds_map_create();
 basestatmap = ds_map_create();

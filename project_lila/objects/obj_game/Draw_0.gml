@@ -2,7 +2,7 @@ if(global.pause){
 	var x0 = camera_get_view_x(global.currentCamera);
 	var y0 = camera_get_view_y(global.currentCamera);
 	switch(global.gui_state){
-		case 0:
+		case 1:
 		draw_set_alpha(1);
 		draw_sprite(gui_inv,-1,x0,y0);
 		// draw stats

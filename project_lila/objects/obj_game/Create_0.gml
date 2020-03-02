@@ -19,9 +19,15 @@ global.dragging = false;
 global.inv_item_hover = -1;
 global.inv_item_preview_lock = -1;
 
+global.cursor_state = 0;
+
 // KEYBOARD SETTINGS
-global.key_interact = vk_enter;
-global.mouse_interact = mb_left;
+global.key_interact =	vk_enter;
+global.mouse_interact =	mb_left;
+global.key_up =			ord("W");
+global.key_left =		ord("A");
+global.key_down =		ord("S");
+global.key_right =		ord("D");
 
 // Item data parsing function
 itemDataFile = file_text_open_read("item_data.json");
@@ -122,7 +128,6 @@ ds_list_add(global.equipStats,
 	"maxmp",
 	"blkmod");
 
-cursor_sprite = spr_cursor;
 console = noone;
 
 // gui variables
