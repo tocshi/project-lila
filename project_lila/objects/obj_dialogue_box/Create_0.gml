@@ -15,13 +15,19 @@ textcolor = c_white;
 textspeed = 1;
 time = 0;
 char_counter = 0;
+// pause for punctuation
 pause = false;
+// hard pause for actions
+dialogue_pause = false;
 
 page = 0;
 name = "";
 voice_sound = 0;
 text = array_create(1,0);
 speakers = array_create(1,0);
+pretext = array_create(1,0);
+posttext = array_create(1,0);
+posttext_triggered = false;
 
 x = global.game_width/2 - dialogue_box_width/2;
 y = global.game_height*0.98 - dialogue_box_height;
