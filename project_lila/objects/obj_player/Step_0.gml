@@ -19,6 +19,7 @@ if(hovered_npc != noone && hovered_npc.interactable){
 	global.cursor_state = 1;
 	if(!global.pause && distance_to_object(hovered_npc) <= 72 && ((keyboard_check_pressed(global.key_interact) || mouse_check_button_pressed(global.mouse_interact)))){
 		hovered_npc.trigger_interact = true;
+		global.pause = true;
 	}
 }
 else{
