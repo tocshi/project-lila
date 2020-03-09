@@ -7,4 +7,5 @@ origin_slot = 0;
 itemid = 0;
 origin_instance = obj_item_inv;
 isDrag = true;
+delay = 0;
 show_debug_message("Drag created!");
