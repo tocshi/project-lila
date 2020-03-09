@@ -1,8 +1,13 @@
 DROP = "Drop"
 EQUIP = "Equip"
 UNEQUIP = "Unequip"
-isEquipped = false;
+MOVE = "Move"
 USE = "Use"
-type = ""
+isEquipped = false;
+type = "";
 height = 25;
 width = 100;
+
+item_type= "";
+item = noone;
+item_sprite_index = noone;
