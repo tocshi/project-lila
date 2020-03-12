@@ -8,6 +8,8 @@
     "lvl"           : 0,
     "desc"          : "Literally nothing. You should not be able to see this text in the final game.",
     "value"         : 0,
+    "sellable"      : "false",
+    "droppable"     : "false",
     "passiveSkill"  : "",
     "passiveCD"     : 0,
     "activeSkill"   : "",
@@ -41,7 +43,9 @@
     "critdmg"       : 0,
     "finaldmg"      : 0,
     "finalshld"     : 0,
-    "blkmod"        : 0
+    "blkmod"        : 0,
+    "debuffduration": 0,
+    "buffduration"  : 0
   },{
     "id"            : 1,
     "name"          : "Small Health Potion",
@@ -169,6 +173,7 @@
     "desc"      : "A shortsword given to you to help you start your adventure.",
     "value"     : 40,
     "atk"       : 5,
+    "atkrange"  : 70,
     "unleashGauge"  : 0
   },{
     "id"        : 13,
@@ -180,6 +185,7 @@
     "desc"      : "A spear given to you to help you start your adventure.",
     "value"     : 40,
     "atk"       : 5,
+    "atkrange"  : 100,
     "unleashGauge"  : 0
   },{
     "id"        : 14,
@@ -191,6 +197,7 @@
     "desc"      : "An axe given to you to help you start your adventure.",
     "value"     : 40,
     "atk"       : 5,
+    "atkrange"  : 70,
     "unleashGauge"  : 0
   },{
     "id"        : 15,
@@ -202,6 +209,7 @@
     "desc"      : "A rifle given to you to help you start your adventure.",
     "value"     : 40,
     "atk"       : 5,
+    "atkrange"  : 450,
     "unleashGauge"  : 0
   },{
     "id"        : 16,
@@ -225,6 +233,7 @@
     "desc"      : "A pair of knuckles given to you to help you start your adventure.",
     "value"     : 40,
     "atk"       : 5,
+    "atkrange"  : 60,
     "unleashGauge"  : 0
   },{
     "id"        : 18,
@@ -248,6 +257,7 @@
     "desc"      : "A staff given to you to help you start your adventure.",
     "value"     : 40,
     "atk"       : 5,
+    "atkrange"  : 380,
     "unleashGauge"  : 0
   },{
     "id"        : 20,
@@ -277,6 +287,7 @@
     "desc"      : "An ordinary longsword. Nothing special to it. Nuh uh. Nope.",
     "value"     : 99999,
     "atk"       : 22,
+    "atkrange"  : 80,
     "passiveSkill"  : "item_passive_ordinary",
     "activeSkill"   : "item_attack_flashcut",
     "activeCD"      : 5,
@@ -292,6 +303,7 @@
     "desc"      : "A longsword made of a common metal. Shoddy, but cheap.",
     "value"     : 100,
     "atk"       : 10,
+    "atkrange"  : 80,
     "unleashGauge"  : 0
   },{
     "id"        : 24,
@@ -303,6 +315,7 @@
     "desc"      : "A bow made from the wood of a common tree. Shoddy, but cheap.",
     "value"     : 100,
     "atk"       : 10,
+    "atkrange"  : 420,
     "unleashGauge"  : 0
   },{
     "id"        : 25,
@@ -314,6 +327,7 @@
     "desc"      : "A shortsword made of a common metal. Shoddy, but cheap.",
     "value"     : 100,
     "atk"       : 10,
+    "atkrange"  : 70,
     "unleashGauge"  : 0
   },{
     "id"        : 26,
@@ -325,6 +339,7 @@
     "desc"      : "A spear made of a common metal. Shoddy, but cheap.",
     "value"     : 100,
     "atk"       : 10,
+    "atkrange"  : 100,
     "unleashGauge"  : 0
   },{
     "id"        : 27,
@@ -336,6 +351,7 @@
     "desc"      : "An axe made of a common metal. Shoddy, but cheap.",
     "value"     : 100,
     "atk"       : 10,
+    "atkrange"  : 70,
     "unleashGauge"  : 0
   },{
     "id"        : 28,
@@ -347,6 +363,7 @@
     "desc"      : "A rifle decorated with a common metal. Shoddy, but cheap.",
     "value"     : 100,
     "atk"       : 10,
+    "atkrange"  : 450,
     "unleashGauge"  : 0
   },{
     "id"        : 29,
@@ -358,6 +375,7 @@
     "desc"      : "A dagger made of a common metal. Shoddy, but cheap.",
     "value"     : 100,
     "atk"       : 10,
+    "atkrange"  : 60,
     "unleashGauge"  : 0
   },{
     "id"        : 30,
@@ -369,6 +387,7 @@
     "desc"      : "A pair of knuckles made of a common metal. Shoddy, but cheap.",
     "value"     : 100,
     "atk"       : 10,
+    "atkrange"  : 60,
     "unleashGauge"  : 0
   },{
     "id"        : 31,
@@ -380,6 +399,7 @@
     "desc"      : "A rugged, but useable spellbook. Shoddy, but cheap.",
     "value"     : 100,
     "atk"       : 10,
+    "atkrange"  : 400,
     "unleashGauge"  : 0
   },{
     "id"        : 32,
@@ -391,6 +411,7 @@
     "desc"      : "A staff made from the wood of a common tree. Shoddy, but cheap.",
     "value"     : 100,
     "atk"       : 10,
+    "atkrange"  : 380,
     "unleashGauge"  : 0
   },{
     "id"        : 33,
@@ -402,6 +423,7 @@
     "desc"      : "A crossbow made of a common metal. Shoddy, but cheap.",
     "value"     : 100,
     "atk"       : 10,
+    "atkrange"  : 435,
     "unleashGauge"  : 0
   },{
     "id"        : 34,
