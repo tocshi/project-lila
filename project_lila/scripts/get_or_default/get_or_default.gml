@@ -1,0 +1,1 @@
+return argument0 == undefined ? argument1 : argument0;
