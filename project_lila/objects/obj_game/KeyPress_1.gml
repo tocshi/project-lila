@@ -7,6 +7,7 @@ if (keyboard_check(191)) {
 	}
 	alarm[0] = 1;
 	global.pause = true;
+	global.gui_state = 0;
 	keyboard_string = "/";
 	instance_activate_object(console);
 } 

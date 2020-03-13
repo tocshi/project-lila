@@ -1,6 +1,6 @@
 /// @description Check gui close and check LMB hold
 
-if(global.gui_state == 0 && global.pause == 1){
+if(global.gui_state == 1 && global.pause == 1){
 	// check if a different item is already being dragged
 	if(global.holding && !hold_activated) {
 		// show_debug_message(string(findArrayIndex(global.playerInv, itemid)) + " skipping: other item being held!");

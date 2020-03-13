@@ -3,7 +3,7 @@ switch(global.gui_state){
 		exit;
 		break;
 	
-	case 0:
+	case 1:
 		// Clean up existing gui elements
 		instance_destroy(obj_item_inv);
 		instance_destroy(obj_text_inv);

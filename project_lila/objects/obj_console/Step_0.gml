@@ -70,7 +70,10 @@ if (keyboard_check_pressed(vk_enter)) {
 				ds_list_add(lines, INCORRECT_USAGE + help[? "changeclass"]);
 				break;
 			}
-			if(!change_class(global.player,arg1)){
+			if(global.player.statmap[? "class"] == arg1){
+				ds_list_add(lines, "You are already a " + arg1 +"!");
+			}
+			else if(!change_class(global.player,arg1)){
 				ds_list_add(lines, arg1 + " is not a valid class!");
 			}
 			else{

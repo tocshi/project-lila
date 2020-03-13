@@ -8,3 +8,10 @@ if(keyboard_check_pressed(vk_enter)){
 			break;
 	}
 }
+
+switch(global.cursor_state){
+	case 1:
+	cursor_sprite = spr_cursor_interact; break;
+	default:
+	cursor_sprite = spr_cursor; break;
+}

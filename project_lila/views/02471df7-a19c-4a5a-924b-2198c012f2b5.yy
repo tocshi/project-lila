@@ -9,6 +9,8 @@
         "a0ff94df-085e-4ad1-8191-3b8a38d8bbac",
         "a2c7fd16-fb86-4a1f-9052-10109c0d5d2f",
         "2d1f137f-9103-4164-85d3-c00673cbc194",
+        "f906776b-d62a-4200-a7d6-72f7566d4014",
+        "82ee4016-8ee1-4b41-9942-53cf860abda8",
         "e4597b1f-ad6f-4dac-a5ef-a45746a23edf"
     ],
     "filterType": "GMFont",
