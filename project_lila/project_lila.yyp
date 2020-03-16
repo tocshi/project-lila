@@ -143,6 +143,14 @@
             }
         },
         {
+            "Key": "08cd652d-fd06-453c-a519-6e3ba2f787b2",
+            "Value": {
+                "id": "183166e1-4315-4275-a71e-5c9a06531bbc",
+                "resourcePath": "objects\\obj_textbox\\obj_textbox.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "08e9caa4-b2cb-4c34-9e4f-bf17da9bb475",
             "Value": {
                 "id": "f1fbfe53-b11b-4c7d-a3cf-46c67d2add9f",
