@@ -3,4 +3,20 @@
 
 // Inherit the parent event
 event_inherited();
+MAX_HEALTH = 999999999999;
 
+statmap[? "maxhp"]			= MAX_HEALTH;
+statmap[? "hp"]				= MAX_HEALTH;
+statmap[? "hpregen"]		= MAX_HEALTH;
+
+TIMEOUT = 5000;
+UPDATE_DELAY = 60;
+
+first_hit = 0;
+last_hit = 0;
+
+damage = 0;
+seconds = 0;
+dps = 0;
+
+alarm[1] = UPDATE_DELAY;
