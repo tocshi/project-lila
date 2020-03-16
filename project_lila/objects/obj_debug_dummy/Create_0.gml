@@ -19,7 +19,8 @@ damage = 0;
 seconds = 0;
 dps = 0;
 
-display = instance_create_layer(x, y, "dmgTxt", obj_textbox);
+width = 100;
+display = instance_create_layer(x + width, y, "dmgTxt", obj_textbox);
 display.width = 100;
 display.height = 200;
 display.x_round_radius = 10;

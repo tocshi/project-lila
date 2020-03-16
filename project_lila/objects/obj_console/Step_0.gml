@@ -82,7 +82,7 @@ if (keyboard_check_pressed(vk_enter)) {
 			if (ds_list_find_index(global.equipStats, arg1) == -1) {
 				ds_list_add(lines, command + ": " + arg1 + " is not a valid stat");
 			} else if (!string_is_float(arg2)) {
-				ds_list_add(lines, INCORRECT_USAGE + help[? "dummystat")	
+				ds_list_add(lines, INCORRECT_USAGE + help[? "dummystat"]);	
 			} else {
 				//TODO: actually change the stat	
 			}

@@ -19,7 +19,7 @@ if(global.pause){
 			}
 		}
 		for(var i = 0; i < 24; ++i){
-			var stat_number = global.player.statmap[? global. [| i]];
+			var stat_number = global.player.statmap[? global.equipStats[| i]];
 			var xx = x0 + invStatLocation[i,0];
 			var yy = y0 + invStatLocation[i,1];
 			draw_sprite(spr_stat,i,xx,yy);
