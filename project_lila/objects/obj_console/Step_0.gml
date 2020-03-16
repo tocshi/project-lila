@@ -57,13 +57,11 @@ if (keyboard_check_pressed(vk_enter)) {
 		case "/help":
 			if (!is_string(arg1)) {
 				ds_list_add(lines, "help : " + help[? ""]);
-				break;
-			}
-			if (!is_string(help[? arg1])) {
+			} else if (!is_string(help[? arg1])) {
 				ds_list_add(lines, command + ": is not a valid command. Use /commands to list commands");
-				break;
+			} else {
+				ds_list_add(lines, command + ": " + help[? arg1]);
 			}
-			ds_list_add(lines, command + ": " + help[? arg1]);
 			break;
 		case "/changeclass":
 			if (!is_string(arg1)) {
@@ -71,15 +69,23 @@ if (keyboard_check_pressed(vk_enter)) {
 				break;
 			}
 			if(global.player.statmap[? "class"] == arg1){
-				ds_list_add(lines, "You are already a " + arg1 +"!");
+				ds_list_add(lines, command + ": You are already a " + arg1 +"!");
 			}
 			else if(!change_class(global.player,arg1)){
-				ds_list_add(lines, arg1 + " is not a valid class!");
+				ds_list_add(lines, command + ": " + arg1 + " is not a valid class!");
 			}
 			else{
-				ds_list_add(lines, "Player class changed to " + arg1);
+				ds_list_add(lines, command + ": Player class changed to " + arg1);
 			}
 			break;
+		case "/dummystat":
+			if (ds_list_find_index(global.equipStats, arg1) == -1) {
+				ds_list_add(lines, command + ": " + arg1 + " is not a valid stat");
+			} else if (!string_is_float(arg2)) {
+				ds_list_add(lines, INCORRECT_USAGE + help[? "dummystat")	
+			} else {
+				//TODO: actually change the stat	
+			}
 		default: ds_list_add(lines, command + " is not a valid command. Use /commands to list commands");	
 	}
 	keyboard_string = "";

@@ -10,7 +10,8 @@
         "c98f8c18-cbde-49c2-8951-cc4e50c07669",
         "ba38b108-3392-414b-97ed-1f8d819edc16",
         "c2253383-13c0-445e-81f0-154510753bdf",
-        "540780e4-3aaf-4fb0-9b92-91230cf5ada8"
+        "540780e4-3aaf-4fb0-9b92-91230cf5ada8",
+        "7f725f11-fc5a-4bfd-8311-b6818628553b"
     ],
     "filterType": "GMObject",
     "folderName": "debug",

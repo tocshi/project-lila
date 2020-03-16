@@ -1535,6 +1535,14 @@
             }
         },
         {
+            "Key": "7f725f11-fc5a-4bfd-8311-b6818628553b",
+            "Value": {
+                "id": "5e9959f2-796c-4210-bab4-c8a3ec07834b",
+                "resourcePath": "objects\\obj_debug_dummy\\obj_debug_dummy.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "81181f12-58c8-4c2f-83c6-2cf2c12a60f5",
             "Value": {
                 "id": "5253d73a-82af-451e-9608-67eaaa34e242",
