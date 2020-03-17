@@ -19,15 +19,37 @@ global.dragging = false;
 global.inv_item_hover = -1;
 global.inv_item_preview_lock = -1;
 
+// cursor state
 global.cursor_state = 0;
 
 // KEYBOARD SETTINGS
 global.key_interact =	vk_enter;
 global.mouse_interact =	mb_left;
+global.key_console =	191;
 global.key_up =			ord("W");
 global.key_left =		ord("A");
 global.key_down =		ord("S");
 global.key_right =		ord("D");
+global.key_skill0 =		ord("Q");
+global.key_skill1 =		ord("W");
+global.key_skill2 =		ord("E");
+global.key_skill3 =		ord("R");
+global.key_skill4 =		ord("T");
+global.key_skill5 =		ord("A");
+global.key_skill6 =		ord("S");
+global.key_skill7 =		ord("D");
+global.key_skill8 =		ord("F");
+global.key_skill9 =		ord("G");
+global.key_item0 =		ord("1");
+global.key_item1 =		ord("2");
+global.key_item2 =		ord("3");
+global.key_item3 =		ord("4");
+global.key_item4 =		ord("5");
+global.key_item5 =		ord("6");
+global.key_item6 =		ord("7");
+global.key_item7 =		ord("8");
+global.key_item8 =		ord("9");
+global.key_item9 =		ord("0");
 
 // Item data parsing function
 itemDataFile = file_text_open_read("item_data.json");
@@ -127,6 +149,31 @@ ds_list_add(global.equipStats,
 	"maxhp",
 	"maxmp",
 	"blkmod");
+
+// Keybinds that show up in options menu
+global.options_keys = [
+	"key_console",
+	"key_skill0",
+	"key_skill1",
+	"key_skill2",
+	"key_skill3",
+	"key_skill4",
+	"key_skill5",
+	"key_skill6",
+	"key_skill7",
+	"key_skill8",
+	"key_skill9",
+	"key_item0",
+	"key_item1",
+	"key_item2",
+	"key_item3",
+	"key_item4",
+	"key_item5",
+	"key_item6",
+	"key_item7",
+	"key_item8",
+	"key_item9",
+];
 
 console = noone;
 

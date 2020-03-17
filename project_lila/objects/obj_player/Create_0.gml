@@ -89,27 +89,27 @@ skill_button = array_create(21,"");
 // Set default keybinds
 skill_button[0]		= vk_space;
 // class skills
-skill_button[1]		= ord("Q");
-skill_button[2]		= ord("W");
-skill_button[3]		= ord("E");
-skill_button[4]		= ord("R");
-skill_button[5]		= ord("T");
-skill_button[6]		= ord("A");
-skill_button[7]		= ord("S");
-skill_button[8]		= ord("D");
-skill_button[9]		= ord("F");
-skill_button[10]	= ord("G");
+skill_button[1]		= global.key_skill0;
+skill_button[2]		= global.key_skill1;
+skill_button[3]		= global.key_skill2;
+skill_button[4]		= global.key_skill3;
+skill_button[5]		= global.key_skill4;
+skill_button[6]		= global.key_skill5;
+skill_button[7]		= global.key_skill6;
+skill_button[8]		= global.key_skill7;
+skill_button[9]		= global.key_skill8;
+skill_button[10]	= global.key_skill9;
 // item actives
-skill_button[11]	= ord("1");
-skill_button[12]	= ord("2");
-skill_button[13]	= ord("3");
-skill_button[14]	= ord("4");
-skill_button[15]	= ord("5");
-skill_button[16]	= ord("6");
-skill_button[17]	= ord("7");
-skill_button[18]	= ord("8");
-skill_button[19]	= ord("9");
-skill_button[20]	= ord("0");
+skill_button[11]	= global.key_item0;
+skill_button[12]	= global.key_item1;
+skill_button[13]	= global.key_item2;
+skill_button[14]	= global.key_item3;
+skill_button[15]	= global.key_item4;
+skill_button[16]	= global.key_item5;
+skill_button[17]	= global.key_item6;
+skill_button[18]	= global.key_item7;
+skill_button[19]	= global.key_item8;
+skill_button[20]	= global.key_item9;
 
 //debug
 inftoggle = 0;
@@ -119,96 +119,18 @@ itemBar[1] = 1;
 itemBar[2] = 2;
 itemBar[3] = 3;
 if(global.playerItems[1] > 0){exit;}
-global.playerItems[1]+=20;
-//global.playerItems[22]++;
-global.playerItems[10]++;
-global.playerItems[11]++;
-global.playerItems[6]++;
-global.playerItems[7]++;
-global.playerItems[8]++;
-global.playerItems[9]++;
-global.playerItems[16]++;
-global.playerItems[18]++;
-global.playerItems[34]++;
-if (findArrayIndex(global.playerInv, 1) == -1) {
-	for (var i=0; i < array_length_1d(global.playerInv); i++) {
-		if (global.playerInv[i] == 0) {
-			global.playerInv[i] = 1;
-			break;
-		}
-	}
+repeat(20){
+	addItem(1);
 }
-if (findArrayIndex(global.playerInv, 6) == -1) {
-	for (var i=0; i < array_length_1d(global.playerInv); i++) {
-		if (global.playerInv[i] == 0) {
-			global.playerInv[i] = 6;
-			break;
-		}
-	}
-}
-if (findArrayIndex(global.playerInv, 7) == -1) {
-	for (var i=0; i < array_length_1d(global.playerInv); i++) {
-		if (global.playerInv[i] == 0) {
-			global.playerInv[i] = 7;
-			break;
-		}
-	}
-}
-if (findArrayIndex(global.playerInv, 8) == -1) {
-	for (var i=0; i < array_length_1d(global.playerInv); i++) {
-		if (global.playerInv[i] == 0) {
-			global.playerInv[i] = 8;
-			break;
-		}
-	}
-}
-if (findArrayIndex(global.playerInv, 9) == -1) {
-	for (var i=0; i < array_length_1d(global.playerInv); i++) {
-		if (global.playerInv[i] == 0) {
-			global.playerInv[i] = 9;
-			break;
-		}
-	}
-}
-if (findArrayIndex(global.playerInv, 10) == -1) {
-	for (var i=0; i < array_length_1d(global.playerInv); i++) {
-		if (global.playerInv[i] == 0) {
-			global.playerInv[i] = 10;
-			break;
-		}
-	}
-}
-if (findArrayIndex(global.playerInv, 11) == -1) {
-	for (var i=0; i < array_length_1d(global.playerInv); i++) {
-		if (global.playerInv[i] == 0) {
-			global.playerInv[i] = 11;
-			break;
-		}
-	}
-}if (findArrayIndex(global.playerInv, 16) == -1) {
-	for (var i=0; i < array_length_1d(global.playerInv); i++) {
-		if (global.playerInv[i] == 0) {
-			global.playerInv[i] = 16;
-			break;
-		}
-	}
-}
-if (findArrayIndex(global.playerInv, 18) == -1) {
-	for (var i=0; i < array_length_1d(global.playerInv); i++) {
-		if (global.playerInv[i] == 0) {
-			global.playerInv[i] = 18;
-			break;
-		}
-	}
-}
-if (findArrayIndex(global.playerInv, 34) == -1) {
-	for (var i=0; i < array_length_1d(global.playerInv); i++) {
-		if (global.playerInv[i] == 0) {
-			global.playerInv[i] = 34;
-			break;
-		}
-	}
-}
+addItem(6);
+addItem(7);
+addItem(8);
+addItem(9);
+addItem(10);
+addItem(11);
+addItem(16);
+addItem(18);
+addItem(34);
 
 
 

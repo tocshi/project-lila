@@ -1,6 +1,7 @@
 if(global.player == noone
 	|| room == rm_playerdeath
 	|| room == rm_title
+	|| room == rm_options
 ){exit;}
 
 if (console != noone && instance_exists(console)) {
