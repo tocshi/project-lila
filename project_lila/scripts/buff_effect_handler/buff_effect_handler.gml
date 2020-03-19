@@ -73,7 +73,7 @@ switch(buffName){
 	case "Burn":
 	instance_create_layer(irandom_range(x-sprite_width/2,x+sprite_width/2),irandom_range(y-sprite_height/2,y+sprite_height/2),"Assets_1",obj_burn_effect);
 	if(get_buff_data(self,"Burn","time") % 60 = 30){
-		var burndmg = (get_buff_data(self,"Burn","data") - max(0,statmap[? "fire_def"]))*get_buff_data(self,"Burn","stacks");
+		var burndmg = max(0,get_buff_data(self,"Burn","data") - max(0,statmap[? "fire_def"]))*get_buff_data(self,"Burn","stacks");
 		statmap[? "hp"]-=burndmg;
 		
 		with(instance_create_layer(irandom_range(x-10,x+10), 

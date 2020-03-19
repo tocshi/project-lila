@@ -5,7 +5,7 @@ switch(t_fang){
 	var xx = x + 20 * dcos(direction-80);
 	var yy = y - 20 * dsin(direction-80);
 	with(instance_create_layer(xx,yy,"Attacks",obj_skill_triple_fangs)){
-		user = other;
+		user = other.user;
 		atkmap[? "dmgmod"]		= 20;
 		atkmap[? "element"]		= "none";
 		direction = other.direction+10;
@@ -21,7 +21,7 @@ switch(t_fang){
 	var xx = x + 20 * dcos(direction+80);
 	var yy = y - 20 * dsin(direction+80);
 	with(instance_create_layer(xx,yy,"Attacks",obj_skill_triple_fangs)){
-		user = other;
+		user = other.user;
 		atkmap[? "dmgmod"]		= 20;
 		atkmap[? "element"]		= "none";
 		direction = other.direction-10;
@@ -33,7 +33,7 @@ switch(t_fang){
 	
 	case 2:
 	with(instance_create_layer(x,y,"Attacks",obj_skill_triple_fangs)){
-		user = other;
+		user = other.user;
 		atkmap[? "dmgmod"]		= 20;
 		atkmap[? "element"]		= "none";
 		direction = other.direction;
