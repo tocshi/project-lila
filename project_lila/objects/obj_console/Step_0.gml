@@ -68,11 +68,15 @@ if (keyboard_check_pressed(vk_enter)) {
 				ds_list_add(lines, INCORRECT_USAGE + help[? "changeclass"]);
 				break;
 			}
+			arg1 = string_lower(arg1);
+			capitalized_first_letter = string_upper(string_char_at(arg1, 1));
+			arg1 = string_delete(arg1, 1, 1);
+			arg1 = string_insert(capitalized_first_letter, arg1, 1);
 			if(global.player.statmap[? "class"] == arg1){
 				ds_list_add(lines, command + ": You are already a " + arg1 +"!");
 			}
 			else if(!change_class(global.player,arg1)){
-				ds_list_add(lines, command + ": " + arg1 + " is not a valid class!");
+				ds_list_add(lines, arg1 + " is not a valid class! Valid classes are Knight, Archer, Mage, and Rogue.");
 			}
 			else{
 				ds_list_add(lines, command + ": Player class changed to " + arg1);
