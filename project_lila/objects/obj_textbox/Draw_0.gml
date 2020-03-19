@@ -4,12 +4,21 @@
 draw_set_halign(halign);
 draw_set_valign(valign);
 draw_set_color(background_clr);
-draw_roundrect_ext(x, y, x + width, y + height, x_round_radius, y_round_radius, false);
+draw_set_alpha(background_alpha)
+
+boxY = y;
+if (valign == fa_center) {
+	boxY -= height/2; 	
+} else if (valign == fa_bottom) {
+	boxY -= height;	
+}
+
+draw_roundrect_ext(x, boxY, x + width, boxY + height, x_round_radius, y_round_radius, false);
 
 draw_set_halign(halign);
 draw_set_valign(valign);
 draw_set_color(color);
-draw_set_alpha(1);
+draw_set_alpha(alpha);
 draw_set_font(font);
 var drawText = string_wrap(text, (width -  2 * x_margin));
 
