@@ -29,4 +29,6 @@ if (ds_map_find_value(global.itemData[| itemid], "value") >= 0) {
 }
 instance_destroy(button);
 
-context_menu.alarm[0] = 1;
+with (context_menu) {
+	event_user(1);	
+}
