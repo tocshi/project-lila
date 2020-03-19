@@ -59,11 +59,8 @@ fblk = clamp(fblk,0,100);
 gTotalDamage = intDmg * (fcritdmg/100) * (atkmap[? "elem_mod"]/100) * (atkmap[? "finaldmg"]/100) * ((100-fblk)/100) * ((100-target.statmap[? "finalshld"])/100);
 gTotalDamage = round(gTotalDamage*(100/(100+target.statmap[? "def"])));
 
-target.statmap[? "hp"] -= gTotalDamage;
-with (target) {
-	// Notify hit
-	event_user(0);	
-}
+deal_damage(target, gTotalDamage)
+
 e_hp = target.statmap[? "hp"];
 e_maxhp = target.statmap[? "maxhp"];
 

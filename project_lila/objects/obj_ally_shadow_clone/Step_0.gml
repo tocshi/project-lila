@@ -9,6 +9,6 @@ if(lost > 60){
 	x = irandom_range(user.x-40,user.x+40);
 	y = irandom_range(user.y-40,user.y+40);
 }
-statmap[? "hp"]-=(1/(room_speed*30))*statmap[? "maxhp"];
+deal_damage(self, (1/(room_speed*30))*statmap[? "maxhp"]);
 event_inherited();
 
