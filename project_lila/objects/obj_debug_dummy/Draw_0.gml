@@ -7,13 +7,14 @@ event_inherited();
 if (display == noone)  {
 	exit;	
 }
-display.text = "Total damage: " + string(damage)							+ 
-			   "\nDps: " + string(dps)										+
-			   "\ndef: " + string(statmap[? "def"])						+
-			   "\nfire_def: " + string(statmap[? "fire_def"])       		+
-			   "\nice_def: " + string(statmap[? "ice_def"])				+
-			   "\nlightning_def: " + string(statmap[? "lightning_def"])	+
-			   "\nearth_def: " + string(statmap[? "earth_def"])			+
-			   "\nwind_def: " + string(statmap[? "wind_def"])				+
-			   "\nlight_def" + string(statmap[? "light_def"])				+
-		 	   "\ndark_def" + string(statmap[? "dark_def"]);
+display.text = " Total Damage: "   + string(damage)						+ 
+			   "\n          DPS: " + string(dps)						+
+			   "\n          DEF: " + string(statmap[? "def"])			+
+			   "\n     Fire DEF: " + string(statmap[? "fire_def"])      +
+			   "\n      Ice DEF: " + string(statmap[? "ice_def"])		+
+			   "\nLightning DEF: " + string(statmap[? "lightning_def"])	+
+			   "\n    Earth DEF: " + string(statmap[? "earth_def"])		+
+			   "\n     Wind DEF: " + string(statmap[? "wind_def"])		+
+			   "\n    Light DEF: " + string(statmap[? "light_def"])		+
+		 	   "\n     Dark DEF: " + string(statmap[? "dark_def"])		+
+		 	   "\n Final Shield: " + string(statmap[? "finalshld"]);

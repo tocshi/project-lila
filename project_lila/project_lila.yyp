@@ -1159,6 +1159,14 @@
             }
         },
         {
+            "Key": "5e40f2b0-3dba-4cc6-b0f2-cb1a0498fd58",
+            "Value": {
+                "id": "c88dff59-b2ce-4815-9986-f890f1d2acc4",
+                "resourcePath": "fonts\\fnt_monospace_med\\fnt_monospace_med.yy",
+                "resourceType": "GMFont"
+            }
+        },
+        {
             "Key": "5f6bfd76-5ef7-4e14-b88d-f24408c2dcc7",
             "Value": {
                 "id": "fcdd3468-79d9-47a2-a2a2-7dc666983701",

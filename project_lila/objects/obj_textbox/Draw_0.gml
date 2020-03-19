@@ -22,4 +22,4 @@ draw_set_alpha(alpha);
 draw_set_font(font);
 var drawText = string_wrap(text, (width -  2 * x_margin));
 
-draw_text_outlined(x + x_margin, y + y_margin, c_black, draw_get_color(), drawText);
+draw_text_outlined_transformed(x + x_margin, y + y_margin, c_black, draw_get_color(), drawText,1,1,0);
