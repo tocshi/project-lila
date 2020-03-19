@@ -5,11 +5,9 @@
 event_inherited();
 MAX_HEALTH = 999999999;
 
-statmap[? "maxhp"]			= MAX_HEALTH;
-statmap[? "hp"]				= MAX_HEALTH;
-statmap[? "hpregen"]		= MAX_HEALTH;
-
-ds_map_copy(basestatmap, statmap);
+basestatmap[? "maxhp"]			= MAX_HEALTH;
+basestatmap[? "hp"]				= MAX_HEALTH;
+basestatmap[? "hpregen"]		= MAX_HEALTH;
 
 TIMEOUT = 5000;
 UPDATE_DELAY = 60;

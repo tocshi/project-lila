@@ -84,8 +84,12 @@ if (keyboard_check_pressed(vk_enter)) {
 			} else if (!string_is_float(arg2)) {
 				ds_list_add(lines, INCORRECT_USAGE + help[? "dummystat"]);	
 			} else {
-				//TODO: actually change the stat	
+				with (obj_debug_dummy) {
+					basestatmap[? other.arg1] = other.arg2;
+				}
+				ds_list_add(lines, command + ": Dummy's " + arg1 + " set to " + arg2);
 			}
+			break;
 		default: ds_list_add(lines, command + " is not a valid command. Use /commands to list commands");	
 	}
 	keyboard_string = "";
