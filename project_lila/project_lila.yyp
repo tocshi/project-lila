@@ -143,6 +143,14 @@
             }
         },
         {
+            "Key": "08cd652d-fd06-453c-a519-6e3ba2f787b2",
+            "Value": {
+                "id": "183166e1-4315-4275-a71e-5c9a06531bbc",
+                "resourcePath": "objects\\obj_textbox\\obj_textbox.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "08e9caa4-b2cb-4c34-9e4f-bf17da9bb475",
             "Value": {
                 "id": "f1fbfe53-b11b-4c7d-a3cf-46c67d2add9f",
@@ -1535,6 +1543,14 @@
             }
         },
         {
+            "Key": "7f725f11-fc5a-4bfd-8311-b6818628553b",
+            "Value": {
+                "id": "5e9959f2-796c-4210-bab4-c8a3ec07834b",
+                "resourcePath": "objects\\obj_debug_dummy\\obj_debug_dummy.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "81181f12-58c8-4c2f-83c6-2cf2c12a60f5",
             "Value": {
                 "id": "5253d73a-82af-451e-9608-67eaaa34e242",
@@ -2267,6 +2283,14 @@
             "Value": {
                 "id": "ea86ee90-de28-45ca-94c1-044d00ad086c",
                 "resourcePath": "sprites\\spr_triple_fangs\\spr_triple_fangs.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "c62bc791-f83d-45d5-93a2-33eb4a86134a",
+            "Value": {
+                "id": "9beb57f7-7ba5-43d9-a3ba-287c075892b3",
+                "resourcePath": "sprites\\sprite97\\sprite97.yy",
                 "resourceType": "GMSprite"
             }
         },
