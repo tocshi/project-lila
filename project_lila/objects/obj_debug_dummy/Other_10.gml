@@ -1,6 +1,7 @@
 /// @description Notified hit
 
 var hitDmg = MAX_HEALTH - statmap[? "hp"];
+statmap[? "hp"] = MAX_HEALTH;
 
 if (hitDmg > 0) {
 	damage += hitDmg;
