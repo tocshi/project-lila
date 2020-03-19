@@ -74,7 +74,7 @@ switch(buffName){
 	instance_create_layer(irandom_range(x-sprite_width/2,x+sprite_width/2),irandom_range(y-sprite_height/2,y+sprite_height/2),"Assets_1",obj_burn_effect);
 	if(get_buff_data(self,"Burn","time") % 60 = 30){
 		var burndmg = (get_buff_data(self,"Burn","data") - max(0,statmap[? "fire_def"]))*get_buff_data(self,"Burn","stacks");
-		statmap[? "hp"]-=burndmg;
+		deal_damage(self, burndmg);
 		
 		with(instance_create_layer(irandom_range(x-10,x+10), 
 									irandom_range(y-(sprite_height/2)-5,y-(sprite_height/2)+5), 
@@ -142,7 +142,7 @@ switch(buffName){
 	}
 	if(get_buff_data(self,"Poisoned","time") % 60 = 30){
 		var poisondmg = get_buff_data(self,"Poisoned","data")*get_buff_data(self,"Poisoned","stacks");
-		statmap[? "hp"]-=poisondmg;
+		deal_damage(self, poisondmg);
 		
 		with(instance_create_layer(irandom_range(x-10,x+10), 
 									irandom_range(y-(sprite_height/2)-5,y-(sprite_height/2)+5), 

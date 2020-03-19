@@ -127,6 +127,14 @@
             }
         },
         {
+            "Key": "043593f7-2ca4-4155-97cd-ed5d92316c64",
+            "Value": {
+                "id": "ae574aa4-6038-4043-a245-164a52e8bfc6",
+                "resourcePath": "scripts\\deal_damage\\deal_damage.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "05275d8e-4c72-4298-a6ed-4722d0c596d8",
             "Value": {
                 "id": "d791e2ed-352b-4f59-8c86-3ca9005a6e39",
@@ -3081,6 +3089,7 @@
         "a12a94f2-c26c-4db8-b17d-09cbde9417e1",
         "6ec179ff-0e59-4cbe-86df-12ca48b78b35",
         "6ab9cddf-6b58-4e0a-9808-2f6b45ad430c",
+        "043593f7-2ca4-4155-97cd-ed5d92316c64",
         "c6eddf3a-011d-4cde-95c8-3bf3dc25957f",
         "8a1665e7-eacf-4397-a9b0-4cfe2479646c",
         "295e9a20-320b-4a84-9ce6-9d3145d4d236",
