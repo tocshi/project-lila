@@ -28,7 +28,7 @@ if(shield_charge){
 		gTotalDamage = intDmg * (fcritdmg/100) * (statmap[? "finaldmg"]/100) * ((100-other.statmap[? "finalshld"])/100);
 		gTotalDamage = round(gTotalDamage);
 
-		other.statmap[? "hp"] -= gTotalDamage;
+		deal_damage(other, gTotalDamage);
 		e_hp = other.statmap[? "hp"];
 		e_maxhp = other.statmap[? "maxhp"];
 
