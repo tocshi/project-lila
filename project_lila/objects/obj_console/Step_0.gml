@@ -94,6 +94,13 @@ if (keyboard_check_pressed(vk_enter)) {
 				ds_list_add(lines, command + ": Dummy's " + arg1 + " set to " + arg2);
 			}
 			break;
+		case "/setcontrol":
+			if (!is_string(arg1) || !is_string(arg2)) {
+				ds_list_add(lines, INCORRECT_USAGE + help[? "setcontrol"]);
+				break;
+			}
+			ds_list_add(lines, NOT_IMPLEMENTED_YET);
+			break;
 		default: ds_list_add(lines, command + " is not a valid command. Use /commands to list commands");	
 	}
 	keyboard_string = "";

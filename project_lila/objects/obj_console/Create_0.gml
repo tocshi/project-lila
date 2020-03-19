@@ -2,6 +2,7 @@
 // You can write your code in this editor
 CARET_DELAY = 30;
 INCORRECT_USAGE = "Incorrect usage of command \n";
+NOT_IMPLEMENTED_YET = "Not implemented yet! We are still working on it!";
 WIDTH = 1000;
 TEXT_HEIGHT = 20;
 MAX_LINE_LENGTH = 99;
@@ -22,7 +23,7 @@ caret_text = "";
 alarm[0] = CARET_DELAY;
 
 commands = ds_list_create();
-commands[| 0] = "commands\ndie\ngive\nhelp\n                                           page 1 of 1"; 
+commands[| 0] = "commands\ndie\ngive\nhelp\nchangeclass\nsetcontrol                          page 1 of 1"; 
 
 help = ds_map_create();
 help[? ""] = "help: <String> command. Prints help for the given command.";
@@ -31,4 +32,5 @@ help[? "help"] = "help: <String> command. Prints help for the given command.\nHo
 help[? "give"] = "give: <Integer> itemId, <Integer> num.\nGives <num> of item <itemId>.\nIf <num> is not specified, default to 1";
 help[? "commands"] = "commands: <Integer> pageNum.\nLists the available commands on page pageNum of 1.\nIf <pageNum> is not specified or is not an integer, default to 1.";
 help[? "changeclass"] = "changeclass: <String> className.\nChanges the player's class to the specified class name.";
+help[? "setcontrol"] = "setcontrol: <String> controlName, <String> controlKey.\n" + NOT_IMPLEMENTED_YET;
 help[? "dummystat"] = "dummystat: <String> stat, <Float> val.\n Changes the value of <stat> of the dummy to <value>."
