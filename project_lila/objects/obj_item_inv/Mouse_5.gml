@@ -13,7 +13,6 @@ context_menu.item_type = type;
 button = instance_create_layer(x, y, "GUIPopUp", obj_context_menu_button);
 instance_deactivate_object(button);
 
-ds_list_add(context_menu.buttons, button.MOVE);
 if (type == EQUIP) {
 	ds_list_add(context_menu.buttons, button.UNEQUIP);
 } else {
@@ -24,6 +23,7 @@ if (type == EQUIP) {
 		ds_list_add(context_menu.buttons, button.USE);
 	}
 }
+ds_list_add(context_menu.buttons, button.MOVE);
 if (ds_map_find_value(global.itemData[| itemid], "value") >= 0) {
 	ds_list_add(context_menu.buttons, button.DROP);
 }

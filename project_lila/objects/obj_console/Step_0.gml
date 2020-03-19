@@ -57,27 +57,41 @@ if (keyboard_check_pressed(vk_enter)) {
 		case "/help":
 			if (!is_string(arg1)) {
 				ds_list_add(lines, "help : " + help[? ""]);
-				break;
-			}
-			if (!is_string(help[? arg1])) {
+			} else if (!is_string(help[? arg1])) {
 				ds_list_add(lines, command + ": is not a valid command. Use /commands to list commands");
-				break;
+			} else {
+				ds_list_add(lines, command + ": " + help[? arg1]);
 			}
-			ds_list_add(lines, command + ": " + help[? arg1]);
 			break;
 		case "/changeclass":
 			if (!is_string(arg1)) {
 				ds_list_add(lines, INCORRECT_USAGE + help[? "changeclass"]);
 				break;
 			}
+			arg1 = string_lower(arg1);
+			capitalized_first_letter = string_upper(string_char_at(arg1, 1));
+			arg1 = string_delete(arg1, 1, 1);
+			arg1 = string_insert(capitalized_first_letter, arg1, 1);
 			if(global.player.statmap[? "class"] == arg1){
-				ds_list_add(lines, "You are already a " + arg1 +"!");
+				ds_list_add(lines, command + ": You are already a " + arg1 +"!");
 			}
 			else if(!change_class(global.player,arg1)){
-				ds_list_add(lines, arg1 + " is not a valid class!");
+				ds_list_add(lines, arg1 + " is not a valid class! Valid classes are Knight, Archer, Mage, and Rogue.");
 			}
 			else{
-				ds_list_add(lines, "Player class changed to " + arg1);
+				ds_list_add(lines, command + ": Player class changed to " + arg1);
+			}
+			break;
+		case "/dummystat":
+			if (ds_list_find_index(global.equipStats, arg1) == -1) {
+				ds_list_add(lines, command + ": " + arg1 + " is not a valid stat");
+			} else if (!string_is_float(arg2)) {
+				ds_list_add(lines, INCORRECT_USAGE + help[? "dummystat"]);	
+			} else {
+				with (obj_debug_dummy) {
+					basestatmap[? other.arg1] = other.arg2;
+				}
+				ds_list_add(lines, command + ": Dummy's " + arg1 + " set to " + arg2);
 			}
 			break;
 		case "/setcontrol":

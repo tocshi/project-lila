@@ -60,6 +60,10 @@ gTotalDamage = intDmg * (fcritdmg/100) * (atkmap[? "elem_mod"]/100) * (atkmap[? 
 gTotalDamage = round(gTotalDamage*(100/(100+target.statmap[? "def"])));
 
 target.statmap[? "hp"] -= gTotalDamage;
+with (target) {
+	// Notify hit
+	event_user(0);	
+}
 e_hp = target.statmap[? "hp"];
 e_maxhp = target.statmap[? "maxhp"];
 

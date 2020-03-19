@@ -33,3 +33,4 @@ help[? "give"] = "give: <Integer> itemId, <Integer> num.\nGives <num> of item <i
 help[? "commands"] = "commands: <Integer> pageNum.\nLists the available commands on page pageNum of 1.\nIf <pageNum> is not specified or is not an integer, default to 1.";
 help[? "changeclass"] = "changeclass: <String> className.\nChanges the player's class to the specified class name.";
 help[? "setcontrol"] = "setcontrol: <String> controlName, <String> controlKey.\n" + NOT_IMPLEMENTED_YET;
+help[? "dummystat"] = "dummystat: <String> stat, <Float> val.\n Changes the value of <stat> of the dummy to <value>."
