@@ -2,9 +2,11 @@
 
 // Inherit the parent event
 event_inherited();
-draw_self();
-show_debug_message("x: " + string(x));
-show_debug_message("y: " + string(y));
+//draw_self();
+
+if (display == noone)  {
+	exit;	
+}
 display.text = "Total damage: " + string(damage)							+ 
 			   "\nDps: " + string(dps)										+
 			   "\ndef: " + string(statmap[? "def"])						+
