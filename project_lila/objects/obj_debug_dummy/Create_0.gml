@@ -9,11 +9,13 @@ statmap[? "maxhp"]			= MAX_HEALTH;
 statmap[? "hp"]				= MAX_HEALTH;
 statmap[? "hpregen"]		= MAX_HEALTH;
 
+ds_map_copy(basestatmap, statmap);
+
 TIMEOUT = 5000;
 UPDATE_DELAY = 60;
 
-first_hit = 0;
-last_hit = 0;
+first_hit = current_time;
+last_hit = current_time;
 
 damage = 0;
 seconds = 0;

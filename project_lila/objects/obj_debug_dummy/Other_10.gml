@@ -9,11 +9,12 @@ if (hitDmg > 0) {
 // If dummy timed out
 if (current_time - last_hit > TIMEOUT) {
 	first_hit = current_time;
+	damage = 0;
 }
 last_hit = current_time;
 
 // Avoid division by 0 on first hit to dummy
-seconds = (last_hit - first_hit)/1000;
+seconds = (current_time - first_hit)/1000;
 var divisor = seconds;
 if (seconds == 0) {
 	divisor = 1;
