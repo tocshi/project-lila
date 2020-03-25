@@ -59,55 +59,7 @@ fblk = clamp(fblk,0,100);
 gTotalDamage = intDmg * (fcritdmg/100) * (atkmap[? "elem_mod"]/100) * (atkmap[? "finaldmg"]/100) * ((100-fblk)/100) * ((100-target.statmap[? "finalshld"])/100);
 gTotalDamage = round(gTotalDamage*(100/(100+target.statmap[? "def"])));
 
-deal_damage(target, gTotalDamage)
+deal_damage(target, gTotalDamage);
 
-e_hp = target.statmap[? "hp"];
-e_maxhp = target.statmap[? "maxhp"];
-
-if(variable_instance_exists(self.id,"user")){
-	onhit_effect_handler(user,target);
-}
-
-var playerDamaged = false;
-if(target == global.player || object_is_ancestor(target.object_index,obj_ally)){playerDamaged = true;}
-var yy = target.y-(target.sprite_height/2);
-var valid = false;
-while(collision_point(target.x,yy,obj_dmgtxt,false,true)){
-	with(instance_nearest(target.x,yy,obj_dmgtxt)){
-		if(dist > 20){valid = true;}
-	}
-	if(valid){break;}
-	yy-=32;
-}
-with(instance_create_layer(irandom_range(target.x-10,target.x+10), 
-							yy, 
-							"dmgTxt", obj_dmgtxt)){
-	damage = other.gTotalDamage;
-	isCrit = other.atkmap[? "isCrit"];
-	isOrangeCrit = other.atkmap[? "isOrangeCrit"];
-	isRedCrit = other.atkmap[? "isRedCrit"];
-	self.playerDamaged = playerDamaged;
-	
-	hp		= other.e_hp;
-	maxhp	= other.e_maxhp;
-	self.target	= target;							
-}
-
-if(instance_exists(target) && ds_exists(target.statmap,ds_type_map) && object_is_ancestor(target.object_index,obj_enemy)){
-	with(instance_create_layer(target.x, target.y, "dmgTxt", obj_minihpbar)){
-		hp		= other.e_hp;
-		maxhp	= other.e_maxhp;
-		hpwidth	= target.sprite_width;
-		self.target	= target.id;
-	}
-}
-atkmap[? "isCrit"]			= false;
-
-if(ds_map_exists(atkmap,"isPiercing") && ds_map_exists(atkmap,"isProjectile")){
-	if(!atkmap[? "isPiercing"]){
-		ds_map_destroy(atkmap);
-		atkmap = -1;
-		instance_destroy();
-	}
-}
+//atkmap[? "isCrit"] = false;
 

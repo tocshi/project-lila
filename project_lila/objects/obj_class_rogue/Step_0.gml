@@ -118,7 +118,7 @@ if(keyboard_check_pressed(skill_button[5]) && (cd[5] <= 0) && statmap[? "mp"] >=
 	}
 	
 	cancel_basic_attack();
-	statmap[? "mp"] -= 25;
+	statmap[? "mp"] -= 30;
 	cd[5] = maxcd[5];
 	t_fang = 0;
 	direction = point_direction(x,y,mouse_x,mouse_y);

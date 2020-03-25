@@ -7,10 +7,10 @@ with(other){
 	distmod*=1000;
 	adddmg+=distmod;
 }
-if(other.target != user){adddmg+=60;}
+//if(other.target != user){adddmg+=60;}
 if(hasBuff(other,"Poisoned")){
 	if(get_buff_data(other,"Poisoned","stacks") >= 5){
-		adddmg+=40;
+		adddmg+=50;
 	}
 }
 atkmap[? "dmgmod"]+=adddmg;

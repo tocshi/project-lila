@@ -130,7 +130,7 @@ if(keyboard_check(skill_button[0]) && unleashGauge > 0 && essence >= unleashGaug
 }
 
 // Basic Attack
-if(mouse_check_button_pressed(mb_left) && (atkTimer <= 0) && canAttack){
+if(mouse_check_button(mb_left) && (atkTimer <= 0) && canAttack){
 	
 	speed = 0;
 	//isMoving = false;

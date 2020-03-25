@@ -10,7 +10,7 @@ if(path_get_length(ai_path) < aggro_range && point_distance(x,y,target.x,target.
 if(point_distance(x,y,target.x,target.y) < 80){standing_still++;}
 else{standing_still = 0;}
 
-if(point_distance(x,y,target.x,target.y) < 120 && statmap[? "mp"] >= 30 && standing_still >= 30){
+if(point_distance(x,y,target.x,target.y) < 120 && statmap[? "mp"] >= 30 && standing_still >= 30 && canAttack){
 	statmap[? "mp"] -= 30;
 
 	isMoving = false;

@@ -1,3 +1,15 @@
+///arg target
+///arg time
+///arg isVisible
+///arg name
+///arg countdownEvent
+///arg isUnremovable
+///arg stacks
+///arg maxStacks
+///arg sprite
+///arg desc
+///arg extra
+
 // Applies a buff to the target's buff list with the following arguments:
 var target			= argument0;
 var time			= argument1;

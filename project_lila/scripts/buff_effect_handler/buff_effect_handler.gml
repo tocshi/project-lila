@@ -7,7 +7,7 @@ switch(buffName){
 	canAttack = false;
 	canUseSkill = false;
 	isCCed = true;
-	statmap[? "movespeed"]-=9999;
+	if(statChange){statmap[? "movespeed"]-=9999;}
 	break;
 	
 	case "Taunt":
@@ -75,26 +75,6 @@ switch(buffName){
 	if(get_buff_data(self,"Burn","time") % 60 = 30){
 		var burndmg = max(0,get_buff_data(self,"Burn","data") - max(0,statmap[? "fire_def"]))*get_buff_data(self,"Burn","stacks");
 		deal_damage(self, burndmg);
-		
-		with(instance_create_layer(irandom_range(x-10,x+10), 
-									irandom_range(y-(sprite_height/2)-5,y-(sprite_height/2)+5), 
-									"dmgTxt", obj_dmgtxt)){
-			damage = burndmg;
-	
-			hp		= other.statmap[? "hp"];
-			maxhp	= other.statmap[? "maxhp"];
-			self.target	= other;							
-		}
-
-	
-		if(instance_exists(self) && ds_exists(statmap,ds_type_map)){
-			with(instance_create_layer(x, y, "dmgTxt", obj_minihpbar)){
-				hp		= other.statmap[? "hp"];
-				maxhp	= other.statmap[? "maxhp"];
-				hpwidth	= other.sprite_width;
-				self.target	= other.id;
-			}
-		}
 	}
 	break;
 	
@@ -143,25 +123,6 @@ switch(buffName){
 	if(get_buff_data(self,"Poisoned","time") % 60 = 30){
 		var poisondmg = get_buff_data(self,"Poisoned","data")*get_buff_data(self,"Poisoned","stacks");
 		deal_damage(self, poisondmg);
-		
-		with(instance_create_layer(irandom_range(x-10,x+10), 
-									irandom_range(y-(sprite_height/2)-5,y-(sprite_height/2)+5), 
-									"dmgTxt", obj_dmgtxt)){
-			damage = poisondmg;
-	
-			hp		= other.statmap[? "hp"];
-			maxhp	= other.statmap[? "maxhp"];
-			self.target	= other;							
-		}
-
-		if(instance_exists(self) && ds_exists(statmap,ds_type_map)){
-			with(instance_create_layer(x, y, "dmgTxt", obj_minihpbar)){
-				hp		= other.statmap[? "hp"];
-				maxhp	= other.statmap[? "maxhp"];
-				hpwidth	= other.sprite_width;
-				self.target	= other.id;
-			}
-		}
 	}
 	break;
 	

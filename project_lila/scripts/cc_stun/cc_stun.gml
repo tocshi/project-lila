@@ -1,4 +1,4 @@
-target = argument0;
+var target = argument0;
 
 target.canUseSkill = true;
 target.canMove = true;
