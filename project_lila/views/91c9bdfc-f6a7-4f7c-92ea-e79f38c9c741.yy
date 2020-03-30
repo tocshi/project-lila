@@ -11,7 +11,8 @@
         "438f225f-2517-4fc6-a4db-88f6bc043d77",
         "d86ef875-354d-4aaa-a5a7-5eaa296d3ca0",
         "3eaebf27-240c-48fe-8f74-8b687cc03977",
-        "1bb459f3-514a-423d-b0a3-fc1fccd64151"
+        "1bb459f3-514a-423d-b0a3-fc1fccd64151",
+        "cd0cdca8-a272-4549-99f6-18a85dac321d"
     ],
     "filterType": "GMSprite",
     "folderName": "Mage",

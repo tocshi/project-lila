@@ -10,7 +10,8 @@
         "f22f6232-4b53-4a0a-b143-8d74c5672b1c",
         "4d45e634-90c6-4384-8016-134ed904aceb",
         "7147b7c0-2a83-4a7f-bff3-5cc6a22b1511",
-        "bb742c81-8968-4f8e-b129-459f5802e411"
+        "bb742c81-8968-4f8e-b129-459f5802e411",
+        "bbba4313-f575-4e9c-a0f1-6ab3fe492283"
     ],
     "filterType": "GMSprite",
     "folderName": "Archer",

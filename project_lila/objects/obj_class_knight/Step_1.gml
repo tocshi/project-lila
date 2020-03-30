@@ -8,6 +8,12 @@ if(statmap[? "classlvl"] >= 6 && statChange){
 }
 
 if(shield_charge > 0){
+	xx = x+lengthdir_x(15,charge_direction);
+	yy = y+lengthdir_y(15,charge_direction);
+	if(place_free(xx,yy)){
+		x = xx;
+		y = yy;
+	}
 	shield_charge--;
 	if(shield_charge <= 0){
 		speed = 0; 

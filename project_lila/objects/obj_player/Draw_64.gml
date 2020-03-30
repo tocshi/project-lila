@@ -54,9 +54,11 @@ for(var i = 0; i < array_length_1d(itemBar); ++i){
 }
 
 // Draw skill and item cooldowns
-for(i = 0; i < array_length_1d(skill_sprite); ++i){
+// TODO: dynamically figure out how many skills player has
+// and which skill icon to use instead of relying on this staticm sajfgbnkjsdfbgkjdsfbjgkbdsfkjgbktjergbnkjsgdfhbjksdfghbjkgfrdujh
+for(i = 0; i < 10; ++i){
 
-	draw_sprite(skill_sprite[i],0,global.hpmpend+(i*80),20);
+	draw_sprite_ext(skill_sprite,skill_icon_mapping[i],global.hpmpend+(i*80),20,1,1,0,c_white,1);
 	
 	render_cooldown(global.hpmpend+(i*80),20,cd[i+1],maxcd[i+1]);
 }

@@ -19,7 +19,7 @@ draw_set_alpha(0.6);
 draw_set_font(fnt_dmgtxt);
 draw_set_color(c_white);
 draw_set_halign(fa_center);
-draw_healthbar(xx, yy, xx+width, yy+height, (cd/maxcd)*100, c_dkgray, c_black, c_black, 2, true, false);
+draw_healthbar(xx, yy, xx+width, yy+height, (cd/maxcd)*100, $55464F, c_black, c_black, 2, true, false);
 draw_set_alpha(0.9);
 draw_set_valign(fa_top);
 draw_text_outlined(xx+(width/2),yy+(height/4), c_black, c_white, cdtime); 
