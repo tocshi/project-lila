@@ -49,12 +49,20 @@ if(keyboard_check_pressed(skill_button[3]) && (cd[3] <= 0) && statmap[? "mp"] >=
 	canUseSkill = false;
 	isMoving = false;
 	
-	direction = point_direction(x,y,mouse_x,mouse_y);
-	speed = 15;
+	charge_direction = point_direction(x,y,mouse_x,mouse_y);
 	
 	applyBuff(self.id,30,true,"Knight's Shield",buff_knights_shield,false,-1,0,spr_buff_knights_shield,"Lorem Ipsum",0);
 
 	shield_charge = 29;
+	with(instance_create_layer(x,y,"Attacks",obj_skill_shield_charge)){
+		user = other.id;
+		ds_map_copy(atkmap,user.statmap);
+		atkmap[? "element"] = other.atkelement;
+		atkmap[? "dmgmod"] = 50;
+		speed = 30;
+		direction = user.charge_direction;
+		image_angle = direction;
+	}
 
 }
 
@@ -137,11 +145,13 @@ if(keyboard_check_pressed(skill_button[7]) && (cd[7] <= 0) && statmap[? "mp"] >=
 		removeBuff(self.id,"Protective Footwork I",false);
 		cd[7] = 0.8*room_speed;
 		protective_footwork_mod = 240;
+		skill_icon_mapping[6] = 8;
 	}
 	else{
 		cd[7] = 0.8*room_speed;
 		applyBuff(self.id,180,false,"Protective Footwork I",buff_protective_footwork,false,-1,0,spr_buff_protective_footwork1,"Lorem Ipsum",0);
 		protective_footwork_mod = 160;
+		skill_icon_mapping[6] = 7;
 	}
 		
 	statmap[? "mp"] -= 20;
@@ -193,13 +203,16 @@ if(keyboard_check_pressed(skill_button[9]) && (cd[9] <= 0) && canUseSkill && equ
 	
 	with(obj_skill_aegis_aura){
 		if(user == other.id){
-		instance_destroy();
-		exit;
+			instance_destroy();
+			user.skill_icon_mapping[8] = 10;
+			user.cd[9] = user.maxcd[9];
+			exit;
 		}
 	}
 	with(instance_create_layer(x,y,"Ground",obj_skill_aegis_aura)){
 		user = other.id;
 	}
+	skill_icon_mapping[8] = 11;
 	cd[9] = maxcd[9];
 }
 

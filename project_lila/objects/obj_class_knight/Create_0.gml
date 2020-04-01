@@ -2,9 +2,10 @@ event_inherited();
 
 statmap[? "class"] = "Knight";
 
-skill_sprite = array_create(10, spr_empty);
+skill_sprite = spr_skill_icons_knight;
 f_challenge_list = ds_list_create();
 shield_charge = 0;
+charge_direction = 0;
 scList = ds_list_create();
 guardian_target = noone;
 following_ally = false;
@@ -13,16 +14,18 @@ footwork_charge = 0;
 origatk = basestatmap[? "atk"];
 origdef = basestatmap[? "def"];
 
-skill_sprite[0] = spr_skill_Q;
-skill_sprite[1] = spr_skill_W;
-skill_sprite[2] = spr_skill_E;
-skill_sprite[3] = spr_skill_R;
-skill_sprite[4] = spr_skill_T;
-skill_sprite[5] = spr_skill_A;
-skill_sprite[6] = spr_skill_S;
-skill_sprite[7] = spr_skill_D;
-skill_sprite[8] = spr_skill_F;
-skill_sprite[9] = spr_skill_G;
+// TEMPORARY UNTIL SKILL REWORK
+skill_icon_mapping = array_create(10,0);
+skill_icon_mapping[0] = 0;
+skill_icon_mapping[1] = 1;
+skill_icon_mapping[2] = 2;
+skill_icon_mapping[3] = 3;
+skill_icon_mapping[4] = 4;
+skill_icon_mapping[5] = 5;
+skill_icon_mapping[6] = 6;
+skill_icon_mapping[7] = 9;
+skill_icon_mapping[8] = 10;
+skill_icon_mapping[9] = 12;
 
 maxcd[1] = room_speed*5;
 maxcd[2] = room_speed*14;
