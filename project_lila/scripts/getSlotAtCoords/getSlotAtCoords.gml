@@ -8,6 +8,7 @@ if (x_coord - 1 >= global.invItemBox[0, 0]
 && x_coord - 1 <= global.invItemBox[0, 0] + 10*66 
 && y_coord - 1 >= global.invItemBox[0, 1]  
 && y_coord - 1 <= global.invItemBox[0, 1] + 10*66) {
+	show_debug_message("coords in inventory!")
 		// Search horizontal/vertical slot position
 		var x_slot;
 		var y_slot;
@@ -39,10 +40,11 @@ if (x_coord - 1 >= global.invItemBox[0, 0]
 
 // check whether coordinates are in equip slot area (adjusting for box margins)
 
-if (x_coord - 11 >= global.equipItemBox[0, 0] 
+else if (x_coord - 11 >= global.equipItemBox[0, 0] 
 && x_coord - 11 <= global.equipItemBox[0, 0] + 3*86 
 && y_coord - 11 >= global.equipItemBox[0, 1] 
 && y_coord - 11 <= global.equipItemBox[0, 1] + 4*86) {
+	show_debug_message("coords in equip!")
 		// Search horizontal/vertical slot position
 		var x_slot;
 		var y_slot;
@@ -67,6 +69,30 @@ if (x_coord - 11 >= global.equipItemBox[0, 0]
 		var return_array = array_create(2);
 		return_array[0] = slot;
 		return_array[1] = "Equip";
+		return return_array;
+}
+
+// check whether coordinates are in hotbar area (adjusting for box margins)
+else if (x_coord - 1 >= global.itemBarBox[0, 0] 
+&& x_coord - 1 <= global.itemBarBox[0, 0] + 66 
+&& y_coord - 1 >= global.itemBarBox[0, 1]  
+&& y_coord - 1 <= global.itemBarBox[0, 1] + 10*66) {
+	show_debug_message("coords in hotbar!")
+		// Search slot position
+		var slot;
+		for (slot = 0; slot < 10; ++slot) {
+			if (y_coord < global.itemBarBox[slot, 1] - 1 || y_coord > global.itemBarBox[slot, 1] + 65) {
+				show_debug_message("mouse y coord " + string(y_coord) + " is NOT in [" + 
+				string(global.itemBarBox[slot, 1] - 1) + ", " + string(global.itemBarBox[slot, 1] + 65) + "]")
+				continue;
+			} else {
+				break;
+			}
+		}
+		// Return slot number paired with GUI area identifier
+		var return_array = array_create(2);
+		return_array[0] = slot;
+		return_array[1] = "Hotbar";
 		return return_array;
 }
 
