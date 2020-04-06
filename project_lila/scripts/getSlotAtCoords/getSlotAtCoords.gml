@@ -1,5 +1,5 @@
 var x_coord = argument0 - camera_get_view_x(global.currentCamera);
-var y_coord = argument1 - camera_get_view_y(global.currentCamera)
+var y_coord = argument1 - camera_get_view_y(global.currentCamera);
 
 // item sprites are 64x64
 
@@ -8,7 +8,6 @@ if (x_coord - 1 >= global.invItemBox[0, 0]
 && x_coord - 1 <= global.invItemBox[0, 0] + 10*66 
 && y_coord - 1 >= global.invItemBox[0, 1]  
 && y_coord - 1 <= global.invItemBox[0, 1] + 10*66) {
-	show_debug_message("coords in inventory!")
 		// Search horizontal/vertical slot position
 		var x_slot;
 		var y_slot;
@@ -44,7 +43,6 @@ else if (x_coord - 11 >= global.equipItemBox[0, 0]
 && x_coord - 11 <= global.equipItemBox[0, 0] + 3*86 
 && y_coord - 11 >= global.equipItemBox[0, 1] 
 && y_coord - 11 <= global.equipItemBox[0, 1] + 4*86) {
-	show_debug_message("coords in equip!")
 		// Search horizontal/vertical slot position
 		var x_slot;
 		var y_slot;
@@ -77,13 +75,10 @@ else if (x_coord - 1 >= global.itemBarBox[0, 0]
 && x_coord - 1 <= global.itemBarBox[0, 0] + 66 
 && y_coord - 1 >= global.itemBarBox[0, 1]  
 && y_coord - 1 <= global.itemBarBox[0, 1] + 10*66) {
-	show_debug_message("coords in hotbar!")
 		// Search slot position
 		var slot;
 		for (slot = 0; slot < 10; ++slot) {
 			if (y_coord < global.itemBarBox[slot, 1] - 1 || y_coord > global.itemBarBox[slot, 1] + 65) {
-				show_debug_message("mouse y coord " + string(y_coord) + " is NOT in [" + 
-				string(global.itemBarBox[slot, 1] - 1) + ", " + string(global.itemBarBox[slot, 1] + 65) + "]")
 				continue;
 			} else {
 				break;
