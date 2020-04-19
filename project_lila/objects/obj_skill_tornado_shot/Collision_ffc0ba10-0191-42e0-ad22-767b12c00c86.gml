@@ -7,6 +7,7 @@ if(ds_list_find_index(hitList,other.id) == -1){
 		other.atkTimer = 20;
 		other.direction = direction+random_range(-30,30);
 		other.speed = 4;
+		other.canMove = false;
 	}
 	
 	if(ds_map_find_value(global.itemData[| global.player.equips[0]],"unleashGauge") > 0 && global.player.essence >= 0){

@@ -22,6 +22,9 @@ global.inv_item_preview_lock = -1;
 // cursor state
 global.cursor_state = 0;
 
+// CONTROLS STATE: 0 = MOUSEMOVEMENT, 1 = KEYBOARDMOVEMENT, 2 = GAMEPAD???
+global.controls_state = 0;
+
 // KEYBOARD SETTINGS
 global.key_interact =	vk_enter;
 global.mouse_interact =	mb_left;
