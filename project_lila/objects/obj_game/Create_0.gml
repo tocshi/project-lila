@@ -8,6 +8,8 @@ global.pause = 0;
 global.player = noone;
 // Player Last Used Class
 global.lastClass = obj_class_knight;
+// Player Permanent Stats
+global.playerSavedStats = ds_map_create();
 
 // Which menu to access when paused.
 global.gui_state = -1;

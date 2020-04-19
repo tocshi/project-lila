@@ -9,4 +9,11 @@ for(var i = 0; i < array_length_1d(equips); ++i){
 		unequipItem(self,equips[i]);
 	}
 }
-//TODO! Check for isDead and save hp and mp if not
+if(!isDead){
+	global.playerSavedStats[? "hp"]			= statmap[? "hp"];
+	global.playerSavedStats[? "mp"]			= statmap[? "mp"];
+	global.playerSavedStats[? "lvl"]		= statmap[? "lvl"];
+	global.playerSavedStats[? "xp"]			= statmap[? "xp"];
+	global.playerSavedStats[? "cpp"]		= statmap[? "cpp"];
+	global.playerSavedStats[? "hpshield"]	= statmap[? "hpshield"];
+}

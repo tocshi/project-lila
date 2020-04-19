@@ -2,7 +2,9 @@ var target = argument0
 var damage = argument1
 damage = max(0,damage);
 with (target) {
-	statmap[? "hp"] -= damage;
+	statmap[? "hpshield"] -= damage;
+	var hpdamage = damage - statmap[? "hpshield"];
+	statmap[? "hp"] -= hpdamage;
 	event_user(0);
 }
 

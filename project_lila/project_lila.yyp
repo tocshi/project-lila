@@ -1175,6 +1175,14 @@
             }
         },
         {
+            "Key": "5e3a980b-a503-40a5-a919-950971e3729e",
+            "Value": {
+                "id": "c79ec1eb-ada5-4362-a0b5-e1a89dcba89f",
+                "resourcePath": "scripts\\restore_player_stats\\restore_player_stats.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "5e40f2b0-3dba-4cc6-b0f2-cb1a0498fd58",
             "Value": {
                 "id": "c88dff59-b2ce-4815-9986-f890f1d2acc4",
@@ -3154,6 +3162,7 @@
         "395e8df5-83cc-49f1-a7cd-909842e7d84f",
         "0921d80d-330d-437f-86f9-a8da727c6a49",
         "d5453502-d6b7-44b3-9911-2705a9004b0c",
+        "5e3a980b-a503-40a5-a919-950971e3729e",
         "1ad0c2fa-f034-4c6b-bfe0-13fc729d5961",
         "bd19d0d2-92fb-4ad9-908b-3f2f51956b86",
         "48c409b6-ef38-45b8-9167-f8327ecb7c18",
