@@ -1,13 +1,26 @@
+// Draw LVL and XP
+var prev_lvl_xp = 100*power(statmap[? "level"],1.3);
+var next_lvl_xp = 100*power(statmap[? "level"]+1,1.3);
+draw_healthbar(20, 20, 100, 100, ((statmap[? "xp"]-prev_lvl_xp)/(next_lvl_xp-prev_lvl_xp))*100, c_black, c_purple, c_fuchsia, 3, true, true);
+draw_set_font(fnt_menutitle);
+draw_set_halign(fa_left);
+draw_set_valign(fa_top);
+draw_set_alpha(1);
+draw_text_outlined(20,40,c_black,c_white,statmap[? "level"]);
+
 // Draw HP and MP bars
 draw_set_halign(fa_middle);
 draw_set_valign(fa_top);
-draw_healthbar(20, 20, 420, 40, (statmap[? "hp"]/statmap[? "maxhp"])*100, c_black, c_red, c_red, 0, true, true);
-draw_healthbar(20, 40, 420, 60, (statmap[? "mp"]/statmap[? "maxmp"])*100, c_black, c_blue, c_blue, 0, true, true);
+draw_healthbar(120, 20, 520, 40, (statmap[? "hp"]/statmap[? "maxhp"])*100, c_black, c_red, c_red, 0, true, true);
+//hp shield
+draw_set_alpha(0.7);
+draw_healthbar(120, 20, 520, 40, min(statmap[? "hpshield"]/statmap[? "maxhp"],1)*100, c_black, c_yellow, c_yellow, 0, false, false);
+draw_set_alpha(1);
+draw_healthbar(120, 40, 520, 60, (statmap[? "mp"]/statmap[? "maxmp"])*100, c_black, c_blue, c_blue, 0, true, true);
 
 draw_set_font(fnt_hpmp);
-draw_set_color(c_white);
-draw_text(220, 15, string(ceil(statmap[? "hp"])) + " / " + string(round(statmap[? "maxhp"])));
-draw_text(220, 37, string(ceil(statmap[? "mp"])) + " / " + string(round(statmap[? "maxmp"])));
+draw_text(320, 15, string(ceil(statmap[? "hp"] + statmap[? "hpshield"])) + " / " + string(round(statmap[? "maxhp"])));
+draw_text(320, 37, string(ceil(statmap[? "mp"])) + " / " + string(round(statmap[? "maxmp"])));
 
 // Draw unleash gauge if unleashGauge > 0
 if(unleashGauge > 0){

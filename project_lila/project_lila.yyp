@@ -1759,6 +1759,14 @@
             }
         },
         {
+            "Key": "8e96ab88-da7c-4d98-8fa9-4ce833a92750",
+            "Value": {
+                "id": "c41b6a8e-35ec-4528-b892-d9f60816d7f6",
+                "resourcePath": "sprites\\spr_lvlup_effect\\spr_lvlup_effect.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "8fd711c5-efb2-49c4-9389-8e4d8acc9bbe",
             "Value": {
                 "id": "b84badac-6020-4275-9e7d-d51da5435341",
@@ -2524,6 +2532,14 @@
                 "id": "5cd9d273-9fcb-4448-aa4d-9c300605ebcd",
                 "resourcePath": "scripts\\hasBuff\\hasBuff.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "d529eea0-350a-4eaa-a003-c41e21017d18",
+            "Value": {
+                "id": "4f7538f3-38bd-44aa-bd71-288ef27b5e1f",
+                "resourcePath": "objects\\obj_lvlup_effect\\obj_lvlup_effect.yy",
+                "resourceType": "GMObject"
             }
         },
         {

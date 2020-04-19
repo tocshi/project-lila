@@ -113,7 +113,7 @@ if(keyboard_check_pressed(vk_tab)){
 		if(itemcd[i] > 0){itemcd[i] = 1;}
 	}
 }
-
+/*
 if(keyboard_check_pressed(vk_shift)){
 	switch(inftoggle){
 		case 0:
@@ -134,7 +134,7 @@ if(keyboard_check_pressed(vk_shift)){
 	}
 	inftoggle++;	
 	recalcStats(self.id);
-}
+}*/
 
 statChange = false;
 

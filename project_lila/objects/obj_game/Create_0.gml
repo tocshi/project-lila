@@ -122,7 +122,7 @@ for(var i = 0; i < 20; ++i){
 }
 
 // for skills and buff bar
-global.hpmpend = 440;
+global.hpmpend = 540;
 
 // Stats that equipped items are allowed to change
 global.equipStats = ds_list_create();
