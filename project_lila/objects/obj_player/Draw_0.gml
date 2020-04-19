@@ -1,4 +1,4 @@
-if(x <= destX){
+if(x <= mouse_x){
 	draw_sprite_ext(spr_debug_player,-1,x,y,1,1,0,-1,alpha);
 } else {
 	draw_sprite_ext(spr_debug_player,-1,x,y,-1,1,0,-1,alpha);

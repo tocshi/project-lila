@@ -5,6 +5,8 @@ view_set_wport(view_current,1600);
 view_set_hport(view_current,900);
 view_set_visible(view_current,true);
 
+depth = depth-1;
+
 // Name and Dialogue
 name = "Player Name"
 portrait_sprite = spr_empty;

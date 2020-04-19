@@ -19,6 +19,7 @@ last_hit = current_time;
 damage = 0;
 seconds = 0;
 dps = 0;
+hits = 0;
 
 display = noone;
 

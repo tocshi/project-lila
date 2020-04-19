@@ -7,7 +7,7 @@ if(canMove && !isMoving && !atkTimer){
 
 //STAT CLAMPING
 statmap[? "atkspeed"] = clamp(statmap[? "atkspeed"],0.01,5);
-statmap[? "movespeed"] = clamp(statmap[? "movespeed"],0,30);
+statmap[? "movespeed"] = clamp(statmap[? "movespeed"],0,20);
 statmap[? "hp"] = clamp(statmap[? "hp"],0,statmap[? "maxhp"]);
 statmap[? "mp"] = clamp(statmap[? "mp"],0,statmap[? "maxmp"]);
 statmap[? "finalshld"] = clamp(statmap[? "finalshld"],-100,100);
@@ -36,23 +36,53 @@ var cam_speed = point_distance(x,y,camera_get_view_x(global.currentCamera)+camer
 camera_set_view_speed(global.currentCamera,cam_speed,cam_speed);
 
 // Standard Movement
-if(mouse_check_button(mb_right) && canMove){
-	
-	if(point_distance(x,y,mouse_x,mouse_y) > 8){
-		destX = mouse_x;
-		destY = mouse_y;
-		isMoving = true;
-		instance_destroy(obj_player_move_indicator);
-		with(instance_create_layer(destX,destY,"Assets_1",obj_player_move_indicator)){player = other;}
+switch(global.controls_state){
+	case 0:
+	if(mouse_check_button(mb_right) && canMove){
+		if(point_distance(x,y,mouse_x,mouse_y) > 8){
+			destX = mouse_x;
+			destY = mouse_y;
+			isMoving = true;
+			instance_destroy(obj_player_move_indicator);
+			with(instance_create_layer(destX,destY,"Assets_1",obj_player_move_indicator)){player = other;}
+		}
 	}
+	break;
+	
+	case 1:
+	destX = x;
+	destY = y;
+	if(keyboard_check(global.key_up)){
+		destY -= statmap[? "movespeed"];
+	}
+	if(keyboard_check(global.key_down)){
+		destY += statmap[? "movespeed"];
+	}
+	if(keyboard_check(global.key_left)){
+		destX -= statmap[? "movespeed"];
+	}
+	if(keyboard_check(global.key_right)){
+		destX += statmap[? "movespeed"];
+	}
+	if(destX != x || destY != y){isMoving = true;}
+	break;
+	
+	case 2:
+	default:
+	show_error("dong status expanded",true);
+}
+
+if((point_distance(x, y, destX, destY) < statmap[? "movespeed"] && canMove)){
+	isMoving = false;
 }
 
 if(isMoving && canMove){
 	move(statmap[? "movespeed"], point_direction(x,y,destX,destY));
 }
 
-if(point_distance(x, y, destX, destY) < statmap[? "movespeed"] && canMove){
-		isMoving = false;
+// Stop movement if player can't move
+if(x == xprevious && y == yprevious){
+	isMoving = false;
 }
 
 // Use Items On Hotbar

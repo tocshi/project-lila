@@ -15,12 +15,12 @@ if(variable_instance_exists(self.id,"user")){
 
 var playerDamaged = false;
 if(target == global.player || object_is_ancestor(target.object_index,obj_ally)){playerDamaged = true;}
-var yy = target.y-(target.sprite_height/2);
+var yy = target.y-(target.sprite_height/3);
 var valid = false;
 while(collision_point(target.x,yy,obj_dmgtxt,false,true)){
-	with(instance_nearest(target.x,yy,obj_dmgtxt)){
+	/*with(instance_nearest(target.x,yy,obj_dmgtxt)){
 		if(dist > 20){valid = true;}
-	}
+	}*/
 	if(valid){break;}
 	yy-=32;
 }
@@ -41,7 +41,7 @@ with(instance_create_layer(irandom_range(target.x-10,target.x+10),
 }
 
 if(instance_exists(target) && ds_exists(target.statmap,ds_type_map) && object_is_ancestor(target.object_index,obj_enemy)){
-	with(instance_create_layer(target.x, target.y, "dmgTxt", obj_minihpbar)){
+	with(instance_create_layer(target.x, target.y, "minihpbar", obj_minihpbar)){
 		hp		= other.e_hp;
 		maxhp	= other.e_maxhp;
 		hpwidth	= target.sprite_width;

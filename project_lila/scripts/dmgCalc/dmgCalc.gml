@@ -45,7 +45,7 @@ if(random_range(0,100) < atkmap[? "critrate"]){
 		atkmap[? "isOrangeCrit"] = true;
 		if(random_range(0,100) < atkmap[? "critrate"]-200){
 			fcritdmg *= 1.5;
-			atkmap[? "isRed Crit"] = true;
+			atkmap[? "isRedCrit"] = true;
 		}
 	}
 }
@@ -60,6 +60,9 @@ gTotalDamage = intDmg * (fcritdmg/100) * (atkmap[? "elem_mod"]/100) * (atkmap[? 
 gTotalDamage = round(gTotalDamage*(100/(100+target.statmap[? "def"])));
 
 deal_damage(target, gTotalDamage);
+if(target.object_index == obj_debug_dummy){
+	target.hits++;
+}
 
 //atkmap[? "isCrit"] = false;
 

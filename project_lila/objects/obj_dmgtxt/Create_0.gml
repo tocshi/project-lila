@@ -8,3 +8,4 @@ dist = 0;
 hp = 0;
 maxhp = 0;
 target = 0;
+image_alpha = 0;
