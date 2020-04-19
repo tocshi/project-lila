@@ -65,8 +65,7 @@ if(global.gui_state == 1 && global.pause == 1){
 					updateGUI();
 				}
 			}
-		}
-		else if(origin_type == "Hotbar") {
+		} else if(origin_type == "Hotbar") {
 			// Dropped on hotbar slot
 			if (area == "Hotbar" && slot != -1 && slot != origin_slot) {
 				// dropped to empty slot

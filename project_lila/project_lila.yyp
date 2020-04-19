@@ -1999,6 +1999,14 @@
             }
         },
         {
+            "Key": "acb40dab-7a1a-4bdf-b1cf-16b9253e9b75",
+            "Value": {
+                "id": "b51999e8-7ee2-4fcf-922f-e3bcd722d7bf",
+                "resourcePath": "objects\\obj_item_hotbar\\obj_item_hotbar.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "ad16bacb-cfd0-430b-a4fb-239b1686ac0e",
             "Value": {
                 "id": "8e4270e0-d84a-4681-b056-fb70039008d5",
