@@ -1,5 +1,6 @@
 event_inherited();
 image_blend = c_olive;
+statmap[? "level"] = 6;
 statmap[? "maxhp"] = 500;
 statmap[? "hp"] = 500;
 statmap[? "maxmp"] = 30;

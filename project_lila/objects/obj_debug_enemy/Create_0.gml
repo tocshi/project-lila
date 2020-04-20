@@ -1,4 +1,5 @@
 event_inherited();
+statmap[? "level"] = 3;
 statmap[? "maxhp"] = 200;
 statmap[? "hp"] = 200;
 statmap[? "fire_def"] = 0;
