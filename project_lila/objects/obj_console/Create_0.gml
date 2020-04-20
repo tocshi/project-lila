@@ -32,7 +32,7 @@ help[? "help"] = "help: <String> command. Prints help for the given command.\nHo
 
 help[? "give"] = "give: <Integer> itemId, <Integer> num.\nGives <num> of item <itemId>.\nIf <num> is not specified, default to 1";
 help[? "commands"] = "commands: <Integer> pageNum.\nLists the available commands on page pageNum of 1.\nIf <pageNum> is not specified or is not an integer, default to 1.";
-help[? "changeclass"] = "changeclass: <String> className.\nChanges the player's class to the specified class name.";
+help[? "changeclass"] = "changeclass: <String> className.\nChanges the player's class to <className>";
 help[? "setcontrol"] = "setcontrol: <String> controlName, <String> controlKey.\n" + NOT_IMPLEMENTED_YET;
 help[? "dummystat"] = "dummystat: <String> stat, <Float> val.\nChanges the value of <stat> of the dummy to <val>."
 help[? "playerstat"] = "playerstat: <String> stat, <Float> val.\nChanges the value of <stat> of the player to <val>.\nClass cannot be changed using this command, use /changeclass instead."
