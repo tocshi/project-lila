@@ -120,10 +120,6 @@ skill_button[20]	= global.key_item9;
 //debug
 inftoggle = 0;
 
-itemBar[0] = 22;
-itemBar[1] = 1;
-itemBar[2] = 2;
-itemBar[3] = 3;
 if(global.playerItems[1] > 0){exit;}
 repeat(20){
 	addItem(1);
@@ -138,5 +134,9 @@ addItem(16);
 addItem(18);
 addItem(34);
 
+itemBar[0] = 22;
+itemBar[1] = 1;
+itemBar[2] = 2;
+itemBar[3] = 3;
 
-
+updateHotbar();
