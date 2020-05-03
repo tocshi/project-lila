@@ -291,6 +291,7 @@
     "passiveSkill"  : "item_passive_ordinary",
     "activeSkill"   : "item_attack_flashcut",
     "activeCD"      : 5,
+    "soulbound"     : true,
     "unleashSkill"  : "unleash_flashdance",
     "unleashGauge"  : 22
   },{

@@ -2035,6 +2035,14 @@
             "Value": {
                 "id": "b51999e8-7ee2-4fcf-922f-e3bcd722d7bf",
                 "resourcePath": "objects\\obj_item_hotbar\\obj_item_hotbar.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "abb54c4a-8507-4d76-9abd-14c304a1aa6f",
+            "Value": {
+                "id": "354185c7-0dd9-4c16-85e0-deef4e28eaac",
+                "resourcePath": "sprites\\spr_skill_icons_rogue\\spr_skill_icons_rogue.yy",
                 "resourceType": "GMSprite"
             }
         },
