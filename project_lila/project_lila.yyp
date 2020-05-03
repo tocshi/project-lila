@@ -687,6 +687,14 @@
             }
         },
         {
+            "Key": "2e5903d4-2707-4a95-8e50-f747e2ffe47d",
+            "Value": {
+                "id": "dea590f6-431a-46ff-af51-ec41ba541b94",
+                "resourcePath": "sprites\\spr_skill_icons_knight\\spr_skill_icons_knight.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "2ec2bdf0-74d8-40f4-b222-d5a502d99f2d",
             "Value": {
                 "id": "a918425c-ea4a-4564-b32c-7f85a81358dd",
@@ -2011,6 +2019,14 @@
             "Value": {
                 "id": "b51999e8-7ee2-4fcf-922f-e3bcd722d7bf",
                 "resourcePath": "objects\\obj_item_hotbar\\obj_item_hotbar.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "abc4e404-7d35-4697-a0da-4eea1d2c9e75",
+            "Value": {
+                "id": "7f7fbc8a-84ac-4e3c-b97e-03720d265a40",
+                "resourcePath": "objects\\obj_skill_shield_charge\\obj_skill_shield_charge.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -2175,6 +2191,14 @@
             }
         },
         {
+            "Key": "bbba4313-f575-4e9c-a0f1-6ab3fe492283",
+            "Value": {
+                "id": "ed373b83-f440-4852-aeef-c59817a30eed",
+                "resourcePath": "sprites\\spr_skill_icons_archer\\spr_skill_icons_archer.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "bd19d0d2-92fb-4ad9-908b-3f2f51956b86",
             "Value": {
                 "id": "0f4940a5-c752-4941-811c-b7ec20b8ee9b",
@@ -2319,14 +2343,6 @@
             }
         },
         {
-            "Key": "c62bc791-f83d-45d5-93a2-33eb4a86134a",
-            "Value": {
-                "id": "9beb57f7-7ba5-43d9-a3ba-287c075892b3",
-                "resourcePath": "sprites\\sprite97\\sprite97.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
             "Key": "c6eddf3a-011d-4cde-95c8-3bf3dc25957f",
             "Value": {
                 "id": "4917ef6d-c926-434a-bbd0-5dd94901a2f0",
@@ -2380,6 +2396,14 @@
                 "id": "d965de7d-5dc9-434a-a6d1-5ba99f6fcad9",
                 "resourcePath": "objects\\obj_demo_npc\\obj_demo_npc.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "cd0cdca8-a272-4549-99f6-18a85dac321d",
+            "Value": {
+                "id": "e671b331-9844-469d-9186-6d0321acba87",
+                "resourcePath": "sprites\\spr_skill_icons_mage\\spr_skill_icons_mage.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

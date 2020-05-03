@@ -19,18 +19,20 @@ i_salvo_coords[5,0] = -72;
 i_salvo_coords[5,1] = -48;
 i_salvo_targets = ds_list_create();
 
-skill_sprite = array_create(10, spr_empty);
+skill_sprite = spr_skill_icons_mage;
 
-skill_sprite[0] = spr_skill_Q;
-skill_sprite[1] = spr_skill_W;
-skill_sprite[2] = spr_skill_E;
-skill_sprite[3] = spr_skill_R;
-skill_sprite[4] = spr_skill_T;
-skill_sprite[5] = spr_skill_A;
-skill_sprite[6] = spr_skill_S;
-skill_sprite[7] = spr_skill_D;
-skill_sprite[8] = spr_skill_F;
-skill_sprite[9] = spr_skill_G;
+// TEMPORARY UNTIL SKILL REWORK
+skill_icon_mapping = array_create(10,0);
+skill_icon_mapping[0] = 0;
+skill_icon_mapping[1] = 1;
+skill_icon_mapping[2] = 2;
+skill_icon_mapping[3] = 3;
+skill_icon_mapping[4] = 4;
+skill_icon_mapping[5] = 5;
+skill_icon_mapping[6] = 6;
+skill_icon_mapping[7] = 7;
+skill_icon_mapping[8] = 8;
+skill_icon_mapping[9] = 9;
 
 maxcd[1] = room_speed*3;
 maxcd[2] = room_speed*3;

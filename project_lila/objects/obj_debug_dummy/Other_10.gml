@@ -12,7 +12,6 @@ last_hit = current_time;
 if (hitDmg > 0) {
 	damage += hitDmg;
 }
-
 event_user(4);
 
 if (display = noone) {

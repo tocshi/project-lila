@@ -1,6 +1,7 @@
 /// @description Calculate dps
 seconds = (current_time - first_hit)/1000;
-var divisor = seconds;
+
+var divisor = max(seconds,1);
 // Avoid division by 0 when dummy hasn't been hit yet
 if (seconds == 0) {
 	divisor = 1;
