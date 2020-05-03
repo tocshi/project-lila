@@ -13,6 +13,7 @@ global.playerSavedStats = ds_map_create();
 
 // Which menu to access when paused.
 global.gui_state = -1;
+lastgui = 1;
 // Whether the cursor is holding over an item in inventory
 global.holding = false;
 // Whether an item is currently being dragged
@@ -56,25 +57,19 @@ global.key_item7 =		ord("8");
 global.key_item8 =		ord("9");
 global.key_item9 =		ord("0");
 
-// Item data parsing function
-itemDataFile = file_text_open_read("item_data.json");
-var itemDataStr = "";
-while(!file_text_eof(itemDataFile)){
-	itemDataStr += file_text_read_string(itemDataFile);
-	file_text_readln(itemDataFile);
-}
-file_text_close(itemDataFile);
-
-var itemDataJson = json_decode(itemDataStr);
+// Parse Json Data
+var itemDataJson = parse_json_to_str("item_data.json");
 global.itemData = ds_map_find_value(itemDataJson, "default");
+var skillDataJson = parse_json_to_str("skill_data.json");
+global.skillData = ds_map_find_value(skillDataJson, "default");
 
 // Player inventory array and item quantity array
 global.playerInv = array_create(100, 0);
 global.playerItems = array_create(ds_list_size(global.itemData),0);
 
-// Player class level & equip loadouts
+// Player class data & equip loadouts
 global.playerEquipLoadouts = ds_map_create();
-global.playerClassExp = ds_map_create();
+global.playerClassData = ds_map_create();
 
 // Equipment pixel positions
 global.equipItemBox = array_create(12,[0,0]);

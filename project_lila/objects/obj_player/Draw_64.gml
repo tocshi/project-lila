@@ -72,8 +72,38 @@ for(var i = 0; i < array_length_1d(itemBar); ++i){
 for(i = 0; i < 10; ++i){
 
 	draw_sprite_ext(skill_sprite,skill_icon_mapping[i],global.hpmpend+(i*80),20,1,1,0,c_white,1);
-	
 	render_cooldown(global.hpmpend+(i*80),20,cd[i+1],maxcd[i+1]);
+	draw_sprite(spr_skill_border,0,global.hpmpend+(i*80),20);
+	
+	draw_set_font(fnt_gui_small);
+	draw_set_color(c_white);
+	draw_set_halign(fa_left);
+	draw_set_valign(fa_top);
+	var keystring = "key_skill" + string(i);
+	var key = variable_global_get(keystring);
+	switch(key){
+		case vk_enter:
+			key = "Enter";
+			break;
+		case vk_tab:
+			key = "Tab";
+			break;
+		case vk_shift:
+			key = "Shift";
+			break;
+		case vk_control:
+			key = "Ctrl";
+			break;
+		case vk_space:
+			key = "Space (Do not use for now!)";
+			break;
+		case 191:
+			key = "/";
+			break;
+		default:
+			key = chr(key);
+	}
+	draw_text(global.hpmpend+(i*80)-2,64,key);
 }
 
 // Renders buff icons based on their time remaining

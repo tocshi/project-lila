@@ -99,10 +99,11 @@ if (keyboard_check_pressed(vk_enter)) {
 				ds_list_add(lines, INCORRECT_USAGE + help[? "playerstat"]);	
 			} else if (arg1 == "class") {
 				ds_list_add(lines, command + ": player class cannot be changed with the /playerstat command. Try /changeclass"); 
-			} else if (!ds_map_exists(PLAYER.basestatmap, arg1)) {
+			} else if (!ds_map_exists(PLAYER.statmap, arg1)) {
 				ds_list_add(lines, command + ": " + arg1 + " is not a valid stat. Valid stats include " + PLAYER_STAT_LIST);
 			} else {
 				PLAYER.basestatmap[? arg1] = real(arg2);
+				PLAYER.statmap[? arg1] = real(arg2);
 				ds_list_add(lines, command + ": Player's " + arg1 + " set to " + arg2);
 			}
 			PLAYER.statChange = true;
