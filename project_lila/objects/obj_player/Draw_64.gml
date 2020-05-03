@@ -34,7 +34,7 @@ for(var i = 0; i < array_length_1d(itemBar); ++i){
 	var yy = global.itemBarBox[i,1];
 	var itemid = itemBar[i];
 	draw_sprite(asset_get_index(ds_map_find_value(global.itemData[| itemid],"sprite")),-1,xx,yy);
-	
+	//updateHotbar();
 	
 	if((ds_map_find_value(global.itemData[| itemid],"type") == "consumable"
 	|| ds_map_find_value(global.itemData[| itemid],"type") == "key")

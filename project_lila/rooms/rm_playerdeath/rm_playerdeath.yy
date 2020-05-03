@@ -2,7 +2,7 @@
 {
     "name": "rm_playerdeath",
     "id": "34b9cd24-2efb-456a-a4fc-82860a8ad3f5",
-    "creationCodeFile": "",
+    "creationCodeFile": "RoomCreationCode.gml",
     "inheritCode": false,
     "inheritCreationOrder": false,
     "inheritLayers": false,
