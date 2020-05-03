@@ -271,6 +271,14 @@
             }
         },
         {
+            "Key": "0e6a52c3-a1d7-43f7-adc1-e91984dad020",
+            "Value": {
+                "id": "1757752d-a5b4-4416-b4c2-ebf791b9e5d7",
+                "resourcePath": "scripts\\updateHotbar\\updateHotbar.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "0fe0d308-5f76-45af-9824-93a49af3b2fe",
             "Value": {
                 "id": "34156e5d-73f1-4fde-82b6-efd775b50da3",
@@ -3159,7 +3167,8 @@
         "695080c4-3245-4e74-a4ce-5abb62634aff",
         "2493e605-8c6a-409f-bf1b-0064e10b58b6",
         "454cdb76-1bb0-49cd-ac5f-cdc5c38c5413",
-        "01c10616-7d68-4ae1-b808-eba59538b196"
+        "01c10616-7d68-4ae1-b808-eba59538b196",
+        "0e6a52c3-a1d7-43f7-adc1-e91984dad020"
     ],
     "tutorial": ""
 }

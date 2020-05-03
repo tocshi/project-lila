@@ -1,5 +1,5 @@
 if(!instance_exists(obj_game)){
-	instance_create_depth(0,0,399,obj_game);
+	instance_create_layer(0,0,"Game",obj_game);
 }
 
 with(instance_create_layer(room_width/2-room_width/8,room_height/2,"GUIText",obj_debug_menu_button)){
