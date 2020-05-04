@@ -3,7 +3,6 @@ statmap = ds_map_create();
 basestatmap = ds_map_create();
 
 statmap[? "level"] 			= 0;
-statmap[? "xp"]				= 0;
 statmap[? "maxhp"]			= 100;
 statmap[? "hp"]				= 100;
 statmap[? "hpshield"]		= 0;

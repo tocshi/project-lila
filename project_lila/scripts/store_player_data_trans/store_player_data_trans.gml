@@ -9,18 +9,4 @@ for(var i = 0; i < array_length_1d(equips); ++i){
 		unequipItem(self,equips[i]);
 	}
 }
-
-global.playerSavedStats[? "level"]		= statmap[? "level"];
-global.playerSavedStats[? "xp"]			= statmap[? "xp"];
-global.playerSavedStats[? "cpp"]		= statmap[? "cpp"];
-	
-if(!isDead){
-	global.playerSavedStats[? "hp"]			= statmap[? "hp"];
-	global.playerSavedStats[? "mp"]			= statmap[? "mp"];
-	global.playerSavedStats[? "hpshield"]	= statmap[? "hpshield"];
-}
-else{
-	global.playerSavedStats[? "hp"]			= statmap[? "maxhp"];
-	global.playerSavedStats[? "mp"]			= statmap[? "maxmp"];
-	global.playerSavedStats[? "hpshield"]	= 0;
-}
+//TODO! Check for isDead and save hp and mp if not

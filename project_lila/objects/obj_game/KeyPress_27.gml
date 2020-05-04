@@ -9,7 +9,7 @@ if (console != noone && instance_exists(console)) {
 }
 
 if(global.pause == false){
-	global.gui_state = lastgui;
+	global.gui_state = 1;
 	cursor_sprite = -1;
 	alarm[0] = 1;
 	global.holding = false;

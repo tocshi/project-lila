@@ -1,6 +1,5 @@
 event_inherited();
 image_blend = c_purple;
-statmap[? "level"] = 6;
 statmap[? "maxhp"] = 300;
 statmap[? "hp"] = 300;
 statmap[? "maxmp"] = 30;
@@ -9,7 +8,6 @@ statmap[? "hpregen"] = 0;
 statmap[? "mpregen"] = 0.25;
 statmap[? "atk"] = 15;
 statmap[? "movespeed"] = 2.2;
-statmap[? "xp"] = 19;
 
 ds_map_copy(basestatmap, statmap);
 

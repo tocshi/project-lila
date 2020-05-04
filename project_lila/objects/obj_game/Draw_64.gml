@@ -8,7 +8,7 @@ switch(room){
 		draw_set_alpha(1);
 		draw_text(room_width/2, room_height/4, "PROJECT LILA");
 		draw_set_font(fnt_gui_medium);
-		draw_text(room_width/2+160, room_height/4+50, "0.0.5.0");
+		draw_text(room_width/2+160, room_height/4+50, "0.0.4.1");
 		draw_set_halign(fa_left);
 		break;
 	case rm_playerdeath:

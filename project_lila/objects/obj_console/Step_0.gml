@@ -26,7 +26,7 @@ if (keyboard_check_pressed(vk_enter)) {
 			break;
 		case "/die":
 			global.pause = false;
-			PLAYER.statmap[? "hp"] = 0;
+			global.player.statmap[? "hp"] = 0;
 			ds_list_add(lines, command + ": Player killed");
 			break;
 		case "/give":
@@ -72,10 +72,10 @@ if (keyboard_check_pressed(vk_enter)) {
 			capitalized_first_letter = string_upper(string_char_at(arg1, 1));
 			arg1 = string_delete(arg1, 1, 1);
 			arg1 = string_insert(capitalized_first_letter, arg1, 1);
-			if(PLAYER.statmap[? "class"] == arg1){
+			if(global.player.statmap[? "class"] == arg1){
 				ds_list_add(lines, command + ": You are already a " + arg1 +"!");
 			}
-			else if(!change_class(PLAYER, arg1)){
+			else if(!change_class(global.player,arg1)){
 				ds_list_add(lines, arg1 + " is not a valid class! Valid classes are Knight, Archer, Mage, and Rogue.");
 			}
 			else{
@@ -93,20 +93,6 @@ if (keyboard_check_pressed(vk_enter)) {
 				}
 				ds_list_add(lines, command + ": Dummy's " + arg1 + " set to " + arg2);
 			}
-			break;
-		case "/playerstat":
-			if (!is_string(arg1) || !string_is_float(arg2)){
-				ds_list_add(lines, INCORRECT_USAGE + help[? "playerstat"]);	
-			} else if (arg1 == "class") {
-				ds_list_add(lines, command + ": player class cannot be changed with the /playerstat command. Try /changeclass"); 
-			} else if (!ds_map_exists(PLAYER.statmap, arg1)) {
-				ds_list_add(lines, command + ": " + arg1 + " is not a valid stat. Valid stats include " + PLAYER_STAT_LIST);
-			} else {
-				PLAYER.basestatmap[? arg1] = real(arg2);
-				PLAYER.statmap[? arg1] = real(arg2);
-				ds_list_add(lines, command + ": Player's " + arg1 + " set to " + arg2);
-			}
-			PLAYER.statChange = true;
 			break;
 		case "/setcontrol":
 			if (!is_string(arg1) || !is_string(arg2)) {
@@ -172,7 +158,7 @@ if (keyboard_check_pressed(vk_down)) {
 }
 
 //Keep console in position
-if(instance_exists(PLAYER)){
+if(instance_exists(global.player)){
 	x = 0;
 	y = camera_get_view_height(global.currentCamera)/2 - HEIGHT/2;
 }

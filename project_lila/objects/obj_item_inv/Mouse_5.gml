@@ -1,4 +1,3 @@
-if(instance_exists(obj_item_dragging)){exit;}
 /// @description Clear previous context menu and create a new one
 with (obj_context_menu) {instance_destroy();}
 with (obj_context_menu_button) {instance_destroy();}
