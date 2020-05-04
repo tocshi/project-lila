@@ -15,12 +15,17 @@ statmap[? "finalshld"] = clamp(statmap[? "finalshld"],-100,100);
 essence = clamp(essence,-1,unleashGauge*3);
 
 // Interact with NPCs
-var hovered_npc = instance_position(mouse_x,mouse_y,obj_npc);
-if(hovered_npc != noone && hovered_npc.interactable){
-	global.cursor_state = 1;
-	if(!global.pause && distance_to_object(hovered_npc) <= 72 && ((keyboard_check_pressed(global.key_interact) || mouse_check_button_pressed(global.mouse_interact)))){
-		hovered_npc.trigger_interact = true;
-		global.pause = true;
+if(global.gui_state == -1){
+	var hovered_npc = instance_position(mouse_x,mouse_y,obj_npc);
+	if(hovered_npc != noone && hovered_npc.interactable){
+		global.cursor_state = 1;
+		if(!global.pause && distance_to_object(hovered_npc) <= 72 && ((keyboard_check_pressed(global.key_interact) || mouse_check_button_pressed(global.mouse_interact)))){
+			hovered_npc.trigger_interact = true;
+			global.pause = true;
+		}
+	}
+	else{
+		global.cursor_state = 0;
 	}
 }
 else{

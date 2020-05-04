@@ -5,7 +5,7 @@ if (delay >= 0) {
 	exit;
 }
 if(global.gui_state == 1 && global.pause == 1){
-	if (!mouse_check_button(mb_left) && isDrag || mouse_check_button(mb_left) && !isDrag) {
+	if (mouse_check_button_released(mb_left) && isDrag || mouse_check_button_pressed(mb_left) && !isDrag) {
 		origin_instance.drag_activated = false;
 		origin_instance.hold_activated = false;
 		var slotinfo = getSlotAtCoords(mouse_x, mouse_y);

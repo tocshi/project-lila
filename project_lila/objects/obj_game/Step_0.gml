@@ -25,6 +25,7 @@ if(global.pause){
 		if(i > 1){continue;}
 		if(mouse_x >= x0+230 + i*230 && mouse_x < x0+450 + i*230 && mouse_y >= y0+820 && mouse_check_button_pressed(mb_left)){
 		
+			instance_destroy(obj_item_dragging);
 			global.gui_state = i+1;
 			lastgui = i+1;
 			updateGUI();
