@@ -12,5 +12,3 @@ hold_activated = false;
 drag_activated = false;
 click_x = 0;
 click_y = 0;
-
-show_debug_message("Hotbar item created!");
