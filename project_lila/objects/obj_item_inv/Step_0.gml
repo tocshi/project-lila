@@ -1,6 +1,7 @@
 /// @description Check gui close and check LMB hold
 
 if(global.gui_state == 1 && global.pause == 1){
+	if(instance_exists(obj_item_dragging)){exit;}
 	// check if a different item is already being dragged
 	if(global.holding && !hold_activated) {
 		// show_debug_message(string(findArrayIndex(global.playerInv, itemid)) + " skipping: other item being held!");
@@ -29,7 +30,7 @@ if(global.gui_state == 1 && global.pause == 1){
 			//show_debug_message("global.dragging: " + string(global.dragging));
 			if (global.dragging && !drag_activated) {
 				//show_debug_message("Dragging");
-				with (instance_create_layer(x, y, "GUIPopup", obj_item_dragging)) {
+				with (instance_create_layer(x, y, "GUIPopUp", obj_item_dragging)) {
 					sprite_index = other.sprite_index;
 					itemid = other.itemid;
 					origin_type = other.type;

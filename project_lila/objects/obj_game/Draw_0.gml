@@ -2,6 +2,7 @@ if(global.pause){
 	var x0 = camera_get_view_x(global.currentCamera);
 	var y0 = camera_get_view_y(global.currentCamera);
 	switch(global.gui_state){
+		// Inventory
 		case 1:
 		draw_set_alpha(1);
 		draw_sprite(gui_inv,-1,x0,y0);
@@ -115,6 +116,19 @@ if(global.pause){
 				y_offset += 20;
 			}
 		}
+		break;
+		
+		// Skills
+		case 2:
+		draw_set_alpha(1);
+		draw_sprite(gui_skills,-1,x0,y0);
+		
+		// TEMP draw cpp
+		draw_set_halign(fa_left);
+		draw_set_valign(fa_top);
+		draw_set_font(fnt_gui_medium);
+		draw_set_color(c_white);
+		draw_text(x0+1080,y0+370,"Class Proficiency: " + string(global.player.statmap[? "cpp"]));
 		break;
 	}
 }

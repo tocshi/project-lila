@@ -16,8 +16,9 @@ voice_sound = 0;
 statmap = ds_map_create();
 basestatmap = ds_map_create();
 
-statmap[? "level"] 			= 10;
+statmap[? "level"] 			= 0;
 statmap[? "xp"] 			= 0;
+statmap[? "cpp"]			= 0;
 statmap[? "class"]			= "Debug";
 statmap[? "classlvl"]		= 10;
 statmap[? "classxp"] 		= 0;
@@ -78,6 +79,9 @@ cd = array_create(21,0);
 maxcd = array_create(21,0);
 itemcd = array_create(ds_list_size(global.itemData),0);
 atkTimer = 0;
+
+// restore player's stats
+restore_player_stats();
 
 // buff list and visible buff list creation 
 buff = ds_list_create();

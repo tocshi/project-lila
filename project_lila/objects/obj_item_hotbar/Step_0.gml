@@ -1,6 +1,5 @@
 /// @description Check gui close and check LMB hold
-
-if(global.gui_state == 1 && global.pause == 1){
+if(global.gui_state == 1 && global.pause == 1 && !instance_exists(obj_item_dragging)){
 	// check if a different item is already being dragged
 	if(global.holding && !hold_activated) {
 		// show_debug_message(string(findArrayIndex(global.playerInv, itemid)) + " skipping: other item being held!");
@@ -8,10 +7,10 @@ if(global.gui_state == 1 && global.pause == 1){
 	} else {
 		// Check that the mouse is being held on the items coords
 		if (mouse_check_button(mb_left)) {
-			// show_debug_message(string(findArrayIndex(global.playerInv, itemid)) + " says hi");
+			show_debug_message(string(findArrayIndex(global.player.itemBar, itemid)) + " says hi");
 			if (!global.holding && position_meeting(mouse_x, mouse_y, id)) {
 				// first frame of LMB hold, set initial values
-				//show_debug_message("holding!");
+				show_debug_message("holding!");
 				global.holding = true;
 				initial_lmb_x = mouse_x;
 				initial_lmb_y = mouse_y;
@@ -21,7 +20,7 @@ if(global.gui_state == 1 && global.pause == 1){
 				// while holding, check until mouse goes past threshold for dragging
 				if (point_distance(mouse_x, mouse_y, initial_lmb_x, initial_lmb_y) > drag_threshold) {
 					global.dragging = true;
-					//show_debug_message("drag started");
+					show_debug_message("drag started");
 				}
 			}
 			// create the dragging item if it doesn't exist yet
@@ -34,7 +33,9 @@ if(global.gui_state == 1 && global.pause == 1){
 					itemid = other.itemid;
 					origin_type = other.type;
 					origin_instance = other;
-					origin_slot = findArrayIndex(global.itemBarBox, itemid);
+					origin_slot = findArrayIndex(global.player.itemBar, itemid);
+					show_debug_message("Drag itemid is " + string(itemid));
+					show_debug_message("Drag item origin slot set to " + string(origin_slot));
 				}
 				drag_activated = true;
 			}	
@@ -49,4 +50,3 @@ if(global.gui_state == 1 && global.pause == 1){
 	}
 	exit;
 }
-instance_destroy();

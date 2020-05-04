@@ -1,5 +1,6 @@
 event_inherited();
 image_blend = c_olive;
+statmap[? "level"] = 6;
 statmap[? "maxhp"] = 500;
 statmap[? "hp"] = 500;
 statmap[? "maxmp"] = 30;
@@ -8,6 +9,7 @@ statmap[? "hpregen"] = 0;
 statmap[? "mpregen"] = 0.25;
 statmap[? "atk"] = 15;
 statmap[? "movespeed"] = 2.2;
+statmap[? "xp"] = 20;
 
 ds_map_copy(basestatmap, statmap);
 
