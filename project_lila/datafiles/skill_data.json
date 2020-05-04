@@ -8,7 +8,8 @@
 		"cd"				: 5,
 		"cppcost" 	: 10,
 		"sprmap"		: 0,
-		"variants"	: []
+		"variants"	: [],
+		"unlocked"	: 0
 	},{
 		"name"			: "Fearless Challenge",
 		"class"			: "Knight",
@@ -18,7 +19,8 @@
 		"cd"				: 14,
 		"cppcost" 	: 10,
 		"sprmap"		: 1,
-		"variants"	: []
+		"variants"	: [],
+		"unlocked"	: 0
 	},{
 		"name"			: "Shield Charge",
 		"class"			: "Knight",
@@ -28,7 +30,8 @@
 		"cd"				: 6,
 		"cppcost" 	: 10,
 		"sprmap"		: 2,
-		"variants"	: []
+		"variants"	: [],
+		"unlocked"	: 0
 	},{
 		"name"			: "Roundslash",
 		"class"			: "Knight",
@@ -38,7 +41,8 @@
 		"cd"				: 2,
 		"cppcost" 	: 10,
 		"sprmap"		: 3,
-		"variants"	: []
+		"variants"	: [],
+		"unlocked"	: 0
 	},{
 		"name"			: "Guardian",
 		"class"			: "Knight",
@@ -48,7 +52,8 @@
 		"cd"				: 6,
 		"cppcost" 	: 10,
 		"sprmap"		: 4,
-		"variants"	: []
+		"variants"	: [],
+		"unlocked"	: 0
 	},{
 		"name"			: "All-Rounder",
 		"class"			: "Knight",
@@ -58,7 +63,8 @@
 		"cd"				: 0,
 		"cppcost" 	: 10,
 		"sprmap"		: 5,
-		"variants"	: []
+		"variants"	: [],
+		"unlocked"	: 0
 	},{
 		"name"			: "Protective Footwork",
 		"class"			: "Knight",
@@ -68,7 +74,8 @@
 		"cd"				: 16,
 		"cppcost" 	: 10,
 		"sprmap"		: 6,
-		"variants"	: []
+		"variants"	: [],
+		"unlocked"	: 0
 	},{
 		"name"			: "Shield Bash",
 		"class"			: "Knight",
@@ -78,7 +85,8 @@
 		"cd"				: 9,
 		"cppcost" 	: 10,
 		"sprmap"		: 9,
-		"variants"	: []
+		"variants"	: [],
+		"unlocked"	: 0
 	},{
 		"name"			: "Aegis Aura",
 		"class"			: "Knight",
@@ -88,7 +96,8 @@
 		"cd"				: 1,
 		"cppcost" 	: 10,
 		"sprmap"		: 10,
-		"variants"	: []
+		"variants"	: [],
+		"unlocked"	: 0
 	},{
 		"name"			: "Greater Shielding",
 		"class"			: "Knight",
@@ -98,6 +107,7 @@
 		"cd"				: 5,
 		"cppcost" 	: 10,
 		"sprmap"		: 12,
-		"variants"	: []
+		"variants"	: [],
+		"unlocked"	: 0
 	}
 ]

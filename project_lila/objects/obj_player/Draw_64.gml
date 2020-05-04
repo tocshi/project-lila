@@ -41,7 +41,6 @@ if(unleashGauge > 0){
 }
 
 // Draw itembar
-draw_sprite(gui_itembar,-1,0,0);
 for(var i = 0; i < array_length_1d(itemBar); ++i){
 	var xx = global.itemBarBox[i,0];
 	var yy = global.itemBarBox[i,1];
