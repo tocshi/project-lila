@@ -4,6 +4,7 @@ type = ""
 HOTBAR = "Hotbar"
 EQUIP = "Equip"
 INVEN = "Inventory"
+hotbar_slot = 0;
 
 alarm[0] = 1;
 
