@@ -138,5 +138,3 @@ itemBar[0] = 22;
 itemBar[1] = 1;
 itemBar[2] = 2;
 itemBar[3] = 3;
-
-updateHotbar();

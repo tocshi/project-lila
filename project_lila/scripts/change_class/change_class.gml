@@ -36,12 +36,18 @@ switch(class){
 // unequips all items if it's the player
 if(target == global.player){
 	if(!ds_map_exists(global.playerEquipLoadouts,prevclass)){global.playerEquipLoadouts[? prevclass] = array_create(array_length_1d(target.equips));}
+	if(!ds_map_exists(global.playerItemBarLoadouts,prevclass)){global.playerItemBarLoadouts[? prevclass] = array_create(array_length_1d(target.itemBar));}
 	for(var i = 0; i < array_length_1d(target.equips); ++i){
 		if(target.equips[i] > 0){
 			array_set(global.playerEquipLoadouts[? prevclass],i,target.equips[i]);
 			unequipItem(target,target.equips[i]);
 		}
 	}
+	for(var i = 0; i < array_length_1d(target.itemBar); ++i){
+	if(target.itemBar[i] > 0){
+		array_set(global.playerItemBarLoadouts[? prevclass],i,target.itemBar[i]);
+	}
+}
 }
 camera_set_view_target(global.currentCamera,noone);
 camera_destroy(global.currentCamera);
@@ -54,13 +60,7 @@ with(all){
 instance_destroy(target);
 
 with(instance_create_layer(xx,yy,"Instances",classobj)){
-	if(ds_map_exists(global.playerEquipLoadouts,class)){
-		for(var i = 0; i < array_length_1d(equips); ++i){
-			if(array_get(global.playerEquipLoadouts[? class],i) > 0){
-				equipItem(global.player,array_get(global.playerEquipLoadouts[? class],i));
-			}
-		}
-	}
+	restore_player_equips();
 	statmap[? "level"] = level;
 	statmap[? "xp"] = xp;
 	statmap[? "hp"] = hp;

@@ -1,4 +1,5 @@
 /// @description Check gui close and check LMB hold
+if(!global.pause){instance_destroy();}
 if(global.gui_state == 1 && global.pause == 1 && !instance_exists(obj_item_dragging)){
 	// check if a different item is already being dragged
 	if(global.holding && !hold_activated) {

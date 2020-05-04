@@ -9,7 +9,6 @@ MAX_LINE_LENGTH = 99;
 MAX_LINES = 20;
 HEIGHT = TEXT_HEIGHT * (MAX_LINES + 1);
 LEFT_TEXT_PADDING = 10;
-PLAYER = global.player;
 
 text = "";
 active = false;
@@ -41,12 +40,12 @@ help[? "playerstat"] = "playerstat: <String> stat, <Float> val.\nChanges the val
 // Get list of player stats
 PLAYER_STAT_LIST = "";
 var size, key, i;
-size = ds_map_size(PLAYER.statmap);
-key = ds_map_find_first(PLAYER.statmap);
+size = ds_map_size(global.player.statmap);
+key = ds_map_find_first(global.player.statmap);
 for (i = 0; i < size; i++;) {
 	if (key != "class") {
 		PLAYER_STAT_LIST += key + ", ";
 	}
-	key = ds_map_find_next(PLAYER.statmap, key);
+	key = ds_map_find_next(global.player.statmap, key);
 }
 PLAYER_STAT_LIST = string_delete(PLAYER_STAT_LIST, string_length(PLAYER_STAT_LIST) - 1, 2);
