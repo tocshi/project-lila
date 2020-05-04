@@ -1,7 +1,3 @@
-// universal unit for 1 "meter" of distance and game size
-global.meter = 32;
-global.game_width = 1600;
-global.game_height = 900;
 // Is the game paused?
 global.pause = 0;
 // Player id
@@ -72,6 +68,15 @@ global.playerEquipLoadouts = ds_map_create();
 global.playerItemBarLoadouts = ds_map_create();
 global.playerClassData = ds_map_create();
 
+//-----------------
+//   CONSTANTS
+//-----------------
+
+// universal unit for 1 "meter" of distance and game size
+global.meter = 32;
+global.game_width = 1600;
+global.game_height = 900;
+
 // Equipment pixel positions
 global.equipItemBox = array_create(12,[0,0]);
 for(var i = 0; i < 4; ++i){
@@ -81,6 +86,7 @@ for(var i = 0; i < 4; ++i){
 		global.equipItemBox[(i * 3) + j,1] = 119 + i*86;
 	}
 }
+
 // Inventory pixel positions
 global.invItemBox = array_create(100,[0,0]);
 for(var i = 0; i < 10; ++i){
@@ -90,10 +96,11 @@ for(var i = 0; i < 10; ++i){
 		global.invItemBox[(i * 10) + j,1] = 121 + i*66;
 	}
 }
+
 // Stat Display pixel positions
 invStatLocation = array_create(24,[0,0]);
 for(var i = 0; i < 12; ++i){
-	for(var j = 0; j < 2; j++){
+	for(var j = 0; j < 2; ++j){
 		//absolute x and y positions
 		/*
 		var x0 = 196;
@@ -104,17 +111,35 @@ for(var i = 0; i < 12; ++i){
 		invStatLocation[(i * 2) + j,1] = 476 + i*25;
 	}
 }
+
 // Item Hotbar pixel positions
 global.itemBarBox = array_create(10,[0,0]);
 for(var i = 0; i < 10; ++i){
 	global.itemBarBox[i,0] = 2;
 	global.itemBarBox[i,1] = 121 + i*66;
 }
+
 // Buffbar pixel positions
 global.buffBarBox = array_create(20,[0,0]);
 for(var i = 0; i < 20; ++i){
 	global.buffBarBox[i,0] = 74;
 	global.buffBarBox[i,1] = 121 + i*33;
+}
+
+// Equipped Skills pixel positions
+global.equippedSkillBox = array_create(8,[0,0]);
+for(var i = 0; i < 8; ++i){
+	global.equippedSkillBox[i,0] = 179 + i*86;
+	global.equippedSkillBox[i,1] = 454;
+}
+
+// Available Skills pixel positions
+global.availableSkillBox = array_create(24,[0,0]);
+for(var i = 0; i < 3; ++i){
+	for(var j = 0; j < 8; ++j){
+		global.availableSkillBox[(i * 8) + j,0] = 179 + j*86;
+		global.availableSkillBox[(i * 8) + j,1] = 554 + i*86;
+	}
 }
 
 // for skills and buff bar

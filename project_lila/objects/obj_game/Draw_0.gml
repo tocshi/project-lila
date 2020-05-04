@@ -129,6 +129,50 @@ if(global.pause){
 		draw_set_font(fnt_gui_medium);
 		draw_set_color(c_white);
 		draw_text(x0+1080,y0+370,"Class Proficiency: " + string(global.player.statmap[? "cpp"]));
+		
+		//debug
+		for(var i = 0; i < 8; ++i){
+			var xx = x0 + global.equippedSkillBox[i,0];
+			var yy = y0 + global.equippedSkillBox[i,1];
+			draw_sprite(spr_skill_icons_knight,i,xx,yy);
+			draw_set_alpha(0.7);
+			draw_set_halign(fa_left);
+			draw_set_valign(fa_top);
+			draw_set_font(fnt_gui_medium);
+			draw_set_color(c_white);
+			draw_sprite(spr_skill_overlay,0,xx,yy);
+			var keystring = "key_skill" + string(i);
+			var key = variable_global_get(keystring);
+			switch(key){
+				case vk_enter:
+					key = "Enter";
+					break;
+				case vk_tab:
+					key = "Tab";
+					break;
+				case vk_shift:
+					key = "Shift";
+					break;
+				case vk_control:
+					key = "Ctrl";
+					break;
+				case vk_space:
+					key = "Space (Do not use for now!)";
+					break;
+				case 191:
+					key = "/";
+					break;
+				default:
+					key = chr(key);
+			}
+			draw_text(xx+33,yy,key);
+			draw_set_alpha(1);
+		}
+		for(var i = 0; i < 24; ++i){
+			var xx = x0 + global.availableSkillBox[i,0];
+			var yy = y0 + global.availableSkillBox[i,1];
+			draw_sprite(spr_skill_icons_knight,i,xx,yy);
+		}
 		break;
 	}
 }

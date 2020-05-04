@@ -5,7 +5,7 @@ var class = statmap[? "class"];
 if(!ds_map_exists(global.playerEquipLoadouts,class)) {
 	global.playerEquipLoadouts[? class] = array_create(array_length_1d(equips));
 }
-if(!ds_map_exists(global.playerEquipLoadouts,class)) {
+if(!ds_map_exists(global.playerItemBarLoadouts,class)) {
 	global.playerItemBarLoadouts[? class] = array_create(array_length_1d(itemBar));
 }
 

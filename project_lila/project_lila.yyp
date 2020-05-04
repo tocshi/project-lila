@@ -2071,6 +2071,14 @@
             }
         },
         {
+            "Key": "ab1d1d89-dfbf-4489-a5b2-656d42fb8e05",
+            "Value": {
+                "id": "3aee049b-beaa-443e-ad75-6c9fc5eaf3f2",
+                "resourcePath": "sprites\\spr_skill_overlay\\spr_skill_overlay.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "abb54c4a-8507-4d76-9abd-14c304a1aa6f",
             "Value": {
                 "id": "354185c7-0dd9-4c16-85e0-deef4e28eaac",
