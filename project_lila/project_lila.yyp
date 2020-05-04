@@ -1135,6 +1135,14 @@
             }
         },
         {
+            "Key": "5827830a-79aa-4406-b00d-b9c252f3a742",
+            "Value": {
+                "id": "4085f9b1-46f9-44ec-8d2f-665f1a7f41f5",
+                "resourcePath": "scripts\\has_skill_unlocked\\has_skill_unlocked.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "58a17360-cc17-4cd7-83cb-1ed4f2f1f13b",
             "Value": {
                 "id": "e892cdc9-4f49-46ed-949d-1b96243cebdb",
@@ -3247,6 +3255,7 @@
         "bd19d0d2-92fb-4ad9-908b-3f2f51956b86",
         "48c409b6-ef38-45b8-9167-f8327ecb7c18",
         "5b8dbf00-c687-4051-9afc-2ab93d80ea63",
+        "5827830a-79aa-4406-b00d-b9c252f3a742",
         "7b88dd8a-74e9-43b3-afdc-57e5442897d3",
         "1b916b93-1a3c-4d90-a14d-febd145a0f1a",
         "3906297f-4369-4635-8f80-231a9bfe2cf2",
