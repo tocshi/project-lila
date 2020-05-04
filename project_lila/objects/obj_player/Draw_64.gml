@@ -62,7 +62,9 @@ for(var i = 0; i < array_length_1d(itemBar); ++i){
 		draw_set_halign(fa_left);
 		draw_set_valign(fa_top);
 	}
-	render_cooldown(xx,yy,itemcd[itemid],ds_map_find_value(global.itemData[| itemid],"activeCD") * room_speed);
+	if (ds_map_exists(global.itemData[| itemid],"activeSkill")) {
+		render_cooldown(xx,yy,itemcd[itemid],ds_map_find_value(global.itemData[| itemid],"activeCD") * room_speed);
+	}
 }
 
 // Draw skill and item cooldowns

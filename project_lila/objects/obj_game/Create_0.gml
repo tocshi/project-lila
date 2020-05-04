@@ -69,6 +69,7 @@ global.playerItems = array_create(ds_list_size(global.itemData),0);
 
 // Player class data & equip loadouts
 global.playerEquipLoadouts = ds_map_create();
+global.playerItemBarLoadouts = ds_map_create();
 global.playerClassData = ds_map_create();
 
 // Equipment pixel positions

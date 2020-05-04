@@ -6,3 +6,6 @@ if(ds_map_exists(global.playerEquipLoadouts,class)){
 		}
 	}
 }
+if(ds_map_exists(global.playerItemBarLoadouts,class)) {
+	global.player.itemBar = global.playerEquipLoadouts[? class];
+}

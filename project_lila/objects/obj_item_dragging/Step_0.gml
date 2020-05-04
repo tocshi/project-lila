@@ -51,6 +51,11 @@ if(global.gui_state == 1 && global.pause == 1){
 					updateGUI();
 				}
 			}
+			// Dropped on hotbar slot
+			if (area == "Hotbar" && slot != -1) {
+				global.player.itemBar[slot] = itemid;
+				updateHotbar();
+			}
 		}
 		else if(origin_type == "Equip") {
 			// Dropped on inventory slot
@@ -64,6 +69,10 @@ if(global.gui_state == 1 && global.pause == 1){
 					unequipItem(global.player, itemid);
 					updateGUI();
 				}
+			}
+			if (area == "Hotbar" && slot != -1) {
+				global.player.itemBar[slot] = itemid;
+				updateHotbar();
 			}
 		} else if(origin_type == "Hotbar") {
 			// Dropped on hotbar slot
@@ -81,6 +90,7 @@ if(global.gui_state == 1 && global.pause == 1){
 				}
 			} else {
 				global.player.itemBar[origin_slot] = 0;
+				updateHotbar();
 			}
 		}
 	
