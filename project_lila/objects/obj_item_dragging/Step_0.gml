@@ -71,12 +71,12 @@ if(global.gui_state == 1 && global.pause == 1){
 				// dropped to empty slot
 				if (global.itemBarBox[slot] == 0) {
 					global.itemBarBox[slot] = itemid;
-					updateGUI();
+					updateHotbar();
 				} else { 
 					// slot is occupied, swap items
 					global.itemBarBox[origin_slot] = global.itemBarBox[slot];
 					global.itemBarBox[slot] = itemid;
-					updateGUI();
+					updateHotbar();
 				}
 			} else {
 				global.itemBarBox[origin_slot] = 0;
