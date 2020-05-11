@@ -87,8 +87,13 @@ restore_player_stats();
 buff = ds_list_create();
 visBuff = ds_list_create();
 
+// Player equipped items and hotbar
 equips = array_create(12, 0);
 itemBar = array_create(10, 0);
+// Player equipped skills
+skills = array_create(8,"");
+// the skill the player is using (reset at every EndStep)
+useSkill = "";
 
 skill_button = array_create(21,"");
 

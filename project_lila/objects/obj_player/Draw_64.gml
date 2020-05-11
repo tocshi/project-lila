@@ -68,43 +68,51 @@ for(var i = 0; i < array_length_1d(itemBar); ++i){
 }
 
 // Draw skill and item cooldowns
-// TODO: dynamically figure out how many skills player has
 // and which skill icon to use instead of relying on this staticm sajfgbnkjsdfbgkjdsfbjgkbdsfkjgbktjergbnkjsgdfhbjksdfghbjkgfrdujh
-for(i = 0; i < 10; ++i){
+for(i = 0; i < 8; ++i){
+	if(skills[i] == ""){continue;}
 
-	draw_sprite_ext(skill_sprite,skill_icon_mapping[i],global.hpmpend+(i*80),20,1,1,0,c_white,1);
-	render_cooldown(global.hpmpend+(i*80),20,cd[i+1],maxcd[i+1]);
-	draw_sprite(spr_skill_border,0,global.hpmpend+(i*80),20);
+	var skill_sprite = asset_get_index("spr_skill_icons_" + string_lower(statmap[? "class"]));
+	draw_sprite_ext(skill_sprite,get_skill_data(skills[i],"sprmap"),global.hpmpend+(i*80),20,1,1,0,c_white,1);
+	render_cooldown(global.hpmpend+(i*80),20,cd[i+1],get_skill_data(skills[i],"cd")*room_speed);
 	
-	draw_set_font(fnt_gui_small);
-	draw_set_color(c_white);
-	draw_set_halign(fa_left);
-	draw_set_valign(fa_top);
-	var keystring = "key_skill" + string(i);
-	var key = variable_global_get(keystring);
-	switch(key){
-		case vk_enter:
-			key = "Enter";
-			break;
-		case vk_tab:
-			key = "Tab";
-			break;
-		case vk_shift:
-			key = "Shift";
-			break;
-		case vk_control:
-			key = "Ctrl";
-			break;
-		case vk_space:
-			key = "Space (Do not use for now!)";
-			break;
-		case 191:
-			key = "/";
-			break;
-		default:
-			key = chr(key);
+	// Checks if the skill is passive or active and draws border accordingly
+	if(get_skill_data(skills[i],"type") == "active"){
+		draw_sprite(spr_skill_border,0,global.hpmpend+(i*80),20);
+	
+		draw_set_font(fnt_gui_small);
+		draw_set_color(c_white);
+		draw_set_halign(fa_left);
+		draw_set_valign(fa_top);
+		var keystring = "key_skill" + string(i);
+		var key = variable_global_get(keystring);
+		switch(key){
+			case vk_enter:
+				key = "Enter";
+				break;
+			case vk_tab:
+				key = "Tab";
+				break;
+			case vk_shift:
+				key = "Shift";
+				break;
+			case vk_control:
+				key = "Ctrl";
+				break;
+			case vk_space:
+				key = "Space (Do not use for now!)";
+				break;
+			case 191:
+				key = "/";
+				break;
+			default:
+				key = chr(key);
+		}
+		draw_text(global.hpmpend+(i*80)-2,64,key);
 	}
-	draw_text(global.hpmpend+(i*80)-2,64,key);
+	else{
+		draw_sprite(spr_skill_border,1,global.hpmpend+(i*80),20);
+	}
 }
 
 // Renders buff icons based on their time remaining

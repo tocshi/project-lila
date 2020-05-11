@@ -4,3 +4,6 @@ if (statmap[? "hp"] <= 0 && !isDead){
 	store_player_data_trans();
 	room_goto(rm_playerdeath);
 }
+
+// reset useSkill
+useSkill = "";

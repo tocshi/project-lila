@@ -131,10 +131,13 @@ if(global.pause){
 		draw_text(x0+1080,y0+370,"Class Proficiency: " + string(global.player.statmap[? "cpp"]));
 		
 		//debug
+		var skill_sprite = asset_get_index("spr_skill_icons_" + string_lower(global.player.statmap[? "class"]));
 		for(var i = 0; i < 8; ++i){
 			var xx = x0 + global.equippedSkillBox[i,0];
 			var yy = y0 + global.equippedSkillBox[i,1];
-			draw_sprite(spr_skill_icons_knight,i,xx,yy);
+			if(global.player.skills[i] != ""){
+				draw_sprite(skill_sprite,get_skill_data(global.player.skills[i],"sprmap"),xx,yy);
+			}
 			draw_set_alpha(0.7);
 			draw_set_halign(fa_left);
 			draw_set_valign(fa_top);

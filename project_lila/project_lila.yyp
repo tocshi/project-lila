@@ -727,6 +727,14 @@
             }
         },
         {
+            "Key": "304acfa0-65a3-4a60-b4f7-6b807b33fc71",
+            "Value": {
+                "id": "870bf462-2ff1-4c78-abab-2652e8d20485",
+                "resourcePath": "scripts\\get_skill_data\\get_skill_data.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "30857233-7599-4efe-b2cb-9e0485867bce",
             "Value": {
                 "id": "9556de82-e620-48d3-8c28-6649efd5dab5",
@@ -836,6 +844,14 @@
                 "id": "931aa816-2657-45d5-b099-a8c802d9b776",
                 "resourcePath": "views\\3ab9f91f-30e3-45e1-8ad1-660b78e2b46d.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "3af0b233-bb68-4ac6-ac07-5914f7968cf2",
+            "Value": {
+                "id": "9bfc3b84-5745-42b3-bbe9-fa1aa6bbbb89",
+                "resourcePath": "scripts\\set_skill_data\\set_skill_data.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -1179,14 +1195,6 @@
             "Value": {
                 "id": "846e89da-6d98-43f9-b194-ab900af93526",
                 "resourcePath": "scripts\\buff_invisible\\buff_invisible.yy",
-                "resourceType": "GMScript"
-            }
-        },
-        {
-            "Key": "5b8dbf00-c687-4051-9afc-2ab93d80ea63",
-            "Value": {
-                "id": "13b99042-73a0-4860-8558-6afcd4465760",
-                "resourcePath": "scripts\\has_skill_equipped\\has_skill_equipped.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -1731,6 +1739,14 @@
             "Value": {
                 "id": "53469ead-84ea-4a0f-989b-cb33b1354209",
                 "resourcePath": "views\\886ff4d8-77ba-4481-87ac-792b0eb6dd54.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "8981840a-df17-414f-abbd-32bd7ec9866e",
+            "Value": {
+                "id": "5ad9a36e-6d25-419a-be98-540c31965bc2",
+                "resourcePath": "views\\8981840a-df17-414f-abbd-32bd7ec9866e.yy",
                 "resourceType": "GMFolder"
             }
         },
@@ -3239,9 +3255,11 @@
         "8e92b01e-ad1a-4504-81ce-0de0f821b9a9",
         "a375b2dd-67ef-48c2-b77d-3d9890977de0",
         "1b4515af-9d2e-4ee8-a6e4-7dc754d06afd",
+        "304acfa0-65a3-4a60-b4f7-6b807b33fc71",
+        "3af0b233-bb68-4ac6-ac07-5914f7968cf2",
+        "5827830a-79aa-4406-b00d-b9c252f3a742",
         "41da96ef-1d80-4db2-b5d3-5d0753fd0858",
         "1bb58460-a0f2-4852-bbc5-146c2d53a6ae",
-        "be0ba224-53d3-4ac9-8bae-1fd82802d88a",
         "81181f12-58c8-4c2f-83c6-2cf2c12a60f5",
         "40acc53d-293d-43b8-b999-b999a8a8ee4c",
         "0a39caf6-0f2c-41b0-90fb-2b14aa17f36c",
@@ -3249,21 +3267,20 @@
         "a12a94f2-c26c-4db8-b17d-09cbde9417e1",
         "6ec179ff-0e59-4cbe-86df-12ca48b78b35",
         "6ab9cddf-6b58-4e0a-9808-2f6b45ad430c",
+        "48c409b6-ef38-45b8-9167-f8327ecb7c18",
+        "295e9a20-320b-4a84-9ce6-9d3145d4d236",
         "043593f7-2ca4-4155-97cd-ed5d92316c64",
+        "792dfe82-3653-4cb6-96b8-db2a2e95aa86",
+        "1e334b20-b2fe-4992-a3c8-9616aa15dee6",
+        "bd19d0d2-92fb-4ad9-908b-3f2f51956b86",
         "c6eddf3a-011d-4cde-95c8-3bf3dc25957f",
         "8a1665e7-eacf-4397-a9b0-4cfe2479646c",
-        "295e9a20-320b-4a84-9ce6-9d3145d4d236",
-        "1e334b20-b2fe-4992-a3c8-9616aa15dee6",
-        "792dfe82-3653-4cb6-96b8-db2a2e95aa86",
+        "be0ba224-53d3-4ac9-8bae-1fd82802d88a",
         "395e8df5-83cc-49f1-a7cd-909842e7d84f",
         "0921d80d-330d-437f-86f9-a8da727c6a49",
         "d5453502-d6b7-44b3-9911-2705a9004b0c",
         "5e3a980b-a503-40a5-a919-950971e3729e",
         "1ad0c2fa-f034-4c6b-bfe0-13fc729d5961",
-        "bd19d0d2-92fb-4ad9-908b-3f2f51956b86",
-        "48c409b6-ef38-45b8-9167-f8327ecb7c18",
-        "5b8dbf00-c687-4051-9afc-2ab93d80ea63",
-        "5827830a-79aa-4406-b00d-b9c252f3a742",
         "7b88dd8a-74e9-43b3-afdc-57e5442897d3",
         "1b916b93-1a3c-4d90-a14d-febd145a0f1a",
         "3906297f-4369-4635-8f80-231a9bfe2cf2",

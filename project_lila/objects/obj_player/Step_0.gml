@@ -118,28 +118,6 @@ if(keyboard_check_pressed(vk_tab)){
 		if(itemcd[i] > 0){itemcd[i] = 1;}
 	}
 }
-/*
-if(keyboard_check_pressed(vk_shift)){
-	switch(inftoggle){
-		case 0:
-		case 2:
-		basestatmap[? "mpregen"] += 100;
-		break;
-		
-		case 1:
-		basestatmap[? "hpregen"] += 100;
-		basestatmap[? "mpregen"] -= 100;
-		break;
-		
-		case 3:
-		inftoggle = -1
-		basestatmap[? "hpregen"] -= 100;
-		basestatmap[? "mpregen"] -= 100;
-		break;
-	}
-	inftoggle++;	
-	recalcStats(self.id);
-}*/
 
 statChange = false;
 
@@ -176,4 +154,19 @@ if(mouse_check_button(mb_left) && (atkTimer <= 0) && canAttack){
 	atkTimer = room_speed/statmap[? "atkspeed"];
 	use_basic_attack(self,equips[0],100);
 
+}
+
+// Use active skills
+if(canUseSkill){
+	for(var i = 0; i < 8; ++i){
+		if(skills[i] == "" || get_skill_data(skills[i], "type") == "passive"){continue;}
+		if(keyboard_check_pressed(variable_global_get("key_skill" + string(i)))){
+			// perform cd/mp/weapon checks here as we can get a sound to play if it fails
+			if(statmap[? "mp"] < get_skill_data(skills[i], "mpcost") || cd[i+1] > 0 || equips[0] <= 0){continue;}
+			else{
+				useSkill = skills[i];
+				// was thinking of putting mp payment here but there might be skills with exceptions...idk futureproofing!
+			}
+		}
+	}
 }
