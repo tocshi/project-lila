@@ -109,5 +109,115 @@
     "sprmap"    : 12,
     "variants"  : [],
     "unlocked"  : 0
+  },{
+    "name"      : "Spread Shot",
+    "class"     : "Archer",
+    "type"      : "active",
+    "desc"      : "",
+    "mpcost"    : 30,
+    "cd"        : 2.2,
+    "cppcost"   : 10,
+    "sprmap"    : 0,
+    "variants"  : [],
+    "unlocked"  : 0
+  },{
+    "name"      : "Move Like Wind",
+    "class"     : "Archer",
+    "type"      : "active",
+    "desc"      : "",
+    "mpcost"    : 10,
+    "cd"        : 10,
+    "cppcost"   : 10,
+    "sprmap"    : 1,
+    "variants"  : [],
+    "unlocked"  : 0
+  },{
+    "name"      : "Triple Shot",
+    "class"     : "Archer",
+    "type"      : "active",
+    "desc"      : "",
+    "mpcost"    : 30,
+    "cd"        : 2.2,
+    "cppcost"   : 10,
+    "sprmap"    : 2,
+    "variants"  : [],
+    "unlocked"  : 0
+  },{
+    "name"      : "Mantle of Titania",
+    "class"     : "Archer",
+    "type"      : "active",
+    "desc"      : "",
+    "mpcost"    : 0,
+    "cd"        : 8,
+    "cppcost"   : 10,
+    "sprmap"    : 3,
+    "variants"  : [],
+    "unlocked"  : 0
+  },{
+    "name"      : "Gate of Wind",
+    "class"     : "Archer",
+    "type"      : "active",
+    "desc"      : "",
+    "mpcost"    : 45,
+    "cd"        : 48,
+    "cppcost"   : 10,
+    "sprmap"    : 4,
+    "variants"  : [],
+    "unlocked"  : 0
+  },{
+    "name"      : "Arrow Rain",
+    "class"     : "Archer",
+    "type"      : "active",
+    "desc"      : "",
+    "mpcost"    : 35,
+    "cd"        : 12,
+    "cppcost"   : 10,
+    "sprmap"    : 5,
+    "variants"  : [],
+    "unlocked"  : 0
+  },{
+    "name"      : "Unyielding Arrows",
+    "class"     : "Archer",
+    "type"      : "passive",
+    "desc"      : "",
+    "mpcost"    : 0,
+    "cd"        : 0,
+    "cppcost"   : 10,
+    "sprmap"    : 6,
+    "variants"  : [],
+    "unlocked"  : 0
+  },{
+    "name"      : "Fae Blessing",
+    "class"     : "Archer",
+    "type"      : "active",
+    "desc"      : "",
+    "mpcost"    : 15,
+    "cd"        : 60,
+    "cppcost"   : 10,
+    "sprmap"    : 7,
+    "variants"  : [],
+    "unlocked"  : 0
+  },{
+    "name"      : "Tornado Shot",
+    "class"     : "Archer",
+    "type"      : "active",
+    "desc"      : "",
+    "mpcost"    : 40,
+    "cd"        : 15,
+    "cppcost"   : 10,
+    "sprmap"    : 8,
+    "variants"  : [],
+    "unlocked"  : 0
+  },{
+    "name"      : "Stormpiercer",
+    "class"     : "Archer",
+    "type"      : "passive",
+    "desc"      : "",
+    "mpcost"    : 0,
+    "cd"        : 0,
+    "cppcost"   : 10,
+    "sprmap"    : 9,
+    "variants"  : [],
+    "unlocked"  : 0
   }
 ]

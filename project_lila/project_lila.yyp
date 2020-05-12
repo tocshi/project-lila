@@ -431,14 +431,6 @@
             }
         },
         {
-            "Key": "1bb58460-a0f2-4852-bbc5-146c2d53a6ae",
-            "Value": {
-                "id": "41a6e962-bd2a-473b-b4a3-5b402191dee4",
-                "resourcePath": "scripts\\proc_unyielding_buff\\proc_unyielding_buff.yy",
-                "resourceType": "GMScript"
-            }
-        },
-        {
             "Key": "1bf30ca5-21e4-4410-af99-1dc0f463ede0",
             "Value": {
                 "id": "e8cc23b1-7081-4e6c-840f-54c98f18e0bc",
@@ -3259,7 +3251,6 @@
         "3af0b233-bb68-4ac6-ac07-5914f7968cf2",
         "5827830a-79aa-4406-b00d-b9c252f3a742",
         "41da96ef-1d80-4db2-b5d3-5d0753fd0858",
-        "1bb58460-a0f2-4852-bbc5-146c2d53a6ae",
         "81181f12-58c8-4c2f-83c6-2cf2c12a60f5",
         "40acc53d-293d-43b8-b999-b999a8a8ee4c",
         "0a39caf6-0f2c-41b0-90fb-2b14aa17f36c",

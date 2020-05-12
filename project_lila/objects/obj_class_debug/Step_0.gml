@@ -1,41 +1,63 @@
 event_inherited();
 if(global.pause){exit;}
 
-if(keyboard_check_pressed(skill_button[1]) && (cd[1] <= 0) && statmap[? "mp"] >= 0 && canUseSkill && equips[0] > 0){
+// Use Skill
+switch(useSkill){
+	case "NAME":
+	statmap[? "mp"] -= get_skill_data(useSkill,"mpcost");
+	cd[findArrayIndex(skills,useSkill)+1] = get_skill_data(useSkill,"cd")*room_speed;
+	break;
+	
+	case "NAME2":
+	statmap[? "mp"] -= get_skill_data(useSkill,"mpcost");
+	cd[findArrayIndex(skills,useSkill)+1] = get_skill_data(useSkill,"cd")*room_speed;
+	break;
+	
+	case "NAME3":
+	statmap[? "mp"] -= get_skill_data(useSkill,"mpcost");
+	cd[findArrayIndex(skills,useSkill)+1] = get_skill_data(useSkill,"cd")*room_speed;
+	break;
+	
+	case "NAME4":
+	statmap[? "mp"] -= get_skill_data(useSkill,"mpcost");
+	cd[findArrayIndex(skills,useSkill)+1] = get_skill_data(useSkill,"cd")*room_speed;
+	break;
+	
+	case "NAME5":
+	statmap[? "mp"] -= get_skill_data(useSkill,"mpcost");
+	cd[findArrayIndex(skills,useSkill)+1] = get_skill_data(useSkill,"cd")*room_speed;
+	break;
+	
+	case "NAME6":
+	statmap[? "mp"] -= get_skill_data(useSkill,"mpcost");
+	cd[findArrayIndex(skills,useSkill)+1] = get_skill_data(useSkill,"cd")*room_speed;
+	break;
+	
+	case "NAME7":
+	statmap[? "mp"] -= get_skill_data(useSkill,"mpcost");
+	cd[findArrayIndex(skills,useSkill)+1] = get_skill_data(useSkill,"cd")*room_speed;
+	break;
+	
+	case "NAME8":
+	statmap[? "mp"] -= get_skill_data(useSkill,"mpcost");
+	cd[findArrayIndex(skills,useSkill)+1] = get_skill_data(useSkill,"cd")*room_speed;
+	break;
+	
+	case "NAME9":
+	statmap[? "mp"] -= get_skill_data(useSkill,"mpcost");
+	cd[findArrayIndex(skills,useSkill)+1] = get_skill_data(useSkill,"cd")*room_speed;
+	break;
+	
+	case "NAME0":
+	statmap[? "mp"] -= get_skill_data(useSkill,"mpcost");
+	cd[findArrayIndex(skills,useSkill)+1] = get_skill_data(useSkill,"cd")*room_speed;
+	break;
+
+	default:
+	break;
 }
 
-if(statmap[? "classlvl"] < 2){exit;}
-if(keyboard_check_pressed(skill_button[2]) && (cd[2] <= 0) && statmap[? "mp"] >= 0 && canUseSkill && equips[0] > 0){
-}
-
-if(statmap[? "classlvl"] < 3){exit;}
-if(keyboard_check_pressed(skill_button[3]) && (cd[3] <= 0) && statmap[? "mp"] >= 0 && canUseSkill && equips[0] > 0){
-}
-
-if(statmap[? "classlvl"] < 4){exit;}
-if(keyboard_check_pressed(skill_button[4]) && (cd[4] <= 0) && statmap[? "mp"] >= 0 && canUseSkill && equips[0] > 0){
-}
-
-if(statmap[? "classlvl"] < 5){exit;}
-if(keyboard_check_pressed(skill_button[5]) && (cd[5] <= 0) && statmap[? "mp"] >= 0 && canUseSkill && equips[0] > 0){
-}
-
-if(statmap[? "classlvl"] < 6){exit;}
-if(keyboard_check_pressed(skill_button[6]) && (cd[6] <= 0) && statmap[? "mp"] >= 0 && canUseSkill && equips[0] > 0){
-}
-
-if(statmap[? "classlvl"] < 7){exit;}
-if(keyboard_check_pressed(skill_button[7]) && (cd[7] <= 0) && statmap[? "mp"] >= 0 && canUseSkill && equips[0] > 0){
-}
-
-if(statmap[? "classlvl"] < 8){exit;}
-if(keyboard_check_pressed(skill_button[8]) && (cd[8] <= 0) && statmap[? "mp"] >= 0 && canUseSkill && equips[0] > 0){
-}
-
-if(statmap[? "classlvl"] < 9){exit;}
-if(keyboard_check_pressed(skill_button[9]) && (cd[9] <= 0) && statmap[? "mp"] >= 40 && canUseSkill && equips[0] > 0){
-}
-
-if(statmap[? "classlvl"] < 10){exit;}
-if(keyboard_check_pressed(skill_button[10]) && (cd[10] <= 0) && statmap[? "mp"] >= 0 && canUseSkill && equips[0] > 0){
+// use passive skills
+if(isBlocking && cd[findArrayIndex(skills,"Greater Shielding")+1] <= 0){
+	applyBuff(self.id,99*room_speed,true,"Knight's Shield: Enhanced",buff_generic,false,-1,0,spr_buff_knights_shield_plus,"Lorem Ipsum",0);
 }

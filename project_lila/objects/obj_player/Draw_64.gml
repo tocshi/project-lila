@@ -123,12 +123,12 @@ for(var i = 0; i < min(ds_list_size(visBuff),20); ++i){
 	var alpha = 1;
 	var xx = global.buffBarBox[i,0];
 	var yy = global.buffBarBox[i,1];
-	if(buff_array[0] <= 5*room_speed){
-		if(buff_array[0] <= 1*room_speed){
-			alpha = 0.3 * sin(time + (pi/2)) + 0.7;
+	if(buff_array[0] <= 6*room_speed){
+		if(buff_array[0] <= 2*room_speed){
+			alpha = 0.3 * sin(0.7 * time + (pi/2)) + 0.7;
 		}
 		else{
-			alpha = 0.3 * sin(0.3 * time + (pi/2)) + 0.7;
+			alpha = 0.3 * sin(0.1 * time + (pi/2)) + 0.7;
 		}
 	}
 	

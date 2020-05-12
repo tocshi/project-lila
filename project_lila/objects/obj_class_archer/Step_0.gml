@@ -1,7 +1,11 @@
 event_inherited();
 if(global.pause){exit;}
 
-if(keyboard_check_pressed(skill_button[1]) && (cd[1] <= 0) && statmap[? "mp"] >= 30 && canUseSkill && equips[0] > 0){
+// Use Skill
+switch(useSkill){
+	case "Spread Shot":
+	statmap[? "mp"] -= get_skill_data(useSkill,"mpcost");
+	cd[findArrayIndex(skills,useSkill)+1] = get_skill_data(useSkill,"cd")*room_speed;
 	cancel_basic_attack();
 	
 	direction = point_direction(x,y,mouse_x,mouse_y)+180;
@@ -25,35 +29,27 @@ if(keyboard_check_pressed(skill_button[1]) && (cd[1] <= 0) && statmap[? "mp"] >=
 			image_angle = direction;
 		}
 	}
-	statmap[? "mp"] -= 30;
-	cd[1] = maxcd[1];
 	atkTimer = 10;
 	canMove = false;
 	canAttack = false;
 	canUseSkill = false;
 	isMoving = false;
 	alarm[1] = 10;
-	proc_unyielding_buff();
-}
-
-if(statmap[? "classlvl"] < 2){exit;}
-if(keyboard_check_pressed(skill_button[2]) && (cd[2] <= 0) && statmap[? "mp"] >= 10 && equips[0] > 0){
+	break;
 	
-	statmap[? "mp"] -= 10;
+	case "Move Like Wind":
+	statmap[? "mp"] -= get_skill_data(useSkill,"mpcost");
+	cd[findArrayIndex(skills,useSkill)+1] = get_skill_data(useSkill,"cd")*room_speed;
 	var effect = instance_create_layer(x,y,"Instances",obj_debug_indicator);
 	effect.vspeed = -1;
-	cd[2] = maxcd[2];
 	
 	//clear_debuffs(self.id,"slow");
 	applyBuff(self.id,3*room_speed,true,"Move Like Wind",buff_generic,false,-1,0,spr_buff_move_like_wind,"Lorem Ipsum",0);
 
 	statChange = true;
-	proc_unyielding_buff();
-}
-
-
-if(statmap[? "classlvl"] < 3){exit;}
-if(keyboard_check_pressed(skill_button[3]) && (cd[3] <= 0) && statmap[? "mp"] >= 30 && canUseSkill && equips[0] > 0){
+	break;
+	
+	case "Triple Shot":
 	if(!instance_exists(obj_enemy)){
 		exit;
 	}
@@ -62,24 +58,20 @@ if(keyboard_check_pressed(skill_button[3]) && (cd[3] <= 0) && statmap[? "mp"] >=
 	if(point_distance(mouse_x,mouse_y,target.x,target.y) >= 64){
 		exit;
 	}
-	
+	statmap[? "mp"] -= get_skill_data(useSkill,"mpcost");
+	cd[findArrayIndex(skills,useSkill)+1] = get_skill_data(useSkill,"cd")*room_speed;
 	cancel_basic_attack();
-	statmap[? "mp"] -= 30;
-	
-	cd[3] = maxcd[3];
 	atkTimer = 21;
 	canAttack = false;
 	canUseSkill = false;
 	t_shot_remaining = 2;
 	alarm[3] = 1;
-	proc_unyielding_buff();
-}
-
-if(statmap[? "classlvl"] < 4){exit;}
-if(keyboard_check_pressed(skill_button[4]) && (cd[4] <= 0) && canUseSkill && equips[0] > 0){
+	break;
+	
+	case "Mantle of Titania":
+	statmap[? "mp"] -= get_skill_data(useSkill,"mpcost");
+	cd[findArrayIndex(skills,useSkill)+1] = get_skill_data(useSkill,"cd")*room_speed;
 	cancel_basic_attack();
-
-	cd[4] = maxcd[4];
 	atkTimer = 48;
 	canAttack = false;
 	canUseSkill = false;
@@ -89,28 +81,20 @@ if(keyboard_check_pressed(skill_button[4]) && (cd[4] <= 0) && canUseSkill && equ
 		atkmap[? "dmgmod"]		= 15;
 		atkmap[? "element"]		= "wind";
 	}	
-	proc_unyielding_buff();
-}
-
-if(statmap[? "classlvl"] < 5){exit;}
-if(keyboard_check_pressed(skill_button[5]) && (cd[5] <= 0) && statmap[? "mp"] >= 45 && canUseSkill && equips[0] > 0){
+	break;
 	
-	statmap[? "mp"] -= 45;
-
-	cd[5] = maxcd[5];
+	case "Gate of Wind":
+	statmap[? "mp"] -= get_skill_data(useSkill,"mpcost");
+	cd[findArrayIndex(skills,useSkill)+1] = get_skill_data(useSkill,"cd")*room_speed;
 	isMoving = false;
 	highRegenThreshold = 0;
 	instance_create_layer(mouse_x,mouse_y,"Attacks",obj_skill_gate_of_wind);
-	proc_unyielding_buff();
-}
-
-
-if(statmap[? "classlvl"] < 6){exit;}
-if(keyboard_check_pressed(skill_button[6]) && (cd[6] <= 0) && statmap[? "mp"] >= 35 && canUseSkill && equips[0] > 0){
+	break;
+	
+	case "Arrow Rain":
+	statmap[? "mp"] -= get_skill_data(useSkill,"mpcost");
+	cd[findArrayIndex(skills,useSkill)+1] = get_skill_data(useSkill,"cd")*room_speed;
 	cancel_basic_attack();
-	statmap[? "mp"] -= 35;
-
-	cd[6] = maxcd[6];
 	isMoving = false;
 	canMove = false;
 	canAttack = false;
@@ -118,47 +102,31 @@ if(keyboard_check_pressed(skill_button[6]) && (cd[6] <= 0) && statmap[? "mp"] >=
 	atkTimer = 30;
 	highRegenThreshold = 0;
 	
-	
 	with(instance_create_layer(mouse_x,mouse_y,"Attacks",obj_skill_arrow_rain)){
 		user = other.id;
 		ds_map_copy(atkmap,other.statmap);
 		atkmap[? "dmgmod"]		= 60;
 		atkmap[? "element"]		= other.atkelement;
 	}	
-	proc_unyielding_buff();
-}
-
-
-if(statmap[? "classlvl"] < 7){exit;}
-
-
-
-if(statmap[? "classlvl"] < 8){exit;}
-if(keyboard_check_pressed(skill_button[8]) && (cd[8] <= 0) && statmap[? "mp"] >= 15 && equips[0] > 0){
+	break;
 	
+	case "Fae Blessing":
 	if(instance_exists(obj_ally)){
 		var bless_target = instance_nearest(mouse_x,mouse_y,obj_ally);
 
 		if((point_distance(mouse_x,mouse_y,bless_target.x,bless_target.y) <= 128) && (point_distance(x,y,bless_target.x,bless_target.y) <= 450)){
-			statmap[? "mp"] -= 15;
-			cd[8] = 30*room_speed;
+			statmap[? "mp"] -= get_skill_data(useSkill,"mpcost");
+			cd[findArrayIndex(skills,useSkill)+1] = (get_skill_data(useSkill,"cd")*room_speed)/2;
 			applyBuff(bless_target,10*room_speed,true,"Fae Blessing",buff_generic,false,-1,0,spr_buff_TODO,"Lorem Ipsum",0);
-			proc_unyielding_buff();
 		}
+		else{exit;}
 	}
-}
-if(cd[8] <= 0 && equips[0] > 0 && statmap[? "hp"] < statmap[? "maxhp"]*0.3){
-	cd[8] = maxcd[8];
+	break;
 	
-	applyBuff(self,10*room_speed,true,"Fae Blessing",buff_generic,false,-1,0,spr_buff_TODO,"Lorem Ipsum",0);
-}
-
-
-if(statmap[? "classlvl"] < 9){exit;}
-if(keyboard_check_pressed(skill_button[9]) && (cd[9] <= 0) && statmap[? "mp"] >= 40 && canUseSkill && equips[0] > 0){
+	case "Tornado Shot":
+	statmap[? "mp"] -= get_skill_data(useSkill,"mpcost");
+	cd[findArrayIndex(skills,useSkill)+1] = get_skill_data(useSkill,"cd")*room_speed;
 	cancel_basic_attack();
-	
-	cd[9] = maxcd[9];
 	atkTimer = 30;
 	canAttack = false;
 	canMove = false;
@@ -171,9 +139,19 @@ if(keyboard_check_pressed(skill_button[9]) && (cd[9] <= 0) && statmap[? "mp"] >=
 		atkmap[? "element"]		= "wind";
 		atkmap[? "isProjectile"] = true;
 		atkmap[? "isPiercing"] = true;
-	}	
-	proc_unyielding_buff();
+	}
+	break;
+
+	default:
+	break;
 }
 
+// Use Passive Skills
+if(useSkill != "" && isInArray(skills,"Unyielding Arrows")){
+	applyBuff(self,180,true,"Unyielding Arrows",buff_generic,false,1,10,spr_buff_unyielding,"Grants 2% crit chance per stack.",0);
+}
+if(cd[findArrayIndex(skills,"Fae Blessing")+1] <= 0 && equips[0] > 0 && statmap[? "hp"] < statmap[? "maxhp"]*0.3){
+	cd[findArrayIndex(skills,useSkill)+1] = get_skill_data(useSkill,"cd")*room_speed;
+	applyBuff(self,10*room_speed,true,"Fae Blessing",buff_generic,false,-1,0,spr_buff_TODO,"Lorem Ipsum",0);
+}
 
-if(statmap[? "classlvl"] < 10){exit;}

@@ -6,7 +6,7 @@ if(!instance_exists(target) || !instance_exists(user)){exit;}
 // Handle class buffs
 switch(user.statmap[? "class"]){
 	case "Archer":
-	if(user.statmap[? "classlvl"] >= 7){
+	if(isInArray(user.skills,"Unyielding Arrows")){
 		if(atkmap[? "isCrit"]){
 			user.statmap[? "mp"] += 5;
 		}

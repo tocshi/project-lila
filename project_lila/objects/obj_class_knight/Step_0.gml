@@ -196,7 +196,7 @@ switch(useSkill){
 	break;
 }
 
-// calculate passive skills
+// use passive skills
 if(isBlocking && cd[findArrayIndex(skills,"Greater Shielding")+1] <= 0){
 	applyBuff(self.id,99*room_speed,true,"Knight's Shield: Enhanced",buff_generic,false,-1,0,spr_buff_knights_shield_plus,"Lorem Ipsum",0);
 }

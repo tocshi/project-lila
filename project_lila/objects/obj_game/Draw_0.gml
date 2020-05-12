@@ -174,7 +174,7 @@ if(global.pause){
 		for(var i = 0; i < 24; ++i){
 			var xx = x0 + global.availableSkillBox[i,0];
 			var yy = y0 + global.availableSkillBox[i,1];
-			draw_sprite(spr_skill_icons_knight,i,xx,yy);
+			draw_sprite(skill_sprite,i,xx,yy);
 		}
 		break;
 	}
