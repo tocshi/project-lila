@@ -791,6 +791,14 @@
             }
         },
         {
+            "Key": "3629b580-967e-46aa-aeca-92fe6b9ba460",
+            "Value": {
+                "id": "0ced6e1a-a44a-4c95-a56f-36a572ac48c0",
+                "resourcePath": "scripts\\buff_primordial_mana\\buff_primordial_mana.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "38a99b2d-7931-4074-909d-f7e7ae141790",
             "Value": {
                 "id": "0a3a758e-b911-4da4-a041-112018c00442",
@@ -3226,6 +3234,7 @@
         "1fb385d3-93e7-42ee-a034-102159d746a4",
         "4160ac60-2dc6-4341-badb-0e6001f5796f",
         "c1f6a15f-4197-4c91-93b5-c0d5f2138201",
+        "3629b580-967e-46aa-aeca-92fe6b9ba460",
         "61a8ba44-924c-4e9f-991d-ce3b295e2e7c",
         "5b4e2a24-a691-468e-bc98-5d4256134827",
         "f6280391-517c-4874-bda0-f728d9216e7e",

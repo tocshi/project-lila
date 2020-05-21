@@ -3,7 +3,7 @@ mask_index = spr_debug_player;
 if(!instance_exists(s_step_target)){exit;}
 
 if(s_step_target.object_index == obj_skill_rogue_trap){
-	cd[1] = 30;
+	cd[findArrayIndex(skills,"Shadow Step")+1] = 30;
 }
 else{
 	with(instance_create_layer(s_step_target.x,s_step_target.y,"Attacks",obj_skill_shadow_step)){

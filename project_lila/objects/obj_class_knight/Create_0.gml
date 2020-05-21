@@ -20,5 +20,5 @@ skills[2] = "Shield Charge";
 skills[3] = "Roundslash";
 skills[4] = "All-Rounder";
 skills[5] = "Protective Footwork";
-skills[6] = "Shield Bash";
+skills[6] = "Aegis Aura";
 skills[7] = "Greater Shielding";

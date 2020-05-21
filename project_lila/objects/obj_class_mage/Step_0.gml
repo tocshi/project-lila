@@ -1,9 +1,11 @@
 event_inherited();
 if(global.pause){exit;}
 
-if(keyboard_check_pressed(skill_button[1]) && (cd[1] <= 0) && statmap[? "mp"] >= 25 && canUseSkill && equips[0] > 0){
-	cd[1] = maxcd[1];
-	statmap[? "mp"] -= 25;
+// Use Skill
+switch(useSkill){
+	case "Fireball":
+	statmap[? "mp"] -= get_skill_data(useSkill,"mpcost");
+	cd[findArrayIndex(skills,useSkill)+1] = get_skill_data(useSkill,"cd")*room_speed;
 	atkTimer = 10;
 	canAttack = false;
 	canUseSkill = false;
@@ -37,14 +39,12 @@ if(keyboard_check_pressed(skill_button[1]) && (cd[1] <= 0) && statmap[? "mp"] >=
 			skill = atkmap[? "range"]/speed;
 		}
 	}
-}
-
-if(statmap[? "classlvl"] < 2){exit;}
-if(keyboard_check_pressed(skill_button[2]) && (cd[2] <= 0) && statmap[? "mp"] >= 25 && canUseSkill && equips[0] > 0){
+	break;
+	
+	case "Blizzard":
+	statmap[? "mp"] -= get_skill_data(useSkill,"mpcost");
+	cd[findArrayIndex(skills,useSkill)+1] = get_skill_data(useSkill,"cd")*room_speed;
 	cancel_basic_attack();
-	statmap[? "mp"] -= 25;
-
-	cd[2] = maxcd[2];
 	highRegenThreshold = 0;
 	if(hasBuff(self,"Primordial Mana")){
 		removeBuff(self,"Primordial Mana",false);
@@ -63,17 +63,15 @@ if(keyboard_check_pressed(skill_button[2]) && (cd[2] <= 0) && statmap[? "mp"] >=
 			atkmap[? "element"]		= "ice";
 		}
 	}	
-}
-
-if(statmap[? "classlvl"] < 3){exit;}
-if(keyboard_check_pressed(skill_button[3]) && (cd[3] <= 0) && statmap[? "mp"] >= 25 && canUseSkill && equips[0] > 0){
+	break;
+	
+	case "Chain Lightning":
 	var next_target = instance_nearest(mouse_x,mouse_y,obj_enemy);
 	if(next_target == noone || point_distance(x,y,next_target.x,next_target.y) > 320){exit;}
 	cancel_basic_attack();
 	ds_list_clear(c_lightning_hitList);
-	statmap[? "mp"] -= 25;
-
-	cd[3] = maxcd[3];
+	statmap[? "mp"] -= get_skill_data(useSkill,"mpcost");
+	cd[findArrayIndex(skills,useSkill)+1] = get_skill_data(useSkill,"cd")*room_speed;
 	atkTimer = 30;
 	canAttack = false;
 	canUseSkill = false;
@@ -100,13 +98,11 @@ if(keyboard_check_pressed(skill_button[3]) && (cd[3] <= 0) && statmap[? "mp"] >=
 		image_angle = point_direction(x,y,target.x,target.y);
 		image_xscale = point_distance(x,y,target.x,target.y)/sprite_get_width(spr_chain_lightning);
 	}
-}
-
-if(statmap[? "classlvl"] < 4){exit;}
-if(keyboard_check_pressed(skill_button[4]) && (cd[4] <= 0) && statmap[? "mp"] >= 15 && canUseSkill && equips[0] > 0){
+	break;
+	
+	case "Spatial Leap":
+	statmap[? "mp"] -= get_skill_data(useSkill,"mpcost");
 	cancel_basic_attack();
-	statmap[? "mp"] -= 15;
-
 	highRegenThreshold = 0;
 	isMoving = false;
 	
@@ -139,15 +135,14 @@ if(keyboard_check_pressed(skill_button[4]) && (cd[4] <= 0) && statmap[? "mp"] >=
 	var blink = instance_create_layer(xx,yy,"Attacks",obj_skill_blink_end);
 	x = xx;
 	y = yy;
-	cd[4] = 30;
-}
-
-if(statmap[? "classlvl"] < 6){exit;}
-if(keyboard_check_pressed(skill_button[6]) && (cd[6] <= 0) && statmap[? "mp"] >= 45 && canUseSkill && equips[0] > 0){
+	set_skill_data("Spatial Leap","sprmap",7);
+	cd[findArrayIndex(skills,useSkill)+1] = 30;
+	break;
+	
+	case "Volcano":
+	statmap[? "mp"] -= get_skill_data(useSkill,"mpcost");
+	cd[findArrayIndex(skills,useSkill)+1] = get_skill_data(useSkill,"cd")*room_speed;
 	cancel_basic_attack();
-	statmap[? "mp"] -= 45;
-
-	cd[6] = maxcd[6];
 	isMoving = false;
 	canMove = false;
 	canAttack = false;
@@ -163,22 +158,20 @@ if(keyboard_check_pressed(skill_button[6]) && (cd[6] <= 0) && statmap[? "mp"] >=
 	with(instance_create_layer(xx,yy,"Terrain",obj_skill_volcano)){
 		user = other.id;
 	}
-}
-
-if(statmap[? "classlvl"] < 7){exit;}
-if(keyboard_check_pressed(skill_button[7]) && (cd[7] <= 0) && statmap[? "mp"] >= 45 && canUseSkill && equips[0] > 0){
+	break;
+	
+	case "Icicle Salvo":
 	ds_list_clear(i_salvo_targets);
 	var targets = collision_circle_list(x,y,480,obj_enemy,true,true,i_salvo_targets,false);
 	if(targets <= 0){exit;}
 	
 	cancel_basic_attack();
-	statmap[? "mp"] -= 45;
-	
+	statmap[? "mp"] -= get_skill_data(useSkill,"mpcost");
+	cd[findArrayIndex(skills,useSkill)+1] = get_skill_data(useSkill,"cd")*room_speed;	
 	var remaining = 6;
 	ds_list_clear(i_salvo_hitList);
 	ds_list_shuffle(i_salvo_targets);
-	
-	cd[7] = maxcd[7];
+
 	isMoving = false;
 	canMove = false;
 	canAttack = false;
@@ -204,14 +197,12 @@ if(keyboard_check_pressed(skill_button[7]) && (cd[7] <= 0) && statmap[? "mp"] >=
 			if(remaining <= 0){break;}
 		}
 	}	
-}
-
-if(statmap[? "classlvl"] < 8){exit;}
-if(keyboard_check_pressed(skill_button[8]) && (cd[8] <= 0) && statmap[? "mp"] >= 45 && canUseSkill && equips[0] > 0){
+	break;
+	
+	case "Lightning Rod":
+	statmap[? "mp"] -= get_skill_data(useSkill,"mpcost");
+	cd[findArrayIndex(skills,useSkill)+1] = get_skill_data(useSkill,"cd")*room_speed;
 	cancel_basic_attack();
-	statmap[? "mp"] -= 45;
-
-	cd[8] = maxcd[8];
 	isMoving = false;
 	canMove = false;
 	canAttack = false;
@@ -229,15 +220,14 @@ if(keyboard_check_pressed(skill_button[8]) && (cd[8] <= 0) && statmap[? "mp"] >=
 		atkmap[? "dmgmod"]		= 150;
 		atkmap[? "element"]		= "lightning";
 	}
-}
-
-if(statmap[? "classlvl"] < 9){exit;}
-if(keyboard_check_pressed(skill_button[9]) && (cd[9] <= 0) && statmap[? "mp"] >= 40 && canUseSkill && equips[0] > 0){
+	break;
+	
+	case "Mana Detonation":
 	var next_target = instance_nearest(mouse_x,mouse_y,obj_enemy);
 	if(next_target == noone || point_distance(x,y,next_target.x,next_target.y) > 320){exit;}
 	cancel_basic_attack();
-	cd[9] = maxcd[9];
-	statmap[? "mp"] -= 40;
+	statmap[? "mp"] -= get_skill_data(useSkill,"mpcost");
+	cd[findArrayIndex(skills,useSkill)+1] = get_skill_data(useSkill,"cd")*room_speed;
 	isMoving = false;
 	canMove = false;
 	canAttack = false;
@@ -249,15 +239,23 @@ if(keyboard_check_pressed(skill_button[9]) && (cd[9] <= 0) && statmap[? "mp"] >=
 		atkmap[? "dmgmod"]		= 340;
 		atkmap[? "element"]		= "none";
 	}
-}
-
-if(statmap[? "classlvl"] < 10){exit;}
-if(keyboard_check_pressed(skill_button[10]) && (cd[10] <= 0) && statmap[? "mp"] >= 25 && canUseSkill && equips[0] > 0){
-	cd[10] = maxcd[10];
-	statmap[? "mp"] -= 25;
+	break;
+	
+	case "Primordial Mana":
+	statmap[? "mp"] -= get_skill_data(useSkill,"mpcost");
+	cd[findArrayIndex(skills,useSkill)+1] = get_skill_data(useSkill,"cd")*room_speed;
 	highRegenThreshold = 0;
-	applyBuff(self,maxcd[10],true,"Primordial Mana",buff_generic,true,1,1,spr_buff_primordial_mana,"Enhances your next basic elemental spell with Primordial Mana.",0);
+	applyBuff(self,get_skill_data(useSkill,"cd")*room_speed,true,"Primordial Mana",buff_primordial_mana,true,1,1,spr_buff_primordial_mana,"Enhances your next basic elemental spell with Primordial Mana.",0);
+	set_skill_data("Fireball","sprmap",1);
+	set_skill_data("Blizzard","sprmap",3);
+	set_skill_data("Chain Lightning","sprmap",5);
 	with(instance_create_layer(x,y+sprite_height/2,"Attacks",obj_skill_primordial_mana)){
 		user = other;
 	}
+	break;
+	
+	default:
+	break;
 }
+
+// use passive skills

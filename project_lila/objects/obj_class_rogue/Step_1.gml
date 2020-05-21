@@ -1,5 +1,5 @@
 event_inherited();
 
-if(statmap[? "classlvl"] >= 4 && statChange){
+if(isInArray(skills,"Quick Feet") && statChange){
 	statmap[? "movespeed"] *= 1.15;
 }
