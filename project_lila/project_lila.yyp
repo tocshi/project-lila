@@ -1895,6 +1895,14 @@
             }
         },
         {
+            "Key": "93453b6b-8619-4e62-99c1-d07ddd62a3a5",
+            "Value": {
+                "id": "2a9ed907-d236-4401-904d-a16f73c55a84",
+                "resourcePath": "scripts\\restore_player_buffs\\restore_player_buffs.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "938dcb2c-1eaa-48c7-81fc-1de10b189909",
             "Value": {
                 "id": "3af4250d-1e80-42b8-bb7f-d93f7a2f19e4",
@@ -3280,6 +3288,7 @@
         "0921d80d-330d-437f-86f9-a8da727c6a49",
         "d5453502-d6b7-44b3-9911-2705a9004b0c",
         "5e3a980b-a503-40a5-a919-950971e3729e",
+        "93453b6b-8619-4e62-99c1-d07ddd62a3a5",
         "1ad0c2fa-f034-4c6b-bfe0-13fc729d5961",
         "7b88dd8a-74e9-43b3-afdc-57e5442897d3",
         "1b916b93-1a3c-4d90-a14d-febd145a0f1a",

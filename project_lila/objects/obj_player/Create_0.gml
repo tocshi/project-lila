@@ -80,12 +80,13 @@ maxcd = array_create(21,0);
 itemcd = array_create(ds_list_size(global.itemData),0);
 atkTimer = 0;
 
-// restore player's stats
-restore_player_stats();
-
 // buff list and visible buff list creation 
 buff = ds_list_create();
 visBuff = ds_list_create();
+
+// restore player's stats
+restore_player_stats();
+//restore_player_buffs();
 
 // Player equipped items and hotbar
 equips = array_create(12, 0);

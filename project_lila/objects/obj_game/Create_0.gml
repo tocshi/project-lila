@@ -6,6 +6,7 @@ global.player = noone;
 global.lastClass = obj_class_knight;
 // Player Permanent Stats
 global.playerSavedStats = ds_map_create();
+global.playerSavedBuffs = ds_list_create();
 
 // Which menu to access when paused.
 global.gui_state = -1;
@@ -58,6 +59,8 @@ var itemDataJson = parse_json_to_str("item_data.json");
 global.itemData = ds_map_find_value(itemDataJson, "default");
 var skillDataJson = parse_json_to_str("skill_data.json");
 global.skillData = ds_map_find_value(skillDataJson, "default");
+global.skillDataDefault = ds_list_create();
+ds_list_copy(global.skillDataDefault,ds_map_find_value(skillDataJson, "default"));
 
 // Player inventory array and item quantity array
 global.playerInv = array_create(100, 0);

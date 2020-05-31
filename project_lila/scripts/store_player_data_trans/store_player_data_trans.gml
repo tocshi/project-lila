@@ -1,5 +1,5 @@
 // TO ONLY BE CALLED FROM PLAYER OBJECT!
-
+// Save items
 global.lastClass = object_index;
 var class = statmap[? "class"];
 if(!ds_map_exists(global.playerEquipLoadouts,class)) {
@@ -21,6 +21,7 @@ for(var i = 0; i < array_length_1d(itemBar); ++i){
 	}
 }
 
+// Save stats
 global.playerSavedStats[? "level"]		= statmap[? "level"];
 global.playerSavedStats[? "xp"]			= statmap[? "xp"];
 global.playerSavedStats[? "cpp"]		= statmap[? "cpp"];
@@ -35,3 +36,6 @@ else{
 	global.playerSavedStats[? "mp"]			= statmap[? "maxmp"];
 	global.playerSavedStats[? "hpshield"]	= 0;
 }
+
+// Save Buffs
+ds_list_copy(global.playerSavedBuffs,buff);

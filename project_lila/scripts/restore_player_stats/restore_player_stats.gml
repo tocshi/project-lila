@@ -1,3 +1,4 @@
+// restore stats
 if(ds_map_exists(global.playerSavedStats,"xp")){
 	global.player.statmap[? "hp"]		= global.playerSavedStats[? "hp"];
 	global.player.statmap[? "mp"]		= global.playerSavedStats[? "mp"];
