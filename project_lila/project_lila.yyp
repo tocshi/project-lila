@@ -2455,6 +2455,14 @@
             }
         },
         {
+            "Key": "c7b6ad15-d590-48db-a944-ee32da80a50f",
+            "Value": {
+                "id": "b71f897c-ddb4-4514-ad1c-82ee79633922",
+                "resourcePath": "sprites\\spr_no_skill\\spr_no_skill.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "c96d1538-acc3-4af2-92f9-ad3324ba2f15",
             "Value": {
                 "id": "9f1677c5-f122-412d-9d22-248daa62d99e",

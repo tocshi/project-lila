@@ -9,7 +9,8 @@
     "cppcost"   : 10,
     "sprmap"    : 0,
     "variants"  : [],
-    "unlocked"  : 0
+    "unlocked"  : 0,
+    "slot"      : 0
   },{
     "name"      : "Fearless Challenge",
     "class"     : "Knight",
@@ -20,7 +21,8 @@
     "cppcost"   : 10,
     "sprmap"    : 1,
     "variants"  : [],
-    "unlocked"  : 0
+    "unlocked"  : 0,
+    "slot"      : 1
   },{
     "name"      : "Shield Charge",
     "class"     : "Knight",
@@ -31,7 +33,8 @@
     "cppcost"   : 10,
     "sprmap"    : 2,
     "variants"  : [],
-    "unlocked"  : 0
+    "unlocked"  : 0,
+    "slot"      : 2
   },{
     "name"      : "Roundslash",
     "class"     : "Knight",
@@ -42,7 +45,8 @@
     "cppcost"   : 10,
     "sprmap"    : 3,
     "variants"  : [],
-    "unlocked"  : 0
+    "unlocked"  : 0,
+    "slot"      : 3
   },{
     "name"      : "Guardian",
     "class"     : "Knight",
@@ -53,7 +57,8 @@
     "cppcost"   : 10,
     "sprmap"    : 4,
     "variants"  : [],
-    "unlocked"  : 0
+    "unlocked"  : 0,
+    "slot"      : 10
   },{
     "name"      : "All-Rounder",
     "class"     : "Knight",
@@ -64,7 +69,8 @@
     "cppcost"   : 10,
     "sprmap"    : 5,
     "variants"  : [],
-    "unlocked"  : 0
+    "unlocked"  : 0,
+    "slot"      : 9
   },{
     "name"      : "Protective Footwork",
     "class"     : "Knight",
@@ -75,7 +81,8 @@
     "cppcost"   : 10,
     "sprmap"    : 6,
     "variants"  : [],
-    "unlocked"  : 0
+    "unlocked"  : 0,
+    "slot"      : 4
   },{
     "name"      : "Shield Bash",
     "class"     : "Knight",
@@ -86,7 +93,8 @@
     "cppcost"   : 10,
     "sprmap"    : 9,
     "variants"  : [],
-    "unlocked"  : 0
+    "unlocked"  : 0,
+    "slot"      : 5
   },{
     "name"      : "Aegis Aura",
     "class"     : "Knight",
@@ -97,7 +105,8 @@
     "cppcost"   : 10,
     "sprmap"    : 10,
     "variants"  : [],
-    "unlocked"  : 0
+    "unlocked"  : 0,
+    "slot"      : 6
   },{
     "name"      : "Greater Shielding",
     "class"     : "Knight",
@@ -108,7 +117,8 @@
     "cppcost"   : 10,
     "sprmap"    : 12,
     "variants"  : [],
-    "unlocked"  : 0
+    "unlocked"  : 0,
+    "slot"      : 7
   },{
     "name"      : "Spread Shot",
     "class"     : "Archer",
@@ -119,7 +129,8 @@
     "cppcost"   : 10,
     "sprmap"    : 0,
     "variants"  : [],
-    "unlocked"  : 0
+    "unlocked"  : 0,
+    "slot"      : 0
   },{
     "name"      : "Move Like Wind",
     "class"     : "Archer",
@@ -130,7 +141,8 @@
     "cppcost"   : 10,
     "sprmap"    : 1,
     "variants"  : [],
-    "unlocked"  : 0
+    "unlocked"  : 0,
+    "slot"      : 1
   },{
     "name"      : "Triple Shot",
     "class"     : "Archer",
@@ -141,7 +153,8 @@
     "cppcost"   : 10,
     "sprmap"    : 2,
     "variants"  : [],
-    "unlocked"  : 0
+    "unlocked"  : 0,
+    "slot"      : 2
   },{
     "name"      : "Mantle of Titania",
     "class"     : "Archer",
@@ -152,7 +165,8 @@
     "cppcost"   : 10,
     "sprmap"    : 3,
     "variants"  : [],
-    "unlocked"  : 0
+    "unlocked"  : 0,
+    "slot"      : 3
   },{
     "name"      : "Gate of Wind",
     "class"     : "Archer",
@@ -163,7 +177,8 @@
     "cppcost"   : 10,
     "sprmap"    : 4,
     "variants"  : [],
-    "unlocked"  : 0
+    "unlocked"  : 0,
+    "slot"      : 4
   },{
     "name"      : "Arrow Rain",
     "class"     : "Archer",
@@ -174,7 +189,8 @@
     "cppcost"   : 10,
     "sprmap"    : 5,
     "variants"  : [],
-    "unlocked"  : 0
+    "unlocked"  : 0,
+    "slot"      : 5
   },{
     "name"      : "Unyielding Arrows",
     "class"     : "Archer",
@@ -185,7 +201,8 @@
     "cppcost"   : 10,
     "sprmap"    : 6,
     "variants"  : [],
-    "unlocked"  : 0
+    "unlocked"  : 0,
+    "slot"      : 6
   },{
     "name"      : "Fae Blessing",
     "class"     : "Archer",
@@ -196,7 +213,8 @@
     "cppcost"   : 10,
     "sprmap"    : 7,
     "variants"  : [],
-    "unlocked"  : 0
+    "unlocked"  : 0,
+    "slot"      : 9
   },{
     "name"      : "Tornado Shot",
     "class"     : "Archer",
@@ -207,7 +225,8 @@
     "cppcost"   : 10,
     "sprmap"    : 8,
     "variants"  : [],
-    "unlocked"  : 0
+    "unlocked"  : 0,
+    "slot"      : 7
   },{
     "name"      : "Stormpiercer",
     "class"     : "Archer",
@@ -218,7 +237,8 @@
     "cppcost"   : 10,
     "sprmap"    : 9,
     "variants"  : [],
-    "unlocked"  : 0
+    "unlocked"  : 0,
+    "slot"      : 15
   },{
     "name"      : "Fireball",
     "class"     : "Mage",
@@ -229,7 +249,8 @@
     "cppcost"   : 10,
     "sprmap"    : 0,
     "variants"  : [],
-    "unlocked"  : 0
+    "unlocked"  : 0,
+    "slot"      : 0
   },{
     "name"      : "Blizzard",
     "class"     : "Mage",
@@ -240,7 +261,8 @@
     "cppcost"   : 10,
     "sprmap"    : 2,
     "variants"  : [],
-    "unlocked"  : 0
+    "unlocked"  : 0,
+    "slot"      : 8
   },{
     "name"      : "Chain Lightning",
     "class"     : "Mage",
@@ -251,7 +273,8 @@
     "cppcost"   : 10,
     "sprmap"    : 4,
     "variants"  : [],
-    "unlocked"  : 0
+    "unlocked"  : 0,
+    "slot"      : 16
   },{
     "name"      : "Spatial Leap",
     "class"     : "Mage",
@@ -262,7 +285,8 @@
     "cppcost"   : 10,
     "sprmap"    : 6,
     "variants"  : [],
-    "unlocked"  : 0
+    "unlocked"  : 0,
+    "slot"      : 1
   },{
     "name"      : "Meditative Training",
     "class"     : "Mage",
@@ -273,7 +297,8 @@
     "cppcost"   : 10,
     "sprmap"    : 8,
     "variants"  : [],
-    "unlocked"  : 0
+    "unlocked"  : 0,
+    "slot"      : 2
   },{
     "name"      : "Volcano",
     "class"     : "Mage",
@@ -284,7 +309,8 @@
     "cppcost"   : 10,
     "sprmap"    : 9,
     "variants"  : [],
-    "unlocked"  : 0
+    "unlocked"  : 0,
+    "slot"      : 4
   },{
     "name"      : "Icicle Salvo",
     "class"     : "Mage",
@@ -295,7 +321,8 @@
     "cppcost"   : 10,
     "sprmap"    : 10,
     "variants"  : [],
-    "unlocked"  : 0
+    "unlocked"  : 0,
+    "slot"      : 12
   },{
     "name"      : "Lightning Rod",
     "class"     : "Mage",
@@ -306,7 +333,8 @@
     "cppcost"   : 10,
     "sprmap"    : 11,
     "variants"  : [],
-    "unlocked"  : 0
+    "unlocked"  : 0,
+    "slot"      : 20
   },{
     "name"      : "Mana Detonation",
     "class"     : "Mage",
@@ -317,7 +345,8 @@
     "cppcost"   : 10,
     "sprmap"    : 12,
     "variants"  : [],
-    "unlocked"  : 0
+    "unlocked"  : 0,
+    "slot"      : 3
   },{
     "name"      : "Primordial Mana",
     "class"     : "Mage",
@@ -328,7 +357,8 @@
     "cppcost"   : 10,
     "sprmap"    : 13,
     "variants"  : [],
-    "unlocked"  : 0
+    "unlocked"  : 0,
+    "slot"      : 5
   },{
     "name"      : "Shadow Step",
     "class"     : "Rogue",
@@ -339,7 +369,8 @@
     "cppcost"   : 10,
     "sprmap"    : 0,
     "variants"  : [],
-    "unlocked"  : 0
+    "unlocked"  : 0,
+    "slot"      : 0
   },{
     "name"      : "Vicious Venom",
     "class"     : "Rogue",
@@ -350,7 +381,8 @@
     "cppcost"   : 10,
     "sprmap"    : 1,
     "variants"  : [],
-    "unlocked"  : 0
+    "unlocked"  : 0,
+    "slot"      : 1
   },{
     "name"      : "Dual Traps",
     "class"     : "Rogue",
@@ -361,7 +393,8 @@
     "cppcost"   : 10,
     "sprmap"    : 2,
     "variants"  : [],
-    "unlocked"  : 0
+    "unlocked"  : 0,
+    "slot"      : 2
   },{
     "name"      : "Quick Feet",
     "class"     : "Rogue",
@@ -372,7 +405,8 @@
     "cppcost"   : 10,
     "sprmap"    : 4,
     "variants"  : [],
-    "unlocked"  : 0
+    "unlocked"  : 0,
+    "slot"      : 9
   },{
     "name"      : "Triple Fangs",
     "class"     : "Rogue",
@@ -383,7 +417,8 @@
     "cppcost"   : 10,
     "sprmap"    : 5,
     "variants"  : [],
-    "unlocked"  : 0
+    "unlocked"  : 0,
+    "slot"      : 3
   },{
     "name"      : "Vitality Thief",
     "class"     : "Rogue",
@@ -394,7 +429,8 @@
     "cppcost"   : 10,
     "sprmap"    : 6,
     "variants"  : [],
-    "unlocked"  : 0
+    "unlocked"  : 0,
+    "slot"      : 4
   },{
     "name"      : "Swift Slicer",
     "class"     : "Rogue",
@@ -405,7 +441,8 @@
     "cppcost"   : 10,
     "sprmap"    : 7,
     "variants"  : [],
-    "unlocked"  : 0
+    "unlocked"  : 0,
+    "slot"      : 5
   },{
     "name"      : "Punish the Strong",
     "class"     : "Rogue",
@@ -416,7 +453,9 @@
     "cppcost"   : 10,
     "sprmap"    : 8,
     "variants"  : [],
-    "unlocked"  : 0
+    "unlocked"  : 0,
+    "slot"      : 7,
+    "slot"      : 12
   },{
     "name"      : "Living Shadow",
     "class"     : "Rogue",
@@ -427,7 +466,8 @@
     "cppcost"   : 10,
     "sprmap"    : 9,
     "variants"  : [],
-    "unlocked"  : 0
+    "unlocked"  : 0,
+    "slot"      : 6
   },{
     "name"      : "Slippery Save",
     "class"     : "Rogue",
@@ -438,6 +478,7 @@
     "cppcost"   : 10,
     "sprmap"    : 10,
     "variants"  : [],
-    "unlocked"  : 0
+    "unlocked"  : 0,
+    "slot"      : 7
   }
 ]

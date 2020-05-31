@@ -171,10 +171,21 @@ if(global.pause){
 			draw_text(xx+33,yy,key);
 			draw_set_alpha(1);
 		}
+		// USE THIS FOR GENERATING SKILL INSTANCES
 		for(var i = 0; i < 24; ++i){
 			var xx = x0 + global.availableSkillBox[i,0];
 			var yy = y0 + global.availableSkillBox[i,1];
-			draw_sprite(skill_sprite,i,xx,yy);
+			var found = false;
+			for(var j = 0; j < ds_list_size(global.skillData); ++j){
+				if(ds_map_find_value(global.skillData[| j],"class") == global.player.statmap[? "class"]
+				&& ds_map_find_value(global.skillData[| j],"slot") == i){
+					draw_sprite(skill_sprite,ds_map_find_value(global.skillData[| j],"sprmap"),xx,yy);
+					found = true;
+				}
+			}
+			if(!found){
+				draw_sprite(spr_no_skill,0,xx,yy);
+			}
 		}
 		break;
 	}

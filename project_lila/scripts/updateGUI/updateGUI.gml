@@ -39,7 +39,10 @@ switch(global.gui_state){
 				invSpace++;
 			}
 		}
+		break;
 		
+		// Generate Skill objects
+		case 2:
 		break;
 }
 
