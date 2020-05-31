@@ -75,4 +75,9 @@ if(statmap[? "xp"] >= lvlup_xp){
 	//basestatmap[? "atk"] += statmap[? "level"]-1;
 	//basestatmap[? "def"] += statmap[? "level"]-1;
 	recalcStats(self);
+	
+	// recalculate cpp for all enemies in room
+	with(obj_enemy){
+		event_perform(ev_other,ev_room_start);
+	}
 }

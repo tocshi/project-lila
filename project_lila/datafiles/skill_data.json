@@ -6,7 +6,7 @@
     "desc"      : "",
     "mpcost"    : 20,
     "cd"        : 5,
-    "cppcost"   : 10,
+    "cppcost"   : 150,
     "sprmap"    : 0,
     "variants"  : [],
     "unlocked"  : 0,
