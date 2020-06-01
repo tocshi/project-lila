@@ -18,7 +18,8 @@
         "d5453502-d6b7-44b3-9911-2705a9004b0c",
         "5e3a980b-a503-40a5-a919-950971e3729e",
         "93453b6b-8619-4e62-99c1-d07ddd62a3a5",
-        "1ad0c2fa-f034-4c6b-bfe0-13fc729d5961"
+        "1ad0c2fa-f034-4c6b-bfe0-13fc729d5961",
+        "42ef62d5-79af-4673-8882-f95a45096be1"
     ],
     "filterType": "GMScript",
     "folderName": "gamefunc",

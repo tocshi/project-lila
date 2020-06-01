@@ -184,7 +184,7 @@ if(global.pause){
 				}
 			}
 			if(!found){
-				draw_sprite(spr_no_skill,0,xx,yy);
+				draw_sprite(spr_empty,0,xx,yy); // USE SPR_NO_SKILL WHEN SPRITE EXISTS IN PROJECT
 			}
 		}
 		break;
