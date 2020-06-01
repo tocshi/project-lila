@@ -190,5 +190,10 @@ if(global.pause){
 		break;
 	}
 }
+if(instance_exists(global.player)){
+	var x0 = camera_get_view_x(global.currentCamera);
+	var y0 = camera_get_view_y(global.currentCamera);
+	draw_sprite(gui_itembar,-1,x0,y0);
+}
 
 draw_set_color(c_white);
