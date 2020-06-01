@@ -27,3 +27,11 @@ width = 64;
 height = 64;
 
 alarm[1] = UPDATE_DELAY;
+
+enum events {
+    notified_hit = 0,
+    create_text_box = 1,
+    remove_text_box = 2,
+    reset_dps = 3,
+	calculate_dps = 4
+}
