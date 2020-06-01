@@ -1,6 +1,5 @@
 name = "";
-skill_sprite_set = "";
-icon_offset = 0;
+skill_key = -1;
 type = "";
 EQUIP = "Equipped";
 AVAILABLE = "Available";

@@ -131,6 +131,7 @@ if(global.pause){
 		draw_text(x0+1080,y0+370,"Class Proficiency: " + string(global.player.statmap[? "cpp"]));
 		
 		//debug
+		/*
 		var skill_sprite = asset_get_index("spr_skill_icons_" + string_lower(global.player.statmap[? "class"]));
 		for(var i = 0; i < 8; ++i){
 			var xx = x0 + global.equippedSkillBox[i,0];
@@ -186,7 +187,7 @@ if(global.pause){
 			if(!found){
 				draw_sprite(spr_empty,0,xx,yy); // USE SPR_NO_SKILL WHEN SPRITE EXISTS IN PROJECT
 			}
-		}
+		}*/
 		break;
 	}
 }

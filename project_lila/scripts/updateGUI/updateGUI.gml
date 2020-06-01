@@ -62,13 +62,14 @@ switch(global.gui_state){
 				for(var j = 0; j < ds_list_size(global.skillData); ++j){
 					if(ds_map_find_value(global.skillData[| j],"class") == global.player.statmap[? "class"]
 					&& ds_map_find_value(global.skillData[| j],"slot") == i){
-						var skill = instance_create_layer(xx, yy, "GUI", obj_skill_inv);
-						skill.type = skill.AVAILABLE;
-						skill.name = ds_map_find_value(global.skillData[| j],"name");
-						skill.skill_sprite_set = asset_get_index("spr_skill_icons_" + string_lower(global.player.statmap[? "class"]));
-						skill.icon_offset = ds_map_find_value(global.skillData[| j],"sprmap");
-						// show_debug_message("skill.skill_sprite_set = " + sprite_get_name(skill.skill_sprite_set));
-						// show_debug_message("skill.icon_offset = " + string(skill.icon_offset));
+						with(instance_create_layer(xx, yy, "GUI", obj_skill_inv)){
+							type = AVAILABLE;
+							name = ds_map_find_value(global.skillData[| j],"name");
+							sprite_index = asset_get_index("spr_skill_icons_" + string_lower(global.player.statmap[? "class"]));
+							image_index = ds_map_find_value(global.skillData[| j],"sprmap");
+							// show_debug_message("skill.sprite_index = " + sprite_get_name(skill.sprite_index));
+							// show_debug_message("skill.image_index = " + string(skill.image_index));
+						}
 						found = true;
 					}
 				}
@@ -81,12 +82,15 @@ switch(global.gui_state){
 			for(var i = 0; i < 8; ++i){
 				var xx = x0 + global.equippedSkillBox[i,0];
 				var yy = y0 + global.equippedSkillBox[i,1];
-				if(global.player.skills[i] != ""){
-					var skill = instance_create_layer(xx, yy, "GUI", obj_skill_inv);
-					skill.type = skill.EQUIP;
-					skill.name = ds_map_find_value(global.skillData[| i],"name");
-					skill.skill_sprite_set = asset_get_index("spr_skill_icons_" + string_lower(global.player.statmap[? "class"]));
-					skill.icon_offset = ds_map_find_value(global.skillData[| i],"sprmap");
+				var skillname = global.player.skills[i];
+				if(skillname != ""){
+					with(instance_create_layer(xx, yy, "GUI", obj_skill_inv)){
+						type = EQUIP;
+						name = skillname;
+						skill_key = i;
+						sprite_index = asset_get_index("spr_skill_icons_" + string_lower(get_skill_data(skillname,"class")));
+						image_index = get_skill_data(skillname,"sprmap");
+					}
 				}
 			}
 			break;

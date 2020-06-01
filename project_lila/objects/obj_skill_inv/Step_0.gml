@@ -13,9 +13,9 @@ if(global.gui_state == 2 && global.pause == 1){
 	} else {
 		// Check that the mouse is being held on the items coords
 		if (mouse_check_button(mb_left)) {
-			show_debug_message("LMB detected");
 			if (!global.holding && position_meeting(mouse_x, mouse_y, id)) {
 				// first frame of LMB hold, set initial values
+				show_debug_message("LMB detected on skill: " + name);
 				show_debug_message("holding!");
 				global.holding = true;
 				initial_lmb_x = mouse_x;
@@ -38,8 +38,8 @@ if(global.gui_state == 2 && global.pause == 1){
 					name = other.name;
 					origin_type = other.type;
 					origin_instance = other;
-					skill_sprite_set = other.skill_sprite_set;
-					icon_offset = other.icon_offset;
+					sprite_index = other.sprite_index;
+					image_index = other.image_index;
 				}
 				drag_activated = true;
 			}	

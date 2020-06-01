@@ -1,1 +1,1 @@
-draw_sprite(skill_sprite_set,icon_offset,x,y);
+draw_self();
