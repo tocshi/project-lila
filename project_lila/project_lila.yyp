@@ -527,6 +527,14 @@
             }
         },
         {
+            "Key": "20e5b173-c8be-447c-9683-e6f8f2c8a1fb",
+            "Value": {
+                "id": "84eef54c-514b-4c73-9ca2-76a7b624e0aa",
+                "resourcePath": "objects\\obj_skill_inv\\obj_skill_inv.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "22319f09-ee5c-4224-9e39-aaba329b64ed",
             "Value": {
                 "id": "f620cf05-aa29-4a12-8d68-a39001cc5ca6",
@@ -2239,6 +2247,14 @@
             }
         },
         {
+            "Key": "b7d83d42-4d76-4927-9f92-ee8d33520993",
+            "Value": {
+                "id": "6f6cc022-4062-41a4-800e-1f49f801ee77",
+                "resourcePath": "scripts\\getSkillSlotAtCoords\\getSkillSlotAtCoords.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "b7e6da6a-b126-4384-be58-8f227f01184e",
             "Value": {
                 "id": "8faee552-5876-4673-b0d8-8753c4703293",
@@ -2455,11 +2471,11 @@
             }
         },
         {
-            "Key": "c7b6ad15-d590-48db-a944-ee32da80a50f",
+            "Key": "c9148197-b5e8-4ae8-8c03-bcaf70d1d1f7",
             "Value": {
-                "id": "b71f897c-ddb4-4514-ad1c-82ee79633922",
-                "resourcePath": "sprites\\spr_no_skill\\spr_no_skill.yy",
-                "resourceType": "GMSprite"
+                "id": "1bfbcecf-f4ef-4943-ab06-861533d0b79e",
+                "resourcePath": "objects\\obj_skill_dragging\\obj_skill_dragging.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -3263,6 +3279,7 @@
         "55b7cdb7-1f7c-4d09-84ce-989d48c1e3dd",
         "241bc211-f307-47bf-8d8b-f7cfe8089b1c",
         "7e1af0bc-9baf-439e-b962-76634753da50",
+        "b7d83d42-4d76-4927-9f92-ee8d33520993",
         "5916a9ec-3a17-4e18-a390-ed34e6f04ea4",
         "15d6b6d4-6759-4219-af01-40a7410a0212",
         "efef40b5-b3dd-4fd8-858d-53cd81554d87",
