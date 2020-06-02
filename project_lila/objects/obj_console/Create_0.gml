@@ -23,18 +23,19 @@ caret_text = "";
 alarm[0] = CARET_DELAY;
 
 commands = ds_list_create();
-commands[| 0] = "commands\ndie\ngive\nhelp\nchangeclass\nsetcontrol\nplayerstat\n                                           page 1 of 1"; // Exactly 43 spaces to centre the "page 1 of 1" text
+commands[| 0] = "changeclass\ncommands\ncpp\ndie\nhelp\ngive\nplayerstat\nsetcontrol\n                                           page 1 of 1"; // Exactly 43 spaces to centre the "page 1 of 1" text
 
 help = ds_map_create();
 help[? ""] = "help: <String> command. Prints help for the given command.";
-help[? "help"] = "help: <String> command. Prints help for the given command.\nHow'd you get here if you didn't know how to use the help command?";
-
-help[? "give"] = "give: <Integer> itemId, <Integer> num.\nGives <num> of item <itemId>.\nIf <num> is not specified, default to 1";
-help[? "commands"] = "commands: <Integer> pageNum.\nLists the available commands on page pageNum of 1.\nIf <pageNum> is not specified or is not an integer, default to 1.";
 help[? "changeclass"] = "changeclass: <String> className.\nChanges the player's class to <className>";
-help[? "setcontrol"] = "setcontrol: <String> controlName, <String> controlKey.\n" + NOT_IMPLEMENTED_YET;
+help[? "commands"] = "commands: <Integer> pageNum.\nLists the available commands on page pageNum of 1.\nIf <pageNum> is not specified or is not an integer, default to 1.";
+help[? "cpp"] = "cpp: <Integer> amount. \nSets your class proficiency points to <value>";
 help[? "dummystat"] = "dummystat: <String> stat, <Float> val.\nChanges the value of <stat> of the dummy to <val>."
+help[? "give"] = "give: <Integer> itemId, <Integer> num.\nGives <num> of item <itemId>.\nIf <num> is not specified, default to 1";
+help[? "help"] = "help: <String> command. Prints help for the given command.\nHow'd you get here if you didn't know how to use the help command?";
 help[? "playerstat"] = "playerstat: <String> stat, <Float> val.\nChanges the value of <stat> of the player to <val>.\nClass cannot be changed using this command, use /changeclass instead."
+help[? "setcontrol"] = "setcontrol: <String> controlName, <String> controlKey.\n" + NOT_IMPLEMENTED_YET;
+
 
 
 // Get list of player stats

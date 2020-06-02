@@ -228,3 +228,9 @@ global.playerCPP = ds_map_create();
 for(var i = 0; i < array_length_1d(global.classList); ++i){
 	ds_map_add(global.playerCPP, global.classList[i], 0);
 }
+
+// Notify User-defined events
+enum notify_event {
+	damage = 15,
+	heal = 14
+}
