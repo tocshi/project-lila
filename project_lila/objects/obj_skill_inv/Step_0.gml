@@ -7,7 +7,11 @@ if(global.gui_state == 2 && global.pause == 1){
 	// check if a different item is already being dragged
 	if(global.holding && !hold_activated) {
 		exit;
-	} else {
+	} 
+	if(!has_skill_unlocked(name)) {
+		exit;
+	} 
+	else {
 		// Check that the mouse is being held on the items coords
 		if (mouse_check_button(mb_left)) {
 			if (!global.holding && position_meeting(mouse_x, mouse_y, id)) {
