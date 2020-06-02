@@ -227,11 +227,11 @@ switch(useSkill){
 }
 
 // use passive skills
-if(cd[findArrayIndex(skills,"Vitality Thief")+1] <= 0 && canUseSkill && equips[0] > 0 && statmap[? "hp"] < statmap[? "maxhp"]){
+if(cd[findArrayIndex(skills,"Vitality Thief")+1] <= 0 && canUseSkill && equips[0] > 0 && statmap[? "hp"] < statmap[? "maxhp"] && isInArray(skills,"Vitality Thief")){
 	if(v_thief_count >= 5){
 		apply_heal(self, 0.05, "missing_health")
 		v_thief_target = noone;
 		v_thief_count = 0;
-		cd[findArrayIndex(skills,"Vitality Thief")+1] = get_skill_data("Vitality Thief","cd")*room_speed;
+		set_skill_cd("Vitality Thief","");
 	}
 }

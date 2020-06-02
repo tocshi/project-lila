@@ -197,6 +197,6 @@ switch(useSkill){
 }
 
 // use passive skills
-if(isBlocking && cd[findArrayIndex(skills,"Greater Shielding")+1] <= 0){
+if(isBlocking && cd[findArrayIndex(skills,"Greater Shielding")+1] <= 0 && isInArray(skills,"Greater Shielding")){
 	applyBuff(self.id,99*room_speed,true,"Knight's Shield: Enhanced",buff_generic,false,-1,0,spr_buff_knights_shield_plus,"Lorem Ipsum",0);
 }
