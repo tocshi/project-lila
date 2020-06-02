@@ -6,7 +6,8 @@
     "children": [
         "304acfa0-65a3-4a60-b4f7-6b807b33fc71",
         "3af0b233-bb68-4ac6-ac07-5914f7968cf2",
-        "5827830a-79aa-4406-b00d-b9c252f3a742"
+        "5827830a-79aa-4406-b00d-b9c252f3a742",
+        "3856c38e-a137-4820-922a-3c0862ffdf33"
     ],
     "filterType": "GMScript",
     "folderName": "skillfunc",

@@ -1,4 +1,13 @@
-draw_sprite(true_sprite, 0, x, y);
+if(pressed && image_number > 2){
+	draw_sprite(sprite_index,2,x,y);
+}
+else if(hovered && image_number > 1){
+	draw_sprite(sprite_index,1,x,y);
+}
+else{
+	draw_self();
+}
+
 draw_set_halign(halign);
 draw_set_valign(valign);
 draw_set_font(font);

@@ -1,1 +1,1 @@
-player = global.player;
+

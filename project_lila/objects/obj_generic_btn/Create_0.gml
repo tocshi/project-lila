@@ -6,10 +6,10 @@ CENTRE = "Centre";
 TOP_LEFT = "Top Left";
 align = TOP_LEFT;
 
-sprite = spr_empty;
-true_sprite = spr_empty;
 width = 0;
 height = 0;
+pressed = false;
+hovered = false;
 
 halign = fa_left;
 valign = fa_top;
