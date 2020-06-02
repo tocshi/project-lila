@@ -3,9 +3,8 @@
 
 image_alpha = 0.5;
 origin_type = "";
-origin_slot = 0;
+origin_skill_key = -1;
 name = "";
 origin_instance = obj_item_inv;
 isDrag = true;
 delay = 0;
-show_debug_message("Drag created!");

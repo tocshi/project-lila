@@ -4,14 +4,14 @@ var y_coord = argument1 - camera_get_view_y(global.currentCamera);
 // item sprites are 64x64
 
 // check whether coordinates are in hotbar area (adjusting for box margins)
-if (x_coord - 1 >= global.equippedSkillBox[0, 0] 
-&& x_coord - 1 <= global.equippedSkillBox[0, 0] + 66 
-&& y_coord - 1 >= global.equippedSkillBox[0, 1]  
-&& y_coord - 1 <= global.equippedSkillBox[0, 1] + 8*66) {
+if (x_coord - 11 >= global.equippedSkillBox[0, 0] 
+&& x_coord - 11 <= global.equippedSkillBox[0, 0] + 8*86 
+&& y_coord - 11 >= global.equippedSkillBox[0, 1]  
+&& y_coord - 11 <= global.equippedSkillBox[0, 1] + 86) {
 		// Search slot position
 		var slot;
 		for (slot = 0; slot < 8; ++slot) {
-			if (y_coord < global.equippedSkillBox[slot, 1] - 1 || y_coord > global.equippedSkillBox[slot, 1] + 65) {
+			if (x_coord < global.equippedSkillBox[slot, 0] - 11 || x_coord > global.equippedSkillBox[slot, 0] + 75) {
 				continue;
 			} else {
 				break;

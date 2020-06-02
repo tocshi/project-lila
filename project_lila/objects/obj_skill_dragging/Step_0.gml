@@ -11,32 +11,34 @@ if(global.gui_state == 2 && global.pause == 1){
 		var slotinfo = getSkillSlotAtCoords(mouse_x, mouse_y);
 		var slot = slotinfo[0];
 		var area = slotinfo[1];
-		show_debug_message("origin: " + origin_type + string(origin_slot));
+		show_debug_message("origin: " + origin_type + string(origin_skill_key));
 		show_debug_message("destination: " + area + string(slot));
 	
 		if(origin_type == "Available") {
 			// Dropped on equip slot
 			if (area == "Equipped" && slot != -1) {
-				global.equippedSkillBox[slot] = name;
+				global.player.skills[slot] = name;
 				updateGUI();
 			}
 		}
 		else if(origin_type == "Equipped") {
 			// Dropped on equip slot
-			if (area == "Equipped" && slot != -1 && slot != origin_slot) {
-				// dropped to empty slot
-				if (global.equippedSkillBox[slot] == "") {
-					global.equippedSkillBox[slot] = name;
-					global.equippedSkillBox[origin_slot] = "";
-					updateGUI();
-				} else { 
-					// slot is occupied, swap items
-					global.equippedSkillBox[origin_slot] = global.equippedSkillBox[slot];
-					global.equippedSkillBox[slot] = name;
-					updateGUI();
+			if (area == "Equipped" && slot != -1) {
+				if (slot != origin_skill_key) {
+					// dropped to empty slot
+					if (global.player.skills[slot] == "") {
+						global.player.skills[slot] = name;
+						global.player.skills[origin_skill_key] = "";
+						updateGUI();
+					} else { 
+						// slot is occupied, swap items
+						global.player.skills[origin_skill_key] = global.player.skills[slot];
+						global.player.skills[slot] = name;
+						updateGUI();
+					}
 				}
 			} else {
-				global.equippedSkillBox[origin_slot] = "";
+				global.player.skills[origin_skill_key] = "";
 				updateGUI();
 			}
 		}
