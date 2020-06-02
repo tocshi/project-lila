@@ -66,9 +66,12 @@ with(all){
 instance_destroy(target);
 
 with(instance_create_layer(xx,yy,"Instances",classobj)){
-	restore_player_equips();
 	statmap[? "level"] = level;
 	statmap[? "xp"] = xp;
+	basestatmap[? "maxhp"] = 100 + statmap[? "level"]*10 + round(sqr(statmap[? "level"])/10);
+	basestatmap[? "hpregen"] = basestatmap[? "maxhp"]/100/60;
+	statmap[? "maxhp"] = basestatmap[? "maxhp"];
+	restore_player_equips();
 	statmap[? "hp"] = hp;
 	statmap[? "mp"] = mp;
 }
