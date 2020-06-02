@@ -4,7 +4,7 @@ y = user.y;
 image_alpha = 0.1 * sin(0.05 * time + (pi/2)) + 0.2;
 if((time-1)%60 != 0){exit;}
 
-if(user.statmap[? "mp"] < get_skill_data("Aegis Aura","mp")){
+if(user.statmap[? "mp"] < get_skill_data("Aegis Aura","mpcost")){
 	instance_destroy();
 	exit;
 }
