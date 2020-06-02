@@ -48,7 +48,7 @@ if (keyboard_check_pressed(vk_enter)) {
 			if (!string_is_int(arg1)) {
 				ds_list_add(lines, INCORRECT_USAGE + help[? "cpp"]);
 			} else {
-				global.playerCPP[? global.player.statmap[? "class"]] = arg1
+				global.playerCPP[? global.player.statmap[? "class"]] = real(arg1);
 				ds_list_add(lines, command + ": Player's CPP for class " + global.player.statmap[? "class"] + " set to " + arg1);
 			}
 			break;
