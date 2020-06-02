@@ -9,7 +9,7 @@ with (target) {
 		statmap[? "hp"] -= hpdamage;
 	}
 	else{statmap[? "hp"] -= damage;}
-	event_user(0);
+	event_user(notify_event.damage);
 }
 
 e_hp = target.statmap[? "hp"];
