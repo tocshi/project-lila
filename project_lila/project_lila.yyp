@@ -807,6 +807,14 @@
             }
         },
         {
+            "Key": "3856c38e-a137-4820-922a-3c0862ffdf33",
+            "Value": {
+                "id": "86b046c6-5c8a-42ee-af29-25792c350e66",
+                "resourcePath": "scripts\\unlock_skill\\unlock_skill.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "38a99b2d-7931-4074-909d-f7e7ae141790",
             "Value": {
                 "id": "0a3a758e-b911-4da4-a041-112018c00442",
@@ -2743,6 +2751,14 @@
             }
         },
         {
+            "Key": "d9125b0e-be86-492b-996b-cf30100c35ed",
+            "Value": {
+                "id": "6757dd39-577a-4723-9b80-7d362c75ca40",
+                "resourcePath": "sprites\\spr_skill_unlock_button\\spr_skill_unlock_button.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "dac7e3cd-e729-4712-9e88-ba1610dc0e9d",
             "Value": {
                 "id": "338e7702-c4f8-4238-aae5-e9b02715c953",
@@ -3308,6 +3324,7 @@
         "304acfa0-65a3-4a60-b4f7-6b807b33fc71",
         "3af0b233-bb68-4ac6-ac07-5914f7968cf2",
         "5827830a-79aa-4406-b00d-b9c252f3a742",
+        "3856c38e-a137-4820-922a-3c0862ffdf33",
         "41da96ef-1d80-4db2-b5d3-5d0753fd0858",
         "81181f12-58c8-4c2f-83c6-2cf2c12a60f5",
         "40acc53d-293d-43b8-b999-b999a8a8ee4c",

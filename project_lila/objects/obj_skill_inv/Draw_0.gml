@@ -1,7 +1,5 @@
 // grey out skill if it isn't unlocked
-//if(get_skill_data(name,"unlocked")){
-// TODO: after implementing unlock, uncomment the previous line, delete this line and the line after it
-if(true){
+if(has_skill_unlocked(name)){
 	draw_sprite_ext(sprite_index,image_index,x,y,1,1,0,c_white,1);
 }
 else{
