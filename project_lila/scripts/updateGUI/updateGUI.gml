@@ -80,6 +80,8 @@ switch(global.gui_state){
 
 			// Create items in equipped skill bar
 			for(var i = 0; i < 8; ++i){
+				show_debug_message("global.equippedSkillBox[" + string(i) + ",0] = " + string(global.equippedSkillBox[i,0]));
+				show_debug_message("global.equippedSkillBox[" + string(i) + ",1] = " + string(global.equippedSkillBox[i,1]));
 				var xx = x0 + global.equippedSkillBox[i,0];
 				var yy = y0 + global.equippedSkillBox[i,1];
 				var skillname = global.player.skills[i];
