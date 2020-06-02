@@ -1,4 +1,4 @@
 global.player.statmap[? "xp"] += statmap[? "xp"];
-global.player.statmap[? "cpp"] += statmap[? "cpp"];
+global.playerCPP[? global.player.statmap[? "class"]] += statmap[? "cpp"];
 instance_destroy(id);
 //this is where on death events happen

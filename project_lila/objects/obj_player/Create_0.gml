@@ -18,7 +18,6 @@ basestatmap = ds_map_create();
 
 statmap[? "level"] 			= 0;
 statmap[? "xp"] 			= 0;
-statmap[? "cpp"]			= 0;
 statmap[? "class"]			= "Debug";
 statmap[? "classlvl"]		= 10;
 statmap[? "classxp"] 		= 0;

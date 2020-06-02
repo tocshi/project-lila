@@ -128,7 +128,7 @@ if(global.pause){
 		draw_set_valign(fa_top);
 		draw_set_font(fnt_gui_medium);
 		draw_set_color(c_white);
-		draw_text(x0+1080,y0+370,"Class Proficiency: " + string(global.player.statmap[? "cpp"]));
+		draw_text(x0+1080,y0+370,"Class Proficiency: " + string(global.playerCPP[? global.player.statmap[? "class"]]));
 		
 		//debug
 		/*

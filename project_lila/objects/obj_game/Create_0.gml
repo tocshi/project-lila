@@ -75,7 +75,6 @@ global.playerItems = array_create(ds_list_size(global.itemData),0);
 // Player class data & equip loadouts
 global.playerEquipLoadouts = ds_map_create();
 global.playerItemBarLoadouts = ds_map_create();
-global.playerClassData = ds_map_create();
 
 //-----------------
 //   CONSTANTS
@@ -154,6 +153,13 @@ for(var i = 0; i < 3; ++i){
 // for skills and buff bar
 global.hpmpend = 540;
 
+// List of all the classes
+global.classList = [
+	"Knight",
+	"Archer",
+	"Mage",
+	"Rogue"];
+
 // Stats that equipped items are allowed to change
 global.equipStats = ds_list_create();
 ds_list_add(global.equipStats,
@@ -216,3 +222,9 @@ console = noone;
 item_desc_line_length = 28;
 item_desc_lines = ds_list_create();
 display_set_gui_size(1600,900);
+
+// Class Proficiency Points map
+global.playerCPP = ds_map_create();
+for(var i = 0; i < array_length_1d(global.classList); ++i){
+	ds_map_add(global.playerCPP, global.classList[i], 0);
+}

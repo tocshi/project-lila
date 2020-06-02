@@ -44,10 +44,10 @@ if(target == global.player){
 		}
 	}
 	for(var i = 0; i < array_length_1d(target.itemBar); ++i){
-	if(target.itemBar[i] > 0){
-		array_set(global.playerItemBarLoadouts[? prevclass],i,target.itemBar[i]);
+		if(target.itemBar[i] > 0){
+			array_set(global.playerItemBarLoadouts[? prevclass],i,target.itemBar[i]);
+		}
 	}
-}
 }
 camera_set_view_target(global.currentCamera,noone);
 camera_destroy(global.currentCamera);
