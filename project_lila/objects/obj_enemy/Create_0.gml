@@ -59,3 +59,4 @@ atkTimer = 0;
 statChange = true;
 
 buff = ds_list_create();
+if(instance_exists(global.player)){event_perform(ev_other,ev_room_start);}
