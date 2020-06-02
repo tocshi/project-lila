@@ -1,19 +1,9 @@
-/// @description Notified hit
+/// @description Calculate dps
+seconds = (current_time - first_hit)/1000;
 
-var hitDmg = MAX_HEALTH - statmap[? "hp"];
-statmap[? "hp"] = MAX_HEALTH;
-
-// If dummy timed out
-if (current_time - last_hit > TIMEOUT) {
-	event_user(events.reset_dps);
+var divisor = max(seconds,1);
+// Avoid division by 0 when dummy hasn't been hit yet
+if (seconds == 0) {
+	divisor = 1;
 }
-last_hit = current_time;
-
-if (hitDmg > 0) {
-	damage += hitDmg;
-}
-event_user(events.calculate_dps);
-
-if (display = noone) {
-	event_user(events.create_text_box);	
-}
+dps = damage / divisor;
