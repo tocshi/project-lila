@@ -2,6 +2,7 @@
 // Save items
 global.lastClass = object_index;
 var class = statmap[? "class"];
+// Save equip and itembar
 if(!ds_map_exists(global.playerEquipLoadouts,class)) {
 	global.playerEquipLoadouts[? class] = array_create(array_length_1d(equips));
 }
@@ -34,6 +35,14 @@ else{
 	global.playerSavedStats[? "hp"]			= statmap[? "maxhp"];
 	global.playerSavedStats[? "mp"]			= statmap[? "maxmp"];
 	global.playerSavedStats[? "hpshield"]	= 0;
+}
+
+// Save Skills
+if(!ds_map_exists(global.playerSkillLoadouts,class)) {
+	global.playerSkillLoadouts[? class] = array_create(array_length_1d(skills));
+}
+for(var i = 0; i < array_length_1d(skills); ++i){
+	array_set(global.playerSkillLoadouts[? class],i,skills[i]);
 }
 
 // Save Buffs

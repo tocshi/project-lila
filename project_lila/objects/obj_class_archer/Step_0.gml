@@ -4,8 +4,8 @@ if(global.pause){exit;}
 // Use Skill
 switch(useSkill){
 	case "Spread Shot":
-	statmap[? "mp"] -= get_skill_data(useSkill,"mpcost");
-	cd[findArrayIndex(skills,useSkill)+1] = get_skill_data(useSkill,"cd")*room_speed;
+	use_skill_mp(useSkill,"")
+	set_skill_cd(useSkill,"");
 	cancel_basic_attack();
 	
 	direction = point_direction(x,y,mouse_x,mouse_y)+180;
@@ -38,8 +38,8 @@ switch(useSkill){
 	break;
 	
 	case "Move Like Wind":
-	statmap[? "mp"] -= get_skill_data(useSkill,"mpcost");
-	cd[findArrayIndex(skills,useSkill)+1] = get_skill_data(useSkill,"cd")*room_speed;
+	use_skill_mp(useSkill,"")
+	set_skill_cd(useSkill,"");
 	var effect = instance_create_layer(x,y,"Instances",obj_debug_indicator);
 	effect.vspeed = -1;
 	
@@ -58,8 +58,8 @@ switch(useSkill){
 	if(point_distance(mouse_x,mouse_y,target.x,target.y) >= 64){
 		exit;
 	}
-	statmap[? "mp"] -= get_skill_data(useSkill,"mpcost");
-	cd[findArrayIndex(skills,useSkill)+1] = get_skill_data(useSkill,"cd")*room_speed;
+	use_skill_mp(useSkill,"")
+	set_skill_cd(useSkill,"");
 	cancel_basic_attack();
 	atkTimer = 21;
 	canAttack = false;
@@ -69,8 +69,8 @@ switch(useSkill){
 	break;
 	
 	case "Mantle of Titania":
-	statmap[? "mp"] -= get_skill_data(useSkill,"mpcost");
-	cd[findArrayIndex(skills,useSkill)+1] = get_skill_data(useSkill,"cd")*room_speed;
+	use_skill_mp(useSkill,"")
+	set_skill_cd(useSkill,"");
 	cancel_basic_attack();
 	atkTimer = 48;
 	canAttack = false;
@@ -84,16 +84,16 @@ switch(useSkill){
 	break;
 	
 	case "Gate of Wind":
-	statmap[? "mp"] -= get_skill_data(useSkill,"mpcost");
-	cd[findArrayIndex(skills,useSkill)+1] = get_skill_data(useSkill,"cd")*room_speed;
+	use_skill_mp(useSkill,"")
+	set_skill_cd(useSkill,"");
 	isMoving = false;
 	highRegenThreshold = 0;
 	instance_create_layer(mouse_x,mouse_y,"Attacks",obj_skill_gate_of_wind);
 	break;
 	
 	case "Arrow Rain":
-	statmap[? "mp"] -= get_skill_data(useSkill,"mpcost");
-	cd[findArrayIndex(skills,useSkill)+1] = get_skill_data(useSkill,"cd")*room_speed;
+	use_skill_mp(useSkill,"")
+	set_skill_cd(useSkill,"");
 	cancel_basic_attack();
 	isMoving = false;
 	canMove = false;
@@ -115,8 +115,8 @@ switch(useSkill){
 		var bless_target = instance_nearest(mouse_x,mouse_y,obj_ally);
 
 		if((point_distance(mouse_x,mouse_y,bless_target.x,bless_target.y) <= 128) && (point_distance(x,y,bless_target.x,bless_target.y) <= 450)){
-			statmap[? "mp"] -= get_skill_data(useSkill,"mpcost");
-			cd[findArrayIndex(skills,useSkill)+1] = (get_skill_data(useSkill,"cd")*room_speed)/2;
+			use_skill_mp(useSkill,"")
+			set_skill_cd(useSkill,(get_skill_data(useSkill,"cd")*room_speed)/2);
 			applyBuff(bless_target,10*room_speed,true,"Fae Blessing",buff_generic,false,-1,0,spr_buff_TODO,"Lorem Ipsum",0);
 		}
 		else{exit;}
@@ -124,8 +124,8 @@ switch(useSkill){
 	break;
 	
 	case "Tornado Shot":
-	statmap[? "mp"] -= get_skill_data(useSkill,"mpcost");
-	cd[findArrayIndex(skills,useSkill)+1] = get_skill_data(useSkill,"cd")*room_speed;
+	use_skill_mp(useSkill,"")
+	set_skill_cd(useSkill,"");
 	cancel_basic_attack();
 	atkTimer = 30;
 	canAttack = false;
@@ -151,7 +151,7 @@ if(useSkill != "" && isInArray(skills,"Unyielding Arrows")){
 	applyBuff(self,180,true,"Unyielding Arrows",buff_generic,false,1,10,spr_buff_unyielding,"Grants 2% crit chance per stack.",0);
 }
 if(cd[findArrayIndex(skills,"Fae Blessing")+1] <= 0 && equips[0] > 0 && statmap[? "hp"] < statmap[? "maxhp"]*0.3){
-	cd[findArrayIndex(skills,useSkill)+1] = get_skill_data(useSkill,"cd")*room_speed;
+	set_skill_cd(useSkill,"");
 	applyBuff(self,10*room_speed,true,"Fae Blessing",buff_generic,false,-1,0,spr_buff_TODO,"Lorem Ipsum",0);
 }
 

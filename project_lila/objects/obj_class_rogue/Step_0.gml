@@ -37,8 +37,8 @@ switch(useSkill){
 	}
 	if((point_distance(mouse_x,mouse_y,s_step_target.x,s_step_target.y) <= 128) && (point_distance(x,y,s_step_target.x,s_step_target.y) <= 440)){
 		cancel_basic_attack();
-		statmap[? "mp"] -= get_skill_data(useSkill,"mpcost");
-		cd[findArrayIndex(skills,useSkill)+1] = get_skill_data(useSkill,"cd")*room_speed;
+		use_skill_mp(useSkill,"")
+		set_skill_cd(useSkill,"");
 		atkTimer = 60;
 		canMove = false;
 		canAttack = false;
@@ -51,8 +51,8 @@ switch(useSkill){
 	break;
 	
 	case "Vicious Venom":
-	statmap[? "mp"] -= get_skill_data(useSkill,"mpcost");
-	cd[findArrayIndex(skills,useSkill)+1] = get_skill_data(useSkill,"cd")*room_speed;
+	use_skill_mp(useSkill,"")
+	set_skill_cd(useSkill,"");
 	with(obj_ally_shadow_clone){
 		if(user == other.id){
 			var effect = instance_create_layer(x,y,"Instances",obj_debug_indicator);
@@ -75,14 +75,14 @@ switch(useSkill){
 	
 	if(hasBuff(self.id,"Enable Shock Trap")){
 		removeBuff(self.id,"Enable Shock Trap",false);
-		cd[findArrayIndex(skills,useSkill)+1] = get_skill_data(useSkill,"cd")*room_speed;
+		set_skill_cd(useSkill,"");
 		with(instance_create_layer(xx,yy,"Ground",obj_skill_rogue_trap)){
 			sprite_index = spr_shock_trap;
 			user = other.id;
 		}
 	}
 	else{
-		cd[findArrayIndex(skills,useSkill)+1] = 0.8*room_speed;
+		set_skill_cd(useSkill,0.8*room_speed);
 		applyBuff(self.id,180,false,"Enable Shock Trap",buff_shock_trap,false,-1,0,spr_buff_electrified,"Lorem Ipsum",0);
 		with(instance_create_layer(xx,yy,"Terrain",obj_skill_rogue_trap)){
 			sprite_index = spr_poison_trap;
@@ -90,7 +90,7 @@ switch(useSkill){
 		}
 		set_skill_data("Dual Traps","sprmap",3);
 	}		
-	statmap[? "mp"] -= get_skill_data(useSkill,"mpcost");
+	use_skill_mp(useSkill,"")
 	atkTimer = 10;
 	canMove = false;
 	canAttack = false;
@@ -99,8 +99,8 @@ switch(useSkill){
 	break;
 	
 	case "Triple Fangs":
-	statmap[? "mp"] -= get_skill_data(useSkill,"mpcost");
-	cd[findArrayIndex(skills,useSkill)+1] = get_skill_data(useSkill,"cd")*room_speed;
+	use_skill_mp(useSkill,"")
+	set_skill_cd(useSkill,"");
 	with(obj_ally_shadow_clone){
 		if(user == other.id){
 			cancel_basic_attack();
@@ -131,8 +131,8 @@ switch(useSkill){
 	s_slicer_target = instance_nearest(mouse_x,mouse_y,obj_enemy);
 	if((point_distance(mouse_x,mouse_y,s_slicer_target.x,s_slicer_target.y) <= 128) && (point_distance(x,y,s_slicer_target.x,s_slicer_target.y) <= 400)){
 		cancel_basic_attack();
-		statmap[? "mp"] -= get_skill_data(useSkill,"mpcost");
-		cd[findArrayIndex(skills,useSkill)+1] = get_skill_data(useSkill,"cd")*room_speed;
+		use_skill_mp(useSkill,"")
+		set_skill_cd(useSkill,"");
 		atkTimer = 20;
 		canMove = false;
 		canAttack = false;
@@ -159,8 +159,8 @@ switch(useSkill){
 	break;
 	
 	case "Living Shadow":
-	statmap[? "mp"] -= get_skill_data(useSkill,"mpcost");
-	cd[findArrayIndex(skills,useSkill)+1] = get_skill_data(useSkill,"cd")*room_speed;
+	use_skill_mp(useSkill,"")
+	set_skill_cd(useSkill,"");
 	with(instance_create_layer(x,y,"Instances",obj_ally_shadow_clone)){
 		sprite_index = other.sprite_index;
 		image_blend = c_gray;
@@ -217,8 +217,8 @@ switch(useSkill){
 			change_all_enemy_target(self);
 		}
 	}
-	statmap[? "mp"] -= get_skill_data(useSkill,"mpcost");
-	cd[findArrayIndex(skills,useSkill)+1] = get_skill_data(useSkill,"cd")*room_speed;
+	use_skill_mp(useSkill,"")
+	set_skill_cd(useSkill,"");
 	highRegenThreshold = 0;
 	break;
 

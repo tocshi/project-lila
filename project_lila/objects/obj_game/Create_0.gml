@@ -20,6 +20,11 @@ global.dragging = false;
 // Whether an item is currently being hovered over. -1 for no item.
 global.inv_item_hover = -1;
 global.inv_item_preview_lock = -1;
+// Whether a skill is currently being hovered over. "" for no skill.
+// Sets skill unlock button to display info
+global.inv_skill_hover = "";
+global.inv_skill_preview_lock = "";
+global.skill_unlock_button = "";
 
 // cursor state
 global.cursor_state = 0;
@@ -72,9 +77,10 @@ for(var i = 0; i < ds_list_size(global.skillData); ++i){
 global.playerInv = array_create(100, 0);
 global.playerItems = array_create(ds_list_size(global.itemData),0);
 
-// Player class data & equip loadouts
+// Player class data & equip & loadouts
 global.playerEquipLoadouts = ds_map_create();
 global.playerItemBarLoadouts = ds_map_create();
+global.playerSkillLoadouts = ds_map_create();
 
 //-----------------
 //   CONSTANTS
@@ -221,6 +227,8 @@ console = noone;
 // gui variables
 item_desc_line_length = 28;
 item_desc_lines = ds_list_create();
+skill_desc_line_length = 42;
+skill_desc_lines = ds_list_create();
 display_set_gui_size(1600,900);
 
 // Class Proficiency Points map

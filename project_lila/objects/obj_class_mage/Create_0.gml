@@ -20,7 +20,7 @@ i_salvo_coords[5,1] = -48;
 i_salvo_targets = ds_list_create();
 
 skill_sprite = spr_skill_icons_mage;
-
+/*
 skills[0] = "Fireball";
 skills[1] = "Blizzard";
 skills[2] = "Chain Lightning";
@@ -28,4 +28,4 @@ skills[3] = "Spatial Leap";
 skills[4] = "Meditative Training";
 skills[5] = "Icicle Salvo";
 skills[6] = "Lightning Rod";
-skills[7] = "Primordial Mana";
+skills[7] = "Primordial Mana";*/

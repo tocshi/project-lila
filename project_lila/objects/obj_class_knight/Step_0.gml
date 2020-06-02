@@ -4,8 +4,8 @@ if(global.pause){exit;}
 // Use Skill
 switch(useSkill){
 	case "Empowered Strike":
-	statmap[? "mp"] -= get_skill_data(useSkill,"mpcost");
-	cd[findArrayIndex(skills,useSkill)+1] = get_skill_data(useSkill,"cd")*room_speed;
+	use_skill_mp(useSkill,"")
+	set_skill_cd(useSkill,"");
 	var effect = instance_create_layer(x,y,"Instances",obj_debug_indicator);
 	effect.vspeed = -1;
 	
@@ -17,8 +17,8 @@ switch(useSkill){
 	var range_check = instance_nearest(x,y,obj_enemy);
 	if(distance_to_object(range_check) > 300){exit;}
 	
-	statmap[? "mp"] -= get_skill_data(useSkill,"mpcost");
-	cd[findArrayIndex(skills,useSkill)+1] = get_skill_data(useSkill,"cd")*room_speed;
+	use_skill_mp(useSkill,"")
+	set_skill_cd(useSkill,"");
 	var effect = instance_create_layer(x,y,"Instances",obj_debug_indicator);
 	effect.vspeed = -1;
 	
@@ -34,8 +34,8 @@ switch(useSkill){
 	break;
 	
 	case "Shield Charge":
-	statmap[? "mp"] -= get_skill_data(useSkill,"mpcost");
-	cd[findArrayIndex(skills,useSkill)+1] = get_skill_data(useSkill,"cd")*room_speed;
+	use_skill_mp(useSkill,"")
+	set_skill_cd(useSkill,"");
 	cancel_basic_attack();
 	ds_list_clear(scList);
 	atkTimer = 30;
@@ -62,8 +62,8 @@ switch(useSkill){
 	break;
 	
 	case "Roundslash":
-	statmap[? "mp"] -= get_skill_data(useSkill,"mpcost");
-	cd[findArrayIndex(skills,useSkill)+1] = get_skill_data(useSkill,"cd")*room_speed;
+	use_skill_mp(useSkill,"")
+	set_skill_cd(useSkill,"");
 	cancel_basic_attack();
 	atkTimer = 30;
 	canMove = false;
@@ -83,8 +83,8 @@ switch(useSkill){
 	break;
 	
 	case "Guardian":
-	statmap[? "mp"] -= get_skill_data(useSkill,"mpcost");
-	cd[findArrayIndex(skills,useSkill)+1] = get_skill_data(useSkill,"cd")*room_speed;
+	use_skill_mp(useSkill,"")
+	set_skill_cd(useSkill,"");
 	cancel_basic_attack();
 	
 	if(instance_exists(obj_ally)){
@@ -113,7 +113,7 @@ switch(useSkill){
 	break;
 	
 	case "Protective Footwork":
-	statmap[? "mp"] -= get_skill_data(useSkill,"mpcost");
+	use_skill_mp(useSkill,"")
 	cancel_basic_attack();
 	
 	direction = point_direction(x,y,mouse_x,mouse_y)+180;
@@ -121,18 +121,18 @@ switch(useSkill){
 	
 	if(hasBuff(self.id,"Protective Footwork II")){
 		removeBuff(self.id,"Protective Footwork II",false);
-		cd[findArrayIndex(skills,useSkill)+1] = get_skill_data(useSkill,"cd")*room_speed;
+		set_skill_cd(useSkill,"");
 		protective_footwork_mod = 400;
 	}
 	else if(hasBuff(self.id,"Protective Footwork I")){
 		applyBuff(self.id,180,false,"Protective Footwork II",buff_protective_footwork,false,-1,0,spr_buff_protective_footwork2,"Lorem Ipsum",0);
 		removeBuff(self.id,"Protective Footwork I",false);
-		cd[findArrayIndex(skills,useSkill)+1] = 0.8*room_speed;
+		set_skill_cd(useSkill,0.8*room_speed);
 		protective_footwork_mod = 240;
 		set_skill_data(useSkill,"sprmap",8);
 	}
 	else{
-		cd[findArrayIndex(skills,useSkill)+1] = 0.8*room_speed;
+		set_skill_cd(useSkill,0.8*room_speed);
 		applyBuff(self.id,180,false,"Protective Footwork I",buff_protective_footwork,false,-1,0,spr_buff_protective_footwork1,"Lorem Ipsum",0);
 		protective_footwork_mod = 160;
 		set_skill_data(useSkill,"sprmap",7);
@@ -149,8 +149,8 @@ switch(useSkill){
 	break;
 	
 	case "Shield Bash":
-	statmap[? "mp"] -= get_skill_data(useSkill,"mpcost");
-	cd[findArrayIndex(skills,useSkill)+1] = get_skill_data(useSkill,"cd")*room_speed;
+	use_skill_mp(useSkill,"")
+	set_skill_cd(useSkill,"");
 	cancel_basic_attack();
 	isMoving = false;
 	canMove = false;
@@ -189,7 +189,7 @@ switch(useSkill){
 		user = other.id;
 	}
 	set_skill_data(useSkill,"sprmap",11);
-	cd[findArrayIndex(skills,useSkill)+1] = get_skill_data(useSkill,"cd")*room_speed;
+	set_skill_cd(useSkill,"");
 	break;
 
 	default:

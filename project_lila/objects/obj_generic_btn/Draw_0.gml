@@ -14,6 +14,7 @@ draw_set_font(font);
 draw_set_color(color);
 draw_set_alpha(alpha);
 
+//var drawn_text = text;
 if (is_outlined) {
 	draw_text_outlined(x + left_offset, y + top_offset, outline_color, color, text);
 } else {

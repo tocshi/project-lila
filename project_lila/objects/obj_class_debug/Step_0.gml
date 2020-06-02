@@ -4,53 +4,53 @@ if(global.pause){exit;}
 // Use Skill
 switch(useSkill){
 	case "NAME":
-	statmap[? "mp"] -= get_skill_data(useSkill,"mpcost");
-	cd[findArrayIndex(skills,useSkill)+1] = get_skill_data(useSkill,"cd")*room_speed;
+	use_skill_mp(useSkill,"")
+	set_skill_cd(useSkill,"");
 	break;
 	
 	case "NAME2":
-	statmap[? "mp"] -= get_skill_data(useSkill,"mpcost");
-	cd[findArrayIndex(skills,useSkill)+1] = get_skill_data(useSkill,"cd")*room_speed;
+	use_skill_mp(useSkill,"")
+	set_skill_cd(useSkill,"");
 	break;
 	
 	case "NAME3":
-	statmap[? "mp"] -= get_skill_data(useSkill,"mpcost");
-	cd[findArrayIndex(skills,useSkill)+1] = get_skill_data(useSkill,"cd")*room_speed;
+	use_skill_mp(useSkill,"")
+	set_skill_cd(useSkill,"");
 	break;
 	
 	case "NAME4":
-	statmap[? "mp"] -= get_skill_data(useSkill,"mpcost");
-	cd[findArrayIndex(skills,useSkill)+1] = get_skill_data(useSkill,"cd")*room_speed;
+	use_skill_mp(useSkill,"")
+	set_skill_cd(useSkill,"");
 	break;
 	
 	case "NAME5":
-	statmap[? "mp"] -= get_skill_data(useSkill,"mpcost");
-	cd[findArrayIndex(skills,useSkill)+1] = get_skill_data(useSkill,"cd")*room_speed;
+	use_skill_mp(useSkill,"")
+	set_skill_cd(useSkill,"");
 	break;
 	
 	case "NAME6":
-	statmap[? "mp"] -= get_skill_data(useSkill,"mpcost");
-	cd[findArrayIndex(skills,useSkill)+1] = get_skill_data(useSkill,"cd")*room_speed;
+	use_skill_mp(useSkill,"")
+	set_skill_cd(useSkill,"");
 	break;
 	
 	case "NAME7":
-	statmap[? "mp"] -= get_skill_data(useSkill,"mpcost");
-	cd[findArrayIndex(skills,useSkill)+1] = get_skill_data(useSkill,"cd")*room_speed;
+	use_skill_mp(useSkill,"")
+	set_skill_cd(useSkill,"");
 	break;
 	
 	case "NAME8":
-	statmap[? "mp"] -= get_skill_data(useSkill,"mpcost");
-	cd[findArrayIndex(skills,useSkill)+1] = get_skill_data(useSkill,"cd")*room_speed;
+	use_skill_mp(useSkill,"")
+	set_skill_cd(useSkill,"");
 	break;
 	
 	case "NAME9":
-	statmap[? "mp"] -= get_skill_data(useSkill,"mpcost");
-	cd[findArrayIndex(skills,useSkill)+1] = get_skill_data(useSkill,"cd")*room_speed;
+	use_skill_mp(useSkill,"")
+	set_skill_cd(useSkill,"");
 	break;
 	
 	case "NAME0":
-	statmap[? "mp"] -= get_skill_data(useSkill,"mpcost");
-	cd[findArrayIndex(skills,useSkill)+1] = get_skill_data(useSkill,"cd")*room_speed;
+	use_skill_mp(useSkill,"")
+	set_skill_cd(useSkill,"");
 	break;
 
 	default:

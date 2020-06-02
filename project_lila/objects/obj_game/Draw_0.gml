@@ -65,7 +65,7 @@ if(global.pause){
 			global.inv_item_hover = instance_position(mouse_x,mouse_y,obj_item_inv).itemid;
 		}
 		else{
-			if(mouse_check_button_pressed(mb_left)){
+			if(mouse_check_button_pressed(mb_left) && !position_meeting(mouse_x,mouse_y,obj_generic_btn)){
 				global.inv_item_preview_lock = -1;
 			}
 			global.inv_item_hover = -1;
@@ -130,19 +130,11 @@ if(global.pause){
 		draw_set_color(c_white);
 		draw_text(x0+1080,y0+370,"Class Proficiency: " + string(global.playerCPP[? global.player.statmap[? "class"]]));
 		
-		//debug
-		/*
-		var skill_sprite = asset_get_index("spr_skill_icons_" + string_lower(global.player.statmap[? "class"]));
+		// draw skill key overlay
 		for(var i = 0; i < 8; ++i){
 			var xx = x0 + global.equippedSkillBox[i,0];
 			var yy = y0 + global.equippedSkillBox[i,1];
-			if(global.player.skills[i] != ""){
-				draw_sprite(skill_sprite,get_skill_data(global.player.skills[i],"sprmap"),xx,yy);
-			}
 			draw_set_alpha(0.7);
-			draw_set_halign(fa_left);
-			draw_set_valign(fa_top);
-			draw_set_font(fnt_gui_medium);
 			draw_set_color(c_white);
 			draw_sprite(spr_skill_overlay,0,xx,yy);
 			var keystring = "key_skill" + string(i);
@@ -172,22 +164,70 @@ if(global.pause){
 			draw_text(xx+33,yy,key);
 			draw_set_alpha(1);
 		}
-		// USE THIS FOR GENERATING SKILL INSTANCES
-		for(var i = 0; i < 24; ++i){
-			var xx = x0 + global.availableSkillBox[i,0];
-			var yy = y0 + global.availableSkillBox[i,1];
-			var found = false;
-			for(var j = 0; j < ds_list_size(global.skillData); ++j){
-				if(ds_map_find_value(global.skillData[| j],"class") == global.player.statmap[? "class"]
-				&& ds_map_find_value(global.skillData[| j],"slot") == i){
-					draw_sprite(skill_sprite,ds_map_find_value(global.skillData[| j],"sprmap"),xx,yy);
-					found = true;
+		
+		// check for hover
+		if(instance_position(mouse_x,mouse_y,obj_skill_inv) != noone){
+			global.inv_skill_hover = instance_position(mouse_x,mouse_y,obj_skill_inv).name;
+		}
+		else if(mouse_check_button_pressed(mb_left) && !position_meeting(mouse_x,mouse_y,obj_generic_btn)){
+			global.inv_skill_preview_lock = "";
+		}
+		
+		// draw skill preview
+		if(global.inv_skill_hover != "" || global.inv_skill_preview_lock != ""){
+			var preview_skillname = global.inv_skill_hover;
+			if(global.inv_skill_preview_lock != ""){preview_skillname = global.inv_skill_preview_lock;}
+			// set skill unlock button
+			global.skill_unlock_button = preview_skillname;
+			// draw skill name
+			draw_set_halign(fa_left);
+			draw_set_valign(fa_top);
+			draw_set_font(fnt_gui_medium);
+			var width_scale = min(1,32/string_length(preview_skillname));
+			draw_text_outlined_transformed(x0+900,y0+483,c_black,c_white,preview_skillname,width_scale,1,0);
+			// draw skill description
+			draw_set_font(fnt_gui_small);
+			draw_set_color(c_black);
+			// draw skill parameters
+			draw_text(x0+1268, y0+552, "Type:");
+			draw_text(x0+1268, y0+572, get_skill_data(preview_skillname,"type"));
+			draw_text(x0+1268, y0+602, "MP Cost:");
+			draw_set_color(c_navy);
+			draw_text(x0+1268, y0+622, get_skill_data(preview_skillname,"mpcost"));
+			draw_set_color(c_black);
+			draw_text(x0+1268, y0+652, "Cooldown:");
+			var cdtext = " seconds";
+			if(get_skill_data(preview_skillname,"cd") == 1){cdtext = " second";}
+			draw_text(x0+1268, y0+672, string(get_skill_data(preview_skillname,"cd")) + cdtext);
+			//draw_text(x0+1268, y0+672, "Variants:");
+			//draw_text(x0+1268, y0+692, <variants here>);
+			// Trim characters past item_desc_line_length chars
+			ds_list_clear(skill_desc_lines);
+			skill_desc_lines[| 0] = get_skill_data(preview_skillname,"desc");
+			for (var i = 0; i < ds_list_size(skill_desc_lines); i++) {
+				var str = skill_desc_lines[| i];
+				if (string_length(str) > skill_desc_line_length) {
+					// line separaration logic
+					var cutoff = skill_desc_line_length;
+					for(var j = skill_desc_line_length; j >=0; --j){
+						if(string_char_at(str,j) == " " || string_char_at(str,j) == "-"){
+							cutoff = j;
+							break;
+						}
+					}
+					var left = string_copy(str, 1, cutoff);
+					var right = string_copy(str, cutoff + 1, string_length(str) - cutoff);
+					skill_desc_lines[| i] = left;
+					ds_list_insert(skill_desc_lines, i + 1, right);
 				}
 			}
-			if(!found){
-				draw_sprite(spr_empty,0,xx,yy); // USE SPR_NO_SKILL WHEN SPRITE EXISTS IN PROJECT
+			// draw the actual text
+			var y_offset = 0;
+			for (var i = 0; i < ds_list_size(skill_desc_lines); ++i) {
+				draw_text(x0+890, y0+552+y_offset, skill_desc_lines[| i]);
+				y_offset += 20;
 			}
-		}*/
+		}
 		break;
 	}
 }

@@ -12,6 +12,7 @@ switch(global.gui_state){
 		instance_destroy(obj_text_inv);
 		instance_destroy(obj_context_menu);
 		instance_destroy(obj_context_menu_button);
+		instance_destroy(obj_generic_btn);
 		
 		// Make gui elements
 		for(var i = 0; i < 12; ++i){
@@ -53,6 +54,7 @@ switch(global.gui_state){
 			instance_destroy(obj_text_inv);
 			instance_destroy(obj_context_menu);
 			instance_destroy(obj_context_menu_button);
+			instance_destroy(obj_generic_btn);
 			
 			// Create skill grid items
 			for(var i = 0; i < 24; ++i){
@@ -62,6 +64,10 @@ switch(global.gui_state){
 				for(var j = 0; j < ds_list_size(global.skillData); ++j){
 					if(ds_map_find_value(global.skillData[| j],"class") == global.player.statmap[? "class"]
 					&& ds_map_find_value(global.skillData[| j],"slot") == i){
+						if(i == 0){
+							// set skill hover to first skill
+							global.inv_skill_hover = ds_map_find_value(global.skillData[| j],"name");
+						}
 						with(instance_create_layer(xx, yy, "GUI", obj_skill_inv)){
 							type = AVAILABLE;
 							name = ds_map_find_value(global.skillData[| j],"name");
@@ -92,6 +98,20 @@ switch(global.gui_state){
 						image_index = get_skill_data(skillname,"sprmap");
 					}
 				}
+			}
+			
+			// Create unlock skill button
+			with(instance_create_layer(x0+1261,y0+478,"GUIPopUpButton",obj_generic_btn)){
+				sprite_index = spr_skill_unlock_button;
+				mask_index = spr_skill_unlock_button;
+				type = "Skill Unlock";
+				align = TOP_LEFT;
+				font = fnt_hpmp;
+				halign = fa_center;
+				valign = fa_center;
+				left_offset = sprite_width/2;
+				top_offset = sprite_height/2;
+				is_outlined = true;
 			}
 			break;
 }

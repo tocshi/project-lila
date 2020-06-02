@@ -3,30 +3,31 @@ y = camera_get_view_y(global.currentCamera) + camera_get_view_height(global.curr
 
 var confirm_menu = instance_create_layer(x, y, "GUIPopUp", obj_confirmation_menu);
 confirm_menu.text = argument2;
-var btn_yes = instance_create_layer(x - confirm_menu.BTN_SEP, y + confirm_menu.BTN_DEPTH, "GUIPopUpButton", obj_generic_btn);
 
-var btn_no = instance_create_layer(x + confirm_menu.BTN_SEP, y + confirm_menu.BTN_DEPTH, "GUIPopUpButton", obj_generic_btn);
+with(instance_create_layer(x - confirm_menu.BTN_SEP, y + confirm_menu.BTN_DEPTH, "GUIPopUpButton", obj_generic_btn)){
+	type = "Confirmation";
+	function = argument0;
+	align = CENTRE;
+	width = 200;
+	height = 50;
+	halign = fa_center;
+	valign = fa_center;
+	left_offset = 0;
+	text = "Yes";
+	sprite_index = spr_confirmation_button;
+	event_perform(ev_other,ev_room_start);
+}
 
-btn_yes.type = "Confirmation";
-btn_yes.function = argument0;
-btn_yes.align = btn_yes.CENTRE;
-btn_yes.width = 200;
-btn_yes.height = 50;
-btn_yes.halign = fa_center;
-btn_yes.valign = fa_center;
-btn_yes.left_offset = 0;
-btn_yes.text = "Yes";
-btn_yes.alarm[0] = 1;
-btn_yes.sprite_index = spr_confirmation_button;
-
-btn_no.type = "Confirmation";
-btn_no.function = argument1;
-btn_no.align = btn_no.CENTRE;
-btn_no.width = 200;
-btn_no.height = 50;
-btn_no.halign = fa_center;
-btn_no.valign = fa_center;
-btn_no.left_offset = 0;
-btn_no.text = "No";
-btn_no.alarm[0] = 1;
-btn_no.sprite_index = spr_confirmation_button;
+with(instance_create_layer(x + confirm_menu.BTN_SEP, y + confirm_menu.BTN_DEPTH, "GUIPopUpButton", obj_generic_btn)){
+	type = "Confirmation";
+	function = argument1;
+	align = CENTRE;
+	width = 200;
+	height = 50;
+	halign = fa_center;
+	valign = fa_center;
+	left_offset = 0;
+	text = "No";
+	sprite_index = spr_confirmation_button;
+	event_perform(ev_other,ev_room_start);
+}

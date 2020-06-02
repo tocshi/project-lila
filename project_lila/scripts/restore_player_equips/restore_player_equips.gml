@@ -12,3 +12,8 @@ if(ds_map_exists(global.playerEquipLoadouts,class)){
 if(ds_map_exists(global.playerItemBarLoadouts,class)) {
 	global.player.itemBar = global.playerItemBarLoadouts[? class];
 }
+
+// restore equipped skills
+if(ds_map_exists(global.playerSkillLoadouts,class)) {
+	global.player.skills = global.playerSkillLoadouts[? class];
+}

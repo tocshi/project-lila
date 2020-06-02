@@ -37,16 +37,22 @@ switch(class){
 if(target == global.player){
 	if(!ds_map_exists(global.playerEquipLoadouts,prevclass)){global.playerEquipLoadouts[? prevclass] = array_create(array_length_1d(target.equips));}
 	if(!ds_map_exists(global.playerItemBarLoadouts,prevclass)){global.playerItemBarLoadouts[? prevclass] = array_create(array_length_1d(target.itemBar));}
+	if(!ds_map_exists(global.playerSkillLoadouts,prevclass)){global.playerSkillLoadouts[? prevclass] = array_create(array_length_1d(target.skills));}
 	for(var i = 0; i < array_length_1d(target.equips); ++i){
 		if(target.equips[i] > 0){
 			array_set(global.playerEquipLoadouts[? prevclass],i,target.equips[i]);
 			unequipItem(target,target.equips[i]);
 		}
 	}
+	// save itembar
 	for(var i = 0; i < array_length_1d(target.itemBar); ++i){
 		if(target.itemBar[i] > 0){
 			array_set(global.playerItemBarLoadouts[? prevclass],i,target.itemBar[i]);
 		}
+	}
+	// save skills
+	for(var i = 0; i < array_length_1d(target.skills); ++i){
+		array_set(global.playerSkillLoadouts[? prevclass],i,target.skills[i]);
 	}
 }
 camera_set_view_target(global.currentCamera,noone);

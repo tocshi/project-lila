@@ -38,6 +38,7 @@ if(global.gui_state == 2 && global.pause == 1){
 					image_index = other.image_index;
 				}
 				drag_activated = true;
+				global.inv_skill_preview_lock = name;
 			}	
 		} else {
 			// reset hold/drag flags

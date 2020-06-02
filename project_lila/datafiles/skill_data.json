@@ -3,7 +3,7 @@
     "name"      : "Empowered Strike",
     "class"     : "Knight",
     "type"      : "active",
-    "desc"      : "",
+    "desc"      : "Grant yourself a buff that empowers your next basic attack, dealing 250% attack damage. The buff expires after 5 seconds or if you attack.",
     "mpcost"    : 20,
     "cd"        : 5,
     "cppcost"   : 150,

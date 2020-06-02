@@ -4,8 +4,8 @@ if(global.pause){exit;}
 // Use Skill
 switch(useSkill){
 	case "Fireball":
-	statmap[? "mp"] -= get_skill_data(useSkill,"mpcost");
-	cd[findArrayIndex(skills,useSkill)+1] = get_skill_data(useSkill,"cd")*room_speed;
+	use_skill_mp(useSkill,"")
+	set_skill_cd(useSkill,"");
 	atkTimer = 10;
 	canAttack = false;
 	canUseSkill = false;
@@ -42,8 +42,8 @@ switch(useSkill){
 	break;
 	
 	case "Blizzard":
-	statmap[? "mp"] -= get_skill_data(useSkill,"mpcost");
-	cd[findArrayIndex(skills,useSkill)+1] = get_skill_data(useSkill,"cd")*room_speed;
+	use_skill_mp(useSkill,"")
+	set_skill_cd(useSkill,"");
 	cancel_basic_attack();
 	highRegenThreshold = 0;
 	if(hasBuff(self,"Primordial Mana")){
@@ -70,8 +70,8 @@ switch(useSkill){
 	if(next_target == noone || point_distance(x,y,next_target.x,next_target.y) > 320){exit;}
 	cancel_basic_attack();
 	ds_list_clear(c_lightning_hitList);
-	statmap[? "mp"] -= get_skill_data(useSkill,"mpcost");
-	cd[findArrayIndex(skills,useSkill)+1] = get_skill_data(useSkill,"cd")*room_speed;
+	use_skill_mp(useSkill,"")
+	set_skill_cd(useSkill,"");
 	atkTimer = 30;
 	canAttack = false;
 	canUseSkill = false;
@@ -101,7 +101,7 @@ switch(useSkill){
 	break;
 	
 	case "Spatial Leap":
-	statmap[? "mp"] -= get_skill_data(useSkill,"mpcost");
+	use_skill_mp(useSkill,"")
 	cancel_basic_attack();
 	highRegenThreshold = 0;
 	isMoving = false;
@@ -136,12 +136,12 @@ switch(useSkill){
 	x = xx;
 	y = yy;
 	set_skill_data("Spatial Leap","sprmap",7);
-	cd[findArrayIndex(skills,useSkill)+1] = 30;
+	set_skill_cd(useSkill,30);
 	break;
 	
 	case "Volcano":
-	statmap[? "mp"] -= get_skill_data(useSkill,"mpcost");
-	cd[findArrayIndex(skills,useSkill)+1] = get_skill_data(useSkill,"cd")*room_speed;
+	use_skill_mp(useSkill,"")
+	set_skill_cd(useSkill,"");
 	cancel_basic_attack();
 	isMoving = false;
 	canMove = false;
@@ -166,8 +166,8 @@ switch(useSkill){
 	if(targets <= 0){exit;}
 	
 	cancel_basic_attack();
-	statmap[? "mp"] -= get_skill_data(useSkill,"mpcost");
-	cd[findArrayIndex(skills,useSkill)+1] = get_skill_data(useSkill,"cd")*room_speed;	
+	use_skill_mp(useSkill,"")
+	set_skill_cd(useSkill,"");	
 	var remaining = 6;
 	ds_list_clear(i_salvo_hitList);
 	ds_list_shuffle(i_salvo_targets);
@@ -200,8 +200,8 @@ switch(useSkill){
 	break;
 	
 	case "Lightning Rod":
-	statmap[? "mp"] -= get_skill_data(useSkill,"mpcost");
-	cd[findArrayIndex(skills,useSkill)+1] = get_skill_data(useSkill,"cd")*room_speed;
+	use_skill_mp(useSkill,"")
+	set_skill_cd(useSkill,"");
 	cancel_basic_attack();
 	isMoving = false;
 	canMove = false;
@@ -226,8 +226,8 @@ switch(useSkill){
 	var next_target = instance_nearest(mouse_x,mouse_y,obj_enemy);
 	if(next_target == noone || point_distance(x,y,next_target.x,next_target.y) > 320){exit;}
 	cancel_basic_attack();
-	statmap[? "mp"] -= get_skill_data(useSkill,"mpcost");
-	cd[findArrayIndex(skills,useSkill)+1] = get_skill_data(useSkill,"cd")*room_speed;
+	use_skill_mp(useSkill,"")
+	set_skill_cd(useSkill,"");
 	isMoving = false;
 	canMove = false;
 	canAttack = false;
@@ -242,8 +242,8 @@ switch(useSkill){
 	break;
 	
 	case "Primordial Mana":
-	statmap[? "mp"] -= get_skill_data(useSkill,"mpcost");
-	cd[findArrayIndex(skills,useSkill)+1] = get_skill_data(useSkill,"cd")*room_speed;
+	use_skill_mp(useSkill,"")
+	set_skill_cd(useSkill,"");
 	highRegenThreshold = 0;
 	applyBuff(self,get_skill_data(useSkill,"cd")*room_speed,true,"Primordial Mana",buff_primordial_mana,true,1,1,spr_buff_primordial_mana,"Enhances your next basic elemental spell with Primordial Mana.",0);
 	set_skill_data("Fireball","sprmap",1);
