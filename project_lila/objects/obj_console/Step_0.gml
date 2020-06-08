@@ -100,8 +100,8 @@ if (keyboard_check_pressed(vk_enter)) {
 			} else if (real(arg1) < 1) {
 				ds_list_add(lines, INCORRECT_USAGE + help[? "givexp"]);
 			} else {
-				global.playerXP = real(arg1);
-				global.playerLevel = power(floor(global.playerXP/100), 10/13) // inverse of level to XP function
+				global.playerXP += real(arg1);
+				global.playerLevel = floor(power(global.playerXP/100, 10/13)) // inverse of level to XP function
 				ds_list_add(lines, command + ": Player's total xp set to " + arg1);
 			}
 			break;
