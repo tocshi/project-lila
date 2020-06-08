@@ -23,8 +23,8 @@ for(var i = 0; i < array_length_1d(itemBar); ++i){
 }
 
 // Save stats
-global.playerSavedStats[? "level"]		= statmap[? "level"];
-global.playerSavedStats[? "xp"]			= statmap[? "xp"];
+global.playerSavedStats[? "level"]		= global.playerLevel;
+global.playerSavedStats[? "xp"]			= global.playerXP;
 	
 if(!isDead){
 	global.playerSavedStats[? "hp"]			= statmap[? "hp"];

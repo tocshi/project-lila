@@ -7,8 +7,6 @@ if(target.statmap[? "class"] == class){exit;}
 var xx = target.x;
 var yy = target.y;
 var prevclass = target.statmap[? "class"];
-var level = target.statmap[? "level"];
-var xp = target.statmap[? "xp"];
 var hp = target.statmap[? "hp"];
 var mp = target.statmap[? "mp"];
 
@@ -66,9 +64,7 @@ with(all){
 instance_destroy(target);
 
 with(instance_create_layer(xx,yy,"Instances",classobj)){
-	statmap[? "level"] = level;
-	statmap[? "xp"] = xp;
-	basestatmap[? "maxhp"] = 100 + statmap[? "level"]*10 + round(sqr(statmap[? "level"])/10);
+	basestatmap[? "maxhp"] = 100 + global.playerLevel*10 + round(sqr(global.playerLevel)/10);
 	basestatmap[? "hpregen"] = basestatmap[? "maxhp"]/100/60;
 	statmap[? "maxhp"] = basestatmap[? "maxhp"];
 	restore_player_equips();

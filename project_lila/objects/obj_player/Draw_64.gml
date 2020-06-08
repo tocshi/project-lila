@@ -1,12 +1,12 @@
 // Draw LVL and XP
-var prev_lvl_xp = 100*power(statmap[? "level"],1.3);
-var next_lvl_xp = 100*power(statmap[? "level"]+1,1.3);
-draw_healthbar(20, 20, 100, 100, ((statmap[? "xp"]-prev_lvl_xp)/(next_lvl_xp-prev_lvl_xp))*100, c_black, c_purple, c_fuchsia, 3, true, true);
+var prev_lvl_xp = 100*power(global.playerLevel,1.3);
+var next_lvl_xp = 100*power(global.playerLevel+1,1.3);
+draw_healthbar(20, 20, 100, 100, ((global.playerXP-prev_lvl_xp)/(next_lvl_xp-prev_lvl_xp))*100, c_black, c_purple, c_fuchsia, 3, true, true);
 draw_set_font(fnt_menutitle);
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);
 draw_set_alpha(1);
-draw_text_outlined(20,40,c_black,c_white,statmap[? "level"]);
+draw_text_outlined(20,40,c_black,c_white,global.playerLevel);
 
 // Draw HP and MP bars
 draw_set_halign(fa_middle);

@@ -1,5 +1,5 @@
 // set cpp based on modified normal distribution
-var lvldiff = statmap[? "level"] - global.player.statmap[? "level"];
+var lvldiff = statmap[? "level"] - global.playerLevel;
 var result = 1;
 if(lvldiff < -20){result = 0;}
 else if(lvldiff < 0){
