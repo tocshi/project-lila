@@ -94,6 +94,17 @@ if (keyboard_check_pressed(vk_enter)) {
 			
 			ds_list_add(lines, string(command) +": " + string(arg2) + " of Item Id " + string(arg1) + " given");
 			break;
+		case "/givexp":
+			if (!string_is_int(arg1)) {
+				ds_list_add(lines, INCORRECT_USAGE + help[? "givexp"]);
+			} else if (real(arg1) < 1) {
+				ds_list_add(lines, INCORRECT_USAGE + help[? "givexp"]);
+			} else {
+				global.playerXP += real(arg1);
+				global.playerLevel = floor(power(global.playerXP/100, 10/13)) // inverse of level to XP function
+				ds_list_add(lines, command + ": Player's total xp set to " + arg1);
+			}
+			break;
 		case "/help":
 			if (!is_string(arg1)) {
 				ds_list_add(lines, "help : " + help[? ""]);
@@ -101,6 +112,18 @@ if (keyboard_check_pressed(vk_enter)) {
 				ds_list_add(lines, command + ": is not a valid command. Use /commands to list commands");
 			} else {
 				ds_list_add(lines, command + ": " + help[? arg1]);
+			}
+			break;
+		case "/lvl":
+		case "/level":
+			if (!string_is_int(arg1)) {
+				ds_list_add(lines, INCORRECT_USAGE + help[? "level"]);
+			} else if (real(arg1) < 0) {
+				ds_list_add(lines, INCORRECT_USAGE + help[? "level"]);
+			} else {
+				global.playerLevel = real(arg1);
+				global.playerXP = 100*power(global.playerLevel,1.3)
+				ds_list_add(lines, command + ": Player's level set to " + arg1);
 			}
 			break;
 		case "/playerstat":

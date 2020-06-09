@@ -16,12 +16,10 @@ voice_sound = 0;
 statmap = ds_map_create();
 basestatmap = ds_map_create();
 
-statmap[? "level"] 			= 0;
-statmap[? "xp"] 			= 0;
 statmap[? "class"]			= "Debug";
 statmap[? "classlvl"]		= 10;
 statmap[? "classxp"] 		= 0;
-statmap[? "maxhp"]			= 100 + statmap[? "level"]*10 + round(sqr(statmap[? "level"])/10);
+statmap[? "maxhp"]			= 100 + global.playerLevel*10 + round(sqr(global.playerLevel)/10);
 statmap[? "hp"]				= statmap[? "maxhp"];
 statmap[? "hpshield"]		= 0;
 statmap[? "hpregen"]		= statmap[? "maxhp"]/100/60;//0.02 + statmap[? "level"]*0.002;

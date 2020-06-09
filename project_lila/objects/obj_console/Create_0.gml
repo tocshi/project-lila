@@ -23,7 +23,7 @@ caret_text = "";
 alarm[0] = CARET_DELAY;
 
 commands = ds_list_create();
-commands[| 0] = "changeclass\ncommands\ncpp\ndie\nhelp\ngive\nplayerstat\nsetcontrol\n                                           page 1 of 1"; // Exactly 43 spaces to centre the "page 1 of 1" text
+commands[| 0] = "changeclass\ncommands\ncpp\ndie\nhelp\ngive\ngivexp\nlevel\nplayerstat\nsetcontrol\n                                           page 1 of 1"; // Exactly 43 spaces to centre the "page 1 of 1" text
 
 help = ds_map_create();
 help[? ""] = "help: <String> command. Prints help for the given command.";
@@ -32,7 +32,9 @@ help[? "commands"] = "commands: <Integer> pageNum.\nLists the available commands
 help[? "cpp"] = "cpp: <Integer> amount. \nSets your class proficiency points to <value>";
 help[? "dummystat"] = "dummystat: <String> stat, <Float> val.\nChanges the value of <stat> of the dummy to <val>."
 help[? "give"] = "give: <Integer> itemId, <Integer> num.\nGives <num> of item <itemId>.\nIf <num> is not specified, default to 1";
+help[? "givexp"] = "givexp: <Integer> XP. \nAdds the specified amount to total player XP. \n<XP> must be 1 or higher."
 help[? "help"] = "help: <String> command. Prints help for the given command.\nHow'd you get here if you didn't know how to use the help command?";
+help[? "level"] = "level: <Integer> level. \nSets your level to <level>. \n<level> must be 0 or higher.";
 help[? "playerstat"] = "playerstat: <String> stat, <Float> val.\nChanges the value of <stat> of the player to <val>.\nClass cannot be changed using this command, use /changeclass instead."
 help[? "setcontrol"] = "setcontrol: <String> controlName, <String> controlKey.\n" + NOT_IMPLEMENTED_YET;
 
