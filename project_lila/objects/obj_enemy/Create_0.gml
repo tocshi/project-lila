@@ -4,6 +4,7 @@ basestatmap = ds_map_create();
 
 statmap[? "level"] 			= 0;
 statmap[? "xp"]				= 0;
+statmap[? "cpp"]			= 0;
 statmap[? "maxhp"]			= 100;
 statmap[? "hp"]				= 100;
 statmap[? "hpshield"]		= 0;
@@ -58,3 +59,4 @@ atkTimer = 0;
 statChange = true;
 
 buff = ds_list_create();
+if(instance_exists(global.player)){event_perform(ev_other,ev_room_start);}

@@ -16,13 +16,10 @@ voice_sound = 0;
 statmap = ds_map_create();
 basestatmap = ds_map_create();
 
-statmap[? "level"] 			= 0;
-statmap[? "xp"] 			= 0;
-statmap[? "cpp"]			= 0;
 statmap[? "class"]			= "Debug";
 statmap[? "classlvl"]		= 10;
 statmap[? "classxp"] 		= 0;
-statmap[? "maxhp"]			= 100 + statmap[? "level"]*10 + round(sqr(statmap[? "level"])/10);
+statmap[? "maxhp"]			= 100 + global.playerLevel*10 + round(sqr(global.playerLevel)/10);
 statmap[? "hp"]				= statmap[? "maxhp"];
 statmap[? "hpshield"]		= 0;
 statmap[? "hpregen"]		= statmap[? "maxhp"]/100/60;//0.02 + statmap[? "level"]*0.002;
@@ -80,15 +77,21 @@ maxcd = array_create(21,0);
 itemcd = array_create(ds_list_size(global.itemData),0);
 atkTimer = 0;
 
-// restore player's stats
-restore_player_stats();
-
 // buff list and visible buff list creation 
 buff = ds_list_create();
 visBuff = ds_list_create();
 
+// restore player's stats
+restore_player_stats();
+//restore_player_buffs();
+
+// Player equipped items and hotbar
 equips = array_create(12, 0);
 itemBar = array_create(10, 0);
+// Player equipped skills
+skills = array_create(8,"");
+// the skill the player is using (reset at every EndStep)
+useSkill = "";
 
 skill_button = array_create(21,"");
 
@@ -117,9 +120,6 @@ skill_button[18]	= global.key_item7;
 skill_button[19]	= global.key_item8;
 skill_button[20]	= global.key_item9;
 
-//debug
-inftoggle = 0;
-
 if(global.playerItems[1] > 0){exit;}
 repeat(20){
 	addItem(1);
@@ -133,10 +133,3 @@ addItem(11);
 addItem(16);
 addItem(18);
 addItem(34);
-
-itemBar[0] = 22;
-itemBar[1] = 1;
-itemBar[2] = 2;
-itemBar[3] = 3;
-
-updateHotbar();

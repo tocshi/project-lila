@@ -27,3 +27,11 @@ width = 64;
 height = 64;
 
 alarm[1] = UPDATE_DELAY;
+
+enum dummy_function {
+    notified_hit = 15,
+	calculate_dps = 0,
+    create_text_box = 1,
+    remove_text_box = 2,
+    reset_dps = 3
+}

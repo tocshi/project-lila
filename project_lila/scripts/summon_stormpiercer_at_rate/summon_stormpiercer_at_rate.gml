@@ -2,7 +2,7 @@ user = argument0;
 sptarget = argument1;
 var rate = argument2;
 
-if(user.statmap[? "class"] != "Archer" || user.statmap[? "classlvl"] < 10){exit;}
+if(user.statmap[? "class"] != "Archer" || !isInArray(user.skills,"Stormpiercer")){exit;}
 
 var roll = random_range(0,100);
 

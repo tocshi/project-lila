@@ -5,5 +5,3 @@ if (align == CENTRE) {
 	left_offset += width/2;
 	top_offset += height/2;
 }
-true_sprite = sprite;
-mask_index = sprite;

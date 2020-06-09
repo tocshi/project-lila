@@ -2,7 +2,7 @@ if(ds_list_find_index(hitList,other.id) == -1){
 	ds_list_add(hitList,other.id);
 	
 	dmgCalc(other.id);
-	summon_stormpiercer_at_rate(user,other,20);
+	summon_stormpiercer_at_rate(user,other,10);
 	if(other.canKnockback){
 		other.atkTimer = 20;
 		other.direction = direction+random_range(-30,30);

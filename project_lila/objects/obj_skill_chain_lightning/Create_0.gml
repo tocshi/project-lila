@@ -7,4 +7,4 @@ target = noone;
 primordial = false;
 remaining = 0;
 skill = 60;
-alarm[0] = 1;
+alarm[0] = 5;

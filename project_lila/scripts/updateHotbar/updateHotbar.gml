@@ -14,5 +14,6 @@ for(var i = 0; i < array_length_1d(global.player.itemBar); ++i){
 		item.type = item.HOTBAR;
 		item.sprite_index = asset_get_index(ds_map_find_value(global.itemData[| itemid],"sprite"));
 		item.itemid = itemid;
+		item.hotbar_slot = i;
 	}
 }

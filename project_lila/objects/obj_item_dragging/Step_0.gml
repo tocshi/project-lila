@@ -51,6 +51,11 @@ if(global.gui_state == 1 && global.pause == 1){
 					updateGUI();
 				}
 			}
+			// Dropped on hotbar slot
+			if (area == "Hotbar" && slot != -1) {
+				global.player.itemBar[slot] = itemid;
+				updateHotbar();
+			}
 		}
 		else if(origin_type == "Equip") {
 			// Dropped on inventory slot
@@ -65,21 +70,29 @@ if(global.gui_state == 1 && global.pause == 1){
 					updateGUI();
 				}
 			}
+			if (area == "Hotbar" && slot != -1) {
+				global.player.itemBar[slot] = itemid;
+				updateHotbar();
+			}
 		} else if(origin_type == "Hotbar") {
 			// Dropped on hotbar slot
-			if (area == "Hotbar" && slot != -1 && slot != origin_slot) {
-				// dropped to empty slot
-				if (global.itemBarBox[slot] == 0) {
-					global.itemBarBox[slot] = itemid;
-					updateHotbar();
-				} else { 
-					// slot is occupied, swap items
-					global.itemBarBox[origin_slot] = global.itemBarBox[slot];
-					global.itemBarBox[slot] = itemid;
-					updateHotbar();
+			if (area == "Hotbar" && slot != -1) {
+				if (slot != origin_slot) {
+					// dropped to empty slot
+					if (global.player.itemBar[slot] == 0) {
+						global.player.itemBar[slot] = itemid;
+						global.player.itemBar[origin_slot] = 0;
+						updateHotbar();
+					} else { 
+						// slot is occupied, swap items
+						global.player.itemBar[origin_slot] = global.player.itemBar[slot];
+						global.player.itemBar[slot] = itemid;
+						updateHotbar();
+					}
 				}
 			} else {
-				global.itemBarBox[origin_slot] = 0;
+				global.player.itemBar[origin_slot] = 0;
+				updateHotbar();
 			}
 		}
 	

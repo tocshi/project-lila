@@ -1,4 +1,5 @@
 /// @description Check gui close and check LMB hold
+if(!global.pause){instance_destroy();}
 if(global.gui_state == 1 && global.pause == 1 && !instance_exists(obj_item_dragging)){
 	// check if a different item is already being dragged
 	if(global.holding && !hold_activated) {
@@ -7,7 +8,6 @@ if(global.gui_state == 1 && global.pause == 1 && !instance_exists(obj_item_dragg
 	} else {
 		// Check that the mouse is being held on the items coords
 		if (mouse_check_button(mb_left)) {
-			show_debug_message(string(findArrayIndex(global.player.itemBar, itemid)) + " says hi");
 			if (!global.holding && position_meeting(mouse_x, mouse_y, id)) {
 				// first frame of LMB hold, set initial values
 				show_debug_message("holding!");
@@ -33,7 +33,7 @@ if(global.gui_state == 1 && global.pause == 1 && !instance_exists(obj_item_dragg
 					itemid = other.itemid;
 					origin_type = other.type;
 					origin_instance = other;
-					origin_slot = findArrayIndex(global.player.itemBar, itemid);
+					origin_slot = other.hotbar_slot;
 					show_debug_message("Drag itemid is " + string(itemid));
 					show_debug_message("Drag item origin slot set to " + string(origin_slot));
 				}

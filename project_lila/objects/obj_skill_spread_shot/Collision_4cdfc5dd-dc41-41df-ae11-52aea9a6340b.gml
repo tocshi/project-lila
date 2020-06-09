@@ -1,3 +1,4 @@
+if(hasBuff(other,"Invisible")){exit;}
 if(ds_list_find_index(user.s_shot_hitList,other.id) == -1){
 	ds_list_add(user.s_shot_hitList,other.id);
 	
@@ -10,10 +11,12 @@ if(ds_list_find_index(user.s_shot_hitList,other.id) == -1){
 			essence.target = global.player;
 		}
 	}
-	/*
-	if (other.canKnockback){
-		hit_flinch(other, point_direction(sourceX,sourceY,other.x,other.y), flinch_amount);
-	}*/
+	
+	if(ds_map_exists(atkmap,"isPiercing") && ds_map_exists(atkmap,"isProjectile")){
+		if(!atkmap[? "isPiercing"]){
+			ds_map_destroy(atkmap);
+			atkmap = -1;
+			instance_destroy();
+		}
+	}
 }
-
-

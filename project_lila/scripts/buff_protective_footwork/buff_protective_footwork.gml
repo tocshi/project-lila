@@ -1,4 +1,6 @@
 var target = argument0;
-target.cd[7] = target.maxcd[7];
-skill_icon_mapping[6] = 6;
+with(target){
+	set_skill_cd("Protective Footwork","");
+}
+set_skill_data("Protective Footwork","sprmap",6);
 exit;

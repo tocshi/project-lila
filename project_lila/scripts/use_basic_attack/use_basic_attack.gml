@@ -104,7 +104,7 @@ switch(itemid){
 	case 31:
 	if(!instance_exists(obj_enemy)){exit;}
 	var magic_target = instance_nearest(mouse_x,mouse_y,obj_enemy);
-	if(point_distance(x,y,magic_target.x,magic_target.y) > 400){exit;}
+	if(point_distance(x,y,magic_target.x,magic_target.y) > ds_map_find_value(global.itemData[| itemid],"atkrange")){exit;}
 	with(instance_create_layer(x,y,"Attacks",obj_basicattack_spellbook)){
 		sprite_index = make_sprite_from_item(itemid);
 		

@@ -9,19 +9,19 @@ switch(itemid){
 
 	// Small Health Potion
 	case 1:
-		user.statmap[? "hp"] += user.statmap[? "maxhp"]*0.25;
+		apply_heal(user, 0.25, "max_health")
 		stacks += 3;
 		break;
 
 	// Medium Health Potion
 	case 2:
-		user.statmap[? "hp"] += user.statmap[? "maxhp"]*0.5;
+		apply_heal(user, 0.5, "max_health")
 		stacks += 5;
 		break;
 
 	// Large Health Potion
 	case 3:
-		user.statmap[? "hp"] += user.statmap[? "maxhp"]*0.75;
+		apply_heal(user, 0.5, "max_health")
 		stacks += 7;
 		break;
 	

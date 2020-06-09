@@ -1,12 +1,12 @@
 // Draw LVL and XP
-var prev_lvl_xp = 100*power(statmap[? "level"],1.3);
-var next_lvl_xp = 100*power(statmap[? "level"]+1,1.3);
-draw_healthbar(20, 20, 100, 100, ((statmap[? "xp"]-prev_lvl_xp)/(next_lvl_xp-prev_lvl_xp))*100, c_black, c_purple, c_fuchsia, 3, true, true);
+var prev_lvl_xp = 100*power(global.playerLevel,1.3);
+var next_lvl_xp = 100*power(global.playerLevel+1,1.3);
+draw_healthbar(20, 20, 100, 100, ((global.playerXP-prev_lvl_xp)/(next_lvl_xp-prev_lvl_xp))*100, c_black, c_purple, c_fuchsia, 3, true, true);
 draw_set_font(fnt_menutitle);
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);
 draw_set_alpha(1);
-draw_text_outlined(20,40,c_black,c_white,statmap[? "level"]);
+draw_text_outlined(20,40,c_black,c_white,global.playerLevel);
 
 // Draw HP and MP bars
 draw_set_halign(fa_middle);
@@ -41,7 +41,6 @@ if(unleashGauge > 0){
 }
 
 // Draw itembar
-draw_sprite(gui_itembar,-1,0,0);
 for(var i = 0; i < array_length_1d(itemBar); ++i){
 	var xx = global.itemBarBox[i,0];
 	var yy = global.itemBarBox[i,1];
@@ -63,47 +62,57 @@ for(var i = 0; i < array_length_1d(itemBar); ++i){
 		draw_set_halign(fa_left);
 		draw_set_valign(fa_top);
 	}
-	render_cooldown(xx,yy,itemcd[itemid],ds_map_find_value(global.itemData[| itemid],"activeCD") * room_speed);
+	if (ds_map_exists(global.itemData[| itemid],"activeSkill")) {
+		render_cooldown(xx,yy,itemcd[itemid],ds_map_find_value(global.itemData[| itemid],"activeCD") * room_speed);
+	}
 }
 
 // Draw skill and item cooldowns
-// TODO: dynamically figure out how many skills player has
 // and which skill icon to use instead of relying on this staticm sajfgbnkjsdfbgkjdsfbjgkbdsfkjgbktjergbnkjsgdfhbjksdfghbjkgfrdujh
-for(i = 0; i < 10; ++i){
+for(i = 0; i < 8; ++i){
+	if(skills[i] == ""){continue;}
 
-	draw_sprite_ext(skill_sprite,skill_icon_mapping[i],global.hpmpend+(i*80),20,1,1,0,c_white,1);
-	render_cooldown(global.hpmpend+(i*80),20,cd[i+1],maxcd[i+1]);
-	draw_sprite(spr_skill_border,0,global.hpmpend+(i*80),20);
+	var skill_sprite = asset_get_index("spr_skill_icons_" + string_lower(statmap[? "class"]));
+	draw_sprite_ext(skill_sprite,get_skill_data(skills[i],"sprmap"),global.hpmpend+(i*80),20,1,1,0,c_white,1);
+	render_cooldown(global.hpmpend+(i*80),20,cd[i+1],get_skill_data(skills[i],"cd")*room_speed);
 	
-	draw_set_font(fnt_gui_small);
-	draw_set_color(c_white);
-	draw_set_halign(fa_left);
-	draw_set_valign(fa_top);
-	var keystring = "key_skill" + string(i);
-	var key = variable_global_get(keystring);
-	switch(key){
-		case vk_enter:
-			key = "Enter";
-			break;
-		case vk_tab:
-			key = "Tab";
-			break;
-		case vk_shift:
-			key = "Shift";
-			break;
-		case vk_control:
-			key = "Ctrl";
-			break;
-		case vk_space:
-			key = "Space (Do not use for now!)";
-			break;
-		case 191:
-			key = "/";
-			break;
-		default:
-			key = chr(key);
+	// Checks if the skill is passive or active and draws border accordingly
+	if(get_skill_data(skills[i],"type") == "active"){
+		draw_sprite(spr_skill_border,0,global.hpmpend+(i*80),20);
+	
+		draw_set_font(fnt_gui_small);
+		draw_set_color(c_white);
+		draw_set_halign(fa_left);
+		draw_set_valign(fa_top);
+		var keystring = "key_skill" + string(i);
+		var key = variable_global_get(keystring);
+		switch(key){
+			case vk_enter:
+				key = "Enter";
+				break;
+			case vk_tab:
+				key = "Tab";
+				break;
+			case vk_shift:
+				key = "Shift";
+				break;
+			case vk_control:
+				key = "Ctrl";
+				break;
+			case vk_space:
+				key = "Space (Do not use for now!)";
+				break;
+			case 191:
+				key = "/";
+				break;
+			default:
+				key = chr(key);
+		}
+		draw_text(global.hpmpend+(i*80)-2,64,key);
 	}
-	draw_text(global.hpmpend+(i*80)-2,64,key);
+	else{
+		draw_sprite(spr_skill_border,1,global.hpmpend+(i*80),20);
+	}
 }
 
 // Renders buff icons based on their time remaining
@@ -114,12 +123,12 @@ for(var i = 0; i < min(ds_list_size(visBuff),20); ++i){
 	var alpha = 1;
 	var xx = global.buffBarBox[i,0];
 	var yy = global.buffBarBox[i,1];
-	if(buff_array[0] <= 5*room_speed){
-		if(buff_array[0] <= 1*room_speed){
-			alpha = 0.3 * sin(time + (pi/2)) + 0.7;
+	if(buff_array[0] <= 6*room_speed){
+		if(buff_array[0] <= 2*room_speed){
+			alpha = 0.3 * sin(0.7 * time + (pi/2)) + 0.7;
 		}
 		else{
-			alpha = 0.3 * sin(0.3 * time + (pi/2)) + 0.7;
+			alpha = 0.3 * sin(0.1 * time + (pi/2)) + 0.7;
 		}
 	}
 	
