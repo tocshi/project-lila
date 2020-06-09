@@ -70,12 +70,5 @@ var lvlup_xp = 100*power(global.playerLevel+1,1.3);
 if(global.playerXP >= lvlup_xp){
 	instance_create_depth(x,y,depth+1,obj_lvlup_effect);
 	global.playerLevel++;
-	basestatmap[? "maxhp"] = 100 + global.playerLevel*10 + round(sqr(global.playerLevel)/10);
-	basestatmap[? "hpregen"] = basestatmap[? "maxhp"]/100/60;
-	statChange = true;
-	
-	// recalculate cpp for all enemies in room
-	with(obj_enemy){
-		event_perform(ev_other,ev_room_start);
-	}
+	event_perform(ev_other,ev_user0);
 }

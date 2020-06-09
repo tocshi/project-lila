@@ -102,6 +102,9 @@ if (keyboard_check_pressed(vk_enter)) {
 			} else {
 				global.playerXP += real(arg1);
 				global.playerLevel = floor(power(global.playerXP/100, 10/13)) // inverse of level to XP function
+				with(global.player){
+					event_perform(ev_other,ev_user0);
+				}
 				ds_list_add(lines, command + ": Player's total xp set to " + arg1);
 			}
 			break;
@@ -122,7 +125,10 @@ if (keyboard_check_pressed(vk_enter)) {
 				ds_list_add(lines, INCORRECT_USAGE + help[? "level"]);
 			} else {
 				global.playerLevel = real(arg1);
-				global.playerXP = 100*power(global.playerLevel,1.3)
+				global.playerXP = 100*power(global.playerLevel,1.3);
+				with(global.player){
+					event_perform(ev_other,ev_user0);
+				}
 				ds_list_add(lines, command + ": Player's level set to " + arg1);
 			}
 			break;

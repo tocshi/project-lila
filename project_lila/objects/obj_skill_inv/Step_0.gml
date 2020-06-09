@@ -8,7 +8,8 @@ if(global.gui_state == 2 && global.pause == 1){
 	if(global.holding && !hold_activated) {
 		exit;
 	} 
-	if(!has_skill_unlocked(name)) {
+	var cdindex = findArrayIndex(global.player.skills,name)+1;
+	if(!has_skill_unlocked(name) || global.player.cd[cdindex] > 0) {
 		exit;
 	} 
 	else {

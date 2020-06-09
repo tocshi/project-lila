@@ -50,14 +50,11 @@ switch(useSkill){
 	break;
 	
 	case "Triple Shot":
-	if(!instance_exists(obj_enemy)){
-		exit;
-	}
 	target = instance_nearest(mouse_x,mouse_y,obj_enemy);
+	var atkrange = ds_map_find_value(global.itemData[| equips[0]],"atkrange");
+	if(target == noone || point_distance(x,y,target.x,target.y) > atkrange){exit;}
+	else if(point_distance(mouse_x,mouse_y,target.x,target.y) >= 64){exit;}
 	
-	if(point_distance(mouse_x,mouse_y,target.x,target.y) >= 64){
-		exit;
-	}
 	use_skill_mp(useSkill,"")
 	set_skill_cd(useSkill,"");
 	cancel_basic_attack();
@@ -150,8 +147,8 @@ switch(useSkill){
 if(useSkill != "" && isInArray(skills,"Unyielding Arrows")){
 	applyBuff(self,180,true,"Unyielding Arrows",buff_generic,false,1,10,spr_buff_unyielding,"Grants 2% crit chance per stack.",0);
 }
-if(cd[findArrayIndex(skills,"Fae Blessing")+1] <= 0 && equips[0] > 0 && statmap[? "hp"] < statmap[? "maxhp"]*0.3){
-	set_skill_cd(useSkill,"");
+if(isInArray(skills,"Fae Blessing") && cd[findArrayIndex(skills,"Fae Blessing")+1] <= 0 && equips[0] > 0 && statmap[? "hp"] < statmap[? "maxhp"]*0.3){
+	set_skill_cd("Fae Blessing","");
 	applyBuff(self,10*room_speed,true,"Fae Blessing",buff_generic,false,-1,0,spr_buff_TODO,"Lorem Ipsum",0);
 }
 

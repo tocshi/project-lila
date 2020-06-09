@@ -2,7 +2,7 @@ event_inherited();
 if(global.pause){exit;}
 
 // have shadow clone copy basic attack
-if(mouse_check_button_pressed(mb_left) && instance_exists(obj_ally_shadow_clone)){
+if(mouse_check_button(mb_left) && instance_exists(obj_ally_shadow_clone)){
 	
 	with(obj_ally_shadow_clone){
 		if(user == other.id && atkTimer <= 0){

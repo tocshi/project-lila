@@ -16,8 +16,9 @@ if(global.gui_state == 2 && global.pause == 1){
 	
 		if(origin_type == "Available") {
 			// Dropped on equip slot
-			if (area == "Equipped" && slot != -1) {
+			if (area == "Equipped" && slot != -1 && global.player.cd[slot+1] <= 0) {
 				global.player.skills[slot] = name;
+				global.player.statChange = true;
 				updateGUI();
 			}
 		}
