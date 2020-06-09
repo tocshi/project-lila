@@ -168,6 +168,7 @@ switch(useSkill){
 		equips = other.equips;
 		ds_map_copy(basestatmap,user.basestatmap);
 		ds_map_copy(statmap,basestatmap);
+		statmap[? "hp"] = statmap[? "maxhp"];
 		basestatmap[? "hpregen"] = 0;
 		basestatmap[? "mpregen"] = 0;
 		canKnockback	= true;

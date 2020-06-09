@@ -71,10 +71,10 @@ if(statmap[? "xp"] >= lvlup_xp){
 	instance_create_depth(x,y,depth+1,obj_lvlup_effect);
 	statmap[? "level"]++;
 	basestatmap[? "maxhp"] = 100 + statmap[? "level"]*10 + round(sqr(statmap[? "level"])/10);
-	basestatmap[? "hpregen"] = statmap[? "maxhp"]/100/60;
+	basestatmap[? "hpregen"] = basestatmap[? "maxhp"]/100/60;
 	//basestatmap[? "atk"] += statmap[? "level"]-1;
 	//basestatmap[? "def"] += statmap[? "level"]-1;
-	recalcStats(self);
+	statChange = true;
 	
 	// recalculate cpp for all enemies in room
 	with(obj_enemy){
