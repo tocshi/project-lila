@@ -1,8 +1,8 @@
 {
-    "id": "e206da71-2f4a-466a-865b-b97e3acb685d",
+    "id": "9873b194-fd18-4a57-90bb-008277537cbd",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "create_function_pointer_list",
+    "name": "fp_activate_object",
     "IsCompatibility": false,
     "IsDnD": false
 }

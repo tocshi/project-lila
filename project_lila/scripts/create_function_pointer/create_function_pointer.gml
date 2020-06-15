@@ -1,5 +1,5 @@
-var list = ds_list_create();
+var arr = [];
 for (var i = 0; i < argument_count; ++i) {
-	ds_list_add(list, argument[i]);
+	arr[i] = argument[i];
 }
-return list;
+return arr;

@@ -1,8 +1,8 @@
 {
-    "id": "e206da71-2f4a-466a-865b-b97e3acb685d",
+    "id": "23c8f828-170b-4f33-b81b-1c8441186f5a",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "create_function_pointer_list",
+    "name": "fp_instance_destroy",
     "IsCompatibility": false,
     "IsDnD": false
 }
