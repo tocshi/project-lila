@@ -303,6 +303,14 @@
             }
         },
         {
+            "Key": "1037e444-ad09-4284-9fbe-fcf40596c2aa",
+            "Value": {
+                "id": "bd814b65-a2dd-439b-9e80-bd825a078186",
+                "resourcePath": "scripts\\and_\\and_.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "10482dd3-496b-4b0e-ad40-aa0a45974380",
             "Value": {
                 "id": "a7fd9625-d563-40b0-ab63-5c0203118d2f",
@@ -700,6 +708,14 @@
                 "id": "388b5a02-d2f9-43ed-a97a-8083a03d6b15",
                 "resourcePath": "fonts\\font9\\font9.yy",
                 "resourceType": "GMFont"
+            }
+        },
+        {
+            "Key": "2dd2d32a-3618-434e-ba38-5f978c28ec6f",
+            "Value": {
+                "id": "b56f7045-c1d6-4e1d-a427-46b1c59a7676",
+                "resourcePath": "scripts\\is_less\\is_less.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -1244,6 +1260,14 @@
                 "id": "e892cdc9-4f49-46ed-949d-1b96243cebdb",
                 "resourcePath": "objects\\obj_unleash_flashdance\\obj_unleash_flashdance.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "58bb4be6-dddf-4d2c-aafa-56da2bf22f5f",
+            "Value": {
+                "id": "a1177951-0af2-4ac7-8b1b-f9044ab661e1",
+                "resourcePath": "scripts\\or_\\or_.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -2871,6 +2895,14 @@
             }
         },
         {
+            "Key": "d8c77661-ae59-442a-90be-4326d4651672",
+            "Value": {
+                "id": "33eaf355-7158-4a83-bdb3-6a857a789bec",
+                "resourcePath": "scripts\\not_\\not_.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "d8dd88d5-74aa-4992-9ed5-ae9c871ccdcb",
             "Value": {
                 "id": "0d58b71e-6ef2-4761-afee-37441bcfcbd7",
@@ -3531,6 +3563,10 @@
         "e206da71-2f4a-466a-865b-b97e3acb685d",
         "87296a4a-cc16-4143-b59b-643a5bcca0b1",
         "27c81c1e-8e59-435d-9ac6-a395bba817de",
+        "2dd2d32a-3618-434e-ba38-5f978c28ec6f",
+        "1037e444-ad09-4284-9fbe-fcf40596c2aa",
+        "58bb4be6-dddf-4d2c-aafa-56da2bf22f5f",
+        "d8c77661-ae59-442a-90be-4326d4651672",
         "9f533d0f-26f1-4cfb-864b-0f46c5b0ce56",
         "681930ef-0560-46b2-8aea-b944b1689bd9",
         "a15b3f8b-23f2-456f-ac1c-7d16dd015fda",
