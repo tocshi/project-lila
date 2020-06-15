@@ -14,14 +14,14 @@ switch (type) {
 		break;
 	case DROP:
 		confirmation_menu(
-			create_function_pointer_list(
-				create_function_pointer(dropItem, global.player.x, global.player.y, itemid, isEquipped, global.player),
-				create_function_pointer(destroy_instances_by_type, obj_confirmation_menu, obj_generic_btn),
-				create_function_pointer(updateGUI)
+			call_list(
+				call(dropItem, global.player.x, global.player.y, itemid, isEquipped, global.player),
+				call(destroy_instances_by_type, obj_confirmation_menu, obj_generic_btn),
+				call(updateGUI)
 			), 
-			create_function_pointer_list(
-				create_function_pointer(destroy_instances_by_type, obj_confirmation_menu, obj_generic_btn),
-				create_function_pointer(updateGUI)
+			call_list(
+				call(destroy_instances_by_type, obj_confirmation_menu, obj_generic_btn),
+				call(updateGUI)
 			),
 			"Are you sure you want to drop this item?"
 		); 

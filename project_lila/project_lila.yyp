@@ -1730,7 +1730,7 @@
             "Key": "7b88dd8a-74e9-43b3-afdc-57e5442897d3",
             "Value": {
                 "id": "037f4b5e-fda6-4370-8f81-1315983cf6f0",
-                "resourcePath": "scripts\\create_function_pointer\\create_function_pointer.yy",
+                "resourcePath": "scripts\\call\\call.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -1866,7 +1866,7 @@
             "Key": "87296a4a-cc16-4143-b59b-643a5bcca0b1",
             "Value": {
                 "id": "62c97aaf-ba40-4ef7-adc5-64bcf9011e49",
-                "resourcePath": "scripts\\execute_function_pointer_list\\execute_function_pointer_list.yy",
+                "resourcePath": "scripts\\execute_calls\\execute_calls.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -2060,6 +2060,14 @@
                 "id": "3fb74ec4-6159-46ef-b0f1-6688dee2969c",
                 "resourcePath": "sprites\\spr_buff_saturated\\spr_buff_saturated.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "940f31cf-0071-446d-8f25-1492a668287f",
+            "Value": {
+                "id": "eacd8c93-0793-418c-b2e4-bfcdb6ce7c36",
+                "resourcePath": "scripts\\single_call\\single_call.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -2978,7 +2986,7 @@
             "Key": "e206da71-2f4a-466a-865b-b97e3acb685d",
             "Value": {
                 "id": "dcf69a61-e7e0-4b1a-b27f-56e55142ea59",
-                "resourcePath": "scripts\\create_function_pointer_list\\create_function_pointer_list.yy",
+                "resourcePath": "scripts\\call_list\\call_list.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -3580,6 +3588,7 @@
         "6b4efe7b-fe2d-47c7-82cb-077ea84b72c4",
         "57ad233a-da68-4f09-9ddc-865c0c831866",
         "4908dfe2-a5c1-400f-ace0-01518218a557",
+        "940f31cf-0071-446d-8f25-1492a668287f",
         "454cdb76-1bb0-49cd-ac5f-cdc5c38c5413",
         "01c10616-7d68-4ae1-b808-eba59538b196",
         "0e6a52c3-a1d7-43f7-adc1-e91984dad020"

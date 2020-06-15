@@ -1,0 +1,1 @@
+return call_list(call(argument))

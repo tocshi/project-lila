@@ -6,13 +6,13 @@ if(global.pause != true){
 if(char_counter == 0 && is_array(pretext)){
 	show_debug_message("do pretext for page " + string(page))
 	if(pretext[page] != -1){
-		execute_function_pointer_list(pretext[page]);
+		execute_calls(pretext[page]);
 	}
 }
 if(char_counter == string_length(text[page]) && !posttext_triggered && is_array(posttext)){
 	show_debug_message("do posttext for page " + string(page))
 	if(posttext[page] != -1){
-		execute_function_pointer_list(posttext[page]);
+		execute_calls(posttext[page]);
 	}
 	// needs this or else it will run multiple times
 	posttext_triggered = true;

@@ -1,8 +1,8 @@
 {
-    "id": "7b88dd8a-74e9-43b3-afdc-57e5442897d3",
+    "id": "e206da71-2f4a-466a-865b-b97e3acb685d",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "create_function_pointer",
+    "name": "call_list",
     "IsCompatibility": false,
     "IsDnD": false
 }

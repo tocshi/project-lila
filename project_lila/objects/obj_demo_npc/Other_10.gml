@@ -13,19 +13,19 @@ speakers = array_create(9,id);
 pretext = array_create(9,-1);
 posttext = array_create(9,-1);
 
-dialogue_box = create_function_pointer(fp_instance_find, obj_dialogue_box, 0);
-reset_dialogue_box = create_function_pointer(fp_event_user, dialogue_box, 0);
-pause_dialogue_box = create_function_pointer(fp_variable_instance_set, dialogue_box, "dialogue_pause", true);
-unpause_dialogue_box = create_function_pointer(fp_variable_instance_set, dialogue_box, "dialogue_pause", false);
-delete_dialogue_buttons = create_function_pointer(destroy_buttons_by_type, "Dialogue");
-end_dialogue = create_function_pointer(fp_variable_instance_set, dialogue_box, "last_page", true);
+dialogue_box = call(fp_instance_find, obj_dialogue_box, 0);
+reset_dialogue_box = call(fp_event_user, dialogue_box, 0);
+pause_dialogue_box = call(fp_variable_instance_set, dialogue_box, "dialogue_pause", true);
+unpause_dialogue_box = call(fp_variable_instance_set, dialogue_box, "dialogue_pause", false);
+delete_dialogue_buttons = call(destroy_buttons_by_type, "Dialogue");
+end_dialogue = call(fp_variable_instance_set, dialogue_box, "last_page", true);
 
 potion_button = instance_create_layer(LEFT_BUTTON_X, BUTTON_Y, "GUIPopUpButton", obj_generic_btn);
 with(potion_button){
 	type = "Dialogue";
-	function = create_function_pointer_list(
-					create_function_pointer(fp_variable_instance_set, other.dialogue_box, "answer", "potion"),
-					create_function_pointer(fp_variable_instance_set, other.dialogue_box, "page", 6),
+	function = call_list(
+					call(fp_variable_instance_set, other.dialogue_box, "answer", "potion"),
+					call(fp_variable_instance_set, other.dialogue_box, "page", 6),
 					other.unpause_dialogue_box,
 					other.reset_dialogue_box,
 					other.delete_dialogue_buttons);
@@ -44,9 +44,9 @@ instance_deactivate_object(potion_button)
 nothing_button = instance_create_layer(RIGHT_BUTTON_X, BUTTON_Y, "GUIPopUpButton", obj_generic_btn);
 with(nothing_button){
 	type = "Dialogue";
-		function = create_function_pointer_list(
-					create_function_pointer(fp_variable_instance_set, other.dialogue_box, "answer", "nothing"),
-					create_function_pointer(fp_variable_instance_set, other.dialogue_box, "page", 6),
+		function = call_list(
+					call(fp_variable_instance_set, other.dialogue_box, "answer", "nothing"),
+					call(fp_variable_instance_set, other.dialogue_box, "page", 6),
 					other.unpause_dialogue_box,
 					other.reset_dialogue_box,
 					other.delete_dialogue_buttons);
@@ -63,29 +63,29 @@ with(nothing_button){
 instance_deactivate_object(nothing_button)
 
 // Create the potion/nothing buttons
-posttext[5] = create_function_pointer_list(
-				create_function_pointer(fp_activate_object, potion_button),
-				create_function_pointer(fp_activate_object, nothing_button),
+posttext[5] = call_list(
+				call(fp_activate_object, potion_button),
+				call(fp_activate_object, nothing_button),
 				pause_dialogue_box);
 
 
 // Skip if chose nothing 
-var answer_equals_nothing = create_function_pointer(
+var answer_equals_nothing = call(
 						is_equal,
-						create_function_pointer(fp_variable_instance_get, dialogue_box, "answer"),
+						call(fp_variable_instance_get, dialogue_box, "answer"),
 						"nothing");
-pretext[6] = create_function_pointer_list(
-				create_function_pointer(
+pretext[6] = call_list(
+				call(
 					if_, 
 					answer_equals_nothing,
-					create_function_pointer_list(
-						create_function_pointer(fp_variable_instance_set, dialogue_box, "page", 7),   // skip to page 7 
+					call_list(
+						call(fp_variable_instance_set, dialogue_box, "page", 7),   // skip to page 7 
 						reset_dialogue_box),
-					create_function_pointer_list(create_function_pointer(do_nothing)))); // else go to page 6
+					call_list(call(do_nothing)))); // else go to page 6
 					
 // Give potion then quit dialog
-posttext[6] = create_function_pointer_list(
-				create_function_pointer(addItem, 1),
+posttext[6] = call_list(
+				call(addItem, 1),
 				end_dialogue);
 				
 event_inherited();
