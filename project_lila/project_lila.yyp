@@ -4,7 +4,9 @@
     "mvc": "1.0",
     "IsDnDProject": false,
     "configs": [
-        
+        "default",
+        "default;debug",
+        "default;demo"
     ],
     "option_ecma": false,
     "parentProject": {
@@ -327,6 +329,14 @@
             }
         },
         {
+            "Key": "1295fe02-005e-4f3c-8439-a1e1da46b525",
+            "Value": {
+                "id": "4a8704ac-38e2-4af0-8d9e-2b95bf7b7727",
+                "resourcePath": "sprites\\spr_debug_door\\spr_debug_door.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "15bcfb2d-c0d1-4275-a333-18dc8bc626ee",
             "Value": {
                 "id": "75b2f5d8-80c9-468e-9925-d51a75d9a667",
@@ -471,6 +481,14 @@
             }
         },
         {
+            "Key": "1ddcdbc0-ba6f-4489-9bef-8a1dbae28a48",
+            "Value": {
+                "id": "2453a270-6b08-4e47-92d7-5b17ad8fe861",
+                "resourcePath": "rooms\\rm_tutorial2\\rm_tutorial2.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "1e334b20-b2fe-4992-a3c8-9616aa15dee6",
             "Value": {
                 "id": "0a1511eb-e409-46b4-b60f-9099d889f996",
@@ -556,6 +574,14 @@
                 "id": "f3598b92-f28e-436f-8d1d-c9b0ee5c3cbe",
                 "resourcePath": "sprites\\spr_unleash_gauge\\spr_unleash_gauge.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "231b28d9-9398-4414-acf3-794bfa72909b",
+            "Value": {
+                "id": "1d48af39-2523-4708-8a69-77c4e6b02493",
+                "resourcePath": "views\\231b28d9-9398-4414-acf3-794bfa72909b.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -783,6 +809,14 @@
             }
         },
         {
+            "Key": "343cd26c-40d2-4d50-ab68-3afe45c3b16a",
+            "Value": {
+                "id": "c53caf1a-771c-4df9-ada5-ad86fc241d7a",
+                "resourcePath": "objects\\obj_player_spawn\\obj_player_spawn.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "3440fbb8-1abd-46d9-816c-62f78c04e066",
             "Value": {
                 "id": "269afd2b-575e-49d4-854a-3e2f0ee1b672",
@@ -868,6 +902,14 @@
                 "id": "9bfc3b84-5745-42b3-bbe9-fa1aa6bbbb89",
                 "resourcePath": "scripts\\set_skill_data\\set_skill_data.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "3b0d21c6-d2b5-4f16-867f-3ca71c0ca1b0",
+            "Value": {
+                "id": "6ee15e72-62bb-4916-8b1e-37138e26562c",
+                "resourcePath": "rooms\\rm_tutorial0\\rm_tutorial0.yy",
+                "resourceType": "GMRoom"
             }
         },
         {
@@ -1003,6 +1045,14 @@
             "Value": {
                 "id": "6eba6b4f-1d61-48a0-aa38-86b14e8118ab",
                 "resourcePath": "sprites\\spr_debug_wall\\spr_debug_wall.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "46be60dc-2a7d-48d5-8e9c-723b0b9ad284",
+            "Value": {
+                "id": "81c6ea62-03d9-47a9-bccf-9fded2c3ef6b",
+                "resourcePath": "sprites\\spr_debug_wall_angle\\spr_debug_wall_angle.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1836,6 +1886,14 @@
                 "id": "c948d731-26d5-414b-ae6c-6a6613e57009",
                 "resourcePath": "sprites\\spr_poison_effect\\spr_poison_effect.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "8e2552b2-d3d9-4754-9d3d-94879600dff4",
+            "Value": {
+                "id": "69e4f32f-b85d-4a13-aa3c-346b14ed53c9",
+                "resourcePath": "views\\8e2552b2-d3d9-4754-9d3d-94879600dff4.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -2855,6 +2913,14 @@
             }
         },
         {
+            "Key": "e2f495e4-29a8-4655-aacc-f0801b140fe1",
+            "Value": {
+                "id": "bca070a1-e9d4-4f8d-9a08-1a5b5edc6874",
+                "resourcePath": "objects\\obj_debug_wall_diag\\obj_debug_wall_diag.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "e32fbad9-4d6b-4b96-8384-ce9e3504d501",
             "Value": {
                 "id": "95b33e42-90fe-4b19-8f64-d1e177f70dfd",
@@ -3236,6 +3302,14 @@
                 "id": "57e71ca6-ebff-4aa0-93da-d890e48b1bfe",
                 "resourcePath": "sprites\\spr_volcano\\spr_volcano.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "fe34a378-1e51-4a96-9dd9-1fa8eee231ad",
+            "Value": {
+                "id": "52bc9e9d-325e-4d7c-a8d0-89dbd7afa3c9",
+                "resourcePath": "rooms\\rm_tutorial1\\rm_tutorial1.yy",
+                "resourceType": "GMRoom"
             }
         },
         {

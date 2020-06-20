@@ -6,6 +6,9 @@ global.pause = 0;
 global.player = noone;
 // Player Last Used Class
 global.lastClass = obj_class_knight;
+// Player Last Entered Room
+global.lastDoor = "";
+global.lastRoom = rm_tutorial0;
 // Player Permanent Stats
 global.playerSavedStats = ds_map_create();
 global.playerSavedBuffs = ds_list_create();

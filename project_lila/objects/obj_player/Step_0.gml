@@ -75,7 +75,7 @@ switch(global.controls_state){
 	
 	case 2:
 	default:
-	show_error("dong status expanded",true);
+	show_error("dong status: expanded",true);
 }
 
 if((point_distance(x, y, destX, destY) < statmap[? "movespeed"] && canMove)){

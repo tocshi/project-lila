@@ -4,7 +4,7 @@ if(mouse_check_button_released(global.mouse_interact) || keyboard_check_pressed(
 		if(data[0] == ""){show_error("button data does not exist", true);}
 		switch(type){
 			case 0:
-				room_goto(asset_get_index(data[0]));
+				room_goto(data[0]);
 				break;
 			case 1:
 				state = 1;

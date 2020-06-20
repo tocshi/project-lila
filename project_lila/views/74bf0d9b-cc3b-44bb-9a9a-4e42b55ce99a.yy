@@ -5,10 +5,6 @@
     "name": "74bf0d9b-cc3b-44bb-9a9a-4e42b55ce99a",
     "children": [
         "f03d9acc-c2ae-4812-b14a-4d3b962a868a",
-        "ba2df236-c2e1-4240-895d-e464c38c8c08",
-        "cd17adfc-fdc5-4455-962b-7e4f5a4bb016",
-        "11fad92c-1b8b-460d-a6af-f8a7f4ef8f10",
-        "b2cd5060-3b18-48ef-8dd0-7d477ba66c13",
         "be41c61c-652e-4762-bfb7-13762f6cd3d8",
         "3c78d376-78eb-4122-a987-d920d39dbaa7",
         "f94e9c11-5f16-433c-b380-0455f13117b4",
@@ -16,8 +12,6 @@
         "f3578725-6ad3-4794-afd2-0dd05a06723f",
         "b6fbfa1d-f024-47aa-b2b2-e7439408a21b",
         "22450799-b067-4970-93cf-ad4c93379212",
-        "c30fcf63-0df5-4337-8690-3d44dc80e2b1",
-        "dffff69b-bf22-4c6e-8b75-48b08cd3afd5",
         "0153efb6-b713-45a1-91a0-96159017e774",
         "909e6ba2-1a6f-455d-9455-2080c0e442a4",
         "1199f725-bad3-4839-8daa-fdcc55d38f32",
@@ -27,6 +21,7 @@
         "fd97a239-6dfa-4646-b5db-408ca9176f37",
         "3ab9f91f-30e3-45e1-8ad1-660b78e2b46d",
         "ad16bacb-cfd0-430b-a4fb-239b1686ac0e",
+        "231b28d9-9398-4414-acf3-794bfa72909b",
         "099bb34a-eb48-48a9-98fc-7b5235a52c3b"
     ],
     "filterType": "GMObject",
