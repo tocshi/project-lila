@@ -935,6 +935,14 @@
             }
         },
         {
+            "Key": "41cea978-a084-437b-919a-b73b22001e57",
+            "Value": {
+                "id": "45bcbc68-d931-444b-8114-b2b216d568ca",
+                "resourcePath": "scripts\\deepcopy_list\\deepcopy_list.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "41da96ef-1d80-4db2-b5d3-5d0753fd0858",
             "Value": {
                 "id": "ce5c4fb9-0f7b-4e21-9c3a-4da60563d4fe",
@@ -1836,6 +1844,14 @@
                 "id": "c948d731-26d5-414b-ae6c-6a6613e57009",
                 "resourcePath": "sprites\\spr_poison_effect\\spr_poison_effect.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "8e1efbfe-83c7-4d82-924e-6e77265f4b92",
+            "Value": {
+                "id": "e8f8c5fb-d376-462b-86b0-e6cdfafe88bf",
+                "resourcePath": "scripts\\deepcopy_map\\deepcopy_map.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -3394,6 +3410,8 @@
         "695080c4-3245-4e74-a4ce-5abb62634aff",
         "2493e605-8c6a-409f-bf1b-0064e10b58b6",
         "ce3de9bd-f39b-49cd-a66d-b1d775448a26",
+        "41cea978-a084-437b-919a-b73b22001e57",
+        "8e1efbfe-83c7-4d82-924e-6e77265f4b92",
         "454cdb76-1bb0-49cd-ac5f-cdc5c38c5413",
         "01c10616-7d68-4ae1-b808-eba59538b196",
         "0e6a52c3-a1d7-43f7-adc1-e91984dad020"
