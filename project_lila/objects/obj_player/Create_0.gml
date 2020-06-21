@@ -1,4 +1,4 @@
-global.player = self.id;
+global.player = id;
 global.currentCamera = camera_create_view(x-800,y-450,1600,900,0,self.id,100,100,800,450);
 view_set_camera(view_current,global.currentCamera);
 view_set_wport(view_current,1600);

@@ -1,5 +1,3 @@
-instance_destroy(obj_player);
-
 var xx = x;
 var yy = y;
 var index = findArrayIndex(lastDoor,global.lastDoor);
@@ -8,5 +6,7 @@ if(index >= 0){
 	yy = spawn_y[index];
 }
 
-instance_create_layer(xx,yy,"Instances",global.lastClass);
+with(instance_create_layer(xx,yy,"Instances",global.lastClass)){
+	global.player = id;
+}
 restore_player_equips();
