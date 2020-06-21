@@ -1,5 +1,6 @@
 /// @Description input text/execute line
 // TODO: add to lines normally, as wrapping will be done in draw anyway (can remove script after)
+if (!active) exit;
 
 if (keyboard_check_pressed(vk_enter)) {
 	// TEMPORARY WORKAROUND FOR BACKSLASH BUG!
@@ -196,6 +197,7 @@ if (keyboard_check_pressed(vk_up)) {
 	}
 	caret = 0;
 	keyboard_string = history[| history_cursor];
+	after_caret = "";
 }
 
 if (keyboard_check_pressed(vk_down)) {
@@ -207,6 +209,7 @@ if (keyboard_check_pressed(vk_down)) {
 	}
 	caret = 0;
 	keyboard_string = history[| history_cursor];
+	after_caret = "";
 }
 
 //Keep console in position

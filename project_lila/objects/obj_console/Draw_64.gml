@@ -1,3 +1,5 @@
+if (!active) exit;
+
 var text_pos = HEIGHT - TEXT_HEIGHT;
 
 draw_self();
