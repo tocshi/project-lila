@@ -69,12 +69,6 @@ var itemDataJson = parse_json_to_str("item_data.json");
 global.itemData = ds_map_find_value(itemDataJson, "default");
 var skillDataJson = parse_json_to_str("skill_data.json");
 global.skillData = ds_map_find_value(skillDataJson, "default");
-global.skillDataDefault = ds_list_create();
-for(var i = 0; i < ds_list_size(global.skillData); ++i){
-	var map = ds_map_create();
-	ds_map_copy(map,global.skillData[| i]);
-	ds_list_add(global.skillDataDefault,map);
-}
 
 // Player inventory array and item quantity array
 global.playerInv = array_create(100, 0);
