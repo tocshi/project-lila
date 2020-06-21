@@ -19,6 +19,8 @@ char_counter = 0;
 pause = false;
 // hard pause for actions
 dialogue_pause = false;
+// set to flag as the last page, so the dialogue deletes even if there's another page
+last_page = false
 
 page = 0;
 name = "";
