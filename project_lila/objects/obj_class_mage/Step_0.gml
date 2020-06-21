@@ -126,7 +126,7 @@ switch(useSkill){
 	var xx = x + dcos(dir)*dist;
 	var yy = y - dsin(dir)*dist;
 	var attempt = 0;
-	while(collision_circle(xx,yy,33,obj_wall_parent,false,true)){
+	while(collision_circle(xx,yy,33,obj_wall_parent,true,true)){
 		xx = lerp(xx,x,0.01);
 		yy = lerp(yy,y,0.01);
 		attempt++;

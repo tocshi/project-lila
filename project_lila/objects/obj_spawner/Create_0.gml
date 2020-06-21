@@ -4,6 +4,9 @@ time = 0;
 // check spawn every freq frames
 freq = 1;
 
+// initially spawn x mobs
+init = 0;
+
 // enemy cap in room
 cap = 0;
 

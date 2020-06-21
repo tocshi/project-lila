@@ -1,4 +1,5 @@
-freq = 300;
+freq = 10*room_speed;
+init = 8;
 cap = 10;
 x0 = 1038;
 y0 = 960;

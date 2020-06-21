@@ -5,6 +5,7 @@ if(!instance_exists(target) || !instance_exists(anchor)){
 }
 if(primordial){
 	with(instance_create_layer(target.x,target.y,"Attacks",obj_skill_supercell_lightning)){
+		target = other.target;
 		user = other.user;
 		ds_map_copy(atkmap,user.statmap);
 		atkmap[? "dmgmod"]			= 200;
