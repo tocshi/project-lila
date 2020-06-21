@@ -17,8 +17,6 @@ statmap = ds_map_create();
 basestatmap = ds_map_create();
 
 statmap[? "class"]			= "Debug";
-statmap[? "classlvl"]		= 10;
-statmap[? "classxp"] 		= 0;
 statmap[? "maxhp"]			= 100 + global.playerLevel*10 + round(sqr(global.playerLevel)/10);
 statmap[? "hp"]				= statmap[? "maxhp"];
 statmap[? "hpshield"]		= 0;
@@ -26,7 +24,7 @@ statmap[? "hpregen"]		= statmap[? "maxhp"]/100/60;//0.02 + statmap[? "level"]*0.
 statmap[? "maxmp"]			= 100;
 statmap[? "mp"]				= statmap[? "maxmp"];
 statmap[? "mpregen"]		= 0.01666*10; //doubled if canMove && !isMoving
-statmap[? "atk"]			= 50;
+statmap[? "atk"]			= 0;
 statmap[? "def"]			= 0;
 
 statmap[? "fire_atk"]		= 0;
@@ -47,7 +45,7 @@ statmap[? "dark_def"]		= 0;
 
 statmap[? "movespeed"]		= 3;
 statmap[? "atkspeed"]		= 1.2;
-statmap[? "critrate"]		= 25;
+statmap[? "critrate"]		= 10;
 statmap[? "critdmg"]		= 150;
 statmap[? "finaldmg"]		= 100;
 statmap[? "finalshld"]		= 0;
