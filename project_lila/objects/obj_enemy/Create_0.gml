@@ -44,7 +44,8 @@ statmap[? "essence_rate"]	= 30;
 ds_map_copy(basestatmap, statmap);
 
 canKnockback	= false;
-isDead			= false;
+isSpawning = true;
+spawntime = 60;
 canAttack = true;
 canUseSkill = true;
 isBlocking = false;
@@ -52,8 +53,8 @@ isCCed = false;
 isDead = false;
 isMoving = false;
 canMove = true;
-alpha = 1;
 target = noone;
+time = 0;
 
 atkTimer = 0;
 statChange = true;
