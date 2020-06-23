@@ -6,6 +6,9 @@ if (keyboard_check(global.key_console)) {
 	}
 	if (!console.active) {
 		alarm[0] = 1;
+		if(global.gui_state > 1) {
+			instance_destroy(obj_generic_btn);
+		}
 		global.pause = true;
 		global.gui_state = 0;
 		keyboard_string = "/";
