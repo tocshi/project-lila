@@ -17,7 +17,7 @@ var button_width = room_width/4;
 
 // Button to toggle between movement modes
 var movement_mode_to_change_to = global.movement_mode == 0 ? 1 : 0;
-var movement_mode_button_text = "Movement mode: " + (global.movement_mode == 0 ? "Mouse" : "Keyboard");
+var movement_mode_button_text = global.movement_mode == 0 ? "Mouse" : "Keyboard";
 with(instance_create_layer(left_margin, top_margin + current_button * button_height, "GUIText", obj_generic_btn)) {
 	type = "Movement mode";
 	function = call_list(
@@ -29,7 +29,10 @@ with(instance_create_layer(left_margin, top_margin + current_button * button_hei
 	halign = fa_left;
 	valign = fa_middle;
 	left_offset = 10;
-	text = movement_mode_button_text;
+	right_offset = 10;
+	v_relative_align = CENTRE;
+	text = "Movement mode:";
+	right_text = movement_mode_button_text;
 	sprite_index = spr_black_gray_hover_rectangle;
 	event_perform(ev_other,ev_room_start);
 }
