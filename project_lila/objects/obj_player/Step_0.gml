@@ -42,7 +42,7 @@ var cam_speed = point_distance(x,y,camera_get_view_x(global.currentCamera)+camer
 camera_set_view_speed(global.currentCamera,cam_speed,cam_speed);
 
 // Standard Movement
-switch(global.controls_state){
+switch(global.movement_mode){
 	case 0:
 	if(mouse_check_button(mb_right) && canMove){
 		if(point_distance(x,y,mouse_x,mouse_y) > 8){

@@ -26,9 +26,9 @@ with(instance_create_layer(left_margin, top_margin + current_button * button_hei
 	align = TOP_LEFT;
 	width = button_width;
 	height = button_height;
-	halign = fa_center;
-	valign = fa_center;
-	left_offset = 0;
+	halign = fa_left;
+	valign = fa_middle;
+	left_offset = 10;
 	text = movement_mode_button_text;
 	sprite_index = spr_black_gray_hover_rectangle;
 	event_perform(ev_other,ev_room_start);

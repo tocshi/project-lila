@@ -11,6 +11,7 @@ height = 0;
 pressed = false;
 hovered = false;
 auto_scale = true;
+already_init = false;
 
 halign = fa_left;
 valign = fa_top;

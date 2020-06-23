@@ -20,7 +20,7 @@ switch(type){
 			draw_set_halign(fa_left);
 			draw_set_valign(fa_middle);
 			draw_set_color(c_yellow);
-			draw_text(x+10,y+height/2,data[0, global.movement_mode]);
+			draw_text(x+10,y+height/2,data[0]);
 			draw_set_halign(fa_right);
 			draw_text(x+width-10,y+height/2,"Press any key");
 		}
