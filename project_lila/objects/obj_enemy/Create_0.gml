@@ -54,6 +54,7 @@ isDead = false;
 isMoving = false;
 canMove = true;
 target = noone;
+lastHitBy = noone;
 time = 0;
 
 atkTimer = 0;

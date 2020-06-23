@@ -7,7 +7,7 @@ if((time % freq == 0 && instance_number(obj_enemy) < cap) || init > 0){
 	while(true){
 		xx = irandom_range(x0,x1);
 		yy = irandom_range(y0,y1);
-		if(point_distance(xx,yy,global.player.x,global.player.y) > 256 && !position_meeting(xx,yy,obj_wall_parent)){
+		if(point_distance(xx,yy,global.player.x,global.player.y) > 256 && !instance_exists(collision_circle(xx,yy,64,obj_wall_parent,true,true))){
 			break;
 		}
 		if(tries > 1000){exit;}

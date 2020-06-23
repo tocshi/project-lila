@@ -2337,6 +2337,14 @@
             }
         },
         {
+            "Key": "a769eb58-869e-43a1-af19-934012b383bf",
+            "Value": {
+                "id": "8b0680ca-4c31-44c9-b990-549db5f665ba",
+                "resourcePath": "objects\\obj_enemy_attack_tackle\\obj_enemy_attack_tackle.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "a7a6ea01-b5bb-41e3-b3e9-7c40e35cdba9",
             "Value": {
                 "id": "a01828a6-ff51-4d3f-81f8-0d75bbc5dbf6",

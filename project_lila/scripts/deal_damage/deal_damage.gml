@@ -9,6 +9,9 @@ with (target) {
 		statmap[? "hp"] -= hpdamage;
 	}
 	else{statmap[? "hp"] -= damage;}
+	if(variable_instance_exists(other,"user")){
+		lastHitBy = other.user;
+	}
 	event_user(notify_event.damage);
 }
 
