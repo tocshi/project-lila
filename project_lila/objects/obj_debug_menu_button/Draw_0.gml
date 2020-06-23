@@ -20,12 +20,13 @@ switch(type){
 			draw_set_halign(fa_left);
 			draw_set_valign(fa_middle);
 			draw_set_color(c_yellow);
-			draw_text(x+10,y+height/2,data[0]);
+			draw_text(x+10,y+height/2,data[0, global.movement_mode]);
 			draw_set_halign(fa_right);
 			draw_text(x+width-10,y+height/2,"Press any key");
 		}
 		else{
 			var key = variable_global_get(data[0]);
+			key = key[global.movement_mode];
 			switch(key){
 				case vk_enter:
 					key = "Enter";

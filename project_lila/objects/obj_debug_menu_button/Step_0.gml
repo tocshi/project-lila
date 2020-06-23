@@ -3,9 +3,11 @@ if(mouse_check_button_released(global.mouse_interact) || keyboard_check_pressed(
 	if(mouse_x >= x && mouse_x <= x+width && mouse_y >= y && mouse_y <= y+height){
 		if(data[0] == ""){show_error("button data does not exist", true);}
 		switch(type){
+			// goto room
 			case 0:
 				room_goto(asset_get_index(data[0]));
 				break;
+			// switch keybind
 			case 1:
 				state = 1;
 				keyboard_string = "";
@@ -15,8 +17,10 @@ if(mouse_check_button_released(global.mouse_interact) || keyboard_check_pressed(
 	}
 	else{
 		switch(type){
+			// goto room
 			case 0:
 				break;
+			// switch keybind
 			case 1:
 				state = 0;
 				break;

@@ -16,6 +16,7 @@ if(skill_key >= 0){
 	draw_sprite(spr_skill_overlay,0,x,y);
 	var keystring = "key_skill" + string(skill_key);
 	var key = variable_global_get(keystring);
+	key = key[global.movement_mode];
 	switch(key){
 		case vk_enter:
 			key = "Enter";

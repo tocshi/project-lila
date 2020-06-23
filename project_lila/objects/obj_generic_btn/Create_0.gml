@@ -10,6 +10,7 @@ width = 0;
 height = 0;
 pressed = false;
 hovered = false;
+auto_scale = true;
 
 halign = fa_left;
 valign = fa_top;

@@ -5,3 +5,7 @@ if (align == CENTRE) {
 	left_offset += width/2;
 	top_offset += height/2;
 }
+if (auto_scale) {
+	image_xscale = width / sprite_width;
+	image_yscale = height / sprite_height;
+}
