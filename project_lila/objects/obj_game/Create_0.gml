@@ -159,6 +159,13 @@ global.classList = [
 	"Archer",
 	"Mage",
 	"Rogue"];
+	
+// Map of classes and items categories they can equip
+global.classEquipMap = ds_map_create();
+ds_map_add(global.classEquipMap, "Knight", initialize_array("Longsword"));
+ds_map_add(global.classEquipMap, "Archer", initialize_array("Bow"));
+ds_map_add(global.classEquipMap, "Mage", initialize_array("Spellbook"));
+ds_map_add(global.classEquipMap, "Rogue", initialize_array("Dagger", "Chain Knife"));
 
 // Stats that equipped items are allowed to change
 global.equipStats = ds_list_create();
