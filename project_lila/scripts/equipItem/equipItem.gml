@@ -10,10 +10,14 @@ if(global.playerLevel < ds_map_find_value(global.itemData[| itemid],"lvl")) {
 }
 
 // Check whether the class is compatible with the weapon
-var classEquippableCategories = ds_map_find_value(global.classEquipMap, global.player.statmap[? "class"]);
-if(findArrayIndex(classEquippableCategories, ds_map_find_value(global.itemData[| itemid],"category")) == -1) {
-	show_debug_message(global.player.statmap[? "class"] + " can only equip " + string(classEquippableCategories));
-	exit;
+if(!is_undefined(ds_map_find_value(global.weaponClassMap, ds_map_find_value(global.itemData[| itemid],"category")))) {
+	var compatibleClasses = ds_map_find_value(global.weaponClassMap, ds_map_find_value(global.itemData[| itemid],"category"));
+	show_debug_message(string(compatibleClasses));
+	show_debug_message(global.player.statmap[? "class"]);
+	if(!isInArray(compatibleClasses, global.player.statmap[? "class"])) {
+		show_debug_message(global.player.statmap[? "class"] + " can only equip " + string(compatibleClasses));
+		exit;
+	}
 }
 
 
