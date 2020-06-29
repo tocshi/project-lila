@@ -86,6 +86,7 @@ for(i = 0; i < 8; ++i){
 		draw_set_valign(fa_top);
 		var keystring = "key_skill" + string(i);
 		var key = variable_global_get(keystring);
+		key = key[global.movement_mode]
 		switch(key){
 			case vk_enter:
 				key = "Enter";

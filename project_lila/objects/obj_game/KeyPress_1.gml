@@ -1,5 +1,5 @@
 /// @description if global.key_console open console
-if (keyboard_check(global.key_console)) {
+if (keyboard_check(global.key_console[global.movement_mode])) {
 	if (!instance_exists(global.player)) exit;
 	if (!instance_exists(console)) {
 		console = instance_create_layer(0, 0, "GUIText" , obj_console);
