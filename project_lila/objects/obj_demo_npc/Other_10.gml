@@ -71,9 +71,9 @@ posttext[5] = call_list(
 
 // Skip if chose nothing 
 var answer_equals_nothing = call(
-						is_equal,
-						call(fp_variable_instance_get, dialogue_box, "answer"),
-						"nothing");
+								is_equal,
+								call(fp_variable_instance_get, dialogue_box, "answer"),
+								"nothing");
 pretext[6] = call_list(
 				call(
 					if_, 

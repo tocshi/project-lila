@@ -131,3 +131,6 @@ addItem(11);
 addItem(16);
 addItem(18);
 addItem(34);
+
+
+global.console = instance_create_layer(0, 0, "GUIText" , obj_console);

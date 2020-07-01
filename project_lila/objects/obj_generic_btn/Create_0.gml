@@ -33,3 +33,5 @@ right_relative_offset = 0;
 outline_color = c_black;
 text = "";
 right_text = "";
+
+draw_gui = false;

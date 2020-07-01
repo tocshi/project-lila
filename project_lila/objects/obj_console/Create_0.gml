@@ -11,7 +11,7 @@ HEIGHT = TEXT_HEIGHT * (MAX_LINES + 1);
 LEFT_TEXT_PADDING = 10;
 
 text = "";
-active = false;
+is_active = false;
 lines = ds_list_create();
 history = ds_list_create();
 history_cursor = 0;
