@@ -25,7 +25,9 @@
         "7eca2b51-c7d5-4b14-80b5-39ca6a2531b0",
         "6b4efe7b-fe2d-47c7-82cb-077ea84b72c4",
         "57ad233a-da68-4f09-9ddc-865c0c831866",
-        "940f31cf-0071-446d-8f25-1492a668287f"
+        "940f31cf-0071-446d-8f25-1492a668287f",
+        "66f889d0-135e-4d57-a848-f386be21c13b",
+        "d4d1bcbb-9820-4cdb-94a0-9b6e0ae170d1"
     ],
     "filterType": "GMScript",
     "folderName": "functionpointer",

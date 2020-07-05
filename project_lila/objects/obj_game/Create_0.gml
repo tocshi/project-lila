@@ -36,33 +36,32 @@ global.cursor_state = 0;
 global.controls_state = 0;
 
 // KEYBOARD SETTINGS
+global.movement_mode = 0; // 0 = mouse movement, 1 = directional movement
 global.key_interact =	vk_enter;
 global.mouse_interact =	mb_left;
-global.key_console =	191;
-global.key_up =			ord("W");
-global.key_left =		ord("A");
-global.key_down =		ord("S");
-global.key_right =		ord("D");
-global.key_skill0 =		ord("Q");
-global.key_skill1 =		ord("W");
-global.key_skill2 =		ord("E");
-global.key_skill3 =		ord("R");
-global.key_skill4 =		ord("A");
-global.key_skill5 =		ord("S");
-global.key_skill6 =		ord("D");
-global.key_skill7 =		ord("F");
-global.key_skill8 =		ord("O");
-global.key_skill9 =		ord("P");
-global.key_item0 =		ord("1");
-global.key_item1 =		ord("2");
-global.key_item2 =		ord("3");
-global.key_item3 =		ord("4");
-global.key_item4 =		ord("5");
-global.key_item5 =		ord("6");
-global.key_item6 =		ord("7");
-global.key_item7 =		ord("8");
-global.key_item8 =		ord("9");
-global.key_item9 =		ord("0");
+global.key_console =	[191, 191];
+global.key_up =			[ord("W"), ord("W")];
+global.key_left =		[ord("A"), ord("A")];
+global.key_down =		[ord("S"), ord("S")];
+global.key_right =		[ord("D"), ord("D")];
+global.key_skill0 =		[ord("Q"), ord("Q")];
+global.key_skill1 =		[ord("W"), ord("E")];
+global.key_skill2 =		[ord("E"), ord("R")];
+global.key_skill3 =		[ord("R"), ord("F")];
+global.key_skill4 =		[ord("A"), ord("Z")];
+global.key_skill5 =		[ord("S"), ord("X")];
+global.key_skill6 =		[ord("D"), ord("C")];
+global.key_skill7 =		[ord("F"), ord("V")];
+global.key_item0 =		[ord("1"), ord("1")];
+global.key_item1 =		[ord("2"), ord("2")];
+global.key_item2 =		[ord("3"), ord("3")];
+global.key_item3 =		[ord("4"), ord("4")];
+global.key_item4 =		[ord("5"), ord("5")];
+global.key_item5 =		[ord("6"), ord("6")];
+global.key_item6 =		[ord("7"), ord("7")];
+global.key_item7 =		[ord("8"), ord("8")];
+global.key_item8 =		[ord("9"), ord("9")];
+global.key_item9 =		[ord("0"), ord("0")];
 
 // Parse Json Data
 var itemDataJson = parse_json_to_str("item_data.json");
@@ -162,6 +161,14 @@ global.classList = [
 	"Archer",
 	"Mage",
 	"Rogue"];
+	
+// Map of classes and items categories they can equip
+global.weaponClassMap = ds_map_create();
+ds_map_add(global.weaponClassMap, "Longsword", initialize_array("Knight"));
+ds_map_add(global.weaponClassMap, "Bow", initialize_array("Archer"));
+ds_map_add(global.weaponClassMap, "Spellbook", initialize_array("Mage"));
+ds_map_add(global.weaponClassMap, "Knife", initialize_array("Rogue"));
+ds_map_add(global.weaponClassMap, "Chain Knife", initialize_array("Rogue"));
 
 // Stats that equipped items are allowed to change
 global.equipStats = ds_list_create();
@@ -205,8 +212,6 @@ global.options_keys = [
 	"key_skill5",
 	"key_skill6",
 	"key_skill7",
-	"key_skill8",
-	"key_skill9",
 	"key_item0",
 	"key_item1",
 	"key_item2",
@@ -217,6 +222,14 @@ global.options_keys = [
 	"key_item7",
 	"key_item8",
 	"key_item9",
+];
+
+// Additional keybinds that show up if using key movement
+global.options_directional_keys = [
+	"key_up",
+	"key_down",
+	"key_left",
+	"key_right",
 ];
 
 console = noone;

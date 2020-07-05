@@ -2,7 +2,24 @@ var target = argument0;
 var itemid = argument1;
 
 if(getEquipSlot(itemid) == -1 || global.playerItems[itemid] <= 0){exit;}
-// TODO!! Write a check that exits if you try to equip the a weapon to a class that can't use it
+
+// Check player level
+if(global.playerLevel < ds_map_find_value(global.itemData[| itemid],"lvl")) {
+	show_debug_message("Item requires Level " + string(ds_map_find_value(global.itemData[| itemid],"lvl")) + " to use!");
+	exit;
+}
+
+// Check whether the class is compatible with the weapon
+if(!is_undefined(ds_map_find_value(global.weaponClassMap, ds_map_find_value(global.itemData[| itemid],"category")))) {
+	var compatibleClasses = ds_map_find_value(global.weaponClassMap, ds_map_find_value(global.itemData[| itemid],"category"));
+	show_debug_message(string(compatibleClasses));
+	show_debug_message(global.player.statmap[? "class"]);
+	if(!isInArray(compatibleClasses, global.player.statmap[? "class"])) {
+		show_debug_message(global.player.statmap[? "class"] + " can only equip " + string(compatibleClasses));
+		exit;
+	}
+}
+
 
 if(target == global.player){
 	global.playerItems[itemid]--;

@@ -96,27 +96,25 @@ skill_button = array_create(21,"");
 // Set default keybinds
 skill_button[0]		= vk_space;
 // class skills
-skill_button[1]		= global.key_skill0;
-skill_button[2]		= global.key_skill1;
-skill_button[3]		= global.key_skill2;
-skill_button[4]		= global.key_skill3;
-skill_button[5]		= global.key_skill4;
-skill_button[6]		= global.key_skill5;
-skill_button[7]		= global.key_skill6;
-skill_button[8]		= global.key_skill7;
-skill_button[9]		= global.key_skill8;
-skill_button[10]	= global.key_skill9;
+skill_button[1]		= global.key_skill0[global.movement_mode];
+skill_button[2]		= global.key_skill1[global.movement_mode];
+skill_button[3]		= global.key_skill2[global.movement_mode];
+skill_button[4]		= global.key_skill3[global.movement_mode];
+skill_button[5]		= global.key_skill4[global.movement_mode];
+skill_button[6]		= global.key_skill5[global.movement_mode];
+skill_button[7]		= global.key_skill6[global.movement_mode];
+skill_button[8]		= global.key_skill7[global.movement_mode];
 // item actives
-skill_button[11]	= global.key_item0;
-skill_button[12]	= global.key_item1;
-skill_button[13]	= global.key_item2;
-skill_button[14]	= global.key_item3;
-skill_button[15]	= global.key_item4;
-skill_button[16]	= global.key_item5;
-skill_button[17]	= global.key_item6;
-skill_button[18]	= global.key_item7;
-skill_button[19]	= global.key_item8;
-skill_button[20]	= global.key_item9;
+skill_button[11]	= global.key_item0[global.movement_mode];
+skill_button[12]	= global.key_item1[global.movement_mode];
+skill_button[13]	= global.key_item2[global.movement_mode];
+skill_button[14]	= global.key_item3[global.movement_mode];
+skill_button[15]	= global.key_item4[global.movement_mode];
+skill_button[16]	= global.key_item5[global.movement_mode];
+skill_button[17]	= global.key_item6[global.movement_mode];
+skill_button[18]	= global.key_item7[global.movement_mode];
+skill_button[19]	= global.key_item8[global.movement_mode];
+skill_button[20]	= global.key_item9[global.movement_mode];
 
 if(global.playerItems[1] > 0){exit;}
 repeat(20){

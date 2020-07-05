@@ -29,7 +29,8 @@
         "2493e605-8c6a-409f-bf1b-0064e10b58b6",
         "ce3de9bd-f39b-49cd-a66d-b1d775448a26",
         "41cea978-a084-437b-919a-b73b22001e57",
-        "8e1efbfe-83c7-4d82-924e-6e77265f4b92"
+        "8e1efbfe-83c7-4d82-924e-6e77265f4b92",
+        "1ea80b42-0bf2-4a67-b077-0b710f8d2d3a"
     ],
     "filterType": "GMScript",
     "folderName": "projfunc",
