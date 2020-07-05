@@ -42,7 +42,7 @@ var cam_speed = point_distance(x,y,camera_get_view_x(global.currentCamera)+camer
 camera_set_view_speed(global.currentCamera,cam_speed,cam_speed);
 
 // Standard Movement
-switch(global.controls_state){
+switch(global.movement_mode){
 	case 0:
 	if(mouse_check_button(mb_right) && canMove){
 		if(point_distance(x,y,mouse_x,mouse_y) > 8){
@@ -58,16 +58,16 @@ switch(global.controls_state){
 	case 1:
 	destX = x;
 	destY = y;
-	if(keyboard_check(global.key_up)){
+	if(keyboard_check(global.key_up[global.movement_mode])){
 		destY -= statmap[? "movespeed"];
 	}
-	if(keyboard_check(global.key_down)){
+	if(keyboard_check(global.key_down[global.movement_mode])){
 		destY += statmap[? "movespeed"];
 	}
-	if(keyboard_check(global.key_left)){
+	if(keyboard_check(global.key_left[global.movement_mode])){
 		destX -= statmap[? "movespeed"];
 	}
-	if(keyboard_check(global.key_right)){
+	if(keyboard_check(global.key_right[global.movement_mode])){
 		destX += statmap[? "movespeed"];
 	}
 	if(destX != x || destY != y){isMoving = true;}
@@ -160,7 +160,9 @@ if(mouse_check_button(mb_left) && (atkTimer <= 0) && canAttack){
 if(canUseSkill){
 	for(var i = 0; i < 8; ++i){
 		if(skills[i] == "" || get_skill_data(skills[i], "type") == "passive"){continue;}
-		if(keyboard_check_pressed(variable_global_get("key_skill" + string(i)))){
+		var key = variable_global_get("key_skill" + string(i));
+		key = key[global.movement_mode];
+		if(keyboard_check_pressed(key)){
 			// perform cd/mp/weapon checks here as we can get a sound to play if it fails
 			if(statmap[? "mp"] < get_skill_data(skills[i], "mpcost") || cd[i+1] > 0 || equips[0] <= 0){continue;}
 			else{

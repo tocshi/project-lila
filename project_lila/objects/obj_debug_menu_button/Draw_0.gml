@@ -26,6 +26,7 @@ switch(type){
 		}
 		else{
 			var key = variable_global_get(data[0]);
+			key = key[global.movement_mode];
 			switch(key){
 				case vk_enter:
 					key = "Enter";
