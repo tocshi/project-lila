@@ -18,7 +18,7 @@ unpause_dialogue_box = call(fp_variable_instance_set, dialogue_box, "dialogue_pa
 delete_dialogue_buttons = call(destroy_buttons_by_type, "Dialogue");
 end_dialogue = call(fp_variable_instance_set, dialogue_box, "last_page", true);
 
-potion_button = instance_create_layer(LEFT_BUTTON_X, BUTTON_Y, "GUIPopUpButton", obj_generic_btn);
+potion_button = instance_create_layer(0, 0, "GUIPopUpButton", obj_dialogue_btn);
 with(potion_button){
 	type = "Dialogue";
 	function = call_list(
@@ -28,18 +28,18 @@ with(potion_button){
 					other.reset_dialogue_box,
 					other.delete_dialogue_buttons);
 	align = CENTRE;
-	width = 200;
-	height = 50;
 	halign = fa_center;
 	valign = fa_center;
 	left_offset = 0;
+	button_number = 1;
+	number_of_buttons = 2;
 	text = "Potion";
 	sprite_index = spr_confirmation_button;
 	event_perform(ev_other,ev_room_start);
 }
 instance_deactivate_object(potion_button)
 
-nothing_button = instance_create_layer(RIGHT_BUTTON_X, BUTTON_Y, "GUIPopUpButton", obj_generic_btn);
+nothing_button = instance_create_layer(0, 0, "GUIPopUpButton", obj_dialogue_btn);
 with(nothing_button){
 	type = "Dialogue";
 		function = call_list(
@@ -49,11 +49,11 @@ with(nothing_button){
 					other.reset_dialogue_box,
 					other.delete_dialogue_buttons);
 	align = CENTRE;
-	width = 200;
-	height = 50;
 	halign = fa_center;
 	valign = fa_center;
 	left_offset = 0;
+	button_number = 2;
+	number_of_buttons = 2;
 	text = "Nothing";
 	sprite_index = spr_confirmation_button;
 	event_perform(ev_other,ev_room_start);
