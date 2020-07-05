@@ -36,6 +36,9 @@ with(potion_button){
 	valign = fa_center;
 	left_offset = 0;
 	text = "Potion";
+	gui_align = CENTRE;
+	is_gui = true;
+	gui_y = height/2;
 	sprite_index = spr_confirmation_button;
 	event_perform(ev_other,ev_room_start);
 }
@@ -57,6 +60,9 @@ with(nothing_button){
 	valign = fa_center;
 	left_offset = 0;
 	text = "Nothing";
+	gui_align = CENTRE;
+	is_gui = true;
+	gui_y = -height/2;
 	sprite_index = spr_confirmation_button;
 	event_perform(ev_other,ev_room_start);
 }

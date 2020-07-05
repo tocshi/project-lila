@@ -1,1 +1,1 @@
-return call_list(call(argument))
+return call_list(call(argument0))
