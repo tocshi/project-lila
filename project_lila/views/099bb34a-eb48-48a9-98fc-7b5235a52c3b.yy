@@ -16,9 +16,10 @@
         "09bca0d8-83f2-4674-a6b5-c639947140a7",
         "a00fa6dd-3a7b-4054-84fd-611f06619970",
         "95fc46a0-298d-4733-8195-bbdc3d18bba1",
-        "924fc44b-878f-4814-b5f2-21f675cb7ffe",
         "d2fb38a7-3175-4cc6-bbdd-6c9e075ded50",
-        "08cd652d-fd06-453c-a519-6e3ba2f787b2"
+        "08cd652d-fd06-453c-a519-6e3ba2f787b2",
+        "6dd3e9d1-5904-475c-a439-fee74dbf1aa2",
+        "924fc44b-878f-4814-b5f2-21f675cb7ffe"
     ],
     "filterType": "GMObject",
     "folderName": "gui",
