@@ -17,10 +17,20 @@ if (align == CENTRE) {
 	left_offset += width/2;
 	top_offset += height/2;
 }
+
 if (gui_align == CENTRE) {
-	gui_x += camera_get_view_width(global.currentCamera)/2;
+	gui_valign = CENTRE;
+	gui_halign = CENTRE;
+}
+
+if (gui_valign == CENTRE) {
 	gui_y += camera_get_view_height(global.currentCamera)/2;
 }
+
+if (gui_halign == CENTRE) {
+	gui_x += camera_get_view_width(global.currentCamera)/2;
+}
+
 
 if (auto_scale) {
 	image_xscale = width / sprite_width;

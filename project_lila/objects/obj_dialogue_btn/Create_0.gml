@@ -4,9 +4,9 @@
 // Inherit the parent event
 event_inherited();
 
-view_height = camera_get_view_height(global.currentCamera);
+view_height = camera_get_view_height(global.currentCamera) - 0.02*global.game_height - sprite_get_height(gui_dialogue_box);;
 is_gui = true;
-gui_align = CENTRE;
+gui_halign = CENTRE;
 width = camera_get_view_width(global.currentCamera)*2/3;
 height = view_height/16;
 
