@@ -1,2 +1,2 @@
 var ret = argument0
-return call(ret)
+return single_call(fp_return, ret)

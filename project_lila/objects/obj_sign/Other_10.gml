@@ -11,7 +11,7 @@ speakers = array_create(9,id);
 pretext = array_create(9,-1);
 posttext = array_create(9,-1);
 
-dialogue_box = call(fp_instance_find, obj_dialogue_box, 0);
+dialogue_box = single_call(fp_instance_find, obj_dialogue_box, 0);
 reset_dialogue_box = call(fp_event_user, dialogue_box, 0);
 pause_dialogue_box = call(fp_variable_instance_set, dialogue_box, "dialogue_pause", true);
 unpause_dialogue_box = call(fp_variable_instance_set, dialogue_box, "dialogue_pause", false);
@@ -68,9 +68,9 @@ posttext[5] = call_list(
 
 
 // Skip if chose nothing 
-var answer_equals_nothing = call(
+var answer_equals_nothing = single_call(
 						is_equal,
-						call(fp_variable_instance_get, dialogue_box, "answer"),
+						single_call(fp_variable_instance_get, dialogue_box, "answer"),
 						"nothing");
 pretext[6] = call_list(
 				call(
@@ -79,7 +79,7 @@ pretext[6] = call_list(
 					call_list(
 						call(fp_variable_instance_set, dialogue_box, "page", 7),   // skip to page 7 
 						reset_dialogue_box),
-					call_list(call(do_nothing)))); // else go to page 6
+					single_call(do_nothing))); // else go to page 6
 					
 // Give potion then quit dialog
 posttext[6] = call_list(
