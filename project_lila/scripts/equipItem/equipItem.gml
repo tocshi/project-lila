@@ -5,17 +5,22 @@ if(getEquipSlot(itemid) == -1 || global.playerItems[itemid] <= 0){exit;}
 
 // Check player level
 if(global.playerLevel < ds_map_find_value(global.itemData[| itemid],"lvl")) {
-	show_debug_message("Item requires Level " + string(ds_map_find_value(global.itemData[| itemid],"lvl")) + " to use!");
+	hud_message("Item requires Level " + string(ds_map_find_value(global.itemData[| itemid],"lvl")) + " to use!");
 	exit;
 }
 
 // Check whether the class is compatible with the weapon
 if(!is_undefined(ds_map_find_value(global.weaponClassMap, ds_map_find_value(global.itemData[| itemid],"category")))) {
 	var compatibleClasses = ds_map_find_value(global.weaponClassMap, ds_map_find_value(global.itemData[| itemid],"category"));
-	show_debug_message(string(compatibleClasses));
-	show_debug_message(global.player.statmap[? "class"]);
 	if(!isInArray(compatibleClasses, global.player.statmap[? "class"])) {
-		show_debug_message(global.player.statmap[? "class"] + " can only equip " + string(compatibleClasses));
+		var compatibleClassString = "";
+		for(var i = 0; i < array_length_1d(compatibleClasses); ++i) {
+			if (i > 0) {
+				compatibleClassString += ", ";
+			}
+			compatibleClassString += compatibleClasses[i];
+		}
+		hud_message(string(ds_map_find_value(global.itemData[| itemid],"category")) + " can only be equipped by " + compatibleClassString);
 		exit;
 	}
 }
