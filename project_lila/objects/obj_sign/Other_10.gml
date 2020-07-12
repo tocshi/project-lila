@@ -1,8 +1,8 @@
-text[0] = "Welcome to the Chronicles of Lila playable demo!";
+text[0] = "Welcome to the Project Lila playable demo!";
 text[1] = "This game is still in progress. What you're seeing here is a demo that is far far far far from finished. Adam and his team is still actively working on it though!";
-text[2] = "You can follow their progress in the development blog (blog link here) or the official Chronicles of Lila Development Discord server (discord.gg/rEGTkZ).";
+text[2] = "You can follow their progress in the development blog (blog link here) or the official Project Lila Development Discord server (discord.gg/rEGTkZ).";
 text[3] = "But for now, please enjoy this demo!";
-text[4] = "Proceed to the right for the tutorial (To be implemented later)";
+text[4] = "Proceed to the right to play what we have so far.";
 text[5] = "what item u want lul"
 text[6] = "here haz 1 potions"
 text[7] = "here haz nothing"
