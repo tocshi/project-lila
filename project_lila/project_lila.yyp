@@ -777,14 +777,6 @@
             }
         },
         {
-            "Key": "2da84548-cc7f-48fd-ae75-345dad58c604",
-            "Value": {
-                "id": "388b5a02-d2f9-43ed-a97a-8083a03d6b15",
-                "resourcePath": "fonts\\font9\\font9.yy",
-                "resourceType": "GMFont"
-            }
-        },
-        {
             "Key": "2dd2d32a-3618-434e-ba38-5f978c28ec6f",
             "Value": {
                 "id": "b56f7045-c1d6-4e1d-a427-46b1c59a7676",
@@ -1006,14 +998,6 @@
                 "id": "ea290b84-35d1-4f1a-b91c-bc3e10d47d2b",
                 "resourcePath": "sprites\\spr_boots_leather\\spr_boots_leather.yy",
                 "resourceType": "GMSprite"
-            }
-        },
-        {
-            "Key": "3c98809d-dd7f-437d-9f85-58835e2a7e04",
-            "Value": {
-                "id": "9b1a5692-df3b-4fe1-b81f-87491c260deb",
-                "resourcePath": "fonts\\font10\\font10.yy",
-                "resourceType": "GMFont"
             }
         },
         {
