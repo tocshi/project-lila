@@ -1,67 +1,152 @@
-text[0] = "Welcome to the Project Lila playable demo!";
-text[1] = "This game is still in progress. What you're seeing here is a demo that is far far far far from finished. Adam and his team is still actively working on it though!";
-text[2] = "You can follow their progress in the development blog (blog link here) or the official Project Lila Development Discord server (discord.gg/rEGTkZ).";
-text[3] = "But for now, please enjoy this demo!";
-text[4] = "Proceed to the right to play what we have so far.";
-text[5] = "what item u want lul"
-text[6] = "here haz 1 potions"
-text[7] = "here haz 1 nothing"
+text[0] = "Welcome to the tutorial, which aims to demonstrate the mechanics we’ve built into Project Lila so far!";
+text[1] = "Before we begin, which combat style do you prefer?";
+text[2] = "Cool, now do you prefer to be more defensive or offensive?";
+text[3] = "Cool, now do you imagine yourself wielding a bow and arrow, or using magic?";
+text[4] = "Here you go, I’ve granted you some basic items to start you off.\n Now proceed to the next sign to learn how to use them!";
 
 speakers = array_create(9,id);
 pretext = array_create(9,-1);
 posttext = array_create(9,-1);
 
-create_potion_button = single_call(
+create_melee_button = call(
 						dialogue_button,
 						call_list(
-							call(fp_show_debug_message("Potion")),
-							call(fp_variable_instance_set, dialogue_box, "answer", "potion"),
-							call(fp_variable_instance_set, dialogue_box, "page", 6),
+							call(fp_variable_instance_set, dialogue_box, "page", 2),
 							unpause_dialogue_box,
 							reset_dialogue_box,
 							delete_dialogue_buttons),
 						1,
 						2,
-						"A potion",
+						"Melee",
 						spr_confirmation_button);
-
-create_nothing_button = single_call(
+						
+create_ranged_button = call(
 						dialogue_button,
 						call_list(
-							call(fp_show_debug_message("Nothing")),
-							call(fp_variable_instance_set, dialogue_box, "answer", "nothing"),
-							call(fp_variable_instance_set, dialogue_box, "page", 6),
+							call(fp_variable_instance_set, dialogue_box, "page", 3),
 							unpause_dialogue_box,
 							reset_dialogue_box,
 							delete_dialogue_buttons),
 						2,
 						2,
-						"A nothing",
+						"Ranged",
+						spr_confirmation_button);
+
+
+create_defensive_button = call(
+							dialogue_button,
+							call_list(
+								call(fp_variable_instance_set, dialogue_box, "answer", "Knight"),
+								call(fp_variable_instance_set, dialogue_box, "page", 4),
+								unpause_dialogue_box,
+								reset_dialogue_box,
+								delete_dialogue_buttons),
+							1,
+							2,
+							"Defensive",
+							spr_confirmation_button);
+							
+create_offensive_button = call(
+							dialogue_button,
+							call_list(
+								call(fp_variable_instance_set, dialogue_box, "answer", "Rogue"),
+								call(fp_variable_instance_set, dialogue_box, "page", 4),
+								unpause_dialogue_box,
+								reset_dialogue_box,
+								delete_dialogue_buttons),
+							2,
+							2,
+							"Offensive",
+							spr_confirmation_button);
+
+create_archer_button = call(
+						dialogue_button,
+						call_list(
+							call(fp_variable_instance_set, dialogue_box, "answer", "Archer"),
+							call(fp_variable_instance_set, dialogue_box, "page", 4),
+							unpause_dialogue_box,
+							reset_dialogue_box,
+							delete_dialogue_buttons),
+						1,
+						2,
+						"I like to shoot arrows!",
+						spr_confirmation_button);
+
+create_mage_button = call(
+						dialogue_button,
+						call_list(
+							call(fp_variable_instance_set, dialogue_box, "answer", "Mage"),
+							call(fp_variable_instance_set, dialogue_box, "page", 4),
+							unpause_dialogue_box,
+							reset_dialogue_box,
+							delete_dialogue_buttons),
+						2,
+						2,
+						"I like to use magic!",
 						spr_confirmation_button);
 
 // Create the potion/nothing buttons
-posttext[5] = call_list(
-				call(fp_variable_instance_set, self, "potion_button", create_potion_button),
-				call(fp_variable_instance_set, self, "nothing_button", create_nothing_button),
+posttext[1] = call_list(
+				create_melee_button,
+				create_ranged_button,
 				pause_dialogue_box);
 
+// Create offensive/defensive buttons
+posttext[2] = call_list(
+				create_defensive_button,
+				create_offensive_button,
+				pause_dialogue_box);
+				
+// Create archer/mage buttons
+posttext[3] = call_list(
+				create_archer_button,
+				create_mage_button,
+				pause_dialogue_box);
 
-// Skip if chose nothing 
-var answer_equals_nothing = single_call(
+answer = single_call(fp_variable_instance_get, dialogue_box, "answer")
+
+var answer_equals_knight = single_call(
 								is_equal,
-								single_call(fp_variable_instance_get, dialogue_box, "answer"),
-								"nothing");
-pretext[6] = call_list(
+								answer,
+								"Knight");
+
+var answer_equals_rogue = single_call(
+								is_equal,
+								answer,
+								"Rogue");
+
+var answer_equals_archer = single_call(
+								is_equal,
+								answer,
+								"Archer");
+
+var answer_equals_mage = single_call(
+								is_equal,
+								answer,
+								"Mage");
+pretext[4] = call_list(
+				call(fp_show_debug_message, answer),
+				call(change_class, global.player, answer),
 				call(
 					if_, 
-					answer_equals_nothing,
-					call_list(
-						call(fp_variable_instance_set, dialogue_box, "page", 7),   // skip to page 7 
-						reset_dialogue_box),
-					single_call(do_nothing))); // else go to page 6
+					answer_equals_knight,
+					single_call(addItem, 1),
+					single_call(do_nothing)),
+				call(
+					if_, 
+					answer_equals_rogue,
+					single_call(addItem, 1),
+					single_call(do_nothing)),
+				call(
+					if_, 
+					answer_equals_archer,
+					single_call(addItem, 1),
+					single_call(do_nothing)),
+				call(
+					if_, 
+					answer_equals_mage,
+					single_call(addItem, 1),
+					single_call(do_nothing)));
 					
-// Give potion then quit dialog
-posttext[6] = call_list(
-				call(addItem, 1),
-				end_dialogue);
+
 				
