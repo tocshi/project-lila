@@ -55,7 +55,9 @@ isMoving = false;
 canMove = true;
 target = noone;
 lastHitBy = noone;
+show_hp_bar = true;
 time = 0;
+image_index = 0;
 
 atkTimer = 0;
 statChange = true;

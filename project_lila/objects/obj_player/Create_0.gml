@@ -69,6 +69,7 @@ isMoving = false;
 isBlocking = false;
 statChange = true;
 image_alpha = 1;
+show_hp_bar = true;
 
 cd = array_create(21,0);
 maxcd = array_create(21,0);

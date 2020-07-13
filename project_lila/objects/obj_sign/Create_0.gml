@@ -1,7 +1,7 @@
 event_inherited();
 interactable = true;
 name = "Sign";
-portrait_sprite = spr_buff_TODO;
+portrait_sprite = spr_empty;
 voice_sound = 0;
 
 bubble = bubble_symbol.notice;

@@ -1,8 +1,8 @@
-text[0] = "Welcome to the tutorial, which aims to demonstrate the mechanics we\’ve built into Project Lila so far!";
+text[0] = "Welcome to the tutorial, which aims to demonstrate the mechanics we've built into Project Lila so far!";
 text[1] = "Before we begin, which combat style do you prefer?";
 text[2] = "Cool, now do you prefer to be more defensive or offensive?";
 text[3] = "Cool, now do you imagine yourself wielding a bow and arrow, or using magic?";
-text[4] = "Here you go, I\’ve granted you some basic items to start you off. Now proceed to the next sign to learn how to use them!";
+text[4] = "Here you go, I've granted you some basic items to start you off. Now proceed to the next sign to learn how to use them!";
 
 speakers = array_create(9,id);
 pretext = array_create(9,-1);
@@ -134,21 +134,25 @@ pretext[4] = call_list(
 					if_, 
 					answer_equals_knight,
 					single_call(addItem, 1),
+					single_call(addItem, 10),
 					single_call(do_nothing)),
 				call(
 					if_, 
 					answer_equals_rogue,
 					single_call(addItem, 1),
+					single_call(addItem, 16),
 					single_call(do_nothing)),
 				call(
 					if_, 
 					answer_equals_archer,
 					single_call(addItem, 1),
+					single_call(addItem, 11),
 					single_call(do_nothing)),
 				call(
 					if_, 
 					answer_equals_mage,
 					single_call(addItem, 1),
+					single_call(addItem, 18),
 					single_call(do_nothing)));
 					
 
