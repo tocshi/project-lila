@@ -1,6 +1,9 @@
 /// @description Initialize
+show_debug_message(width);
+show_debug_message(height);
 if (already_init) exit;
-
+show_debug_message(width);
+show_debug_message(height);
 if (v_relative_align == CENTRE) {
 	top_relative_offset = 0.5;
 }

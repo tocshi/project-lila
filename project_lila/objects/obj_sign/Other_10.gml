@@ -5,7 +5,7 @@ text[3] = "But for now, please enjoy this demo!";
 text[4] = "Proceed to the right to play what we have so far.";
 text[5] = "what item u want lul"
 text[6] = "here haz 1 potions"
-text[7] = "here haz nothing"
+text[7] = "here haz 1 nothing"
 
 speakers = array_create(9,id);
 pretext = array_create(9,-1);
@@ -18,60 +18,46 @@ unpause_dialogue_box = call(fp_variable_instance_set, dialogue_box, "dialogue_pa
 delete_dialogue_buttons = call(destroy_buttons_by_type, "Dialogue");
 end_dialogue = call(fp_variable_instance_set, dialogue_box, "last_page", true);
 
-potion_button = instance_create_layer(0, 0, "GUIPopUpButton", obj_dialogue_btn);
-with(potion_button){
-	type = "Dialogue";
-	function = call_list(
-					call(fp_variable_instance_set, other.dialogue_box, "answer", "potion"),
-					call(fp_variable_instance_set, other.dialogue_box, "page", 6),
-					other.unpause_dialogue_box,
-					other.reset_dialogue_box,
-					other.delete_dialogue_buttons);
-	align = CENTRE;
-	halign = fa_center;
-	valign = fa_center;
-	left_offset = 0;
-	button_number = 1;
-	number_of_buttons = 2;
-	text = "Potion";
-	sprite_index = spr_confirmation_button;
-	event_perform(ev_other,ev_room_start);
-}
-instance_deactivate_object(potion_button)
+create_potion_button = single_call(
+						dialogue_button,
+						call_list(
+							call(fp_show_debug_message("Potion")),
+							call(fp_variable_instance_set, dialogue_box, "answer", "potion"),
+							call(fp_variable_instance_set, dialogue_box, "page", 6),
+							unpause_dialogue_box,
+							reset_dialogue_box,
+							delete_dialogue_buttons),
+						1,
+						2,
+						"A potion",
+						spr_confirmation_button);
 
-nothing_button = instance_create_layer(0, 0, "GUIPopUpButton", obj_dialogue_btn);
-with(nothing_button){
-	type = "Dialogue";
-		function = call_list(
-					call(fp_variable_instance_set, other.dialogue_box, "answer", "nothing"),
-					call(fp_variable_instance_set, other.dialogue_box, "page", 6),
-					other.unpause_dialogue_box,
-					other.reset_dialogue_box,
-					other.delete_dialogue_buttons);
-	align = CENTRE;
-	halign = fa_center;
-	valign = fa_center;
-	left_offset = 0;
-	button_number = 2;
-	number_of_buttons = 2;
-	text = "Nothing";
-	sprite_index = spr_confirmation_button;
-	event_perform(ev_other,ev_room_start);
-}
-instance_deactivate_object(nothing_button)
+create_nothing_button = single_call(
+						dialogue_button,
+						call_list(
+							call(fp_show_debug_message("Nothing")),
+							call(fp_variable_instance_set, dialogue_box, "answer", "nothing"),
+							call(fp_variable_instance_set, dialogue_box, "page", 6),
+							unpause_dialogue_box,
+							reset_dialogue_box,
+							delete_dialogue_buttons),
+						2,
+						2,
+						"A nothing",
+						spr_confirmation_button);
 
 // Create the potion/nothing buttons
 posttext[5] = call_list(
-				call(fp_activate_object, potion_button),
-				call(fp_activate_object, nothing_button),
+				call(fp_variable_instance_set, self, "potion_button", create_potion_button),
+				call(fp_variable_instance_set, self, "nothing_button", create_nothing_button),
 				pause_dialogue_box);
 
 
 // Skip if chose nothing 
 var answer_equals_nothing = single_call(
-						is_equal,
-						single_call(fp_variable_instance_get, dialogue_box, "answer"),
-						"nothing");
+								is_equal,
+								single_call(fp_variable_instance_get, dialogue_box, "answer"),
+								"nothing");
 pretext[6] = call_list(
 				call(
 					if_, 
