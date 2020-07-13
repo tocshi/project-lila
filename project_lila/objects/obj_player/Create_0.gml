@@ -115,17 +115,3 @@ skill_button[17]	= global.key_item6[global.movement_mode];
 skill_button[18]	= global.key_item7[global.movement_mode];
 skill_button[19]	= global.key_item8[global.movement_mode];
 skill_button[20]	= global.key_item9[global.movement_mode];
-
-if(global.playerItems[1] > 0){exit;}
-repeat(20){
-	addItem(1);
-}
-addItem(6);
-addItem(7);
-addItem(8);
-addItem(9);
-addItem(10);
-addItem(11);
-addItem(16);
-addItem(18);
-addItem(34);
