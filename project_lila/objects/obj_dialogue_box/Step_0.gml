@@ -37,10 +37,9 @@ if(!pause && time % textspeed == 0 && char_counter < string_length(text[page])){
 if(dialogue_pause){exit;}
 
 // when interact button is pressed
-if((keyboard_check_pressed(vk_escape) || keyboard_check_pressed(global.key_interact) || mouse_check_button_pressed(global.mouse_interact)) && !instance_exists(obj_console)){
-	
-if(char_counter < string_length(text[page])){
-		char_counter = string_length(text[page]);
+if((keyboard_check_pressed(vk_escape) || keyboard_check_pressed(global.key_interact) || mouse_check_button_pressed(global.mouse_interact)) && !global.console.is_active){
+	if(char_counter < string_length(text[page])){
+			char_counter = string_length(text[page]);
 	}
 	else{
 		if(page = array_length_1d(text)-1 || last_page){

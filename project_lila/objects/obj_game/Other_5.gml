@@ -1,4 +1,4 @@
-if (console != noone) {
-	console.active = false;
+if (global.console != noone) {
+	global.console.is_active = false;
 }
 

@@ -115,3 +115,5 @@ skill_button[17]	= global.key_item6[global.movement_mode];
 skill_button[18]	= global.key_item7[global.movement_mode];
 skill_button[19]	= global.key_item8[global.movement_mode];
 skill_button[20]	= global.key_item9[global.movement_mode];
+
+global.console = instance_create_layer(0, 0, "GUIText" , obj_console);

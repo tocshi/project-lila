@@ -1,4 +1,4 @@
-if (!active) exit;
+if (!is_active) exit;
 
 var text_pos = HEIGHT - TEXT_HEIGHT;
 

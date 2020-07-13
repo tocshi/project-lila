@@ -232,7 +232,7 @@ global.options_directional_keys = [
 	"key_right",
 ];
 
-console = noone;
+global.console = noone;
 
 // gui variables
 item_desc_line_length = 28;
