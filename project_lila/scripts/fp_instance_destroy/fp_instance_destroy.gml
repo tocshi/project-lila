@@ -1,3 +1,3 @@
-var obj = fp_get_val(argument0);
+var obj = argument0;
 
 instance_destroy(obj);

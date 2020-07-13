@@ -14,7 +14,6 @@ posttext = array_create(9,-1);
 create_potion_button = single_call(
 						dialogue_button,
 						call_list(
-							call(fp_show_debug_message("Potion")),
 							call(fp_variable_instance_set, dialogue_box, "answer", "potion"),
 							call(fp_variable_instance_set, dialogue_box, "page", 6),
 							unpause_dialogue_box,
@@ -28,7 +27,6 @@ create_potion_button = single_call(
 create_nothing_button = single_call(
 						dialogue_button,
 						call_list(
-							call(fp_show_debug_message("Nothing")),
 							call(fp_variable_instance_set, dialogue_box, "answer", "nothing"),
 							call(fp_variable_instance_set, dialogue_box, "page", 6),
 							unpause_dialogue_box,

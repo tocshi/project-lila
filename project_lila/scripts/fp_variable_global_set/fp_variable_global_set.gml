@@ -1,6 +1,6 @@
-var name = fp_get_val(argument0);
-var val = fp_get_val(argument1);
+var name = argument0;
+var val = argument1;
 
-// show_debug_message("global." + name + " is " + variable_instance_get(obj, name));
+// show_debug_message("global." + name + " is " + variable_global_set(obj, name));
 
 return variable_global_set(name, val);

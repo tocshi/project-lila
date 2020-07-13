@@ -103,30 +103,33 @@ posttext[3] = call_list(
 				create_mage_button,
 				pause_dialogue_box);
 
-answer = single_call(fp_variable_instance_get, dialogue_box, "answer")
+answer = _value(single_call(fp_variable_instance_get, dialogue_box, "answer"));
 
-var answer_equals_knight = single_call(
-								is_equal,
-								answer,
-								"Knight");
+var answer_equals_knight = _value(
+								single_call(
+									is_equal,
+									answer,
+									"Knight"));
 
-var answer_equals_rogue = single_call(
-								is_equal,
-								answer,
-								"Rogue");
+var answer_equals_rogue = _value(
+								single_call(
+									is_equal,
+									answer,
+									"Rogue"));
 
-var answer_equals_archer = single_call(
-								is_equal,
-								answer,
-								"Archer");
+var answer_equals_archer = _value(
+								single_call(
+									is_equal,
+									answer,
+									"Archer"));
 
-var answer_equals_mage = single_call(
-								is_equal,
-								answer,
-								"Mage");
+var answer_equals_mage = _value(
+								single_call(
+									is_equal,
+									answer,
+									"Mage"));
 pretext[4] = call_list(
-				call(fp_show_debug_message, answer),
-				call(change_class, global.player, answer),
+				call(change_class, player, answer),
 				call(
 					if_, 
 					answer_equals_knight,
