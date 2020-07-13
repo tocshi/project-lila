@@ -10,7 +10,12 @@ else{
 	image_index = 0;
 }
 
-draw_self();
+draw_self()
+
+if(is_gui){
+	x = camera_get_view_x(global.currentCamera) + gui_x;
+	y = camera_get_view_y(global.currentCamera) + gui_y;
+}
 
 draw_set_halign(halign);
 draw_set_valign(valign);

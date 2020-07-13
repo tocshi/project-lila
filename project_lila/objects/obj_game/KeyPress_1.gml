@@ -3,6 +3,9 @@ if (keyboard_check(global.key_console[global.movement_mode])) {
 	if (!instance_exists(global.player)) exit;
 	if (!global.console.is_active) {
 		alarm[0] = 1;
+		if(global.gui_state > 1) {
+			instance_destroy(obj_generic_btn);
+		}
 		global.pause = true;
 		global.gui_state = 0;
 		keyboard_string = "/";
