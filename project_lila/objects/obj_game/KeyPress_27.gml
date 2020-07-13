@@ -4,8 +4,8 @@ if(global.player == noone
 	|| room == rm_options
 ){exit;}
 
-if (instance_exists(console)) {
-	console.active = false;
+if (instance_exists(global.console)) {
+	global.console.is_active = false;
 }
 
 if(global.pause == false){
@@ -27,8 +27,8 @@ else if(global.gui_state != -1) {
 	instance_destroy(obj_generic_btn);
 	instance_activate_all();
 	camera_set_view_target(global.currentCamera,global.player);
-	if (instance_exists(console)) {
-		console.active = false;
+	if (instance_exists(global.console)) {
+		global.console.is_active = false;
 	}
 }
 

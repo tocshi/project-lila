@@ -42,10 +42,11 @@ outline_color = c_black;
 text = "";
 right_text = "";
 
+draw_gui = false;
 // GUI (positioning relative to screen rather than world)
-is_gui = false;
-gui_x = 0;
-gui_y = 0;
-gui_align = TOP_LEFT;
-gui_valign = TOP;
-gui_halign = LEFT;
+//is_gui = false;
+//gui_x = 0;
+//gui_y = 0;
+//gui_align = TOP_LEFT;
+//gui_valign = TOP;
+//gui_halign = LEFT;
