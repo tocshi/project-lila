@@ -7,6 +7,7 @@ voice_sound = 0;
 bubble = bubble_symbol.notice;
 
 player = _value(single_call(fp_variable_global_get, "player"));
+game = _value(single_call(fp_instance_find, obj_game, 0));
 dialogue_box = _value(single_call(fp_instance_find, obj_dialogue_box, 0));
 reset_dialogue_box = call(fp_event_user, dialogue_box, 0);
 pause_dialogue_box = call(fp_variable_instance_set, dialogue_box, "dialogue_pause", true);
