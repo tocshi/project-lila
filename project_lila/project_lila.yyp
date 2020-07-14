@@ -383,6 +383,14 @@
             }
         },
         {
+            "Key": "18152c23-7a93-403b-88e9-91eac50cc5e1",
+            "Value": {
+                "id": "79c3826b-f972-4d36-921a-5c17beada744",
+                "resourcePath": "objects\\obj_hud_message\\obj_hud_message.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "1873f0df-cc63-4db4-9f90-708e6d2aabd8",
             "Value": {
                 "id": "8c0e29fd-3c77-4605-9911-bf0f05f7d0b8",
@@ -3191,6 +3199,14 @@
             }
         },
         {
+            "Key": "e97d92ef-ce75-4b1d-8472-af50fcc6c661",
+            "Value": {
+                "id": "e16c523a-38ed-4d14-a388-32758469e226",
+                "resourcePath": "scripts\\hud_message\\hud_message.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "eada94d8-17c4-47dc-a308-6854ed50798e",
             "Value": {
                 "id": "15107ba1-9725-4f54-b708-7f5645904cfc",
@@ -3599,6 +3615,7 @@
         "93453b6b-8619-4e62-99c1-d07ddd62a3a5",
         "1ad0c2fa-f034-4c6b-bfe0-13fc729d5961",
         "42ef62d5-79af-4673-8882-f95a45096be1",
+        "e97d92ef-ce75-4b1d-8472-af50fcc6c661",
         "b6826643-d9df-4536-940d-50232e900656",
         "05275d8e-4c72-4298-a6ed-4722d0c596d8",
         "323c4ad7-c90c-4353-ae79-b2066a097507",
