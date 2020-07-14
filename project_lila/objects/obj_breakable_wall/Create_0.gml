@@ -1,7 +1,7 @@
 event_inherited();
 
 statmap[? "level"] = 1;
-statmap[? "maxhp"] = 30;
+statmap[? "maxhp"] = 20;
 statmap[? "hp"] = statmap[? "maxhp"];
 statmap[? "hpregen"] = 0;
 statmap[? "mpregen"] = 0;

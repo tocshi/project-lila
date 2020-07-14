@@ -1,2 +1,5 @@
 // separate text into lines
-text[page] = string_wrap(text[page],dialogue_box_width*0.97);
+for(var i = 0; i < array_length_1d(text); ++i){
+	text[i] = string_wrap(text[i],dialogue_box_width*0.97);
+}
+

@@ -1,5 +1,5 @@
 // GAME VERSION
-version = "0.0.8.0"
+version = "0.0.8.1"
 // Is the game paused?
 global.pause = 0;
 // Player id

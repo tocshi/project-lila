@@ -50,7 +50,7 @@ if((keyboard_check_pressed(vk_escape) || keyboard_check_pressed(global.key_inter
 		portrait_sprite = speakers[page].portrait_sprite;
 		name = speakers[page].name;
 		voice_sound = speakers[page].voice_sound;
-		alarm[0] = 1;
+		//alarm[0] = 1;
 		time = 0;
 		char_counter = 0;
 		posttext_triggered = false;
