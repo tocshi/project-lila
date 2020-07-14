@@ -9,4 +9,15 @@ speakers = array_create(9,id);
 pretext = array_create(9,-1);
 posttext = array_create(9,-1);
 
-posttext[5] = single_call(add_cpp, 300);
+var set_progress_flag = call(fp_variable_instance_set, game, "cpp_given", true);
+var is_progress_flag_set = _value(single_call(fp_variable_instance_get, game, "cpp_given"));
+
+posttext[4] = single_call(
+				if_,
+				is_progress_flag_set,
+				call_list(end_dialogue),
+				single_call(do_nothing));
+
+posttext[5] = call_list(
+				call(add_cpp, 300),
+				set_progress_flag);
