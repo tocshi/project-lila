@@ -900,7 +900,7 @@
             "Key": "32ff4cd3-b358-4f7e-9f85-3472aa6a06f6",
             "Value": {
                 "id": "da9e2abb-a4b3-44f6-97ea-e56727875490",
-                "resourcePath": "objects\\obj_breakable_wall\\obj_breakable_wall.yy",
+                "resourcePath": "objects\\obj_breakable_wall_hitbox\\obj_breakable_wall_hitbox.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1517,6 +1517,14 @@
             "Value": {
                 "id": "1ed67e66-5581-465a-b8ba-6dd97a1c9ae0",
                 "resourcePath": "objects\\obj_attack_flashcut\\obj_attack_flashcut.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "61e5ea9c-036a-445a-9bc4-19702e151f41",
+            "Value": {
+                "id": "b881ced0-2102-4aa4-870c-1989f4d46f5d",
+                "resourcePath": "objects\\obj_breakable_wall\\obj_breakable_wall.yy",
                 "resourceType": "GMObject"
             }
         },

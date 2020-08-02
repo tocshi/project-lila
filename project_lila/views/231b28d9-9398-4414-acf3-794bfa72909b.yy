@@ -8,7 +8,8 @@
         "cd17adfc-fdc5-4455-962b-7e4f5a4bb016",
         "11fad92c-1b8b-460d-a6af-f8a7f4ef8f10",
         "b2cd5060-3b18-48ef-8dd0-7d477ba66c13",
-        "343cd26c-40d2-4d50-ab68-3afe45c3b16a"
+        "343cd26c-40d2-4d50-ab68-3afe45c3b16a",
+        "61e5ea9c-036a-445a-9bc4-19702e151f41"
     ],
     "filterType": "GMObject",
     "folderName": "room_obj",
