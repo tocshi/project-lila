@@ -1,4 +1,4 @@
-global.player = id;
+global.player = self.id;
 global.currentCamera = camera_create_view(x-800,y-450,1600,900,0,self.id,100,100,800,450);
 view_set_camera(view_current,global.currentCamera);
 view_set_wport(view_current,1600);
@@ -17,6 +17,8 @@ statmap = ds_map_create();
 basestatmap = ds_map_create();
 
 statmap[? "class"]			= "Debug";
+statmap[? "classlvl"]		= 10;
+statmap[? "classxp"] 		= 0;
 statmap[? "maxhp"]			= 100 + global.playerLevel*10 + round(sqr(global.playerLevel)/10);
 statmap[? "hp"]				= statmap[? "maxhp"];
 statmap[? "hpshield"]		= 0;
@@ -24,7 +26,7 @@ statmap[? "hpregen"]		= statmap[? "maxhp"]/100/60;//0.02 + statmap[? "level"]*0.
 statmap[? "maxmp"]			= 100;
 statmap[? "mp"]				= statmap[? "maxmp"];
 statmap[? "mpregen"]		= 0.01666*10; //doubled if canMove && !isMoving
-statmap[? "atk"]			= 0;
+statmap[? "atk"]			= 50;
 statmap[? "def"]			= 0;
 
 statmap[? "fire_atk"]		= 0;
@@ -45,7 +47,7 @@ statmap[? "dark_def"]		= 0;
 
 statmap[? "movespeed"]		= 3;
 statmap[? "atkspeed"]		= 1.2;
-statmap[? "critrate"]		= 10;
+statmap[? "critrate"]		= 25;
 statmap[? "critdmg"]		= 150;
 statmap[? "finaldmg"]		= 100;
 statmap[? "finalshld"]		= 0;
@@ -68,8 +70,7 @@ isDead = false;
 isMoving = false;
 isBlocking = false;
 statChange = true;
-image_alpha = 1;
-show_hp_bar = true;
+alpha = 1;
 
 cd = array_create(21,0);
 maxcd = array_create(21,0);
@@ -117,6 +118,19 @@ skill_button[18]	= global.key_item7[global.movement_mode];
 skill_button[19]	= global.key_item8[global.movement_mode];
 skill_button[20]	= global.key_item9[global.movement_mode];
 
-if (!instance_exists(obj_console)) {
-	global.console = instance_create_layer(0, 0, "GUIText" , obj_console);
+if(global.playerItems[1] > 0){exit;}
+repeat(20){
+	addItem(1);
 }
+addItem(6);
+addItem(7);
+addItem(8);
+addItem(9);
+addItem(10);
+addItem(11);
+addItem(16);
+addItem(18);
+addItem(34);
+
+
+global.console = instance_create_layer(0, 0, "GUIText" , obj_console);

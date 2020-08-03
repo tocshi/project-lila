@@ -45,7 +45,7 @@ switch(useSkill){
 		canUseSkill = false;
 		isMoving = false;
 		alarm[1] = 60;
-		image_alpha = 0;
+		alpha = 0;
 		mask_index = spr_empty;
 	}
 	break;

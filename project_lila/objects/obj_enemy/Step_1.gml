@@ -54,3 +54,11 @@ statmap[? "movespeed"] = clamp(statmap[? "movespeed"],0,30);
 statmap[? "hp"] = clamp(statmap[? "hp"],0,statmap[? "maxhp"]);
 statmap[? "mp"] = clamp(statmap[? "mp"],0,statmap[? "maxmp"]);
 statmap[? "finalshld"] = clamp(statmap[? "finalshld"],-100,100);
+
+//FACING THE RIGHT WAY
+if((direction >= 0 && direction <= 90) || (direction >= 270 && direction < 360)){
+	image_xscale = 1;
+} else {
+	image_xscale = -1;
+}
+

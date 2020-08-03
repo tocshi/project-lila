@@ -1,4 +1,4 @@
-if(instance_exists(anchor)){
+if(instance_exists(user)){
 	x = anchor.x;
 	y = anchor.y;
 }

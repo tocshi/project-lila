@@ -1,7 +1,6 @@
 var target = argument0;
 var class = argument1;
 
-
 if(!instance_exists(target)){exit;}
 if(target.statmap[? "class"] == class){exit;}
 
@@ -72,5 +71,4 @@ with(instance_create_layer(xx,yy,"Instances",classobj)){
 	statmap[? "hp"] = hp;
 	statmap[? "mp"] = mp;
 }
-
 return true;

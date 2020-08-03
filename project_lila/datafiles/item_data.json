@@ -145,7 +145,7 @@
     "sprite"    : "spr_lsw0",
     "type"      : "equippable",
     "category"  : "Longsword",
-    "lvl"       : 0,
+    "lvl"       : 1,
     "desc"      : "A longsword given to you to help you start your adventure.",
     "value"     : 40,
     "atk"       : 5,
@@ -157,7 +157,7 @@
     "sprite"    : "spr_bow0",
     "type"      : "equippable",
     "category"  : "Bow",
-    "lvl"       : 0,
+    "lvl"       : 1,
     "desc"      : "A bow given to you to help you start your adventure.",
     "value"     : 40,
     "atk"       : 5,
@@ -169,7 +169,7 @@
     "sprite"    : "spr_ssw0",
     "type"      : "equippable",
     "category"  : "Shortsword",
-    "lvl"       : 0,
+    "lvl"       : 1,
     "desc"      : "A shortsword given to you to help you start your adventure.",
     "value"     : 40,
     "atk"       : 5,
@@ -181,7 +181,7 @@
     "sprite"    : "spr_spe0",
     "type"      : "equippable",
     "category"  : "Spear",
-    "lvl"       : 0,
+    "lvl"       : 1,
     "desc"      : "A spear given to you to help you start your adventure.",
     "value"     : 40,
     "atk"       : 5,
@@ -193,7 +193,7 @@
     "sprite"    : "spr_axe0",
     "type"      : "equippable",
     "category"  : "Axe",
-    "lvl"       : 0,
+    "lvl"       : 1,
     "desc"      : "An axe given to you to help you start your adventure.",
     "value"     : 40,
     "atk"       : 5,
@@ -205,7 +205,7 @@
     "sprite"    : "spr_gun0",
     "type"      : "equippable",
     "category"  : "Gun",
-    "lvl"       : 0,
+    "lvl"       : 1,
     "desc"      : "A rifle given to you to help you start your adventure.",
     "value"     : 40,
     "atk"       : 5,
@@ -217,7 +217,7 @@
     "sprite"    : "spr_knf0",
     "type"      : "equippable",
     "category"  : "Knife",
-    "lvl"       : 0,
+    "lvl"       : 1,
     "desc"      : "A dagger given to you to help you start your adventure.",
     "value"     : 40,
     "atk"       : 5,
@@ -229,7 +229,7 @@
     "sprite"    : "spr_fst0",
     "type"      : "equippable",
     "category"  : "Fist",
-    "lvl"       : 0,
+    "lvl"       : 1,
     "desc"      : "A pair of knuckles given to you to help you start your adventure.",
     "value"     : 40,
     "atk"       : 5,
@@ -241,7 +241,7 @@
     "sprite"    : "spr_spb0",
     "type"      : "equippable",
     "category"  : "Spellbook",
-    "lvl"       : 0,
+    "lvl"       : 1,
     "desc"      : "A spellbook given to you to help you start your adventure.",
     "value"     : 40,
     "atk"       : 5,
@@ -253,7 +253,7 @@
     "sprite"    : "spr_stf0",
     "type"      : "equippable",
     "category"  : "Staff",
-    "lvl"       : 0,
+    "lvl"       : 1,
     "desc"      : "A staff given to you to help you start your adventure.",
     "value"     : 40,
     "atk"       : 5,
@@ -303,7 +303,7 @@
     "lvl"       : 3,
     "desc"      : "A longsword made of a common metal. Shoddy, but cheap.",
     "value"     : 100,
-    "atk"       : 7,
+    "atk"       : 10,
     "atkrange"  : 80,
     "unleashGauge"  : 0
   },{
@@ -315,7 +315,7 @@
     "lvl"       : 3,
     "desc"      : "A bow made from the wood of a common tree. Shoddy, but cheap.",
     "value"     : 100,
-    "atk"       : 7,
+    "atk"       : 10,
     "atkrange"  : 420,
     "unleashGauge"  : 0
   },{
@@ -327,7 +327,7 @@
     "lvl"       : 3,
     "desc"      : "A shortsword made of a common metal. Shoddy, but cheap.",
     "value"     : 100,
-    "atk"       : 7,
+    "atk"       : 10,
     "atkrange"  : 70,
     "unleashGauge"  : 0
   },{
@@ -339,7 +339,7 @@
     "lvl"       : 3,
     "desc"      : "A spear made of a common metal. Shoddy, but cheap.",
     "value"     : 100,
-    "atk"       : 7,
+    "atk"       : 10,
     "atkrange"  : 100,
     "unleashGauge"  : 0
   },{
@@ -351,7 +351,7 @@
     "lvl"       : 3,
     "desc"      : "An axe made of a common metal. Shoddy, but cheap.",
     "value"     : 100,
-    "atk"       : 7,
+    "atk"       : 10,
     "atkrange"  : 70,
     "unleashGauge"  : 0
   },{
@@ -363,7 +363,7 @@
     "lvl"       : 3,
     "desc"      : "A rifle decorated with a common metal. Shoddy, but cheap.",
     "value"     : 100,
-    "atk"       : 7,
+    "atk"       : 10,
     "atkrange"  : 450,
     "unleashGauge"  : 0
   },{
@@ -375,7 +375,7 @@
     "lvl"       : 3,
     "desc"      : "A dagger made of a common metal. Shoddy, but cheap.",
     "value"     : 100,
-    "atk"       : 7,
+    "atk"       : 10,
     "atkrange"  : 60,
     "unleashGauge"  : 0
   },{
@@ -387,7 +387,7 @@
     "lvl"       : 3,
     "desc"      : "A pair of knuckles made of a common metal. Shoddy, but cheap.",
     "value"     : 100,
-    "atk"       : 7,
+    "atk"       : 10,
     "atkrange"  : 60,
     "unleashGauge"  : 0
   },{
@@ -399,7 +399,7 @@
     "lvl"       : 3,
     "desc"      : "A rugged, but useable spellbook. Shoddy, but cheap.",
     "value"     : 100,
-    "atk"       : 7,
+    "atk"       : 10,
     "atkrange"  : 400,
     "unleashGauge"  : 0
   },{
@@ -411,7 +411,7 @@
     "lvl"       : 3,
     "desc"      : "A staff made from the wood of a common tree. Shoddy, but cheap.",
     "value"     : 100,
-    "atk"       : 7,
+    "atk"       : 10,
     "atkrange"  : 380,
     "unleashGauge"  : 0
   },{

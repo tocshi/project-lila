@@ -77,7 +77,7 @@ switch(useSkill){
 		atkmap[? "element"] = other.atkelement;
 		sprite = make_sprite_from_item(user.equips[0]);
 		sprite_index = sprite;
-		enemies = collision_circle_list(x, y, sprite_width, obj_enemy, true, true, enemylist, false);
+		enemies = collision_circle_list(x, y, sprite_width, obj_enemy, false, true, enemylist, false);
 		atkmap[? "dmgmod"] = 130 + 10*enemies;
 	}
 	break;
