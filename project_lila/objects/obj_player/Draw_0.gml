@@ -1,7 +1,7 @@
 if(x <= mouse_x){
-	draw_sprite_ext(spr_debug_player,-1,x,y,1,1,0,-1,image_alpha);
+	draw_sprite_ext(spr_debug_player,-1,x,y,1,1,0,-1,alpha);
 } else {
-	draw_sprite_ext(spr_debug_player,-1,x,y,-1,1,0,-1,image_alpha);
+	draw_sprite_ext(spr_debug_player,-1,x,y,-1,1,0,-1,alpha);
 }
 
 if(keyboard_check(vk_alt) && ds_map_exists(global.itemData[| equips[0]],"atkrange")){

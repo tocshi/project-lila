@@ -1,7 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-
 // Top of bounding area for dialogue buttons
 gui_y = view_height/4;
 

@@ -1,7 +1,6 @@
 // TO ONLY BE CALLED FROM PLAYER OBJECT!
 // Save items
 global.lastClass = object_index;
-global.lastRoom = room;
 var class = statmap[? "class"];
 // Save equip and itembar
 if(!ds_map_exists(global.playerEquipLoadouts,class)) {

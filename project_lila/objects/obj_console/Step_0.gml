@@ -35,9 +35,6 @@ if (keyboard_check_pressed(vk_enter)) {
 				ds_list_add(lines, command + ": Player class changed to " + arg1);
 			}
 			break;
-		case "/class":
-			ds_list_add(lines, command + ": Your class is " + global.player.statmap[? "class"]);
-			break;
 		case "/commands":
 			if (!string_is_uint(arg1)) {
 				arg1 = 1;				

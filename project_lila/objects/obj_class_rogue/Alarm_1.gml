@@ -1,4 +1,4 @@
-image_alpha = 1;
+alpha = 1;
 mask_index = spr_debug_player;
 if(!instance_exists(s_step_target)){exit;}
 

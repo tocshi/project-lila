@@ -1,5 +1,6 @@
 /// @description Initialize
 if (already_init) exit;
+
 if (v_relative_align == CENTRE) {
 	top_relative_offset = 0.5;
 }

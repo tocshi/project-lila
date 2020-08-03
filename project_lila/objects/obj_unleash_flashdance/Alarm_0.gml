@@ -11,7 +11,7 @@ var xx = user.x;
 var yy = user.y;
 var attempt = 0;
 if(first){
-	while(collision_circle(xx,yy,32,obj_wall_parent,true,true) || point_distance(user.x,user.y,xx,yy) < radius/1.5){
+	while(collision_circle(xx,yy,32,obj_wall_parent,false,true) || point_distance(user.x,user.y,xx,yy) < radius/1.5){
 		xx = irandom_range(x0-radius,x0+radius);
 		yy = irandom_range(y0-radius,y0+radius);
 		attempt++;
@@ -19,7 +19,7 @@ if(first){
 	}
 }
 else{
-	while(collision_circle(xx,yy,32,obj_wall_parent,true,true) || point_distance(user.x,user.y,xx,yy) < radius*1.5){
+	while(collision_circle(xx,yy,32,obj_wall_parent,false,true) || point_distance(user.x,user.y,xx,yy) < radius*1.5){
 		xx = irandom_range(x0-radius,x0+radius);
 		yy = irandom_range(y0-radius,y0+radius);
 		attempt++;
