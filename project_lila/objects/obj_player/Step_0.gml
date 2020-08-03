@@ -42,6 +42,10 @@ var cam_speed = point_distance(x,y,camera_get_view_x(global.currentCamera)+camer
 camera_set_view_speed(global.currentCamera,cam_speed,cam_speed);
 
 // Standard Movement
+if((point_distance(x, y, destX, destY) < statmap[? "movespeed"] && canMove)){
+	isMoving = false;
+}
+
 switch(global.movement_mode){
 	case 0:
 	if(mouse_check_button(mb_right) && canMove){
@@ -75,11 +79,7 @@ switch(global.movement_mode){
 	
 	case 2:
 	default:
-	show_error("dong status expanded",true);
-}
-
-if((point_distance(x, y, destX, destY) < statmap[? "movespeed"] && canMove)){
-	isMoving = false;
+	show_error("dong status: expanded",true);
 }
 
 if(isMoving && canMove){

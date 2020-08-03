@@ -13,7 +13,7 @@ if(user == global.player){
 	var xx = user.x + dcos(dir)*dist;
 	var yy = user.y - dsin(dir)*dist;
 	var attempt = 0;
-	while(collision_circle(xx,yy,35,obj_wall_parent,false,true)){
+	while(collision_circle(xx,yy,35,obj_wall_parent,true,true)){
 		xx = lerp(xx,user.x,0.02);
 		yy = lerp(yy,user.y,0.02);
 		attempt++;

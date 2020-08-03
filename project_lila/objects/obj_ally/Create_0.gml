@@ -52,7 +52,9 @@ isCCed = false;
 isDead = false;
 isMoving = false;
 isBlocking = false;
-alpha = 1;
+image_alpha = 1;
+time = 0;
+show_hp_bar = true;
 
 cd = array_create(21,0);
 maxcd = array_create(21,0);

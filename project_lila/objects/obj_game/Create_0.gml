@@ -1,11 +1,14 @@
 // GAME VERSION
-version = "0.0.7.0"
+version = "0.0.8.1"
 // Is the game paused?
 global.pause = 0;
 // Player id
 global.player = noone;
 // Player Last Used Class
 global.lastClass = obj_class_knight;
+// Player Last Entered Room
+global.lastDoor = "";
+global.lastRoom = rm_tutorial0;
 // Player Permanent Stats
 global.playerSavedStats = ds_map_create();
 global.playerSavedBuffs = ds_list_create();

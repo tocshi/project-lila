@@ -5,7 +5,7 @@ if(mouse_check_button_released(global.mouse_interact) || keyboard_check_pressed(
 		switch(type){
 			// goto room
 			case 0:
-				room_goto(asset_get_index(data[0]));
+				room_goto(data[0]);
 				break;
 			// switch keybind
 			case 1:

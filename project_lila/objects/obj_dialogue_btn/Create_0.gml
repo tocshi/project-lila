@@ -9,6 +9,10 @@ is_gui = true;
 gui_halign = CENTRE;
 width = camera_get_view_width(global.currentCamera)*2/3;
 height = view_height/16;
+font = fnt_dialogue_text;
+align = CENTRE;
+halign = fa_center;
+valign = fa_center;
 
 button_number = 1;
 number_of_buttons = 1;

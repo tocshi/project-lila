@@ -131,7 +131,7 @@ switch(buffName){
 	break;
 	
 	case "Invisible":
-	alpha = 0.2;
+	image_alpha = 0.2;
 	if(statChange){statmap[? "movespeed"]+=3;}
 	break;
 	

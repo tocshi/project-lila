@@ -1,5 +1,5 @@
-var obj = fp_get_val(argument0);
-var num = fp_get_val(argument1);
+var obj = argument0;
+var num = argument1;
 
 with (obj) {
 	event_user(num);	
