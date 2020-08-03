@@ -1,6 +1,7 @@
 if(!instance_exists(s_slicer_target)){exit;}
 
 atkTimer = 20;
+alarm[1] = atkTimer;
 canMove = false;
 canAttack = false;
 canUseSkill = false;

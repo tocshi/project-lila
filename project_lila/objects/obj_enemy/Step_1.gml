@@ -19,8 +19,6 @@ if (atkTimer > 0){
 	if(atkTimer <= 0){
 		canAttack = true;
 		canUseSkill = true;
-		canMove = true;
-		speed = 0;
 	}
 }
 

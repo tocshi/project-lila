@@ -57,7 +57,7 @@ if(target.isBlocking){
 fblk = clamp(fblk,0,100);
 	
 gTotalDamage = intDmg * (fcritdmg/100) * (atkmap[? "elem_mod"]/100) * (atkmap[? "finaldmg"]/100) * ((100-fblk)/100) * ((100-target.statmap[? "finalshld"])/100);
-gTotalDamage = round(gTotalDamage*(100/(100+target.statmap[? "def"])));
+gTotalDamage = round(gTotalDamage*(40/(40+target.statmap[? "def"])));
 
 deal_damage(target, gTotalDamage);
 if(target.object_index == obj_debug_dummy){

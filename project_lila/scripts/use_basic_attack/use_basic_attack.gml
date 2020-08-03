@@ -23,6 +23,9 @@ switch(itemid){
 	case 10:
 	case 22:
 	case 23:
+	case 35:
+	case 51:
+	case 67:
 	with(instance_create_layer(x,y,"Attacks",obj_basicattack_longsword)){
 		sprite_index = make_sprite_from_item(itemid);
 		iter = other.iter;
@@ -52,6 +55,9 @@ switch(itemid){
 	// Bow Default Basic Attack
 	case 11:
 	case 24:
+	case 36:
+	case 52:
+	case 68:
 	with(instance_create_layer(x,y,"Attacks",obj_basicattack_bow)){
 		sprite_index = make_sprite_from_item(itemid);
 		sprite_collision_mask(sprite_index,false,2,0,0,0,0,bboxkind_rectangular,0);
@@ -82,6 +88,9 @@ switch(itemid){
 	// Knife Default Basic Attack
 	case 16:
 	case 29:
+	case 41:
+	case 57:
+	case 70:
 	with(instance_create_layer(x,y,"Attacks",obj_basicattack_knife)){
 		sprite_index = make_sprite_from_item(itemid);
 		self.user = user;
@@ -102,6 +111,9 @@ switch(itemid){
 	// Spellbook Default Basic Attack
 	case 18:
 	case 31:
+	case 43:
+	case 59:
+	case 69:
 	if(!instance_exists(obj_enemy)){exit;}
 	var magic_target = instance_nearest(mouse_x,mouse_y,obj_enemy);
 	if(point_distance(x,y,magic_target.x,magic_target.y) > ds_map_find_value(global.itemData[| itemid],"atkrange")){exit;}
