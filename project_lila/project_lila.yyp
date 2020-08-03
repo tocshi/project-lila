@@ -849,6 +849,14 @@
             }
         },
         {
+            "Key": "2f831ee8-ee8a-4ca7-aa38-71a4a97682df",
+            "Value": {
+                "id": "97a92d92-9db2-4c20-919a-5e6a40f6ae44",
+                "resourcePath": "objects\\obj_florret\\obj_florret.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "304acfa0-65a3-4a60-b4f7-6b807b33fc71",
             "Value": {
                 "id": "870bf462-2ff1-4c78-abab-2652e8d20485",
@@ -1537,6 +1545,14 @@
             }
         },
         {
+            "Key": "62e7a478-426d-4b5b-8e09-36e897acd5be",
+            "Value": {
+                "id": "8d91c1e6-86fc-43c0-9f12-4aa6a117c399",
+                "resourcePath": "objects\\obj_florret_AI\\obj_florret_AI.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "62f3d473-a49e-4125-b14a-56978fde4656",
             "Value": {
                 "id": "30ec5fbb-305b-4cd7-bee4-b5bc4b84f0e3",
@@ -2110,6 +2126,14 @@
                 "id": "7b055019-c56e-4415-959c-c2929585210c",
                 "resourcePath": "sprites\\spr_fireball\\spr_fireball.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "8cfcfe4d-82cf-4db5-8d96-a6edbb6a4379",
+            "Value": {
+                "id": "67109124-daa2-47cc-a244-1dd1cfdc2695",
+                "resourcePath": "views\\8cfcfe4d-82cf-4db5-8d96-a6edbb6a4379.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
