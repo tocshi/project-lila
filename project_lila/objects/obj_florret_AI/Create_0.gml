@@ -10,8 +10,10 @@ num_atks = irandom_range(2, 4);
 cur_atk = 0;
 is_burrowed = true;
 image_alpha = 0;
+shoot_dir = 0;
+has_attacked = false;
 
 ACQUIRE_TARGET_TIME = 100;
-BURROW_TIME = 100;
-BETWEEN_PELLET_TIME = 10;
+BURROW_TIME = 25;
+BETWEEN_PELLET_TIME = 5;
 

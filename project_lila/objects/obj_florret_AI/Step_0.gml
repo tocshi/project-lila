@@ -1,31 +1,38 @@
 event_inherited();
 
-
 // face the target
 if(target != noone) {
-	direction = point_direction(x, y, target.x, target.y);
+	image_angle = point_direction(x, y, target.x, target.y);
 }
 
 // movement
 
 if((point_distance(x, y, dest_x, dest_y) < statmap[? "movespeed"])){
 	is_burrowed = false;
+	mask_index = sprite_index;
 	image_index = 0;
-	alarm[2] = ACQUIRE_TARGET_TIME;
+	if (alarm[3] < 0 && target != noone && !has_attacked) {
+		show_debug_message("acquired");
+		alarm[3] = ACQUIRE_TARGET_TIME;
+		has_attacked = true
+	}
 }
 
 if(is_burrowed){
 	movedir = point_direction(x, y, dest_x, dest_y);
-	var movemod = point_distance(x,y,dest_x, dest_y)/64
-	movemod = clamp(movemod,0.1,3);
-	move(statmap[? "movespeed"]*movemod, movedir);
+	move(statmap[? "movespeed"], movedir);
 }
 
 // Stop movement if can't move or moving away from dest
 if((x == xprevious && y == yprevious) || (point_distance(x, y, dest_x, dest_y) > point_distance(xprevious, yprevious, dest_x, dest_y))){
 	is_burrowed = false;
+	mask_index = sprite_index;
 	image_index = 0;
-	alarm[2] = ACQUIRE_TARGET_TIME;
+	if (alarm[3] < 0 && target != noone && !has_attacked) {
+		show_debug_message("acquired");
+		alarm[3] = ACQUIRE_TARGET_TIME;
+		has_attacked = true
+	}
 }
 
 // target acquired
