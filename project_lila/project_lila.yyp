@@ -1073,6 +1073,14 @@
             }
         },
         {
+            "Key": "3f65090d-8a36-44f5-9f4d-97c6d37ac05e",
+            "Value": {
+                "id": "2f8c2984-4b78-486a-af2d-21b077e7f8e2",
+                "resourcePath": "objects\\obj_flying_dirt\\obj_flying_dirt.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "40acc53d-293d-43b8-b999-b999a8a8ee4c",
             "Value": {
                 "id": "937a088a-8633-4937-b093-63b2460d1fac",
@@ -1249,6 +1257,14 @@
             }
         },
         {
+            "Key": "4e4c2121-9d64-4368-a247-04e0a5153e17",
+            "Value": {
+                "id": "eaed3367-3fc8-4461-8011-8831d83d0410",
+                "resourcePath": "objects\\obj_flying_particle\\obj_flying_particle.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "4ecfa4f5-0453-4f9a-8bf3-7efecfb00ceb",
             "Value": {
                 "id": "45020c63-a1bd-4ada-beb8-8fb339900195",
@@ -1382,6 +1398,14 @@
                 "id": "4085f9b1-46f9-44ec-8d2f-665f1a7f41f5",
                 "resourcePath": "scripts\\has_skill_unlocked\\has_skill_unlocked.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "5839dd96-5101-4248-9738-e120cc31a93a",
+            "Value": {
+                "id": "588b119d-ced6-4883-ab68-c072a9ebe6ef",
+                "resourcePath": "objects\\obj_ground_dirt\\obj_ground_dirt.yy",
+                "resourceType": "GMObject"
             }
         },
         {
