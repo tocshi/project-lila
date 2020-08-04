@@ -12,6 +12,7 @@ is_burrowed = true;
 image_alpha = 0;
 shoot_dir = 0;
 has_attacked = false;
+tick = 0;
 
 ACQUIRE_TARGET_TIME = 100;
 BURROW_TIME = 25;

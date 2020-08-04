@@ -14,3 +14,4 @@ has_attacked = false;
 num_atks = irandom_range(2, 4);
 cur_atk = 0;
 image_index = 1;
+alarm[4] = 1;

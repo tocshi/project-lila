@@ -60,3 +60,5 @@ else{
 	target = noone;
 	aggrorange = aggrorange_orig;
 }
+
+tick ++;
