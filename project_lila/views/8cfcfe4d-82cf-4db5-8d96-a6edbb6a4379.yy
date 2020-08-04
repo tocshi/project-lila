@@ -8,7 +8,7 @@
         "2f831ee8-ee8a-4ca7-aa38-71a4a97682df"
     ],
     "filterType": "GMObject",
-    "folderName": "Florette",
+    "folderName": "Florret",
     "isDefaultView": false,
     "localisedFolderName": ""
 }
