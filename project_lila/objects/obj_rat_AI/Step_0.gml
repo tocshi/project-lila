@@ -3,11 +3,17 @@ event_inherited();
 // movement
 if(canMove && !isSpawning && !isMoving && canAttack){
 	if(statmap[? "hp"] < statmap[? "maxhp"] * 0.2) {
-		// TODO: move away from nearest player/ally when at low hp
+		// move away from nearest player/ally when at low hp
+		movedir = point_direction(x,y,target.x,target.y) + 180;
+		var dist = irandom_range(200,260);
+		destX = x+lengthdir_x(dist,movedir);
+		destY = y+lengthdir_y(dist,movedir);
+		canAttack = false;
+		atkTimer = room_speed/statmap[? "atkspeed"];
 	}
 	else if(!instance_exists(target)){
 		movedir = irandom(359);
-		var dist = irandom_range(128,256);
+		var dist = irandom_range(32,128);
 		destX = x+lengthdir_x(dist,movedir);
 		destY = y+lengthdir_y(dist,movedir);
 		canAttack = false;
