@@ -6,7 +6,7 @@
 with (instance_create_layer(x, y, "Items", obj_flying_dirt)) {
 	x_vel = vel_x;
 	y_vel = vel_y;
-	z_vel = random_range(10, 12);
+	z_vel = random_range(10, 12.5);
 	time_factor = 10;
 	bounciness = 0.6;
 	size = 0.1;

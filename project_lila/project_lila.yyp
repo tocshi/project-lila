@@ -2609,6 +2609,14 @@
             }
         },
         {
+            "Key": "ad9c5c01-4896-47d1-88d4-c33109deefbf",
+            "Value": {
+                "id": "c7709ed7-42f5-408b-b9e5-19a807266d33",
+                "resourcePath": "scripts\\collision_line_wall\\collision_line_wall.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "adbb214a-54e7-48bc-9528-7a3813c932d0",
             "Value": {
                 "id": "498e4b25-2cbd-4db8-9d80-eb8a100a09f2",
@@ -3883,6 +3891,7 @@
         "1ad0c2fa-f034-4c6b-bfe0-13fc729d5961",
         "42ef62d5-79af-4673-8882-f95a45096be1",
         "e97d92ef-ce75-4b1d-8472-af50fcc6c661",
+        "ad9c5c01-4896-47d1-88d4-c33109deefbf",
         "cbf673ab-54f5-46c0-8c68-9a781daf5626",
         "b6826643-d9df-4536-940d-50232e900656",
         "05275d8e-4c72-4298-a6ed-4722d0c596d8",

@@ -1,3 +1,5 @@
+randomize()
+
 // GAME VERSION
 version = "0.0.8.1"
 // Is the game paused?

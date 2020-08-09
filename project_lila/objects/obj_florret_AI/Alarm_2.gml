@@ -21,7 +21,6 @@ if (cur_atk < num_atks) {
 	}
 	alarm[2] = BETWEEN_PELLET_TIME;	
 } else {
-	show_debug_message("start move");
 	alarm[1] = num_atks * BURROW_TIME;	
 }
 cur_atk ++;

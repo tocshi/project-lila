@@ -19,11 +19,13 @@ if((point_distance(x, y, dest_x, dest_y) < statmap[? "movespeed"])){
 
 if(is_burrowed){
 	movedir = point_direction(x, y, dest_x, dest_y);
+	mask_index = spr_jeli;
 	move(statmap[? "movespeed"], movedir);
 }
 
-// Stop movement if can't move or not moving at movespeed (e.g. hit a wall)
-if((x == xprevious && y == yprevious) || (point_distance(x, y, xprevious, yprevious) + 1 < statmap[? "movespeed"])){
+// Stop movement if can't move or not moving at movespeed (e.g. hit a wall), or timeout
+show_debug_message(tick - start_moving_tick)
+if((x == xprevious && y == yprevious) || (point_distance(x, y, xprevious, yprevious) + 0.1 < statmap[? "movespeed"]) || tick - start_moving_tick > MAX_BURROW_TICKS){
 	is_burrowed = false;
 	mask_index = sprite_index;
 	image_index = 0;

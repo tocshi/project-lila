@@ -11,5 +11,5 @@ statmap[? "xp"] = 8;
 
 ds_map_copy(basestatmap, statmap);
 
-canKnockback	= true;
+canKnockback	= false;
 image_blend = c_green;
