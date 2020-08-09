@@ -1,7 +1,7 @@
 event_inherited();
 
 // face the target
-if(target != noone) {
+if(instance_exists(target)) {
 	image_angle = point_direction(x, y, target.x, target.y);
 }
 
@@ -12,7 +12,6 @@ if((point_distance(x, y, dest_x, dest_y) < statmap[? "movespeed"])){
 	mask_index = sprite_index;
 	image_index = 0;
 	if (alarm[3] < 0 && target != noone && !has_attacked) {
-		show_debug_message("acquired");
 		alarm[3] = ACQUIRE_TARGET_TIME;
 		has_attacked = true
 	}
@@ -23,13 +22,12 @@ if(is_burrowed){
 	move(statmap[? "movespeed"], movedir);
 }
 
-// Stop movement if can't move or moving away from dest
-if((x == xprevious && y == yprevious) || (point_distance(x, y, dest_x, dest_y) > point_distance(xprevious, yprevious, dest_x, dest_y))){
+// Stop movement if can't move or not moving at movespeed (e.g. hit a wall)
+if((x == xprevious && y == yprevious) || (point_distance(x, y, xprevious, yprevious) + 1 < statmap[? "movespeed"])){
 	is_burrowed = false;
 	mask_index = sprite_index;
 	image_index = 0;
 	if (alarm[3] < 0 && target != noone && !has_attacked) {
-		show_debug_message("acquired");
 		alarm[3] = ACQUIRE_TARGET_TIME;
 		has_attacked = true
 	}

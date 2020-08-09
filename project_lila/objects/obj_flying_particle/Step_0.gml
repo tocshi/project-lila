@@ -6,9 +6,15 @@ height += z_vel/time_factor;
 z_vel += grav/time_factor;
 
 if (height < floor_height) {
+	// simulate energy loss rather than velocity loss
 	x_vel *= bounciness;
 	y_vel *= bounciness;
 	z_vel *= -1 * bounciness;
+	if (z_vel < min_bounce) {
+		x_vel = 0;
+		y_vel = 0;
+		z_vel = 0;
+	}
 	height = floor_height;
 }
 
