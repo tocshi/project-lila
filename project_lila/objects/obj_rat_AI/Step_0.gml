@@ -63,22 +63,9 @@ if((x == xprevious && y == yprevious) || (point_distance(x,y,destX,destY) > poin
 }
 
 // target acquired
-var next_target_player = instance_nearest(x,y,obj_player);
-var next_target_ally = instance_nearest(x,y,obj_ally);
 var next_target = noone;
-if(instance_exists(next_target_player) && instance_exists(next_target_ally)){
-	if(point_distance(x,y,next_target_player.x,next_target_player.y) < point_distance(x,y,next_target_ally.x,next_target_ally.y)){
-		next_target = next_target_player;
-	}
-	else{
-		next_target = next_target_ally;
-	}
-}
-else if(!instance_exists(next_target_ally)){
-	next_target = next_target_player;
-}
-else if(!instance_exists(next_target_player)){
-	next_target = next_target_ally;
+if(instance_exists(lastHitBy)){
+	next_target = lastHitBy;
 }
 if(aggro && instance_exists(next_target) && point_distance(x,y,next_target.x,next_target.y) < aggrorange){
 	target = next_target;
