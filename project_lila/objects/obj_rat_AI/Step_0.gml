@@ -1,23 +1,49 @@
 event_inherited();
 
 // movement
-if(canMove && !isSpawning && !isMoving && canAttack){
-	if(statmap[? "hp"] < statmap[? "maxhp"] * 0.2) {
+if(canMove && !isSpawning && !isMoving && !attacking && canAttack){
+	if(retreating) {
 		// move away from nearest player/ally when at low hp
-		movedir = point_direction(x,y,target.x,target.y) + 180;
-		var dist = irandom_range(200,260);
-		destX = x+lengthdir_x(dist,movedir);
-		destY = y+lengthdir_y(dist,movedir);
-		canAttack = false;
-		atkTimer = room_speed/statmap[? "atkspeed"];
+		var nearest_player = instance_nearest(x,y,obj_player);
+		var nearest_ally = instance_nearest(x,y,obj_ally);
+		var nearest = noone;
+		if(instance_exists(nearest_player) && instance_exists(nearest_ally)){
+			if(point_distance(x,y,nearest_player.x,nearest_player.y) < point_distance(x,y,nearest_ally.x,nearest_ally.y)){
+				nearest = nearest_player;
+			}
+			else{
+				nearest = nearest_ally;
+			}
+		}
+		else if(!instance_exists(nearest_ally)){
+			nearest = nearest_player;
+		}
+		else if(!instance_exists(nearest_player)){
+			nearest = nearest_ally;
+		}
+		
+		if(point_distance(x,y,nearest.x,nearest.y) < 512) {
+			movedir = point_direction(x,y,nearest.x,nearest.y) + 180;
+			var dist = irandom_range(200,260);
+			destX = x+lengthdir_x(dist,movedir);
+			destY = y+lengthdir_y(dist,movedir);
+			canAttack = false;
+			atkTimer = dist/statmap[? "movespeed"];
+		}
 	}
 	else if(!instance_exists(target)){
 		movedir = irandom(359);
-		var dist = irandom_range(32,128);
+		var dist = irandom_range(16,64);
 		destX = x+lengthdir_x(dist,movedir);
 		destY = y+lengthdir_y(dist,movedir);
 		canAttack = false;
-		atkTimer = irandom_range(room_speed-5,room_speed+10)/statmap[? "atkspeed"];
+		if(idle_moves_remaining > 1) { 
+			atkTimer = irandom_range(room_speed,room_speed)/statmap[? "atkspeed"]/3;
+			idle_moves_remaining--;
+		} else {
+			atkTimer = irandom_range(room_speed-5,room_speed+10)/statmap[? "atkspeed"]*3;
+			idle_moves_remaining = irandom_range(2, 5);
+		}
 	}
 	else if(point_distance(x,y,target.x,target.y) > 128){
 		movedir = point_direction(x,y,target.x,target.y);
@@ -25,15 +51,16 @@ if(canMove && !isSpawning && !isMoving && canAttack){
 		destX = x+lengthdir_x(dist,movedir);
 		destY = y+lengthdir_y(dist,movedir);
 		canAttack = false;
-		atkTimer = room_speed/statmap[? "atkspeed"];
+		atkTimer = dist/statmap[? "movespeed"];
 	}
 	else if(point_distance(x,y,target.x,target.y) < 128){
-		movedir = point_direction(x,y,target.x,target.y);
-		destX = x+lengthdir_x(irandom_range(190,210),movedir);
-		destY = y+lengthdir_y(irandom_range(190,210),movedir);
+		movedir = 0;
+		destX = x;
+		destY = y;
 		canAttack = false;
 		atkTimer = room_speed/statmap[? "atkspeed"];
 		movedir = point_direction(x,y,target.x,target.y);
+		// TODO: implement new rat attack with animation
 		with(instance_create_layer(x,y,"Attacks",obj_enemy_attack_tackle)){
 			user = other;
 			mask_index = other.mask_index;
