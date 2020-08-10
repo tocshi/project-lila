@@ -3,10 +3,10 @@ var vel_dist = irandom(20);
 var vel_dir = irandom(359);
 var vel_x = lengthdir_x(vel_dist, vel_dir);
 var vel_y = lengthdir_y(vel_dist, vel_dir);
-var perpendicular_dist = irandom(20);
+var perpendicular_dist = irandom_range(-10, 10);
 var dir = point_direction(x, y, dest_x, dest_y);
-var dirt_x = x + lengthdir_x(perpendicular_dist, dir);
-var dirt_y = y + lengthdir_y(perpendicular_dist, dir);
+var dirt_x = x + lengthdir_x(perpendicular_dist, dir + 90);
+var dirt_y = y + lengthdir_y(perpendicular_dist, dir + 90);
 var dirt_dist = 15;
 with (instance_create_layer(dirt_x + lengthdir_x(dirt_dist, dir), dirt_y + lengthdir_y(dirt_dist, dir), "Items", obj_flying_dirt)) {
 	x_vel = vel_x;
@@ -19,8 +19,6 @@ with (instance_create_layer(dirt_x + lengthdir_x(dirt_dist, dir), dirt_y + lengt
 }
 
 if (tick % 5 == 0) {
-	dir += 90;
-
 	with (instance_create_layer(dirt_x, dirt_y, "Instances", obj_ground_dirt)) {
 		decay_time = 25;
 		image_angle = irandom(359);
