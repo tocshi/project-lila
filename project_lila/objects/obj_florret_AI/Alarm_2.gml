@@ -18,9 +18,11 @@ if (cur_atk < num_atks) {
 		image_angle = direction;
 		image_blend = c_purple;
 		skill = atkmap[? "range"]/speed;
+		image_xscale = 0.25;
+		image_yscale = 0.25;
 	}
-	alarm[2] = BETWEEN_PELLET_TIME;	
+	alarm[2] = 60/statmap[? "atkspeed"];	
 } else {
-	alarm[1] = num_atks * BURROW_TIME;	
+	alarm[1] = num_atks * BURROW_TIME + BASE_BURROW_TIME;	
 }
 cur_atk ++;

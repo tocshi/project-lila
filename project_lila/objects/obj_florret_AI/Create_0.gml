@@ -3,8 +3,8 @@ event_inherited();
 target = noone;
 dest_x = x;
 dest_y = y;
-aggrorange = 256;
-aggrorange_orig = 256;
+aggrorange = 512;
+aggrorange_orig = 512;
 movedir = 0;
 num_atks = irandom_range(2, 4);
 cur_atk = 0;
@@ -16,7 +16,7 @@ tick = 0;
 start_moving_tick = 0;
 
 ACQUIRE_TARGET_TIME = 100;
-BURROW_TIME = 25;
-BETWEEN_PELLET_TIME = 5;
+BASE_BURROW_TIME = 30;
+BURROW_TIME = 10;
 MAX_BURROW_TICKS = 200;
 
