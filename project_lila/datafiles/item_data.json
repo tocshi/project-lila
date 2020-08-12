@@ -297,7 +297,7 @@
   },{
     "id"        : 23,
     "name"      : "Copper Longsword",
-    "sprite"    : "spr_lsw1",
+    "sprite"    : "spr_lsw0",
     "type"      : "equippable",
     "category"  : "Longsword",
     "lvl"       : 3,
@@ -309,7 +309,7 @@
   },{
     "id"        : 24,
     "name"      : "Wooden Bow",
-    "sprite"    : "spr_bow1",
+    "sprite"    : "spr_bow0",
     "type"      : "equippable",
     "category"  : "Bow",
     "lvl"       : 3,
@@ -369,7 +369,7 @@
   },{
     "id"        : 29,
     "name"      : "Copper Dagger",
-    "sprite"    : "spr_knf1",
+    "sprite"    : "spr_knf0",
     "type"      : "equippable",
     "category"  : "Knife",
     "lvl"       : 3,
@@ -393,7 +393,7 @@
   },{
     "id"        : 31,
     "name"      : "Dusty Spellbook",
-    "sprite"    : "spr_spb1",
+    "sprite"    : "spr_spb0",
     "type"      : "equippable",
     "category"  : "Spellbook",
     "lvl"       : 3,
@@ -441,7 +441,7 @@
   },{
     "id"        : 35,
     "name"      : "Iron Longsword",
-    "sprite"    : "spr_lsw1",
+    "sprite"    : "spr_lsw0",
     "type"      : "equippable",
     "category"  : "Longsword",
     "lvl"       : 6,
@@ -453,7 +453,7 @@
   },{
     "id"        : 36,
     "name"      : "Iron Bow",
-    "sprite"    : "spr_bow1",
+    "sprite"    : "spr_bow0",
     "type"      : "equippable",
     "category"  : "Bow",
     "lvl"       : 6,
@@ -513,7 +513,7 @@
   },{
     "id"        : 41,
     "name"      : "Iron Dagger",
-    "sprite"    : "spr_knf1",
+    "sprite"    : "spr_knf0",
     "type"      : "equippable",
     "category"  : "Knife",
     "lvl"       : 6,
@@ -537,7 +537,7 @@
   },{
     "id"        : 43,
     "name"      : "Antique Spellbook",
-    "sprite"    : "spr_spb1",
+    "sprite"    : "spr_spb0",
     "type"      : "equippable",
     "category"  : "Spellbook",
     "lvl"       : 6,
@@ -625,7 +625,7 @@
   },{
     "id"        : 51,
     "name"      : "Steel Longsword",
-    "sprite"    : "spr_lsw1",
+    "sprite"    : "spr_lsw0",
     "type"      : "equippable",
     "category"  : "Longsword",
     "lvl"       : 10,
@@ -637,7 +637,7 @@
   },{
     "id"        : 52,
     "name"      : "Steel Bow",
-    "sprite"    : "spr_bow1",
+    "sprite"    : "spr_bow0",
     "type"      : "equippable",
     "category"  : "Bow",
     "lvl"       : 10,
@@ -697,7 +697,7 @@
   },{
     "id"        : 57,
     "name"      : "Steel Dagger",
-    "sprite"    : "spr_knf1",
+    "sprite"    : "spr_knf0",
     "type"      : "equippable",
     "category"  : "Knife",
     "lvl"       : 10,
@@ -721,7 +721,7 @@
   },{
     "id"        : 59,
     "name"      : "Ancient Spellbook",
-    "sprite"    : "spr_spb1",
+    "sprite"    : "spr_spb0",
     "type"      : "equippable",
     "category"  : "Spellbook",
     "lvl"       : 10,
