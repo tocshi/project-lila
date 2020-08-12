@@ -729,6 +729,14 @@
             }
         },
         {
+            "Key": "26f0ca0b-c7f9-4ebf-a696-152b29bf7df7",
+            "Value": {
+                "id": "bc493ec0-428e-426c-a1e1-83b67aa52bc7",
+                "resourcePath": "sprites\\spr_exclamation_effect\\spr_exclamation_effect.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "27c81c1e-8e59-435d-9ac6-a395bba817de",
             "Value": {
                 "id": "36fc0de5-441a-403b-a567-53942527c186",
@@ -1253,6 +1261,14 @@
             "Value": {
                 "id": "b8e67790-c2cf-458d-8efc-a5669631d65d",
                 "resourcePath": "sprites\\spr_stormpiercer\\spr_stormpiercer.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "4ebe1584-566e-42f1-bffb-ec15d3caad90",
+            "Value": {
+                "id": "dade067d-e56a-470e-a8ae-c080fa13cc41",
+                "resourcePath": "sprites\\spr_atk_bite\\spr_atk_bite.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -2129,6 +2145,14 @@
             }
         },
         {
+            "Key": "8bb57032-713b-47ae-a47f-47087aab5900",
+            "Value": {
+                "id": "6161d302-090f-4750-87b6-a3392ba1870f",
+                "resourcePath": "views\\8bb57032-713b-47ae-a47f-47087aab5900.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "8c83dfc9-f351-44fc-ad7b-cb899f97ddf0",
             "Value": {
                 "id": "7b055019-c56e-4415-959c-c2929585210c",
@@ -2425,6 +2449,14 @@
             }
         },
         {
+            "Key": "a1b15eb2-14c4-4724-8e3c-60c82ef9db79",
+            "Value": {
+                "id": "16abf737-f7d2-482c-a1b9-1ac531c3c627",
+                "resourcePath": "objects\\obj_exclamation_effect\\obj_exclamation_effect.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "a1d2f83e-1274-4825-bbc4-81f8bc54c1ea",
             "Value": {
                 "id": "25226284-aaeb-40ad-9f7a-c80b3bb17e5c",
@@ -2476,7 +2508,7 @@
             "Key": "a769eb58-869e-43a1-af19-934012b383bf",
             "Value": {
                 "id": "8b0680ca-4c31-44c9-b990-549db5f665ba",
-                "resourcePath": "objects\\obj_enemy_attack_tackle\\obj_enemy_attack_tackle.yy",
+                "resourcePath": "objects\\obj_enemy_attack_bite\\obj_enemy_attack_bite.yy",
                 "resourceType": "GMObject"
             }
         },
