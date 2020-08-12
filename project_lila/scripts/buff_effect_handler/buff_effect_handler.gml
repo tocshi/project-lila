@@ -12,6 +12,9 @@ switch(buffName){
 	
 	case "Taunt":
 	if(target != get_buff_data(self,"Taunt","data")){target = get_buff_data(self,"Taunt","data");}
+	// set lastHitBy and aggro if they have it
+	if(variable_instance_exists(self,"lastHitBy")){lastHitBy = get_buff_data(self,"Taunt","data");}
+	if(variable_instance_exists(self,"aggro")){aggro = true;}
 	if(statChange){statmap[? "finaldmg"]-=20;}
 	break;
 	
