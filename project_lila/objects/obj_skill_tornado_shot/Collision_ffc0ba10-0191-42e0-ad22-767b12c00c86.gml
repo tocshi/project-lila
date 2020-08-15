@@ -4,7 +4,9 @@ if(ds_list_find_index(hitList,other.id) == -1){
 	dmgCalc(other.id);
 	summon_stormpiercer_at_rate(user,other,10);
 	if(other.canKnockback){
-		other.atkTimer = 20;
+		// TODO: make these into functions when 2.3 comes
+		other.atkTimer += max(0,20-other.atkTimer);
+		other.alarm[1] = 20;
 		other.direction = direction+random_range(-30,30);
 		other.speed = 4;
 		other.canMove = false;

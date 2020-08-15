@@ -1,7 +1,3 @@
-if(instance_exists(anchor)){
-	x = anchor.x;
-	y = anchor.y;
-}
 skill-=2;
 if(skill == 0){
 	instance_destroy();

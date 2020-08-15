@@ -1,7 +1,7 @@
 randomize()
 
 // GAME VERSION
-version = "0.0.8.1"
+version = "0.0.9.0"
 // Is the game paused?
 global.pause = 0;
 // Player id

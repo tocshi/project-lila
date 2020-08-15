@@ -40,11 +40,12 @@ switch(useSkill){
 		use_skill_mp(useSkill,"")
 		set_skill_cd(useSkill,"");
 		atkTimer = 60;
+		alarm[1] = atkTimer;
 		canMove = false;
 		canAttack = false;
 		canUseSkill = false;
 		isMoving = false;
-		alarm[1] = 60;
+		alarm[2] = 60;
 		image_alpha = 0;
 		mask_index = spr_empty;
 	}
@@ -92,6 +93,7 @@ switch(useSkill){
 	}		
 	use_skill_mp(useSkill,"")
 	atkTimer = 10;
+	alarm[1] = atkTimer;
 	canMove = false;
 	canAttack = false;
 	canUseSkill = false;
@@ -107,6 +109,7 @@ switch(useSkill){
 			t_fang = 0;
 			direction = point_direction(x,y,mouse_x,mouse_y);
 			atkTimer = 30;
+			alarm[1] = atkTimer;
 			canMove = false;
 			canAttack = false;
 			canUseSkill = false;
@@ -119,6 +122,7 @@ switch(useSkill){
 	t_fang = 0;
 	direction = point_direction(x,y,mouse_x,mouse_y);
 	atkTimer = 30;
+	alarm[1] = atkTimer;
 	canMove = false;
 	canAttack = false;
 	canUseSkill = false;
@@ -134,6 +138,7 @@ switch(useSkill){
 		use_skill_mp(useSkill,"")
 		set_skill_cd(useSkill,"");
 		atkTimer = 20;
+		alarm[1] = atkTimer;
 		canMove = false;
 		canAttack = false;
 		canUseSkill = false;

@@ -148,6 +148,7 @@ switch(useSkill){
 	canAttack = false;
 	canUseSkill = false;
 	atkTimer = 10;
+	alarm[1] = atkTimer;
 	highRegenThreshold = 0;
 	
 	var dist = min(point_distance(x,y,mouse_x,mouse_y),480);
@@ -177,6 +178,7 @@ switch(useSkill){
 	canAttack = false;
 	canUseSkill = false;
 	atkTimer = 30;
+	alarm[1] = atkTimer;
 	highRegenThreshold = 0;
 	
 	while(remaining > 0){
@@ -208,6 +210,7 @@ switch(useSkill){
 	canAttack = false;
 	canUseSkill = false;
 	atkTimer = 10;
+	alarm[1] = atkTimer;
 	
 	var dist = min(point_distance(x,y,mouse_x,mouse_y),480);
 	var dir = point_direction(x,y,mouse_x,mouse_y);
@@ -233,6 +236,7 @@ switch(useSkill){
 	canAttack = false;
 	canUseSkill = false;
 	atkTimer = 30;
+	alarm[1] = atkTimer;
 	with(instance_create_layer(next_target.x,next_target.y,"Attacks",obj_skill_mana_detonation)){
 		user = other;
 		target = next_target;

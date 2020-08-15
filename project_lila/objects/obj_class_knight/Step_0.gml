@@ -39,6 +39,7 @@ switch(useSkill){
 	cancel_basic_attack();
 	ds_list_clear(scList);
 	atkTimer = 30;
+	alarm[1] = 30;
 	highRegenThreshold = 0;
 	canMove = false;
 	canAttack = false;
@@ -66,6 +67,7 @@ switch(useSkill){
 	set_skill_cd(useSkill,"");
 	cancel_basic_attack();
 	atkTimer = 30;
+	alarm[1] = 30;
 	canMove = false;
 	canAttack = false;
 	canUseSkill = false;
@@ -94,6 +96,7 @@ switch(useSkill){
 			speed = 15;
 			following_ally = true;
 			atkTimer = clamp(round(point_distance(x,y,guardian_target.x,guardian_target.y)/15),1,30);
+			alarm[1] = atkTimer;
 			canMove = false;
 			canAttack = false;
 			canUseSkill = false;
@@ -139,6 +142,7 @@ switch(useSkill){
 	}
 		
 	atkTimer = 15;
+	alarm[1] = atkTimer;
 	highRegenThreshold = 0;
 	canMove = false;
 	canAttack = false;
@@ -156,6 +160,7 @@ switch(useSkill){
 	canMove = false;
 	canUseSkill = false;
 	atkTimer = 20;
+	alarm[1] = atkTimer;
 	speed = 0;
 	highRegenThreshold = 0;
 	var skillobj = instance_create_layer(x,y,"Attacks",obj_skill_shield_bash);

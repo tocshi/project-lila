@@ -30,6 +30,7 @@ switch(useSkill){
 		}
 	}
 	atkTimer = 10;
+	
 	canMove = false;
 	canAttack = false;
 	canUseSkill = false;
@@ -97,6 +98,7 @@ switch(useSkill){
 	canAttack = false;
 	canUseSkill = false;
 	atkTimer = 30;
+	alarm[1] = 30;
 	highRegenThreshold = 0;
 	
 	with(instance_create_layer(mouse_x,mouse_y,"Attacks",obj_skill_arrow_rain)){
@@ -126,6 +128,7 @@ switch(useSkill){
 	cancel_basic_attack();
 	atkTimer = 30;
 	canAttack = false;
+	alarm[1] = 30;
 	canMove = false;
 	isMoving = false;
 	canUseSkill = false;

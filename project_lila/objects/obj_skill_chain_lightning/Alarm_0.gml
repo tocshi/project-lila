@@ -23,9 +23,10 @@ if(ds_map_find_value(global.itemData[| global.player.equips[0]],"unleashGauge") 
 
 if(remaining > 0){
 	next_target = instance_nth_nearest(obj_enemy,target.x,target.y,2);
+			show_debug_message(next_target)
 	var target_list = ds_list_create();
 	var num = collision_circle_list(target.x,target.y,320,obj_enemy,true,true,target_list,true);
-	for(var i = 0; i < num; ++i){
+	for(var i = 0; i < num; i++){
 		if(ds_list_find_index(user.c_lightning_hitList,target_list[| i]) == -1){
 			next_target = target_list[| i];
 			break;
