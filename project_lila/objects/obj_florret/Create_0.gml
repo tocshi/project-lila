@@ -13,4 +13,3 @@ statmap[? "range"] = 512;
 ds_map_copy(basestatmap, statmap);
 
 canKnockback	= false;
-image_blend = c_green;

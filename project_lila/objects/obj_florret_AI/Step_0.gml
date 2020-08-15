@@ -7,10 +7,10 @@ if(instance_exists(target)) {
 
 // movement
 
-if((point_distance(x, y, dest_x, dest_y) < statmap[? "movespeed"])){
-	is_burrowed = false;
-	mask_index = sprite_index;
-	image_index = 0;
+if((point_distance(x, y, dest_x, dest_y) < statmap[? "movespeed"]) && !is_unburrowing){
+	if (is_burrowed) {
+		alarm[6] = 1;
+	}
 	if (alarm[3] < 0 && target != noone && !has_attacked) {
 		alarm[3] = ACQUIRE_TARGET_TIME;
 		has_attacked = true
@@ -19,16 +19,14 @@ if((point_distance(x, y, dest_x, dest_y) < statmap[? "movespeed"])){
 
 if(is_burrowed){
 	movedir = point_direction(x, y, dest_x, dest_y);
-	mask_index = spr_jeli;
 	move(statmap[? "movespeed"], movedir);
 }
 
 // Stop movement if can't move or not moving at movespeed (e.g. hit a wall), or timeout
-show_debug_message(tick - start_moving_tick)
-if((x == xprevious && y == yprevious) || (point_distance(x, y, xprevious, yprevious) + 0.1 < statmap[? "movespeed"]) || tick - start_moving_tick > MAX_BURROW_TICKS){
-	is_burrowed = false;
-	mask_index = sprite_index;
-	image_index = 0;
+if((x == xprevious && y == yprevious) || (point_distance(x, y, xprevious, yprevious) + 0.1 < statmap[? "movespeed"]) || tick - start_moving_tick > MAX_BURROW_TICKS && !is_unburrowing){
+	if (is_burrowed) {
+		alarm[6] = 1;
+	}
 	if (alarm[3] < 0 && target != noone && !has_attacked) {
 		alarm[3] = ACQUIRE_TARGET_TIME;
 		has_attacked = true
@@ -61,4 +59,10 @@ else{
 	aggrorange = aggrorange_orig;
 }
 
+if(target == noone || x <= target.x){
+	image_xscale = 1;
+} else {
+	image_xscale = -1;
+}
+show_debug_message(image_xscale)
 tick ++;
