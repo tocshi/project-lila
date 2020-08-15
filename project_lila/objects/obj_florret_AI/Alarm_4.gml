@@ -1,0 +1,32 @@
+/// @description Make dirt
+var vel_dist = irandom(20);
+var vel_dir = irandom(359);
+var vel_x = lengthdir_x(vel_dist, vel_dir);
+var vel_y = lengthdir_y(vel_dist, vel_dir);
+var perpendicular_dist = irandom_range(-10, 10);
+var dir = point_direction(x, y, dest_x, dest_y);
+var dirt_x = x + lengthdir_x(perpendicular_dist, dir + 90);
+var dirt_y = y + lengthdir_y(perpendicular_dist, dir + 90);
+var dirt_dist = 15;
+with (instance_create_layer(dirt_x + lengthdir_x(dirt_dist, dir), dirt_y + lengthdir_y(dirt_dist, dir), "Items", obj_flying_dirt)) {
+	x_vel = vel_x;
+	y_vel = vel_y;
+	z_vel = random_range(10, 12.5);
+	time_factor = 10;
+	bounciness = 0.6;
+	size = 0.1;
+	image_angle = irandom(359)
+}
+
+if (tick % 5 == 0) {
+	with (instance_create_layer(dirt_x, dirt_y, "Instances", obj_ground_dirt)) {
+		decay_time = 25;
+		image_angle = irandom(359);
+		image_xscale = 0.75;
+		image_yscale = 0.75;
+	}
+}
+
+if (is_burrowed) {
+	alarm[4] = 1;
+}
