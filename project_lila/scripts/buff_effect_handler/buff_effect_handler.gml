@@ -151,8 +151,8 @@ switch(buffName){
 		}
 	}
 	if(statChange){
-		statmap[? "finalshld"]+=85;
-		statmap[? "hpregen"] += (statmap[? "maxhp"]*0.2) / get_buff_data(self,"Rock Hardened","time");
+		statmap[? "finalshld"]+=90;
+		statmap[? "hpregen"] += (statmap[? "maxhp"]*0.2) / get_buff_data(self,"Rock Hardened","data");
 	}
 	break;
 	default:

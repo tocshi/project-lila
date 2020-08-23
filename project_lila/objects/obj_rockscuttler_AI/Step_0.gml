@@ -8,7 +8,7 @@ if(shield_cooldown > 0) {
 // movement
 if(canMove && !isSpawning && !isMoving && canAttack){
 	if (statmap[? "hp"] < statmap[? "maxhp"]/2 && shield_cooldown <= 0) {
-		applyBuff(id,shield_duration,true,"Rock Hardened",buff_generic,false,-1,0,spr_empty,"Lorem Ipsum",0)
+		applyBuff(id,shield_duration,true,"Rock Hardened",buff_generic,false,-1,0,spr_empty,"Lorem Ipsum",shield_duration);
 		shield_cooldown = shield_cooldown_orig;
 		canAttack = false;
 		atkTimer = shield_duration+30;
