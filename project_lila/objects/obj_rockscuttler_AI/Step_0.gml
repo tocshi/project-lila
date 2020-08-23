@@ -4,22 +4,14 @@ event_inherited();
 if(shield_cooldown > 0) {
 	shield_cooldown--;
 }
-if(shielded) {
-	if(shield_timer > 0) {
-		statmap[? "hp"] += statmap[? "maxhp"]*0.2 / shield_duration*room_speed;
-	} else {
-		shielded = false;
-		statmap[? "finalshld"] -= 80;
-		shield_cooldown = shield_cooldown_orig;
-	}
-}
 
 // movement
 if(canMove && !isSpawning && !isMoving && canAttack){
 	if (statmap[? "hp"] < statmap[? "maxhp"]/2 && shield_cooldown <= 0) {
-		alarm[3] = 15; // do shielding things
+		applyBuff(id,shield_duration,true,"Rock Hardened",buff_generic,false,-1,0,spr_empty,"Lorem Ipsum",0)
+		shield_cooldown = shield_cooldown_orig;
 		canAttack = false;
-		atkTimer = room_speed*shield_duration;
+		atkTimer = shield_duration+30;
 	}
 	else if(!instance_exists(target)){
 		movedir = irandom(359);

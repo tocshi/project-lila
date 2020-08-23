@@ -141,5 +141,19 @@ switch(buffName){
 	case "Invulnerable":
 	if(statChange){statmap[? "finalshld"]+=100;}
 	break;
+	
+	case "Rock Hardened":
+	if(get_buff_data(self,"Rock Hardened","time")%15 == 0){
+		with(instance_create_layer(irandom_range(x-64,x+64),irandom_range(y-64,y+64),"Assets_1",obj_channelling_power)){
+			target = other;
+			sprite_index = spr_poison_effect;
+			image_blend = c_aqua;
+		}
+	}
+	if(statChange){
+		statmap[? "finalshld"]+=85;
+		statmap[? "hpregen"] += (statmap[? "maxhp"]*0.2) / get_buff_data(self,"Rock Hardened","time");
+	}
+	break;
 	default:
 }
