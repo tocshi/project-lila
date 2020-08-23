@@ -27,7 +27,7 @@
             }
         ],
         "hiddenResources": [
-
+            
         ],
         "projectPath": "${base_project}"
     },
@@ -1241,6 +1241,14 @@
             }
         },
         {
+            "Key": "48b54121-1996-4fa5-b409-347ace3c25d0",
+            "Value": {
+                "id": "ce0e90bd-b1b7-4445-a457-53ddaed8cc1e",
+                "resourcePath": "views\\48b54121-1996-4fa5-b409-347ace3c25d0.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "48c409b6-ef38-45b8-9167-f8327ecb7c18",
             "Value": {
                 "id": "d3705a30-2d1d-41d3-a136-5f34d5a9aa5c",
@@ -1285,14 +1293,15 @@
             "Value": {
                 "id": "eaed3367-3fc8-4461-8011-8831d83d0410",
                 "resourcePath": "objects\\obj_flying_particle\\obj_flying_particle.yy",
-                "resourceType": "GMObject"            }
+                "resourceType": "GMObject"
+            }
         },
         {
-        "Key": "4ebe1584-566e-42f1-bffb-ec15d3caad90",
-        "Value": {
-            "id": "dade067d-e56a-470e-a8ae-c080fa13cc41",
-            "resourcePath": "sprites\\spr_atk_bite\\spr_atk_bite.yy",
-            "resourceType": "GMSprite"
+            "Key": "4ebe1584-566e-42f1-bffb-ec15d3caad90",
+            "Value": {
+                "id": "dade067d-e56a-470e-a8ae-c080fa13cc41",
+                "resourcePath": "sprites\\spr_atk_bite\\spr_atk_bite.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -1976,6 +1985,14 @@
             }
         },
         {
+            "Key": "7a614def-44fa-4db9-8564-4c62c6d8d2a1",
+            "Value": {
+                "id": "122e2864-c01f-412d-b3c9-f342e6860eae",
+                "resourcePath": "objects\\obj_rockscuttler\\obj_rockscuttler.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "7b88dd8a-74e9-43b3-afdc-57e5442897d3",
             "Value": {
                 "id": "037f4b5e-fda6-4370-8f81-1315983cf6f0",
@@ -2632,6 +2649,14 @@
             }
         },
         {
+            "Key": "aa58429a-0c32-4755-bcb0-0f0b8c1702e6",
+            "Value": {
+                "id": "372f799c-36ce-4c4c-9901-ee964b903769",
+                "resourcePath": "objects\\obj_rockscuttler_AI\\obj_rockscuttler_AI.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "ab1d1d89-dfbf-4489-a5b2-656d42fb8e05",
             "Value": {
                 "id": "3aee049b-beaa-443e-ad75-6c9fc5eaf3f2",
@@ -2949,6 +2974,14 @@
                 "id": "79c176a6-4e1c-40a8-a018-6affa7f6c6cc",
                 "resourcePath": "scripts\\instance_nth_nearest\\instance_nth_nearest.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "bff1ad30-1fd6-480e-af30-51d2800d5066",
+            "Value": {
+                "id": "2c90a406-98a0-4007-b185-04ea315463e0",
+                "resourcePath": "sprites\\spr_rockscuttler\\spr_rockscuttler.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
